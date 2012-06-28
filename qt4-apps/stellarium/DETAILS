@@ -1,0 +1,15 @@
+          MODULE=stellarium
+         VERSION=0.11.2
+          SOURCE=$MODULE-$VERSION.tar.gz
+      SOURCE_URL=$SFORGE_URL/$MODULE
+      SOURCE_VFY=sha1:ed77c612b53d74dc2264b1be05f19d05950a1771
+        WEB_SITE=http://stellarium.free.fr
+         ENTERED=20040420
+         UPDATED=20120401
+           SHORT="Stellarium astronomy software"
+
+cat << EOF
+Stellarium renders 3D photo-realistic skies in real time. With
+stellarium, you really see what you can see with your eyes,
+binoculars or a small telescope.
+EOF

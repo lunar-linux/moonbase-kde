@@ -1,0 +1,13 @@
+          MODULE=smokeqt
+         VERSION=4.8.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:a1f5e5ed2a8ea94bf785771b2b43bf2dcb3b7808
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20110813
+         UPDATED=20120504
+           SHORT="smokeqt"
+
+cat << EOF
+EOF

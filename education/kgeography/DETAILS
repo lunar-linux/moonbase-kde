@@ -1,0 +1,13 @@
+          MODULE=kgeography
+         VERSION=4.8.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:70a5577a5303fd8d97efbc06220bd896ec00574f
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20110813
+         UPDATED=20120504
+           SHORT="kde geography"
+
+cat << EOF
+EOF

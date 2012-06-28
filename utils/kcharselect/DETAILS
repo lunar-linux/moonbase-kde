@@ -1,0 +1,14 @@
+          MODULE=kcharselect
+         VERSION=4.8.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:a4196b6ef1f665fabd2ba91f040b2f858c58f397
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://utils.kde.org/projects/kcharselect/
+         ENTERED=20120125
+         UPDATED=20120508
+           SHORT="select special characters from all installed fonts and copy them into the clipboard"
+
+cat << EOF
+KCharSelect is a tool to select special characters from all installed fonts and copy them into the clipboard. 
+EOF

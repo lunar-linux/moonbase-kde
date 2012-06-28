@@ -1,0 +1,14 @@
+          MODULE=kwallet
+         VERSION=4.8.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:b99a380bdb864d3eb6461e9a8627963fe4c1a4b8
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://techbase.kde.org/Projects/Utils/ksecretsservice
+         ENTERED=20120125
+         UPDATED=20120504
+           SHORT="kwallet"
+
+cat << EOF
+kwallet
+EOF

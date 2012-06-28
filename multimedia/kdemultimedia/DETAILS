@@ -1,0 +1,25 @@
+          MODULE=kdemultimedia
+         VERSION=4.8.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:8f2b9181d5ccab5a9efd62f2778cf6c2b88abb3e
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20071026
+         UPDATED=20120504
+           SHORT="multimedia applications for KDE"
+
+cat << EOF
+This package contains:
+* noatun: a multimedia player for sound and movies, very extensible
+  due to it's plugin interface
+* kmix: the audio mixer as a standalone program and Kicker applet
+* kscd: A CD player with an interface to the internet CDDB database
+* phonon-xine: A Phonon-Backend based on Xine
+
+The following are libraries and plugins that are building the core
+infrastructure of above applications:
+
+* kfile-plugins: provide meta information about sound files
+* libkcddb: a library for retrieving and sending cddb information
+EOF

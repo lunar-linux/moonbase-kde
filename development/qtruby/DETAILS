@@ -1,0 +1,13 @@
+          MODULE=qtruby
+         VERSION=4.8.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:aa88b382034cb66f283c200a10c04d3ba2170492
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20110813
+         UPDATED=20120504
+           SHORT="qtruby"
+
+cat << EOF
+EOF

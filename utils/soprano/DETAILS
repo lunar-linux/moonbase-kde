@@ -1,0 +1,17 @@
+          MODULE=soprano
+         VERSION=2.7.6
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=$SFORGE_URL/$MODULE
+      SOURCE_VFY=sha1:d9c0c8f15bb9e0313ba3ea5f31536114b738b157
+        WEB_SITE=http://soprano.sourceforge.net
+         ENTERED=20080123
+         UPDATED=20120516
+           SHORT="highly usable C++/QT4 library for RDF data"
+
+cat << EOF
+Soprano (formerly known as QRDF) is a library which provides a highly
+usable object-oriented C++/QT4 framework for RDF data. It uses different
+RDF storage solutions as backends through a simple plugin system. Soprano
+is targetted at desktop applications that need a RDF data storage solution.
+It has been optimized for easy usage and simplicity.
+EOF

@@ -1,0 +1,14 @@
+          MODULE=analitza
+         VERSION=4.8.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:bec5927a68028b74193afb6e7f2a36f97ba25543
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://edu.kde.org/kig
+         ENTERED=20120125
+         UPDATED=20120508
+           SHORT="add mathematical features to your program"
+
+cat << EOF
+Analitza will let you add mathematical features to your program.
+EOF

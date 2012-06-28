@@ -1,0 +1,15 @@
+          MODULE=kde-l10n-ca@valencia
+         VERSION=4.8.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src/kde-l10n
+      SOURCE_VFY=sha1:7aa8ec37dbc6046bd453dbb60a8836da1e1f092a
+        WEB_SITE=http://www.kde.org
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+         ENTERED=20100302
+         UPDATED=20120504
+      MAINTAINER=stumbles@lunar-linux.org
+           SHORT="contains translated KDE messages"
+
+cat << EOF
+kde-l10n-* contains translated KDE messages.
+EOF

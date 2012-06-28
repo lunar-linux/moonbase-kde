@@ -1,0 +1,15 @@
+          MODULE=kde-l10n-ko
+         VERSION=4.8.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src/kde-l10n
+      SOURCE_VFY=sha1:325dd9c4845c9b37fdff9d54ab8df48e046017c0
+        WEB_SITE=http://www.kde.org
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+         ENTERED=20080111
+         UPDATED=20120504
+      MAINTAINER=stumbles@lunar-linux.org
+           SHORT="contains translated KDE messages"
+
+cat << EOF
+kde-l10n-* contains translated KDE messages.
+EOF

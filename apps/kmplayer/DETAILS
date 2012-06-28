@@ -1,0 +1,26 @@
+          MODULE=kmplayer
+         VERSION=0.11.3d
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=http://kmplayer.kde.org/pkgs
+      SOURCE_VFY=sha1:f43651d4252cf6d878b5b014c1e5e9b18b2e31c4
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://kmplayer.kde.org
+         ENTERED=20081125
+         UPDATED=20120611
+           SHORT="MPlayer frontend for KDE"
+
+cat << EOF
+As a stand-alone application it can:
+* play movies from file/url
+* play DVD
+* play VCD
+* play from a pipe
+* keep movie sizes ratio
+* resize/fullscreen support
+* optional show mplayer output before and after a movie plays
+* configurable pattern matching
+* proxy settings from konqueror are used to set http_proxy environment variable
+* DCOP KMediaPlayer interface support
+  (comment out gui=yes in your mplayer config file, use gmplayer for MPlayer's
+   own GUI instead)
+EOF

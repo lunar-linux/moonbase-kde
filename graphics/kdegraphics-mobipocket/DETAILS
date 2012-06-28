@@ -1,0 +1,14 @@
+          MODULE=kdegraphics-mobipocket
+         VERSION=4.8.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:97a19a437e53f1b0ec538d7d35bbf25605e6845e
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20120125
+         UPDATED=20120504
+           SHORT="kdegraphics-mobipocket"
+
+cat << EOF
+kdegraphics-mobipocket
+EOF

@@ -1,0 +1,23 @@
+          MODULE=kdenetwork
+         VERSION=4.8.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:9da87317c6a10243d6fff8c121c04146415f65cd
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20071026
+         UPDATED=20120504
+           SHORT="Network tools for KDE"
+
+cat << EOF
+* Filesharing: network file sharing
+* kdnssd: Zeroconf
+* KGet: an advanced download manager
+* KNewsTicker: RDF newsticker Plasma applet
+* Kopete: Instant Messaging client
+* KPPP: dialer and front end for pppd
+* KRDC: a client for Desktop Sharing
+* Krfb: Desktop Sharing server, allow others to access your desktop
+  via VNC
+* Lanbrowsing: lan browsing kio slave.
+EOF

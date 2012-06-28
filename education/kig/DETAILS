@@ -1,0 +1,17 @@
+          MODULE=kig
+         VERSION=4.8.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:f7bd8d16cbb98ca44868df7bfd6b7a9e608c9ff4
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://edu.kde.org/kig
+         ENTERED=20110813
+         UPDATED=20120504
+           SHORT="KDE Interactive Geometry"
+
+cat << EOF
+Kig is a program for use in math classes in high school, to allow
+students to interactively explore geometric concepts.  For more
+information: check out the documentation ( open "help:/kig" in
+konqueror...)
+EOF

@@ -1,0 +1,15 @@
+          MODULE=libksane
+         VERSION=4.8.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:ccacaec0d1a46689cdf5f5294f14b442d0f4317b
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20110813
+         UPDATED=20120504
+           SHORT="SANE Library interface for KDE"
+
+cat << EOF
+Libksane is a KDE interface for SANE library to control flat scanners.
+This library is used by kipi-plugins, digiKam and others kipi host programs.
+EOF

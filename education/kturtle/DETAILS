@@ -1,0 +1,17 @@
+          MODULE=kturtle
+         VERSION=4.8.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:6f8c102e4bf41c9e214b5f71bd79f56f5651c1dc
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20110813
+         UPDATED=20120504
+           SHORT="educational tool for learning the basics of programming"
+
+cat << EOF
+KTurtle is an educational programming environment that aims to make programming
+as easy and touchable as possible. It is not intended to be a general purpose
+porgramming language, but merely helps a student who is new to programming
+to quickly get a basic understanding.
+EOF

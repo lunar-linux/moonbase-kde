@@ -1,0 +1,14 @@
+          MODULE=blinken
+         VERSION=4.8.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:66b94eb99a9e2075465fd60d8e5635d4b064ecb9
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20110813
+         UPDATED=20120508
+           SHORT="blinken"
+
+cat << EOF
+blinken
+EOF

@@ -1,0 +1,15 @@
+          MODULE=kfloppy
+         VERSION=4.8.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:e507d66f29df3ded849be74c609ce13a38e78b60
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://utils.kde.org/projects/kfloppy/
+         ENTERED=20120125
+         UPDATED=20120504
+           SHORT="a graphical means to access floppy devices"
+
+cat << EOF
+KFloppy is a utility that provides a straightforward means to format 3.5 and
+5.25 floppy disks.
+EOF

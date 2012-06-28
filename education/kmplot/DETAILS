@@ -1,0 +1,13 @@
+          MODULE=kmplot
+         VERSION=4.8.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:c34c93266fd00d7c9b0d6f16625dbed13dba2a20
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20110813
+         UPDATED=20120504
+           SHORT="kmplot"
+
+cat << EOF
+EOF
