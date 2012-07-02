@@ -11,7 +11,7 @@ depends attica
 depends giflib
 depends docbook-xml
 
-optional_depends "udev"        "-DWITH_UDev=ON"    "-DWITH_UDev=OFF"    "for udev support"
+optional_depends "%UDEV"       "-DWITH_UDev=ON"    "-DWITH_UDev=OFF"    "for udev support"
 optional_depends "acl"         "-DWITH_ACL=ON"     "-DWITH_ACL=OFF"     "for POSIX access control list support"
 optional_depends "bzip2"       "-DWITH_BZip2=ON"   "-DWITH_BZip2=OFF"   "for bzip file compression support"
 optional_depends "lzma-sdk"    "-DWITH_LibLZMA=ON" "-DWITH_LibLZMA=OFF" "for lzma file compression support"
