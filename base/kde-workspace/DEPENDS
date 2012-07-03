@@ -14,7 +14,6 @@ optional_depends "libxklavier"    "-DWITH_XKB=ON"        "-DWITH_XKB=OFF"       
 optional_depends "glib-2"         "-DWITH_GLIB2=ON"      "-DWITH_GLIB2=OFF"      "required for keyboard switching"
 optional_depends "libusb-compat"  "-DWITH_USB=ON"        "-DWITH_USB=OFF"        "for usb device support"
 
-optional_depends "ConsoleKit"     "-DWITH_CkConnector=ON" "-DWITH_CkConnector=OFF" "for console kit support"
 optional_depends "webkit"         "-DBUILD_webkit=ON" "-DBUILD_webkit=OFF" "for konqueror webkit support"
 optional_depends "bluez"          "" "" "for bluetooth support within KDE4"
 optional_depends "libraw1394"     "-DWITH_RAW1394=ON" "-DWITH_RAW1394=OFF" "for firewire support"
