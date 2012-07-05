@@ -36,7 +36,6 @@ optional_depends "google-gadgets-for-linux" "-DWITH_Googlegadgets=ON"   \
                                             "-DWITH_Googlegadgets=OFF"  \
                                             "for google gadget support"
 optional_depends "wicd"           "-DBUILD_wicd=ON" "-DBUILD_wicd=OFF"  "For network connectivity management"
-optional_depends "xmms"           "-DWITH_Xmms=ON"  "-DWITH_Xmms=OFF"   "to support the Now Playing data engine"
 optional_depends "libqalculate"   "-DWITH_Qalculate=ON" "-DWITH_Qalculate=ON" "for advanced features of the calculator runner"
 optional_depends "libdmtx"        "-DWITH_Dmtx=ON"      "-DWITH_Dmtx=OFF"     "for Data Matrix 2D barcode support"
 optional_depends "pykde4"          ""      ""      "for PyKDE4 support"
