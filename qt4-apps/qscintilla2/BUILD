@@ -2,12 +2,12 @@
 
 # install the editor class
 
-  export PATH=$QTDIR/bin:$PATH
-  source /etc/profile.d/qt4.rc
-  cd Qt4
+  export PATH=$QTDIR/bin:$PATH  &&
+  source /etc/profile.d/qt4.rc  &&
+  cd Qt4Qt5                     &&
 
-  qmake -o Makefile qscintilla.pro
-  default_make
+  qmake -o Makefile qscintilla.pro &&
+  default_make  &&
 
 # install the Pythom bindings
 
