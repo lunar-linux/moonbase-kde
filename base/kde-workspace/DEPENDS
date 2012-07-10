@@ -28,9 +28,8 @@ optional_depends "libcaptury"     "" ""  "for GL video support"
 optional_depends "lm_sensors"     "-DWITH_Sensors=ON" "-DWITH_Sensors=OFF"  "for system sensors support"
 
 optional_depends "libXScrnSaver"  "-DBUILD_kscreensaver=ON" "-DBUILD_kscreensaver=OFF" \
-                                  "for screensaver support and needed by kaffeine"
+                                  "for screensaver support, needed by kaffeine and kdetoys"
 optional_depends "qedje"          "" ""  "for plasma scriptengine support"
-optional_depends "polkit-qt"      "" ""  "For policy kit support"
 
 optional_depends "google-gadgets-for-linux" "-DWITH_Googlegadgets=ON"   \
                                             "-DWITH_Googlegadgets=OFF"  \
