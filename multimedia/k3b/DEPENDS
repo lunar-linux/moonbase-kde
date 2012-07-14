@@ -4,7 +4,6 @@ depends cdrtools
 depends dvd+rw-tools
 depends libsamplerate
 
-optional_depends "polkit-qt"      "" "-DK3B_BUILD_K3BSETUP=OFF" "for K3bSetup to acquire administrator support"
 optional_depends "libmpcdec"      "" "-DK3B_BUILD_MUSE_DECODER_PLUGIN=OFF" "for Musepack decoder support"
 optional_depends "vcdimager"      "" "" "for creating video cds"
 optional_depends "sox"            "" "-DK3B_BUILD_SOX_ENCODER_PLUGIN=OFF" "for audio file encoding support"
