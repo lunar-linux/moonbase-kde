@@ -1,13 +1,13 @@
           MODULE=libktorrent
-           MAJOR=4.2.0
-         VERSION=1.2.0
-          SOURCE=$MODULE-$VERSION.tar.bz2
+           MAJOR=4.2.1
+         VERSION=1.2.1
+          SOURCE=$MODULE-$VERSION-2.tar.bz2
       SOURCE_URL=http://ktorrent.org/downloads/$MAJOR
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
-      SOURCE_VFY=sha1:97609efd5890364e1fdfbf1778da540c53d04d2b
+      SOURCE_VFY=sha1:857e4227c4bba685755d66581d881f893f6311ae
         WEB_SITE=http://ktorrent.org
          ENTERED=20100526
-         UPDATED=20120306
+         UPDATED=20120716
            SHORT="BitTorrent library"
 
 cat << EOF
