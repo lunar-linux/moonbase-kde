@@ -1,0 +1,16 @@
+          MODULE=automoc4
+         VERSION=0.9.88
+          SOURCE=$MODULE-$VERSION.tar.bz2
+         SOURCE2=automoc4-0.9.88-boost-definitions.patch
+   SOURCE_URL[0]=$KDE_URL/stable/$MODULE/$VERSION/
+   SOURCE_URL[1]=$MIRROR_URL
+     SOURCE2_URL=$PATCH_URL
+      SOURCE_VFY=sha1:d864c3dda99d8b5f625b9267acfa1d88ff617e3a
+     SOURCE2_VFY=sha1:2d44603cd4583a29952fd8ba2efaae7bf82f60e1
+        WEB_SITE=http://techbase.kde.org/Getting_Started/Build/KDE4/Troubleshooting
+         ENTERED=20080622
+         UPDATED=20120804
+           SHORT=""
+
+cat << EOF
+EOF
