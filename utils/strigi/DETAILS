@@ -1,17 +1,12 @@
           MODULE=strigi
-         VERSION=0.7.5
-          SOURCE=$MODULE-$VERSION.tar.bz2
-         SOURCE2=strigi-clucene-01.patch
-         SOURCE3=strigi-ffmpeg-cmake.patch
-      SOURCE_URL=http://www.vandenoever.info/software/strigi
-     SOURCE2_URL=$PATCH_URL
-     SOURCE3_URL=$PATCH_URL
-      SOURCE_VFY=sha1:0aa3632e07c58f2ab5c515004b790bda6cfefbf5
-     SOURCE2_VFY=sha1:4c6cdfd63a5adc3d44a3fd87c522171c1e5980af
-     SOURCE3_VFY=sha1:93ebb9be17996ddbfa1f749b5b7a7d48ce987270
+         VERSION=0.7.7.orig
+          SOURCE=$MODULE\_$VERSION.tar.bz2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-${VERSION%.orig}
+      SOURCE_URL=http://ftp.de.debian.org/debian/pool/main/s/strigi/
+      SOURCE_VFY=sha1:a3100f851bb1a15231a863a5e66018946e3e8eb3
         WEB_SITE=http://strigi.sourceforge.net
          ENTERED=20070802
-         UPDATED=20110904
+         UPDATED=20120802
            SHORT="A small daemon that can index information"
 
 cat << EOF

@@ -1,4 +1,5 @@
 depends kdelibs
+depends nepomuk-core
 depends phonon
 
 optional_depends kdepimlibs    "-DWITH_Nepomuk=ON"    "-DWITH_Nepomuk=OFF"    "For KDE PIM and Nepomuk support (it needs akonadi and and MySQL to work well. Also needed by gwenview) Recommended"

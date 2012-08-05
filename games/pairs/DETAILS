@@ -1,0 +1,16 @@
+          MODULE=pairs
+         VERSION=4.9.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:d040039b3cffc4b3375b6d5eca2e0a026187f359
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://userbase.kde.org/Pairs
+         ENTERED=20120803
+         UPDATED=20120801
+           SHORT="games aimed towards preschool childrem"
+
+cat << EOF
+Pairs is a collection of games aimed to help the development of preschool children. 
+With these games the child can improve memory, logic, hearing and even reading skills. 
+Each game can have different themes so the child is stimulated with different and new challenges.
+EOF

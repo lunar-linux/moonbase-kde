@@ -4,10 +4,11 @@
 
   if [ -f /etc/profile.d/qt4.rc ]; then
     source /etc/profile.d/qt4.rc
-  fi
+  fi &&
+
   if [ -f /etc/profile.d/kde4.rc ]; then
     source /etc/profile.d/kde4.rc
-  fi
+  fi &&
 
   default_cmake_build
 
