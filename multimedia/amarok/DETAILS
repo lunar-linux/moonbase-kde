@@ -1,8 +1,11 @@
           MODULE=amarok
          VERSION=2.5.0
           SOURCE=amarok-${VERSION}.tar.bz2
+         SOURCE2=amarok-2.5.0-ffmpeg-0.11.patch
       SOURCE_URL=$KDE_URL/stable/amarok/$VERSION/src
+     SOURCE2_URL=$PATCH_ULR
       SOURCE_VFY=sha1:9849900d20225e703c43d242650a8fa211cf15f2
+     SOURCE2_VFY=sha1:630a324d20c20769ae48c1f1c9422122348e41ed
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://amarok.kde.org
          ENTERED=20080414

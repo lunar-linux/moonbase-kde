@@ -1,8 +1,11 @@
           MODULE=k3b
          VERSION=2.0.2
           SOURCE=$MODULE-$VERSION.tar.bz2
+         SOURCE2=k3b-2.0.2-ffmpeg_fix-1.patch
       SOURCE_URL=$SFORGE_URL/k3b/$VERSIONr
+     SOURCE2_URL=http://www.linuxfromscratch.org/patches/blfs/svn/
       SOURCE_VFY=sha1:8b30a4d07942e82559b01bc07dea6bcf2defd532
+     SOURCE2_VFY=sah1:de53b013c3d2a64b5e8cb75fef391bead51cee87
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://k3b.plainblack.com
          ENTERED=20091127
