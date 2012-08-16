@@ -1,9 +1,12 @@
           MODULE=qca2
          VERSION=2.0.3
           SOURCE=${MODULE%2}-$VERSION.tar.bz2
+         SOURCE2=qca-2.0.3-gcc-4.7.1.patch
       SOURCE_URL=http://delta.affinix.com/download/qca/${VERSION%.*}/
+     SOURCE2_URL=$PATCH_URL
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE%2}-$VERSION
       SOURCE_VFY=sha1:9c868b05b81dce172c41b813de4de68554154c60
+     SOURCE2_VFY=sha1:c4198477258445de61ff0d0a3c46570097d0730f
    MODULE_PREFIX=${QT4_PREFIX:-/usr}
         WEB_SITE=http://delta.affinix.com/qca/
          ENTERED=20071106

@@ -1,5 +1,7 @@
 (
 
+  patch_it $SOURCE2 3 &&
+
   . /etc/profile.d/qt4.rc  &&
 
   sedit "s/^WHICH=.*/WHICH=which/" configure  &&
