@@ -8,5 +8,6 @@ optional_depends kde-workspace "-DWITH_KDE4Workspace=ON" "-DWITH_KDE4Workspace=O
 optional_depends kdepimlibs   "-DWITH_KdepimLibs=ON"    "-DWITH_KdepimLibs=OFF"    "to use various libs/apps from kdepimlibs"
 optional_depends libkexiv2    "-DWITH_Kexiv2=ON"        "-DWITH_Kexiv2=OFF"        "to use libkexiv2 library"
 optional_depends marble       "" "" "to enable desktop globe wallpaper for plasma"
+optional_depends qoauth       "" "" "required to build the Plasma Microblog DataEngine"
 optional_depends boost "" "" "boost support"
 optional_depends mesa-lib "" "" "3d support in apps"
