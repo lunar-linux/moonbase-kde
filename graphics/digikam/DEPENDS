@@ -11,14 +11,14 @@ optional_depends gdk-pixbuf   "-DWITH_Gdk=ON"          "-DWITH_Gdk=OFF"         
 optional_depends libxml2      "-DWITH_LibXml2=ON"      "-DWITH_LibXml2=OFF"     "for xml support"
 optional_depends libxslt      "-DWITH_LibXslt=ON"      "-DWITH_LibXslt=OFF"     "for xslt support"
 
-#Check this on the next version bump.
-#optional_depends opencv       "-DWITH_OpenCV=ON"       "-DWITH_OpenCV=OFF"      "for computer vision support"
+optional_depends opencv       "-DWITH_OpenCV=ON"       "-DWITH_OpenCV=OFF"      "for computer vision support"
 optional_depends qca2         "-DWITH_QCA2=ON"         "-DWITH_QCA2=OFF"        "for qca support"
 optional_depends qjson        "-DWITH_QJSON=ON"        "-DWITH_QJSON=OFF"       "for qjson support"
 optional_depends libusb       "-DWITH_USB=ON"          "-DWITH_USB=OFF"         "for usb device support"
 optional_depends lcms2        ""                       ""                       "for color management support"
 
-optional_depends kipi-plugins "-DBUILD_kipi-plugins=ON" "-DBUILD_kipi-plugins=OFF" "for kipi-plugins support"
+# No suitable version available.
+#optional_depends kipi-plugins "-DBUILD_kipi-plugins=ON" "-DBUILD_kipi-plugins=OFF" "for kipi-plugins support"
 
 optional_depends shared-desktop-ontologies "-DWITH_SharedDesktopOntologies=ON"  \
                                            "-DWITH_SharedDesktopOntologies=OFF" \
