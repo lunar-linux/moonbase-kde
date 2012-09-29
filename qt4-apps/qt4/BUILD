@@ -30,7 +30,7 @@
   sed -i "/^QMAKE_LFLAGS\s/s|+=|+= ${LDFLAGS}|g" mkspecs/common/gcc-base.conf &&
 
 # Temporary. Make failes if no jit. Will revisit on next bump. Found by keios.
-  OPTS+=" -scripttools -no-declarative-debug -javascript-jit -release" &&
+  OPTS+=" -scripttools -no-declarative-debug -release" &&
 
   ./configure  -confirm-license "${LICENSE_TYPE}"                  \
                -bindir "${MODULE_PREFIX}/bin"                      \
