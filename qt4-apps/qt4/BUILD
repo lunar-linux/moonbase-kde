@@ -4,11 +4,6 @@
 # https://bugs.kde.org/show_bug.cgi?id=304111 Comment 1.
   sed -i "190i pp.macros[\"BOOST_TT_HAS_OPERATOR_HPP_INCLUDED\"]; // rh#756395" src/tools/moc/main.cpp &&
 
-# Gentoo patch fix for Glibc > 2.31
-  if [ `lvu version glib-2 | cut -d. -f1` -ge 31 ]; then
-   patch_it $SOURCE2 1
-  fi &&
-
 # By ommitting the --prefix switch from the configure and performing this sedit we can remove
 # the group of sedit to repoint moc, uic and rcc locations to /usr/bin. 
   sedit "s:/usr/local/Trolltech/:$MODULE_PREFIX/share/$MODULE/Trolltech/:g" configure &&
