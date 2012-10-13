@@ -1,5 +1,7 @@
 (
 
+  patch_it $SOURCE2 1 &&
+
 # A gcc twiddle.
   sed -i "29i #include <unistd.h>" strigidaemon/bin/daemon/eventlistener/eventlistenerqueue.cpp &&
 
