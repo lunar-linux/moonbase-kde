@@ -3,13 +3,12 @@
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=$KDE_URL/stable/$MODULE/$VERSION/src/
       SOURCE_VFY=sha1:4cf02bfb8d7813c3e06e4da021582698c2a232e5
-        WEB_SITE=http://www.kde.org/applications/graphics/kgrab/
+        WEB_SITE=http://libregraphicsworld.org/blog/entry/color-management-module-for-kde-available-now
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
          ENTERED=20121016
          UPDATED=20121016
-           SHORT="KDE Screen Grabbing Utility"
+           SHORT="KDE color management module"
 
 cat << EOF
-KDE Screen Grabbing Utility. This is a fork of ksnapshot and has more functions
-such as Printing and a standard Menu.
+A KDE based color management module. It can be found in system settings.
 EOF
