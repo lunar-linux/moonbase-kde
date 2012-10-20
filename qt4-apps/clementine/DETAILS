@@ -1,8 +1,11 @@
           MODULE=clementine
          VERSION=1.0.1
           SOURCE=$MODULE-$VERSION.tar.gz
+         SOURCE2=clementine-1.0.1-libmobiledevice-1.1.2.patch
       SOURCE_URL=http://clementine-player.googlecode.com/files
+     SOURCE2_URL=$MIRROR_URL
       SOURCE_VFY=sha1:e05320da689e2fad744fd3e68518bc4103ecf0fd
+     SOURCE2_VFY=sha1:e286bf3d6ee76a918e0a9534030f49d159ef08ab
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.clementine-player.org
          ENTERED=20111228
