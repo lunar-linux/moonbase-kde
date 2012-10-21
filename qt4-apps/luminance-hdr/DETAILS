@@ -1,11 +1,12 @@
           MODULE=luminance-hdr
-         VERSION=2.2.0
+         VERSION=2.3.0
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=$SFORGE_URL/qtpfsgui/luminance/$VERSION/
-      SOURCE_VFY=sha1:7a81a38e944c89249c307497145e6d86164080f2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION/$MODULE-$VERSION
+      SOURCE_VFY=sha1:fa76663c8c1569b6af6f6ed8fedeb992b4fe1eab
         WEB_SITE=http://qtpfsgui.sourceforge.net/
          ENTERED=20100621
-         UPDATED=20120203
+         UPDATED=20121021
            SHORT="provides a workflow for HDR imaging"
 
 cat << EOF
