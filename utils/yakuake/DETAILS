@@ -1,12 +1,12 @@
          MODULE=yakuake
-         VERSION=2.9.8
-          SOURCE=$MODULE-$VERSION.tar.bz2
+         VERSION=2.9.9
+          SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/$MODULE/$VERSION/src/
-      SOURCE_VFY=sha1:b9c9e23f276d62b4d2c31fe6c79fad2a5c551186
+      SOURCE_VFY=sha1:5bb9e9b6799642dee5684267e5baddc59eaa7214
         WEB_SITE=http://extragear.kde.org/apps/yakuake
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
          ENTERED=20100216
-         UPDATED=20110127
+         UPDATED=20121022
            SHORT="A terminal emulator for KDE"
 
 cat << EOF
