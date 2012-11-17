@@ -4,6 +4,7 @@ depends bzip2
 depends openssl
 depends cmake
 depends cppunit
+depends boost
 
 optional_depends "dbus"           "-DENABLE_DBUS=ON"    "-DENABLE_DBUS=OFF"    "for dbus support"
 optional_depends "clucene"        "-DENABLE_CLUCENE=ON" "-DENABLE_CLUCENE=OFF" "for indexing and searching support"
