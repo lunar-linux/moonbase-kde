@@ -1,0 +1,22 @@
+          MODULE=spatialindex
+         VERSION=src-1.7.1
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=http://download.osgeo.org/libspatialindex/
+      SOURCE_VFY=sha1:7ef94a28a9accfd42551b069ba240d2244f3d054
+        WEB_SITE=http://libspatialindex.github.com/
+         ENTERED=20121203
+         UPDATED=20121203
+           SHORT="support robust spatial indexing method"
+
+cat << EOF
+Features
+
+Generic main memory and disk based storage managers.
+R*-tree index (also supports linear and quadratic splitting).
+MVR-tree index (a.k.a. PPR-tree).
+TPR-tree index.
+Advanced query capabilities, using Strategy and Visitor patterns.
+Arbitrary shaped range queries, by defining generic geometry interfaces.
+Large parameterization capabilities, including dimensionality, fill factor, node capacity, etc.
+STR packing / bulk loading.
+EOF
