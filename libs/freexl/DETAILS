@@ -1,0 +1,28 @@
+          MODULE=freexl
+         VERSION=1.0.0d
+          SOURCE=$MODULE-$VERSION.tar.gz
+      SOURCE_URL=http://www.gaia-gis.it/gaia-sins/
+      SOURCE_VFY=sha1:c10ebe65683eae4ca3a54c23e433d9cb57c58436
+        WEB_SITE=https://www.gaia-gis.it/fossil/freexl/index
+         ENTERED=20121203
+         UPDATED=20121203
+           SHORT="extract valid data from within an Excel (.xls) spreadsheet"
+
+cat << EOF
+FreeXL is an open source library to extract valid data from within an Excel (.xls) spreadsheet.
+FreeXL design goals:
+
+to be simple and lightweight
+to be stable, robust and efficient
+to be easily and universally portable
+completely ignoring any GUI-related oddity
+Note that the final goal means that FreeXL ignores at all fonts, sizes and alignments, and most formats. 
+It ignores Pivot Table, Charts, Formulas, Visual Basic macros and so on. FreeXL is structurally simple 
+and quite light-weight (typically 40-80K of object code, stripped).
+
+FreeXL is licensed under the MPL tri-license terms; you are free to choose the best-fit license between:
+
+the MPL 1.1
+the GPL v2.0 or any subsequent version
+the LGPL v2.1 or any subsequent version
+EOF
