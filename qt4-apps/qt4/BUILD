@@ -118,7 +118,6 @@ EOF
   install -D -m644 ${MODULE}-linguist.desktop ${MODULE_PREFIX}/share/applications/${MODULE}-linguist.desktop &&
 
   echo "export QTDIR=\"${MODULE_PREFIX}\"" > $SOURCE_DIRECTORY/$MODULE.rc &&
-  echo export PATH=\"'${QTDIR}'/bin:'${PATH}'\" >> $SOURCE_DIRECTORY/$MODULE.rc &&
   echo export QT_PLUGIN_PATH=\"'${QTDIR}'/lib/${MODULE}/plugins\" >> $SOURCE_DIRECTORY/$MODULE.rc &&
   echo export XDG_DATA_DIRS=\"'${XDG_DATA_DIRS:-/usr/share}':/usr/share/$MODULE\" >> $SOURCE_DIRECTORY/$MODULE.rc &&
   echo export PKG_CONFIG_PATH=\"'${QTDIR}'/lib/${MODULE}/pkgconfig:'${PKG_CONFIG_PATH}'\" >> $SOURCE_DIRECTORY/$MODULE.rc &&
