@@ -1,0 +1,18 @@
+          MODULE=merkaartor
+         VERSION=0.18.1
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=http://merkaartor.be/attachments/download/301/
+      SOURCE_VFY=sha1:0c3884d6e04c3b43b7d898cc23693a9494259d32
+        WEB_SITE=http://merkaartor.be/
+         ENTERED=20121124
+         UPDATED=20121124
+           SHORT="OpenStreetMap map editor"
+cat << EOF
+Merkaartor is an OpenStreetMap editor with
+- Map view near-WYSIWYG, anti-aliased, with road names
+- Transparent display of map features like roads, amenities and areas
+- Style editor for the map display, including multiple styles
+- Support for handling separated highways
+- Easy download and upload of OpenStreetMap data
+- Live connection to your GPS
+EOF
