@@ -1,8 +1,11 @@
 (
 
-  patch_it $SOURCE2 0 &&
-
   source /etc/profile.d/qt4.rc &&
+
+# Another cmake base build type that is case sensitive. Using all
+# upper case confuses it into thinking parts built as debug with
+# others as Release.
+  OPTS+=" -DCMAKE_BUILD_TYPE=Release" &&
 
   default_cmake_build &&
 
@@ -13,7 +16,7 @@ Type=Application
 Name=Tulip
 Comment=Graph visualization software
 Exec=$QTDIR/bin/tulip
-Icon=$QTDIR/lib/tlp/bitmaps/logotulip.jpg
+Icon=/usr/share/tulip/bitmaps/logo.bmp
 Categories=Qt;KDE;Science;
 EOF
 
