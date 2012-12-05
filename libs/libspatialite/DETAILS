@@ -1,0 +1,21 @@
+          MODULE=libspatialite
+         VERSION=4.0.0
+          SOURCE=$MODULE-$VERSION.tar.gz
+      SOURCE_URL=http://www.gaia-gis.it/gaia-sins/
+      SOURCE_VFY=sha1:3d20fcabcc5a951e7863d33b6b6ef3f78dbf006d
+        WEB_SITE=https://www.gaia-gis.it/fossil/libspatialite/index
+         ENTERED=20121203
+         UPDATED=20121203
+           SHORT="extend the SQLite core to support fully fledged Spatial SQL capabilities"
+
+cat << EOF
+SpatiaLite is an open source library intended to extend the SQLite core to support fully fledged Spatial SQL capabilities.
+SQLite is intrinsically simple and lightweight:
+
+a single lightweight library implementing the full SQL engine
+standard SQL implementation: almost complete SQL-92
+no complex client/server architecture
+a whole database simply corresponds to a single monolithic file (no size limits)
+any DB-file can be safely exchanged across different platforms, because the internal architecture is universally portable
+no installation, no configuration
+EOF
