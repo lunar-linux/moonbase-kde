@@ -1,3 +1,6 @@
 depends kde-baseapps
 depends libkcddb
 depends libkcompactdisc
+
+optional_depends flac   "-DWITH_Flac=ON"      "-DWITH_Flac=OFF"      "for flac audio support"
+optional_depends libogg "-DWITH_OggVorbis=ON" "-DWITH_OggVorbis=OFF" "for ogg audio support"
