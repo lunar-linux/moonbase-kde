@@ -1,2 +1,4 @@
-depends  anyremote
-depends  kdelibs
+depends anyremote
+depends kdelibs
+
+optional_depends "PyBluez" "" "" "For Python bindings support"
