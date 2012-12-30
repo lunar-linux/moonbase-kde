@@ -3,4 +3,5 @@ mquery XML_PATTERNS "Build xml patterns? ${PROBLEM_COLOR}(Needed by qtscriptgene
 mquery MAKE_WEBKIT "Build the webkit plugin? ${PROBLEM_COLOR}(Needed by phonon / kdelibs4 / mythtv)${QUERY_COLOR}" y "-webkit" "-no-webkit"
 mquery LICENSE_TYPE "Build Qt using open-source license? (n=commercial)" y
 mquery MAKE_PHONON "Build qt4's (old) phonon? ${PROBLEM_COLOR}(Say n if you will build and use KDE)${QUERY_COLOR}" n "-phonon" "-no-phonon"
-mquery DEV_BUILD "Compile and link Qt with Qt developer options (including auto-tests exporting)? ${PROBLEM_COLOR}Can be used by Qt-Creator and future version of calibre${QUERY_COLOR" y "-developer-build" " "
+mquery DEV_BUILD "Compile and link Qt with Qt developer options (including auto-tests exporting)? ${PROBLEM_COLOR}Can be used by Qt-Creator and future version of calibre${QUERY_COLOR}" y "-developer-build"
+ 
