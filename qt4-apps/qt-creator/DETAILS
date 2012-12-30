@@ -1,12 +1,12 @@
           MODULE=qt-creator
-         VERSION=2.5.2-src
-          SOURCE=$MODULE-$VERSION.zip
-      SOURCE_URL=http://get.qt.nokia.com/qtcreator
-      SOURCE_VFY=sha1:8b7e789fe54c6af43b28e3e7630182c69bab3c43
+         VERSION=2.6.1-src
+          SOURCE=$MODULE-$VERSION.tar.gz
+      SOURCE_URL=http://releases.qt-project.org/qtcreator/${VERSION%-*}/
+      SOURCE_VFY=sha1:dd6810429918319134f6254fe66ec2769b0b507e
    MODULE_PREFIX=${QT4_PREFIX:-/usr}
         WEB_SITE=http://qt.nokia.com/products/developer-tools
          ENTERED=20090303
-         UPDATED=20120811
+         UPDATED=20121230
            SHORT="cross-platform integrated development environment"
 
 cat << EOF
