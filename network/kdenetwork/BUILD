@@ -1,5 +1,8 @@
 (
 
+# Fixes memset used with constant zero length parameter; this could be due to transposed parameters
+  sedit "s:pos++ ): ++pos ):" kopete/protocols/qq/evautil.cpp &&
+
   source /etc/profile.d/qt4.rc   &&
   source /etc/profile.d/kde4.rc  &&
 
