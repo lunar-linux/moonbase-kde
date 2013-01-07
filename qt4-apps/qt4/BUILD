@@ -1,5 +1,8 @@
 (
 
+# This lives in /usr/bin/
+  sedit "s:/bin/ls:/usr/bin/ls:g" src/corelib/global/global.pri src/3rdparty/webkit/Source/WebCore/loader/FTPDirectoryParser.h src/3rdparty/webkit/Source/WebCore/loader/FTPDirectoryParser.cpp &&
+
 # Fixes a parsing error. See https://bugreports.qt-project.org/browse/QTBUG-22829 and 
 # https://bugs.kde.org/show_bug.cgi?id=304111 Comment 1.
   sed -i "190i pp.macros[\"BOOST_TT_HAS_OPERATOR_HPP_INCLUDED\"]; // rh#756395" src/tools/moc/main.cpp &&
@@ -55,6 +58,16 @@
   ln -sf /usr/bin/qmake /usr/share/qt4/Trolltech/Qt-`lvu version qt4`/bin/qmake &&
   ln -sf /usr/bin/uic /usr/share/qt4/Trolltech/Qt-`lvu version qt4`/bin/uic &&
  
+# It wants to point moc_location and uic_location to ${prefix}/src/qt-everywhere-opensource-src-4.8.4/bin
+# and after much fiddling cannot get it to point them to /usr/bin. So lets just sedit these rascals.
+  for i in `ls /usr/lib/$MODULE/pkgconfig/Q*.pc` ; do sed -i "s:/usr/src/qt-everywhere-opensource-src-$VERSION:/usr:" $i ; done &&
+  if [ -f /usr/lib/$MODULE/pkgconfig/phonon.pc ]; then
+  sed -i "s:/usr/src/qt-everywhere-opensource-src-$VERSION/:/usr:" /usr/lib/$MODULE/pkgconfig/phonon.pc
+  fi &&
+# Like for moc and uic, the same needs doing for the *.prl files.
+  find /usr/lib/qt4 -type f -name '*.prl' \
+      -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
+
   if [[ "$MAKE_EXAMPLE_DEMOS" == "y" ]] ; then
   cat > ${MODULE}-designer.desktop << EOF  &&
 [Desktop Entry]
