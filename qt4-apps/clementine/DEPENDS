@@ -5,13 +5,16 @@ depends hicolor-icon-theme
 depends taglib
 depends qjson
 depends gstreamer-10
+depends protobuf
+depends sparsehash
 
-optional_depends libcdio            ""   ""   "for CD support"
-optional_depends libmtp             ""   ""   "for portable media devices that use the media transfer protocol suport"
-optional_depends libgpod            ""   ""   "for Apple iPod devices suport"
-optional_depends liblastfm          ""   ""   "for Lastfm support"
+optional_depends fftw3              "-DWITH_FFTW3=ON"       "-DWITH_FFTW3=ON"       "For fftw3 support"
+optional_depends libcdio            "-DENABLE_AUDIOCD=ON"   "-DENABLE_AUDIOCD=OFF"   "for CD support"
+optional_depends libmtp             "-DENABLE_LIBMTP=ON"   "-DENABLE_LIBMTP=OFF"   "for portable media devices that use the media transfer protocol suport"
+optional_depends libgpod            "-DENABLE_LIBGPOD=ON"   "-DENABLE_LIBGPOD=OFF"   "for Apple iPod devices suport"
+optional_depends liblastfm          "-DENABLE_LIBLASTFM=ON"   "-DENABLE_LIBLASTFM=OFF"   "for Lastfm support"
 optional_depends gst-plugins-base   ""   ""   "for Gstreamer base plugins support"
 optional_depends gst-plugins-good   ""   ""   "for Gstreamer good plugins support"
 optional_depends gst-plugins-bad    ""   ""   "for Gstreamer bad plugins support"
 optional_depends gst-plugins-ugly   ""   ""   "for Gstreamer ugly plugins support"
-optional_depends libimobiledevice   ""   ""   "for Apple iPod support"
+optional_depends libimobiledevice   "-DENABLE_IMOBILEDEVICE=ON"   "-DENABLE_IMOBILEDEVICE=OFF"   "for Apple iPod support"
