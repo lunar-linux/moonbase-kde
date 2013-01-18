@@ -1,13 +1,13 @@
           MODULE=amarok
-         VERSION=2.6.0
+         VERSION=2.7.0
           SOURCE=amarok-${VERSION}.tar.bz2
       SOURCE_URL=$KDE_URL/stable/amarok/$VERSION/src
      SOURCE2_URL=$PATCH_ULR
-      SOURCE_VFY=sha1:2cfcdabb67436418ba0012075ba105bbb630b48d
+      SOURCE_VFY=sha1:d0ae4a2cb81a54ae94ca24fdb3aed88d7f3a921e
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://amarok.kde.org
          ENTERED=20080414
-         UPDATED=20120817
+         UPDATED=20130118
            SHORT="KDE-based audio player"
 
 cat << EOF
