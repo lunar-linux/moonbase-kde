@@ -3,6 +3,7 @@ depends cdparanoia
 depends cdrtools
 depends dvd+rw-tools
 depends libsamplerate
+depends libkcddb
 
 optional_depends "libmpcdec"      "" "-DK3B_BUILD_MUSE_DECODER_PLUGIN=OFF" "for Musepack decoder support"
 optional_depends "vcdimager"      "" "" "for creating video cds"
