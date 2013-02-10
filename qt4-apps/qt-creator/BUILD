@@ -1,7 +1,6 @@
 (
 
   source /etc/profile.d/qt4.rc &&
-  source /etc/profile.d/kde4.rc &&
 
   QT_CREATOR_BLD="$SOURCE_DIRECTORY/creator-build" &&
 
