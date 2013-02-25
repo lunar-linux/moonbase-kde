@@ -1,12 +1,12 @@
           MODULE=digikam
-         VERSION=2.9.0
+         VERSION=3.0.0
           SOURCE=$MODULE-$VERSION.tar.bz2
-      SOURCE_URL=$SFORGE_URL/digikam
-      SOURCE_VFY=sha1:df4b879a95f4ccac4480c5161d66fb05d6fbefcd
+      SOURCE_URL=$KDE_URL/stable/$MODULE
+      SOURCE_VFY=sha1:45a9490b2b10b7b42fa9f90b7389eeb248326718
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.digikam.org
          ENTERED=20090318
-         UPDATED=20120904
+         UPDATED=20130225
            SHORT="kde4 version of digikam"
 
 cat << EOF
