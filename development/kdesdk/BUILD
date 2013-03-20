@@ -3,7 +3,8 @@
 # The scripts/makeobj conflicts with our module of the same name; both provide the same
 # purpose so this one will be deleted. This sed's out makeobj so it does not get installed
 # to /usr/bin.
-  sedit "s:makeobj::" CMakeLists.txt &&
+
+  sedit "s:makeobj::" kde-dev-scripts/CMakeLists.txt &&
 
 #  sedit "s:1.3:`lvu version hunspell`:" cmake/modules/FindHUNSPELL.cmake &&
 
