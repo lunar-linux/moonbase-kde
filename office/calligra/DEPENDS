@@ -33,3 +33,9 @@ optional_depends "libwpg"       "-DWITH_WPG=ON"        "-DWITH_WPG=OFF"        "
 optional_depends "zlib"         "-DWITH_ZLIB=ON"       "-DWITH_ZLIB=OFF"       "for lossless data compression support"
 optional_depends "xbase"        "-DWITH_XBase=ON"      "-DWITH_XBase=OFF"      "Required by Kexi XBase Migration driver"
 optional_depends "libvisio"     "-DWITH_LibVisio=ON"   "-DWITH_LibVisio=OFF"   "for importing visio diagrams support"
+optional_depends "Vc"           "-DWITH_Vc=ON"         "-DWITH_Vc=OFF"         "for SIMD support"
+
+optional_depends "imageworks-OpenColorIO" "-DWITH_OCIO=ON" "-DWITH_OCIO=OFF" "for OpenColorIO library support"
+
+optional_depends "OpenGTL"      "" "" "for OpenShiva interpreter for the Shiva Kernel Language support"
+optional_depends "libQtGTL"     "" "" "provides Qt bindings for the OpenShiva interpreter support"

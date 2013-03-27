@@ -1,15 +1,12 @@
 (
 
-# It has trouble finding openjpeg.h
+# It has trouble finding openjpeg.h because we install the headers in /usr/include/openjpeg-some-version
   if in_depends $MODULE openjpeg ; then
-    OJ_VER="`lvu version openjpeg | cut -c 1-3`" &&
-    CFLAGS+=" -I/usr/include/openjpeg-${OJ_VER}" &&
-    LDFLAGS+=" -lopenjpeg" &&
-    OPTS+=" -DOPENJPEG_INCLUDE_DIR=/usr/include/openjpeg-${OJ_VER}"
+    sedit "s:/usr/include/openjpeg:/usr/include/openjpeg-`lvu version openjpeg | cut -c 1-3`:" cmake/modules/FindOpenJPEG.cmake
+#    OPTS+=" -DOPENJPEG_INCLUDE_DIR=/usr/include/`lvu version openjpeg|cut -c 1-3`"
   fi &&
 
-  OPTS+=" -Wno-dev -DWITH_Iconv=ON"   &&
-
+  OPTS+=" -Wno-dev -DWITH_Iconv=ON" &&
 
   default_cmake_build
 
