@@ -1,7 +1,12 @@
+# Opting here to use these 4 as hard depends else a conflict is created with 
+# those provided by digikam.
+depends libkipi
+depends libkdcraw
+depends libkexiv2
 depends libksane
 
+optional_depends lcms         ""                       ""                       "for color management support"
 optional_depends expat        "-DWITH_EXPAT=ON"        "-DWITH_EXPAT=OFF"       "for XML parsing support"
-optional_depends libkexiv2    "-DWITH_Kexiv2=ON"       "-DWITH_Kexiv2=OFF"      "for EXIF/IPTC and XMP support"
 optional_depends libgphoto2   "-DWITH_Gphoto2=ON"      "-DWITH_Gphoto2=OFF"     "for gphoto support"
 optional_depends kdepimlibs   "-DWITH_KdepimLibs=ON"   "-DWITH_KdepimLibs=OFF"  "to use various libraries from kdepimlibs"
 optional_depends lensfun      "-DWITH_LensFun=ON"      "-DWITH_LensFun=OFF"     "for camera lens correction support"
@@ -10,19 +15,12 @@ optional_depends doxygen      "-DWITH_Doxygen=ON"      "-DWITH_Doxygen=OFF"     
 optional_depends gdk-pixbuf   "-DWITH_Gdk=ON"          "-DWITH_Gdk=OFF"         "for gdk-pixbuf support"
 optional_depends libxml2      "-DWITH_LibXml2=ON"      "-DWITH_LibXml2=OFF"     "for xml support"
 optional_depends libxslt      "-DWITH_LibXslt=ON"      "-DWITH_LibXslt=OFF"     "for xslt support"
-
+optional_depends qt-gstreamer "-DWITH_QtGStreamer=ON"  "-DWITH_QtGStreamer=OFF" "for gstreamer support"
 optional_depends opencv       "-DWITH_OpenCV=ON"       "-DWITH_OpenCV=OFF"      "for computer vision support"
 optional_depends qca2         "-DWITH_QCA2=ON"         "-DWITH_QCA2=OFF"        "for qca support"
 optional_depends qjson        "-DWITH_QJSON=ON"        "-DWITH_QJSON=OFF"       "for qjson support"
 optional_depends libusb       "-DWITH_USB=ON"          "-DWITH_USB=OFF"         "for usb device support"
-optional_depends lcms2        ""                       ""                       "for color management support"
-
-# No suitable version available.
-#optional_depends kipi-plugins "-DBUILD_kipi-plugins=ON" "-DBUILD_kipi-plugins=OFF" "for kipi-plugins support"
-
-optional_depends shared-desktop-ontologies "-DWITH_SharedDesktopOntologies=ON"  \
-                                           "-DWITH_SharedDesktopOntologies=OFF" \
-                                           "for ontology support"
+optional_depends libgpod      "-DWITH_Ipod=ON"         "-DWITH_Ipod=OFF"        "for for Ipod support"
 
 optional_depends glib-2       "-DWITH_GLIB2=ON -DWITH_GObject=ON"      \
                               "-DWITH_GLIB2=OFF -DWITH_GObject=OFF"    \
@@ -31,3 +29,5 @@ optional_depends glib-2       "-DWITH_GLIB2=ON -DWITH_GObject=ON"      \
 optional_depends libpgf       "-DPGF_INCLUDE_DIRS=/usr/include/libpgf" \
                               "" "for Progressive Graphics File, n=use internal"
 
+# Disabling this for now. Not found a suitable fix.
+#optional_depends ImageMagick  "-DWITH_ImageMagick=ON"  "-DWITH_ImageMagick=OFF" "for ImageMagick support"
