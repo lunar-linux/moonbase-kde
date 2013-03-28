@@ -3,6 +3,7 @@ depends kdelibs
 depends taglib
 depends taglib-extras
 depends qca2
+depends gmock
 
 optional_depends glib-2    "" "" "Required by libgpod and mp3tunes"
 optional_depends libifp    "" "" "for iRiver's iFP support"
@@ -19,3 +20,4 @@ optional_depends liblastfm   "-DWITH_LibLastFm=ON"      "-DWITH_LibLastFm=OFF"  
 optional_depends libofa      "-DWITH_LibOFA=ON"         "-DWITH_LibOFA=OFF"         "Enable MusicDNS service"
 optional_depends libmygpo-qt "-DWITH_Mygpo-qt=ON"       "-DWITH_Mygpo-qt=OFF"       "for gpodder.net service support"
 optional_depends libgcrypt   "-DWITH_Libgcrypt=ON"      "-DWITH_Libgcrypt=OFF"      "for encryption support"
+optional_depends clamz       "" "" "to support downloading mp3 from Amazon"

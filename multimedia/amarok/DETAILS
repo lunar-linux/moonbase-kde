@@ -1,9 +1,11 @@
           MODULE=amarok
          VERSION=2.7.0
           SOURCE=amarok-${VERSION}.tar.bz2
+         SOURCE2=amarok-2.7.0-tests.patch
       SOURCE_URL=$KDE_URL/stable/amarok/$VERSION/src
-     SOURCE2_URL=$PATCH_ULR
+     SOURCE2_URL=$PATCH_URL
       SOURCE_VFY=sha1:d0ae4a2cb81a54ae94ca24fdb3aed88d7f3a921e
+     SOURCE2_VFY=sha1:f7fff6c73ee3b85ed69b8e8b7a27d04af11921ab
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://amarok.kde.org
          ENTERED=20080414
