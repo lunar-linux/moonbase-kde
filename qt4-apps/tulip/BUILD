@@ -7,7 +7,6 @@
 # others as Release.
   OPTS+=" -DCMAKE_BUILD_TYPE=Release" &&
 
-  sedit "25i #include <sys/time.h>" library/tulip-ogl/src/GlScene.cpp &&
   sedit "s:ADD_SUBDIRECTORY(doc)::" CMakeLists.txt &&
 
 

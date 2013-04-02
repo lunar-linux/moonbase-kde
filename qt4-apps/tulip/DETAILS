@@ -1,13 +1,13 @@
           MODULE=tulip
-         VERSION=4.1.0_src
+         VERSION=4.2.0_src
           SOURCE=$MODULE-$VERSION.zip
       SOURCE_URL=$SFORGE_URL/auber/tulip/tulip-${VERSION%_*}/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE
-      SOURCE_VFY=sha1:b1eb5c9455178c821e8b67bca51f6ee69e9295e4
+      SOURCE_VFY=sha1:e3ac9c388cc853178009a0fba99f3f8b876d85a2
    MODULE_PREFIX=${QT4_PREFIX:-/usr}
         WEB_SITE=http://tulip.labri.fr/TulipDrupal/
          ENTERED=20100507
-         UPDATED=20121205
+         UPDATED=20130402
            SHORT="Graph visualization software"
 
 cat << EOF
