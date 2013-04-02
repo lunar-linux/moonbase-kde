@@ -1,12 +1,12 @@
           MODULE=pykde4
-         VERSION=4.10.1
+         VERSION=4.10.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/$VERSION/src
-      SOURCE_VFY=sha1:69a0562e3325508631fde4f24e01d2e3f8907b74
+      SOURCE_VFY=sha1:a17d533fca8126970ec8886f55297f1005df3eb5
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20110813
-         UPDATED=20130305
+         UPDATED=20130402
            SHORT="Python bindings for KDE"
 
 cat << EOF
