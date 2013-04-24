@@ -1,12 +1,12 @@
           MODULE=stellarium
-         VERSION=0.12.0
+         VERSION=0.12.1
           SOURCE=$MODULE-$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-${VERSION%*a}
       SOURCE_URL=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha1:c6cc8f0954d976584e8ab9bc061f3b35e3b84251
+      SOURCE_VFY=sha1:0a7fbe913d4e37e6ff281f81e67dc7831796b41c
         WEB_SITE=http://stellarium.free.fr
          ENTERED=20040420
-         UPDATED=20130201
+         UPDATED=20130424
            SHORT="Stellarium astronomy software"
 
 cat << EOF
