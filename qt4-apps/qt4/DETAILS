@@ -1,9 +1,12 @@
           MODULE=qt4
          VERSION=4.8.4
           SOURCE=qt-everywhere-opensource-src-$VERSION.tar.gz
+         SOURCE2=qt-everywhere-opensource-src-4.8.4-QTBUG-22829.patch
       SOURCE_URL=http://releases.qt-project.org/qt4/source
+     SOURCE2_URL=http://pkgs.fedoraproject.org/cgit/qt.git/plain/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qt-everywhere-opensource-src-$VERSION
       SOURCE_VFY=sha1:f5880f11c139d7d8d01ecb8d874535f7d9553198
+     SOURCE2_VFY=sha1:5437fc7eb5492690ffdf2c7d37640130595b337b
    MODULE_PREFIX=${QT4_PREFIX:-/usr}
         WEB_SITE=http://www.trolltech.com/qt
          ENTERED=20020420
