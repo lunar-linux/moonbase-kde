@@ -1,15 +1,11 @@
           MODULE=strigi
-         VERSION=0.7.7.orig
-          SOURCE=$MODULE\_$VERSION.tar.bz2
-         SOURCE2=strigi-0.7.7-ffmpeg-0.11.patch
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-${VERSION%.orig}
-      SOURCE_URL=http://ftp.de.debian.org/debian/pool/main/s/strigi/
-     SOURCE2_URL=http://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo-x86/app-misc/strigi/files/
-      SOURCE_VFY=sha1:a3100f851bb1a15231a863a5e66018946e3e8eb3
-     SOURCE2_VFY=sha1:fcae6f5eaa2965a966a31079f391ae41aebb9fe3
+         VERSION=0.7.8
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=$MIRROR_URL
+      SOURCE_VFY=sha1:b36f4e80c41da89dfbb1fae462e3891324f9b0cc
         WEB_SITE=http://strigi.sourceforge.net
          ENTERED=20070802
-         UPDATED=20120802
+         UPDATED=20130605
            SHORT="A small daemon that can index information"
 
 cat << EOF
