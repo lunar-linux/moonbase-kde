@@ -1,4 +1,8 @@
+depends %JPEG
+depends libpng
 depends kde-baseapps
 depends libkexiv2
+depends kactivities
+depends lcms2
 
 optional_depends "libkipi" "-DWITH_Kipi=ON" "-DWITH_Kipi=OFF" "various image manipulation and export features"
