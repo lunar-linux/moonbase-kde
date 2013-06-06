@@ -1,4 +1,3 @@
-(
 
   export CFLAGS="$CFLAGS -fPIC" &&
 
@@ -11,5 +10,3 @@
   fi &&
 
   default_cmake_build
-
-) > $C_FIFO 2>&1
