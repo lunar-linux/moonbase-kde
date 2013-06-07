@@ -1,6 +1,7 @@
-(
 
   patch_it $SOURCE2 1 &&
+  patch_it $SOURCE3 1 &&
+  patch_it $SOURCE4 1 &&
 
 # This lives in /usr/bin/
   sedit "s:/bin/ls:/usr/bin/ls:g" src/corelib/global/global.pri src/3rdparty/webkit/Source/WebCore/loader/FTPDirectoryParser.h src/3rdparty/webkit/Source/WebCore/loader/FTPDirectoryParser.cpp &&
@@ -138,5 +139,3 @@ EOF
   echo export PKG_CONFIG_PATH=\"'${QTDIR}'/lib/${MODULE}/pkgconfig:'${PKG_CONFIG_PATH}'\" >> $SOURCE_DIRECTORY/$MODULE.rc &&
 
   install -m644 $SOURCE_DIRECTORY/$MODULE.rc /etc/profile.d/
-
-) > $C_FIFO 2>&1
