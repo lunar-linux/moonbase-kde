@@ -1,22 +1,13 @@
           MODULE=qt4
-         VERSION=4.8.4
+         VERSION=4.8.5
           SOURCE=qt-everywhere-opensource-src-$VERSION.tar.gz
-         SOURCE2=qt-everywhere-opensource-src-4.8.4-QTBUG-22829.patch
-         SOURCE3=rename-qAbs-function-for-timeval.patch
-         SOURCE4=CVE-2013-0254.patch
-      SOURCE_URL=http://releases.qt-project.org/qt4/source
-     SOURCE2_URL=http://pkgs.fedoraproject.org/cgit/qt.git/plain/
-     SOURCE3_URL=http://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo-x86/dev-qt/qtcore/files/
-     SOURCE4_URL=http://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo-x86/dev-qt/qtcore/files/
+      SOURCE_URL=http://download.qt-project.org/official_releases/qt/${VERSION%.*}/$VERSION
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qt-everywhere-opensource-src-$VERSION
-      SOURCE_VFY=sha1:f5880f11c139d7d8d01ecb8d874535f7d9553198
-     SOURCE2_VFY=sha1:5437fc7eb5492690ffdf2c7d37640130595b337b
-     SOURCE3_VFY=sha1:9336424e8c500db3cf4603fa93478970a79728bd
-     SOURCE4_VFY=sha1:0be290c09b93958a374d70cf62c92080bfc07519
+      SOURCE_VFY=sha1:745f9ebf091696c0d5403ce691dc28c039d77b9e
    MODULE_PREFIX=${QT4_PREFIX:-/usr}
         WEB_SITE=http://www.trolltech.com/qt
          ENTERED=20020420
-         UPDATED=20121202
+         UPDATED=20130703
       MAINTAINER=florin@lunar-linux.org
            SHORT="A C++ toolkit for application development"
 
