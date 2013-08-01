@@ -1,4 +1,8 @@
 
+# Seems their boost fix was incomplete. There are still a few modules like avogadro
+# that still have trouble with boost_join.
+  sedit "193i pp.macros[\"BOOST_LEXICAL_CAST_INCLUDED\"];" src/tools/moc/main.cpp &&
+
 # This lives in /usr/bin/
   sedit "s:/bin/ls:/usr/bin/ls:g" src/corelib/global/global.pri src/3rdparty/webkit/Source/WebCore/loader/FTPDirectoryParser.h src/3rdparty/webkit/Source/WebCore/loader/FTPDirectoryParser.cpp &&
 
