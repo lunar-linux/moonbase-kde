@@ -1,0 +1,14 @@
+          MODULE=calligra-l10n-nb
+         VERSION=2.7.1
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/calligra-$VERSION/calligra-l10n/
+      SOURCE_VFY=sha1:e245854e678d8e9d66acc0848242c25dd3c3735d
+        WEB_SITE=http://www.calligra-suite.org/
+         ENTERED=20130805
+         UPDATED=20130805
+      MAINTAINER=stumbles@lunar-linux.org
+           SHORT="contains translated calligra messages"
+
+cat << EOF
+Contains translated calligra messages.
+EOF
