@@ -21,7 +21,7 @@ optional_depends qca2         "-DWITH_QCA2=ON"         "-DWITH_QCA2=OFF"        
 optional_depends qjson        "-DWITH_QJSON=ON"        "-DWITH_QJSON=OFF"       "for qjson support"
 optional_depends libusb       "-DWITH_USB=ON"          "-DWITH_USB=OFF"         "for usb device support"
 optional_depends libgpod      "-DWITH_Ipod=ON"         "-DWITH_Ipod=OFF"        "for for Ipod support"
-
+optional_depends eigen3       ""                       ""                       "for refocus support"
 optional_depends glib-2       "-DWITH_GLIB2=ON -DWITH_GObject=ON"      \
                               "-DWITH_GLIB2=OFF -DWITH_GObject=OFF"    \
                               "for glib-2 and gobject support"
