@@ -1,0 +1,6 @@
+depends kde-baseapps
+
+optional_depends "git"        "-DBUILD_git=ON"    "-DBUILD_git=OFF"    "Build the git plugin"
+optional_depends "bzr"        "-DBUILD_bazaar=ON" "-DBUILD_bazaar=OFF" "Build the bzr plugin"
+optional_depends "subversion" "-DBUILD_svn=ON"    "-DBUILD_svn=OFF"    "Build the subversion plugin"
+optional_depends "mercurial"  "-DBUILD_hg=ON"     "-DBUILD_hg=OFF"     "Build the mecurial plugin"
