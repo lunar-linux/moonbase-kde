@@ -1,4 +1,3 @@
-(
 
   prepare_install &&
 
@@ -9,5 +8,3 @@
   echo export PKG_CONFIG_PATH=\"'${PKG_CONFIG_PATH}':${MODULE_PREFIX}/lib/pkgconfig\" >> $SOURCE_DIRECTORY/kde4.rc &&
 
   install -m644 kde4.rc /etc/profile.d/
-
-) > $C_FIFO 2>&1

@@ -1,4 +1,3 @@
-(
 
   source /etc/profile.d/qt4.rc   &&
 
@@ -8,5 +7,3 @@
   sedit "s:docbook/xsl-stylesheets:docbook/xsl-stylesheets-$VER:" cmake/modules/FindDocBookXSL.cmake &&
 
   default_cmake_build
-
-) > $C_FIFO 2>&1

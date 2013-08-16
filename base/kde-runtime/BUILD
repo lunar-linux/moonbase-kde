@@ -1,4 +1,3 @@
-(
 
   source /etc/profile.d/qt4.rc   &&
   source /etc/profile.d/kde4.rc  &&
@@ -10,5 +9,3 @@
  # kdelibs4 and be done with it.
 
   install -m0755 $SCRIPT_DIRECTORY/kde4 /usr/bin/
-
-) > $C_FIFO 2>&1
