@@ -1,8 +1,11 @@
           MODULE=soprano
          VERSION=2.9.3
           SOURCE=$MODULE-$VERSION.tar.bz2
+         SOURCE2=soprano-2.9.3-dbus-1.patch
       SOURCE_URL=$SFORGE_URL/$MODULE
+     SOURCE2_URL=http://www.linuxfromscratch.org/patches/blfs/svn/
       SOURCE_VFY=sha1:9137c21e31c802ac9c45564962e07017952cb9c5
+     SOURCE2_VFY=sha1:5e0cfc4f8be1d4285a7abf9fbc3f2a5d801eadb8
         WEB_SITE=http://soprano.sourceforge.net
          ENTERED=20080123
          UPDATED=20130816
