@@ -1,0 +1,23 @@
+          MODULE=kapptemplate
+         VERSION=4.11.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:a0fc6ca7906f8bfb54298f9e63367c269913d5e2
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/development/kapptemplate/
+         ENTERED=20130814
+         UPDATED=20130814
+           SHORT="existing templates providing basic repeatedly written code and a proper structure"
+
+cat << EOF
+KAppTemplate is an application to start development quickly using existing templates 
+providing basic repeatedly written code and a proper structure.
+
+Features
+Templates for C++, Ruby, Python and PHP
+Categories
+Templates for different build-systems and frameworks
+Templates especially for KDE-development (plugins for Plasma, KOffice, KTextEditor, KRunner, Akonadi)
+It is easy to create new templates using space holders and a simple CMake-command
+Integrated into KDevelop
+EOF
