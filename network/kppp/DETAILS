@@ -1,0 +1,16 @@
+          MODULE=kppp
+         VERSION=4.11.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:5322ed6fe8122940f618c04dd51c6dbff7b9f437
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/internet/kppp/
+         ENTERED=20130814
+         UPDATED=20130814
+           SHORT="Internet Dial-Up Tool"
+
+cat << EOF
+KPPP is used to setup PPP (Point-to-Point Protocol) connections. This is most useful 
+for connecting with a cell phone "modem" card these days. It is also use to configure 
+real modem connections.
+EOF
