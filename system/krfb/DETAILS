@@ -1,0 +1,16 @@
+          MODULE=krfb
+         VERSION=4.11.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:06dd1c34622e7bb2748053e262bdb5e087997b1c
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/system/krfb/
+         ENTERED=20130814
+         UPDATED=20130814
+           SHORT="desktop sharing server application"
+
+cat << EOF
+Krfb Desktop Sharing is a server application that allows you to share your current 
+session with a user on another machine, who can use a VNC client to view or even 
+control the desktop.
+EOF

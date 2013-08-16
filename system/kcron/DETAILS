@@ -1,0 +1,14 @@
+          MODULE=kcron
+         VERSION=4.11.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:8a837c7c9e2d04df1688a89679c7fcaa621957af
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20130814
+         UPDATED=20130814
+           SHORT="tool for running applications in the background at regular intervals"
+
+cat << EOF
+A tool for running applications in the background at regular intervals.
+EOF
