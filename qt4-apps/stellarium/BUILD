@@ -1,9 +1,10 @@
-(
 
   source /etc/profile.d/qt4.rc   &&
 
-  sedit "s:0.11.3:$VERSION:" data/stellarium.desktop &&
+# they insist on using the always outdated qt4 version of phonon
+# which conflicts with phonon
+  if module_installed phonon ; then 
+    OPTS+=" -DENABLE_SOUND=OFF" &&
+  fi &&
 
   default_cmake_build 
-
-) > $C_FIFO 2>&1
