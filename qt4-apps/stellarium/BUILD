@@ -3,8 +3,8 @@
 
 # they insist on using the always outdated qt4 version of phonon
 # which conflicts with phonon
-  if module_installed phonon ; then 
-    OPTS+=" -DENABLE_SOUND=OFF" &&
+  if [[ "$(get_other_module_config qt4 MAKE_PHONON)" = "n" ]]; then 
+    OPTS+=" -DENABLE_SOUND=OFF"
   fi &&
 
   default_cmake_build 
