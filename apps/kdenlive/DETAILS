@@ -1,7 +1,7 @@
           MODULE=kdenlive
          VERSION=0.9.6
           SOURCE=$MODULE-$VERSION.tar.bz2
-      SOURCE_URL=http://download.kde.org/stable/kdenlive/$VERSION/src
+      SOURCE_URL=$KDE_URL/stable/kdenlive/$VERSION/src
       SOURCE_VFY=sha1:0b9de2dd1e77140020bf3efc9c88105d4dcf5c8d
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kdenlive.sourceforge.net
