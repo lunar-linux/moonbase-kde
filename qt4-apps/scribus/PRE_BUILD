@@ -1,0 +1,5 @@
+
+  default_pre_build &&
+
+  sedit 's/vnd.scribus.desktop/scribus.desktop/' CMakeLists.txt &&
+  sedit 's/## PL We may not need this anymore/INSTALL(FILES scribus.desktop DESTINATION ${DESKTOPDIR} )/' CMakeLists.txt
