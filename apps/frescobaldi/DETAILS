@@ -1,12 +1,11 @@
           MODULE=frescobaldi
-         VERSION=2.0.10
+         VERSION=2.0.13
           SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=http://lilykde.googlecode.com/files/
-      SOURCE_VFY=sha1:17928c20fe3cda934cbff88872a1904a5b8994a3
-   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+      SOURCE_URL=https://github.com/wbsoft/frescobaldi/releases/download/v${VERSION}
+      SOURCE_VFY=sha1:8d3f0ceb0d5cc66b6bee6278fc2dad07e3f361f8
         WEB_SITE=http://www.frescobaldi.org/
          ENTERED=20090307
-         UPDATED=20130524
+         UPDATED=20140205
            SHORT="LilyPond sheet music editor"
 
 cat << EOF
