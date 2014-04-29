@@ -1,13 +1,13 @@
           MODULE=qt4
-         VERSION=4.8.5
+         VERSION=4.8.6
           SOURCE=qt-everywhere-opensource-src-$VERSION.tar.gz
       SOURCE_URL=http://download.qt-project.org/official_releases/qt/${VERSION%.*}/$VERSION
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qt-everywhere-opensource-src-$VERSION
-      SOURCE_VFY=sha1:745f9ebf091696c0d5403ce691dc28c039d77b9e
+      SOURCE_VFY=sha1:ddf9c20ca8309a116e0466c42984238009525da6
    MODULE_PREFIX=${QT4_PREFIX:-/usr}
         WEB_SITE=http://www.trolltech.com/qt
          ENTERED=20020420
-         UPDATED=20130703
+         UPDATED=20140426
       MAINTAINER=florin@lunar-linux.org
            SHORT="A C++ toolkit for application development"
 
