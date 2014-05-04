@@ -1,13 +1,13 @@
           MODULE=calibre
-         VERSION=1.34.0
+         VERSION=1.35.0
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=http://download.calibre-ebook.com/$VERSION
    SOURCE_URL[1]=$SFORGE_URL/$MODULE
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE
-      SOURCE_VFY=sha1:a2ef6b56f3a2a64cf8c5edd5d5becdeae1eae290
+      SOURCE_VFY=sha1:b9d4458c6694e150d5e8b5ae0227d0acc5578300
         WEB_SITE=http://www.calibre-ebook.com
          ENTERED=20090108
-         UPDATED=20140426
+         UPDATED=20140504
            SHORT="eBook management"
 
 cat << EOF
