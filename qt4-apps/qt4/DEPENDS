@@ -16,7 +16,7 @@ optional_depends  "gst-plugins-base"  ""  ""  "for gstreamer support / qt4-phono
 
 optional_depends  "%JAVA_SDK"  "-javascript-jit"   "-no-javascript-jit" "for JIT support"
 
-optional_depends  "mysql"                                                    \
+optional_depends  "%MYSQL"                                                   \
                   "-plugin-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"  \
                   "-no-sql-mysql"                                            \
                   "for mysql database support"
