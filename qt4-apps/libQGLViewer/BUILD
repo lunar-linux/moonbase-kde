@@ -1,16 +1,11 @@
-(
+cd QGLViewer &&
 
+qmake $OPTS  &&
 
-  cd QGLViewer &&
-  sed -i "42i #include <GL/glu.h>" qglviewer.cpp &&
-  sed -i "25i #include <GL/glu.h>" camera.h &&
+sedit "s@-lGL@-lGLU \0@" Makefile &&
 
-  qmake $OPTS  &&
-  default_make &&
+default_make &&
   
-  cd $SOURCE_DIRECTORY/designerPlugin &&
-  sedit "s:QMAKE_RPATH:QMAKE_LFLAGS_RPATH:g" designerPlugin.pro &&
-  qmake &&
-  default_make
-
-) > $C_FIFO 2>&1
+cd $SOURCE_DIRECTORY/designerPlugin &&
+qmake &&
+default_make
