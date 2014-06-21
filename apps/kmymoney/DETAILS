@@ -1,12 +1,12 @@
           MODULE=kmymoney
-         VERSION=4.6.4
+         VERSION=4.6.5
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$SFORGE_URL/kmymoney2/KMyMoney-KDE4/$VERSION
-      SOURCE_VFY=sha1:3e4b17574684fd717fc75963d0a0c4d31aa81b71
+      SOURCE_URL=ftp://ftp.kde.org/pub/kde/stable/$MODULE/$VERSION/src/
+      SOURCE_VFY=sha1:f7e3f81f35c3d89f2cef226ce21a5f03a7fd4c8b
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kmymoney2.sourceforge.net
          ENTERED=20100211
-         UPDATED=20131009
+         UPDATED=20140621
            SHORT="KDE4 Personal Finance Manager"
 
 cat << EOF
