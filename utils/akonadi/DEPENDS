@@ -1,7 +1,7 @@
 depends qt4
 depends soprano
 
-optional_depends mysql  "" "" "for MySQL database support"
+optional_depends %MYSQL "" "" "for MySQL database support"
 optional_depends sqlite "-DINSTALL_QSQLITE_IN_QT_PREFIX=ON"  \
                         "-DINSTALL_QSQLITE_IN_QT_PREFIX=OFF" \
                         "for SQLite database support (Yes to install in Qt4 Plugin Dir)${PROBLEM_COLOR} Not recommended${QUERY_COLOR} "
