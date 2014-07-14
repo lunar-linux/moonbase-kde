@@ -4,6 +4,8 @@ depends libkipi
 depends libkdcraw
 depends libkexiv2
 depends libksane
+# Now a hard depends
+depends opencv
 
 optional_depends lcms         ""                       ""                       "for color management support"
 optional_depends expat        "-DWITH_EXPAT=ON"        "-DWITH_EXPAT=OFF"       "for XML parsing support"
@@ -16,7 +18,6 @@ optional_depends gdk-pixbuf   "-DWITH_Gdk=ON"          "-DWITH_Gdk=OFF"         
 optional_depends libxml2      "-DWITH_LibXml2=ON"      "-DWITH_LibXml2=OFF"     "for xml support"
 optional_depends libxslt      "-DWITH_LibXslt=ON"      "-DWITH_LibXslt=OFF"     "for xslt support"
 optional_depends qt-gstreamer "-DWITH_QtGStreamer=ON"  "-DWITH_QtGStreamer=OFF" "for gstreamer support"
-optional_depends opencv       "-DWITH_OpenCV=ON"       "-DWITH_OpenCV=OFF"      "for computer vision support"
 optional_depends qca2         "-DWITH_QCA2=ON"         "-DWITH_QCA2=OFF"        "for qca support"
 optional_depends qjson        "-DWITH_QJSON=ON"        "-DWITH_QJSON=OFF"       "for qjson support"
 optional_depends libusb       "-DWITH_USB=ON"          "-DWITH_USB=OFF"         "for usb device support"
@@ -30,4 +31,4 @@ optional_depends libpgf       "-DPGF_INCLUDE_DIRS=/usr/include/libpgf" \
                               "" "for Progressive Graphics File, n=use internal"
 
 # Disabling this for now. Not found a suitable fix.
-#optional_depends ImageMagick  "-DWITH_ImageMagick=ON"  "-DWITH_ImageMagick=OFF" "for ImageMagick support"
+optional_depends ImageMagick  "-DWITH_ImageMagick=ON"  "-DWITH_ImageMagick=OFF" "for ImageMagick support"
