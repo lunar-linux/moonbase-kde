@@ -1,0 +1,15 @@
+          MODULE=artikulate
+         VERSION=4.13.2
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:7964042a4f272b2201a392eaf783cf91abbfeb6f
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://edu.kde.org/applications/language/artikulate
+         ENTERED=20140713
+         UPDATED=20140713
+           SHORT="pronunciation trainer"
+
+cat << EOF
+Artikulate is a pronunciation trainer that aims at improving and perfecting the 
+pronunciation skills of the user. 
+EOF
