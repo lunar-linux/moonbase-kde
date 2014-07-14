@@ -1,0 +1,14 @@
+          MODULE=kapman
+         VERSION=4.13.2
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:3c77104b958b007450f5ffbfc2c07483052bf936
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/games/kapman/
+         ENTERED=20140713
+         UPDATED=20140713
+           SHORT="Pac-Man clone"
+
+cat << EOF
+A Pac-Man clone..
+EOF

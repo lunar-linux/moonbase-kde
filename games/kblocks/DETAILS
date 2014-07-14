@@ -1,0 +1,14 @@
+          MODULE=kblocks
+         VERSION=4.13.2
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:5f9ebf684c68df0d30c0fc2b79b7250cb6fe8dba
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/games/kblocks/
+         ENTERED=20140713
+         UPDATED=20140713
+           SHORT="lassic falling blocks game"
+
+cat << EOF
+KBlocks is the classic falling blocks game.
+EOF
