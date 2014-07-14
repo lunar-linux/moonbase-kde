@@ -1,11 +1,12 @@
           MODULE=libbluedevil
-         VERSION=1.9.3
-          SOURCE=$MODULE-$VERSION.tar.bz2
+         VERSION=1.9.4
+          SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/$MODULE/$VERSION/src/
-      SOURCE_VFY=sha1:d0afbdf3f3dc7725f73c225cc44a7263898ccf23
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-v${VERSION}
+      SOURCE_VFY=sha1:339faab641f16f62e5bd5ff8cac7179d3aa8e7ad
         WEB_SITE=http://blog.ereslibre.es/?p=281
          ENTERED=20100728
-         UPDATED=20130327
+         UPDATED=20140714
            SHORT="library for the kde bluetooth stack"
 
 cat << EOF

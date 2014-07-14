@@ -1,8 +1,8 @@
           MODULE=kstars
-         VERSION=4.11.0
+         VERSION=4.13.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/$VERSION/src
-      SOURCE_VFY=sha1:955b53ffcde6ef319c3ad3181957396a91887ddc
+      SOURCE_VFY=sha1:6dc7fae8cdb4591cef5960a349daad80e1de8f04
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://edu.kde.org/kstars
          ENTERED=20110813
@@ -10,4 +10,8 @@
            SHORT="Desktop Planetarium for KDE"
 
 cat << EOF
+KStars is free, open source, cross-platform Astronomy Software. It provides an 
+accurate graphical simulation of the night sky, from any location on Earth, at 
+any date and time. The display includes upto 100 million stars, 13,000 deep-sky 
+objects,all 8 planets, the Sun and Moon, and thousands of comets and asteroids. 
 EOF

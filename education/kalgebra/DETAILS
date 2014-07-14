@@ -1,13 +1,16 @@
           MODULE=kalgebra
-         VERSION=4.11.0
+         VERSION=4.13.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/$VERSION/src
-      SOURCE_VFY=sha1:bb7c128750eef3e62ac39b245b7e8cfc4493b450
+      SOURCE_VFY=sha1:906eaacb21cfc760fcefd82ca21a21d72ebdb971
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
-        WEB_SITE=http://www.kde.org
+        WEB_SITE=http://edu.kde.org/kalgebra/
          ENTERED=20110813
-         UPDATED=20130814
+         UPDATED=20140713
            SHORT="kalgebra"
 
 cat << EOF
+KAlgebra is a fully featured calculator that lets you plot different types of 
+2D and 3D functions and to calculate easy (and not so easy) calculations, such
+as addition, trigonometric functions or derivatives.
 EOF
