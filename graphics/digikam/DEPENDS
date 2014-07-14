@@ -30,5 +30,4 @@ optional_depends glib-2       "-DWITH_GLIB2=ON -DWITH_GObject=ON"      \
 optional_depends libpgf       "-DPGF_INCLUDE_DIRS=/usr/include/libpgf" \
                               "" "for Progressive Graphics File, n=use internal"
 
-# Disabling this for now. Not found a suitable fix.
 optional_depends ImageMagick  "-DWITH_ImageMagick=ON"  "-DWITH_ImageMagick=OFF" "for ImageMagick support"
