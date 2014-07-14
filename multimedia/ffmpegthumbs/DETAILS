@@ -1,13 +1,13 @@
           MODULE=ffmpegthumbs
-         VERSION=4.11.0
+         VERSION=4.13.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/$VERSION/src/
-      SOURCE_VFY=sha1:e39a2dbb8da47fb1ec667c266b37f95707bd22cd
+      SOURCE_VFY=sha1:f70468a2af6228ce2430ea182cb3e61bb0834d1e
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/multimedia/dragonplayer/
          ENTERED=20120801
-         UPDATED=20130814
-           SHORT="video thumbnailer"
+         UPDATED=20140713
+           SHORT="video thumbnailer using ffmpeg"
 
 cat << EOF
 FFmpegthumbnailer is a lightweight video thumbnailer that can be used by file
