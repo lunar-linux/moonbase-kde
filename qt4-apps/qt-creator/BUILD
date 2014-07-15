@@ -23,7 +23,7 @@ Type=Application
 Name=Qt Creator
 Comment=Qt based Development Tool
 Exec=$QTDIR/bin/qtcreator
-Icon=/usr/share/doc/qt-creator/doc/templates/images/qt_icon.png
+Icon=/usr/share/icons/hicolor/512x512/apps/QtProject-qtcreator.png
 Categories=Application;Qt;KDE;Development;
 EOF
 
