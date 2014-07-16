@@ -6,4 +6,7 @@ depends libkdcraw
 depends kactivities
 depends lcms2
 
+depends baloo
+depends kfilemetadata
+
 optional_depends "libkipi" "-DWITH_Kipi=ON" "-DWITH_Kipi=OFF" "various image manipulation and export features"
