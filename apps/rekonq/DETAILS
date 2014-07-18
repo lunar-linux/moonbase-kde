@@ -1,12 +1,12 @@
           MODULE=rekonq
-         VERSION=2.3.2
-          SOURCE=$MODULE-$VERSION.tar.bz2
-      SOURCE_URL=$SFORGE_URL/$MODULE/1.0
-      SOURCE_VFY=sha1:c4710f21e082708efe62480510939099fec3e739
+         VERSION=2.4.2
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$SFORGE_URL/$MODULE/2.0/
+      SOURCE_VFY=sha1:4317cd5f7d9eeea7b6c6a900e803694f3a32c59a
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://rekonq.kde.org
          ENTERED=20100829
-         UPDATED=20130630
+         UPDATED=20140718
            SHORT="KDE browser based on Webkit"
 
 cat << EOF
