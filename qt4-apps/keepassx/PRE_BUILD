@@ -1,0 +1,3 @@
+default_pre_build &&
+
+sedit '/\<QFile\>/ i #include <unistd.h>' src/lib/random.cpp
