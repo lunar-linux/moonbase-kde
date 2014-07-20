@@ -1,0 +1,16 @@
+          MODULE=kgoldrunner
+         VERSION=4.13.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src
+      SOURCE_VFY=sha1:cf6105c481c9e11c610b28580ede175fe9ed3e61
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/games/kgoldrunner/
+         ENTERED=20140720
+         UPDATED=20140720
+           SHORT="collect all the gold nuggets"
+
+cat << EOF
+KGoldrunner is an action game where the hero runs through a maze, climbs stairs,
+dig holes and dodges enemies in order to collect all the gold nuggets and escape 
+to the next level. Your enemies are also after the gold. 
+EOF
