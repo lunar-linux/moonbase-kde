@@ -3,18 +3,21 @@
           SOURCE=$MODULE-$VERSION.tar.bz2
          SOURCE2=k3b-2.0.2-ffmpeg-0.11.1.patch
          SOURCE3=k3b-2.0.2-libavformat54.patch
+         SOURCE4=k3b-2.0.2-ffmpeg2-1.patch
       SOURCE_URL=$SFORGE_URL/k3b/$VERSIONr
      SOURCE2_URL=$PATCH_URL
      SOURCE3_URL=$PATCH_URL
+     SOURCE4_URL=http://www.linuxfromscratch.org/patches/blfs/svn/
       SOURCE_VFY=sha1:8b30a4d07942e82559b01bc07dea6bcf2defd532
      SOURCE2_VFY=sah1:8120c0e22e6c41ea285ca6060be13723ed91c52b
      SOURCE3_VFY=sha1:5b35bff3f7670686a32bd71afea2deaca4331631
+     SOURCE4_VFY=sha1:9b3f805744c32ee9b1f158bcb8a55af369876341
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://k3b.plainblack.com
          ENTERED=20091127
          UPDATED=20110116
            SHORT="A port of k3b to kde4"
-
+PSAFE=no
 cat << EOF
 K3b is a GUI frontend to the cd recording programs cdrdao and cdrecord.
 It's aim is to provide a very user friendly interface to all the tasks
