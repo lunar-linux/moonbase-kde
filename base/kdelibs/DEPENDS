@@ -34,9 +34,9 @@ optional_depends "grantlee"    "" "" "for plugin based String Template system su
 optional_depends "subversion"  "" "" "for subversion support; can be used by Dolphin"
 optional_depends "git"         "" "" "for git support; can be used by Dolphin"
 optional_depends "libdbusmenu-qt" "" "" "for support of notification area menus via the DBusMenu protocol"
-optional_depends "xscreensaver"    "" "" "for screensaver support"
 optional_depends "shared-desktop-ontologies" "-DWITH_SharedDesktopOntologies=ON" "-DWITH_SharedDesktopOntologies=OFF" "for ontological support"
 optional_depends "herqq"      "-DWITH_HUpnp=ON" "-DWITH_HUpnp=OFF" "for UPnp support in solid"
 optional_depends "udisks2"    ""  "" "for the Solid udisk backend support. (Highly Recommended)"
 optional_depends "media-player-info" "" "" "for media player capabilities support"
 optional_depends "hspell"     ""  "" "for hebrew spell checking support"
+
