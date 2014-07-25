@@ -1,6 +1,10 @@
 depends kde-baseapps
 
-optional_depends "R"          "" "" "use R as backend"
-optional_depends "libspectre" "" "" "render EPS files in Cantor"
-optional_depends "maxima"     "" "" "use maxima as backend"
-optional_depends "kalgebra"   "" "" "use KAlgebra as backend"
+optional_depends "Python"       "-DWITH_PythonLibs=1"    "-DWITH_PythonLibs=0"    "for Python 2 library support"
+optional_depends "analitza"     "-DWITH_Analitza=1"      "-DWITH_Analitza=0"      "for additional mathematical features support"
+optional_depends "R"            "-DWITH_R=1 -DBUILD_R=1" "-DWITH_R=0 -DBUILD_R=0" "use R as backend"
+optional_depends "libspectre"   "-DWITH_LibSpectre=1"    "-DWITH_LibSpectre=0"    "to support rendering of EPS files"
+
+optional_depends "libqalculate" "-DWITH_Qalculate=1 -DBUILD_qalculate=1" \
+                                "-DWITH_Qalculate=0 -DBUILD_qalculate=0" \
+                                "for Qalculate support"
