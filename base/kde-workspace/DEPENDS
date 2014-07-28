@@ -9,41 +9,30 @@ depends qimageblitz
 depends kde-runtime
 depends kactivities
 
-optional_depends "kdepimlibs"     "-DWITH_KdepimLibs=ON" "-DWITH_KdepimLibs=OFF" "for nepomuck support"
-optional_depends "pciutils"       "-DWITH_PCIUTILS=ON"   "-DWITH_PCIUTILS=ON"    "for pciutils support"
-optional_depends "sip"            "-DWITH_SIP=ON"        "-DWITH_SIP=OFF"        "for sip support"
-optional_depends "PyQt"           "-DWITH_PyQt=ON"      "-DWITH_PyQt=OFF"      "for PyQt support"
-optional_depends "soprano"        "-DWITH_Soprano=ON"    "-DWITH_Soprano=OFF"    "for soprano support"
-optional_depends "fontconfig"     "-DWITH_Fontconfig=ON" "-DWITH_Fontconfig=OFF" "for fontconfig support"
-optional_depends "freetype2"      "-DWITH_Freetype=ON"   "-DWITH_Freetype=OFF"   "for freetype font support"
-optional_depends "libxklavier"    "-DWITH_XKB=ON"        "-DWITH_XKB=OFF"        "for advanced keyboard controls"
-optional_depends "glib-2"         "-DWITH_GLIB2=ON"      "-DWITH_GLIB2=OFF"      "required for keyboard switching"
-optional_depends "libusb-compat"  "-DWITH_USB=ON"        "-DWITH_USB=OFF"        "for usb device support"
+optional_depends "boost"         "-DWITH_Boost=1"       "-DWITH_Boost=0"       "to build plasma dataengines: akonadi,rss,calendar"
+optional_depends "akonadi"       "-DWITH_Akonadi=1"     "-DWITH_Akonadi=0"     "to build plasma dataengines: akonadi,calendar"
+optional_depends "nepomuk-core"  "-DWITH_NepomukCore=1" "-DWITH_NepomukCore=0" "for nepomuk indexing support"
+optional_depends "kdepimlibs"    "-DWITH_KdepimLibs=1"  "-DWITH_KdepimLibs=0"  "for nepomuck support"
+optional_depends "prison"        "-DWITH_Prison=1"      "-DWITH_Prison=0"      "for barcode support"
+optional_depends "pciutils"      "-DWITH_PCIUTILS=1"    "-DWITH_PCIUTILS=1"    "for pciutils support"
+optional_depends "soprano"       "-DWITH_Soprano=1"     "-DWITH_Soprano=0"     "for soprano support"
+optional_depends "fontconfig"    "-DWITH_Fontconfig=1"  "-DWITH_Fontconfig=0"  "for fontconfig support"
+optional_depends "freetype2"     "-DWITH_Freetype=1"    "-DWITH_Freetype=0"    "for freetype font support"
+optional_depends "libxklavier"   "-DWITH_XKB=1"         "-DWITH_XKB=0"         "for advanced keyboard controls"
+optional_depends "glib-2"        "-DWITH_GLIB2=1"       "-DWITH_GLIB2=0"       "required for keyboard switching"
+optional_depends "libusb-compat" "-DWITH_USB=1"         "-DWITH_USB=0"         "for usb device support"
+optional_depends "qjson"         "-DWITH_QJSON=1"       "-DWITH_QJSON=0"       "for Qt4 JavaScript Object Notation support"
+optional_depends "libqalculate"  "-DWITH_Qalculate=1"   "-DWITH_Qalculate=1"   "for advanced features of the calculator runner"
+optional_depends "libraw1394"    "-DWITH_RAW1394=1"     "-DWITH_RAW1394=0"     "for firewire support"
+optional_depends "lm_sensors"    "-DWITH_Sensors=1"     "-DWITH_Sensors=0"     "for system sensors support"
+optional_depends "soprano"       "-DWITH_Soprano=1"     "-DWITH_Soprano=0"     "for RDF data support"
+optional_depends "webkit"        "-DBUILD_webkit=1"     "-DBUILD_webkit=0"     "for konqueror webkit support"
+optional_depends "upower"        "-DBUILD_powerdevil=1" "-DBUILD_powerdevil=0" "for kde power management support. (Recommended)"
+optional_depends "gpsd"          "-DWITH_libgps=1"      "-DWITH_libgps=0"      "for gps device support"
+optional_depends "Linux-PAM"     "-DWITH_PAM=1"         "-DWITH_PAM=0"         "for PAM support"
 
-optional_depends "webkit"         "-DBUILD_webkit=ON" "-DBUILD_webkit=OFF" "for konqueror webkit support"
-optional_depends "bluez"          "" "" "for bluetooth support within KDE4"
-optional_depends "libraw1394"     "-DWITH_RAW1394=ON" "-DWITH_RAW1394=OFF" "for firewire support"
-optional_depends "gpsd"           "-DWITH_libgps=ON"  "-DWITH_libgps=OFF"  "for gps device support"
 
-optional_depends "Linux-PAM"      "-DKDE4_COMMON_PAM_SERVICE=kde4 \
-                                  -DKDE4_KDM_PAM_SERVICE=kde4"    \
-                                  ""             "for PAM support"
-
-optional_depends "shadow"         "" ""  "for shadow password support"
-optional_depends "libcaptury"     "" ""  "for GL video support"
-optional_depends "lm_sensors"     "-DWITH_Sensors=ON" "-DWITH_Sensors=OFF"  "for system sensors support"
-
-optional_depends "libXScrnSaver"  "-DBUILD_kscreensaver=ON" "-DBUILD_kscreensaver=OFF" \
+optional_depends "libXScrnSaver"  "-DBUILD_kscreensaver=1" "-DBUILD_kscreensaver=0" \
                                   "for screensaver support, needed by kaffeine and kdetoys"
-optional_depends "qedje"          "" ""  "for plasma scriptengine support"
 
-optional_depends "google-gadgets-for-linux" "-DWITH_Googlegadgets=ON"   \
-                                            "-DWITH_Googlegadgets=OFF"  \
-                                            "for google gadget support"
-optional_depends "wicd"           "-DBUILD_wicd=ON" "-DBUILD_wicd=OFF"  "For network connectivity management"
-optional_depends "libqalculate"   "-DWITH_Qalculate=ON" "-DWITH_Qalculate=ON" "for advanced features of the calculator runner"
-optional_depends "libdmtx"        "-DWITH_Dmtx=ON"      "-DWITH_Dmtx=OFF"     "for Data Matrix 2D barcode support"
-optional_depends "pykde4"          ""      ""      "for PyKDE4 support"
-optional_depends "boost"          ""      ""      "to build plasma dataengines: akonadi,rss,calendar"
-optional_depends "akonadi" "" "" "to build plasma dataengines: akonadi,calendar"
-optional_depends "upower"  "" "" "for kde power management support. (Recommended)"
+optional_depends "bluez"         "" "" "for bluetooth support within KDE4"
