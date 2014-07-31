@@ -10,3 +10,6 @@ optional_depends "qca2"        "-DWITH_QCA2=ON"        "-DWITH_QCA2=OFF"        
 optional_depends "qimageblitz" "-DWITH_QImageBlitz=ON" "-DWITH_QImageBlitz=OFF" "for graphical effect and filter library support"
 optional_depends "tiff"        "-DWITH_TIFF=ON"        "-DWITH_TIFF=OFF"        "for tiff graphics support"
 optional_depends "zlib"        "-DWITH_ZLIB=ON"        "-DWITH_ZLIB=OFF"        "for lossless data compression support"
+optional_depends "libkscreen"  "-DWITH_LibKScreen=ON"  "-DWITH_LibKScreen=OFF"  "for screen management support"
+
+optional_depends "kdegraphics-mobipocket" "-DWITH_QMobipocket=ON" "-DWITH_QMobipocket=OFF" "for mobipocket ebook support"
