@@ -1,3 +1,4 @@
+depends eigen3
 # Opting here to use these 4 as hard depends else a conflict is created with 
 # those provided by digikam.
 depends libkipi
@@ -7,27 +8,30 @@ depends libksane
 # Now a hard depends
 depends opencv
 
-optional_depends lcms         ""                       ""                       "for color management support"
-optional_depends expat        "-DWITH_EXPAT=ON"        "-DWITH_EXPAT=OFF"       "for XML parsing support"
-optional_depends libgphoto2   "-DWITH_Gphoto2=ON"      "-DWITH_Gphoto2=OFF"     "for gphoto support"
-optional_depends kdepimlibs   "-DWITH_KdepimLibs=ON"   "-DWITH_KdepimLibs=OFF"  "to use various libraries from kdepimlibs"
-optional_depends lensfun      "-DWITH_LensFun=ON"      "-DWITH_LensFun=OFF"     "for camera lens correction support"
-optional_depends liblqr       "-DWITH_Lqr-1=ON"        "-DWITH_Lqr-1=OFF"       "for LiquidRescale support"
-optional_depends doxygen      "-DWITH_Doxygen=ON"      "-DWITH_Doxygen=OFF"     "for documentation"
-optional_depends gdk-pixbuf   "-DWITH_Gdk=ON"          "-DWITH_Gdk=OFF"         "for gdk-pixbuf support"
-optional_depends libxml2      "-DWITH_LibXml2=ON"      "-DWITH_LibXml2=OFF"     "for xml support"
-optional_depends libxslt      "-DWITH_LibXslt=ON"      "-DWITH_LibXslt=OFF"     "for xslt support"
-optional_depends qt-gstreamer "-DWITH_QtGStreamer=ON"  "-DWITH_QtGStreamer=OFF" "for gstreamer support"
-optional_depends qca2         "-DWITH_QCA2=ON"         "-DWITH_QCA2=OFF"        "for qca support"
-optional_depends qjson        "-DWITH_QJSON=ON"        "-DWITH_QJSON=OFF"       "for qjson support"
-optional_depends libusb       "-DWITH_USB=ON"          "-DWITH_USB=OFF"         "for usb device support"
-optional_depends libgpod      "-DWITH_Ipod=ON"         "-DWITH_Ipod=OFF"        "for for Ipod support"
-optional_depends eigen3       ""                       ""                       "for refocus support"
-optional_depends glib-2       "-DWITH_GLIB2=ON -DWITH_GObject=ON"      \
-                              "-DWITH_GLIB2=OFF -DWITH_GObject=OFF"    \
+optional_depends lcms2        "-DENABLE_LCMS2=1"       "-DENABLE_LCMS2-0"       "for color management support"
+optional_depends expat        "-DWITH_EXPAT=1"        "-DWITH_EXPAT=0"       "for XML parsing support"
+optional_depends libgphoto2   "-DWITH_Gphoto2=1"      "-DWITH_Gphoto2=0"     "for gphoto support"
+optional_depends kdepimlibs   "-DWITH_KdepimLibs=1"   "-DWITH_KdepimLibs=0"  "to use various libraries from kdepimlibs"
+optional_depends lensfun      "-DWITH_LensFun=1"      "-DWITH_LensFun=0"     "for camera lens correction support"
+optional_depends liblqr       "-DWITH_Lqr-1=1"        "-DWITH_Lqr-1=0"       "for LiquidRescale support"
+optional_depends doxygen      "-DWITH_Doxygen=1"      "-DWITH_Doxygen=0"     "for documentation"
+optional_depends gdk-pixbuf   "-DWITH_Gdk=1"          "-DWITH_Gdk=0"         "for gdk-pixbuf support"
+optional_depends libxml2      "-DWITH_LibXml2=1"      "-DWITH_LibXml2=0"     "for xml support"
+optional_depends libxslt      "-DWITH_LibXslt=1"      "-DWITH_LibXslt=0"     "for xslt support"
+optional_depends qt-gstreamer "-DWITH_QtGStreamer=1"  "-DWITH_QtGStreamer=0" "for gstreamer support"
+optional_depends qca2         "-DWITH_QCA2=1"         "-DWITH_QCA2=0"        "for qca support"
+optional_depends qjson        "-DWITH_QJSON=1"        "-DWITH_QJSON=0"       "for qjson support"
+optional_depends libusb       "-DWITH_USB=1"          "-DWITH_USB=0"         "for usb device support"
+optional_depends libgpod      "-DWITH_Ipod=1"         "-DWITH_Ipod=0"        "for for Ipod support"
+optional_depends hupnp-ng     "-DWITH_Hupnp=1"        "-DWITH_Hupnp=0"       "for upnp support"
+optional_depends glib-2       "-DWITH_GLIB2=1 -DWITH_GObject=1"      \
+                              "-DWITH_GLIB2=0 -DWITH_GObject=0"    \
                               "for glib-2 and gobject support"
 
 optional_depends libpgf       "-DPGF_INCLUDE_DIRS=/usr/include/libpgf" \
                               "" "for Progressive Graphics File, n=use internal"
 
-optional_depends ImageMagick  "-DWITH_ImageMagick=ON"  "-DWITH_ImageMagick=OFF" "for ImageMagick support"
+optional_depends ImageMagick  "-DWITH_ImageMagick=1"  "-DWITH_ImageMagick=0" "for ImageMagick support"
+
+optional_depends nepomuk-core "-DENABLE_NEPOMUKSUPPORT=1" "-DENABLE_NEPOMUKSUPPORT=0" "for symantic desktop support"
+optional_depends %MYSQL       "-DENABLE_INTERNALMYSQL==1" "-DENABLE_INTERNALMYSQL=0"  "for %MYSQL database support, ${PROBLEM_COLOR}say NO to use digikam provided server${DEFAULT_COLOR}"
