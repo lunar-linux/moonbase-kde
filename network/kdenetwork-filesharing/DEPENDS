@@ -1,1 +1,4 @@
 depends kde-baseapps
+
+optional_depends samba "-DSAMBA_INSTALL=1" "-DSAMBA_INSTALL=0" "for install Samba for file sharing support"
+
