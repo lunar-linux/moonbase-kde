@@ -1,3 +1,6 @@
-depends polkit-qt-1
 depends PyQt
-depends kdepimlibs
+
+optional_depends kdepimlibs      "-DWITH_KdepimLibs=1" "-DWITH_KdepimLibs=0" "for kdelimlibs support"
+optional_depends nepomuk-widgets "-DWITH_Nepomuk=1"    "-DWITH_Nepomuk=0"    "for symantic desktop support"
+optional_depends soprano         "-DWITH_Soprano=1"    "-DWITH_Soprano=0"    "for RDF data support"
+optional_depends polkit-qt-1     "-DWITH_PolkitQt=1"   "-DWITH_PolkitQt=0"   "for qt policy kit support"
