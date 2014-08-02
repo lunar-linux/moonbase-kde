@@ -1,10 +1,11 @@
           MODULE=kio-upnp-ms
-         VERSION=1.0.0
-          SOURCE=${MODULE}-${VERSION}.tar.bz2
-      SOURCE_URL=git://anongit.kde.org/kio-upnp-ms
+         VERSION=20140731
+          SOURCE=${MODULE}-${VERSION}.tar.xz
+      SOURCE_URL=$MIRROR_URL
+      SOURCE_VFY=sha1:9168266cef33a2b335e90858331544b1ab4fb0f2
         WEB_SITE=https://projects.kde.org/projects/playground/base/kio-upnp-ms
          ENTERED=20121020
-         UPDATED=`date -u +%Y%m%d`
+         UPDATED=20140731
            SHORT="KIO slave for UPnP MediaServer devices"
 
 cat << EOF
