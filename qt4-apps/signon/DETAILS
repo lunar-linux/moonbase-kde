@@ -1,0 +1,15 @@
+          MODULE=signon
+         VERSION=8.56
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=https://accounts-sso.googlecode.com/files/
+      SOURCE_VFY=sha1:54c502204e2f31446feafba21041ebdfc2401fc5
+        WEB_SITE=https://code.google.com/p/accounts-sso/
+         ENTERED=20140805
+         UPDATED=20140805
+           SHORT="Accounts and Single Sign-On framework"
+
+cat << EOF
+The Accounts & SSO framework consists of a set of components and libraries which implement 
+an account manager for a user's online accounts and a single-sign-on daemon which handles 
+the authentication to the remote services on behalf of the client applications. 
+EOF
