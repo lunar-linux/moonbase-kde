@@ -35,4 +35,4 @@ optional_depends "Linux-PAM"     "-DWITH_PAM=1"         "-DWITH_PAM=0"         "
 optional_depends "libXScrnSaver"  "-DBUILD_kscreensaver=1" "-DBUILD_kscreensaver=0" \
                                   "for screensaver support, needed by kaffeine and kdetoys"
 
-optional_depends "bluez"         "" "" "for bluetooth support within KDE4"
+optional_depends "%BLUEZ"         "" "" "for bluetooth support within KDE4"
