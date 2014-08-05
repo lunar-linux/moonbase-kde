@@ -1,4 +1,5 @@
 depends kdepimlibs
 
-optional_depends "libkgapi" "" "" "for various Google API support"
-
+optional_depends "libkgapi"  "" "" "for Akonadi resources to access Google Contacts, Calendars and Tasks"
+optional_depends "libkfbapi" "" "" "for Akonadi resources to access Facebook's contacts, events, notes and posts"
+optional_depends "signon"    "" "" "for Accounts and SSO (Single Sign-On) framework support"
