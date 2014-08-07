@@ -1,12 +1,12 @@
           MODULE=bluedevil
-         VERSION=1.3.2
+         VERSION=2.0-rc1
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$MODULE/$VERSION/src/
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-v$VERSION
-      SOURCE_VFY=sha1:5e4bcfe1be6a9152ceb1303b9a0c9ec4df21befa
+      SOURCE_URL=$KDE_URL/unstable/$MODULE/$VERSION/src/
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+      SOURCE_VFY=sha1:02ae3e00cc43c9bc4d041cf8ac6e7259d1914465
         WEB_SITE=http://www.afiestas.org/
          ENTERED=20100728
-         UPDATED=20140714
+         UPDATED=20140805
            SHORT="kde bluetooth stack"
 
 cat << EOF
