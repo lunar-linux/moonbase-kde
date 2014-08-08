@@ -1,11 +1,14 @@
           MODULE=soprano
          VERSION=2.9.4
           SOURCE=$MODULE-$VERSION.tar.bz2
+         SOURCE2=soprano-2.9.4-dbus-1.patch
       SOURCE_URL=$SFORGE_URL/$MODULE
+     SOURCE2_URL=http://ftp.lfs-matrix.net/pub/blfs/conglomeration/soprano/
       SOURCE_VFY=sha1:97bd76df4a9f9336358dd9d7175c72b84d4ec6a0
+     SOURCE2_VFY=sha1:5e0cfc4f8be1d4285a7abf9fbc3f2a5d801eadb8
         WEB_SITE=http://soprano.sourceforge.net
          ENTERED=20080123
-         UPDATED=20131208
+         UPDATED=20140808
            SHORT="highly usable C++/QT4 library for RDF data"
 
 cat << EOF

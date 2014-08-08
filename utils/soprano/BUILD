@@ -1,5 +1,7 @@
 
-  OPTS+=" -DRAPTOR_INCLUDE_DIR=/usr/include/raptor2 -DIODBC_LIBRARIES=/usr/lib/libiodbc" &&
+  patch_it $SOURCE2 1 &&
+
+  OPTS+=" -DRAPTOR_INCLUDE_DIR=/usr/include/raptor2" &&
 
   if module_installed sun-jdk; then
     . /etc/profile.d/sun-jdk.rc
