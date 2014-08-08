@@ -1,8 +1,10 @@
+depends polkit
 depends soprano
 depends shared-desktop-ontologies
 depends kdelibs
 
-optional_depends "exiv2"   "-DWITH_Exiv2=ON"      "-DWITH_Exiv2=OFF"      "for exiv2 support"
-optional_depends "ffmpeg"  "-DWITH_FFmpeg=ON"     "-DWITH_FFmpeg=OFF"     "for ffmpeg support"
-optional_depends "taglib"  "-DWITH_Taglib=ON"     "-DWITH_Taglib=OFF"     "for taglib support"
-optional_depends "poppler" "-DWITH_PopplerQt4=ON" "-DWITH_PopplerQt4=OFF" "for poppler support"
+optional_depends "exiv2"       "" "" "for Image Tag reader support"
+optional_depends "ffmpeg"      "" "" "for Video Tag reader support"
+optional_depends "taglib"      "" "" "for Id3 tag reader support"
+optional_depends "poppler"     "" "" "for PDF rendering support"
+optional_depends "ebook-tools" "" "" "For ebook tagging support"
