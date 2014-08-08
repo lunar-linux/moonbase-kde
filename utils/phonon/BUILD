@@ -5,7 +5,7 @@
   source /etc/profile.d/qt4.rc   &&
   source /etc/profile.d/kde4.rc  &&
 
-  OPTS+=" -DPHONON_INSTALL_QT_EXTENSIONS_INTO_SYSTEM_QT=TRUE" &&
+  OPTS+=" -DPHONON_INSTALL_QT_EXTENSIONS_INTO_SYSTEM_QT=TRUE -DPHONON_BUILD_DECLARATIVE_PLUGIN=1" &&
 
   default_cmake_build  &&
 
