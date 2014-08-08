@@ -1,1 +1,7 @@
 depends kde-baseapps
+
+optional_depends bzip2      "-DWITH_BZip2=1"      "-DWITH_BZip2=0"      "for bzip2 decompression/compression support"
+optional_depends libarchive "-DWITH_LibArchive=1" "-DWITH_LibArchive=0" "for streaming archive support"
+optional_depends xz         "-DWITH_LibLZMA=1"    "-DWITH_LibLZMA=0"    "for xz decompression/compression support"
+optional_depends zlib       "-DWITH_ZLIB=1"       "-DWITH_ZLIB=0"       "for zlib decompression/compression support"
+optional_depends qjson      "-DWITH_QJSON=1"      "-DWITH_QJSON=0"      "for JavaScript Object Notation support"
