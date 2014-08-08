@@ -32,6 +32,10 @@ optional_depends "gpsd"          "-DWITH_libgps=1"      "-DWITH_libgps=0"      "
 optional_depends "Linux-PAM"     "-DWITH_PAM=1"         "-DWITH_PAM=0"         "for PAM support"
 
 
+optional_depends "Python"         "-DWITH_PythonLibrary=1 -DINSTALL_PYTHON_FILES_IN_PYTHON_PREFIX=1" \
+                                  "-DWITH_PythonLibrary=0" \
+                                  "Needed to build plasma scriptengine for python"
+
 optional_depends "libXScrnSaver"  "-DBUILD_kscreensaver=1" "-DBUILD_kscreensaver=0" \
                                   "for screensaver support, needed by kaffeine and kdetoys"
 
