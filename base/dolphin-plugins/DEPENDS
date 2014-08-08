@@ -1,3 +1,4 @@
+depends kde-baseapps
 
 optional_depends "git"          "-DBUILD_git=1"    "-DBUILD_git=0"    "Build the git plugin"
 optional_depends "bzr"          "-DBUILD_bazaar=1" "-DBUILD_bazaar=0" "Build the bzr plugin"
