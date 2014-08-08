@@ -1,1 +1,3 @@
-depends kde-baseapps
+depends kdelibs
+
+optional_depends libmusicbrainz "-DWITH_MusicBrainz5=1" "-DWITH_MusicBrainz5=0" "For metadata lookup on the MusicBrainz server support"
