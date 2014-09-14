@@ -1,3 +1,5 @@
 depends check
 depends kde-baseapps
 depends kdevplatform
+
+optional_depends okteta "-DWITH_LibOktetaKasten=1" "-DWITH_LibOktetaKasten=0" "to support hex edit of raw data files"
