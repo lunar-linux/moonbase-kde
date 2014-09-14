@@ -1,12 +1,12 @@
           MODULE=kdevplatform
-         VERSION=1.6.0
+         VERSION=1.7.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/kdevelop/$(module_version kdevelop)/src
-      SOURCE_VFY=sha1:8ed8ccb63b64a3675716f1ad14b4a73fcbf4133d
+      SOURCE_VFY=sha1:9fc196e7cb09ab33fd5cfbf5af19aa7c513efdc9
    MODULE_PREFIX=${KDE_PREFIX:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20090824
-         UPDATED=20131208
+         UPDATED=20140913
            SHORT="create KDE plugins"
 
 cat << EOF
