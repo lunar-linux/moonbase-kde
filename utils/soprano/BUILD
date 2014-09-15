@@ -3,10 +3,10 @@
 
   OPTS+=" -DRAPTOR_INCLUDE_DIR=/usr/include/raptor2" &&
 
-  if module_installed sun-jdk; then
+  if in_depends $MODULE sun-jdk; then
     . /etc/profile.d/sun-jdk.rc
   else
-    if module_installed sun-jre; then
+    if in_depends $MODULE sun-jre; then
       . /etc/profile.d/sun-jre.rc
     fi
   fi  &&
