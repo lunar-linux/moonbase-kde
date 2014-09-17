@@ -22,6 +22,7 @@ optional_depends gpgme      "-DWITH_QGpgme=1"    "-DWITH_QGpgme=0"    "for encyr
 optional_depends srtp       "-DWITH_SRTP=1"      "-DWITH_SRTP=0"      "for Secure Real-time Transport Protocol support"
 optional_depends sqlite     "-DWITH_Sqlite=1"    "-DWITH_Sqlite=0"    "for sqlite database support"
 optional_depends zlib       "-DWITH_ZLIB=1"      "-DWITH_ZLIB=0"      "for zlib compression support"
-optional_depends jsoncpp    "WITH_JsonCpp=1"     "-DWITH_JsonCpp=0"   "to support JSON valuse"
+optional_depends jsoncpp    "-DWITH_JsonCpp=1"   "-DWITH_JsonCpp=0"   "to support JSON valuse"
 
-optional_depends mediastreamer "-DWITH_Mediastreamer=1" "-DWITH_Mediastreamer=0" "for media streaming support${PROBLEM_COLOR} Say no for now${DEFAULT_COLOR}"
+optional_depends mediastreamer "-DWITH_Mediastreamer=1" "-DWITH_Mediastreamer=0" "for media streaming support"
+optional_depends meanwhile  "" "" "for connecting to Sametime servers"
