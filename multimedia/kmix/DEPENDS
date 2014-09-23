@@ -1,1 +1,4 @@
-depends  kde-baseapps
+depends  kdelibs
+
+optional_depends pulseaudio  "" "" "For audio support"
+optional_depends libcanberra "" "" "For libcanberra audio library"
