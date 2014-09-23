@@ -7,7 +7,7 @@ depends xcb-util-keysyms
 
 depends libdbusmenu-qt
 depends qimageblitz
-depends kde-runtime
+depends kdelibs
 depends kactivities
 
 optional_depends "boost"         "-DWITH_Boost=1"       "-DWITH_Boost=0"       "to build plasma dataengines: akonadi,rss,calendar"
@@ -27,7 +27,7 @@ optional_depends "libqalculate"  "-DWITH_Qalculate=1"   "-DWITH_Qalculate=1"   "
 optional_depends "libraw1394"    "-DWITH_RAW1394=1"     "-DWITH_RAW1394=0"     "for firewire support"
 optional_depends "lm_sensors"    "-DWITH_Sensors=1"     "-DWITH_Sensors=0"     "for system sensors support"
 optional_depends "soprano"       "-DWITH_Soprano=1"     "-DWITH_Soprano=0"     "for RDF data support"
-optional_depends "webkit"        "-DBUILD_webkit=1"     "-DBUILD_webkit=0"     "for konqueror webkit support"
+optional_depends "webkitgtk3"    "-DBUILD_webkit=1"     "-DBUILD_webkit=0"     "for konqueror webkit support"
 optional_depends "upower"        "-DBUILD_powerdevil=1" "-DBUILD_powerdevil=0" "for kde power management support. (Recommended)"
 optional_depends "gpsd"          "-DWITH_libgps=1"      "-DWITH_libgps=0"      "for gps device support"
 optional_depends "Linux-PAM"     "-DWITH_PAM=1"         "-DWITH_PAM=0"         "for PAM support"

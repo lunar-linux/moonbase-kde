@@ -1,4 +1,4 @@
 depends kdelibs
 
-optional_depends "sqlite"       "-DBUILD_sqlite=ON"     "-DBUILD_sqlite=OFF"     "For sqlite support"
-optional_depends "nepomuk-core" "-DWITH_NepomukCore=ON" "-DWITH_NepomukCore=OFF" "For nepomuk support"
+optional_depends "sqlite"          "-DBUILD_sqlite=1"     "-DBUILD_sqlite=0"     "For sqlite support"
+optional_depends "nepomuk-widgets" "-DWITH_NepomukCore=1" "-DWITH_NepomukCore=0" "For nepomuk support"

@@ -1,4 +1,4 @@
-depends kde-baseapps
+depends kdelibs
 
 optional_depends bzip2      "-DWITH_BZip2=1"      "-DWITH_BZip2=0"      "for bzip2 decompression/compression support"
 optional_depends libarchive "-DWITH_LibArchive=1" "-DWITH_LibArchive=0" "for streaming archive support"
