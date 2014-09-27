@@ -1,8 +1,7 @@
-(
 
   . /etc/profile.d/qt4.rc &&
 
-  OPTS+=" --enable-build-type=release --with-frontend=qt4" &&
+  OPTS+=" --enable-build-type=release" &&
 
   default_build &&
 
@@ -18,5 +17,3 @@ Categories=Qt;KDE;Graphics;Office;
 EOF
 
   install -D -m644 ${MODULE}.desktop /usr/share/applications/${MODULE}.desktop
-
-) > $C_FIFO 2>&1
