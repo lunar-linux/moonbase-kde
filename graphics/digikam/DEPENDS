@@ -24,14 +24,13 @@ optional_depends qjson        "-DWITH_QJSON=1"        "-DWITH_QJSON=0"       "fo
 optional_depends libusb       "-DWITH_USB=1"          "-DWITH_USB=0"         "for usb device support"
 optional_depends libgpod      "-DWITH_Ipod=1"         "-DWITH_Ipod=0"        "for for Ipod support"
 optional_depends hupnp-ng     "-DWITH_Hupnp=1"        "-DWITH_Hupnp=0"       "for upnp support"
+optional_depends ImageMagick  "-DWITH_ImageMagick=1"  "-DWITH_ImageMagick=0" "for ImageMagick support"
+
 optional_depends glib-2       "-DWITH_GLIB2=1 -DWITH_GObject=1"      \
                               "-DWITH_GLIB2=0 -DWITH_GObject=0"    \
                               "for glib-2 and gobject support"
 
 optional_depends libpgf       "-DPGF_INCLUDE_DIRS=/usr/include/libpgf" \
                               "" "for Progressive Graphics File, n=use internal"
-
-# Causes make to fail on imageproperties/
-#optional_depends ImageMagick  "-DWITH_ImageMagick=1"  "-DWITH_ImageMagick=0" "for ImageMagick support"
 
 optional_depends %MYSQL       "-DENABLE_INTERNALMYSQL==1" "-DENABLE_INTERNALMYSQL=0"  "for %MYSQL database support, ${PROBLEM_COLOR}say NO to use digikam provided server${DEFAULT_COLOR}"
