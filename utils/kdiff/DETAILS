@@ -1,13 +1,13 @@
           MODULE=kdiff
-         VERSION=0.9.97
+         VERSION=0.9.98
           SOURCE=${MODULE}3-$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE}3-$VERSION
       SOURCE_URL=$SFORGE_URL/kdiff3/kdiff3/$VERSION/
-      SOURCE_VFY=sha1:1f2828c4b287b905bac64992b46a3e9231319547
+      SOURCE_VFY=sha1:1390b4ca9c58316de49cb0aabb433f14ebf2dc3f
         WEB_SITE=http://kdiff3.sourceforge.net/
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
          ENTERED=20090902
-         UPDATED=20121019
+         UPDATED=20141025
            SHORT="KDE4 version of diff"
 
 cat << EOF
