@@ -1,11 +1,8 @@
-(
-
-  patch_it $SOURCE2 0 &&
 
   . /etc/profile.d/qt4.rc  &&
 
 # The eliminates the warning it is using the depreciated repo-config.
-  sedit "s:repo-config:config:g" src/git.cpp &&
+#  sedit "s:repo-config:config:g" src/git.cpp &&
 
   qmake qgit.pro &&
   make  &&
@@ -26,5 +23,3 @@ Categories=Qt;KDE;Development;
 EOF
 
   install -D -m644 ${MODULE}.desktop $QTDIR/share/applications/${MODULE}.desktop
-
-) > $C_FIFO 2>&1
