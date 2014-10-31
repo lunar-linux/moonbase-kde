@@ -1,13 +1,13 @@
           MODULE=lyx
-         VERSION=2.1.2
+         VERSION=2.1.2.1
           SOURCE=$MODULE-$VERSION.tar.gz
    SOURCE_URL[0]=ftp://ftp.ntua.gr/pub/X11/LyX/stable/2.1.x
    SOURCE_URL[1]=ftp://ftp.lyx.org/pub/lyx/stable/2.1.x
-      SOURCE_VFY=sha1:2747d38d328a8ecffc6c7abb6dbe2870667b11d7
+      SOURCE_VFY=sha256:3eeddf971c829729c117d86a7abab22fc5c74e80286dabf4459856a26a4c1e2a
    MODULE_PREFIX=${QT4_PREFIX:-/usr}
         WEB_SITE=http://www.lyx.org
          ENTERED=20020904
-         UPDATED=20141003
+         UPDATED=20141031
            SHORT="GUI LaTeX editor"
 
 cat << EOF
