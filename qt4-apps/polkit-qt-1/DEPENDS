@@ -1,3 +1,5 @@
 depends dbus
 depends qt4
 depends polkit
+
+optional_depends "qt5" "" "" "For qt5 polkit support" n

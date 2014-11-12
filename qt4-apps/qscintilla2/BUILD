@@ -1,4 +1,3 @@
-(
 
 # install the editor class
 
@@ -9,10 +8,16 @@
   qmake -o Makefile qscintilla.pro &&
   default_make  &&
 
-# install the Pythom bindings
+  
+# install the Python bindings
 
   cd ../Python           &&
   python ./configure.py  &&
   default_make
 
-) > $C_FIFO 2>&1
+# Do Python-3
+  if in_depends $MODULE Python-3 ; then
+    devoke_installwatch &&
+    python3 ./configure.py &&
+    default_make
+  fi
