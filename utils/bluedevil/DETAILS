@@ -1,12 +1,12 @@
           MODULE=bluedevil
-         VERSION=2.0-rc1
+         VERSION=2.1
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/unstable/$MODULE/$VERSION/src/
+      SOURCE_URL=$KDE_URL/stable/$MODULE/$VERSION/src/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
-      SOURCE_VFY=sha1:02ae3e00cc43c9bc4d041cf8ac6e7259d1914465
+      SOURCE_VFY=sha1:7938a2e4bddbc1622522d24f999e74ba2b271d7c
         WEB_SITE=https://userbase.kde.org/Bluedevil
          ENTERED=20100728
-         UPDATED=20140805
+         UPDATED=20141227
            SHORT="kde bluetooth stack"
 
 cat << EOF
