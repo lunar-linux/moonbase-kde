@@ -1,0 +1,4 @@
+default_pre_build &&
+
+# RUBY_VERSION_PATCH might not be defined
+sedit '/compute an overall/ i if(NOT RUBY_VERSION_PATCH)\nset(RUBY_VERSION_PATCH 0)\nendif(NOT RUBY_VERSION_PATCH)' CMakeLists.txt
