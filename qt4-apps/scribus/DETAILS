@@ -1,12 +1,12 @@
           MODULE=scribus
-         VERSION=1.4.4
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha1:7bd3b4a7d6e6262126079847c617b3a25ba8ab06
+         VERSION=1.4.5
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=$SFORGE_URL/$MODULE/
+      SOURCE_VFY=sha256:9f706f0561d26bb11bbe558690ae0507cd3689e381f6e17aa9411d9c4ef58498
    MODULE_PREFIX=${QT4_PREFIX:-/usr}
         WEB_SITE=http://www.scribus.net
          ENTERED=20100116
-         UPDATED=20140529
+         UPDATED=20150131
            SHORT="A desktop publishing program based on QT"
 
 cat << EOF
