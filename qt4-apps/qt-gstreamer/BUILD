@@ -1,7 +1,10 @@
 
   . /etc/profile.d/qt4.rc &&
 
+  patch_it $SOURCE2 1 &&
+
   OPTS+=" -DQTGSTREAMER_EXAMPLES=0" &&
+
   default_cmake_build &&
 
   if in_depends $MODULE qt5 ; then
