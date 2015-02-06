@@ -1,14 +1,11 @@
           MODULE=qt-gstreamer
          VERSION=1.2.0
           SOURCE=$MODULE-$VERSION.tar.xz
-         SOURCE2=qt-gstreamer-boost-01.patch
       SOURCE_URL=http://gstreamer.freedesktop.org/src/qt-gstreamer/
-     SOURCE2_URL=$PATCH_URL
       SOURCE_VFY=sha1:16e363e081e6143030d501278ac882bb7bbe9279
-     SOURCE2_VFY=sha1:280e77491dff609e809691ab2e681ca57634dc51
         WEB_SITE=http://gstreamer.freedesktop.org
          ENTERED=20110125
-         UPDATED=20150205
+         UPDATED=20150206
            SHORT="Qt bindings for gstreamer"
 cat << EOF
 Qt bindings for gstreamer.
