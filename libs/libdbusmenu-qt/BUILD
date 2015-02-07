@@ -1,13 +1,13 @@
-(
 
   . /etc/profile.d/qt4.rc &&
 
   export LDFLAGS="-L/usr/lib/qt4" &&
+  OPTS+=" -DUSE_QT5=0" &&
+  default_cmake_build &&
 
-  cmake -DCMAKE_INSTALL_PREFIX=$MODULE_PREFIX  \
-        -DCMAKE_BUILD_TYPE=RELEASE             \
-        $OPTS .                               &&
-
-  default_make
-
-) > $C_FIFO 2>&1
+  if in_depends $MODULE qt5 ; then
+    . /etc/profile.d/qt5.rc &&
+    export LDFLAGS="-L/usr/lib/qt5" &&
+    OPTS+=" -DUSE_QT5=1" &&
+    default_cmake_build
+  fi
