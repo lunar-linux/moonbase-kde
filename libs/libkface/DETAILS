@@ -1,0 +1,15 @@
+          MODULE=libkface
+         VERSION=14.12.2
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
+      SOURCE_VFY=sha1:84615f07d000a3ccdf57ec63012596ca1967a63d
+        WEB_SITE=http://www.kde.org
+         ENTERED=20150208
+         UPDATED=20150208
+           SHORT="Qt/C++ library to perform face detection and recognition over pictures"
+
+cat << EOF
+Libkface is a Qt/C++ library to perform face detection and recognition over pictures.
+
+This library is used by kipi-plugins, digiKam and others kipi host programs.
+EOF
