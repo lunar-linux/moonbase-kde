@@ -1,5 +1,6 @@
 depends %MPLAYER
 depends kdelibs
+depends libkface
 
 optional_depends "exiv2"     "-DWITH_Exiv2=1"  "-DWITH_Exiv2=0"   "for image metadata access support"
 optional_depends "libkdcraw" "-DWITH_Kdcraw=1" "-DWITH_Kdcraw=0"  "for raw image file support"
