@@ -1,0 +1,19 @@
+          MODULE=extra-cmake-modules
+         VERSION=1.6.1
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/5.6
+      SOURCE_VFY=sha1:1165cd6c9c58b042a08aa8897c55b4f5defac54a
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/kdesupport/extra-cmake-modules
+         ENTERED=20150205
+         UPDATED=20150205
+           SHORT="adds to modules provided by CMake"
+
+cat << EOF
+The Extra CMake Modules package, or ECM, adds to the modules provided by CMake,
+including both ones used by ``find_package()`` to find common software and ones
+that can be used directly in ``CMakeLists.txt`` files to perform common tasks.
+
+In addition, it provides common build settings used in software produced by the
+KDE community.
+EOF

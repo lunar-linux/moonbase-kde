@@ -1,0 +1,14 @@
+          MODULE=kjobwidgets
+         VERSION=5.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/5.6
+      SOURCE_VFY=sha1:8a5d5c0cda5f61c40e0ed52a6ce272d0c0f36b96
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/frameworks/kjobwidgets
+         ENTERED=20150205
+         UPDATED=20150205
+           SHORT="shows progress of asynchronous jobs"
+
+cat << EOF
+KJobWIdgets provides widgets for showing progress of asynchronous jobs.
+EOF

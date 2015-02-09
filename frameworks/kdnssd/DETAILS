@@ -1,0 +1,17 @@
+          MODULE=kdnssd
+         VERSION=5.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/5.6
+      SOURCE_VFY=sha1:c3e1b005e1c3d415143fab08f71e9c47e46c16f8
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/frameworks/kdnssd
+         ENTERED=20150205
+         UPDATED=20150205
+           SHORT="Network service discovery using Zeroconf"
+
+cat << EOF
+KDNSSD is a library for handling the DNS-based Service Discovery Protocol
+(DNS-SD), the layer of [Zeroconf](http://www.zeroconf.org) that allows network
+services, such as printers, to be discovered without any user intervention or
+centralized infrastructure.
+EOF

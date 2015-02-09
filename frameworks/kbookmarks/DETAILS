@@ -1,0 +1,15 @@
+          MODULE=kbookmarks
+         VERSION=5.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/5.6
+      SOURCE_VFY=sha1:1e87c9e39f8baa1294a37fc13bdaa55413dca1c4
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/frameworks/kbookmarks
+         ENTERED=20150205
+         UPDATED=20150205
+           SHORT="access and manipulate bookmarks"
+
+cat << EOF
+KBookmarks lets you access and manipulate bookmarks stored using the
+[XBEL format][1].
+EOF

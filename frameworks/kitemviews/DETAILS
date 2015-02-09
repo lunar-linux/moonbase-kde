@@ -1,0 +1,16 @@
+          MODULE=kitemviews
+         VERSION=5.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/5.6
+      SOURCE_VFY=sha1:c14c45b42ecb0763f7c8d16bf64b5a94302521ec
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/frameworks/kitemviews
+         ENTERED=20150205
+         UPDATED=20150205
+           SHORT="set of item views extending the Qt model-view framework"
+
+cat << EOF
+KItemViews includes a set of views, which can be used with item models. It
+includes views for categorizing lists and to add search filters to flat and
+hierarchical lists.
+EOF

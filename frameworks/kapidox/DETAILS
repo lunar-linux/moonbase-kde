@@ -1,0 +1,21 @@
+          MODULE=kapidox
+         VERSION=5.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/5.6
+      SOURCE_VFY=sha1:bdc216e36f00cd6508fb4671b25a821de1b0ce41
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/frameworks/kapidox
+         ENTERED=20150205
+         UPDATED=20150205
+           SHORT="scripts and data for building API documentation"
+
+cat << EOF
+This framework contains scripts and data for building API documentation (dox) in
+a standard format and style.
+
+The Doxygen tool is used to do the actual documentation extraction and
+formatting, but this framework provides a wrapper script to make generating the
+documentation more convenient (including reading settings from the target
+framework or other module) and a standard template for the generated
+documentation.
+EOF

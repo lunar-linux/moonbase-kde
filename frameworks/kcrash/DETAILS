@@ -1,0 +1,14 @@
+          MODULE=kcrash
+         VERSION=5.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/5.6
+      SOURCE_VFY=sha1:8b1455a43858fcfac7f8e9f75efeb1b9e0b71410
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/frameworks/kcrash
+         ENTERED=20150205
+         UPDATED=20150205
+           SHORT="intercept and hand application crashes"
+
+cat << EOF
+KCrash provides support for intercepting and handling application crashes.
+EOF

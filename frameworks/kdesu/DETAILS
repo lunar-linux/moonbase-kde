@@ -1,0 +1,16 @@
+          MODULE=kdesu
+         VERSION=5.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/5.6
+      SOURCE_VFY=sha1:1abf55a748e95f9d111cc8542ab81d53850efadf
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/frameworks/kdesu
+         ENTERED=20150205
+         UPDATED=20150205
+           SHORT="user interface for running shell commands with root privileges"
+
+cat << EOF
+KDESU provides functionality for building GUI front ends for
+(password asking) console mode programs. For example, kdesu and
+kdessh use it to interface with su and ssh respectively.
+EOF

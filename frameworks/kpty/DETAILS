@@ -1,0 +1,16 @@
+          MODULE=kpty
+         VERSION=5.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/5.6
+      SOURCE_VFY=sha1:56f69538ffec83305cd0bd6f464546bebf0afa7d
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/frameworks/kpty
+         ENTERED=20150205
+         UPDATED=20150205
+           SHORT="interfacing with pseudo terminal devices"
+
+cat << EOF
+This library provides primitives to interface with pseudo terminal devices
+as well as a KProcess derived class for running child processes and
+communicating with them using a pty.
+EOF

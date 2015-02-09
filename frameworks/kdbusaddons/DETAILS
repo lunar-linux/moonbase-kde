@@ -1,0 +1,15 @@
+          MODULE=kdbusaddons
+         VERSION=5.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/5.6
+      SOURCE_VFY=sha1:ac99fb99d47e19774ff9bd9a8612675b74e8d50c
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/frameworks/kdbusaddons
+         ENTERED=20150205
+         UPDATED=20150205
+           SHORT="convenience classes for DBus"
+
+cat << EOF
+KDBusAddons provides convenience classes on top of QtDBus, as well as an API to
+create KDED modules.
+EOF

@@ -1,0 +1,17 @@
+          MODULE=frameworkintegration
+         VERSION=5.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/5.6
+      SOURCE_VFY=sha1:241a115cdd66355f0fcf502f146a1c971472c6e8
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/frameworks/frameworkintegration
+         ENTERED=20150205
+         UPDATED=20150205
+           SHORT="integration of Qt applications when running on a KDE Plasma workspace"
+
+cat << EOF
+Framework Integration is a set of plugins responsible for better integration of
+Qt applications when running on a KDE Plasma workspace.
+
+Applications do not need to link to this directly.
+EOF

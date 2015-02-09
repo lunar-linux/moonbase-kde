@@ -1,0 +1,17 @@
+          MODULE=ki18n
+         VERSION=5.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/5.6
+      SOURCE_VFY=sha1:f1a1002ab5032c88839087482e72b41bee94b796
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/frameworks/ki18n
+         ENTERED=20150205
+         UPDATED=20150205
+           SHORT="gettext based UI text internationalization"
+
+cat << EOF
+KI18n provides functionality for internationalizing user interface text
+in applications, based on the GNU Gettext translation system.
+It wraps the standard Gettext functionality, so that the programmers
+and translators can use the familiar Gettext tools and workflows.
+EOF

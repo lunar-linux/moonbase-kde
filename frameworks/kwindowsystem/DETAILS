@@ -1,0 +1,22 @@
+          MODULE=kwindowsystem
+         VERSION=5.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/5.6
+      SOURCE_VFY=sha1:1228d3bb2ac948f99a14ed302e78c407b620b1fd
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/frameworks/kwindowsystem
+         ENTERED=20150205
+         UPDATED=20150205
+           SHORT="access to the windowing system"
+
+cat << EOF
+Convenience access to certain properties and features of the windowing system.
+
+KWindowSystem provides information about the windowing system and allows interaction with
+the windowing system. It provides an high level API which is windowing system independent and
+has platform specific implementations. This API is inspired by X11 and thus not all functionality
+is available on all windowing systems.
+
+In addition to the high level API, this framework also provides several more low level classes
+for interaction with the X Windowing System.
+EOF

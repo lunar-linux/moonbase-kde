@@ -1,0 +1,19 @@
+          MODULE=kwallet
+         VERSION=5.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/5.6
+      SOURCE_VFY=sha1:1a0e5c95f2ba72d71c7b66d52f97e03fe8ee8878
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/frameworks/kwallet
+         ENTERED=20150205
+         UPDATED=20150205
+           SHORT="safe desktop-wide storage for passwords"
+
+cat << EOF
+Safe desktop-wide storage for passwords
+
+This framework contains two main components:
+* Interface to KWallet, the safe desktop-wide storage for passwords on KDE work 
+spaces.
+* The kwalletd used to safely store the passwords on KDE work spaces.
+EOF

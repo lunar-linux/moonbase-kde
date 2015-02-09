@@ -1,0 +1,15 @@
+          MODULE=kpackage
+         VERSION=5.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/5.6
+      SOURCE_VFY=sha1:5fa859e11f4555718b9000f3abc64650af1ff0eb
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/frameworks/kpackage
+         ENTERED=20150205
+         UPDATED=20150205
+           SHORT="install and load packages of non binary content"
+
+cat << EOF
+The Package framework lets the user to install and load packages of non binary
+content such as scripted extensions or graphic assets, as they were traditional plugins.
+EOF

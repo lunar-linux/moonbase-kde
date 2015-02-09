@@ -1,0 +1,16 @@
+          MODULE=kded
+         VERSION=5.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/5.6
+      SOURCE_VFY=sha1:df10bba02c67c9d5a25f095ea8486f3278146e2a
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/frameworks/kded
+         ENTERED=20150205
+         UPDATED=20150205
+           SHORT="central daemon of KDE work spaces"
+
+cat << EOF
+KDED stands for KDE Daemon which isn't very descriptive.
+KDED runs in the background and performs a number of small tasks.
+Some of these tasks are built in, others are started on demand.
+EOF

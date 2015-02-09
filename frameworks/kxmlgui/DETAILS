@@ -1,0 +1,17 @@
+          MODULE=kxmlgui
+         VERSION=5.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/5.6
+      SOURCE_VFY=sha1:964badef561e5c9ced3bd33a998d13d8076de841
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/frameworks/kxmlgui
+         ENTERED=20150205
+         UPDATED=20150205
+           SHORT="managing menu and toolbar actions"
+
+cat << EOF
+KXMLGUI provides a framework for managing menu and toolbar actions in an
+abstract way. The actions are configured through a XML description and hooks
+in the application code. The framework supports merging of multiple
+description for example for integrating actions from plugins.
+EOF

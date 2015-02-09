@@ -1,0 +1,17 @@
+          MODULE=kdeclarative
+         VERSION=5.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/5.6
+      SOURCE_VFY=sha1:251a1e4abe91602caf85dbfa5bc0a9b90e425314
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/frameworks/kdeclarative
+         ENTERED=20150205
+         UPDATED=20150205
+           SHORT="integration of QML and KDE work spaces"
+
+cat << EOF
+KDeclarative provides integration of QML and KDE work spaces.
+It's comprises two parts: a library used by the C++ part of your application
+to intergrate QML with KDE Frameworks specific features, and a series of
+QML imports that offer bindings to some of the Frameworks.
+EOF

@@ -1,0 +1,15 @@
+          MODULE=kcmutils
+         VERSION=5.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/5.6
+      SOURCE_VFY=sha1:e3c8f38e6b4e6d87f20465330456781e61a5581d
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/frameworks/kcmutils
+         ENTERED=20150205
+         UPDATED=20150205
+           SHORT="various classes to work with KCModules"
+
+cat << EOF
+KCMUtils provides various classes to work with KCModules. KCModules can be
+created with the KConfigWidgets framework.
+EOF

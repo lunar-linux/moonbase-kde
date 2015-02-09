@@ -1,0 +1,22 @@
+          MODULE=kinit
+         VERSION=5.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/5.6
+      SOURCE_VFY=sha1:f75eb98796e50bc7320b76000e1a7525da5fb7a7
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/frameworks/kinit
+         ENTERED=20150205
+         UPDATED=20150205
+           SHORT="speed up start of applications on KDE workspaces"
+
+cat << EOF
+kdeinit is a process launcher somewhat similar to the famous init used for
+booting UNIX.
+
+It launches processes by forking and then loading a dynamic library which
+should contain a 'kdemain(...)' function.
+
+Using kdeinit to launch KDE applications makes starting a typical KDE
+applications 2.5 times faster (100ms instead of 250ms on a P-III 500) It
+reduces memory consumption by approx. 350Kb per application.
+EOF
