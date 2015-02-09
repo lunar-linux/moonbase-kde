@@ -1,0 +1,16 @@
+          MODULE=kjs
+         VERSION=5.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/5.6/portingAids
+      SOURCE_VFY=sha1:691c0adaa3a28e54e5ee1915a8f4f6823ed74e2a
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/frameworks/kjs
+         ENTERED=20150205
+         UPDATED=20150205
+           SHORT="javascript engine"
+
+cat << EOF
+This library provides an ECMAScript compatible interpreter. The ECMA standard
+is based on well known scripting languages such as Netscape's JavaScript and
+Microsoft's JScript.
+EOF

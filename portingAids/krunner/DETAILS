@@ -1,0 +1,25 @@
+          MODULE=krunner
+         VERSION=5.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/5.6/portingAids
+      SOURCE_VFY=sha1:a4be7011efae9eb907c013bcdc7c64da80c98501
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/frameworks/krunner
+         ENTERED=20150205
+         UPDATED=20150205
+           SHORT="Framework for Plasma runners"
+
+cat << EOF
+Framework for Plasma runners.
+
+The Plasma workspace provides an application called KRunner which, among other
+things, allows one to type into a text area which causes various actions and
+information that match the text appear as the text is being typed.
+
+One application for this is the universal runner you can launch with ALT-F2.
+
+This functionality is provided via plugins loaded at runtime called "Runners".
+These plugins can be used by any application using the Plasma library. The
+KRunner framework is used to write these plugins, as explained in
+[this tutorial](http://techbase.kde.org/Development/Tutorials/Plasma/AbstractRunner)
+EOF
