@@ -1,0 +1,21 @@
+          MODULE=baloo-frameworks
+         VERSION=5.6.0
+          SOURCE=${MODULE%-*}-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/plasma/5.2.0/
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE%-*}-$VERSION
+      SOURCE_VFY=sha1:0dcaf1b2bcbb74720dd052395efc7dc4e302a1db
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/kde/kdelibs/baloo
+         ENTERED=20150205
+         UPDATED=20150205
+           SHORT="file search and indexing"
+
+cat << EOF
+Baloo allows you to search for local files based on a query language. This language
+mostly consists of (key: value) pairs which can be ANDed or ORed together to create
+complex queries.
+
+The Query interface provides a convenient API for clients to write queries which
+form a tree like syntax of terms which can be ANDed and ORed together. Each term
+comprises of a property name, a value and a comparison operator.
+EOF
