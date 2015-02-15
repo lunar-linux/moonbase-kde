@@ -1,12 +1,12 @@
           MODULE=kde-l10n-et
-         VERSION=4.14.3
+         VERSION=14.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$VERSION/src/kde-l10n
-      SOURCE_VFY=sha1:d7079a73bec7640e9056bab24240a7c4a59e1e0e
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src/kde-l10n
+      SOURCE_VFY=sha1:2c44b627af2d146b8abb3f8cc93843222f616474
         WEB_SITE=http://www.kde.org
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
          ENTERED=20080111
-         UPDATED=20141111
+         UPDATED=20150215
       MAINTAINER=stumbles@lunar-linux.org
            SHORT="contains translated KDE messages"
 
