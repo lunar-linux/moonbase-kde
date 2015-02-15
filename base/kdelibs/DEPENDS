@@ -18,7 +18,7 @@ optional_depends "lzma-sdk"    "-DWITH_LibLZMA=ON" "-DWITH_LibLZMA=OFF" "for lzm
 optional_depends "openssl"     "-DWITH_OpenSSL=ON" "-DWITH_OpenSSL=OFF" "for secure sockets level support"
 optional_depends "soprano"     "-DWITH_Soprano=ON" "-DWITH_Soprano=OFF" "for RDF data support"
 optional_depends "polkit-qt-1" "-DWITH_PolkitQt-1=ON" "-DWITH_PolkitQt-1=OFF" "for Kauth support"
-optional_depends "gamin"       "-DWITH_FAM=ON"     "-DWITH_FAM=OFF"     "for file alteration support"
+optional_depends "gamin"       "-DWITH_FAM=ON"     "-DWITH_FAM=OFF"     "for file alteration support $PROBLEM_COLOR, solid is preferred over gamin$DEFAULT_COLOR" n
 optional_depends "aspell"      "-DWITH_ASPELL=ON"  "-DWITH_ASPELL=OFF"  "for spell checking support"
 optional_depends "enchant"     "-DWITH_ENCHANT=ON" "-DWITH_ENCHANT=OFF" "needed for spell checking library access"
 optional_depends "jasper"      "-DWITH_Jasper=ON"  "-DWITH_Jasper=OFF"  "for JPEG-2000 image reading support; Needed by kdenetwork"
@@ -34,8 +34,9 @@ optional_depends "grantlee"    "" "" "for plugin based String Template system su
 optional_depends "subversion"  "" "" "for subversion support; can be used by Dolphin"
 optional_depends "git"         "" "" "for git support; can be used by Dolphin"
 optional_depends "shared-desktop-ontologies" "-DWITH_SharedDesktopOntologies=ON" "-DWITH_SharedDesktopOntologies=OFF" "for ontological support"
+optional_depends "solid"       "-DWITH_SOLID_UDISKS2=ON" "-DWITH_SOLID_UDISKS2=OFF" "Use solid backend for file/disk alteration support,$PROBLEM_COLOR this is preferred along with udisks2$DEFAULT_COLOR" y
 optional_depends "hupnp-ng"    "-DWITH_HUpnp=ON -DHUPNP_ENABLED=1" "-DWITH_HUpnp=OFF" "for UPnp support in solid"
-optional_depends "udisks2"    ""  "" "for the Solid udisk backend support. (Highly Recommended)"
+optional_depends "udisks2"    ""  "" "for the Solid udisk backend support. (Highly Recommended)" y
 optional_depends "media-player-info" "" "" "for media player capabilities support"
 optional_depends "hspell"     ""  "" "for hebrew spell checking support"
 
