@@ -1,12 +1,12 @@
           MODULE=superkaramba
-         VERSION=4.14.3
+         VERSION=14.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$VERSION/src
-      SOURCE_VFY=sha1:e7b1d6dda1f49e0c90d1c1706a8d0304bdb68d82
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:ab03ee81adc13fd60661256dfd7e20e759a26fd6
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://netdragon.sourceforge.net/ssuperkaramba.html
          ENTERED=20120125
-         UPDATED=20141111
+         UPDATED=20150214
            SHORT="easily create interactive eye-candy for the KDE desktop"
 
 cat << EOF

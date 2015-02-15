@@ -1,12 +1,12 @@
           MODULE=kdelibs
-         VERSION=4.14.3
+         VERSION=4.14.5
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$VERSION/src
-      SOURCE_VFY=sha1:a61beafbd7ff0f5c6be54e685d197c135ba36865
+      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src/
+      SOURCE_VFY=sha1:92e4b13e41f946de0d647331f31ad83f4921c99a
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20071026
-         UPDATED=20141111
+         UPDATED=20150214
            SHORT="central libraries for developement and execution of KDE"
 
 LUNAR_RESTART_SERVICES=off

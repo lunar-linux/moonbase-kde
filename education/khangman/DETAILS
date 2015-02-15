@@ -1,13 +1,14 @@
           MODULE=khangman
-         VERSION=4.14.3
+         VERSION=14.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$VERSION/src
-      SOURCE_VFY=sha1:ba20a874322f2bf180be205918499d5ee8aed179
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:5cf3699efb2c46a9873fba8f590823ad6d68b287
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://edu.kde.org/khangman
          ENTERED=20110813
-         UPDATED=20141111
+         UPDATED=20150214
            SHORT="kde hangman"
 
 cat << EOF
+The hangman game.
 EOF

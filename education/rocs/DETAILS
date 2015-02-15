@@ -1,12 +1,12 @@
           MODULE=rocs
-         VERSION=4.14.3
+         VERSION=14.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$VERSION/src
-      SOURCE_VFY=sha1:a6fac0cee375f8bdb8c9241bde4bf9dda0f38704
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:771287e6597ed0f61f9be4b9dc8e9ed980662c8f
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20110813
-         UPDATED=20141111
+         UPDATED=20150214
            SHORT="rocs"
 
 cat << EOF

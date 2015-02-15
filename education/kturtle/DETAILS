@@ -1,12 +1,12 @@
           MODULE=kturtle
-         VERSION=4.14.3
+         VERSION=14.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$VERSION/src
-      SOURCE_VFY=sha1:b022711c94d6a241e1e029f66c35e77ca5af8118
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:292d9c6afe47ae3339be462e305ab98d2c61c302
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20110813
-         UPDATED=20141111
+         UPDATED=20150214
            SHORT="educational tool for learning the basics of programming"
 
 cat << EOF

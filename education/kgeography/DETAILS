@@ -1,13 +1,14 @@
           MODULE=kgeography
-         VERSION=4.14.3
+         VERSION=14.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$VERSION/src
-      SOURCE_VFY=sha1:6465f290a058f1c41b1957a308de5b6f383b8bd2
+      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
+      SOURCE_VFY=sha1:2a18b71140a149ae981f864588a7d8c8a24d8ada
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20110813
-         UPDATED=20141111
+         UPDATED=20150214
            SHORT="kde geography"
 
 cat << EOF
+A geography game.
 EOF

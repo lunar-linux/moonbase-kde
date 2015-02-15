@@ -4,4 +4,3 @@ optional_depends "git"          "-DBUILD_git=1"    "-DBUILD_git=0"    "Build the
 optional_depends "bzr"          "-DBUILD_bazaar=1" "-DBUILD_bazaar=0" "Build the bzr plugin"
 optional_depends "subversion"   "-DBUILD_svn=1"    "-DBUILD_svn=0"    "Build the subversion plugin"
 optional_depends "mercurial"    "-DBUILD_hg=1"     "-DBUILD_hg=0"     "Build the mecurial plugin"
-optional_depends "kde-baseapps" "-DWITH_LibKonq=1" "-DWITH_LibKonq=0" "For rekonq support"

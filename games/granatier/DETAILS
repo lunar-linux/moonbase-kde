@@ -1,13 +1,13 @@
           MODULE=granatier
-         VERSION=4.14.3
+         VERSION=14.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$VERSION/src
-      SOURCE_VFY=sha1:1d51072d8eb861c279c7a76b5af5b8352f991564
+      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
+      SOURCE_VFY=sha1:3e276a74c1af29f043ef2c6bcb4d3701e00a6ebd
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/games/granatier
          ENTERED=20130814
-         UPDATED=20141111
-           SHORT="a clone of the classic Bomberman game"
+         UPDATED=20150214
+           SHORT="clone of the classic Bomberman game"
 
 cat << EOF
 Granatier is a clone of the classic Bomberman game, inspired by the work of the Clanbomber clone.

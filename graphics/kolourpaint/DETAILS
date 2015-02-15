@@ -1,13 +1,14 @@
           MODULE=kolourpaint
-         VERSION=4.14.3
+         VERSION=14.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$VERSION/src
-      SOURCE_VFY=sha1:0cc58931f5bf94ace252667df248d7fa10309c3c
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:3f941cd978c8fcbcb75d1bb257aee3177d43d4ab
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kolourpaint.org
          ENTERED=20110813
-         UPDATED=20141111
+         UPDATED=20150214
            SHORT="easy-to-use paint program for KDE"
 
 cat << EOF
+A paint program for KDE.
 EOF

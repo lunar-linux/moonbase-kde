@@ -1,12 +1,12 @@
           MODULE=libkdeedu
-         VERSION=4.14.3
+         VERSION=14.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$VERSION/src
-      SOURCE_VFY=sha1:02bb448832d518bd920e08e8a87ae9fb2db7f20b
+      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
+      SOURCE_VFY=sha1:6da63310ff1267a063c96dba36186c17c5aae755
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/kdeedu/libkdeedu
          ENTERED=20110813
-         UPDATED=20141111
+         UPDATED=20150214
            SHORT="education based applications for KDE"
 
 cat << EOF

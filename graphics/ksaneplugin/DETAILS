@@ -1,12 +1,12 @@
           MODULE=ksaneplugin
-         VERSION=4.14.3
+         VERSION=14.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$VERSION/src
-      SOURCE_VFY=sha1:7fb781e7709a6d14226451a01d1fd24fd8c6fd1e
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:a8dd5a8a210b9ac0310f5cdb064feedb42344e4b
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20071026
-         UPDATED=20141111
+         UPDATED=20150214
            SHORT="ksaneplugin"
 
 cat << EOF

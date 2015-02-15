@@ -8,7 +8,7 @@ depends xcb-util-keysyms
 depends libdbusmenu-qt
 depends qimageblitz
 depends kdelibs
-depends kactivities
+depends kactivities-frameworks
 
 optional_depends "boost"         "-DWITH_Boost=1"       "-DWITH_Boost=0"       "to build plasma dataengines: akonadi,rss,calendar"
 optional_depends "akonadi"       "-DWITH_Akonadi=1"     "-DWITH_Akonadi=0"     "to build plasma dataengines: akonadi,calendar"

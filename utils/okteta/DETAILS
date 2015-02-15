@@ -1,12 +1,12 @@
           MODULE=okteta
-         VERSION=4.14.3
+         VERSION=14.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$VERSION/src
-      SOURCE_VFY=sha1:479779119ef5dd5cea2b2acf1f134b355dffe74d
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:d40cb092e622ed0f31303229737782b26c57f434
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://utils.kde.org/projects/okteta/
          ENTERED=20130814
-         UPDATED=20141111
+         UPDATED=20150214
            SHORT="simple hex editor for the raw data of files"
 
 cat << EOF

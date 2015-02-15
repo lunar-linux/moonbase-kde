@@ -1,13 +1,14 @@
           MODULE=kwordquiz
-         VERSION=4.14.3
+         VERSION=14.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$VERSION/src
-      SOURCE_VFY=sha1:b341ba88986619307163df28130faa485911bd09
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:25bf6846709d77a6e5c44e21dd619bc02e24be9c
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20110813
-         UPDATED=20141111
+         UPDATED=20150214
            SHORT="kwordquiz"
 
 cat << EOF
+A word quiz game.
 EOF
