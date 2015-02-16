@@ -1,7 +1,3 @@
 depends sip
+depends qt5
 depends kde-baseapps
-
-optional_depends kactivities-frameworks "-DWITH_KActivities=1" "-DWITH_KActivities=0" "For KDE activities support"
-optional_depends pykde4      "-DWITH_PyKDE4=1"      "-DWITH_PyKDE4=0"      "For KDE python bindings support"
-optional_depends PyQt        "-DWITH_PyQt4=1"       "-DWITH_PyQt4=0"       "For Qt python bindings support"
-optional_depends qjson       "-DWITH_QJSON=1"       "-DWITH_QJSON=0"       "For JavaScript Object Notation support"
