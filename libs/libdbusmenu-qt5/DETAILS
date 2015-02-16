@@ -1,0 +1,14 @@
+          MODULE=libdbusmenu-qt5
+         VERSION=0.9.3+14.10.20140619
+          SOURCE=libdbusmenu-qt\_$VERSION.orig.tar.gz
+      SOURCE_URL=http://archive.ubuntu.com/ubuntu/pool/main/libd/libdbusmenu-qt
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/libdbusmenu-qt-$VERSION
+      SOURCE_VFY=sha1:f043b8551329e87492325c891c927225c4c2d1ce
+        WEB_SITE=https://launchpad.net/libdbusmenu-qt/trunk/
+         ENTERED=20150216
+         UPDATED=20150216
+           SHORT="Qt5 implementation of the DBusMenu spec"
+
+cat << EOF
+This library provides a Qt5 implementation of the DBusMenu spec.
+EOF
