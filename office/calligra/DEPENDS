@@ -11,7 +11,7 @@ optional_depends "glib-2"       "-DWITH_GLIB2=1"      "-DWITH_GLIB2=0"      "for
 optional_depends "gsl"          "-DWITH_GSL=1"        "-DWITH_GSL=0"        "for Scientific Library support"
 optional_depends "icu4c"        "-DWITH_ICU=1"        "-DWITH_ICU=0"        "for unicode support"
 optional_depends "%JPEG"        "-DWITH_JPEG=1"       "-DWITH_JPEG=0"       "for jpeg graphics support"
-optional_depends "kactivities"  "-DWITH_KActivities=1" "-DWITH_KActivities=0" "for kde activities support"
+optional_depends "kactivities-frameworks"  "-DWITH_KActivities=1" "-DWITH_KActivities=0" "for kde activities support"
 optional_depends "libkdcraw"    "-DWITH_Kdcraw=1"     "-DWITH_Kdcraw=0"     "for libraw image support"
 optional_depends "kdepimlibs"   "-DWITH_KdepimLibs=1" "-DWITH_KdepimLibs=0" "for support of various pimlibs support"
 optional_depends "lcms2"        "-DWITH_LCMS2=1"      "-DWITH_LCMS2=0"      "for lcms2 color management support"

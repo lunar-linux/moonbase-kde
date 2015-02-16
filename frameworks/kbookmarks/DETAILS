@@ -1,12 +1,12 @@
           MODULE=kbookmarks
-         VERSION=5.6.0
+         VERSION=5.7.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/frameworks/5.6
-      SOURCE_VFY=sha1:1e87c9e39f8baa1294a37fc13bdaa55413dca1c4
+      SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
+      SOURCE_VFY=sha1:c53fc05106f5a7e73c0ddd741550a990c6ba5205
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kbookmarks
          ENTERED=20150205
-         UPDATED=20150205
+         UPDATED=20150216
            SHORT="access and manipulate bookmarks"
 
 cat << EOF

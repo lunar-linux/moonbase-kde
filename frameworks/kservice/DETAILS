@@ -1,12 +1,12 @@
           MODULE=kservice
-         VERSION=5.6.0
+         VERSION=5.7.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/frameworks/5.6
-      SOURCE_VFY=sha1:bcea925a21df897c083417161e1132cb953ac438
+      SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
+      SOURCE_VFY=sha1:8c8c5b31c523bb2eddae5c6d4c014fac9e5948fb
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kservice
          ENTERED=20150205
-         UPDATED=20150205
+         UPDATED=20150216
            SHORT="plugin framework for desktop services"
 
 cat << EOF
