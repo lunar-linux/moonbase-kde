@@ -1,0 +1,15 @@
+          MODULE=oxygen-fonts
+         VERSION=5.2.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/plasma/5.2.0
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE%5}-$VERSION
+      SOURCE_VFY=sha1:bd3ee9989ea561bf5fe4739da8c7b5fe289c1adc
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/kde/workspace/oxygen-fonts
+         ENTERED=20150216
+         UPDATED=20150216
+           SHORT="oxygen font family"
+
+cat << EOF
+The Oxygen font family. A desktop/gui font family for integrated use with the KDE desktop.
+EOF
