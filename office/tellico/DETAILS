@@ -1,13 +1,12 @@
           MODULE=tellico
-         VERSION=2.3.9
+         VERSION=2.3.10
           SOURCE=tellico-$VERSION.tar.bz2
       SOURCE_URL=http://tellico-project.org/files
-      SOURCE_VFY=sha1:06ba6fe95d9b6866cb881b0c84cd5e617d688b71
+      SOURCE_VFY=sha256:e916101f86b6f843b85be42e8545aa7441cd496cbb9b81590e2e0bd03a58faaa
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://tellico-project.org
          ENTERED=20090921
-         UPDATED=20140625
-      MAINTAINER=florin@lunar-linux.org
+         UPDATED=20150224
            SHORT="A collection keeping track program for KDE"
 
 cat << EOF
