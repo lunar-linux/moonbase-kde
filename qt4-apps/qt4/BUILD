@@ -15,7 +15,7 @@
   sed -i "s:/usr/src/qt-everywhere-opensource-src-$VERSION/:/usr:" /usr/lib/$MODULE/pkgconfig/phonon.pc
   fi &&
 # Some more cleanup
-  sedit "s:-L/usr/src/qt-everywhere-opensource-src-4.8.6/lib::" /usr/lib/$MODULE/pkgconfig/Qt{Designer,DesignerComponents,UiTools}.pc &&
+  sedit "s:-L/usr/src/qt-everywhere-opensource-src-$VERSION/lib::" /usr/lib/$MODULE/pkgconfig/Qt{Designer,DesignerComponents,UiTools}.pc &&
 # Like for moc and uic, the same needs doing for the *.prl files.
   find /usr/lib/qt4 -type f -name '*.prl' \
       -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
