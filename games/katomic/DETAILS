@@ -1,12 +1,12 @@
           MODULE=katomic
-         VERSION=14.12.2
+         VERSION=14.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
-      SOURCE_VFY=sha1:058a557d4959a55926c52305ac223583af01679d
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:9e34069c04eb8cacfbe40603d17afa2d107d64c2
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/games/katomic/
          ENTERED=20140713
-         UPDATED=20150214
+         UPDATED=20150304
            SHORT="Sokoban like logic game"
 
 cat << EOF

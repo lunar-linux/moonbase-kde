@@ -1,12 +1,12 @@
           MODULE=kgoldrunner
-         VERSION=14.12.2
+         VERSION=14.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
-      SOURCE_VFY=sha1:2ed0d617da1e1e022a9a2df16cd41104f8ad05ea
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:93223dadeb511c2e23462455a20bc2c1ba001e3b
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/games/kgoldrunner/
          ENTERED=20140720
-         UPDATED=20150214
+         UPDATED=20150304
            SHORT="collect all the gold nuggets"
 
 cat << EOF

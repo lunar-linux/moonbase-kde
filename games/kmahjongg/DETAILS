@@ -1,12 +1,12 @@
           MODULE=kmahjongg
-         VERSION=14.12.2
+         VERSION=14.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
-      SOURCE_VFY=sha1:d724e5699e554d6a425e769e82189eb773cc13c3
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:ba43e48c277221436512b1b1f2c9d3ecddd9508e
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/games/kmahjongg/
          ENTERED=20140726
-         UPDATED=20150214
+         UPDATED=20150304
            SHORT="Mahjongg Solitaire"
 
 cat << EOF

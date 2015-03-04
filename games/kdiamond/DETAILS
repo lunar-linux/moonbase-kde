@@ -1,12 +1,12 @@
           MODULE=kdiamond
-         VERSION=14.12.2
+         VERSION=14.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
-      SOURCE_VFY=sha1:bd20198724eab76946aa8530851de5c5d52c12c7
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:2e45b7c4ac541c5fc4f8dbdda852895d1aeae367
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/games/kdiamond/
          ENTERED=20140720
-         UPDATED=20150214
+         UPDATED=20150304
            SHORT="single player puzzle game"
 
 cat << EOF

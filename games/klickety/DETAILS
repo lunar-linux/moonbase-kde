@@ -1,12 +1,12 @@
           MODULE=klickety
-         VERSION=14.12.2
+         VERSION=14.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
-      SOURCE_VFY=sha1:d3c9b446a2ada2ce044cfce207c0fd6a8d1d24f2
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:b60785e98fa17b80a1551fe3c7d5cc15f2eb159b
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://sourceforge.net/projects/klickety/?source=directory
          ENTERED=20140726
-         UPDATED=20150214
+         UPDATED=20150304
            SHORT="solitary game"
 
 cat << EOF

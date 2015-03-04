@@ -1,12 +1,12 @@
           MODULE=kiriki
-         VERSION=14.12.2
+         VERSION=14.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
-      SOURCE_VFY=sha1:f35194f9459195e79bdac19ba325a9bf75db16b8
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:726f1293a26e447f124dc3ef683df2dc75eca474
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/games/kiriki/
          ENTERED=20140720
-         UPDATED=20150214
+         UPDATED=20150304
            SHORT="Yahtzee-like Dice Game"
 
 cat << EOF

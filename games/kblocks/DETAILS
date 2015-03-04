@@ -1,12 +1,12 @@
           MODULE=kblocks
-         VERSION=14.12.2
+         VERSION=14.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
-      SOURCE_VFY=sha1:83daeb970ba965f818004f5603bda2353a50feaa
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:13859a9617e90646c82d8e257e4834bf4a0d677a
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/games/kblocks/
          ENTERED=20140713
-         UPDATED=20150214
+         UPDATED=20150304
            SHORT="lassic falling blocks game"
 
 cat << EOF
