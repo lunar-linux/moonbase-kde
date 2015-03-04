@@ -1,12 +1,12 @@
           MODULE=kmouth
-         VERSION=14.12.2
+         VERSION=14.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
-      SOURCE_VFY=sha1:de2ac4c805cc34351a5c8e40d64994d6486a21e2
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:0f149b66ad3a8c6f7e48ee6a368aeb877b3f358a
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/utilities/kmouth/
          ENTERED=20120125
-         UPDATED=20150214
+         UPDATED=20150304
            SHORT="enable your computer to speak"
 
 cat << EOF

@@ -1,12 +1,12 @@
           MODULE=kmag
-         VERSION=14.12.2
+         VERSION=14.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
-      SOURCE_VFY=sha1:ed25dbc8d9d1962536b8f33d5b65ecd7e2299970
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:1dd85f9c1855f38edf707e553ce4e32a0e5a4cb7
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20120125
-         UPDATED=20150214
+         UPDATED=20150304
            SHORT="kmag"
 
 cat << EOF

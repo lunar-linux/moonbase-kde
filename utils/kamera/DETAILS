@@ -1,12 +1,12 @@
           MODULE=kamera
-         VERSION=14.12.2
+         VERSION=14.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
-      SOURCE_VFY=sha1:3cda2dba9e51c2780a3d85fa92755bbc8e28e9d2
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:142d517fb492d44793fb24bcd29da00c974ea338
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20110813
-         UPDATED=20150214
+         UPDATED=20150304
            SHORT="kamera"
 
 cat << EOF

@@ -1,12 +1,12 @@
           MODULE=kdf
-         VERSION=14.12.2
+         VERSION=14.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
-      SOURCE_VFY=sha1:5492d3f3439af70d13187175e5381fc50cbc1dfd
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:2cb3d32c521467f582921e4d046f3cbf2a4aa03e
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://utils.kde.org/projects/kdf/
          ENTERED=20120125
-         UPDATED=20150214
+         UPDATED=20150304
            SHORT="KDiskFree"
 
 cat << EOF

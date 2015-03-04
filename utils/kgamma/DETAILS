@@ -1,12 +1,12 @@
           MODULE=kgamma
-         VERSION=14.12.2
+         VERSION=14.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
-      SOURCE_VFY=sha1:8092324ac07e721e2b9f89300169ccaa96db573a
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:e22548f8725a6a2618ca30a26753a50cf5b6b521
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20110813
-         UPDATED=20150214
+         UPDATED=20150304
            SHORT="kde gamma"
 
 cat << EOF

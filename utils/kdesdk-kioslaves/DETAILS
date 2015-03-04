@@ -1,12 +1,12 @@
           MODULE=kdesdk-kioslaves
-         VERSION=14.12.2
+         VERSION=14.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
-      SOURCE_VFY=sha1:208b4a68117bd691526cb3d1c283d203344c5196
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:c96650fa0e2eeaa11c54c49d091e59f123563610
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/kdesdk/kdesdk-kioslaves
          ENTERED=20130814
-         UPDATED=20150214
+         UPDATED=20150304
            SHORT="KIO-Slaves"
 
 cat << EOF

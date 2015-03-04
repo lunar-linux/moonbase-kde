@@ -1,12 +1,12 @@
           MODULE=kdenetwork-strigi-analyzers
-         VERSION=14.12.2
+         VERSION=14.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
-      SOURCE_VFY=sha1:1387df0e36cfb4faadc8ac89920f5e9e9f81c291
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:f7a76ccb5fbaea2ffb0d8af24d1c32323617b834
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/kdenetwork/kdenetwork-strigi-analyzers
          ENTERED=20130814
-         UPDATED=20150214
+         UPDATED=20150304
            SHORT="Analyzer plugins for Strigi"
 
 cat << EOF
