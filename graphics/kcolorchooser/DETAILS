@@ -1,12 +1,12 @@
           MODULE=kcolorchooser
-         VERSION=14.12.2
+         VERSION=14.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
-      SOURCE_VFY=sha1:fcd63a02b3be8f6488198aa65c5b1a76511d6174
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:eb38ccf7262a74afd74ebf126681d5a6eb9ea805
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/graphics/kcolorchooser/
          ENTERED=20110813
-         UPDATED=20150214
+         UPDATED=20150304
            SHORT="select the color from the screen or from a pallete"
 
 cat << EOF

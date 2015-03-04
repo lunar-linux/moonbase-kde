@@ -1,13 +1,12 @@
           MODULE=digikam
-         VERSION=4.7.0-1
+         VERSION=4.8.0
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=$KDE_URL/stable/$MODULE
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-4.7.0
-      SOURCE_VFY=sha1:66faf7f08929b6c4c06ea665d195856aa43a3ee5
+      SOURCE_VFY=sha256:e20f84508f35fddcaec3b931efbc604a95050ec08c6796b6bc60a61cd58fa390
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.digikam.org
          ENTERED=20090318
-         UPDATED=20150203
+         UPDATED=20150227
            SHORT="kde4 version of digikam"
 cat << EOF
 Digikam is a simple digital photo management application, which makes importing
