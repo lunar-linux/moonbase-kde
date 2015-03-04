@@ -1,12 +1,12 @@
           MODULE=konsole
-         VERSION=14.12.2
+         VERSION=14.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
-      SOURCE_VFY=sha1:c77ccd42f18aab672061e3e75b72458a6be5a280
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:5a483a7570966f664f0ee3b2dbc7ae40441ba1dc
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20110813
-         UPDATED=20150214
+         UPDATED=20150304
            SHORT="terminal program for KDE"
 
 cat << EOF
