@@ -1,12 +1,12 @@
           MODULE=kanagram
-         VERSION=14.12.2
+         VERSION=14.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
-      SOURCE_VFY=sha1:b37523bd76cd0dbe4ee7669e6ad02e5ccdaf718f
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:076a9ebaea4b22bee57a2adf4697567f66fabd48
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20110813
-         UPDATED=20150214
+         UPDATED=20150304
            SHORT="kanagram"
 
 cat << EOF

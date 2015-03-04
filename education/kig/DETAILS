@@ -1,12 +1,12 @@
           MODULE=kig
-         VERSION=14.12.2
+         VERSION=14.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
       SOURCE_VFY=sha1:d0ae7fd3c0153b3d3bcf7ab142994f51b314b72f
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://edu.kde.org/kig
          ENTERED=20110813
-         UPDATED=20150214
+         UPDATED=20150304
            SHORT="KDE Interactive Geometry"
 
 cat << EOF
