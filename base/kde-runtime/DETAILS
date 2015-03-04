@@ -1,12 +1,12 @@
           MODULE=kde-runtime
-         VERSION=14.12.2
+         VERSION=14.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src/
-      SOURCE_VFY=sha1:96811840cb04a879109739f3df4f8075fb876ea7
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src/
+      SOURCE_VFY=sha1:f597893c4801106d790b3beb17b213a91ee89b9a
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20071026
-         UPDATED=20150214
+         UPDATED=20150304
            SHORT="Components KDE expects to be available at runtime"
 
 cat << EOF

@@ -1,12 +1,12 @@
           MODULE=kde-base-artwork
-         VERSION=14.12.2
+         VERSION=14.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
-      SOURCE_VFY=sha1:c7a80b530754e1601acf60cf04ca19001b5b6548
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:e5708ee34fe99ee4ea6d920f80522f5327c00864
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/
          ENTERED=20120306
-         UPDATED=20150214
+         UPDATED=20150304
            SHORT="splash themes"
 
 cat << EOF
