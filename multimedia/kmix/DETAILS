@@ -1,12 +1,12 @@
           MODULE=kmix
-         VERSION=14.12.2
+         VERSION=14.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
-      SOURCE_VFY=sha1:4eaf482dafe9a4603e29eb1f770e4696dd457ddc
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:f5c4fa3c573c9171603580f3b4e666567519f57e
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/multimedia/kmix/
          ENTERED=20120801
-         UPDATED=20150214
+         UPDATED=20150304
            SHORT="sound mixer"
 
 cat << EOF
