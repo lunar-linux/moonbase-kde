@@ -1,12 +1,12 @@
           MODULE=klettres
-         VERSION=14.12.2
+         VERSION=14.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
-      SOURCE_VFY=sha1:8de244e0c2834b7ffc2017a16d2a78e510f1da95
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:5209bb4d6ed414e841e8ab98a2986eac437f3ed0
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://edu.kde.org/klettres
          ENTERED=20110813
-         UPDATED=20150214
+         UPDATED=20150304
            SHORT="klettres"
 
 cat << EOF
