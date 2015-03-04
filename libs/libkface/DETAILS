@@ -1,11 +1,11 @@
           MODULE=libkface
-         VERSION=14.12.2
+         VERSION=14.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.2/src
-      SOURCE_VFY=sha1:84615f07d000a3ccdf57ec63012596ca1967a63d
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha1:52e69d2dd947b0ce8e25d1ff503773d2009337ae
         WEB_SITE=http://www.kde.org
          ENTERED=20150208
-         UPDATED=20150208
+         UPDATED=20150304
            SHORT="Qt/C++ library to perform face detection and recognition over pictures"
 
 cat << EOF
