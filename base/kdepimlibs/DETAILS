@@ -1,7 +1,7 @@
           MODULE=kdepimlibs
          VERSION=4.14.6
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/14.12.3/src
+      SOURCE_URL=$KDE_URL/stable/applications/$(module_version kde4)/src
       SOURCE_VFY=sha256:70ed1a31e36eac03d4ec2b247852c3b708552517f54fa98e88390badc4ebd60d
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
