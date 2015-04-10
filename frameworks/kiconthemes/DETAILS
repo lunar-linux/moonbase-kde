@@ -1,12 +1,12 @@
           MODULE=kiconthemes
-         VERSION=5.7.0
+         VERSION=5.9.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha1:7b37327314cfbbb3a9b7d03c2d4d8eb14f629dfe
+      SOURCE_VFY=sha256:f51767156ca6264673af6728487d3334173b716a249ef6fbd42165ad8cd5eedb
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kiconthemes
          ENTERED=20150205
-         UPDATED=20150216
+         UPDATED=20150410
            SHORT="icon gui utilities"
 
 cat << EOF
