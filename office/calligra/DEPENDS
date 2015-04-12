@@ -35,6 +35,8 @@ optional_depends "zlib"         "-DWITH_ZLIB=1"       "-DWITH_ZLIB=0"       "for
 optional_depends "xbase"        "-DWITH_XBase=1"      "-DWITH_XBase=0"      "Required by Kexi XBase Migration driver"
 optional_depends "Vc"           "-DWITH_Vc=1"         "-DWITH_Vc=0"         "for SIMD support"
 optional_depends "soprano"      "-DWITH_Soprano=1"    "-DWITH_Soprano=0"    "for RDF data support"
+optional_depends "libgit2"      "-DWITH_Libgit2=1"    "-DWITH_Libgit2=0"    "for git support"
+optional_depends "libvisio"     "-DWITH_LibVisio=1"   "-DWITH_LibVisio=0"   "for visio document support"
 
 optional_depends "imageworks-OpenColorIO" "-DWITH_OCIO=1" "-DWITH_OCIO=0" "for OpenColorIO library support"
 optional_depends "shared-mime-info" "-DWITH_SharedMimeInfo=1" "-DWITH_SharedMimeInfo=0" "for mime support"
