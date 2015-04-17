@@ -1,12 +1,12 @@
           MODULE=kdeartwork
-         VERSION=14.12.3
+         VERSION=15.04.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha1:d1fcd5dde63aa09a9134f71c4e46a1ffc7e11efa
+      SOURCE_VFY=sha256:44602c83d1c2a57029119b5a8e3c519f52a664bf32703b4b545b3e3380649a4f
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20071026
-         UPDATED=20150304
+         UPDATED=20150416
            SHORT="kde artwork that used to be in kdelibs"
 
 cat << EOF

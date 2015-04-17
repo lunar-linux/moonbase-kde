@@ -1,12 +1,12 @@
           MODULE=libkipi
-         VERSION=14.12.3
+         VERSION=15.04.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha1:b6128b58dfeb6ec58a921069667e09cce35687ab
+      SOURCE_VFY=sha256:4d9da23c19451e8dba1165c57aa870f4f06fb232b39aee7abf034d701cf22031
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/kdegraphics/libs/libkipi
          ENTERED=20110813
-         UPDATED=20150304
+         UPDATED=20150416
            SHORT="KIPI Library (KDE Image Program Interface)"
 
 cat << EOF
