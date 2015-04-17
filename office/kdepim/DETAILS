@@ -1,12 +1,12 @@
           MODULE=kdepim
-         VERSION=4.14.6
+         VERSION=4.14.7
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$(module_version kde4)/src
-      SOURCE_VFY=sha256:9bea1d793733e8470bbd13faa0842c647630a3163e9cf527ef393210646735b0
+      SOURCE_VFY=sha256:407a9e8f4c0927ec62cc59008fb6687eca25d4f7ea3e058df50c83cdb2bcd542
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20071026
-         UPDATED=20150303
+         UPDATED=20150416
            SHORT="libraries central to KDE PIM application"
 
 cat << EOF
