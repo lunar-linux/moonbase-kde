@@ -1,12 +1,12 @@
           MODULE=jovie
-         VERSION=14.12.3
+         VERSION=15.04.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha1:36f8daa5ab23c07045ed294efcc77a2674dd77f8
+      SOURCE_VFY=sha256:9bf4ffeb1ce9e1b164461869e13c5945582f9eed39c5b351b222dc9fec5346e9
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://techbase.kde.org/Development/Tutorials/Text-To-Speech
          ENTERED=20120125
-         UPDATED=20150304
+         UPDATED=20150416
            SHORT="conversion of text to audible speech"
 
 cat << EOF

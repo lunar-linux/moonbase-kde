@@ -1,12 +1,12 @@
           MODULE=print-manager
-         VERSION=14.12.3
+         VERSION=15.04.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha1:357be57853364b59416152745a940cb7b5ee6727
+      SOURCE_VFY=sha256:2fff167be215ff9e5b062ed5b15ec5743f63b2fad9b0406cebadec7e376cc87a
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://utils.kde.org/projects/ark/
          ENTERED=20130206
-         UPDATED=20150304
+         UPDATED=20150416
            SHORT="a replacement for the kde printer management"
 
 cat << EOF

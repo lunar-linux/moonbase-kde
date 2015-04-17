@@ -1,12 +1,12 @@
           MODULE=kaccessible
-         VERSION=14.12.3
+         VERSION=15.04.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha1:cabde9c4c733301805158db45d8e3da1a1b076b4
+      SOURCE_VFY=sha256:e86f464d166170a3527378b5edfaf1078a162d696349d5992e71efeecf5420e1
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20120125
-         UPDATED=20150304
+         UPDATED=20150416
            SHORT="provide accessibility services like focus tracking and a screenreader"
 
 cat << EOF
