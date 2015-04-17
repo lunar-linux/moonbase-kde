@@ -1,12 +1,12 @@
           MODULE=kigo
-         VERSION=14.12.3
+         VERSION=15.04.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha1:5b98916184befad5a0e253682d54fa0b6a6c2fda
+      SOURCE_VFY=sha256:792a83325e040ff714d86336720904eb6dc4615e5db7f90d16aed43a74deef01
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/games/kigo/
          ENTERED=20140720
-         UPDATED=20150304
+         UPDATED=20150416
            SHORT="kde implementation of the Go game"
 
 cat << EOF

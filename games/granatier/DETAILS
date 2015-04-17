@@ -1,12 +1,12 @@
           MODULE=granatier
-         VERSION=14.12.3
+         VERSION=15.04.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha1:441d82d25ec1aa61aaf23e15dd682f209c1bfe80
+      SOURCE_VFY=sha256:2c0515b03954e6fe12e76cd8f44fdf1e11654aff5399aa07198d51f9319fb2e8
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/games/granatier
          ENTERED=20130814
-         UPDATED=20150304
+         UPDATED=20150416
            SHORT="clone of the classic Bomberman game"
 
 cat << EOF

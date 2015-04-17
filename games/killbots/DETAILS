@@ -1,12 +1,12 @@
           MODULE=killbots
-         VERSION=14.12.3
+         VERSION=15.04.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha1:cfdb889a2246f51fd3233c5f6893df733034cc43
+      SOURCE_VFY=sha256:a4635b3e031df0f5ba8253bc2196c646cbbdf1ec4fe16df23c7b705822b23229
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/games/killbots/
          ENTERED=20140720
-         UPDATED=20150304
+         UPDATED=20150416
            SHORT="simple game of evading killer robots"
 
 cat << EOF

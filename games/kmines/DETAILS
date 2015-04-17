@@ -1,12 +1,12 @@
           MODULE=kmines
-         VERSION=14.12.3
+         VERSION=15.04.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha1:374494ed2b4a9cedaf6af367ae5beb61d124ccc4
+      SOURCE_VFY=sha256:e3f4fa75a0ef14dae2de6de42d116b43d36a913f6ad2fffc9acdf7116becbd04
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/games/kmines/
          ENTERED=20150214
-         UPDATED=20150304
+         UPDATED=20150416
            SHORT="mining game"
 
 cat << EOF
