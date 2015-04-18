@@ -8,10 +8,10 @@ optional_depends bzip2         "-DWITH_BZip2=1"       "-DWITH_BZip2=0"       "fo
 optional_depends qca2          "-DWITH_QCA2=1"        "-DWITH_QCA2=0"        "for crypto API support"
 optional_depends openexr       "-DWITH_OpenEXR=1"     "-DWITH_OpenEXR=0"     "for high dynamic range image support"
 optional_depends exiv2         "-DWITH_Exiv2=1"       "-DWITH_Exiv2=0"       "for image metadata support"
-optional_depends ntrack        "-DWITH_QNtrack=1"     "-DWITH_QNtrack=0"     "for data input for Solid network status"
+optional_depends ntrack        "-DWITH_QNtrack=1"     "-DWITH_QNtrack=0"     "for data input for Solid network status" n
 optional_depends lzma-sdk      "-DWITH_LibLZMA=1"     "-DWITH_LibLZMA=0"     "for lzma compression support"
 optional_depends samba         "-DWITH_Samba=1"       "-DWITH_Samba=0"       "For file sharing support"
 optional_depends openslp       "-DWITH_SLP=1"         "-DWITH_SLP=0"         "For service location protocol support"
 optional_depends pulseaudio    "-DWITH_PulseAudio=1"  "-DWITH_PulseAudio=0"  "For Pulseaudio soundserver support"
 optional_depends libssh        "-DWITH_LibSSH=1"      "-DWITH_LibSSH=0"      "For SFTP kioslave support"
-optional_depends nepomuk-widgets "-DWITH_NepomukCore=1 -DKDERUNTIME_BUILD_NEPOMUK=1" "-DWITH_NepomukCore=0" "for file indexing, system monitoring and nepomuk kio slave support"
+optional_depends nepomuk-widgets "-DWITH_NepomukCore=1 -DKDERUNTIME_BUILD_NEPOMUK=1" "-DWITH_NepomukCore=0 -DKDERUNTIME_BUILD_NEPOMUK=0" "For file indexing, system monitoring and kio slave support,${PROBLEM_COLOR} this will be replaced with Baloo and defaults to no.${DEFAULT_COLOR}" n
