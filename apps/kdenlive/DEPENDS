@@ -2,8 +2,6 @@ depends qt5
 depends kde-baseapps
 depends mlt
 
-optional_depends nepomuk-core    "-DWITH_Nepomuk=ON" "-DWITH_Nepomuk=OFF" "for semantic desktop support"
-optional_depends qjson           "-DWITH_QJSON=ON"   "-DWITH_QJSON=OFF"    "for Qt4 JavaScript Object Notation support"
 optional_depends dvgrab          "" "" "for firewire capture support"
 optional_depends recordmydesktop "" "" "for capturing desktop video support"
 optional_depends dvdauthor       "" "" "for dvd authoring support"
