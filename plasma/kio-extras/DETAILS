@@ -1,0 +1,14 @@
+          MODULE=kio-extras
+         VERSION=5.2.2
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/plasma/5.2.2/
+      SOURCE_VFY=sha256:4b5127239283da14a83fd21896f99767cec7f8f7818aa19ff960c57fec7fd7a3
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/kde/kio-extras
+         ENTERED=20150526
+         UPDATED=20150426
+           SHORT="adds additional functions to the kio slaves"
+
+cat << EOF
+Adds additional functions to the kio slaves.
+EOF
