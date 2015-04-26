@@ -12,7 +12,7 @@ depends kactivities-frameworks
 
 optional_depends "boost"         "-DWITH_Boost=1"       "-DWITH_Boost=0"       "to build plasma dataengines: akonadi,rss,calendar"
 optional_depends "akonadi"       "-DWITH_Akonadi=1"     "-DWITH_Akonadi=0"     "to build plasma dataengines: akonadi,calendar"
-optional_depends "nepomuk-core"  "-DWITH_NepomukCore=1" "-DWITH_NepomukCore=0" "for nepomuk indexing support"
+optional_depends "nepomuk-core"  "-DWITH_NepomukCore=1" "-DWITH_NepomukCore=0" "for nepomuk indexing support,${PROBLEM_COLOR} will be replaced with baloo, defaults to no${DEFAULT_COLOR}" n
 optional_depends "kdepimlibs"    "-DWITH_KdepimLibs=1"  "-DWITH_KdepimLibs=0"  "for nepomuck support"
 optional_depends "prison"        "-DWITH_Prison=1"      "-DWITH_Prison=0"      "for barcode support"
 optional_depends "pciutils"      "-DWITH_PCIUTILS=1"    "-DWITH_PCIUTILS=1"    "for pciutils support"
