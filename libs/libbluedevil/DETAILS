@@ -1,12 +1,12 @@
           MODULE=libbluedevil
-         VERSION=2.1
+         VERSION=5.2.2
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$MODULE/$VERSION/src/
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-${VERSION}
-      SOURCE_VFY=sha1:3c0f10b01246461924134139b5af80641f5f88da
+      SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
+#SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-${VERSION}
+      SOURCE_VFY=sha256:5f3fdcdb8b124b41b689e82b8094e418ccd893e8e211e1b4935d02a24c440fd4
         WEB_SITE=https://userbase.kde.org/Bluedevil
          ENTERED=20100728
-         UPDATED=20141227
+         UPDATED=20150426
            SHORT="library for the kde bluetooth stack"
 
 cat << EOF
