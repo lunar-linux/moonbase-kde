@@ -14,4 +14,3 @@ optional_depends samba         "-DWITH_Samba=1"       "-DWITH_Samba=0"       "Fo
 optional_depends openslp       "-DWITH_SLP=1"         "-DWITH_SLP=0"         "For service location protocol support"
 optional_depends pulseaudio    "-DWITH_PulseAudio=1"  "-DWITH_PulseAudio=0"  "For Pulseaudio soundserver support"
 optional_depends libssh        "-DWITH_LibSSH=1"      "-DWITH_LibSSH=0"      "For SFTP kioslave support"
-optional_depends nepomuk-widgets "-DWITH_NepomukCore=1 -DKDERUNTIME_BUILD_NEPOMUK=1" "-DWITH_NepomukCore=0 -DKDERUNTIME_BUILD_NEPOMUK=0" "For file indexing, system monitoring and kio slave support,${PROBLEM_COLOR} this will be replaced with Baloo and defaults to no.${DEFAULT_COLOR}" n
