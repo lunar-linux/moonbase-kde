@@ -1,12 +1,12 @@
           MODULE=kdeplasma-addons
-         VERSION=4.14.3
+         VERSION=5.3.0
           SOURCE=kdeplasma-addons-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$VERSION/src
-      SOURCE_VFY=sha1:f71c6add1d62eaaa57a2f859679f522655ae0f73
+      SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
+      SOURCE_VFY=sha256:9472cf37d0f85fd1446e8f4e73fc7d221330c03241585cc549d28c52b1460682
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20080716
-         UPDATED=20141111
+         UPDATED=20150504
            SHORT="mandatory package for KDE"
 
 cat << EOF
