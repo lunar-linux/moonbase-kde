@@ -4,6 +4,6 @@
     sedit "s:/usr/include/openjpeg:/usr/include/openjpeg-`lvu version openjpeg | cut -c 1-3`:" cmake/modules/FindOpenJPEG.cmake
   fi &&
 
-  OPTS+=" -Wno-dev -DWITH_Iconv=ON" &&
+  OPTS+=" -DWITH_Iconv=ON" &&
 
   default_cmake_build
