@@ -1,0 +1,14 @@
+          MODULE=oxygen
+         VERSION=5.3.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
+      SOURCE_VFY=sha256:e3d8d37e4178b00324a99a04b0a40b6c4544f913d2887727cda6047599fda528
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/kde/workspace/oxygen
+         ENTERED=20150504
+         UPDATED=20150504
+           SHORT="oxygen theme"
+
+cat << EOF
+The Oxygen theme.
+EOF
