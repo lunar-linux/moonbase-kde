@@ -1,12 +1,12 @@
           MODULE=knewstuff
-         VERSION=5.9.0
+         VERSION=5.10.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:0047b402b41d698518ba08ec7e05afacc6c2fbfe8f3e26de43bc347e907c38b9
+      SOURCE_VFY=sha256:8796a9336ded3e1b729e034ae4fdd2a11391bc01f2259206dfcaef33f38144fc
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/knewstuff
          ENTERED=20150205
-         UPDATED=20150410
+         UPDATED=20150509
            SHORT="downloading and sharing additional application data"
 
 cat << EOF

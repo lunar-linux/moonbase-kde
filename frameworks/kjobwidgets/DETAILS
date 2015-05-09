@@ -1,12 +1,12 @@
           MODULE=kjobwidgets
-         VERSION=5.9.0
+         VERSION=5.10.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:3675c039e63a7e8558b7ed3d67abd3ef10a578e7793a0e6a18b7007e22392b86
+      SOURCE_VFY=sha256:26346f330599fba90c2e76d50b9e0178d1dd87086733ffa4ee68122a2c07562c
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kjobwidgets
          ENTERED=20150205
-         UPDATED=20150410
+         UPDATED=20150509
            SHORT="shows progress of asynchronous jobs"
 
 cat << EOF
