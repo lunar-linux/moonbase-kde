@@ -1,12 +1,12 @@
           MODULE=kjs
-         VERSION=5.9.0
+         VERSION=5.10.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)/portingAids
-      SOURCE_VFY=sha256:74eb9b56291893c42d295cfec0141eba166c9ed40e777ee8bb1e1c272799daec
+      SOURCE_VFY=sha256:016f7a6a193293ef29ded12bce75f2749832101bfbb407239dbcec7a5eb27750
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kjs
          ENTERED=20150205
-         UPDATED=20150410
+         UPDATED=20150509
            SHORT="javascript engine"
 
 cat << EOF
