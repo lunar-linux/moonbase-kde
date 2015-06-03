@@ -1,12 +1,12 @@
           MODULE=kde-workspace
-         VERSION=4.11.19
+         VERSION=4.11.20
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$(module_version kde4)/src
-      SOURCE_VFY=sha256:1c1429db0a12d6ad076e0f1c6f1a00cac781aceb1aa8c88937fbf2700dc2c5c2
+      SOURCE_VFY=sha256:6c8c9b27037c2a102d2a519c733b381805268d7f9def85b50ecd8c580156c41a
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20071026
-         UPDATED=20150513
+         UPDATED=20150603
            SHORT="This package is what is the desktop"
 
 cat << EOF
