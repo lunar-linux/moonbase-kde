@@ -1,12 +1,12 @@
           MODULE=kbruch
-         VERSION=15.04.1
+         VERSION=15.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:521bf5beafe3a53685f91a4ada194fa9ce60d780a02f81cd9ce0f29a763de434
+      SOURCE_VFY=sha256:45a053c769dab300283764c3e3cd3eb1d7231f180fba62c7b4bfdce6e9e02e70
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://edu.kde.org/kbruch
          ENTERED=20110813
-         UPDATED=20150416
+         UPDATED=20150603
            SHORT="task generator for calculations with fractions"
 
 cat << EOF
