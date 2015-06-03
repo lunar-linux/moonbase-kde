@@ -1,12 +1,12 @@
           MODULE=ksnapshot
-         VERSION=15.04.1
+         VERSION=15.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:c6d25d90987857b5b68e0920079135d90f774f4d5eea1924c3429412373eb82e
+      SOURCE_VFY=sha256:a7c8a828dd543ee69202fc4812025136dd05cb51147d356b462617aed54decfe
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/graphics/ksnapshot/
          ENTERED=20110813
-         UPDATED=20150416
+         UPDATED=20150603
            SHORT="KDE snapshot tool"
 
 cat << EOF
