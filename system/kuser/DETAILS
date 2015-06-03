@@ -1,12 +1,12 @@
           MODULE=kuser
-         VERSION=15.04.1
+         VERSION=15.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:e654867d5e514ed4b4b8cb6292891c2790fd76e07a390f5dbb51c898bfc277bf
+      SOURCE_VFY=sha256:e43d7ef02aeb49a6caf696cf6c4e198d51d9a4153d1cad12064be26f4d30582c
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/system/kuser/
          ENTERED=20130814
-         UPDATED=20150416
+         UPDATED=20150603
            SHORT="kde user tools"
 
 cat << EOF
