@@ -1,12 +1,12 @@
           MODULE=kppp
-         VERSION=15.04.1
+         VERSION=15.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:f81002e168d6fe3ba8f8908b9c68e323630a1e8af684c2f5092e703fc0989534
+      SOURCE_VFY=sha256:c97280bb862d139341fe160272bc41b0d5261501efd4d6ab0fd7800d005a093d
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/internet/kppp/
          ENTERED=20130814
-         UPDATED=20150416
+         UPDATED=20150603
            SHORT="Internet Dial-Up Tool"
 
 cat << EOF
