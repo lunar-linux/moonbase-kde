@@ -1,12 +1,12 @@
           MODULE=mplayerthumbs
-         VERSION=15.04.1
+         VERSION=15.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src/
-      SOURCE_VFY=sha256:79a34b7afff9c024b67ca029baacab988ad283e952ff1fec3652b76b3e1bbc28
+      SOURCE_VFY=sha256:35d6e12d1ca244c9c17c090c69e5c69e711d33ede5b7b48db3f8e24bc279ea51
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE="http://kde-apps.org/content/show.php?content=41180"
          ENTERED=20120801
-         UPDATED=20150416
+         UPDATED=20150603
            SHORT="video thumbnail generator for KDE"
 
 cat << EOF
