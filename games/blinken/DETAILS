@@ -1,12 +1,12 @@
           MODULE=blinken
-         VERSION=15.04.1
+         VERSION=15.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:a6840982ce87ccc8f55a97a279a91d70005a18d498df128e029d12a697645b6d
+      SOURCE_VFY=sha256:2f237634c817f01e68a7afcf5c63800c9a75e3e4855044b5a5b9428b976e11cc
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://edu.kde.org/blinken/
          ENTERED=20110813
-         UPDATED=20150416
+         UPDATED=20150603
            SHORT="kde version of Simon Says"
 
 cat << EOF
