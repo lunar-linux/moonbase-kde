@@ -1,12 +1,12 @@
           MODULE=kwallet
-         VERSION=5.10.0
+         VERSION=5.11.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:245b411df91dea234941fc462399b67678e192b8ef20a5ace0cab50af5312b5b
+      SOURCE_VFY=sha256:bf2489db87ff98644498145cb1c85c40ab79287b96fb4532ddfaaa7d183c2678
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kwallet
          ENTERED=20150205
-         UPDATED=20150509
+         UPDATED=20150626
            SHORT="safe desktop-wide storage for passwords"
 
 cat << EOF

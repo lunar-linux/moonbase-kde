@@ -1,12 +1,12 @@
           MODULE=kxmlrpcclient
-         VERSION=5.10.0
+         VERSION=5.11.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:b133f209c71ed0d33f81ab19a790e84ee66199f3ccb64156ef2f75ce6fc75cb2
+      SOURCE_VFY=sha256:90b113e6638594912eb6b82092229b50c6c079ff18f4833a74ac4ecc4cd8d578
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kxmlrpcclient
          ENTERED=20150410
-         UPDATED=20150509
+         UPDATED=20150626
            SHORT="simple XML-RPC Client support"
 
 cat << EOF
