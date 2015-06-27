@@ -1,11 +1,12 @@
           MODULE=kst
-         VERSION=2.0.7
+         VERSION=2.0.8
           SOURCE=Kst-$VERSION.tar.gz
-      SOURCE_URL=$SFORGE_URL/$MODULE/
-      SOURCE_VFY=sha1:d7f2f50932c9d2cbf0ee9294853f13365f187cde
+      SOURCE_URL=$SFORGE_URL/$MODULE
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/Kst-$VERSION
+      SOURCE_VFY=sha256:cefbfd3e3710771985e08f02a397ef8ab407168fa8415d2c3c5740c031af18c6
         WEB_SITE=http://kst-plot.kde.org/
          ENTERED=20101223
-         UPDATED=20140715
+         UPDATED=20150627
            SHORT="real-time large-dataset viewing and plotting tool"
 
 cat << EOF
