@@ -1,13 +1,13 @@
           MODULE=baloo-frameworks
-         VERSION=5.9.1
+         VERSION=5.9.2
           SOURCE=${MODULE%-*}-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/plasma/5.3.1
+      SOURCE_URL=$KDE_URL/stable/plasma/5.3.2
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE%-*}-$VERSION
-      SOURCE_VFY=sha256:f6d03957c502d56590014c2c62f4874803d11ecc0ac605776b2b0647e8b0a973
+      SOURCE_VFY=sha256:1ca97763c136d3b7762cdc04f6e76fb9d314ba38db8ad48778647590626e19e6
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/kdelibs/baloo
          ENTERED=20150205
-         UPDATED=20150527
+         UPDATED=20150701
            SHORT="file search and indexing"
 
 cat << EOF

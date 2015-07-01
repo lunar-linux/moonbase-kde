@@ -1,12 +1,12 @@
           MODULE=bluez-qt
-         VERSION=5.3.1
+         VERSION=5.3.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:149c6776e89f33c25a05ccab171e82e5bef1ba576bb9026522af1b37ebf2258e
+      SOURCE_VFY=sha256:90e625d20c2e19419fe782ffd1d556cf1f280386e6c474073406baf551bc892d
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/bluez-qt
          ENTERED=20150505
-         UPDATED=20150527
+         UPDATED=20150701
            SHORT="Qt wrapper for Bluez 5 DBus API"
 
 cat << EOF
