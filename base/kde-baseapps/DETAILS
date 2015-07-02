@@ -1,12 +1,12 @@
           MODULE=kde-baseapps
-         VERSION=15.04.2
+         VERSION=15.04.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:1b4e59cab0e151c7bb2c5e2754996ee05d06cb7c328875a16348d5c4cc0f0f7b
+      SOURCE_VFY=sha256:aa20ffe5b098d12753ccaf08eb240340190daf00a0163dc952c0638292fcd3c6
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20071026
-         UPDATED=20150603
+         UPDATED=20150702
            SHORT="mandatory package for KDE"
 
 cat << EOF

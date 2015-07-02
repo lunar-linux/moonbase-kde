@@ -1,12 +1,12 @@
           MODULE=kdewebdev
-         VERSION=15.04.2
+         VERSION=15.04.3
           SOURCE=kdewebdev-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:04ba8b1f8265bd3398a374873305c506deb746843074e4e103e71b49a2ff0233
+      SOURCE_VFY=sha256:018f5c06e5a7cdc92c5d497efac4932c8b6e3ff5e9ebbd1197b78dccb5599d17
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20071026
-         UPDATED=20150603
+         UPDATED=20150702
            SHORT="applications for web development"
 
 cat << EOF

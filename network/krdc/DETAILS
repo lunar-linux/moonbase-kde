@@ -1,12 +1,12 @@
           MODULE=krdc
-         VERSION=15.04.2
+         VERSION=15.04.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:cfa39b1f3ff5c15454a00fce96af6e5d454fbe5485efcf7544f5c3f833aff254
+      SOURCE_VFY=sha256:fb131e6df8278d412105655577ed44e9743977ae67bde1870e9715626f03987a
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/internet/krdc/
          ENTERED=20140720
-         UPDATED=20150603
+         UPDATED=20150702
            SHORT="view or control the desktop session on another machine"
 
 cat << EOF
