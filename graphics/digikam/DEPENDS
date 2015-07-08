@@ -33,4 +33,4 @@ optional_depends glib-2       "-DWITH_GLIB2=1 -DWITH_GObject=1"      \
 optional_depends libpgf       "-DPGF_INCLUDE_DIRS=/usr/include/libpgf" \
                               "" "for Progressive Graphics File, n=use internal"
 
-optional_depends %MYSQL       "-DENABLE_INTERNALMYSQL==1" "-DENABLE_INTERNALMYSQL=0"  "for %MYSQL database support, ${PROBLEM_COLOR}say NO to use digikam provided server${DEFAULT_COLOR}"
+optional_depends %MYSQL       "-DENABLE_INTERNALMYSQL=1" "-DENABLE_INTERNALMYSQL=0"  "for %MYSQL database support, ${PROBLEM_COLOR}say NO to use digikam provided server${DEFAULT_COLOR}"
