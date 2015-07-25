@@ -1,4 +1,4 @@
+. /etc/profile.d/qt4.rc   &&
+OPTS+=" --with-qt=$QTDIR" &&
 
-  . /etc/profile.d/qt4.rc   &&
-  OPTS+=" --with-qt=$QTDIR" &&
-  default_build
+default_build
