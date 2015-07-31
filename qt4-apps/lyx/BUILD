@@ -1,12 +1,11 @@
+. /etc/profile.d/qt4.rc &&
 
-  . /etc/profile.d/qt4.rc &&
+OPTS+=" --enable-build-type=release" &&
 
-  OPTS+=" --enable-build-type=release" &&
+default_build &&
 
-  default_build &&
-
-  # Desktop menu entry
-  cat > ${MODULE}.desktop << EOF  &&
+# Desktop menu entry
+cat > ${MODULE}.desktop << EOF  &&
 [Desktop Entry]
 Type=Application
 Name=LyX
@@ -16,4 +15,4 @@ Icon=$QTDIR/share/lyx/images/lyx.png
 Categories=Qt;KDE;Graphics;Office;
 EOF
 
-  install -D -m644 ${MODULE}.desktop /usr/share/applications/${MODULE}.desktop
+install -D -m644 ${MODULE}.desktop /usr/share/applications/${MODULE}.desktop
