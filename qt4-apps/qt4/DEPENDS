@@ -1,4 +1,5 @@
 depends  %X
+
 optional_depends  "dbus"       "-dbus"             "-no-dbus"       "for QtDBus module support"
 optional_depends  "%JPEG"      "-system-libjpeg"   "-qt-libjpeg"    "Use system or qt provided jpeg"
 optional_depends  "openssl"    "-openssl"          "-no-openssl"    "for Secure Sockets support"
@@ -16,28 +17,28 @@ optional_depends  "gst-plugins-base"  "-audio-backend -multimedia"  ""  "for gst
 
 optional_depends  "%JAVA_SDK"  "-javascript-jit"   "-no-javascript-jit" "for JIT support"
 
-optional_depends  "%MYSQL"                                                   \
-                  "-plugin-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"  \
-                  "-no-sql-mysql"                                            \
+optional_depends  "%MYSQL"                                                  \
+                  "-plugin-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql" \
+                  "-no-sql-mysql"                                           \
                   "for mysql database support"
 
-optional_depends  "sqlite"                                                   \
-                  "-plugin-sql-sqlite -I/usr/include -L/usr/lib"             \
-                  "-no-sql-sqlite"                                           \
+optional_depends  "sqlite"                                       \
+                  "-plugin-sql-sqlite -I/usr/include -L/usr/lib" \
+                  "-no-sql-sqlite"                               \
                   "for sqlite database support"
 
-optional_depends  "postgresql"                                               \
-                  "-plugin-sql-psql -I/usr/include/postgresql/server         \
-                  -L/usr/lib/postgresql"                                     \
-                  "-no-sql-psql"                                             \
+optional_depends  "postgresql"                                       \
+                  "-plugin-sql-psql -I/usr/include/postgresql/server \
+                  -L/usr/lib/postgresql"                             \
+                  "-no-sql-psql"                                     \
                   "for postgresql database support"
 
-optional_depends  "unixODBC"                                                 \
-                  "-plugin-sql-odbc"                                         \
-                  "-no-sql-odbc"                                             \
+optional_depends  "unixODBC"         \
+                  "-plugin-sql-odbc" \
+                  "-no-sql-odbc"     \
                   "for unixODBC support"
 
-optional_depends  "freetds"                                                  \
-                  "-plugin-sql-tds"                                          \
-                  "-no-sql-tds"                                              \
-                  "for tabular data stream support"                          \
+optional_depends  "freetds"         \
+                  "-plugin-sql-tds" \
+                  "-no-sql-tds"     \
+                  "for tabular data stream support"
