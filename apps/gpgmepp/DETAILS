@@ -1,0 +1,14 @@
+          MODULE=gpgmepp
+         VERSION=15.08.2
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:0988d263684dd861b00ef41d8f009dd02f6a1a3684261c6b17d2cb8f27dd23b5
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/gpgmepp
+         ENTERED=201151028
+         UPDATED=20151028
+           SHORT="C++ bindings/wrapper for gpgme"
+
+cat << EOF
+C++ bindings/wrapper for gpgme.
+EOF
