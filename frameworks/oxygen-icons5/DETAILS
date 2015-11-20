@@ -1,0 +1,14 @@
+          MODULE=oxygen-icons5
+         VERSION=5.16.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
+      SOURCE_VFY=sha256:874a227f4306e6338bc324cd2f95a4a1f084b70f72cb64399981e439ae0cb95a
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.oxygen-icons.org
+         ENTERED=20151120
+         UPDATED=20151120
+           SHORT="oxygen icon theme"
+
+cat << EOF
+The Oxygen Icon Theme.
+EOF

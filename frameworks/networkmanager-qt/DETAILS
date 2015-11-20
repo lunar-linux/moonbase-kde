@@ -1,12 +1,12 @@
           MODULE=networkmanager-qt
-         VERSION=5.12.0
+         VERSION=5.16.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:2401bf3730195701f7abf2df0813a4a2ea0a8af081858a08beed10ee6db8dc7e
+      SOURCE_VFY=sha256:5bba3687514a57e28edb0842dd139ee909d11c78cdacc818a3cd04b74210b984
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/knetworkmanager
          ENTERED=20150205
-         UPDATED=20150713
+         UPDATED=20151120
            SHORT="Qt wrapper for NetworkManager DBus API"
 
 cat << EOF

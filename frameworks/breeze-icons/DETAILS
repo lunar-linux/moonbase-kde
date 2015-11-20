@@ -1,0 +1,14 @@
+          MODULE=breeze-icons
+         VERSION=5.16.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
+      SOURCE_VFY=sha256:34fa10f374dc435d484102af124cadf687ff0f762b58a8273ad7dc6423b6bcee
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.oxygen-icons.org
+         ENTERED=20151120
+         UPDATED=20151120
+           SHORT="breeze icon theme"
+
+cat << EOF
+The Breeze Icon Theme.
+EOF

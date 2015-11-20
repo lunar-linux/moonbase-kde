@@ -1,12 +1,12 @@
           MODULE=kauth
-         VERSION=5.12.0
+         VERSION=5.16.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:5ed420bb2be94239953698a1704b8e8c83a231d9c3baf6fd491770f24d70c3cf
+      SOURCE_VFY=sha256:c36ab0caddf1c3120546cff825098513585d461a27f94da78547b2792a61e2a4
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kauth
          ENTERED=20150205
-         UPDATED=20150713
+         UPDATED=20151120
            SHORT="offload actions that need to be performed as a privileged user"
 
 cat << EOF
