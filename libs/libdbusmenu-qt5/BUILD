@@ -1,8 +1,8 @@
 
-    . /etc/profile.d/qt5.rc &&
+ . /etc/profile.d/qt5.rc &&
 
-    export LDFLAGS="-L/usr/lib/qt5" &&
+ export LDFLAGS="-L/usr/lib/qt5" &&
 
-    OPTS+=" -DUSE_QT5=1" &&
+ OPTS+=" -DUSE_QT5=1" &&
 
-    default_cmake_build
+ default_cmake_build
