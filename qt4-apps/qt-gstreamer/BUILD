@@ -1,6 +1,9 @@
 
   . /etc/profile.d/qt4.rc &&
 
+  patch_it $SOURCE2 1 &&
+  patch_it $SOURCE3 1 &&
+
   OPTS+=" -DQTGSTREAMER_EXAMPLES=0" &&
 
   default_cmake_build &&
