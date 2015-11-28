@@ -7,6 +7,8 @@ depends libxslt
 depends solid
 depends extra-cmake-modules
 depends kdoctools
+depends kservice
+depends kbookmarks
 
-optional_depends "heimdal" "" "" "For use of certain HTTP authentication services" y
-optional_depends "acl"     "" "" "For manipulating access control lists" y
+optional_depends "heimdal" "" "" "For use of certain HTTP authentication services"
+optional_depends "acl"     "" "" "For manipulating access control lists"

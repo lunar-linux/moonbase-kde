@@ -1,0 +1,19 @@
+          MODULE=baloo
+         VERSION=5.16.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:12d5671378ec8d6d6c34496adff6f8b4d1d814771d6af594d4074d35084e1469
+        WEB_SITE=https://community.kde.org/Baloo
+         ENTERED=20140713
+         UPDATED=20151122
+           SHORT="framework for searching and managing metadata"
+
+cat << EOF
+A framework for searching and managing metadata.
+
+Note: As things evolve baloo will replace nepomuk-core and nepomuk-widgets. That work
+is in progess by the KDE folks and does at this time take over much of the nepomuk 
+functions in 4.13.3 of kdepim (hard depends).
+
+For details see: https://community.kde.org/Baloo
+EOF
