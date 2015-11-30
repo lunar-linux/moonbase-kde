@@ -1,0 +1,14 @@
+          MODULE=picmi
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:1eedfad4de0284ed2b85641e56e32313981a86446875b30dbb7c33d572375232
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20151124
+         UPDATED=20151124
+           SHORT="nonogram logic game for KDE"
+
+cat << EOF
+A nonogram logic game for KDE.
+EOF

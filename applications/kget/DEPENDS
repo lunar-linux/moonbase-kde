@@ -1,0 +1,7 @@
+depends kde-runtime
+depends kactivities
+depends tidy
+depends kdepimlibs4
+depends libktorrent
+
+optional_depends "libmms" "-DWITH_LibMms=1" "-DWITH_LibMms=0" "For reading mms streams"

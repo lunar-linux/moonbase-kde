@@ -1,0 +1,14 @@
+          MODULE=kdegraphics-mobipocket
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:1752d54726ed517a679e9d567b3cc712e48844cee6d3d43ef2416483ea29315c
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20120125
+         UPDATED=20151124
+           SHORT="plugins to handle mobipocket files"
+
+cat << EOF
+A collection of plugins to handle mobipocket files.
+EOF

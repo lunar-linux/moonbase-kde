@@ -1,0 +1,17 @@
+          MODULE=kmouth
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:24b675925b308d91fa2bd8c22b210371deb6ff07e0c4af8e80f405e89b431ed4
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/utilities/kmouth/
+         ENTERED=20120125
+         UPDATED=20151124
+           SHORT="enable your computer to speak"
+
+cat << EOF
+KMouth is a program which enables persons that cannot speak to let their computer 
+speak, e.g. mutal people or people who have lost their voice. It has a text input 
+field and speaks the sentences that you enter. It also has support for user 
+defined phrasebooks.
+EOF

@@ -1,0 +1,22 @@
+          MODULE=ksnapshot
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:83bd32bb65d40a9cc260f6156e972d82560fa8e4ff1080f92ce9a3dcc671cbf6
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/graphics/ksnapshot/
+         ENTERED=20110813
+         UPDATED=20151124
+           SHORT="KDE snapshot tool"
+
+cat << EOF
+KSnapshot is a KDE snapshot tool with many features.
+Features
+
+    Save in multiple formats
+    Take new shapshot
+    Open with... possibility to open snapshot in external editor.
+    Copy to clipboard
+    Several capture modes, including selected region or single window
+    Snapshot delay
+EOF

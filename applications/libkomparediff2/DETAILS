@@ -1,0 +1,13 @@
+          MODULE=libkomparediff2
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:3477b187541425ec8dac57a2d68f80d2ee88031817a1b0a7617d38a389f94a0d
+        WEB_SITE=https://projects.kde.org/projects/kde/kdesdk/libkomparediff2
+         ENTERED=20140713
+         UPDATED=20151124
+           SHORT="compare files and strings"
+
+cat << EOF
+Library to compare files and strings, used in Kompare and KDevelop.
+EOF

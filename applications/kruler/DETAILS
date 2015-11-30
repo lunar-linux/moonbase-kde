@@ -1,0 +1,20 @@
+          MODULE=kruler
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:0b3a63615f520c98120b7114b8005dc2275d86b10df30cf0eb479973ecbf21d7
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/graphics/kruler/
+         ENTERED=20110813
+         UPDATED=20151124
+           SHORT="on screen ruler"
+
+cat << EOF
+KRuler displays on screen a ruler measuring pixels.
+Features
+
+    Integrated color picker
+    Change the length of the ruler
+    Change the orientation of the ruler
+    Change the color, transparency and font of the ruler
+EOF

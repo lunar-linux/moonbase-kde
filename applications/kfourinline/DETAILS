@@ -1,0 +1,15 @@
+          MODULE=kfourinline
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:3ac819aa449e5ea1ec88bc14b46e64aba28a0b1cdc39b67d007f607f7324a905
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/games/kfourinline/
+         ENTERED=20140720
+         UPDATED=20151124
+           SHORT="based on the Connect-Four game"
+
+cat << EOF
+KFourInLine is a board game for two players based on the Connect-Four game. The
+players try to build up a row of four pieces using different strategies.
+EOF

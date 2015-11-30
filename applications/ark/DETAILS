@@ -1,0 +1,14 @@
+          MODULE=ark
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:417057004e4f6c4a46178cc83f3891128172d4245f639fbbcdd76cc89b8bc170
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://utils.kde.org/projects/ark/
+         ENTERED=20120125
+         UPDATED=20151124
+           SHORT="managing various archive formats"
+
+cat << EOF
+Ark is a program for managing various archive formats within the KDE environment.
+EOF

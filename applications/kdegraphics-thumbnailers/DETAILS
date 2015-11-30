@@ -1,0 +1,14 @@
+          MODULE=kdegraphics-thumbnailers
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:675b86578e09bd6a5fcd8ff8887114ce284302e351be71784987d01f261bdab9
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20110813
+         UPDATED=20151124
+           SHORT="thumbnailers for various graphics file formats"
+
+cat << EOF
+Thumbnailers for various graphics file formats.
+EOF

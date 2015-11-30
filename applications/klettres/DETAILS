@@ -1,0 +1,14 @@
+          MODULE=klettres
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:20a9fa1edaea52c185cc00aef56f360015598e3f30ab3761afafd80f44976b91
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://edu.kde.org/klettres
+         ENTERED=20110813
+         UPDATED=20151124
+           SHORT="learn the alphabet"
+
+cat << EOF
+Learn the alphabet.
+EOF

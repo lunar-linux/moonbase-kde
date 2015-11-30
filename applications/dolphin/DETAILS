@@ -1,0 +1,14 @@
+          MODULE=dolphin
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:f5eda2eb0cf3900787013ac7425e89f2f9274f19a2a0a520443c8f34a13f0aa1
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://kde.org/applications/system/dolphin
+         ENTERED=20151122
+         UPDATED=20151124
+           SHORT="file manager"
+
+cat << EOF
+File manager.
+EOF

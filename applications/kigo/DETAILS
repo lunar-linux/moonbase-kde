@@ -1,0 +1,14 @@
+          MODULE=kigo
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:76b2cb4cdc8abaade1fac683e718b7fdfdb588aa31357aaf149542d7149e8840
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/games/kigo/
+         ENTERED=20140720
+         UPDATED=20151124
+           SHORT="kde implementation of the Go game"
+
+cat << EOF
+Kigo is an open-source implementation of the popular Go game.
+EOF

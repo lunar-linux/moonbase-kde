@@ -1,0 +1,14 @@
+          MODULE=zeroconf-ioslave
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:e99050a0edeabbe54510248b61db33ce590bfc916208f2f41d2b642815786aed
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/internet/kget/
+         ENTERED=20140713
+         UPDATED=20151124
+           SHORT="Network Monitor for DNS-SD services"
+
+cat << EOF
+Network Monitor for DNS-SD services (Zeroconf/Avahi).
+EOF

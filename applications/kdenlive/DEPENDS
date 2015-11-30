@@ -1,0 +1,18 @@
+depends hicolor-icon-theme
+depends kded
+depends knewstuff
+depends knotifyconfig
+depends kplotting
+depends mlt
+depends SDL_image
+depends extra-cmake-modules
+depends kdoctools
+depends v4l-utils
+
+optional_depends cdrkit          "" "" "for creation of DVD ISO images"
+optional_depends dvdauthor       "" "" "for creation of DVD"
+optional_depends dvgrab          "" "" "for firewire capture"
+optional_depends ffmpeg          "" "" "for FFmpeg plugin"
+optional_depends libdv           "" "" "for webcam capture (if FFmpeg is not installed)"
+optional_depends plasma-desktop  "" "" "theme configuration"
+optional_depends recordmydesktop "" "" "for screen capture"

@@ -1,0 +1,15 @@
+          MODULE=systemd-kcm
+         VERSION=1.2.1
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$MODULE
+      SOURCE_VFY=sha256:51960f4d3b4a1ceae28737c172c35aec8c1f4e534327fbc6dda76f1c17341389
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://github.com/rthomsen/kcmsystemd
+         ENTERED=20151129
+         UPDATED=20151129
+           SHORT="systemd control module for kde"
+
+cat << EOF
+A KDE graphical frontend providing control of systemd allowing for the viewing and
+controlling of systemd units and modifying configuration files.
+EOF

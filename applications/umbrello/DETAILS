@@ -1,0 +1,16 @@
+          MODULE=umbrello
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:cf5f371657183a9c4aa878036f07b842433a86b2f9d9ae78886105ab0feb645e
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://umbrello.kde.org/
+         ENTERED=20130814
+         UPDATED=20151124
+           SHORT="Unified Modelling Language diagram program"
+
+cat << EOF
+Umbrello UML Modeller is a Unified Modelling Language (UML) diagram program based 
+on KDE Technology. UML allows you to create diagrams of software and other systems 
+in a standard format to document or design the structure of your programs.
+EOF

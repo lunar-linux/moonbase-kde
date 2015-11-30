@@ -1,0 +1,14 @@
+          MODULE=parley
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:8527845706a65a536c014e84de597f7fbd797a6053313dddf72e0e86ec86fa1d
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20110813
+         UPDATED=20151124
+           SHORT="parley"
+
+cat << EOF
+Parley.
+EOF

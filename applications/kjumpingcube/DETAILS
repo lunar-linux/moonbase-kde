@@ -1,0 +1,14 @@
+          MODULE=kjumpingcube
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:0fddff2a54881b9e18b96f5333e6f9d4cf326536011ef46c44c786c1d81f8e31
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/games/kjumpingcube/
+         ENTERED=20140720
+         UPDATED=20151124
+           SHORT="a simple dice driven tactical game"
+
+cat << EOF
+KJumpingCube is a simple dice driven tactical game.
+EOF

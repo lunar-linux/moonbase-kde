@@ -1,0 +1,9 @@
+depends hicolor-icon-theme
+depends kinit
+depends ktexteditor
+depends extra-cmake-modules
+depends kdoctools
+
+optional_depends "libxslt" "-DWITH_LibXslt=ON" "-DWITH_LibXslt=OFF" "For xslt support"
+optional_depends "libxml2" "-DWITH_LibXml2=ON" "-DWITH_LibXml2=OFF" "For xml support"
+optional_depends "boost"   "-DWITH_Boost=ON"   "-DWITH_Boost=OFF"   "For boost support"

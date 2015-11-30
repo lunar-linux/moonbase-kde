@@ -1,0 +1,14 @@
+          MODULE=signon-plugin-oauth2
+         VERSION=0.23
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$MIRROR_URL
+      SOURCE_VFY=sha256:ef1e1cbadf2b5ac610729435bcd5875472f8f64ae4bc641810ddde4c07ec2f37
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://userbase.kde.org/sigon-kwallet-extention
+         ENTERED=20151129
+         UPDATED=20151129
+           SHORT="OAuth 2 plugin for signon"
+
+cat << EOF
+OAuth 2 plugin for signon.
+EOF

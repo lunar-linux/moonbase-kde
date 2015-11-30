@@ -1,0 +1,14 @@
+          MODULE=kwayland
+         VERSION=5.4.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
+      SOURCE_VFY=sha256:8085ef636c91c83c03eddaac0de7d8e7f56f08884ea8aa72fb63b9b93d7fd208
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
+         ENTERED=20151123
+         UPDATED=20151123
+           SHORT="kwayland"
+
+cat << EOF
+kwayland.
+EOF

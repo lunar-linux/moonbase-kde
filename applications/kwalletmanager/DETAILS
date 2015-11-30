@@ -1,0 +1,17 @@
+          MODULE=kwalletmanager
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:50ab15b0d7c0fce52b8e30bc6b018272a97c502aa3120c4ac70380eff17c04f2
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/system/kwalletmanager/
+         ENTERED=20140713
+         UPDATED=20151124
+           SHORT="manage the passwords on your system"
+
+cat << EOF
+KWalletManager is a tool to manage the passwords on your system. By using the 
+KDE wallet subsystem it not only allows you to keep your own secrets but also 
+to access and manage the passwords of every application that integrates with 
+the wallet.
+EOF

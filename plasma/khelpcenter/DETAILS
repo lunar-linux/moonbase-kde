@@ -1,0 +1,14 @@
+          MODULE=khelpcenter
+         VERSION=5.4.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
+      SOURCE_VFY=sha256:02630934f3fa5c03d384808ef2daef38a49db836fb64d384a95e54865545c64d
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
+         ENTERED=20151123
+         UPDATED=20151123
+           SHORT="Application to show KDE documentation"
+
+cat << EOF
+Application to show KDE Applications' documentation.
+EOF

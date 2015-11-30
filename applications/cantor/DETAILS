@@ -1,0 +1,17 @@
+          MODULE=cantor
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:a1b5315e348250dc6de3605f3bb8f4855348946bca428eb8dda131a31a3fde3b
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20110813
+         UPDATED=20151124
+           SHORT="Mathematics and Scientific Computing"
+
+cat << EOF
+Cantor is a KDE Application aimed to provide a nice Interface
+for doing Mathematics and Scientific Computing. It doesn't implement
+its own Computation Logic, but instead is built around different 
+Backends.
+EOF

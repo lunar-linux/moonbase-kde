@@ -1,0 +1,14 @@
+          MODULE=kubrick
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:559c244418d27ca72cc69b138c55bd10f22234a5cd67896d20fb1cdd0610781d
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://kde.org/applications/games/kubrick/
+         ENTERED=20150603
+         UPDATED=20151124
+           SHORT="Kubrick game"
+
+cat << EOF
+KDE version of the Kubrick game.
+EOF

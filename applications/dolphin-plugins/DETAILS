@@ -1,0 +1,14 @@
+          MODULE=dolphin-plugins
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:fe346cd5f292f7c9dae28b0f7c1d28c7cfc6551e16043e2701e889735120f8c9
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://dolphin.kde.org/
+         ENTERED=20130814
+         UPDATED=20151124
+           SHORT="file management of svn, git, hg, bazaar and dropbox"
+
+cat << EOF
+Provides dolphin plubins for file management of svn, git, hg, bazaar and dropbox..
+EOF

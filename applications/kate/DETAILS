@@ -1,0 +1,37 @@
+          MODULE=kate
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:4810c20a8dc520344ebad86809a4e6f964300c3ff23a6f00b275a03608bc6134
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/utilities/kate/
+         ENTERED=20110813
+         UPDATED=20151124
+           SHORT="KDE multi document multi view text editor"
+
+cat << EOF
+Kate is a multi-document, multi-view text editor for KDE. It features stuff 
+like codefolding, syntaxhighlighting, dynamic word wrap, an embedded console, 
+an extensive plugin interface and some prelimentary scripting support.
+
+Features
+
+    MDI, window splitting, window tabbing
+    Spell checking
+    CR, CRLF, LF newline support
+    Encoding support (utf-8, utf-16, ascii etc.)
+    Encoding conversion
+    Regular expression based find & replace
+    Powerful syntax highlighting and bracket matching
+    Code and text folding
+    Infinite undo/redo support
+    Block selection mode
+    Auto indentation
+    Auto completion support
+    Shell integration
+    Wide protocol support (http, ftp, ssh, webdav etc.) using kioslaves
+    Plugin architecture for the application and editor component
+    Customizable shortcuts
+    Integrated command line
+    Scriptable using JavaScript
+EOF

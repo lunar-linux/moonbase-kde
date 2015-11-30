@@ -1,0 +1,17 @@
+          MODULE=kbounce
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:31396361ead8f9ca33814580e84044ac957a441555c560a69901f8456a8ec0e6
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/games/kbounce/
+         ENTERED=20140720
+         UPDATED=20151124
+           SHORT="single player arcade game with the elements of puzzle"
+
+cat << EOF
+KBounce is a single player arcade game with the elements of puzzle. It is played
+on a field, surrounded by wall, with two or more balls bouncing around within the 
+walls. The object of the game is to build new walls to decrease the size of the 
+active field.
+EOF

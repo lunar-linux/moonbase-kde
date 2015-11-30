@@ -1,0 +1,14 @@
+          MODULE=kcalutils
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:3fb646d2aa71e37238f24b08f8f491ea3d753d8656d48bbc63786f73ed0a048a
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://techbase.kde.org/Getting_Started/Build/KDE4/Troubleshooting
+         ENTERED=20151122
+         UPDATED=20151124
+           SHORT="KDE calendar utility library"
+
+cat << EOF
+The KDE calendar utility library.
+EOF

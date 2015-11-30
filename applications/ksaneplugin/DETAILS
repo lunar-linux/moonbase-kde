@@ -1,0 +1,13 @@
+          MODULE=ksaneplugin
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:cb4958bc7cef0d0d9d1c0d490cae10096a119f4e0e2dc17e497cd51c0495b7a2
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20071026
+         UPDATED=20151124
+           SHORT="ksaneplugin"
+
+cat << EOF
+EOF

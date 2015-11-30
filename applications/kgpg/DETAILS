@@ -1,0 +1,14 @@
+          MODULE=kgpg
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:82b4a50ab38f3801aabffbf1822cb3f177bd744689d66bc72742c3b12e395525
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://utils.kde.org/projects/kgpg/
+         ENTERED=20120125
+         UPDATED=20151124
+           SHORT="a simple GUI for GnuPG"
+
+cat << EOF
+A simple GUI for GnuPG.
+EOF

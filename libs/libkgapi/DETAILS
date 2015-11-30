@@ -1,11 +1,11 @@
           MODULE=libkgapi
-         VERSION=2.2.0
-          SOURCE=$MODULE-$VERSION.tar.bz2
+         VERSION=5.0.0
+          SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/$MODULE/$VERSION/src/
-      SOURCE_VFY=sha1:35ee123691e331fba6138ec9d84fdef3f7a32a12
+      SOURCE_VFY=sha256:a85e6ecf639b6f5f3f58674c6dddf516189398137a0ce419af956e87a4b763b7
         WEB_SITE=http://www.progdan.cz/2012/05/libkgoogle-libkgapi/
          ENTERED=20120803
-         UPDATED=20140927
+         UPDATED=20151122
            SHORT="APIs for various Google services"
 
 cat << EOF

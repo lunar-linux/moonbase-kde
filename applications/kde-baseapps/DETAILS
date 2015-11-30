@@ -1,0 +1,22 @@
+          MODULE=kde-baseapps
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:23a4eba2638dc66d27e259ab37b9b3b3443537123e5dc45b2eb241b0c2070158
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20071026
+         UPDATED=20151124
+           SHORT="mandatory package for KDE"
+
+cat << EOF
+kdebase is the second mandatory package (besides kdelibs) for the K Desktop
+Environment. Here we have various applications and infrastructure files and
+libraries.
+Here is an overview of the directories:
+ doc, drkonqi, kappfinder, kcheckpass, kcontrol, kdebugdialog, kdeprint,
+ kdesktop, kdesu, kdialog, kfind, khelpcenter, khotkeys, kicker, kioslave,
+ klipper, kmenuedit, konqueror, konsole, kreadconfig, kscreensaver, ksmserver,
+ kdepasswd, ksplashml, kstart, ksysguard, ksystraycmd, ktip, kwin, kxkb, l10n,
+ libkonq, nsplugins, pics
+EOF

@@ -1,13 +1,13 @@
           MODULE=oxygen-fonts
-         VERSION=5.3.2
+         VERSION=5.4.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE%5}-$VERSION
-      SOURCE_VFY=sha256:ca179061374a0d37f2ae445bd58b339be47dcdf11d349169d71a354ce972e874
+      SOURCE_VFY=sha256:a02f6580e9a53cb16694a99adbb6dbf76f17584f3e97f469a22286299507838c
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/oxygen-fonts
          ENTERED=20150216
-         UPDATED=20150701
+         UPDATED=20151123
            SHORT="oxygen font family"
 
 cat << EOF

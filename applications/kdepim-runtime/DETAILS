@@ -1,0 +1,14 @@
+          MODULE=kdepim-runtime
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$(module_version kde4)/src
+      SOURCE_VFY=sha256:41ad9f8edc1792f5565dbb4df4efb4ad781b9501a015fa78c98523fee49c3c53
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20091006
+         UPDATED=20151124
+           SHORT="akonadi support for kdepim"
+
+cat << EOF
+Provides the mechanisms for kdepim/kmail to use a database like support.
+EOF

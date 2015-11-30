@@ -1,0 +1,14 @@
+          MODULE=kmines
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:acbb1836e3586ee11e4008c005e30f0006c141652c877a353be777058a4f8da2
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/games/kmines/
+         ENTERED=20150214
+         UPDATED=20151124
+           SHORT="mining game"
+
+cat << EOF
+Kmines is a mining.
+EOF

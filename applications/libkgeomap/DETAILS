@@ -1,0 +1,17 @@
+          MODULE=libkgeomap
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.gz
+      SOURCE_URL=$KDE_URL/stable/applications/$(module_version kde4)/src
+      SOURCE_VFY=sha256:f4e4b7820fa9a45cd1799b344c47efa86fc008553f81eac58e3b241cc65d4ccb
+        WEB_SITE=https://projects.kde.org/projects/kde/kdegraphics/libs/libkgeomap
+         ENTERED=20150513
+         UPDATED=20151124
+           SHORT="wrapper around different world-map components"
+
+cat << EOF
+Libkgeomap is a wrapper around different world-map components, to browse and arrange photos over a map.
+Currently supported map engine are:
+- Marble, 
+- OpenstreetMap (via Marble),
+- GoogleMap,
+EOF

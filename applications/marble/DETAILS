@@ -1,0 +1,18 @@
+          MODULE=marble
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:743131cd37e6c42b178497fa3cda012b926587b4ebc094bb7276e02fb4e62844
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://marble.kde.org/
+         ENTERED=20110813
+         UPDATED=20151124
+           SHORT="virtual globe and world atlas"
+
+cat << EOF
+Explore the neighborhood with Marble's rich set of city and street level maps. 
+Search for addresses and places of interest. Marble takes care of querying 
+various search backends and presents their results in a unified view. Calculate 
+pedestrian, bike and motorcar routes with ease online and offline, with an 
+arbitrary number of via points.
+EOF

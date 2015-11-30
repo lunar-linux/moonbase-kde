@@ -1,0 +1,18 @@
+          MODULE=libkmahjongg
+         VERSION=14.12.3
+          SOURCE=${MODULE%4*}-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE%4*}-$VERSION
+      SOURCE_VFY=sha256:1e0afb0ba2f8c4cdb51209d0ce1a23e22abc89e7bae039e9ea1c15db436e3f4e
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/kde/kdegames/libmahjongg
+         ENTERED=20150603
+         UPDATED=20150603
+           SHORT="Common code, backgrounds and tile sets for games using Mahjongg tiles"
+
+cat << EOF
+
+Note: We still need this for some of the kde stuff.
+
+Common code, backgrounds and tile sets for games using Mahjongg tiles
+EOF

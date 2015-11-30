@@ -1,11 +1,11 @@
           MODULE=accounts-qt
-         VERSION=1.11
-          SOURCE=$MODULE-$VERSION.tar.bz2
-      SOURCE_URL=https://accounts-sso.googlecode.com/files/
-      SOURCE_VFY=sha1:a09eb0487db215d6b8809fc33790cdbb2f785393
+         VERSION=1.14
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$MIRROR_URL
+      SOURCE_VFY=sha256:4f0f1574a72cf7eb07d7ad686527a3150fb03c4799896e59a215752a993928c4
         WEB_SITE=https://code.google.com/p/accounts-sso/
          ENTERED=20140805
-         UPDATED=20140805
+         UPDATED=20151129
            SHORT="qt based Accounts and SSO framework"
 
 cat << EOF

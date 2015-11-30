@@ -1,0 +1,14 @@
+          MODULE=knetwalk
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:1113a3c60bdd87f0acb4e94307ee5ce4c9d6cb89531f2787be2dc5e35be55745
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/games/knetwalk
+         ENTERED=20150214
+         UPDATED=20151124
+           SHORT="knetwalk"
+
+cat << EOF
+Knetwalk game.
+EOF

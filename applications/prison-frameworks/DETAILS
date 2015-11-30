@@ -1,0 +1,15 @@
+          MODULE=prison-frameworks
+         VERSION=1.2.1
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$MIRROR_URL
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE
+      SOURCE_VFY=sha256:8a09d7c1c841b5b7af62c097b417266285dc3dfe8e73b8ca114ea5b5c3d641f4
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/prison
+         ENTERED=20151122
+         UPDATED=20151122
+           SHORT="barcode API to produce QRCode barcodes and DataMatrix barcodes"
+
+cat << EOF
+A barcode API to produce QRCode barcodes and DataMatrix barcodes.
+EOF

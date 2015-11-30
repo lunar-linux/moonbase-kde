@@ -1,0 +1,17 @@
+          MODULE=juk
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:3eaf3de092a3f1b74f86a4081ecd9a2a41ad7116086d14b5e0b36b635e281e6d
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/multimedia/juk/
+         ENTERED=20120801
+         UPDATED=20151124
+           SHORT="audio jukebox"
+
+cat << EOF
+JuK is an audio jukebox application, supporting collections of MP3, Ogg Vorbis,
+and FLAC audio files. It allows you to edit the "tags" of your audio files, 
+and manage your collection and playlists. It's main focus, in fact, is on music 
+management.
+EOF

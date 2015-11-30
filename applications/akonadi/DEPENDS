@@ -1,0 +1,19 @@
+depends qt5
+
+optional_depends %MYSQL \
+                 "-DDATABASE_BACKEND=MYSQL" "" \
+                 "for MySQL database support${PROBLEM_COLOR}If yes here say no to Postgresql and sqlite${QUERY_COLOR}"
+
+optional_depends postgresql \
+                 "-DDATABASE_BACKEND=POSTGRES" "" \
+                 "for Postgresql database support,${PROBLEM_COLOR}If you said yes here you should have said NO to %MYSQL"${QUERY_COLOR}
+
+optional_depends sqlite \
+                 "-DINSTALL_QSQLITE_IN_QT_PREFIX=1 -DDATABASE_BACKEND=SQLITE -DAKONADI_BUILD_QSQLITE=1"  \
+                 "-DINSTALL_QSQLITE_IN_QT_PREFIX=0 AKONADI_BUILD_QSQLITE=0" \
+                 "for SQLite database support (Yes to install in Qt5 Plugin Dir)${PROBLEM_COLOR} Not recommended and if you said yes here you should have said no to %MYSQL and Postgresql${QUERY_COLOR}"
+
+optional_depends soprano \
+                 "-DWITH_SOPRANO=1" \
+                 "-DWITH_SOPRANO=0" \
+                 "for RDF data support, used by kdelibs and ${PROBLEM_COLOR}RECOMENDED${QUERY_COLOR}" y 

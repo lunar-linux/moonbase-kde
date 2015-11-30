@@ -1,0 +1,14 @@
+          MODULE=signon-kwallet-extension
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:fb3a0bc526db6d81e7c3c85c6ae46d0f18c1bb922ad3d831253d35d1baeef140
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://userbase.kde.org/sigon-kwallet-extention
+         ENTERED=20150416
+         UPDATED=20151124
+           SHORT="extentions for kwallet"
+
+cat << EOF
+Extentions for kwallet to work with sigon.
+EOF
