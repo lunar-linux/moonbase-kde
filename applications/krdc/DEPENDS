@@ -1,4 +1,4 @@
-depends kde-baseapps
+depends kde-runtime
 
 optional_depends libvncserver "-DWITH_LibVNCServer=1"  "-DWITH_LibVNCServer=0" "for vncserver support"
 optional_depends telepathy-qt "-DWITH_TelepathyQt41=1" "-DWITH_TelepathyQt4=0" "for telpathy support"
