@@ -1,5 +1,5 @@
-depends ruby
-depends kde-baseapps
+depends kdelibs4support
+depends kross
 
 optional_depends "Falcon"    "-DBUILD_falcon=ON" "-DBUILD_falcon=OFF" "For Falcon support"
 optional_depends "Python"    "-DBUILD_python=ON" "-DBUILD_python=OFF" "For Python support"
