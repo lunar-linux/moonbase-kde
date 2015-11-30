@@ -1,4 +1,7 @@
 depends eigen3
+depends kinit
+depends kplotting
+depends ktexteditor
 
 optional_depends libindi    "" "" "For instrument support"
 optional_depends wcslib     "" "" "For World Coordinate System support,${PROBLEM_COLOR}say yes to cfitsio when asked by wcslib${QUERY_COLOR}"
