@@ -1,13 +1,15 @@
-depends kdepimlibs
-depends kdepim-runtime
 depends libdbusmenu-qt
-depends grantlee
-depends baloo
 depends qjson
+depends grantlee-qt5
+depends baloo-frameworks
+depends kdepimlibs
+depends ktnef
+depends kblog
+depends kdepim-runtime
 
-optional_depends "libassuan"  "" "" "for IPC support"
-optional_depends "libkgapi"   "" "" "for Google services support"
-optional_depends "prison"     "" "" "to show mobile barcodes of your contacts"
-optional_depends "gpgme"      "" "" "required to build KMail, KOrganizer and Kleopatra"
-optional_depends "dblatex"    "" "" "for docbook to LaTeX publishing"
-optional_depends "libXScrnSaver" "" "" "for X11 screensaver extension support"
+optional_depends "libXScrnSaver"     "" "" "for X11 screensaver extension support"
+optional_depends "libassuan"         "" "" "for IPC support"
+optional_depends "libkgapi"          "" "" "for Google services support"
+optional_depends "gpgme"             "" "" "required to build KMail, KOrganizer and Kleopatra"
+optional_depends "dblatex"           "" "" "for docbook to LaTeX publishing"
+optional_depends "prison-frameworks" "" "" "to show mobile barcodes of your contacts"
