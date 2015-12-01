@@ -1,4 +1,5 @@
 
+
   . /etc/profile.d/qt4.rc   &&
   . /etc/profile.d/kde4.rc  &&
 
