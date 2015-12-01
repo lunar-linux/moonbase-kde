@@ -1,6 +1,5 @@
-
-  source /etc/profile.d/qt4.rc   &&
-  source /etc/profile.d/kde4.rc  &&
+  . /etc/profile.d/qt4.rc   &&
+  . /etc/profile.d/kde4.rc  &&
 
   export CFLAGS="$CFLAGS -fPIC"  &&
 
