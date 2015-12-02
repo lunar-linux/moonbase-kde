@@ -1,0 +1,15 @@
+          MODULE=kaccounts-providers
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:fd35332835f3f146232e7f166ea6b6c07cdd0d6581fefa31d0cb4c30cc72adda
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://kde.org/applications/system/$MODULE
+         ENTERED=20151201
+         UPDATED=20151201
+           SHORT="administer web accounts"
+
+cat << EOF
+Small system to administer web accounts for the sites and services across the
+KDE desktop, including: Google, Facebook, Owncloud, IMAP, Jabber and others.
+EOF
