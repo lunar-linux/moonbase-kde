@@ -1,0 +1,14 @@
+          MODULE=ktp-accounts-kcm
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:002fe7625c7b04c611b4026274015987567c9524c5a64752ce66a4e0d54e0813
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://kde.org/applications/system/$MODULE
+         ENTERED=20151201
+         UPDATED=20151201
+           SHORT="configure telepathy instant messaging accounts"
+
+cat << EOF
+KCM module for configuring telepathy instant messaging accounts.
+EOF
