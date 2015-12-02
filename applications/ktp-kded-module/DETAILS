@@ -1,0 +1,15 @@
+          MODULE=ktp-kded-module
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:4c0297efbdde8a28816dfcf8ca16c2f445842f4ccba6b6fe83a89ca63c680669
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://kde.org/applications/system/$MODULE
+         ENTERED=20151201
+         UPDATED=20151201
+           SHORT="handles various bits of system integration"
+
+cat << EOF
+Sits in KDED and takes care of various bits of system integration
+like setting user to auto-away or handling connection errors.
+EOF

@@ -1,0 +1,14 @@
+          MODULE=ktp-auth-handler
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:b41bf915f0c9b141334520b7b98621b5b5b9bea9d9a12aaf60e7781eeb403ecd
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://kde.org/applications/system/$MODULE
+         ENTERED=20151201
+         UPDATED=20151201
+           SHORT="kwallet intergration for passwords and ssl errors"
+
+cat << EOF
+Provide UI/KWallet Integration For Passwords and SSL Errors on Account Connect.
+EOF
