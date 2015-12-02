@@ -1,5 +1,6 @@
 
   patch_it $SOURCE2 1 &&
+  patch_it $SOURCE3 1 &&
 
   OPTS+=" -DRAPTOR_INCLUDE_DIR=/usr/include/raptor2" &&
 
@@ -11,6 +12,16 @@
     fi
   fi  &&
 
-  source /etc/profile.d/qt4.rc  &&
+  . /etc/profile.d/qt4.rc  &&
+
+  OPTS+=" -DQT5_BUILD=0" &&
+
+  default_cmake_config &&
+
+  make &&
+
+  . /etc/profile.d/qt5.rc &&
+
+  OPTS+=" -DQT5_BUILD=1" &&
 
   default_cmake_build
