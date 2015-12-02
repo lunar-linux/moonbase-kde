@@ -1,11 +1,11 @@
           MODULE=signon
-         VERSION=8.56
-          SOURCE=$MODULE-$VERSION.tar.bz2
-      SOURCE_URL=https://accounts-sso.googlecode.com/files/
-      SOURCE_VFY=sha1:54c502204e2f31446feafba21041ebdfc2401fc5
+         VERSION=8.58
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$MIRROR_URL
+      SOURCE_VFY=sha256:5c33e25486841859c3d50b64c9d88c220308e781e2c1463a950390660459a78a
         WEB_SITE=https://code.google.com/p/accounts-sso/
          ENTERED=20140805
-         UPDATED=20140805
+         UPDATED=20151201
            SHORT="Accounts and Single Sign-On framework"
 
 cat << EOF
