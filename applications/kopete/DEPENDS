@@ -1,4 +1,6 @@
-depends kde-baseapps
+depends kdepimlibs4
+depends kde-runtime
+
 
 optional_depends alsa-utils "-DWITH_Alsa=1"      "-DWITH_Alsa=0"      "for alsa audio support"
 optional_depends boost      "-DWITH_Boost=1"     "-DWITH_Boost=0"     "for boost support"
