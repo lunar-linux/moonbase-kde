@@ -4,6 +4,8 @@ fi &&
 
 default_pre_build &&
 
+patch_it $SOURCE2 1 &&
+
 # Seems their boost fix was incomplete. There are still a few modules like avogadro
 # that still have trouble with boost_join.
 sedit "193i pp.macros[\"BOOST_LEXICAL_CAST_INCLUDED\"];" src/tools/moc/main.cpp &&
