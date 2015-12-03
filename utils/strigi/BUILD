@@ -1,7 +1,6 @@
 
   OPTS+=" -DENABLE_DBUS=1       \
           -DENABLE_INOTIFY=1    \
-          -DENABLE_LOG4CXX=1    \
           -DENABLE_FAM=1        \
           -DENABLE_CLUCENE=1    \
           -DENABLE_CLUCENE_NG=1 \

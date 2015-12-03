@@ -1,7 +1,10 @@
+depends gamin
 depends %UDEV
 depends libxml2
 depends zlib
 depends bzip2
-depends cmake
+depends clucene
 
-optional_depends "exiv2" "-DENABLE_EXIV2=ON"   "-DENABLE_EXIV2=OFF"   "for metadata indexing support"
+optional_depends "exiv2" "-DENABLE_EXIV2=1"   "-DENABLE_EXIV2=0"   "for metadata indexing support ${PROBLEM_COLOR}Recommended${QUERY_COLOR}" y
+optional_depends "apache-log4cxx" "-DENABLE_LOG4CXX=1" "-DENABLE_LOG4CXX=0" "for advanced logging support, ${PROBLEM_COLOR}Recommended${QUERY_COLOR}" y
+
