@@ -2,7 +2,6 @@ depends kde-baseapps
 depends smokeqt
 
 optional_depends attica       "-DWITH_LibAttica=ON"  "-DWITH_LibAttica=OFF"  "for of Open Collaboration Services"
-optional_depends nepomuk-core "-DWITH_Nepomuk=ON"    "-DWITH_Nepomuk=OFF"    "for nepomuk support"
 optional_depends kdepimlibs   "-DWITH_KdepimLibs=ON" "-DWITH_KdepimLibs=OFF" "for kdepim support"
 optional_depends akonadi      "-DWITH_Akonadi=ON"    "-DWITH_Akonadi=off"    "for PIM layer support"
 optional_depends okular       "-DWITH_Okular=ON"     "-DWITH_Okular=OFF"     "for universal document viewing support"
