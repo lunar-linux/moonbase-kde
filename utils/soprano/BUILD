@@ -12,16 +12,15 @@
     fi
   fi  &&
 
+  # build qt4 version
   . /etc/profile.d/qt4.rc  &&
-
   OPTS+=" -DQT5_BUILD=0" &&
+  default_cmake_build &&
 
-  default_cmake_config &&
-
-  make &&
+  # cleanup to build qt5
+  devoke_installwatch &&
+  mv $SOURCE_DIRECTORY/$MODULE-oosb $SOURCE_DIRECTORY/$MODULE.qt4-oosb
 
   . /etc/profile.d/qt5.rc &&
-
   OPTS+=" -DQT5_BUILD=1" &&
-
   default_cmake_build
