@@ -1,12 +1,15 @@
           MODULE=quazip
          VERSION=0.7.1
           SOURCE=$MODULE-$VERSION.tar.gz
+         SOURCE2=quazip-0.7.1-qt5.patch
       SOURCE_URL=$SFORGE_URL/quazip/$VERSION
+     SOURCE2_URL=$PATCH_URL
       SOURCE_VFY=sha256:78c984103555c51e6f7ef52e3a2128e2beb9896871b2cc4d4dbd4d64bff132de
+     SOURCE2_VFY=sha256:acc414dc6dd398b60cec715f26174950c34d77ad6799bd5f8babaf407e184169
    MODULE_PREFIX=${QT4_PREFIX:-/usr}
         WEB_SITE=http://quazip.sourceforge.net/
          ENTERED=20141112
-         UPDATED=20150420
+         UPDATED=20151205
            SHORT="C++ wrapper over minizip"
 cat << EOF
 QuaZIP is a simple C++ wrapper over Gilles Vollant's ZIP/UNZIP package that can be used to access ZIP archives.
