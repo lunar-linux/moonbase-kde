@@ -1,17 +1,21 @@
 depends eigen3
+depends baloo
+depends libgphoto2
+depends kde-runtime
 # Opting here to use these 4 as hard depends else a conflict is created with 
 # those provided by digikam.
 depends libkipi
 depends libkdcraw
 depends libkexiv2
+depends libkface
 depends libksane
 # Now a hard depends
 depends opencv
 
-optional_depends lcms2        "-DENABLE_LCMS2=1"       "-DENABLE_LCMS2-0"       "for color management support"
+optional_depends lcms2        "-DENABLE_LCMS2=1"      "-DENABLE_LCMS2-0"     "for color management support"
 optional_depends expat        "-DWITH_EXPAT=1"        "-DWITH_EXPAT=0"       "for XML parsing support"
 optional_depends libgphoto2   "-DWITH_Gphoto2=1"      "-DWITH_Gphoto2=0"     "for gphoto support"
-optional_depends kdepimlibs   "-DWITH_KdepimLibs=1"   "-DWITH_KdepimLibs=0"  "to use various libraries from kdepimlibs"
+optional_depends kdepimlibs4  "-DWITH_KdepimLibs=1"   "-DWITH_KdepimLibs=0"  "to use various libraries from kdepimlibs"
 optional_depends lensfun      "-DWITH_LensFun=1"      "-DWITH_LensFun=0"     "for camera lens correction support"
 optional_depends liblqr       "-DWITH_Lqr-1=1"        "-DWITH_Lqr-1=0"       "for LiquidRescale support"
 optional_depends doxygen      "-DWITH_Doxygen=1"      "-DWITH_Doxygen=0"     "for documentation"
@@ -33,4 +37,7 @@ optional_depends glib-2       "-DWITH_GLIB2=1 -DWITH_GObject=1"      \
 optional_depends libpgf       "-DPGF_INCLUDE_DIRS=/usr/include/libpgf" \
                               "" "for Progressive Graphics File, n=use internal"
 
-optional_depends %MYSQL       "-DENABLE_INTERNALMYSQL=1" "-DENABLE_INTERNALMYSQL=0"  "for %MYSQL database support, ${PROBLEM_COLOR}say NO to use digikam provided server${DEFAULT_COLOR}"
+optional_depends %MYSQL       "-DENABLE_MYSQLSUPPORT=1 -DENABLE_INTERNALMYSQL=1" \
+                              "-DENABLE_INTERNALMYSQL=0"                         \
+                              "for %MYSQL database support, ${PROBLEM_COLOR}say NO to use digikam provided server${DEFAULT_COLOR}" n
+optional_depends kQOAuth-qt4  "" "" "for OAuth 1.0 support"
