@@ -1,4 +1,3 @@
-(
 
   # qca2-ossl will not compile when openssl 0.9.8i or later is installed.
   # This patch is official result of my bugreport to qca2-ossl author
@@ -13,5 +12,3 @@
   ./configure &&
 
   default_make
-
-) > $C_FIFO 2>&1

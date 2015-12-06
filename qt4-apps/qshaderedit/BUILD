@@ -1,4 +1,3 @@
-(
 
   source /etc/profile.d/qt4.rc &&
 
@@ -18,5 +17,3 @@ Categories=Qt;KDE;Graphics;
 EOF
 
   install -D -m644 ${MODULE}.desktop $QTDIR/share/applications/${MODULE}.desktop
-
-) > $C_FIFO 2>&1

@@ -1,4 +1,3 @@
-(
 
   source /etc/profile.d/qt4.rc &&
 
@@ -21,5 +20,3 @@
 
   prepare_install   &&
   install ../plugins/script/* /usr/lib/qt4/plugins/script/
-
-) > $C_FIFO 2>&1

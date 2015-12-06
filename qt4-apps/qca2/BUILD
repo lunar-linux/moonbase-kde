@@ -1,4 +1,3 @@
-(
 
   patch_it $SOURCE2 3 &&
 
@@ -13,5 +12,3 @@
               $OPTS                     &&
 
   default_make
-
-) > $C_FIFO 2>&1
