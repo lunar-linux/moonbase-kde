@@ -4,4 +4,4 @@
 # So it does not conflict with akonadi from applications
  OPTS+=" -DCMAKE_INSTALL_PREFIX=/usr/lib/akonadi4" &&
 
- default_cmake_build &&
+ default_cmake_build
