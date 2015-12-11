@@ -1,12 +1,12 @@
           MODULE=plasma-mediacenter
-         VERSION=5.4.3
+         VERSION=5.5.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:6a13e0cab0f6699d45e75b77556fb5a8fd87c6e42803613863c9e1ee4782054d
+      SOURCE_VFY=sha256:a2e01a6f1117848959d609e97225689764e7f38d3a0365b8e57bb85c875e5982
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
          ENTERED=20151123
-         UPDATED=20151123
+         UPDATED=20151211
            SHORT="A mediacenter user interface based on KDE Plasma components"
 
 cat << EOF
