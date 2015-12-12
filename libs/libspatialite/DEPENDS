@@ -1,5 +1,4 @@
 depends sqlite
-
+depends geos
 optional_depends "proj-4" "--enable-proj"   "--disable-proj"   "For Cartographic Projections support"
-optional_depends "geos"   "--enable-geos"   "--disable-geos"   "For Geometry Engine support"
 optional_depends "freexl" "--enable-freexl" "--disable-freexl" "For Excel import support"
