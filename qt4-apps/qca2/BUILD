@@ -1,14 +1,13 @@
 
-  patch_it $SOURCE2 3 &&
-
   . /etc/profile.d/qt4.rc  &&
 
-  sedit "s/^WHICH=.*/WHICH=which/" configure  &&
+  OPTS+=" -DQT4_BUILD=1 -DQCA_SUFFIX=qt4" &&
+  default_cmake_build
 
-  ./configure --prefix=${MODULE_PREFIX}  \
-              --no-framework             \
-              --debug                    \
-              --disable-tests            \
-              $OPTS                     &&
+  mv $SOURCE_DIRECTORY/$MODULE-oosb $SOURCE_DIRECTORY/$MODULE.qt4-oosb &&
 
-  default_make
+  . /etc/profile.d/qt5.rc &&
+
+  OPTS+=" -DQT4_BUILD=0 -DQCA_SUFFIX=qt5" &&
+
+  default_cmake_build
