@@ -1,8 +1,6 @@
 
   . /etc/profile.d/qt5.rc &&
 
-  OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=1   \
-          -DKDE_INSTALL_LIBDIR=/usr/lib/KF5  \
-          -DLibKWorkspace_DIR=/usr/lib/KF5/cmake/LibKWorkspace" &&
+  OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=1" &&
 
   default_cmake_build
