@@ -8,6 +8,10 @@
     sedit 's:\(TAGLIB_VERSION STRLESS \"\${TAGLIB_MIN_VERSION}\"\):\(\"\${TAGLIB_MIN_VERSION}\" VERSION_GREATER TAGLIB_VERSION\):g' cmake/modules/FindTaglib.cmake
   fi &&
 
+  if in_depends $MODULE qca2; then
+    OPTS+=" -DQCA2_LIBRARIES=/usr/lib/libqca-qt4.so.2 -DQCA2_INCLUDE_DIR=/usr/include/Qca-qt4/QtCrypto"
+  fi &&
+
   default_cmake_build &&
 
 # If installed use ca-certificates instead of those provided by kdelibs
