@@ -1,0 +1,9 @@
+depends qt5
+depends proj-4
+depends gdal
+depends quazip
+
+optional_depends libproxy   "LIBPROXY=1"    "LIBPROXY=0"    "automatical proxy detection"
+optional_depends gpsd       "GPSDLIB=1"     "GPSDLIB=0"     "enable GPS readings" n
+optional_depends exiv2      "GEOIMAGE=1"    "GEOIMAGE=0"    "enable geotagged images" y
+optional_depends webkitgtk3 "NOUSEWEBKIT=0" "NOUSEWEBKIT=1" "build webkit plugins"

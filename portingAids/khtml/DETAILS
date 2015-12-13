@@ -1,12 +1,12 @@
           MODULE=khtml
-         VERSION=5.16.0
+         VERSION=5.17.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)/portingAids
-      SOURCE_VFY=sha256:73255ece3a7be180263bdc9fafa35cd56f6355f4e05422f361b26a0a0f340687
+      SOURCE_VFY=sha256:249e978e3fcc5956f2a2845afbe245ef7b0a596556f8ad048cdd0a58cfaae557
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/khtml
          ENTERED=20150205
-         UPDATED=20151120
+         UPDATED=20151213
            SHORT="web rendering engine"
 
 cat << EOF
