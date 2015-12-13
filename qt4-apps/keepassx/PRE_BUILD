@@ -1,6 +1,5 @@
 default_pre_build &&
 
-sedit '/\<QFile\>/ i #include <unistd.h>' src/lib/random.cpp
 if module_installed optipng; then
   find -name '*.png' -exec optipng -quiet -force -fix {} \;
 fi
