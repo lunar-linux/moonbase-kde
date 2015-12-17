@@ -1,5 +1,8 @@
 depends Python
+depends gpgmepp
+depends kiconthemes
 depends extra-cmake-modules
 depends knotifications
+depends kservice
 
-optional_depends "gpgme" "" "" "For GnuPG support" y
+optional_depends kwalletmanager "" "" "for a gui configuration menu"
