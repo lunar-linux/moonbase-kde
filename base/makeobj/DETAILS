@@ -1,13 +1,13 @@
           MODULE=makeobj
-         VERSION=4.13.3
+         VERSION=15.12.0
           SOURCE=$MODULE-$VERSION
       SOURCE_URL=$MIRROR_URL
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
-      SOURCE_VFY=sha1:e8210b438e2291a382b2f5a7343a0c8a831c2f9d
+      SOURCE_VFY=sha256:161ce72da2b311028b54bf179e375bd1cc836983940875684fdbdc5c0f2f8494
         WEB_SITE=http://www.kde.org
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
          ENTERED=20071026
-         UPDATED=20140727
+         UPDATED=20151217
            SHORT="checks its in the correct directory to call make"
 
 cat << EOF
