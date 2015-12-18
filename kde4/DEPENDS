@@ -1,5 +1,6 @@
 depends kf5
 depends kde-base
+depends kde-dev-scripts
 depends kdelibs
 depends kde-runtime
 depends kde-baseapps
@@ -13,7 +14,6 @@ optional_depends "polkit-kde-agent"            ""  ""  "For kde policy kit agent
 optional_depends "kactivities-frameworks"      ""  ""  "The kde activity manager"
 optional_depends "bluedevil"                   ""  ""  "For bluetooth support in KDE"
 optional_depends "konversation"                ""  ""  "Provides an irc application based on KDE"
-optional_depends "kdeartwork"                  ""  ""  "Additional eyecandy"
 optional_depends "konsole"                     ""  ""  "KDE console terminal"
 optional_depends "kate"                        ""  ""  "Kate text editor and also proivdes the kwrite editor"
 optional_depends "audiocd-kio"                 ""  ""  "Provides the kio slave for audio CDs"
