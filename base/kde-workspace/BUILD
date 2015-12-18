@@ -7,7 +7,6 @@
 # We disable these to avoid conflicts with plasma
   OPTS+=" -DBUILD_systemsettings=0   \
           -DBUILD_powerdevil=0       \
-          -DBUILD_kwin=0             \
           -DBUILD_ksysguard=0        \
           -DBUILD_kmenuedit=0        \
           -DBUILD_plasma=0           \
