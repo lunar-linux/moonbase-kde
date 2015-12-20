@@ -9,7 +9,7 @@ depends extra-cmake-modules
 depends kdoctools
 depends v4l-utils
 
-optional_depends cdrkit          "" "" "for creation of DVD ISO images"
+optional_depends %CDR            "" "" "for creation of DVD ISO images"
 optional_depends dvdauthor       "" "" "for creation of DVD"
 optional_depends dvgrab          "" "" "for firewire capture"
 optional_depends ffmpeg          "" "" "for FFmpeg plugin"
