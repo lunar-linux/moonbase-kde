@@ -1,8 +1,8 @@
+depends alsa-utils
 depends kdepimlibs
 depends kde-runtime
 
 
-optional_depends alsa-utils "-DWITH_Alsa=1"      "-DWITH_Alsa=0"      "for alsa audio support"
 optional_depends boost      "-DWITH_Boost=1"     "-DWITH_Boost=0"     "for boost support"
 optional_depends expat      "-DWITH_Expat=1"     "-DWITH_Expat=0"     "for xml parsing support"
 optional_depends giflib     "-DWITH_GIF=1"       "-DWITH_GIF=0"       "for gif graphics support"
