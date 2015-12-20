@@ -1,0 +1,14 @@
+          MODULE=libkipi4
+         VERSION=4.14.3
+          SOURCE=libkipi-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src/
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/libkipi-$VERSION
+      SOURCE_VFY=sha256:dcedbad556840e1ed3b35609a6f700917f76cc0a4f41ca499da4e5c8af49553a
+        WEB_SITE=https://projects.kde.org/projects/extragear/libs/libkipi
+         ENTERED=20151219
+         UPDATED=20151219
+           SHORT="kipi plugins"
+
+cat << EOF
+A plugin library for digikam.
+EOF

@@ -1,0 +1,14 @@
+          MODULE=libksane4
+         VERSION=4.14.3
+          SOURCE=libksane-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$VERSION/src/
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/libksane-$VERSION
+      SOURCE_VFY=sha256:3a8ae92b21bba11aa3ac2b8a8d4e4aff30de526e0f966b6ae52f57972148cda2
+        WEB_SITE=https://projects.kde.org/projects/extragear/libs/libksane
+         ENTERED=20151219
+         UPDATED=20151219
+           SHORT="sane plugin"
+
+cat << EOF
+A sane plugin library for digikam.
+EOF
