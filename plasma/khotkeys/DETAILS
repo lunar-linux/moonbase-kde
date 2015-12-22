@@ -1,12 +1,12 @@
           MODULE=khotkeys
-         VERSION=5.5.1
+         VERSION=5.5.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:1132aa80ef8c3548d82d85c50e65b131530efc6318e461670abaa2ed116c7565
+      SOURCE_VFY=sha256:4b9d5fd24b3ec2bad004284be8b2beef8ab906bf5680b9c78d0a53d821808d35
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
          ENTERED=20151123
-         UPDATED=20151217
+         UPDATED=20151222
            SHORT="hotkey support"
 
 cat << EOF
