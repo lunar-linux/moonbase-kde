@@ -21,7 +21,7 @@ optional_depends ortp       "-DWITH_LiboRTP=1"   "-DWITH_LiboRTP=0"   "for RTP p
 optional_depends openssl    "-DWITH_OpenSSL=1"   "-DWITH_OpenSSL=0"   "for secure sockets layer support"
 optional_depends qca2       "-DWITH_QCA2=1"      "-DWITH_QCA2=0"      "for crypto API support"
 optional_depends gpgme      "-DWITH_QGpgme=1"    "-DWITH_QGpgme=0"    "for encyrption support"
-optional_depends srtp       "-DWITH_SRTP=1"      "-DWITH_SRTP=0"      "for Secure Real-time Transport Protocol support"
+optional_depends libsrtp    "-DWITH_SRTP=1"      "-DWITH_SRTP=0"      "for Secure Real-time Transport Protocol support"
 optional_depends sqlite     "-DWITH_Sqlite=1"    "-DWITH_Sqlite=0"    "for sqlite database support"
 optional_depends zlib       "-DWITH_ZLIB=1"      "-DWITH_ZLIB=0"      "for zlib compression support"
 optional_depends jsoncpp    "-DWITH_JsonCpp=1"   "-DWITH_JsonCpp=0"   "to support JSON valuse"
