@@ -15,6 +15,10 @@ fi &&
 # this fixes qt5 with system jpeg - jpeg-turbo works fine without it!
 patch_it $SOURCE2 1 &&
 
+# this fixes qt5 compilation error in 
+# qt-everywhere-opensource-src-5.5.1/qtwebengine/src/3rdparty/chromium/net/third_party/nss/ssl/ssl3con.c
+patch_it $SOURCE3 1 &&
+
 # fix build with previous version of the module installed
 # see https://bugreports.qt.io/browse/QTBUG-33948 and related
 sedit "s@\(QMAKE_LFLAGS_RPATH *=\) \(.*\)@\1 -Wl,-enable-new-dtags \2@" qtbase/mkspecs/common/gcc-base-unix.conf &&
