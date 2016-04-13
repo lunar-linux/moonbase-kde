@@ -5,6 +5,7 @@
          SOURCE3=qt5-webengine-nss.patch
       SOURCE_URL=http://download.qt-project.org/official_releases/qt/${VERSION%.*}/$VERSION/single
      SOURCE2_URL=$PATCH_URL
+     SOURCE3_URL=$PATCH_URL
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qt-everywhere-opensource-src-$VERSION
       SOURCE_VFY=sha256:76a95cf6c1503290f75a641aa25079cd0c5a8fcd7cff07ddebff80a955b07de7
      SOURCE2_VFY=sha256:d3c9a6288f086d1de57f82a18b5e95b0ce2ed9331a091799a350d3c7b6fc3c6e
@@ -14,11 +15,11 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/qt-everywhere-opensource-src-$VERSION
          ENTERED=20140822
          UPDATED=20160411
            SHORT="A C++ toolkit for application development"
+
 cat << EOF
 Qt is a C++ toolkit for application development. It lets application
 developers target all major operating systems with a single application
 source code.
-
 Qt provides a platform-independent API to all central platform
 functionality: GUI, database access, networking, file handling, etc. The
 Qt library encapsulates the different APIs of different operating systems,
