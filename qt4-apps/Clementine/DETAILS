@@ -1,0 +1,17 @@
+          MODULE=Clementine
+         VERSION=1.3
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/clementine-player/Clementine/archive/$VERSION.tar.gz
+      SOURCE_VFY=sha256:55e8d283ed02e3f2376a88b012cd2003e00fef95a98b6a919d67cb57e96b8617
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.clementine-player.org
+         ENTERED=20111228
+         UPDATED=20160417
+           SHORT="A music player and library organizer"
+
+cat << EOF
+Clementine is a modern music player and library organizer.
+Clementine is a multiplatform music player. It is inspired by Amarok,
+focusing on a fast and easy-to-use interface for searching and playing
+your music.
+EOF
