@@ -1,4 +1,4 @@
-if module_installed qt4 ; then
+if module_installed qt4; then
   lrm --upgrade qt4
 fi &&
 
@@ -22,15 +22,15 @@ sedit "s:/usr/local/Trolltech/:$MODULE_PREFIX/share/$MODULE/Trolltech/:g" config
 # Needed so it can find some of the source libs during make.
 export LD_LIBRARY_PATH=$SOURCE_DIRECTORY/lib:${LD_LIBRARY_PATH} &&
 
-if [[ -d /opt/lunar/qt ]] ; then
+if [[ -d /opt/lunar/qt ]]; then
   ld_remove /opt/lunar/qt/lib
 fi &&
 
-if [[ -d /usr/lib/$MODULE ]] ; then
+if [[ -d /usr/lib/$MODULE ]]; then
   ld_remove /usr/lib/$MODULE
 fi &&
 
-if [[ $LICENSE_TYPE == "y" ]] ; then
+if [[ $LICENSE_TYPE == "y" ]]; then
   LICENSE_TYPE="-opensource"
 else
   LICENSE_TYPE="-commercial"
@@ -38,21 +38,4 @@ fi &&
 
 sedit "s/-O2/$CFLAGS/" mkspecs/common/gcc-base.conf &&
 sedit "s:-Wl,-rpath,::" mkspecs/common/gcc-base-unix.conf &&
-sed -i "/^QMAKE_LFLAGS\s/s|+=|+= ${LDFLAGS}|g" mkspecs/common/gcc-base.conf &&
-
-# Temporary. Make failes if no jit. Will revisit on next bump. Found by keios.
-OPTS+=" -scripttools -no-declarative-debug -release -optimized-qmake" &&
-
-./configure  -confirm-license "${LICENSE_TYPE}"                \
-             -bindir "${MODULE_PREFIX}/bin"                    \
-             -libdir "${MODULE_PREFIX}/lib/$MODULE"            \
-             -docdir "${MODULE_PREFIX}/share/$MODULE"          \
-             -headerdir "${MODULE_PREFIX}/include/$MODULE"     \
-             -plugindir "${MODULE_PREFIX}/lib/$MODULE/plugins" \
-             -importdir "${MODULE_PREFIX}/share/doc/$MODULE"   \
-             -datadir "${MODULE_PREFIX}/share/$MODULE"         \
-             -translationdir "${MODULE_PREFIX}/share/$MODULE"  \
-             -sysconfdir "/etc/xdg"                            \
-             -examplesdir "${MODULE_PREFIX}/share/doc/$MODULE" \
-             -demosdir "${MODULE_PREFIX}/share/doc/$MODULE"    \
-             $OPTS
+sed -i "/^QMAKE_LFLAGS\s/s|+=|+= ${LDFLAGS}|g" mkspecs/common/gcc-base.conf
