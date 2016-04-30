@@ -110,5 +110,5 @@ echo export PKG_CONFIG_PATH=\"'${QTDIR}'/lib/pkgconfig:'${PKG_CONFIG_PATH}'\"   
 
 install -m644 $SOURCE_DIRECTORY/$MODULE.rc /etc/profile.d/
 
-# Fix wrong libs path in pkgconfig files
-# find /usr/lib/pkgconfig -type f -name '*.pc' -exec perl -pi -e "s, -L${srcdir}/?\S+,,g" {} \;
+mv -f /usr/lib/qt4/pkgconfig/* /usr/lib/
+rmdir /usr/lib/qt4/pkgconfig
