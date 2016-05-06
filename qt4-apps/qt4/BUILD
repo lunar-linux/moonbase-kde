@@ -108,7 +108,7 @@ echo export QT_PLUGIN_PATH=\"'${QTDIR}'/lib/${MODULE}/plugins\" >> $SOURCE_DIREC
 echo export XDG_DATA_DIRS=\"'${XDG_DATA_DIRS:-/usr/share}':/usr/share/$MODULE\" >> $SOURCE_DIRECTORY/$MODULE.rc &&
 echo export PKG_CONFIG_PATH=\"'${QTDIR}'/lib/pkgconfig:'${PKG_CONFIG_PATH}'\"   >> $SOURCE_DIRECTORY/$MODULE.rc &&
 
-install -m644 $SOURCE_DIRECTORY/$MODULE.rc /etc/profile.d/
+install -m644 $SOURCE_DIRECTORY/$MODULE.rc /etc/profile.d/ &&
 
-mv -f /usr/lib/qt4/pkgconfig/* /usr/lib/
+mv -f /usr/lib/qt4/pkgconfig/* /usr/lib/pkgconfig/ &&
 rmdir /usr/lib/qt4/pkgconfig
