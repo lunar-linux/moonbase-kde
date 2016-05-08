@@ -1,7 +1,7 @@
           MODULE=kdepimlibs4
          VERSION=4.14.10
           SOURCE=kdepimlibs-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/15.04.3/src
+      SOURCE_URL=http://download.kde.org/Attic/applications/15.04.3/src
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/kdepimlibs-$VERSION
       SOURCE_VFY=sha256:c8cc9694add6ecf121bda050235ffa68d8307a82c85fbdffe69a8eab5be584c2
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
