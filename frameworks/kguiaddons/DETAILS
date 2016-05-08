@@ -1,12 +1,12 @@
           MODULE=kguiaddons
-         VERSION=5.17.0
+         VERSION=5.21.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:e434d05fb78d3d897e75e09bf0ad8781b87a73ff1185982e3af71fc108a525e4
+      SOURCE_VFY=sha256:5db4884d1ff24c9ea296f029702a6d745f3267313b5f0984d178e0a81bcb0d06
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kguiaddons
          ENTERED=20150205
-         UPDATED=20151213
+         UPDATED=20160504
            SHORT="utilities for graphical user interfaces"
 
 cat << EOF
