@@ -1,0 +1,14 @@
+          MODULE=messagelib
+         VERSION=16.04.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:285f2b0fd595e63a04c05ee2936bd0fac36502688768f778b27bfb317477047e
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://community.kde.org/KDE_PIM
+         ENTERED=20160505
+         UPDATED=20160505
+           SHORT="messaging library"
+
+cat << EOF
+KDE PIM messaging library.
+EOF

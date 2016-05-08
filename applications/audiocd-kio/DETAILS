@@ -1,12 +1,12 @@
           MODULE=audiocd-kio
-         VERSION=15.12.0
+         VERSION=16.04.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:a5d95ee92acf89d178ba886cece3fa2ecffb43e547df6b4be8deadb106d9cb04
+      SOURCE_VFY=sha256:d0ee282587920ad489385002b506b1f2f84046ec852127e5de8b34185f0c3de4
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://utils.kde.org/projects/ark/
          ENTERED=20120801
-         UPDATED=20151216
+         UPDATED=20160505
            SHORT="kio slave for audio CDs"
 
 cat << EOF

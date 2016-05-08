@@ -1,0 +1,14 @@
+          MODULE=libgravatar
+         VERSION=16.04.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:14c0d8a6ec57e45d5ae41748e4378b2f082171c40c2003870e3af49241f27b4d
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://community.kde.org/KDE_PIM
+         ENTERED=20160505
+         UPDATED=20160505
+           SHORT="providing Gravatar support"
+
+cat << EOF
+KDE PIM library providing Gravatar support.
+EOF

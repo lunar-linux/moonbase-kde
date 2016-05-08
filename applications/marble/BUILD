@@ -1,11 +1,10 @@
 
   . /etc/profile.d/qt5.rc &&
 
-  OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=1   \
-          -DBUILD_MARBLE_TOOLS=1             \
-          -DBUILD_MARBLE_TESTS=1             \
-          -DWITH_QextSerialPort=0            \
-          -DWITH_liblocation=0               \
+  OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=1 \
+          -DBUILD_MARBLE_EXAMPLES=0        \
+          -DBUILD_MARBLE_TESTS=0           \   
+          -DMOBILE=0                       \
           -DBUILD_MARBLE_APPS=1" &&
 
   default_cmake_build &&

@@ -1,12 +1,12 @@
           MODULE=kgpg
-         VERSION=15.12.0
+         VERSION=16.04.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:3a7243591728851ddd9135f1a340ca6ae4af5e8fbcf3ac3f400fdb2a5b55c613
+      SOURCE_VFY=sha256:e27362e23a4f6086069369d6fc88cf292f6ad231b3d0b32b9fc1bc6cf9923163
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://utils.kde.org/projects/kgpg/
          ENTERED=20120125
-         UPDATED=20151216
+         UPDATED=20160505
            SHORT="a simple GUI for GnuPG"
 
 cat << EOF

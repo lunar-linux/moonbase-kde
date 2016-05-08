@@ -1,0 +1,14 @@
+          MODULE=grantleetheme
+         VERSION=16.04.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:6f0ac32b6b9ff0b704f3f34f34c9d1cd64164e773efd14b9a4526a8b14ce8c35
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://community.kde.org/KDE_PIM
+         ENTERED=20160505
+         UPDATED=20160505
+           SHORT="Library for Grantlee theming support"
+
+cat << EOF
+Library for Grantlee theming support.
+EOF

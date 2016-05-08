@@ -1,12 +1,12 @@
           MODULE=kapptemplate
-         VERSION=15.12.0
+         VERSION=16.04.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:aa031fbdc90d8b8c6e4512c9700cfbe91ada0d71920049e5f84232651e9cdfc6
+      SOURCE_VFY=sha256:4c87d9c18d3839d19612c8a340362f16b9f0bd39bb457006aa29110ee887192f
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/development/kapptemplate/
          ENTERED=20130814
-         UPDATED=20151216
+         UPDATED=20160505
            SHORT="existing templates providing basic repeatedly written code and a proper structure"
 
 cat << EOF

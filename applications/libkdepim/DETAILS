@@ -1,0 +1,14 @@
+          MODULE=libkdepim
+         VERSION=16.04.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:ddfc34954853a54aec107de5ab910fc7ee505749215cb6eb549799de60c82705
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://community.kde.org/KDE_PIM
+         ENTERED=20160505
+         UPDATED=20160505
+           SHORT="Libraries for KDE PIM applications"
+
+cat << EOF
+Libraries for KDE PIM applications.
+EOF

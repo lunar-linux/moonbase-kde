@@ -1,6 +1,5 @@
 
-  source /etc/profile.d/qt4.rc   &&
-  source /etc/profile.d/kde4.rc  &&
+  . /etc/profile.d/qt5.rc   &&
 
 # Commenting the first occurance so the adddebug manpage doesn't get created. Causes
 # make to fail

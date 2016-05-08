@@ -1,0 +1,14 @@
+          MODULE=kdgantt2
+         VERSION=16.04.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:aec5b6638e6dd33b32cf9650d2b03d02de7808f35fa94b78d95aedf98b132b49
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://community.kde.org/KDE_PIM
+         ENTERED=20160505
+         UPDATED=20160505
+           SHORT="Library providing gantt support"
+
+cat << EOF
+Library providing gantt support.
+EOF

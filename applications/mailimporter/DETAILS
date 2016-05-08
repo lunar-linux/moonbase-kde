@@ -1,0 +1,14 @@
+          MODULE=mailimporter
+         VERSION=16.04.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:bbebdb1dbd6c17aa17d39463396f54fa33a1d06e4cb5492182c32dc0b33b4046
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://community.kde.org/KDE_PIM
+         ENTERED=20160505
+         UPDATED=20160505
+           SHORT="Mail importer library"
+
+cat << EOF
+Mail importer library.
+EOF
