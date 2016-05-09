@@ -1,7 +1,11 @@
 
   . /etc/profile.d/qt4.rc  &&
 
-  OPTS+=" -DQT4_BUILD=1 -DQCA_SUFFIX=qt4 -DBUILD_TESTS=0" &&
+  OPTS+=" -DQT4_BUILD=1 \
+          -DQCA_SUFFIX=qt4 \
+          -DBUILD_TESTS=0  \
+          -DQCA_LIBRARY_INSTALL_DIR=/usr/lib \
+          -DQCA_FEATURE_INSTALL_DIR=/usr/share/qt4/mkspecs/features/" &&
   default_cmake_build
 
   mv $SOURCE_DIRECTORY/$MODULE-oosb $SOURCE_DIRECTORY/$MODULE.qt4-oosb &&
