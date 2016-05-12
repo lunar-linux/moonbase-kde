@@ -6,7 +6,11 @@
     OPTS+=" -DQCA2_LIBRARIES=/usr/lib/libqca-qt4.so.2 -DQCA2_INCLUDE_DIR=/usr/include/Qca-qt4/QtCrypto/QtCrypto"
   fi &&
 
-  OPTS+=" -DBUILD_khelpcenter=0 -DBUILD_doc=0 -DWITH_QNtrack=0 -DWITH_NepomukCore=0" &&
+  if in_depends $MODULE samba ; then 
+    OPTS+=" -DSAMBA_INCLUDE_DIR=/usr/include/samba-4.0"
+  fi &&
+
+  OPTS+=" -DBUILD_kglobalaccel=0  -DBUILD_kuiserver=0 -DBUILD_khelpcenter=0 -DBUILD_doc=0 -DWITH_QNtrack=0 -DWITH_NepomukCore=0 " &&
 
   default_cmake_build &&
 
