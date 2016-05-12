@@ -8,9 +8,9 @@ default_build &&
 
 # The bindings install process is a little incomplete.
 if in_depends $MODULE sun-jdk; then
-  export JAVA_INCLUDE="-I/usr/java/latest/include -I/usr/java/latest/include/linux"
+  export JAVA_INCLUDE="-I/usr/lib/java/latest/include -I/usr/lib/java/latest/include/linux"
 else
-  export JAVA_INCLUDE="-I/usr/java/latest/include -I/usr/java/latest/include/linux"
+  export JAVA_INCLUDE="-I/usr/lib/java/latest/include -I/usr/lib/java/latest/include/linux"
 fi &&
 
 if in_depends $MODULE pyxdg; then
