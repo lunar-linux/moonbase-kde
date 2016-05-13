@@ -1,12 +1,12 @@
           MODULE=khangman
-         VERSION=16.04.0
+         VERSION=16.04.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:7a2b8a1d2b2fd6d12aa7c46eab350be5defa3230e77835abe795b1e5d3555952
+      SOURCE_VFY=sha256:b0ae1ab62eb932970037340bd3d7cda87f77df72b9a89f693b5184fcf38d1c22
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://edu.kde.org/khangman
          ENTERED=20110813
-         UPDATED=20160505
+         UPDATED=20160513
            SHORT="kde hangman"
 
 cat << EOF

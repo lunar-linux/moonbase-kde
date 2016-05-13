@@ -1,12 +1,12 @@
           MODULE=kde-dev-utils
-         VERSION=16.04.0
+         VERSION=16.04.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:89d0a02b65d7ac7ca4da391064df0a232574c534559a2069a5029f4438afb551
+      SOURCE_VFY=sha256:4335e437d902ba546569bca9c5127bbb1ea4230c231b3b935585f93ed93c6d79
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/kdesdk/kde-dev-utils
          ENTERED=20130418
-         UPDATED=20160505
+         UPDATED=20160513
            SHORT="Small utilities for developers using KDE/Qt libs/frameworks."
 
 cat << EOF

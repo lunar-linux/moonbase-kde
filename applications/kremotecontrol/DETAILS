@@ -1,12 +1,12 @@
           MODULE=kremotecontrol
-         VERSION=16.04.0
+         VERSION=16.04.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:8a04f0b39dbcc1df1240b11060929f418df7f157a0d15cb0b1fa25da1d96f408
+      SOURCE_VFY=sha256:6596d7ab41ec432b9eb68ecf12ea89101eee2dada18b030b6676746bfc7baef7
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/utilities/kremotecontrol/
          ENTERED=20120125
-         UPDATED=20160505
+         UPDATED=20160513
            SHORT="KDE frontend for LIRC"
 
 cat << EOF

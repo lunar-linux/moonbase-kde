@@ -1,12 +1,12 @@
           MODULE=kopete
-         VERSION=16.04.0
+         VERSION=16.04.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:a716a66c8695cc4c1f793d95fe151a4236bbe5a9147617f5f15d56661cf88af5
+      SOURCE_VFY=sha256:f081d5a53dc0593b906ae965480293942238c9a3db01cf55da8e860c323480c4
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/kdenetwork/kopete
          ENTERED=20130814
-         UPDATED=20160505
+         UPDATED=20160513
            SHORT="KDE instant messenger"
 cat << EOF
 Kopete is an instant messenger supporting AIM, ICQ, Windows Live Messenger, Yahoo,

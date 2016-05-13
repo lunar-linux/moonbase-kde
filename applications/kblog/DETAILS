@@ -1,12 +1,12 @@
           MODULE=kblog
-         VERSION=16.04.0
+         VERSION=16.04.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:935be54980dd367097d9a3d96e0336aafdcfe29870b21a43fdce0299911310c2
+      SOURCE_VFY=sha256:73525b02815854188c96c49b42d871566325c5e2b2e0af78d3abf7236e1a2b7a
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/kblog
          ENTERED=20151122
-         UPDATED=20160505
+         UPDATED=20160513
            SHORT="kde blogging library"
 
 cat << EOF

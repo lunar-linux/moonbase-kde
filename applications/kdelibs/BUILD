@@ -12,6 +12,8 @@
     OPTS+=" -DQCA2_LIBRARIES=/usr/lib/libqca-qt4.so.2 -DQCA2_INCLUDE_DIR=/usr/include/Qca-qt4/QtCrypto"
   fi &&
 
+  OPTS+=" -DKDE_DISTRIBUTION_TEXT='Lunar Linux'" &&
+
   default_cmake_build &&
 
 # If installed use ca-certificates instead of those provided by kdelibs

@@ -1,12 +1,12 @@
           MODULE=kstars
-         VERSION=16.04.0
+         VERSION=16.04.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:3e3493631c9226d0a96b9f0b5e2510bdc19342a999d76bcad6b550736d45c440
+      SOURCE_VFY=sha256:a732c3cf608fc1aa99a3e1bb1d1a289a7beec7b27456ee2d969a27344d0b5a6b
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://edu.kde.org/kstars
          ENTERED=20110813
-         UPDATED=20160505
+         UPDATED=20160513
            SHORT="Desktop Planetarium for KDE"
 
 cat << EOF

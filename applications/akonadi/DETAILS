@@ -1,12 +1,12 @@
           MODULE=akonadi
-         VERSION=16.04.0
+         VERSION=16.04.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:3394816cd5e8bfd4dfbf177c040f601e084f15b0d0feea7aa7de0fcfa318a006
+      SOURCE_VFY=sha256:0e1b16406bde573dcb9e482d580268dd358706c7c8c1b336170c5e367f2c66c6
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://techbase.kde.org/Getting_Started/Build/KDE4/Troubleshooting
          ENTERED=20080622
-         UPDATED=20160505
+         UPDATED=20160513
            SHORT="A PIM layer for KDE 4.x"
 
 cat << EOF

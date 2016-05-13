@@ -2,8 +2,8 @@ depends automoc4
 depends boost
 depends flex
 depends bison
-depends qt4
+depends qt5
 depends cmake
-depends gst-plugins-base-1.0
+depends gst-plugins-good-1.0
 
-optional_depends qt5 "" "" "for qt5 support" y
+optional_depends qt4 "" "" "for qt4 support"
