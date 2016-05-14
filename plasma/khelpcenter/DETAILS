@@ -1,12 +1,13 @@
           MODULE=khelpcenter
-         VERSION=16.04.1
+         VERSION=5.6.4
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:b66c385cf48c0364d7c425d46bc0617ca7d499b46b7cd31dc26397e413782e40
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/khelpcenter-5.6.3
+      SOURCE_VFY=sha256:0f15e37394c468b3c3f51f4c0fd8161dabba9b99ca44e69a48b712b073f0bc92
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
          ENTERED=20151123
-         UPDATED=20160513
+         UPDATED=20160514
            SHORT="Application to show KDE documentation"
 
 cat << EOF
