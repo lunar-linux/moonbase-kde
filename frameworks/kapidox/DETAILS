@@ -1,12 +1,12 @@
           MODULE=kapidox
-         VERSION=5.21.0
+         VERSION=5.22.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:dd630196a6bc0473f8bbf67a1aba85e9e5aa6a77827af240c36da33612647270
+      SOURCE_VFY=sha256:a1550820460f50e5a260e654d081e53c964b022b73ffe377cb6ced1cde184133
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kapidox
          ENTERED=20150205
-         UPDATED=20160504
+         UPDATED=20160517
            SHORT="scripts and data for building API documentation"
 
 cat << EOF

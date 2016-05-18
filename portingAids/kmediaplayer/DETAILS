@@ -1,12 +1,12 @@
           MODULE=kmediaplayer
-         VERSION=5.21.0
+         VERSION=5.22.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)/portingAids
-      SOURCE_VFY=sha256:3f663c2dbdf7f6b6c9a3c7ecead7e382f0b9fbbc785d9f1e1fe79fc24ba2e7c3
+      SOURCE_VFY=sha256:feef421d844b898f64ee43264555a64b1e792da40b0e437950abb31e5575c3de
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kmediaplayer
          ENTERED=20150205
-         UPDATED=20160504
+         UPDATED=20160517
            SHORT="provides a common interface for KParts that can play media files"
 
 cat << EOF
