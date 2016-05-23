@@ -14,7 +14,7 @@ else
 fi &&
 
 if in_depends $MODULE pyxdg; then
-  ./configure --prefix=/usr --swig-languages="python" &&
+  ./configure --prefix=/usr --swig-languages="python" $OPTS &&
   make &&
   prepare_install &&
   PYTHON_VER=`lvu installed Python | cut -c 1-3` &&
@@ -30,6 +30,6 @@ if in_depends $MODULE ruby; then
   sedit '12i $LIBS += " -lmlt++ -lmlt -lstdc++"' src/swig/ruby/build &&
   sedit "s:I../.. mlt.i:I../..mlt.i:" src/swig/ruby/build &&
 
-  ./configure --prefix=/usr --swig-languages="ruby" &&
+  ./configure --prefix=/usr --swig-languages="ruby" $OPTS &&
   default_make
 fi

@@ -11,6 +11,7 @@ optional_depends frei0r \
                  "--disable-frei0r" \
                  "for video effects support"
 
+optional_depends pulseaudio "--enable-rtaudio" "--disable-rtaudio" "for the rtaudio module"
 optional_depends libvdpau "--avformat-vdpau"   "" "for Nvidia vdpau support"
 optional_depends %JPEG    "--linsys-with-jpeg" "" "enable export of JPEG"
 
