@@ -1,8 +1,11 @@
           MODULE=libkface
          VERSION=16.04.1
           SOURCE=$MODULE-$VERSION.tar.xz
+         SOURCE2=libkface-opencv-3.1-support.patch
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+     SOURCE2_URL=$PATCH_URL
       SOURCE_VFY=sha256:16252f6da8fa54ff049791199ac9ec4d304082bc4acd5df2ad9d0b4d6f0d6b99
+     SOURCE2_VFY=sha256:01bc6b8a31337b7657fc75ccf041da4ec1eb63986c1f6dcc2ec37ee28e346c88
         WEB_SITE=http://www.kde.org
          ENTERED=20150208
          UPDATED=20160513
