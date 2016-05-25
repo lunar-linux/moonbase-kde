@@ -1,0 +1,13 @@
+default_pre_build &&
+
+patch_it $SOURCE2 1 &&
+patch_it $SOURCE3 1 &&
+
+
+sedit '/SUBDIRS += examples/d' Source/QtWebKit.pro &&
+sedit '/CONFIG +=/s/rpath//' \
+		Source/WebKit/qt/declarative/{experimental/experimental,public}.pri \
+		Tools/qmake/mkspecs/features/{force_static_libs_as_shared,unix/default_post}.prf &&
+
+# underlinked with --as-needed
+sedit '$ a LIBS += -pthread' Source/api.pri
