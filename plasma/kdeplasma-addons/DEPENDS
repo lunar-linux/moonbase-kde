@@ -1,8 +1,18 @@
 depends ibus
 depends kdelibs
 depends extra-cmake-modules
+depends kconfig
+depends kconfigwidgets
+depends kactivities-frameworks
+depends kcoreaddons
+depends ki18n
+depends kio
+depends kcmutils
+depends krunner
+depends kservice
+depends kunitconversion
+depends knewstuff
 depends plasma-workspace
 depends kross
-depends kdoctools
 
 optional_depends scim "" "" "for multibyte input Plasmoid support"
