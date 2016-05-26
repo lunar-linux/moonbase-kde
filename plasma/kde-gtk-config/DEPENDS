@@ -1,8 +1,12 @@
 depends Python
 depends extra-cmake-modules
-depends kcmutils
+depends ki18n
+depends kio
+depends kconfigwidgets
 depends knewstuff
-depends kdoctools
+depends karchive
+depends kcmutils
+depends kiconthemes
 
 optional_depends "gtk+-2" "" "" "For gtk2 configuration support"
 optional_depends "gtk+-3" "" "" "For gtk3 configuration support"
