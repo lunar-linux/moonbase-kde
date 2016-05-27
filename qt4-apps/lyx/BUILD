@@ -1,7 +1,6 @@
 if in_depends $MODULE qt5; then
   . /etc/profile.d/qt5.rc &&
-  QTDIR+=" QTDIR=/usr/lib/qt5" &&
-  OPTS+=" --enable-qt5"
+  QTDIR+=" QTDIR=/usr/lib/qt5"
 else
   . /etc/profile.d/qt4.rc
 fi &&
