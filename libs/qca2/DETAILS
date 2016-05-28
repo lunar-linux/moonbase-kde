@@ -1,13 +1,12 @@
           MODULE=qca2
-         VERSION=2.1.0
+         VERSION=2.1.1
           SOURCE=${MODULE%2}-$VERSION.tar.xz
-      SOURCE_URL=$MIRROR_URL
+      SOURCE_URL=$KDE_URL/stable/qca/$VERSION/src/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE%2}-$VERSION
-      SOURCE_VFY=sha256:ad1c2f4c2299e8ec48c729fadeedad8df00dea4ca2671df0f936fa4e0d34ace3
-   MODULE_PREFIX=${QT4_PREFIX:-/usr}
+      SOURCE_VFY=sha256:95de3e7910b5f9ec7084169989c9d98bfb527e6a4865fe17269c3b24308be983
         WEB_SITE=http://delta.affinix.com/qca/
          ENTERED=20071106
-         UPDATED=20151211
+         UPDATED=20160528
            SHORT="cross-platform crypto API"
 cat << EOF
 QCA aims to provide a straightforward and cross-platform crypto API
