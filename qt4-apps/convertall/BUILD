@@ -19,4 +19,3 @@ Categories=Application;KDE;Utility;
 EOF
 
   install -D -m644 ${MODULE}.desktop /usr/share/applications/${MODULE}.desktop
-) > $C_FIFO 2>&1
