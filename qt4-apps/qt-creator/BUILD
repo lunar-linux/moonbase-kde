@@ -1,16 +1,19 @@
 
-  source /etc/profile.d/qt4.rc &&
+  source /etc/profile.d/qt5.rc &&
 
   QT_CREATOR_BLD="$SOURCE_DIRECTORY/creator-build" &&
 
   mkdir $QT_CREATOR_BLD &&
   cd $QT_CREATOR_BLD    &&
 
-  qmake $SOURCE_DIRECTORY/qtcreator.pro &&
+  /usr/lib/qt5/bin/qmake -r $SOURCE_DIRECTORY/qtcreator.pro &&
 
-  sedit "s:qdoc3 -creator:qdoc3:" Makefile &&
+#  sedit "s:qdoc3 -creator:qdoc3:" Makefile &&
 
   make            &&
+  if [[ $MAKE_DOCS == "y" ]] ; then
+    make docs -j1
+  fi &&
   prepare_install &&
 
   make install INSTALL_ROOT=$MODULE_PREFIX/ &&
