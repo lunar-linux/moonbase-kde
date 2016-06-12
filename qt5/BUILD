@@ -4,46 +4,60 @@ else
   LICENSE_TYPE="-commercial"
 fi &&
 
+# No SSE2 for i686
+[[ 'arch' == "i686" ]] && SSE2="-no-sse2"
+
 # Making accessibility a hard option, disabling this will break QStyle and may break other internal parts of Qt and
 # create a source incompatible version which is unsupported. Why bother making it a switch if that is the case.
 # no-gtkstyle, grabs qt-4 headers via cairo when built with qt4.
-OPTS+=" -release -accessibility -gui -reduce-relocations -no-gtkstyle" &&
+OPTS+=" -gui \
+        $SSE2 \
+        -release \
+        -no-rpath \
+        -no-gtkstyle \
+        -accessibility \
+        -optimized-qmake \
+        -reduce-relocations \
+        -no-use-gold-linker" &&
 
-./configure  -confirm-license "${LICENSE_TYPE}"                            \
-             -prefix "${MODULE_PREFIX}"                                    \
-             -sysconfdir "/etc/xdg"                                        \
-             -bindir "${MODULE_PREFIX}/lib/$MODULE/bin"                    \
-             -libdir "${MODULE_PREFIX}/lib/$MODULE"                        \
-             -archdatadir "${MODULE_PREFIX}/lib/$MODULE"                   \
-             -plugindir "${MODULE_PREFIX}/lib/$MODULE/plugins"             \
-             -headerdir "${MODULE_PREFIX}/include/$MODULE"                 \
-             -datadir "${MODULE_PREFIX}/share/$MODULE"                     \
-             -docdir "${MODULE_PREFIX}/share/doc/$MODULE"                  \
-             -examplesdir "${MODULE_PREFIX}/share/doc/$MODULE"/examples    \
-             -translationdir "${MODULE_PREFIX}/share/$MODULE"/translations \
-             $OPTS                                                        &&
+if module_installed systemd; then
+  OPTS+=" -journald"
+fi &&
+
+./configure -sysconfdir "/etc/xdg" \
+            -prefix "${MODULE_PREFIX}" \
+             -confirm-license "${LICENSE_TYPE}" \
+            -libdir "${MODULE_PREFIX}/lib/$MODULE" \
+            -datadir "${MODULE_PREFIX}/share/$MODULE" \
+            -bindir "${MODULE_PREFIX}/lib/$MODULE/bin" \
+            -archdatadir "${MODULE_PREFIX}/lib/$MODULE" \
+            -docdir "${MODULE_PREFIX}/share/doc/$MODULE" \
+            -headerdir "${MODULE_PREFIX}/include/$MODULE" \
+            -plugindir "${MODULE_PREFIX}/lib/$MODULE/plugins" \
+            -examplesdir "${MODULE_PREFIX}/share/doc/$MODULE"/examples \
+            -translationdir "${MODULE_PREFIX}/share/$MODULE"/translations \
+            $OPTS &&
 
 default_make &&
 
 install -v -Dm644 qttools/src/assistant/assistant/images/assistant-128.png /usr/share/pixmaps/assistant-qt5.png &&
-install -v -Dm644 qttools/src/designer/src/designer/images/designer.png /usr/share/pixmaps/designer-qt5.png  &&
-install -v -Dm644 qttools/src/linguist/linguist/images/icons/linguist-128-32.png /usr/share/pixmaps/linguist-qt5.png  &&
+install -v -Dm644 qttools/src/designer/src/designer/images/designer.png /usr/share/pixmaps/designer-qt5.png &&
+install -v -Dm644 qttools/src/linguist/linguist/images/icons/linguist-128-32.png /usr/share/pixmaps/linguist-qt5.png &&
 install -v -Dm644 qttools/src/qdbus/qdbusviewer/images/qdbusviewer-128.png /usr/share/pixmaps/qdbusviewer-qt5.png &&
 
 # It wants to point moc_location and uic_location to ${prefix}/src/qt-everywhere-opensource-src-5.3.1/bin
 # and after much fiddling cannot get it to point them to /usr/bin. So lets just sedit these rascals.
-for i in `ls /usr/lib/$MODULE/pkgconfig/Qt5*.pc` ; do sed -i "s:/usr/src/$SOURCE_DIRECTORY:/usr:" $i ; done &&
-for i in `ls /usr/lib/$MODULE/pkgconfig/Qt5*.pc` ; do sed -i "s:-L$SOURCE_DIRECTORY:/usr:" $i ; done &&
+for i in `ls /usr/lib/$MODULE/pkgconfig/Qt5*.pc`; do sed -i "s:/usr/src/$SOURCE_DIRECTORY:/usr:" $i ; done &&
+for i in `ls /usr/lib/$MODULE/pkgconfig/Qt5*.pc`; do sed -i "s:-L$SOURCE_DIRECTORY:/usr:" $i ; done &&
 
 # Like for moc and uic, the same needs doing for the *.prl files.
 find /usr/lib/$MODULE -type f -name '*Qt5*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
 find /usr/lib/$MODULE -type f -name '*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
 
 # Remove references to the build directory from installed files 
-sed -e "s:$PWD/qtbase:/usr/lib/qt5:g" -i /usr/lib/qt5/mkspecs/modules/qt_lib_bootstrap_private.pri &&
+sedit "s:$PWD/qtbase:/usr/lib/qt5:g" /usr/lib/qt5/mkspecs/modules/qt_lib_bootstrap_private.pri &&
 find /usr/lib/$MODULE/lib{qgsttools_p,Qt5*}.prl -exec sed -i -r '/^QMAKE_PRL_BUILD_DIR/d;s/(QMAKE_PRL_LIBS =).*/\1/' {} \; &&
 find /usr/lib/$MODULE/lib{qgsttools_p,Qt5*}.prl -exec sed -i -r '/^QMAKE_PRL_BUILD_DIR/d;s/(QMAKE_PRL_LIBS =).*/\1/' {} \; &&
-
 
 cat > ${MODULE}-designer.desktop << EOF &&
 [Desktop Entry]
