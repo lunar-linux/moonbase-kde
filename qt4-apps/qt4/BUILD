@@ -31,7 +31,7 @@ for i in `ls /usr/lib/pkgconfig/Q*.pc`; do
   sed -i "s:/usr/src/qt-everywhere-opensource-src-$VERSION:/usr:" $i
 done &&
 if [ -f /usr/lib/pkgconfig/phonon.pc ]; then
-  sed -i "s:/usr/src/qt-everywhere-opensource-src-$VERSION/:/usr:" /usr/lib/$MODULE/pkgconfig/phonon.pc
+  sed -i "s:/usr/src/qt-everywhere-opensource-src-$VERSION/:/usr:" /usr/lib/pkgconfig/phonon.pc
 fi &&
 
 # Some more cleanup
@@ -106,7 +106,6 @@ install -D -m644 ${MODULE}-linguist.desktop /usr/share/applications/${MODULE}-li
 echo "export QTDIR=\"/usr\"" > $SOURCE_DIRECTORY/$MODULE.rc &&
 echo export QT_PLUGIN_PATH=\"'${QTDIR}'/lib/${MODULE}/plugins\" >> $SOURCE_DIRECTORY/$MODULE.rc &&
 echo export XDG_DATA_DIRS=\"'${XDG_DATA_DIRS:-/usr/share}':/usr/share/$MODULE\" >> $SOURCE_DIRECTORY/$MODULE.rc &&
-echo export PKG_CONFIG_PATH=\"'${QTDIR}'/lib/pkgconfig:'${PKG_CONFIG_PATH}'\"   >> $SOURCE_DIRECTORY/$MODULE.rc &&
 
 install -m644 $SOURCE_DIRECTORY/$MODULE.rc /etc/profile.d/ &&
 
