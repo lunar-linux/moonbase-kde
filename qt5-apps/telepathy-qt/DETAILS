@@ -1,16 +1,13 @@
           MODULE=telepathy-qt
-         VERSION=0.9.6
+         VERSION=0.9.7
           SOURCE=$MODULE-$VERSION.tar.gz
-         SOURCE2=telepathy-qt-gst-gstconfig.h.patch
       SOURCE_URL=http://telepathy.freedesktop.org/releases/$MODULE
-     SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:0c57dd7bf7adcf24e6c60f1f52d22b159c17b30257ac61214baf74560ad0f048
-     SOURCE2_VFY=sha256:d13940ce0819551558db38bd8c9644d10f9873454c358d117f798dd62022b2a9
-   MODULE_PREFIX=${QT4_PREFIX:-/usr}
+      SOURCE_VFY=sha256:21bad30be7ebc4ba667d53d92cd1cec1be23114103f2149404d9740721693d4f
+   MODULE_PREFIX=${QT5_PREFIX:-/usr}
         WEB_SITE=http://telepathy.freedesktop.org/wiki/Telepathy-Qt4
          ENTERED=20080112
-         UPDATED=20151201
-           SHORT="unified framework for all forms of real time conversations"
+         UPDATED=20160612
+           SHORT="Unified framework for all forms of real time conversations"
 
 cat << EOF
 The Telepathy project aims to provide a unified framework for all forms of real

@@ -1,11 +1,14 @@
-
-  patch_it $SOURCE2 1 &&
-  sedit "s:add_definitions(-D_BSD_SOURCE):add_definitions(-D_BSD_SOURCE -D_DEFAULT_SOURCE):" cmake/modules/TelepathyDefaults.cmake &&
-
+OPTS+=" -DENABLE_EXAMPLES=OFF -DENABLE_TESTS=OFF"
+if in_depends $MODULE qt4; then
   . /etc/profile.d/qt4.rc &&
-  OPTS+=" -DDESIRED_QT_VERSION=4 -DENABLE_EXAMPLES=0 -DENABLE_TESTS=0" &&
+  # make a backup copy of OPTS
+  OPTS_BAK=OPTS
+  OPTS+=" -DDESIRED_QT_VERSION=4" &&
   default_cmake_build &&
+  # restore the backup copy of OPTS
+  OPTS=OPTS_BAK
+fi &&
 
-  . /etc/profile.d/qt5.rc &&
-  OPTS+=" -DDESIRED_QT_VERSION=5 -DENABLE_EXAMPLES=0 -DENABLE_TESTS=0" &&
-  default_cmake_build
+. /etc/profile.d/qt5.rc &&
+OPTS+=" -DDESIRED_QT_VERSION=5" &&
+default_cmake_build
