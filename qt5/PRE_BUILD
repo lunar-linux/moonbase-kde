@@ -3,7 +3,7 @@ default_pre_build &&
 sedit "s/-O2/$CFLAGS/" qtbase/mkspecs/common/gcc-base.conf &&
 sedit "/^QMAKE_LFLAGS\s/s|+=|+= ${LDFLAGS}|g" qtbase/mkspecs/common/gcc-base.conf &&
 
-#  Cannot find our /usr/bin/ls or /usr/bin/echo
+# Cannot find our /usr/bin/ls or /usr/bin/echo
 sedit "s:/bin/ls:/usr/bin/ls:g" qtbase/src/corelib/global/global.pri &&
 sedit "s:/bin/echo:/usr/bin/echo:g" qtwebengine/src/3rdparty/chromium/build/common.gypi &&
 
@@ -15,8 +15,8 @@ fi &&
 # this fixes qt5 with system jpeg - jpeg-turbo works fine without it!
 patch_it $SOURCE2 1 &&
 
-( cd qtwebengine; patch_it $SOURCE3 1 ) &&
-
+# this fixes qt5 parsing for timezone files
+patch_it $SOURCE3 1 &&
 
 # fix build with previous version of the module installed
 # see https://bugreports.qt.io/browse/QTBUG-33948 and related
@@ -29,3 +29,10 @@ sedit "s@\(QMAKE_LFLAGS_RPATH *=\) \(.*\)@\1 -Wl,-enable-new-dtags \2@" qtbase/m
 if module_installed $MODULE; then
   lrm --upgrade $MODULE
 fi
+
+# fix detect of alsa 1.1.1
+sedit "s:&& SND_LIB_MINOR == 0 && SND_LIB_SUBMINOR >= 10:&& (SND_LIB_MINOR > 0 || SND_LIB_SUBMINOR >= 10):" \
+         qtbase/config.tests/unix/alsa/alsatest.cpp
+
+# # Fix libsystemd-journal detection
+sedit 's|libsystemd-journal|libsystemd|' ./qtbase/config.tests/unix/journald/journald.pro ./qtbase/src/corelib/global/global.pri
