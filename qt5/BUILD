@@ -14,7 +14,6 @@ OPTS+=" -gui \
         $SSE2 \
         -release \
         -no-rpath \
-        -no-gtkstyle \
         -accessibility \
         -optimized-qmake \
         -reduce-relocations \
