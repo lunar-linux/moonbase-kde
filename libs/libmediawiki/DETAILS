@@ -1,0 +1,16 @@
+          MODULE=libmediawiki
+         VERSION=2016-05-25
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$MIRROR_URL
+      SOURCE_VFY=sha256:0c3746c3ac3778eb5ea42320476b132e77da483d71cb8a4bf2b4cdb5eab0c7f2
+        WEB_SITE=https://quickgit.kde.org/?p=libmediawiki.git
+         ENTERED=20160525
+         UPDATED=20160525
+           SHORT="C++ interface for MediaWik"
+
+cat << EOF
+libmediawiki is a KDE C++ interface for "MediaWiki":http://www.mediawiki.org
+based web service as "wikipedia.org":http://www.wikipedia.org
+
+Note: this tarball is git clone from; https://quickgit.kde.org/?p=libmediawiki.git
+EOF
