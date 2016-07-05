@@ -1,12 +1,12 @@
           MODULE=kdesdk-strigi-analyzers
-         VERSION=16.04.1
+         VERSION=16.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:63124551467f340b9823425b297ac4ed45019aa2d579335cef6e2b6d8977d4ef
+      SOURCE_VFY=sha256:63bbd63329cbc4eab6c1b07715a3c7a66e2f2df76dd2667f21165f4240fe414a
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/kdesdk/kdesdk-strigi-analyzers
          ENTERED=20130814
-         UPDATED=20160513
+         UPDATED=20160705
            SHORT="Analyzer plugins for strigi"
 
 cat << EOF

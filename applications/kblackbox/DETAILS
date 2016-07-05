@@ -1,12 +1,12 @@
           MODULE=kblackbox
-         VERSION=16.04.1
+         VERSION=16.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:bcd3da79aebf299852d1eef34bb550cce4c5070e48d64b034a370e45b16fcb28
+      SOURCE_VFY=sha256:c184d92f611e190f37bb1a5ed18a492d326de0eef25046ae4a0c7cd24abfa9a9
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/games/kblackbox/
          ENTERED=20140713
-         UPDATED=20160513
+         UPDATED=20160705
            SHORT="Blackbox logic game"
 
 cat << EOF

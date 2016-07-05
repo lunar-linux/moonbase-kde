@@ -1,12 +1,12 @@
           MODULE=kscd
-         VERSION=16.04.1
+         VERSION=16.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:056505858d0a3aa1234aa8c737c31f36dc0bda824dc13f8fffe8ed1330f165d9
+      SOURCE_VFY=sha256:af28d6c418746165d891cdaa562bc7b899d3fc0d5f85e93f954bdf95b10b584c
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/multimedia/kmix/
          ENTERED=20120801
-         UPDATED=20160513
+         UPDATED=20160705
            SHORT="CD player"
 
 cat << EOF

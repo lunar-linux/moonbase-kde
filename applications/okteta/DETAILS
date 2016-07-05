@@ -1,12 +1,12 @@
           MODULE=okteta
-         VERSION=16.04.1
+         VERSION=16.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:f41e8b5122fd24edb3477e4066e857517ac6150520753af74d2045567834d718
+      SOURCE_VFY=sha256:3f11ab302a026f57c00beb25bcab922e5a4a536b689ccf1116fbe84fcc02ab40
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://utils.kde.org/projects/okteta/
          ENTERED=20130814
-         UPDATED=20160513
+         UPDATED=20160705
            SHORT="simple hex editor for the raw data of files"
 
 cat << EOF

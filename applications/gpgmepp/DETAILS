@@ -1,12 +1,12 @@
           MODULE=gpgmepp
-         VERSION=16.04.1
+         VERSION=16.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:4cc14fab8f556edd88cf51a2932884c45d308de2ed267023739f02c831b69825
+      SOURCE_VFY=sha256:e8718d43e606378259042766a8900756792e7ce76b381bd0e32ec354fafe7a5c
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/gpgmepp
          ENTERED=201151028
-         UPDATED=20160513
+         UPDATED=20160705
            SHORT="C++ bindings/wrapper for gpgme"
 
 cat << EOF
