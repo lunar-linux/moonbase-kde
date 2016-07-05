@@ -1,8 +1,7 @@
           MODULE=khelpcenter
          VERSION=16.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/khelpcenter-5.6.3
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src/
       SOURCE_VFY=sha256:8d11ef0d47c55f08bc1bbdd0c68d163661edf67a595cd696080b36e56a21f01a
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
