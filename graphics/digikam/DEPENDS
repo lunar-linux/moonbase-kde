@@ -1,36 +1,25 @@
 depends libxml2
 depends libxslt
+depends libpgf
+depends jasper
+depends libusb
 depends expat
 depends glib-2
+depends exiv2
 depends eigen3
-depends baloo
-depends libgphoto2
-depends kde-runtime
+depends gphoto2
+depends kf5
+depends libksane
 depends libkvkontakte
-depends libkipi4
-depends libkdcraw4
-depends libkexiv2-4
-depends libksane4
-depends opencv
+depends libmediawiki
 
-optional_depends lcms2        "-DENABLE_LCMS2=1"      "-DENABLE_LCMS2-0"     "for color management support"
-optional_depends kdepimlibs   "-DWITH_KdepimLibs=1"   "-DWITH_KdepimLibs=0"  "to use various libraries from kdepimlibs"
-optional_depends lensfun      "-DWITH_LensFun=1"      "-DWITH_LensFun=0"     "for camera lens correction support"
-optional_depends liblqr       "-DWITH_Lqr-1=1"        "-DWITH_Lqr-1=0"       "for LiquidRescale support"
-optional_depends doxygen      "-DWITH_Doxygen=1"      "-DWITH_Doxygen=0"     "for documentation"
-optional_depends gdk-pixbuf   "-DWITH_Gdk=1"          "-DWITH_Gdk=0"         "for gdk-pixbuf support"
-optional_depends qt-gstreamer "-DWITH_QtGStreamer=1"  "-DWITH_QtGStreamer=0" "for gstreamer support"
-optional_depends qca2         "-DWITH_QCA2=1"         "-DWITH_QCA2=0"        "for qca support"
-optional_depends qjson        "-DWITH_QJSON=1"        "-DWITH_QJSON=0"       "for qjson support"
-optional_depends libusb       "-DWITH_USB=1"          "-DWITH_USB=0"         "for usb device support"
-optional_depends libgpod      "-DWITH_Ipod=1"         "-DWITH_Ipod=0"        "for for Ipod support"
-optional_depends hupnp-ng     "-DWITH_Hupnp=1"        "-DWITH_Hupnp=0"       "for upnp support"
-optional_depends minimagick   "-DWITH_ImageMagick=1"  "-DWITH_ImageMagick=0" "for ImageMagick support via a ruby wrapper"
+optional_depends lcms2        ""      ""     "for color management support"
+optional_depends lensfun      ""      ""     "for camera lens correction support"
+optional_depends doxygen      ""      ""     "for documentation"
+optional_depends libgpod      ""      ""     "for for Ipod support"
 
-optional_depends libpgf       "-DPGF_INCLUDE_DIRS=/usr/include/libpgf" \
-                              "" "for Progressive Graphics File, n=use internal"
+optional_depends opencv-3     "-DENABLE_OPENCV3=1"    "-DENABLE_OPENCV3=0"   "for computer vision library support"
 
-optional_depends %MYSQL       "-DENABLE_MYSQLSUPPORT=1 -DENABLE_INTERNALMYSQL=1" \
-                              "-DENABLE_INTERNALMYSQL=0"                         \
+optional_depends %MYSQL       "-DENABLE_MYSQLSUPPORT=1 -DENABLE_INTERNALMYSQL=1"   \
+                              "-DENABLE_MYSQLSUPPORT=0 ENABLE_INTERNALMYSQL=1"     \
                               "for %MYSQL database support, ${PROBLEM_COLOR}say NO to use digikam provided server${DEFAULT_COLOR}" n
-optional_depends kQOAuth-qt4  "" "" "for OAuth 1.0 support"
