@@ -1,10 +1,8 @@
-OPTS+=" -DBUILD_simpletreemodel=0 -DBUILD_tests=0 -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr" 
+. /etc/profile.d/qt5.rc  &&
 
-source /etc/profile.d/qt4.rc  &&
-source /etc/profile.d/kde4.rc &&
+OPTS+=" -DBUILD_tests=0 -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr" &&
 
 cd extra/kipi-plugins/ &&
-
 mkdir build &&
 cd build &&
 cmake ../ $OPTS &&
