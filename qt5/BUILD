@@ -12,20 +12,23 @@ fi &&
 # no-gtkstyle, grabs qt-4 headers via cairo when built with qt4.
 OPTS+=" -gui \
         $SSE2 \
+        -no-gtk \
         -release \
         -no-rpath \
         -accessibility \
-        -optimized-qmake \
         -reduce-relocations \
         -no-use-gold-linker" &&
 
-if module_installed systemd; then
+
+if [[ "$USE_JOURNALD" == "y" && $(module_installed systemd) ]] ; then
   OPTS+=" -journald"
+ else
+  OPTS+=" -no-journald"
 fi &&
 
 ./configure -sysconfdir "/etc/xdg" \
             -prefix "${MODULE_PREFIX}" \
-             -confirm-license "${LICENSE_TYPE}" \
+            -confirm-license "${LICENSE_TYPE}" \
             -libdir "${MODULE_PREFIX}/lib/$MODULE" \
             -datadir "${MODULE_PREFIX}/share/$MODULE" \
             -bindir "${MODULE_PREFIX}/lib/$MODULE/bin" \
