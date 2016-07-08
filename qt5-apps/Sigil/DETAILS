@@ -1,13 +1,13 @@
           MODULE=Sigil
-         VERSION=0.9.5
+         VERSION=0.9.6
           SOURCE=$MODULE-$VERSION-Code.zip
       SOURCE_URL=https://github.com/user-none/Sigil/releases/download/${VERSION}
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
    MODULE_PREFIX=${QT5_PREFIX:-/usr}
-      SOURCE_VFY=sha256:fd9963c4e5b9013bd95ed0659dbc5e67c9848982800f2ec99bf96bbdfb708ff1
+      SOURCE_VFY=sha256:7856ad20116ef13fc3f79fa01c1d65c8b15ce1047f1e88b0723c2658cd8f18fd
         WEB_SITE=https://github.com/user-none/Sigil
          ENTERED=20091107
-         UPDATED=20160522
+         UPDATED=20160708
            SHORT="qt5 WYSIWYG ebook editor"
 
 cat << EOF
