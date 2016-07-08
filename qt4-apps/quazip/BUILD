@@ -1,5 +1,5 @@
 
-  patch_it $SOURCE2 1 &&
+  CXXFLAGS+=" -std=c++11 -fPIC" &&
 
   . /etc/profile.d/qt4.rc  &&
   OPTS+=" -DBUILD_WITH_QT4=1" &&
