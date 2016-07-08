@@ -1,6 +1,8 @@
 . /etc/profile.d/qt5.rc  &&
 . /etc/profile.d/kde4.rc &&
 
+CXXFLAGS+=" -std=c++11" &&
+
 OPTS+=" --arch='$CPU' --qt-libdir=/usr/lib/qt5 --qt-includedir=/usr/include/qt5 \
         --enable-gpl --enable-gpl3 --disable-gtk2 --avformat-swscale" &&
 
