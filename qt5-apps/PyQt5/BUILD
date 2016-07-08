@@ -1,6 +1,9 @@
 
   . /etc/profile.d/qt5.rc &&
 
+# sip: Deprecation warning: the -T flag is ignored and deprecated
+  sedit "s:-T::" configure.py &&
+
   sedit "s:qprinter.h:QtPrintSupport/qprinter.h:" sip/QtPrintSupport/qprinter.sip &&
 
   OPTS+=" --confirm-license --qmake=/usr/lib/qt5/bin/qmake --assume-shared --no-timestamp" &&
