@@ -1,1 +1,9 @@
-depends  qt5
+depends qt5
+depends llvm
+
+optional_depends gdb "" "" "for gdb debugger support"
+optional_depends bzr "" "" "for bazaar support"
+
+optional_depends mercurial "" "" "for mercurial support"
+
+optional_depends openssh-askpass "" "" "for SSH support"
