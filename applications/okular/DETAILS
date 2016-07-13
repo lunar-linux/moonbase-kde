@@ -1,12 +1,12 @@
           MODULE=okular
-         VERSION=16.04.2
+         VERSION=16.04.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:5a68f954e1ed6b156c93c5fcb2543085b4b323c311e819fa1368eabf661689c7
+      SOURCE_VFY=sha256:cdd590cdf29caf3ce70301499610abadec349965fd80aaaf61a36cdc1a0038a5
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/graphics/okular/
          ENTERED=20110813
-         UPDATED=20160705
+         UPDATED=20160713
            SHORT="universal document viewer"
 
 cat << EOF

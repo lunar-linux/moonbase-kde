@@ -1,12 +1,12 @@
           MODULE=kapman
-         VERSION=16.04.2
+         VERSION=16.04.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:6c27cf42708d37744e56a020d8234e9c0f4770ad194597322fbe68a8d5ae242e
+      SOURCE_VFY=sha256:118a05d2f654114e6d2318c8cf65df7e247ea7cc4bdd36bf1369d540ce5ced43
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/games/kapman/
          ENTERED=20140713
-         UPDATED=20160705
+         UPDATED=20160713
            SHORT="Pac-Man clone"
 
 cat << EOF
