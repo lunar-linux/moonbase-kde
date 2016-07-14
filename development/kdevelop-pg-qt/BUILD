@@ -1,7 +1,5 @@
+source /etc/profile.d/qt5.rc &&
 
-  patch_it $SOURCE2 1 &&
+OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=1" &&
 
-  source /etc/profile.d/qt4.rc &&
-  source /etc/profile.d/kde4.rc &&
-
-  default_cmake_build
+default_cmake_build
