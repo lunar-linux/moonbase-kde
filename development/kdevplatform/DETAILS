@@ -1,13 +1,13 @@
           MODULE=kdevplatform
-         VERSION=1.7.1
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/kdevelop/$(module_version kdevelop)/src
-      SOURCE_VFY=sha1:dbb0524ec455fe88e1aa68f03b42c845c3a87154
+         VERSION=1.7.3
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=http://download.kde.org/stable/kdevelop/$(module_version kdevelop)/src/
+      SOURCE_VFY=sha256:195134bde11672de38838f4b341ed28c58042374ca12beedacca9d30e6ab4a2b
    MODULE_PREFIX=${KDE_PREFIX:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20090824
-         UPDATED=20150203
-           SHORT="create KDE plugins"
+         UPDATED=20160714
+           SHORT="Create KDE plugins"
 
 cat << EOF
 The idea is that kdevplatform contains:

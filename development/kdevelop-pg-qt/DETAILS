@@ -2,10 +2,10 @@
          VERSION=1.0.0
           SOURCE=$MODULE-$VERSION.tar.bz2
          SOURCE2=kdevelop-pg-qt-1.0.0-bison3.patch
-      SOURCE_URL=$KDE_URL/stable/$MODULE/$VERSION/src
+      SOURCE_URL=http://download.kde.org/stable/$MODULE/$VERSION/src/
      SOURCE2_URL=http://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo-x86/dev-util/kdevelop-pg-qt/files
-      SOURCE_VFY=sha1:468bc91c5be16061dc265e9471f75462b32b73d5
-     SOURCE2_VFY=sha1:f226df0b9c73f73667b442b473508d5d61a2b487
+      SOURCE_VFY=sha256:49b395f5b45bc0aa094d6a283627bc53581a5eaae7892fd850df2f97d68bcdcc
+     SOURCE2_VFY=sha256:458a7a48418c7d6231d9c89e6e56447ab247d7e0d73ac39fe0fdcf4d78bf2075
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://techbase.kde.org/Development/KDevelop-PG-Qt_Introduction
          ENTERED=20100419
