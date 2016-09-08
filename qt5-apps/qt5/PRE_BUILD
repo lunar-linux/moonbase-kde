@@ -27,6 +27,15 @@ patch_it $SOURCE2 1 &&
 # this fixes qt5 parsing for timezone files
 patch_it $SOURCE3 1 &&
 
+# support libressl
+sedit 's:^\(#define q_SSL_get_server_tmp_key(ssl, key)\).*:\1 true:' qtbase/src/network/ssl/qsslsocket_openssl_symbols_p.h &&
+(
+pushd . &&
+cd qtbase &&
+patch_it $SOURCE4 0 &&
+popd
+) &&
+
 # fix build with previous version of the module installed
 # see https://bugreports.qt.io/browse/QTBUG-33948 and related
 sedit "s@\(QMAKE_LFLAGS_RPATH *=\) \(.*\)@\1 -Wl,-enable-new-dtags \2@" qtbase/mkspecs/common/gcc-base-unix.conf &&

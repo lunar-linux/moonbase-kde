@@ -3,13 +3,16 @@
           SOURCE=qt-everywhere-opensource-src-$VERSION.tar.xz
          SOURCE2=qt5-chromium-with-libjpeg.patch.bz2
          SOURCE3=qt5-timezone.patch.bz2
+         SOURCE4=patch-src_network_ssl_qsslcontext__openssl.cpp.patch
       SOURCE_URL=http://download.qt-project.org/official_releases/qt/${VERSION%.*}/$VERSION/single
      SOURCE2_URL=$PATCH_URL
      SOURCE3_URL=$PATCH_URL
+     SOURCE4_URL=$PATCH_URL
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qt-everywhere-opensource-src-$VERSION
       SOURCE_VFY=sha256:a6a2632de7e44bbb790bc3b563f143702c610464a7f537d02036749041fd1800
      SOURCE2_VFY=sha256:d3c9a6288f086d1de57f82a18b5e95b0ce2ed9331a091799a350d3c7b6fc3c6e
-     SOURCE3_VFY=9c66c8bae62498a91f7c1cc94592cdbfa09241857f1c7416518fa3bd553cb98b
+     SOURCE3_VFY=sha256:9c66c8bae62498a91f7c1cc94592cdbfa09241857f1c7416518fa3bd553cb98b
+     SOURCE4_VFY=sha256:c13656021be8c8f8d94b3de4e1383d701c0d21912b6496cbd466c898e6380f6d
    MODULE_PREFIX=${QT5_PREFIX:-/usr}
         WEB_SITE=http://qt-project.org
          ENTERED=20140822
