@@ -19,7 +19,7 @@ optional_depends freetype2  "-system-freetype"   "-qt-freetype"   "use system pr
 optional_depends harfbuzz   "-system-harfbuzz"   "-qt-harfbuzz"   "use system provided harfbuzz for text shaping, else use qt provided harfbuzz"
 optional_depends dbus       "-dbus-linked"       "-no-dbus"       "for QtDBus module support"
 optional_depends %JPEG      "-system-libjpeg"    "-qt-libjpeg"    "use system provided jpeg, else use qt provided jpeg"
-optional_depends openssl    "-openssl-linked"    "-no-openssl"    "for Secure Sockets support"
+optional_depends %OSSL      "-openssl-linked"    "-no-openssl"    "for Secure Sockets support"
 optional_depends libpng     "-system-libpng"     "-qt-libpng"     "use system provided png, else use qt provided png"
 optional_depends zlib       "-system-zlib"       "-qt-zlib"       "choose system or Qt version of zlib"
 optional_depends pulseaudio "-pulseaudio"        "-no-pulseaudio" "for pulseaudio support"
