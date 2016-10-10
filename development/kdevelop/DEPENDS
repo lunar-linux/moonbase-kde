@@ -1,5 +1,18 @@
 depends check
+depends llvm
 depends kde-baseapps
 depends kdevplatform
+depends krunner
 
-optional_depends okteta "-DWITH_LibOktetaKasten=1" "-DWITH_LibOktetaKasten=0" "to support hex edit of raw data files"
+optional_depends gdb        "" "" "for GNU debugger support"
+optional_depends konsole    "" "" "for embeded terminal"
+optional_depends git        "" "" "for Git support"
+optional_depends subversion "" "" "for SVN support"
+optional_depends cvs        "" "" "for CVS support"
+
+optional_depends plasma-framework "" "" "for Plasma addons"
+
+optional_depends okteta \
+                 "-DWITH_LibOktetaKasten=1" \
+                 "-DWITH_LibOktetaKasten=0" \
+                 "to support hex edit of raw data files"
