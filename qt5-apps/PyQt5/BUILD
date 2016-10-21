@@ -1,5 +1,4 @@
 OPTS+=" --no-timestamp \
-        --no-sip-files \
         --assume-shared \
         --confirm-license \
         --qmake=/usr/lib/qt5/bin/qmake" &&
