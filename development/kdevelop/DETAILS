@@ -1,12 +1,12 @@
           MODULE=kdevelop
-         VERSION=5.0
+         VERSION=5.0.2
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://download.kde.org/stable/$MODULE/$VERSION.0/src/
-      SOURCE_VFY=sha256:5e034b8670f4ba13ccb2948c28efa0b54df346e85b648078698cca8974ea811c
+      SOURCE_URL=http://download.kde.org/stable/$MODULE/$VERSION/src/
+     SOURCE_VFY=sha256:9b017901167723230dee8b565cdc7b0e61762415ffcc0a32708f04f7ab668666
    MODULE_PREFIX=${KDE_PREFIX:-/usr}
         WEB_SITE=http://www.kdevelop.org/
          ENTERED=20090824
-         UPDATED=20160901
+         UPDATED=20161017
            SHORT="IDE for KDE"
 
 cat << EOF
