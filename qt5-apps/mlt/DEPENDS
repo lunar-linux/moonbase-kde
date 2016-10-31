@@ -6,16 +6,25 @@ optional_depends sox \
                  "--disable-sox" \
                  "for sox support"
 
-optional_depends frei0r \
+optional_depends frei0r-plugins \
                  "--enable-frei0r" \
                  "--disable-frei0r" \
                  "for video effects support"
 
-optional_depends pulseaudio "--enable-rtaudio" "--disable-rtaudio" "for the rtaudio module"
-optional_depends libvdpau "--avformat-vdpau"   "" "for Nvidia vdpau support"
-optional_depends %JPEG    "--linsys-with-jpeg" "" "enable export of JPEG"
+optional_depends pulseaudio \
+                 "--enable-rtaudio" \
+                 "--disable-rtaudio" \
+                 "for the rtaudio module"
 
-optional_depends %JAVA_SDK "" "" "to build Java bindings"
+optional_depends libvdpau \
+                 "--avformat-vdpau" "" \
+                 "for Nvidia vdpau support"
+
+optional_depends %JPEG \
+                 "--linsys-with-jpeg" "" \
+                 "enable export of JPEG"
+
+optional_depends %JAVA_SDK  "" "" "to build Java bindings"
 optional_depends lua        "" "" "to build lua bindings"
 optional_depends pyxdg      "" "" "to build python bindings"
 optional_depends perl       "" "" "to build perl bindings"
