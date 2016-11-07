@@ -1,14 +1,15 @@
 # don't forget to update kipi-plugins too
           MODULE=digikam
-         VERSION=5.2.0
+         VERSION=5.3.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://download.kde.org/stable/$MODULE/
-      SOURCE_VFY=sha256:cf243fc1518b5bb6e289573c76d89b5fdcc50be89f6312b276af3320763c9260
+      SOURCE_VFY=sha256:b36cfa27278936d41ab5f33c99fe9ccdfd545eada3e1e32efe9f9e3fdf2c3e5c
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.digikam.org/
          ENTERED=20090318
-         UPDATED=20160924
-           SHORT="kde4 version of digikam"
+         UPDATED=20161107
+           SHORT="KDE version of digikam"
+
 cat << EOF
 Digikam is a simple digital photo management application, which makes importing
 and organizing digital photos a "snap". The photos can be organized in albums
