@@ -1,6 +1,9 @@
 # Temporary. Make failes if no jit. Will revisit on next bump. Found by keios.
 OPTS+=" -scripttools -no-declarative-debug -release -optimized-qmake" &&
 
+# Build with gcc 6.2+
+CXXFLAGS+=" -std=gnu++98 -Wno-deprecated" &&
+
 ./configure -confirm-license -opensource        \
             -prefix /usr                        \
             -bindir /usr/bin                    \
