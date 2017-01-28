@@ -8,9 +8,9 @@ fi &&
 
 # Try and use our flags everywhere
 sedit "s/-O2/\$\$CFLAGS/" qtbase/mkspecs/common/gcc-base.conf &&
-sed -i -e "s:QMAKE_LFLAGS           +=:QMAKE_LFLAGS           += \$\$LDFLAGS:" qtbase/mkspecs/common/gcc-base.conf &&
-sed -i -e "s:QMAKE_LFLAGS_RELEASE   +=:QMAKE_LFLAGS_RELEASE   += \$\$LDFLAGS:" qtbase/mkspecs/common/gcc-base.conf &&
-sed -i -e "s:QMAKE_LFLAGS_RELEASE   += -Wl,-O1:QMAKE_LFLAGS_RELEASE   += \$\$LDFLAGS:" qtbase/mkspecs/common/g++-unix.conf &&
+sedit "s:QMAKE_LFLAGS +=:QMAKE_LFLAGS += \$\$LDFLAGS:" qtbase/mkspecs/common/gcc-base.conf &&
+sedit "s:QMAKE_LFLAGS_RELEASE +=:QMAKE_LFLAGS_RELEASE += \$\$LDFLAGS:" qtbase/mkspecs/common/gcc-base.conf &&
+sedit "s:QMAKE_LFLAGS_RELEASE += -Wl,-O1:QMAKE_LFLAGS_RELEASE += \$\$LDFLAGS:" qtbase/mkspecs/common/g++-unix.conf &&
 
 # Cannot find our /usr/bin/ls or /usr/bin/echo
 sedit "s:/bin/ls:/usr/bin/ls:g" qtbase/src/corelib/global/global.pri &&
@@ -24,15 +24,12 @@ fi &&
 # this fixes qt5 with system jpeg - jpeg-turbo works fine without it!
 patch_it $SOURCE2 1 &&
 
-# this fixes qt5 parsing for timezone files
-patch_it $SOURCE3 1 &&
-
 # support libressl
 sedit 's:^\(#define q_SSL_get_server_tmp_key(ssl, key)\).*:\1 true:' qtbase/src/network/ssl/qsslsocket_openssl_symbols_p.h &&
 (
 pushd . &&
 cd qtbase &&
-patch_it $SOURCE4 0 &&
+patch_it $SOURCE3 0 &&
 popd
 ) &&
 
@@ -48,9 +45,5 @@ if module_installed $MODULE; then
   lrm --upgrade $MODULE
 fi &&
 
-# fix detect of alsa 1.1.1
-sedit "s:&& SND_LIB_MINOR == 0 && SND_LIB_SUBMINOR >= 10:&& (SND_LIB_MINOR > 0 || SND_LIB_SUBMINOR >= 10):" \
-         qtbase/config.tests/unix/alsa/alsatest.cpp &&
-
-# # Fix libsystemd-journal detection
+# fix libsystemd-journal detection
 sedit 's|libsystemd-journal|libsystemd|' ./qtbase/config.tests/unix/journald/journald.pro ./qtbase/src/corelib/global/global.pri

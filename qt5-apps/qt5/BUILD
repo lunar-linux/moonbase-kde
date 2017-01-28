@@ -9,18 +9,17 @@ fi &&
 
 # Making accessibility a hard option, disabling this will break QStyle and may break other internal parts of Qt and
 # create a source incompatible version which is unsupported. Why bother making it a switch if that is the case.
-# no-gtkstyle, grabs qt-4 headers via cairo when built with qt4.
+# no-gtkstyle, grabs qt-5 headers via cairo when built with qt5.
 OPTS+=" -gui \
-        $SSE2 \
         -no-gtk \
         -release \
         -no-rpath \
         -accessibility \
         -reduce-relocations \
-        -no-use-gold-linker" &&
+        -no-use-gold-linker \
+        $SSE2" &&
 
-
-if [[ "$USE_JOURNALD" == "y" && $(module_installed systemd) ]] ; then
+if [[ "$USE_JOURNALD" == "y" && $(module_installed systemd) ]]; then
   OPTS+=" -journald"
  else
   OPTS+=" -no-journald"
@@ -89,7 +88,7 @@ install -D -m644 ${MODULE}-assistant.desktop ${MODULE_PREFIX}/share/applications
 
 cat > ${MODULE}-qtconfig.desktop << EOF &&
 [Desktop Entry]
-Name=Qt5 QDbusViewer 
+Name=Qt5 QDbusViewer
 GenericName=D-Bus Debugger
 Comment=Debug D-Bus applications
 Exec=${MODULE_PREFIX}/lib/$MODULE/bin/qdbusviewer
@@ -124,4 +123,9 @@ export PATH="\${Qt5_DIR}/lib/${MODULE}/bin:\${PATH}"
 export CMAKE_PREFIX_PATH="\${Qt5_DIR}/lib/${MODULE}/cmake:\${CMAKE_PREFIX_PATH}"
 EOF
 
-install -m644 $SOURCE_DIRECTORY/$MODULE.rc /etc/profile.d/
+install -m644 $SOURCE_DIRECTORY/$MODULE.rc /etc/profile.d/ &&
+
+if [[ "$PKGCONFIG" == "y" ]]; then
+  mv -f /usr/lib/qt5/pkgconfig/* /usr/lib/pkgconfig/ &&
+  rmdir /usr/lib/qt5/pkgconfig
+fi

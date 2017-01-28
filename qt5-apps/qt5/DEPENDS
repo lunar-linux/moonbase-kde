@@ -32,9 +32,10 @@ optional_depends postgresql "-plugin-sql-psql"   "-no-sql-psql"   "for postgresq
 optional_depends unixODBC   "-plugin-sql-odbc"   "-no-sql-odbc"   "for unixODBC support"
 optional_depends freetds    "-plugin-sql-tds"    "-no-sql-tds"    "for tabular data stream support"
 
-optional_depends sqlite "-system-sqlite -plugin-sql-sqlite" \
-                        "-no-sql-sqlite" \
-                        "for sqlite database support"
+optional_depends sqlite \
+                 "-system-sqlite -plugin-sql-sqlite" \
+                 "-no-sql-sqlite" \
+                 "for sqlite database support"
 
 optional_depends gst-plugins-base-1.0 "" "" "for QtWebKit HTML5 Video Support"
 optional_depends ca-certificates      "" "" "for security certificate support"
