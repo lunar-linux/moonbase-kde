@@ -1,14 +1,15 @@
           MODULE=qscintilla2
-         VERSION=gpl-2.9.3
+         VERSION=gpl-2.9.4
           SOURCE=QScintilla\_$VERSION.tar.gz
       SOURCE_URL=http://sourceforge.net/projects/pyqt/files/QScintilla2/QScintilla-${VERSION##*-}/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/QScintilla_gpl-${VERSION##*-}
-      SOURCE_VFY=sha256:98aab93d73b05635867c2fc757acb383b5856a0b416e3fd7659f1879996ddb7e
+      SOURCE_VFY=sha256:8b3a23023e9f0573caed6f9cee86f898d87b768ee15b8c211a423783a4cfa4e6
    MODULE_PREFIX=${QTDIR:-/usr}
         WEB_SITE=http://www.riverbankcomputing.co.uk/software/qscintilla/intro
          ENTERED=20070528
-         UPDATED=20160918
+         UPDATED=20170204
            SHORT="Port to Qt of Scintilla C++ editor class"
+
 cat << EOF
 QScintilla includes features especially useful when editing and
 debugging source code. These include support for syntax styling,
