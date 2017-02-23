@@ -1,4 +1,7 @@
 depends phonon
 depends xine-lib
 
-optional_depends libxcb "-DWITH_XCB=ON" "-DWITH_XCB=OFF" "for X Window System protocol support"
+optional_depends libxcb \
+                 "-DWITH_XCB=ON" \
+                 "-DWITH_XCB=OFF" \
+                 "for X Window System protocol support"
