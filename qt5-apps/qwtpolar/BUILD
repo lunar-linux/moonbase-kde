@@ -1,7 +1,7 @@
 
-  source /etc/profile.d/qt4.rc  &&
+  source /etc/profile.d/qt5.rc  &&
 
-  echo "INCLUDEPATH += /usr/include/qwt-6" >> qwtpolarbuild.pri &&  
+  echo "INCLUDEPATH += /usr/include/qwt" >> qwtpolarbuild.pri &&
   sed -i -e 's/^.*QwtPolarExamples//' qwtpolarconfig.pri &&
   sed -i -e 's/$${QWT_POLAR_INSTALL_PREFIX}\/doc/\/usr\/share\/doc\/qwt\//' qwtpolarconfig.pri &&
   sed -i -e 's/$${QWT_POLAR_INSTALL_PREFIX}\/include/\/usr\/include\/qwt\//' qwtpolarconfig.pri &&
