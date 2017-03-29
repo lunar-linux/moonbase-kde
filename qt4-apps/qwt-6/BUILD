@@ -1,5 +1,5 @@
 
-  source /etc/profile.d/qt4.rc &&
+  source /etc/profile.d/qt5.rc &&
 
 #  for i in `ls src/*.h` ; do sedit "s:qwt_global.h :qwt-6/qwt_global.h:" $i ; done &&
 
