@@ -1,13 +1,13 @@
           MODULE=qt-creator
-            VERS=4.2.0
+            VERS=4.2.2
          VERSION=opensource-src-$VERS
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=http://download.qt-project.org/official_releases/qtcreator/${VERS%.*}/$VERS/
-      SOURCE_VFY=sha256:0e05783bbc3a38aa935dd1b17191bcbc2af3cf6f7197865ee089fe094d0cf27b
+      SOURCE_VFY=sha256:2537c2fcd127136241d0bf3bf9e1f03cf35be1a24414479d5502a7539ca25a38
    MODULE_PREFIX=${QT5_PREFIX:-/usr}
         WEB_SITE=http://qt-project.org/
          ENTERED=20090303
-         UPDATED=20161213
+         UPDATED=20170422
            SHORT="cross-platform integrated development environment"
 
 cat << EOF
