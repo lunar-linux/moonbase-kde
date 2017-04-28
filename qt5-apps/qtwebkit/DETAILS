@@ -1,12 +1,15 @@
           MODULE=qtwebkit
          VERSION=5.8.0
           SOURCE=$MODULE-opensource-src-$VERSION.tar.xz
+         SOURCE2=$MODULE-icu59.patch.xz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-opensource-src-$VERSION
       SOURCE_URL=https://download.qt.io/community_releases/${VERSION%.*}/$VERSION-final/
+     SOURCE2_URL=$PATCH_URL
       SOURCE_VFY=sha256:79ae8660086bf92ffb0008b17566270e6477c8fa0daf9bb3ac29404fb5911bec
+     SOURCE2_VFY=sha256:ddccf4c7fbee185663924720a5db8a9813a6995fb51338f0dfc8f44e1daf03ed
         WEB_SITE=http://qt-project.org/
          ENTERED=20160505
-         UPDATED=20170128
+         UPDATED=20170428
            SHORT="Qt based webkit"
 
 cat << EOF
