@@ -1,12 +1,15 @@
           MODULE=smb4k
-         VERSION=1.2.2
-          SOURCE=smb4k-$VERSION.tar.xz
+         VERSION=2.0.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+         SOURCE2=$MODULE-CVE-2017-8849.patch
       SOURCE_URL=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha256:338b43e9be4e0d8263329f145331656ff7d134e0038c3e830fb8a7b57f3cb5f6
+     SOURCE2_URL=$PATCH_URL
+      SOURCE_VFY=sha256:8a9f9bbfc9876816393d9f269952ddfe896c540e2de26b634b8e709a13ceca95
+     SOURCE2_VFY=sha256:affa60422258166886370e242f0f2ed5c5a0cf01fb819afead2132202e68b308
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://smb4k.berlios.de
          ENTERED=20091002
-         UPDATED=20161127
+         UPDATED=20170511
            SHORT="SMB share browser for KDE"
 
 cat << EOF
