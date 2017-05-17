@@ -5,7 +5,7 @@ else
   . /etc/profile.d/qt4.rc
 fi &&
 
-OPTS+=" --enable-build-type=release" &&
+OPTS+=" --without-included-mythes" &&
 
 default_build &&
 

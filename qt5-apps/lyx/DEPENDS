@@ -1,11 +1,9 @@
 depends Python
 depends ImageMagick
 depends texlive
+depends bc
 
 optional_depends qt5 "--enable-qt5" "" "to build it with Qt 5.x" y
-
-optional_depends qt4  "" "" "to build it with Qt 4.x" n
-optional_depends perl "" "" "to import LaTeX documents into LyX"
 
 optional_depends latex-xft-fonts \
                  "" "" "to enable math preview"
