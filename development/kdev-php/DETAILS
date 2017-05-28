@@ -1,12 +1,12 @@
           MODULE=kdev-php
-         VERSION=5.1.0
+         VERSION=5.1.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://download.kde.org/stable/kdevelop/$(module_version kdevelop)/src/
-     SOURCE_VFY=sha256:bafb0cf407a80476ce0d2c0316bff304ff766c3dbee014e7ed2df2fc2160d5ab
+     SOURCE_VFY=sha256:a33abd4837354218891225f0e18b7e9eb6e106cc1c744731a9003a9ea71e1404
    MODULE_PREFIX=${KDE_PREFIX:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20100501
-         UPDATED=20170319
+         UPDATED=20170528
            SHORT="S PHP plugin for kdevelop"
 
 cat << EOF
