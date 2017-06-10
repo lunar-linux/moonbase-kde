@@ -1,5 +1,5 @@
           MODULE=qt5
-         VERSION=5.8.0
+         VERSION=5.9.0
           SOURCE=qt-everywhere-opensource-src-$VERSION.tar.xz
          SOURCE2=qt5-chromium-with-libjpeg.patch.bz2
          SOURCE3=patch-src_network_ssl_qsslcontext__openssl.cpp.patch
@@ -7,13 +7,13 @@
      SOURCE2_URL=$PATCH_URL
      SOURCE3_URL=$PATCH_URL
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qt-everywhere-opensource-src-$VERSION
-      SOURCE_VFY=sha256:0f4c54386d3dbac0606a936a7145cebb7b94b0ca2d29bc001ea49642984824b6
+      SOURCE_VFY=sha256:f70b5c66161191489fc13c7b7eb69bf9df3881596b183e7f6d94305a39837517
      SOURCE2_VFY=sha256:d3c9a6288f086d1de57f82a18b5e95b0ce2ed9331a091799a350d3c7b6fc3c6e
      SOURCE3_VFY=sha256:c13656021be8c8f8d94b3de4e1383d701c0d21912b6496cbd466c898e6380f6d
    MODULE_PREFIX=${QT5_PREFIX:-/usr}
         WEB_SITE=http://qt-project.org
          ENTERED=20140822
-         UPDATED=20170128
+         UPDATED=20170604
            SHORT="A C++ toolkit for application development"
 
 cat << EOF
