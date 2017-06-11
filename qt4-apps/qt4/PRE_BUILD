@@ -24,6 +24,9 @@ sedit "s:/bin/ls:/usr/bin/ls:g" src/corelib/global/global.pri src/3rdparty/webki
 # the group of sedit to repoint moc, uic and rcc locations to /usr/bin.
 sedit "s:/usr/local/Trolltech/:$MODULE_PREFIX/share/$MODULE/Trolltech/:g" configure &&
 
+# build with icu59+
+sedit "/qdebug\.h/ a #define UCHAR_TYPE unsigned short" src/corelib/tools/qlocale_icu.cpp &&
+
 # Needed so it can find some of the source libs during make.
 export LD_LIBRARY_PATH=$SOURCE_DIRECTORY/lib:${LD_LIBRARY_PATH} &&
 
