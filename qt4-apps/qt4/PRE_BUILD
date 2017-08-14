@@ -9,13 +9,15 @@ patch_it $SOURCE2 1 &&
 # Seems their boost fix was incomplete. There are still a few modules like avogadro
 # that still have trouble with boost_join.
 sedit "193i pp.macros[\"BOOST_LEXICAL_CAST_INCLUDED\"];" src/tools/moc/main.cpp &&
-sedit "195i pp.macros[\"BOOST_NO_TEMPLATE_PARTIAL_SPECIALIZATION\"];" src/tools/moc/main.cpp &&
-sedit "194i pp.macros[\"BOOST_NEXT_PRIOR_HPP_INCLUDED\"];" src/tools/moc/main.cpp &&
+sedit "193i pp.macros[\"BOOST_NO_TEMPLATE_PARTIAL_SPECIALIZATION\"];" src/tools/moc/main.cpp &&
+sedit "193i pp.macros[\"BOOST_NEXT_PRIOR_HPP_INCLUDED\"];" src/tools/moc/main.cpp &&
+sedit "193i pp.macros[\"BOOST_TYPE_TRAITS_HPP\"];" src/tools/moc/main.cpp &&
+sedit "193i pp.macros[\"_SYS_SYSMACROS_H_OUTER\"];" src/tools/moc/main.cpp &&
 
 # Build with gcc6
 sedit 's:ForegroundMask  = .*:ForegroundMask  = 0x1f << ForegroundShift,:' src/xmlpatterns/api/qcoloroutput_p.h &&
 sedit 's:BackgroundMask  = .*:BackgroundMask  = 0x7 << BackgroundShift:' src/xmlpatterns/api/qcoloroutput_p.h &&
-sedit 's:5\*|4\*:6*|5*|4*:' configure &&
+sedit 's:5\*|4\*:7*|6*|\0:' configure &&
 
 # This lives in /usr/bin/
 sedit "s:/bin/ls:/usr/bin/ls:g" src/corelib/global/global.pri src/3rdparty/webkit/Source/WebCore/loader/FTPDirectoryParser.h src/3rdparty/webkit/Source/WebCore/loader/FTPDirectoryParser.cpp &&
