@@ -1,18 +1,16 @@
           MODULE=smb4k
-         VERSION=2.0.1
+         VERSION=2.0.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha256:0418ca9ae9a62cde6cfdc4ffad7525868048827366166578936e988ce7a6009e
-   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+      SOURCE_VFY=sha256:01cbd10fe7a293243a65333baa65871eec8de007d0110639498fc1e4c190a199
         WEB_SITE=http://smb4k.berlios.de
          ENTERED=20091002
-         UPDATED=20170604
+         UPDATED=20170822
            SHORT="SMB share browser for KDE"
 
 cat << EOF
-Smb4K is an SMB share browser for KDE4. Its aim is to provide a tool for an
+Smb4K is an SMB share browser for KDE. Its aim is to provide a tool for an
 easy access to the SMB shares of your local network neighborhood.
-
 Features so far:
 - Scanning for (active) workgroups, hosts, and shares
 - Mounting/unmounting of SMB shares, including unmounting all shares at once
