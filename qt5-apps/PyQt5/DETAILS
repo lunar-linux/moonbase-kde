@@ -1,13 +1,13 @@
           MODULE=PyQt5
-         VERSION=5.9
+         VERSION=5.9.1
           SOURCE=$MODULE\_gpl-$VERSION.tar.gz
       SOURCE_URL=$SFORGE_URL/pyqt/PyQt5/PyQt-$VERSION/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/PyQt5_gpl-$VERSION
    MODULE_PREFIX=${QT5_PREFIX:-/usr}
-      SOURCE_VFY=sha256:ab0e7999cf202cc72962c78aefe461d16497b3c1a8282ab966ad90b6cb271096
+      SOURCE_VFY=sha256:5fc009448ea78c8fd48eb7083a7b93734dbd61290a9a21dab674096a7762b4ca
         WEB_SITE=http://www.riverbankcomputing.com/software/pyqt/
          ENTERED=20141111
-         UPDATED=20170711
+         UPDATED=20171103
            SHORT="Python bindings for Qt 5.x"
 
 cat << EOF
