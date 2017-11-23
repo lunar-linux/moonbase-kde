@@ -15,8 +15,10 @@ OPTS+=" -gui \
         -release \
         -no-rpath \
         -accessibility \
-        -reduce-relocations \
+        -nomake examples \
+        -optimized-qmake \
         -no-use-gold-linker \
+        -reduce-relocations \
         $SSE2" &&
 
 if [[ "$USE_JOURNALD" == "y" && $(module_installed systemd) ]]; then
