@@ -1,0 +1,16 @@
+          MODULE=lokalize
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:21561303223a0f8ebc45ba985f3fe77d01921973f2284dbd8f0b2626d6f7c3b8
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/development/lokalize/
+         ENTERED=20130814
+         UPDATED=20160713
+           SHORT="Computer-Aided Translation System"
+
+cat << EOF
+Lokalize is a computer-aided translation system that focuses on productivity and quality 
+assurance. It is targeted for software translation and also integrates external conversion 
+tools for freelance office document translation.
+EOF

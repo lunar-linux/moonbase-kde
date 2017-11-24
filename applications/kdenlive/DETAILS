@@ -1,0 +1,16 @@
+          MODULE=kdenlive
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:d5af3f96c1d43c3f0a28844b0c56dd3951f07cd6a48355096cb6272d1dbba40c
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://kdenlive.sourceforge.net
+         ENTERED=20081201
+         UPDATED=20160713
+           SHORT="A non-linear video editing application for KDE4"
+
+cat << EOF
+Kdenlive is a non-linear video editor for KDE4. It relies on a seperate
+renderer, piave, to handle it's rendering. Kdenlive supports multitrack
+editing.
+EOF

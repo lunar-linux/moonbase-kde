@@ -1,0 +1,23 @@
+          MODULE=kcalc
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:a6f2e4efbaa7b987057986c065d9fd00903292edfb3090907ff00ae6a52b68ad
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://utils.kde.org/projects/kcalc/
+         ENTERED=20120125
+         UPDATED=20160713
+           SHORT="kde based calculator"
+
+cat << EOF
+KCalc is a calculator which offers many more mathematical functions than meet the eye on a first glance.
+Features
+
+    The usual functionality offered by most scientific calculators
+    Trigonometric functions, logic operations, and statistical calculations.
+    Cut and paste numbers from/into its display.
+    Results-stack which lets you conveniently recall previous results.
+    Configurable display colors and font.
+    Configurable precision and the number of digits after the period.
+    Great number of useful key-bindings, making it easy to use without a pointing device.
+EOF

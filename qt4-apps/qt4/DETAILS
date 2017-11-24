@@ -1,14 +1,15 @@
           MODULE=qt4
-         VERSION=4.8.6
+         VERSION=4.8.7
           SOURCE=qt-everywhere-opensource-src-$VERSION.tar.gz
+         SOURCE2=qt4-improve-cups-support.patch
       SOURCE_URL=http://download.qt-project.org/official_releases/qt/${VERSION%.*}/$VERSION
+     SOURCE2_URL=$PATCH_URL
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qt-everywhere-opensource-src-$VERSION
-      SOURCE_VFY=sha1:ddf9c20ca8309a116e0466c42984238009525da6
-   MODULE_PREFIX=${QT4_PREFIX:-/usr}
+      SOURCE_VFY=sha256:e2882295097e47fe089f8ac741a95fef47e0a73a3f3cdf21b56990638f626ea0
+     SOURCE2_VFY=sha256:3ccfefb432015e4a4ea967b030c51b10dcdfb1f63445557908ddae5e75012d33
         WEB_SITE=http://www.trolltech.com/qt
          ENTERED=20020420
-         UPDATED=20140426
-      MAINTAINER=florin@lunar-linux.org
+         UPDATED=20151202
            SHORT="A C++ toolkit for application development"
 
 cat << EOF

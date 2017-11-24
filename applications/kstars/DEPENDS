@@ -1,0 +1,9 @@
+depends eigen3
+depends kinit
+depends kplotting
+depends ktexteditor
+
+optional_depends libindi    "" "" "For instrument support"
+optional_depends wcslib     "" "" "For World Coordinate System support,${PROBLEM_COLOR}say yes to cfitsio when asked by wcslib${QUERY_COLOR}"
+optional_depends xplanet    "" "" "Renders an image of all the major planets and most satellites"
+optional_depends astrometry "" "" "for astrometric calibration meta-data support"

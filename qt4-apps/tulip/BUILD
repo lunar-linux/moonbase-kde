@@ -1,7 +1,5 @@
 
-  source /etc/profile.d/qt4.rc &&
-
-  sedit "s:FTGL/FTGL.h:FTGL/ftgl.h:g" FindFTGL.cmake &&
+  . /etc/profile.d/qt4.rc &&
 
 #If not specify Release it thinks it is using debug and make will fail
   OPTS+=" -DCMAKE_BUILD_TYPE=Release -DBUILD_DOC=0" &&

@@ -3,6 +3,7 @@ depends raptor2
 depends rasqal
 depends libiodbc
 depends qt4
+depends qt5
 
 optional_depends "dbus"      "-DSOPRANO_DISABLE_DBUS=OFF"             "-DSOPRANO_DISABLE_DBUS=ON"             "for dbus integration"
 optional_depends "redland"   "-DSOPRANO_DISABLE_REDLAND_BACKEND=OFF"  "-DSOPRANO_DISABLE_REDLAND_BACKEND=ON"  "for redland backend storage support"

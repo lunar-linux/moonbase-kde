@@ -1,12 +1,12 @@
           MODULE=oxygen-icons
-         VERSION=15.04.1
+         VERSION=15.04.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:926e0f15aacf6d26163c266cfd6e117ff3b98a4e4c043953bda82e10c314592b
+      SOURCE_URL=ftp://mirror.cc.columbia.edu/pub/software/kde/Attic/applications/$VERSION/src/
+      SOURCE_VFY=sha256:133b66d70b51641f841799674afd993a6af0d9d9b646021a0ed609beb2ffd71e
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20090805
-         UPDATED=20150416
+         UPDATED=20150702
            SHORT="oxygen-icons"
 
 cat << EOF

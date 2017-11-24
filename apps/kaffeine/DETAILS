@@ -1,14 +1,13 @@
           MODULE=kaffeine
-         VERSION=1.2.2
-          SOURCE=kaffeine-$VERSION.tar.gz
-      SOURCE_URL=$SFORGE_URL/kaffeine
-      SOURCE_VFY=sha1:5ba44be69995d24159a185ede3b9a00959ae2ed6
+         VERSION=2.0.5
+          SOURCE=kaffeine-$VERSION.tar.xz
+      SOURCE_URL=http://download.kde.org/stable/$MODULE/$VERSION/src/
+      SOURCE_VFY=sha256:e1610931e9475e8b86f9c75331f51fbeea22fab0c5fc6a1085325ab2ef055a8c
    MODULE_PREFIX=${KDE_PREFIX:-/usr}
         WEB_SITE=http://kaffeine.kde.org
          ENTERED=20100110
-         UPDATED=20110419
-      MAINTAINER=zbiggy@o2.pl
-           SHORT="A xine based frontend for KDE4"
+         UPDATED=20161005
+           SHORT="A xine based frontend for KDE"
 
 cat << EOF
 Kaffeine is a xine based media player for KDE.

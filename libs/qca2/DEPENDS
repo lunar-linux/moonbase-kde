@@ -1,0 +1,11 @@
+depends openssl
+depends cyrus-sasl
+depends libgcrypt
+depends gnupg2
+depends nss
+depends p11-kit
+depends qt4
+depends qt5
+
+optional_depends ca-certificates "--certstore-path=/usr/share/ca-certificate" \
+                               "--certstore-internal" "Use system certificates" y

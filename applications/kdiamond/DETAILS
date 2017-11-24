@@ -1,0 +1,14 @@
+          MODULE=kdiamond
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:fc4bdddbbc2640b73229e9e23cf28bd2729a07f1af986c5f5bef8b7b4ba4318f
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/games/kdiamond/
+         ENTERED=20140720
+         UPDATED=20160713
+           SHORT="single player puzzle game"
+
+cat << EOF
+KDiamond is a single player puzzle game. The object of the game is to build lines of three similar diamonds.
+EOF

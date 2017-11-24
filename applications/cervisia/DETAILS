@@ -1,0 +1,17 @@
+          MODULE=cervisia
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:0ffca0633c3c6197bce3730714a1830bc7346bfc277a6fd391c5a2c03ce73dc7
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/development/cervisia/
+         ENTERED=20130814
+         UPDATED=20160713
+           SHORT="cvs frontend"
+
+cat << EOF
+Cervisia is a user friendly version control system front-end. The aim is to support CVS 
+and other version control system programs in a unified interface, featuring conflict 
+resolution, difference and history viewers, status for the working copy files, and 
+support for most version control functions.
+EOF

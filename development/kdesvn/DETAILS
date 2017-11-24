@@ -1,9 +1,8 @@
           MODULE=kdesvn
-         VERSION=1.6.0
-          SOURCE=$MODULE-$VERSION.tar.bz2
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/kdesvn-$VERSION
-      SOURCE_URL=http://kdesvn.alwins-world.de/downloads
-      SOURCE_VFY=sha1:3a77b1a8da9794c21472a622976bd22c73275f63
+         VERSION=1.7.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$MODULE/$VERSION
+      SOURCE_VFY=sha256:b3a9dc01e1730c880478aecd5c8d832a4b218468f791083985d325c0ef8a6ece
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kdesvn.alwins-world.de
          ENTERED=20081117

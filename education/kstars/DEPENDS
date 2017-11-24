@@ -1,7 +1,0 @@
-depends kde-baseapps
-depends eigen3
-
-optional_depends libindi "-DWITH_INDI=1"    "-DWITH_INDI=0"    "for instrument support"
-optional_depends wcslib  "-DWITH_WCSLIB=1"  "-DWITH_WCSLIB=0"  "for World Coordinate System support,${PROBLEM_COLOR}say yes to cfitsio when asked by wcslib${QUERY_COLOR}"
-optional_depends xplanet "-DWITH_Xplanet=1" "-DWITH_Xplanet=0" "renders an image of all the major planets and most satellites"
-optional_depends astrometry "-DWITH_AstrometryNet=1" "-DWITH_AstrometryNet=0" "for astrometric calibration meta-data support"

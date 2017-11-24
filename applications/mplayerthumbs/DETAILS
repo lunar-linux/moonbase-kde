@@ -1,0 +1,17 @@
+          MODULE=mplayerthumbs
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src/
+      SOURCE_VFY=sha256:eebc0974b154c4e64d8c74585914b2b63e5e5bb09bc27a74f71f66e003636407
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE="http://kde-apps.org/content/show.php?content=41180"
+         ENTERED=20120801
+         UPDATED=20160713
+           SHORT="video thumbnail generator for KDE"
+
+cat << EOF
+MPlayerThumbs is a thumbnail generator for all KDE file managers (konqueror, dolphin, ...)
+It needs mplayer (of course) to generate thumbnails, and it contains no linking to any library, 
+so in a x86_64 system you can freely use the 32bit mplayer binary with win32codecs by configuring 
+the application launching the mplayerthumbsconfig helper application.
+EOF

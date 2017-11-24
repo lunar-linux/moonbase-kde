@@ -1,0 +1,14 @@
+          MODULE=ktp-desktop-applets
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:4550972a9908ca266611a29873a2fc4448d7d8da317adc0e5252090fdff03ce3
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://kde.org/applications/system/$MODULE
+         ENTERED=20151201
+         UPDATED=20160713
+           SHORT="plasma desktop applets"
+
+cat << EOF
+KDE-Telepathy Plasma desktop applets.
+EOF

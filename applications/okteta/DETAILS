@@ -1,0 +1,15 @@
+          MODULE=okteta
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:b034e0ab9f6989012437f790c346deaec2511e764c939a9774fa0fa5bc6bd563
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://utils.kde.org/projects/okteta/
+         ENTERED=20130814
+         UPDATED=20160713
+           SHORT="simple hex editor for the raw data of files"
+
+cat << EOF
+Okteta is a simple editor for the raw data of files. This type of program is also
+called hex editor or binary editor.
+EOF

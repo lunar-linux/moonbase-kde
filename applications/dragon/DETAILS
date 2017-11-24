@@ -1,0 +1,17 @@
+          MODULE=dragon
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:749f31ac966a97329c05b9b2e68fee216d0ee3cd0a90a8957171385907cc10b5
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/multimedia/dragonplayer/
+         ENTERED=20120801
+         UPDATED=20160713
+           SHORT="kde based multimedia player"
+
+cat << EOF
+Dragon Player is a multimedia player where the focus is on simplicity, instead 
+of features. Dragon Player does one thing, and only one thing, which is playing 
+multimedia files. It's simple interface is designed not to get in your way and 
+instead empower you to simply play multimedia files.
+EOF

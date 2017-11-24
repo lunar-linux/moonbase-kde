@@ -1,0 +1,14 @@
+          MODULE=ktp-contact-list
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:7e08514abf3c741a95ba8de7c2d3059f2ee8674bb3b15788347bcf4f68f72ce9
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://kde.org/applications/system/$MODULE
+         ENTERED=20151201
+         UPDATED=20160713
+           SHORT="contact list application"
+
+cat << EOF
+KDE telepathy contact list application.
+EOF

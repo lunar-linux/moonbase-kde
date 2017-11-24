@@ -1,14 +1,14 @@
           MODULE=kipi-plugins
-         VERSION=4.4.0
-          SOURCE=digikam-$VERSION.tar.bz2
-      SOURCE_URL=$SFORGE_URL/digikam
+         VERSION=5.7.0
+          SOURCE=digikam-$VERSION.tar.xz
+      SOURCE_URL=http://download.kde.org/stable/digikam/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/digikam-$VERSION
-      SOURCE_VFY=sha1:1feb43120addda314e09761440ec2058e430171c
+      SOURCE_VFY=sha256:3605ffb5b6e8fbd6b725e5075f74f505d7edee7531789c2882d11df2d20150f5
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
-        WEB_SITE=https://projects.kde.org/projects/extragear/graphics/kipi-plugins
+        WEB_SITE=http://projects.kde.org/projects/extragear/graphics/kipi-plugins
          ENTERED=20090318
-         UPDATED=20141023
-           SHORT="KDE Image Plugin Interface for KDE4"
+         UPDATED=20170906
+           SHORT="KDE Image Plugin Interface"
 
 cat << EOF
 digiKam makes use of KIPI plugins for lots of added functionality. KIPI
@@ -16,4 +16,7 @@ digiKam makes use of KIPI plugins for lots of added functionality. KIPI
 infrastructure for digiKam, KimDaBa, Showimg, and GwenView. Its aim is
 to allow development of image plugins which can shared among KDE
 graphical applications.
+
+Note: This is the digikam tarball and is setup to only to compile and install
+kipi-plugins. If you have digikam installed this module is not required.
 EOF

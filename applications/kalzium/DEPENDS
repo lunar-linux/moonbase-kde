@@ -1,0 +1,8 @@
+depends avogadro
+depends chemical-mime-data
+depends kde-runtime
+depends ocaml
+
+optional_depends "openbabel" "-DWITH_OpenBabel2=ON" "-DWITH_OpenBabel2=OFF" "for openbabel support"
+optional_depends "eigen2"    "-DWITH_Eigen2=ON"     "-DWITH_Eigen2=OFF"     "for eigen support"
+optional_depends "facile"    "-DWITH_Libfacile=ON"  "-DWITH_Libfacile=OFF"  "for facile support"

@@ -1,15 +1,15 @@
           MODULE=PyQt5
-         VERSION=5.4.1
-          SOURCE=PyQt-gpl-$VERSION.tar.gz
-      SOURCE_URL=$SFORGE_URL/pyqt/PyQt5/PyQt-$VERSION
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/PyQt-gpl-$VERSION
+         VERSION=5.9.1
+          SOURCE=$MODULE\_gpl-$VERSION.tar.gz
+      SOURCE_URL=$SFORGE_URL/pyqt/PyQt5/PyQt-$VERSION/
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/PyQt5_gpl-$VERSION
    MODULE_PREFIX=${QT5_PREFIX:-/usr}
-      SOURCE_VFY=sha256:c6c33f392c0a2b0c9ec16531dc88fa9aee853e9fff10f0ad9d0e4777629fe79e
-        WEB_SITE=http://www.riverbankcomputing.com/software/pyqt/download5
+      SOURCE_VFY=sha256:5fc009448ea78c8fd48eb7083a7b93734dbd61290a9a21dab674096a7762b4ca
+        WEB_SITE=http://www.riverbankcomputing.com/software/pyqt/
          ENTERED=20141111
-         UPDATED=20150501
-           SHORT="Python bindings for Qt v5"
+         UPDATED=20171103
+           SHORT="Python bindings for Qt 5.x"
 
 cat << EOF
-These are the Python bindings for Qt v5.
+These are the Python bindings for Qt 5.x.
 EOF

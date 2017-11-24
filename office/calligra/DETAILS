@@ -1,30 +1,26 @@
           MODULE=calligra
-         VERSION=2.9.4
+         VERSION=2.9.11
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$MODULE-$VERSION
-      SOURCE_VFY=sha256:a9dd36dc72b9f248f81ec239be658e3e7f567e44183276f3f408322eb9ecf4d8
+      SOURCE_URL=http://download.kde.org/stable/$MODULE-$VERSION/
+      SOURCE_VFY=sha256:b18d2d0f87bc92753ec8b1eb780a596770a49141e3e60d811da51e752e54ea09
         WEB_SITE=http://www.calligra-suite.org
          ENTERED=20121208
-         UPDATED=20150505
+         UPDATED=20160315
            SHORT="graphic art and office suite by KDE"
 
 cat << EOF
-Calligra Suite is a set of applications written to help you to accomplish your work.
+Calligra Suite is a set of applications written to help you to accomplish your
+work. Calligra Office includes efficient and capable office components:
+  Words for text processing.
+  Sheets for computations.
+  Stage for presentations.
+  Plan for planning.
+  Flow for flowcharts.
+  Kexi for database creation.
+  Calligra Art
 
-Calligra Office
-
-Calligra includes efficient and capable office components:
-
-Words for text processing.
-Sheets for computations.
-Stage for presentations.
-Plan for planning.
-Flow for flowcharts.
-Kexi for database creation.
-Calligra Art
-
-Calligra offers cutting edge applications for artists to work on 2D drawings and illustrations:
-
-Krita for painting and raster drawing.
-Karbon for vector graphics.
+Calligra offers cutting edge applications for artists to work on 2D drawings and
+illustrations:
+  Krita for painting and raster drawing.
+  Karbon for vector graphics.
 EOF

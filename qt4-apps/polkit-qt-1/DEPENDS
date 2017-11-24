@@ -1,5 +1,4 @@
 depends dbus
-depends qt4
 depends polkit
-
-optional_depends "qt5" "" "" "For qt5 polkit support, ${PROBLEM_COLOR}Needed by KDE Frameworks 5${DEFAULT_COLOR}" n
+depends qt4
+depends qt5

@@ -1,12 +1,12 @@
           MODULE=krusader
-         VERSION=2.4.0-beta3
-          SOURCE=$MODULE-$VERSION.tar.bz2
-      SOURCE_URL=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha1:935b99b42dbf0a7e3b7721a5bf8cbdc2b86900ce
+         VERSION=2.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=http://download.kde.org/stable/$MODULE/$VERSION/
+     SOURCE_VFY=sha256:-7061a43cada6bd7df991ed2e3e5193b1d99144fa426c8331a2b54170b79b3a39
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://krusader.sourceforge.net
          ENTERED=20090412
-         UPDATED=20141022
+         UPDATED=20170412
            SHORT="KDE Twin-Panel filemanager ala commander style"
 
 cat << EOF

@@ -1,0 +1,14 @@
+          MODULE=amor
+         VERSION=15.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:ac77b05ebf4fd704fe2a8ef6afc5548289bff56e05711d349be707d6b73f9149
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://docs.kde.org/stable/en/kdetoys/amor/introduction.html#whats-amor
+         ENTERED=20130814
+         UPDATED=20151124
+           SHORT="a small animation which sits on top of your active window"
+
+cat << EOF
+A small animation which sits on top of your active window.
+EOF

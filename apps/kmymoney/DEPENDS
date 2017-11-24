@@ -1,4 +1,4 @@
 depends kdepimlibs
 depends libalkimia
 
-optional_depends "libofx"  " --enable-ofxplugin --enable-ofxbanking "  ""  "for OFX plugin support"
+optional_depends libofx "--enable-ofxplugin --enable-ofxbanking" "" "for OFX plugin support"

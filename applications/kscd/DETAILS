@@ -1,0 +1,14 @@
+          MODULE=kscd
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:640e60f3c7dc3d5483a68068d0eab79caf4f61c06a451a04ab9e4ea958c71c50
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/multimedia/kmix/
+         ENTERED=20120801
+         UPDATED=20160713
+           SHORT="CD player"
+
+cat << EOF
+KsCD is a small, fast, CDDB enabled audio CD player which supports multiple platforms.
+EOF

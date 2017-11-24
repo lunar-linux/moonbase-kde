@@ -1,0 +1,48 @@
+default_pre_build &&
+
+# https://bugreports.qt.io/browse/QTBUG-53945, In *some* instances that can happen
+# so adding this just to give it some cover.
+if module_installed wayland; then
+  sedit "2i CONFIG += generated_privates" qtwayland/src/compositor/extensions/extensions.pri
+fi &&
+
+# Try and use our flags everywhere
+sedit "s/-O2/\$\$CFLAGS/" qtbase/mkspecs/common/gcc-base.conf &&
+sedit "s:QMAKE_LFLAGS +=:QMAKE_LFLAGS += \$\$LDFLAGS:" qtbase/mkspecs/common/gcc-base.conf &&
+sedit "s:QMAKE_LFLAGS_RELEASE +=:QMAKE_LFLAGS_RELEASE += \$\$LDFLAGS:" qtbase/mkspecs/common/gcc-base.conf &&
+sedit "s:QMAKE_LFLAGS_RELEASE += -Wl,-O1:QMAKE_LFLAGS_RELEASE += \$\$LDFLAGS:" qtbase/mkspecs/common/g++-unix.conf &&
+
+# Fix missing private includes https://bugreports.qt.io/browse/QTBUG-37417
+sedit '/CMAKE_NO_PRIVATE_INCLUDES\ \=\ true/d' mkspecs/features/create_cmake.prf
+
+# Cannot find our /usr/bin/ls or /usr/bin/echo
+sedit "s:/bin/ls:/usr/bin/ls:g" qtbase/src/corelib/global/global.pri &&
+sedit "s:/bin/echo:/usr/bin/echo:g" qtwebengine/src/3rdparty/chromium/build/common.gypi &&
+
+# _disable_ pulseaudio if it's disabled
+if ! in_depends $MODULE pulseaudio; then
+  sedit '/use_pango/ a use_pulseaudio=0 \\' qtwebengine/src/core/config/desktop_linux.pri
+fi &&
+
+# this fixes qt5 with freetype 2.8.1
+pushd qtbase &&
+patch_it $SOURCE2 1 &&
+popd &&
+
+# support libressl
+sedit 's:^\(#define q_SSL_get_server_tmp_key(ssl, key)\).*:\1 true:' qtbase/src/network/ssl/qsslsocket_openssl_symbols_p.h &&
+
+# fix build with previous version of the module installed
+# see https://bugreports.qt.io/browse/QTBUG-33948 and related
+sedit "s@\(QMAKE_LFLAGS_RPATH *=\) \(.*\)@\1 -Wl,-enable-new-dtags \2@" qtbase/mkspecs/common/gcc-base-unix.conf &&
+
+# qt5's build breaks with an (incompatible) old version of qt5 installed
+# even with the patch in PRE_BUILD due to old headers being pulled in.
+# this is troublesome, but until someone fixes the includes, we'll have to
+# remove to old version before building the new one...
+if module_installed $MODULE; then
+  lrm --upgrade $MODULE
+fi &&
+
+# fix libsystemd-journal detection
+sedit 's|libsystemd-journal|libsystemd|' ./qtbase/config.tests/unix/journald/journald.pro ./qtbase/src/corelib/global/global.pri

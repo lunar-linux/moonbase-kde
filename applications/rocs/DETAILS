@@ -1,0 +1,17 @@
+          MODULE=rocs
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:bc8bcc77c772c6238a3626106fae233a52e55c16bd497fee6355d069de8709f6
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20110813
+         UPDATED=20160713
+           SHORT="graph editor and programming environment"
+
+cat << EOF
+Rocs is Free Software and part of the KDE project, 
+It aims to provide a full featured Graph - Editor and a Programming Enviroment that's connected to the Graph
+by doing it so, it can be used for teachers to show the joy and mistery of Graph Theory, 
+and studants can use it to implement the various algorithms for the beloved teacher.
+EOF

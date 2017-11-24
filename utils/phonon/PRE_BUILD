@@ -1,0 +1,6 @@
+default_pre_build &&
+
+sedit "s:BSD_SOURCE:DEFAULT_SOURCE:g" cmake/FindPhononInternal.cmake &&
+
+# credit goes to the gentoo devs
+sedit 's@set(CMAKE_POSITION_INDEPENDENT_CODE ON)@set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${CMAKE_CXX_COMPILE_OPTIONS_PIC}")@' cmake/FindPhononInternal.cmake

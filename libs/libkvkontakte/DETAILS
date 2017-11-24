@@ -1,0 +1,15 @@
+          MODULE=libkvkontakte
+         VERSION=4.70.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$MIRROR_URL
+      SOURCE_VFY=sha256:d4232fe2f5e1df8fedf20067e44e238b0662dccdff7caedd0912ddc682acf7a6
+        WEB_SITE=https://projects.kde.org/projects/extragear/libs/libkvkontakte
+         ENTERED=20151219
+         UPDATED=20160705
+           SHORT="for accessing the features of social networking site"
+
+cat << EOF
+Library for accessing the features of social networking site.
+
+Note: this tarball is git clone from; https://quickgit.kde.org/?p=libkvkontakte.git
+EOF

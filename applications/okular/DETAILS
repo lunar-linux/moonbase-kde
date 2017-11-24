@@ -1,0 +1,19 @@
+          MODULE=okular
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:cdd590cdf29caf3ce70301499610abadec349965fd80aaaf61a36cdc1a0038a5
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/graphics/okular/
+         ENTERED=20110813
+         UPDATED=20160713
+           SHORT="universal document viewer"
+
+cat << EOF
+Okular is a universal document viewer.
+Features
+
+    Several Supported Formats: PDF, PS, Tiff, CHM, DjVu, Images, DVI, XPS, ODT, Fiction Book, Comic Book, Plucker, EPub, Fax
+    Thumbnails sidebar
+    Annotations support
+EOF

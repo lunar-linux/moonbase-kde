@@ -1,0 +1,14 @@
+          MODULE=kontactinterface
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:7b488b2770b3dbd4312b4b9dd9b6617a1f98f1037bedb0519d61689c83d7013a
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://kde.org/applications/kontactinterface
+         ENTERED=20151122
+         UPDATED=20160713
+           SHORT="Kontact Plugin Interface Library"
+
+cat << EOF
+Kontact Plugin Interface Library.
+EOF

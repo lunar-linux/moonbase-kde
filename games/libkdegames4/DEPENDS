@@ -1,0 +1,5 @@
+depends kde-runtime
+
+optional_depends "openal"     "-DWITH_OpenAL=ON"  "-DWITH_OpenAL=OFF"  "For openal audio support"
+optional_depends "libsndfile" "-DWITH_SndFile=ON" "-DWITH_SndFile=OFF" "for libsndfile support"
+

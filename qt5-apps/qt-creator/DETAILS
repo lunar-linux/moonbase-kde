@@ -1,0 +1,22 @@
+          MODULE=qt-creator
+            VERS=4.4.1
+         VERSION=opensource-src-$VERS
+          SOURCE=$MODULE-$VERSION.tar.gz
+      SOURCE_URL=http://download.qt-project.org/official_releases/qtcreator/${VERS%.*}/$VERS/
+      SOURCE_VFY=sha256:e96c7c8d0d683bf0fc0405d4ed1224c426ce8135302156ad4f90e21c46b57465
+   MODULE_PREFIX=${QT5_PREFIX:-/usr}
+        WEB_SITE=http://qt-project.org/
+         ENTERED=20090303
+         UPDATED=20171007
+           SHORT="cross-platform integrated development environment"
+
+cat << EOF
+Qt Creator is a new cross-platform integrated development environment (IDE)
+tailored to the needs of Qt developers. It includes:
+    * An advanced C++ code editor
+    * Integrated GUI layout and forms designer
+    * Project and build management tools
+    * Integrated, context-sensitive help system
+    * Visual debugger
+    * Rapid code navigation tools
+EOF

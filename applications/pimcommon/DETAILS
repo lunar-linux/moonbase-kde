@@ -1,0 +1,14 @@
+          MODULE=pimcommon
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:6edcba1df12eff280630e62945008d91e12ae2c8780dc2d4c80a05185bceb238
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20160505
+         UPDATED=20160713
+           SHORT="Common libraries for KDE PIM"
+
+cat << EOF
+Common libraries for KDE PIM.
+EOF

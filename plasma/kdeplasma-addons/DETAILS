@@ -1,0 +1,22 @@
+          MODULE=kdeplasma-addons
+         VERSION=5.7.2
+          SOURCE=kdeplasma-addons-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
+      SOURCE_VFY=sha256:e756722aaf7a6ccb98f910ab7457d385acbda0541207cbac971ebf739f1b99e2
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20080716
+         UPDATED=20160723
+           SHORT="mandatory package for KDE"
+
+cat << EOF
+kdebase is the second mandatory package (besides kdelibs) for the K Desktop
+Environment. Here we have various applications and infrastructure files and
+libraries.
+Here is an overview of the directories:
+ doc, drkonqi, kappfinder, kcheckpass, kcontrol, kdebugdialog, kdeprint,
+ kdesktop, kdesu, kdialog, kdm, kfind, khelpcenter, khotkeys, kicker, kioslave,
+ klipper, kmenuedit, konqueror, konsole, kreadconfig, kscreensaver, ksmserver,
+ kdepasswd, ksplashml, kstart, ksysguard, ksystraycmd, ktip, kwin, kxkb, l10n,
+ libkonq, nsplugins, pics
+EOF

@@ -1,0 +1,14 @@
+          MODULE=libkscreen4
+         VERSION=1.0.5
+          SOURCE=libkscreen-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/libkscreen/$VERSION/src
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/libkscreen-$VERSION
+      SOURCE_VFY=sha256:ee6cfb92c41fe78c43ee6d509039d598d9f98582f9aa67aeac5b2760b3b2e904
+        WEB_SITE=https://projects.kde.org/projects/extragear/libs/libkscreen
+         ENTERED=20151124
+         UPDATED=20151124
+           SHORT="screen management software"
+
+cat << EOF
+KDE's screen management software
+EOF

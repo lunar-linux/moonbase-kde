@@ -1,0 +1,30 @@
+depends kf5
+depends kde-base
+depends kde-dev-scripts
+depends kdelibs
+depends kde-runtime
+depends kde-baseapps
+depends kde-base-artwork
+
+optional_depends "kde-wallpapers"              ""  ""  "KDE default wallpapers"
+optional_depends "kdepimlibs"                  ""  ""  "Common library for KDE PIM applications like kmail, kalarm, etc"
+optional_depends "baloo-frameworks"            ""  ""  "For desktop search support and needed by kdepim. ${PROBLEM_COLOR}Will eventually replace nepomuk, recommended.${DEFAULT_COLOR}"
+optional_depends "baloo-widgets"               ""  ""  "Contains widgets for the baloo search framework"
+optional_depends "polkit-kde-agent"            ""  ""  "For kde policy kit agent support"
+optional_depends "kactivities-frameworks"      ""  ""  "The kde activity manager"
+optional_depends "bluedevil"                   ""  ""  "For bluetooth support in KDE"
+optional_depends "konversation"                ""  ""  "Provides an irc application based on KDE"
+optional_depends "konsole"                     ""  ""  "KDE console terminal"
+optional_depends "kate"                        ""  ""  "Kate text editor and also proivdes the kwrite editor"
+optional_depends "audiocd-kio"                 ""  ""  "Provides the kio slave for audio CDs"
+optional_depends "kdegraphics-mobipocket"      ""  ""  "Plugins to handle mobipocket files"
+optional_depends "kamera"                      ""  ""  "Provides the kio_kamera slave"
+optional_depends "kmix"                        ""  ""  "Audio control"
+optional_depends "ark"                         ""  ""  "A kde based archiving extraction tool"
+optional_depends "kdewebdev"                   ""  ""  "For web development"
+optional_depends "kaccessible"                 ""  ""  "Provide accessibility services like focus tracking and a screenreader"
+optional_depends "kdeplasma-addons"            ""  ""  "Extra Plasma applets and engines like lancelot, calculator, wallpapers etc. ${PROBLEM_COLOR}Requires kdepim.${DEFAULT_COLOR}"
+optional_depends "kdegraphics-strigi-analyzer" ""  ""  "Strigi analyzers for various graphics file formats"
+optional_depends "kdegraphics-thumbnailers"    ""  ""  "Thumbnailers for various graphics file formats"
+optional_depends "svgpart"                     ""  ""  "KPart component to display SVG images in Gwenview and in any other KDE application which uses the KPart system"
+optional_depends "kwalletmanager"              ""  ""  "manage the passwords on your system"

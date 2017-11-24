@@ -1,0 +1,15 @@
+          MODULE=kQOAuth-qt5
+         VERSION=0.98
+          SOURCE=kQOAuth-$VERSION.tar.gz
+      SOURCE_URL=$MIRROR_URL
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/kQOAuth-$VERSION
+      SOURCE_VFY=sha256:9d6c43d98bda559cf4fbb055843a46479e08381527a317edcd9823f2b4990671
+        WEB_SITE=https://github.com/kypeli/kQOAuth
+         ENTERED=20151205
+         UPDATED=20151205
+           SHORT="library implementing OAuth 1.0 RFC 5849"
+
+cat << EOF
+kQOAuth is a library written in C++ for Qt that implements the
+OAuth 1.0 authentication specification RFC 5849.
+EOF

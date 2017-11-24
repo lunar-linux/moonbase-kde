@@ -1,0 +1,14 @@
+          MODULE=kalarmcal
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:5a26f40e25701f1b44475ab4d07328915ca1c1833f4cbb7ff306929044f9e9b2
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://kde.org/applications/system/kalarmcal
+         ENTERED=20151122
+         UPDATED=20160713
+           SHORT="kalarm client library"
+
+cat << EOF
+A client library for kalarm.
+EOF

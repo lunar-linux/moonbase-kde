@@ -1,0 +1,16 @@
+          MODULE=bovo
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:5167e9bfbaf450db0c47549072e9ffdab79e1771c5dd114b516ed2fb29f61231
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/games/bomber/
+         ENTERED=20130814
+         UPDATED=20160713
+           SHORT="a Gomoku like game for two players"
+
+cat << EOF
+Bovo is a Gomoku like game for two players, where the opponents alternate in placing 
+their respective pictogram on the game board. (Also known as: Connect Five, Five in 
+a row, X and O, Naughts and Crosses)
+EOF

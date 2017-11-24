@@ -1,0 +1,14 @@
+          MODULE=kget
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:d095b546283d656a86c63a5c6ed26f3f9ff306aacae791829b5acd164d3e5f17
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/internet/kget/
+         ENTERED=20130814
+         UPDATED=20160713
+           SHORT="download manager"
+
+cat << EOF
+KGet is a versatile and user-friendly download manager.
+EOF

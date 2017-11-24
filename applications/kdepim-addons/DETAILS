@@ -1,0 +1,14 @@
+          MODULE=kdepim-addons
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:09d9fd6a9245dca23a1cc1582b0746236d4c6d600021a02c63f0c1389afecabe
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://community.kde.org/KDE_PIM
+         ENTERED=20160505
+         UPDATED=20160713
+           SHORT="Addons for KDE PIM applications"
+
+cat << EOF
+Addons for KDE PIM applications.
+EOF

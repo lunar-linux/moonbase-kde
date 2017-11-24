@@ -1,0 +1,14 @@
+          MODULE=telepathy-logger-qt
+         VERSION=15.04.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$MODULE/${VERSION%.*}/src
+      SOURCE_VFY=sha256:83ce7be50edd9f8806c6f93cc56ba640120c2561767f8c666dcfddd72ee57898
+        WEB_SITE=https://projects.kde.org/projects/extragear/network/telepathy/telepathy-logger-qt
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+         ENTERED=20151201
+         UPDATED=20151201
+           SHORT="qt5 bindings for telepathy logger"
+
+cat << EOF
+Qt5 bindings for telepathy logger.
+EOF

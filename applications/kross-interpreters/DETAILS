@@ -1,0 +1,14 @@
+          MODULE=kross-interpreters
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:aa7da882f31c120052162115489c098417974feeca6414c1cec4623fc07a805a
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20110813
+         UPDATED=20160713
+           SHORT="language interpreters to enable in-process scripting with Kross."
+
+cat << EOF
+Language interpreters to enable in-process scripting with Kross.
+EOF

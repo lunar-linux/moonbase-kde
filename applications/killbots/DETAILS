@@ -1,0 +1,14 @@
+          MODULE=killbots
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:1040920e8f38b0fcdc1717b5b2b43d749cd2033cd8a5b06433484dbf95bb5a96
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/games/killbots/
+         ENTERED=20140720
+         UPDATED=20160713
+           SHORT="simple game of evading killer robots"
+
+cat << EOF
+Killbots is a simple game of evading killer robots.
+EOF

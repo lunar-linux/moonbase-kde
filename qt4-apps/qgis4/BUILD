@@ -1,4 +1,3 @@
-(
 
   default_cmake_build &&
 
@@ -25,6 +24,4 @@ Type=Application
 Categories=Qt;Education;Science;
 EOF
   install -D -m644 qbrowser.desktop /usr/share/applications/qbrowser.desktop
-
-) > $C_FIFO 2>&1
 

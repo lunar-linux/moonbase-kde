@@ -1,0 +1,16 @@
+depends  alsa-utils
+depends  hicolor-icon-theme
+depends  cmake
+depends  audiofile
+depends  libsamplerate
+depends  id3lib
+depends  libmad
+depends  flac
+depends  libvorbis
+depends  fftw3
+depends  audiofile
+depends  qt5
+depends  extra-cmake-modules
+depends  kio
+
+optional_depends pulseaudio "-DWITH_PULSEAUDIO=1" "-DWITH_PULSEAUDIO=0" "For pulseaudio support" y

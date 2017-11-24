@@ -1,0 +1,13 @@
+          MODULE=libkcddb
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:089e56d270a6efcbb23b2b68588612fe92341d19810aae806d91dc628322cf4c
+        WEB_SITE=http://www.kde.org
+         ENTERED=20120801
+         UPDATED=20160713
+           SHORT="library used to retrieve audio CD meta data from the internet"
+
+cat << EOF
+The libkcddb package contains a library used to retrieve audio CD meta data from the internet.
+EOF

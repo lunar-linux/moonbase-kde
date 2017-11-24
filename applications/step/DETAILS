@@ -1,0 +1,13 @@
+          MODULE=step
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:b7af222667127769e309defcadf746daf207eb63b8884112f033dd7fd569cbe7
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://stepcore.sf.net
+         ENTERED=20110813
+         UPDATED=20160713
+           SHORT="Interactive Physical Simulator"
+
+cat << EOF
+EOF

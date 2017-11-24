@@ -1,0 +1,14 @@
+          MODULE=kcalcore
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:f41c11717d084be79443abde7c8853fe56b4af68a3d3be514141f879e090e154
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://techbase.kde.org/Getting_Started/Build/KDE4/Troubleshooting
+         ENTERED=20151122
+         UPDATED=20160713
+           SHORT="KDE calendar access library"
+
+cat << EOF
+The KDE calendar access library.
+EOF

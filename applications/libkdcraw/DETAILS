@@ -1,0 +1,15 @@
+          MODULE=libkdcraw
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:fd153d8acd910b976196225524acf6032956cd7e298a2cd876d1b064994cb463
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/kde/kdegraphics/libs/libkdcraw
+         ENTERED=20110813
+         UPDATED=20160713
+           SHORT="LibRaw C++ interface for KDE"
+
+cat << EOF
+Libkdcraw is a C++ interface around LibRaw library used to decode RAW
+picture files. More information about LibRaw can be found at http://www.libraw.org.
+EOF

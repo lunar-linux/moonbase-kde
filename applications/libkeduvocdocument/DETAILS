@@ -1,0 +1,14 @@
+          MODULE=libkeduvocdocument
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:e075909a4b415520cf7c44d4141d20cd84dd278776ee4c6997395cfcbd984e2a
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://edu.kde.org
+         ENTERED=20150214
+         UPDATED=20160713
+           SHORT="Common libraries for KDE Edu applications"
+
+cat << EOF
+Common libraries for KDE Edu applications.
+EOF

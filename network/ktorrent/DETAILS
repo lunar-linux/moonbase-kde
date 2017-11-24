@@ -1,16 +1,13 @@
 # Every time you update ktorrent remember to also update libktorrent.
           MODULE=ktorrent
-         VERSION=4.3.1
-          SOURCE=$MODULE-$VERSION.tar.bz2
-         SOURCE2=ktorrent-4.3.1-underlinking.patch
-      SOURCE_URL=http://ktorrent.pwsp.net/downloads/4.3.1/
-     SOURCE2_URL=http://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo-x86/net-p2p/ktorrent/files/
+         VERSION=5.0.1
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$MODULE/${VERSION%.*}
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
-      SOURCE_VFY=sha256:66094f6833347afb0c49e332f0ec15ec48db652cbe66476840846ffd5ca0e4a1
-     SOURCE2_VFY=sha256:2fdeef15ec630dda946c30de345980bfe491c0ae02c2af762d77cf7b43b58657
-        WEB_SITE=http://ktorrent.org
+      SOURCE_VFY=sha256:d00feeca5dcc6a76a039d67dbe91a2d5a5e1da0f5e0bbd8da2c156d9c44879e5
+        WEB_SITE=http://ktorrent.pwsp.net/
          ENTERED=20080111
-         UPDATED=20140417
+         UPDATED=20160527
            SHORT="BitTorrent client for KDE"
 
 cat << EOF

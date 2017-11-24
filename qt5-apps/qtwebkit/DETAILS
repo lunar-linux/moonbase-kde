@@ -1,0 +1,18 @@
+          MODULE=qtwebkit
+         VERSION=5.9.0
+          SOURCE=$MODULE-opensource-src-$VERSION.tar.xz
+         SOURCE2=$MODULE-icu59.patch.xz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-opensource-src-$VERSION
+      SOURCE_URL=https://download.qt.io/community_releases/${VERSION%.*}/$VERSION-final/
+     SOURCE2_URL=$PATCH_URL
+      SOURCE_VFY=sha256:8dad193b740055a998312e04a040f2e32a923c0823b2d239b24eab08276a4e04
+     SOURCE2_VFY=sha256:ddccf4c7fbee185663924720a5db8a9813a6995fb51338f0dfc8f44e1daf03ed
+        WEB_SITE=http://qt-project.org/
+         ENTERED=20160505
+         UPDATED=20170610
+           SHORT="Qt based webkit"
+
+cat << EOF
+A Qt based webkit. This used to be part of qt5 but has sense been removed.
+Unfortuneatly, KDE frameworks in particular kdewebkit still requires qtwebkit.
+EOF

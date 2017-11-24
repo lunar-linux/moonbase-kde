@@ -1,6 +1,0 @@
-depends ruby
-depends kde-baseapps
-
-optional_depends "Falcon"    "-DBUILD_falcon=ON" "-DBUILD_falcon=OFF" "For Falcon support"
-optional_depends "Python"    "-DBUILD_python=ON" "-DBUILD_python=OFF" "For Python support"
-optional_depends "%JAVA_SDK" "-DBUILD_java=ON"   "-DBUILD_java=OFF"   "For Java support"

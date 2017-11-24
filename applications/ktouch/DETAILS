@@ -1,0 +1,19 @@
+          MODULE=ktouch
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:1a09e8940a2d012d4cf378147d9d81f68ca809de775a0d55c71c8514c8a55e30
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://KTouch.sourceforge.net
+         ENTERED=20110813
+         UPDATED=20160713
+           SHORT="touch typing education training"
+
+cat << EOF
+A education program to learn to touch-type. It provieds
+a training text, and shows the user how to place their
+fingers on the keyboard. It also shows the user which finger
+to move to press the next key. It automatically adjusts to
+different levels depending on the speed. It has support
+for different keyboard layouts(languages).
+EOF

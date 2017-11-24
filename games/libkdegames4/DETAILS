@@ -1,0 +1,33 @@
+          MODULE=libkdegames4
+         VERSION=14.12.3
+          SOURCE=${MODULE%4*}-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/Attic/applications/$VERSION/src
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE%4*}-$VERSION
+      SOURCE_VFY=sha256:473c139c6a060c6965a2c406da3401eb720d6c19a5086e6b3a30f508ff4c4336
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20150603
+         UPDATED=20150603
+           SHORT="a collection of functions used by some games or which are useful for other games"
+
+cat << EOF
+
+Note: We still need this for some of the kde stuff.
+
+A collection of functions used by some games or which are useful for other games.
+
+Contents:
+  kcarddialog: Access to carddeck selection and administration
+               for cardgames
+  kstdgameaction: just like kstdaction this provides some default action for
+                  kde games. games often use different entries than other apps
+                  (like "game" instead of "file"), so use this if possible
+  kgamemisc: some static method i didn't know a good class name for. it
+             currently features "randomName()" which will just give you a random name from
+             a list (translators note: happy translating ;) i copied kde-common/accounts
+             for this so there are nearly 300 entries...)
+  kgame: this is a complete network/game handling library. it constists of a lot
+         of classes which are explained in the kgame docu (as soon as it is
+         written)
+  kgamecanvas: a fast game-oriented canvas library
+EOF

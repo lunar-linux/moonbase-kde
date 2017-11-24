@@ -1,0 +1,14 @@
+          MODULE=kbreakout
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:afa27385bc6ad6506077b26649ece92eba64f27784735b23767ce9f9bebccdb6
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org/applications/games/kbreakout/
+         ENTERED=20140720
+         UPDATED=20160713
+           SHORT="a Breakout-like game"
+
+cat << EOF
+KBreakout is a Breakout-like game. Its object is to destroy as many bricks as possible without losing the ball.
+EOF

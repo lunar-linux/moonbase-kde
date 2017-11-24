@@ -1,0 +1,15 @@
+          MODULE=libkexiv2
+         VERSION=16.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:2a5633b956ac0ed7244275821aeb45d9cf13757d1b938cacbae19f8d7e4d6003
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/kde/kdegraphics/libs/libkexiv2
+         ENTERED=20110813
+         UPDATED=20160713
+           SHORT="wrapper around Exiv2 library"
+
+cat << EOF
+Libkexiv2 is a wrapper around Exiv2 library to manipulate pictures 
+metadata as EXIF/IPTC and XMP.
+EOF
