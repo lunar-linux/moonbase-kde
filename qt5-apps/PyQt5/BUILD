@@ -3,9 +3,9 @@ OPTS+=" --no-timestamp \
         --confirm-license \
         --qmake=/usr/lib/qt5/bin/qmake" &&
 
-#if module_installed qscintilla2; then
-#  OPTS+=" --qsci-api"
-#fi &&
+if module_installed qscintilla-qt5; then
+  OPTS+=" --qsci-api"
+fi &&
 
 python3 configure.py -w $OPTS -j${MAKES} &&
 find -name 'Makefile' | xargs sed -i 's|-Wl,-rpath,/usr/lib||g;s|-Wl,-rpath,.* ||g' &&
