@@ -1,0 +1,15 @@
+          MODULE=signond
+         VERSION=8.59
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=git+https://gitlab.com/accounts-sso/signond.git
+      SOURCE_VFY=sha256:a3d483dca59ae18c3315a9e5aee76ef19664d7c9e43555c5b945649c38631a80
+        WEB_SITE=https://code.google.com/p/accounts-sso/
+         ENTERED=20171203
+         UPDATED=20171203
+           SHORT="Accounts and Single Sign-On framework for qt5"
+
+cat << EOF
+The Accounts & SSO framework consists of a set of components and libraries which implement 
+an account manager for a user's online accounts and a single-sign-on daemon which handles 
+the authentication to the remote services on behalf of the client applications. 
+EOF
