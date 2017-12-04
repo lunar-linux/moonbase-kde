@@ -1,11 +1,11 @@
           MODULE=prison
-         VERSION=1.1.1
+         VERSION=5.40.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$MODULE/$VERSION/src/
-      SOURCE_VFY=sha1:d9542290cf6b2f0d22aec327c027e067df7c4fd8
+      SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
+      SOURCE_VFY=sha256:7c133030e2781b5b777197a3611036b8c3306b1f3753488430a7b7208dc6b9a1
         WEB_SITE=https://projects.kde.org/projects/kdesupport/prison
          ENTERED=20110813
-         UPDATED=20150128
+         UPDATED=20171130
            SHORT="barcode api"
 
 cat << EOF
