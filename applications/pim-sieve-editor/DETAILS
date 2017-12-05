@@ -1,0 +1,14 @@
+          MODULE=pim-sieve-editor
+         VERSION=17.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:f63cc5404dca925f998a9bdca379499a917688732be855044086efdca039893b
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://community.kde.org/KDE_PIM
+         ENTERED=20171205
+         UPDATED=20171205
+           SHORT="mail sieve editor"
+
+cat << EOF
+Mail sieve editor.
+EOF
