@@ -1,3 +1,4 @@
+# The only DEPENDS that belong in here are those framework moduloes from pub/software/kde/stable/frameworks/
 depends extra-cmake-modules
 depends kdnssd
 depends kidletime
@@ -48,6 +49,7 @@ depends knotifyconfig
 depends knewstuff
 depends kparts
 depends kdewebkit
+depends syntax-highlighting
 depends ktexteditor
 depends kdesignerplugin
 depends kinit
@@ -55,17 +57,17 @@ depends kded
 depends kdelibs4support
 depends kactivities-frameworks
 depends kactivities-stats
-depends frameworkintegration
 depends kpackage
-depends plasma-framework
+depends frameworkintegration
 depends kdeclarative
+depends plasma-framework
 depends kcmutils
 depends khtml
 depends kjsembed
 depends kmediaplayer
 depends kross
 depends krunner
-depends kwalletmanager
 depends kwayland-frameworks
+depends kirigami2
 
 optional_depends networkmanager-qt "" "" "for NetworkManager support"
