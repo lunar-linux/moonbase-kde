@@ -9,18 +9,16 @@ depends exiv2
 depends eigen3
 depends gphoto2
 depends kf5
-depends qjson
 depends libkipi
 depends libksane
 depends libkvkontakte
 depends libmediawiki
-depends extra-cmake-modules
 
 optional_depends lcms2       "" "" "for color management support"
 optional_depends lensfun     "" "" "for camera lens correction support"
 optional_depends doxygen     "" "" "for documentation"
 optional_depends libgpod     "" "" "for for Ipod support"
-optional_depends kQOAuth-qt5 "" "" "for Imgur.com's authenticated API support"
+optional_depends QtAV        "" "" "for supporting multimedia playback frameworks"
 
 optional_depends opencv-3 \
                  "-DENABLE_OPENCV3=1" \
