@@ -1,8 +1,10 @@
-depends %MPLAYER
-depends kdelibs
-depends libkface
-
-optional_depends "exiv2"     "-DWITH_Exiv2=1"  "-DWITH_Exiv2=0"   "for image metadata access support"
-optional_depends "libkdcraw" "-DWITH_Kdcraw=1" "-DWITH_Kdcraw=0"  "for raw image file support"
-optional_depends "libkipi"   "-DWITH_Kipi=1"   "-DWITH_Kipi=0"    "for kipi support"
-optional_depends "marble"    "-DWITH_Marble=1" "-DWITH_Marble=0F" "for geographical tagging support"
+depends exiv2
+depends extra-cmake-modules
+depends phonon
+depends libkdcraw
+depends libkgeomap
+depends libkipi
+depends kdoctools
+depends kparts
+depends libkexiv2
+depends plasma-framework
