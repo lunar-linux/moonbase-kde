@@ -1,14 +1,14 @@
           MODULE=libkface
          VERSION=17.08.3
           SOURCE=$MODULE-$VERSION.tar.xz
-         SOURCE2=libkface-opencv-3.1-support.patch
+         SOURCE2=libkface-16.11.80-opencv3.2-gentoo-3.1.patch
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-     SOURCE2_URL=$PATCH_URL
+     SOURCE2_URL=https://gitweb.gentoo.org/repo/gentoo.git/plain/kde-apps/libkface/files/
       SOURCE_VFY=sha256:bd2ea6dbe492f6ade30e51763fe08392774dfdce06d0c9503d61de9ec599a946
-     SOURCE2_VFY=sha256:01bc6b8a31337b7657fc75ccf041da4ec1eb63986c1f6dcc2ec37ee28e346c88
+     SOURCE2_VFY=sha256:416ca9f1f834c343b2f116c2dea92703c2eddf4eef8b705ccc5a34dcfb7431e4
         WEB_SITE=http://www.kde.org
          ENTERED=20150208
-         UPDATED=20171201
+         UPDATED=20171205
            SHORT="Qt/C++ library to perform face detection and recognition over pictures"
 
 cat << EOF

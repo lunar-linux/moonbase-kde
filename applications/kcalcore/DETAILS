@@ -1,12 +1,15 @@
           MODULE=kcalcore
          VERSION=17.08.3
           SOURCE=$MODULE-$VERSION.tar.xz
+         SOURCE2=kcalcore-libical3.patch
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+     SOURCE2_URL=$PATCH_URL
       SOURCE_VFY=sha256:050ee3c9abafef2f668276d9456e9fdbe4be7625572a8f3e93f073963f6fc647
+     SOURCE2_VFY=sha256:0cbe1072bbc3e35bc2fcb6812423f5a9447e251a2163a97dd7ba852a5b863dda
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://techbase.kde.org/Getting_Started/Build/KDE4/Troubleshooting
          ENTERED=20151122
-         UPDATED=20171201
+         UPDATED=20171205
            SHORT="KDE calendar access library"
 
 cat << EOF
