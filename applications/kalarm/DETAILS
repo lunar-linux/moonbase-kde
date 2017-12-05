@@ -1,0 +1,14 @@
+          MODULE=kalarm
+         VERSION=17.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:4abc026242e832ed9017dc643c896edca4e91bb88937438e3376fa984aefad66
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://community.kde.org/KDE_PIM
+         ENTERED=20171205
+         UPDATED=20171205
+           SHORT="personal alram scheduler"
+
+cat << EOF
+A personal alarm scheduler.
+EOF
