@@ -1,4 +1,5 @@
 depends dbus
 depends polkit
-depends qt4
 depends qt5
+
+optional_depends qt4 "" "" "for qt4 widget support" n
