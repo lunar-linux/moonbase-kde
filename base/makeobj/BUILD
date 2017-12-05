@@ -1,7 +1,7 @@
-
+  
   prepare_install &&
 
-  install -m755 $SOURCE_CACHE/$MODULE-$VERSION /usr/bin/$MODULE  &&
+  install -m644 makeobj /usr/bin/  &&
 
   echo "export KDE4_INSTALL_DIR=\"${MODULE_PREFIX}\"" >> $SOURCE_DIRECTORY/kde4.rc  &&
   echo export PATH=\"'${PATH}':${MODULE_PREFIX}/bin\" >> $SOURCE_DIRECTORY/kde4.rc  &&
