@@ -1,0 +1,14 @@
+          MODULE=kmail
+         VERSION=17.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:ace11536c9f206fe1f6fed1ffe4227b8cc90d843dcbbaa8382e04c4b15c077c5
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://community.kde.org/KDE_PIM
+         ENTERED=20171205
+         UPDATED=20171205
+           SHORT="kde mail client"
+
+cat << EOF
+KDE mail client.
+EOF
