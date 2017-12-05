@@ -1,12 +1,12 @@
           MODULE=kmplayer
-         VERSION=0.11.3d
+         VERSION=0.12.0b
           SOURCE=$MODULE-$VERSION.tar.bz2
-      SOURCE_URL=http://kmplayer.kde.org/pkgs
-      SOURCE_VFY=sha1:f43651d4252cf6d878b5b014c1e5e9b18b2e31c4
+      SOURCE_URL=$KDE_URL/stable/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha256:5e98cea9bd958860d90003d37037172a95ed8b699133e8f1e6033147aaefed73
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kmplayer.kde.org
          ENTERED=20081125
-         UPDATED=20120611
+         UPDATED=20171203
            SHORT="MPlayer frontend for KDE"
 
 cat << EOF

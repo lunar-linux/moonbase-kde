@@ -1,5 +1,6 @@
 
-  source /etc/profile.d/qt4.rc &&
-  source /etc/profile.d/kde4.rc &&
+  source /etc/profile.d/qt5.rc &&
+
+  OPTS+=" -DBUILD_TESTING=OFF" &&
 
   default_cmake_build
