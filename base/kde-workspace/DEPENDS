@@ -5,25 +5,18 @@ depends xcb-util
 depends xcb-util-image 
 depends xcb-util-wm
 depends xcb-util-keysyms
-
 depends freetype2
-depends libdbusmenu-qt
-depends qimageblitz
+depends libdbusmenu-qt5
 depends kdelibs
 depends kactivities-frameworks
 
 optional_depends "boost"         "-DWITH_Boost=1"       "-DWITH_Boost=0"       "to build plasma dataengines: akonadi,rss,calendar"
 optional_depends "akonadi"       "-DWITH_Akonadi=1"     "-DWITH_Akonadi=0"     "to build plasma dataengines: akonadi,calendar"
-optional_depends "kdepimlibs"    "-DWITH_KdepimLibs=1"  "-DWITH_KdepimLibs=0"  "for nepomuk support" n
-optional_depends "prison"        "-DWITH_Prison=1"      "-DWITH_Prison=0"      "for barcode support"
 optional_depends "soprano"       "-DWITH_Soprano=1"     "-DWITH_Soprano=0"     "for soprano support"
 optional_depends "glib-2"        "-DWITH_GLIB2=1"       "-DWITH_GLIB2=0"       "required for keyboard switching"
 optional_depends "libusb-compat" "-DWITH_USB=1"         "-DWITH_USB=0"         "for usb device support"
 optional_depends "qjson"         "-DWITH_QJSON=1"       "-DWITH_QJSON=0"       "for Qt4 JavaScript Object Notation support"
-optional_depends "libqalculate"  "-DWITH_Qalculate=1"   "-DWITH_Qalculate=0"   "for advanced features of the calculator runner"
-optional_depends "libraw1394"    "-DWITH_RAW1394=1"     "-DWITH_RAW1394=0"     "for firewire support"
 optional_depends "lm_sensors"    "-DWITH_Sensors=1"     "-DWITH_Sensors=0"     "for system sensors support"
-optional_depends "gpsd"          "-DWITH_libgps=1"      "-DWITH_libgps=0"      "for gps device support"
 optional_depends "Linux-PAM"     "-DWITH_PAM=1"         "-DWITH_PAM=0"         "for PAM support"
 
 
