@@ -1,0 +1,14 @@
+          MODULE=kimagemapeditor
+         VERSION=17.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:9d62f806387c8b69f6763f357e0ce948f8736f9141f5dbe6dec1c3619a989f32
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://userbase.kde.org/KImageMapEditor
+         ENTERED=20171205
+         UPDATED=20171205
+           SHORT="HTML imagemap editor"
+
+cat << EOF
+An HTML imagemap editor allowing you to create and modify HTML imagemaps.
+EOF
