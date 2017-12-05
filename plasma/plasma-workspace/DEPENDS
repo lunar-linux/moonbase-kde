@@ -14,15 +14,15 @@ depends ktexteditor
 depends libkscreen
 depends libqalculate
 depends milou
-depends prison-frameworks
-depends baloo
+depends prison
+depends baloo-frameworks
 depends kdoctools
 depends krunner
 depends kwin
 depends kxmlrpcclient
-depends networkmanager-qt
 depends libksysguard
 depends kwayland-frameworks
 
 optional_depends gpsd "" "" "for geolocation support"
 optional_depends plasma-workspace-wallpapers "" "" "for addional wallpapers"
+optional_depends networkmanager-qt "" "" "for newwork manager support"

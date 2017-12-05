@@ -1,15 +1,15 @@
-depends baloo
+depends baloo-frameworks
 depends kmenuedit
 depends kpeople
 depends ksysguard
 depends kwin
 depends libcanberra
 depends libxkbfile
-depends polkit-kde-agent
 depends powerdevil
-depends plasma-nm
 depends boost
 depends extra-cmake-modules
 depends kdoctools
 depends xf86-input-evdev
 depends xf86-input-synaptics
+
+optional_depends plasma-nm "" "" "plasma widget for network manager"

@@ -1,6 +1,4 @@
-
-  . /etc/profile.d/qt5.rc &&
-
-  OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=1" &&
-
-  default_cmake_build
+  prepare_install &&
+  mkdir -p /usr/share/grub/themes &&
+  cp -r breeze /usr/share/grub/themes/ &&
+  install -d /usr/share/grub/themes/breeze
