@@ -1,0 +1,14 @@
+          MODULE=korganizer
+         VERSION=17.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:14a0ff02d6032407de2be017bdbce0ef6a273edecdd7b69bf8b6961ce00052db
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://community.kde.org/KDE_PIM
+         ENTERED=20171205
+         UPDATED=20171205
+           SHORT="calendar and scheduling program"
+
+cat << EOF
+KDE calendar and scheduling program.
+EOF
