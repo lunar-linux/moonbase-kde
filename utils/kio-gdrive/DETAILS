@@ -1,0 +1,14 @@
+          MODULE=kio-gdrive
+         VERSION=1.2.1
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$MODULE/$VERSION/src/
+      SOURCE_VFY=sha256:d0c778538dc20412a944ccbd48fd99dc5f531e4df914bf8cbdf813371e857ca3
+        WEB_SITE=https://community.kde.org/KIO_GDrive
+         ENTERED=20171203
+         UPDATED=20171203
+           SHORT="gdrive kio for dolphin"
+
+cat << EOF
+KIO GDrive is a KIO slave that enables KIO-aware applications (such as Dolphin, Kate
+or Gwenview) to access and edit Google Drive files on the cloud.
+EOF
