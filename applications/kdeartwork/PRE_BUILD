@@ -1,5 +1,0 @@
-
-default_pre_build &&
-
-# fix screensaver code with current cmake
-sedit '1 i include(CheckIncludeFiles)' kscreensaver/xsavers/CMakeLists.txt

@@ -7,14 +7,13 @@ depends shared-mime-info
 depends boost
 depends perl
 depends cmake
-depends attica
+#depends attica
 depends docbook-xsl
 depends docbook-xml
 depends giflib
-depends strigi
+#depends strigi
 depends kde-base
-depends phonon
-depends libdbusmenu-qt
+#depends libdbusmenu-qt
 depends solid
 depends polkit-qt-1
 
@@ -29,15 +28,15 @@ optional_depends "heimdal"     "-DWITH_GSSAPI=1"  "-DWITH_GSSAPI=0"  "Allows KIO
 optional_depends "qca2"        "-DWITH_QCA2=1" "-DWITH_QCA2=OFF" "for cross-platform crypto API support"
 optional_depends "alsa-lib"    "" "" "for alsa sound support"
 optional_depends "attr"        "" "" "for Access Control List support"
-optional_depends "PyQt"        "" "" "for python support in other kde4 modules"
+optional_depends "PyQt5"       "" "" "for python support in other kde4 modules"
 optional_depends "grantlee"    "" "" "for plugin based String Template system support"
 optional_depends "subversion"  "" "" "for subversion support; can be used by Dolphin"
 optional_depends "git"         "" "" "for git support; can be used by Dolphin"
 optional_depends "hspell"     ""  "" "for hebrew spell checking support"
 
-optional_depends "shared-desktop-ontologies" \
-                 "-DWITH_SharedDesktopOntologies=1" \
-                 "-DWITH_SharedDesktopOntologies=0" \
-                 "for ontological support"
+#optional_depends "shared-desktop-ontologies" \
+#                 "-DWITH_SharedDesktopOntologies=1" \
+#                 "-DWITH_SharedDesktopOntologies=0" \
+#                 "for ontological support"
 
 optional_depends "hupnp-ng" "-DWITH_HUpnp=1 -DHUPNP_ENABLED=1" "-DWITH_HUpnp=0" "for UPnp support in solid"

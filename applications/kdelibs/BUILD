@@ -1,5 +1,5 @@
 
-  source /etc/profile.d/qt4.rc   &&
+  source /etc/profile.d/qt5.rc   &&
 
   OPTS+=" -DDOCBOOKXML_CURRENTDTD_DIR=/usr/share/sgml/docbook/xml/`lvu version docbook-xml` \
           -DDOCBOOKXSL_DIR=/usr/share/sgml/docbook/xsl-stylesheets-`lvu version docbook-xsl`" &&

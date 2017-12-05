@@ -4,11 +4,11 @@ depends qt5
 
 optional_depends %MYSQL \
                  "-DDATABASE_BACKEND=MYSQL" "" \
-                 "for MySQL database support${PROBLEM_COLOR}If yes here say no to Postgresql and sqlite${QUERY_COLOR}"
+                 "for MySQL database support${PROBLEM_COLOR}If yes here say no to Postgresql and sqlite${QUERY_COLOR}" n
 
 optional_depends postgresql \
                  "-DDATABASE_BACKEND=POSTGRES" "" \
-                 "for Postgresql database support,${PROBLEM_COLOR}If you said yes here you should have said NO to %MYSQL"${QUERY_COLOR}
+                 "for Postgresql database support,${PROBLEM_COLOR}If you said yes here you should have said NO to %MYSQL"${QUERY_COLOR} n
 
 optional_depends sqlite \
                  "-DAKONADI_BUILD_QSQLITE=1 -DDATABASE_BACKEND=SQLITE"  \

@@ -1,0 +1,14 @@
+          MODULE=akonadi-import-wizard
+         VERSION=17.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://community.kde.org/KDE_PIM
+         ENTERED=20171201
+         UPDATED=20171201
+           SHORT="import email into kmail"
+
+cat << EOF
+Import email into kmail.
+EOF

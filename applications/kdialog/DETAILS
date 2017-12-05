@@ -1,0 +1,14 @@
+          MODULE=kdialog
+         VERSION=17.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://utils.kde.org/projects/kgpg/
+         ENTERED=20171201
+         UPDATED=20171201
+           SHORT="display dialog boxes from shell scripts"
+
+cat << EOF
+A utility for displaying dialog boxes from shell scripts.
+EOF

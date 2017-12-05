@@ -1,12 +1,12 @@
           MODULE=akonadi-search
-         VERSION=16.04.3
+         VERSION=17.08.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:15795b655439d911a329e541edc1a754862a8938f1ec30a6f8bb66f84ba12f81
+      SOURCE_VFY=sha256:99e10afbc7058fc54327ea36823bd177627dc28672b346da1400e6189ad8a699
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://techbase.kde.org/Getting_Started/Build/KDE4/Troubleshooting
          ENTERED=20151122
-         UPDATED=20160713
+         UPDATED=20171201
            SHORT="libraries and daemons to implement searching in akonadi"
 
 cat << EOF
