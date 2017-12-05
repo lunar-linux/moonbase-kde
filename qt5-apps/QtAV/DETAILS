@@ -1,0 +1,17 @@
+          MODULE=QtAV
+         VERSION=1.12.0
+          SOURCE=$MODULE-$VERSION.tar.gz
+         SOURCE2=capi.tar.xz
+ SOURCE_URL_FULL=https://github.com/wang-bin/QtAV/archive/v$VERSION.tar.gz
+     SOURCE2_URL=$MIRROR_URL
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+      SOURCE_VFY=sha256:65ab859985d73521c2d17e72117baae0f3f6242b69f59994acada76fa5364193
+     SOURCE2_VFY=sha256:49b446b2f6c97d60f6d03e558fb34295f98ccaa36caeabfcf9e67a7569de1269
+        WEB_SITE=http://www.qtav.org/
+         ENTERED=20171205
+         UPDATED=20171205
+           SHORT="qt5 based multimedia playback framework"
+
+cat << EOF
+A cross-platform multimedia playback framework based on Qt and FFmpeg.
+EOF
