@@ -1,0 +1,14 @@
+          MODULE=konqueror
+         VERSION=17.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:47c9f4077837ea8fe2fbcc267d35f5f24fb40ed93623da0ef2a128701dd050ac
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://konqueror.org/
+         ENTERED=20171205
+         UPDATED=20171205
+           SHORT="filemanager and web browser"
+
+cat << EOF
+KDE filemanager and web browser.
+EOF
