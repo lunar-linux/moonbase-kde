@@ -12,8 +12,8 @@ sedit "s:QMAKE_LFLAGS +=:QMAKE_LFLAGS += \$\$LDFLAGS:" qtbase/mkspecs/common/gcc
 sedit "s:QMAKE_LFLAGS_RELEASE +=:QMAKE_LFLAGS_RELEASE += \$\$LDFLAGS:" qtbase/mkspecs/common/gcc-base.conf &&
 sedit "s:QMAKE_LFLAGS_RELEASE += -Wl,-O1:QMAKE_LFLAGS_RELEASE += \$\$LDFLAGS:" qtbase/mkspecs/common/g++-unix.conf &&
 
-# Fix missing private includes https://bugreports.qt.io/browse/QTBUG-37417
-sedit '/CMAKE_NO_PRIVATE_INCLUDES\ \=\ true/d' mkspecs/features/create_cmake.prf
+# Fix missing private includes
+sedit '/CMAKE_NO_PRIVATE_INCLUDES\ \=\ true/d' qtbase/mkspecs/features/create_cmake.prf
 
 # Cannot find our /usr/bin/ls or /usr/bin/echo
 sedit "s:/bin/ls:/usr/bin/ls:g" qtbase/src/corelib/global/global.pri &&
