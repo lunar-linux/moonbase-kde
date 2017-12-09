@@ -1,0 +1,14 @@
+          MODULE=eventviews
+         VERSION=17.08.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$(module_version kde4)/src
+      SOURCE_VFY=sha256:9e6c611be8f5bd7c90a3ec652ed10792383a4f46d659bcb3ba3ab93fc7403948
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20160505
+         UPDATED=20171205
+           SHORT="Library for creating events"
+
+cat << EOF
+Library for creating events.
+EOF
