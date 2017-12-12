@@ -1,3 +1,5 @@
+. /etc/profile.d/qt5.rc &&
+
 OPTS+=" --no-timestamp \
         --assume-shared \
         --confirm-license \
