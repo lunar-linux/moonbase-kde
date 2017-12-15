@@ -1,5 +1,8 @@
 . /etc/profile.d/qt5.rc &&
 
+# For qt5-5.10.0 support
+sedit "s:Qt_5_9_3}:Qt_5_9_3 Qt_5_10_0}:" sip/QtCore/QtCoremod.sip &&
+
 OPTS+=" --no-timestamp \
         --assume-shared \
         --confirm-license \
