@@ -1,7 +1,8 @@
+. /etc/profile.d/qt5.rc &&
  
   cd ConvertAll &&
   prepare_install &&
-  python install.py -p /usr &&
+  python3 install.py -p /usr &&
 
 
   # Desktop icon
