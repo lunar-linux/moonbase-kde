@@ -1,12 +1,12 @@
           MODULE=kaffeine
-         VERSION=2.0.5
+         VERSION=2.0.13
           SOURCE=kaffeine-$VERSION.tar.xz
-      SOURCE_URL=http://download.kde.org/stable/$MODULE/$VERSION/src/
-      SOURCE_VFY=sha256:e1610931e9475e8b86f9c75331f51fbeea22fab0c5fc6a1085325ab2ef055a8c
+      SOURCE_URL=$KDE_URL/stable/$MODULE/
+      SOURCE_VFY=sha256:1ac52ac811a9c9e88fcd466a7df13860fcd749cd125e7d533f589e6a6ee176fd
    MODULE_PREFIX=${KDE_PREFIX:-/usr}
         WEB_SITE=http://kaffeine.kde.org
          ENTERED=20100110
-         UPDATED=20161005
+         UPDATED=20171216
            SHORT="A xine based frontend for KDE"
 
 cat << EOF
