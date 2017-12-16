@@ -1,11 +1,11 @@
           MODULE=kgraphviewer
-         VERSION=2.1.1
-          SOURCE=$MODULE-$VERSION.tar.bz2
-      SOURCE_URL=$MIRROR_URL
-      SOURCE_VFY=sha1:8aa2b61ab02adb3aa003a7ee882991e886f37b0e
+         VERSION=2.4.2
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/kgraphviewer/$VERSION/
+      SOURCE_VFY=sha256:49438b4e6cca69d2e658de50059f045ede42cfe78ee97cece35959e29ffb85c9
         WEB_SITE=http://www.kde.org/applications/graphics/kgraphviewer/
          ENTERED=20080111
-         UPDATED=20130608
+         UPDATED=20171216
            SHORT="a tool to display graphviz dot graphs"
 cat << EOF
 KGraphViewer is a tool to display graphviz .dot graphs.
