@@ -28,9 +28,11 @@ depends kpty
 depends kguiaddons
 depends kdoctools
 depends kwindowsystem
+depends kactivities-frameworks
+depends kactivities-stats
 depends knotifications
-depends kglobalaccel
 depends kcrash
+depends kglobalaccel
 depends kservice
 depends kemoticons
 depends kdesu
@@ -48,6 +50,7 @@ depends baloo-frameworks
 depends knotifyconfig
 depends knewstuff
 depends kparts
+depends kmediaplayer
 depends kdewebkit
 depends syntax-highlighting
 depends ktexteditor
@@ -55,19 +58,16 @@ depends kdesignerplugin
 depends kinit
 depends kded
 depends kdelibs4support
-depends kactivities-frameworks
-depends kactivities-stats
 depends kpackage
 depends frameworkintegration
 depends kdeclarative
+depends kwayland-frameworks
 depends plasma-framework
 depends kcmutils
 depends khtml
 depends kjsembed
-depends kmediaplayer
 depends kross
 depends krunner
-depends kwayland-frameworks
 depends kirigami2
 
 optional_depends networkmanager-qt "" "" "for NetworkManager support"
