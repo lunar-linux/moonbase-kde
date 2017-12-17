@@ -1,12 +1,12 @@
           MODULE=kconfig
-         VERSION=5.40.0
+         VERSION=5.41.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:6b96654c525de124fe127f4d40e0ff8e99a1d31ef7b368de7ce3af876b55295f
+      SOURCE_VFY=sha256:f65b24642fab8b45e8ea93620d6c8321535681c286682cd8e62f428def4a90c9
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kconfig
          ENTERED=20150205
-         UPDATED=20171130
+         UPDATED=20171217
            SHORT="advanced configuration system"
 
 cat << EOF
