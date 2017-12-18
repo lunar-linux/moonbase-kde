@@ -1,10 +1,15 @@
 . /etc/profile.d/qt5.rc  &&
-. /etc/profile.d/kde4.rc &&
 
-CXXFLAGS+=" -std=c++11" &&
+patch_it $SOURCE2 1 &&
 
-OPTS+=" --arch='$CPU' --qt-libdir=/usr/lib/qt5 --qt-includedir=/usr/include/qt5 \
-        --enable-gpl --enable-gpl3 --disable-gtk2 --avformat-swscale" &&
+sedit "37i #include <locale.h>" src/framework/mlt_property.h &&
+
+#CXXFLAGS+=" -std=c++11" &&
+CFLAGAS+=" -I/usr/include/ffmpeg2.8" &&
+
+# disabling avformat is temp till they fix it
+OPTS+=" --qt-libdir=/usr/lib/qt5 --qt-includedir=/usr/include/qt5 \
+        --enable-gpl --enable-gpl3 --disable-gtk2 --disable-avformat" &&
 
 default_build &&
 
