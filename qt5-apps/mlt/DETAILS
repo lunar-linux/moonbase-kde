@@ -1,8 +1,11 @@
           MODULE=mlt
          VERSION=6.4.1
           SOURCE=$MODULE-$VERSION.tar.gz
+         SOURCE2=mlt-6.4.1-opencv-3.3.patch
  SOURCE_URL_FULL=http://github.com/mltframework/mlt/archive/v$VERSION.tar.gz
+     SOURCE2_URL=https://gitweb.gentoo.org/repo/gentoo.git/plain/media-libs/mlt/files/
       SOURCE_VFY=sha256:87583af552695b2235f4ee3fc1e645d69e31702b109331d7e8785fb180cfa382
+     SOURCE2_VFY=sha256:61d168b826741cda400f67380c5ae9fa6245f3d0527338e1494da4f8ab76a8f1
         WEB_SITE=http://www.mltframework.org
          ENTERED=20071106
          UPDATED=20170711
