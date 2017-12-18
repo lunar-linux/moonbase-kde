@@ -1,11 +1,11 @@
           MODULE=libkgeomap
-         VERSION=17.08.3
+         VERSION=17.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$(module_version kde4)/src
-      SOURCE_VFY=sha256:15e4b6dc381504c24e51cdf7b1925437d73dafa30c44bf3c441f9dcaf96b164c
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:57464b1ee9ac4ad201d9bcaac699e89e7df1f2df21a3d6a7f6f2ea2a19c6ac86
         WEB_SITE=https://projects.kde.org/projects/kde/kdegraphics/libs/libkgeomap
          ENTERED=20150513
-         UPDATED=20171205
+         UPDATED=20171217
            SHORT="wrapper around different world-map components"
 
 cat << EOF
