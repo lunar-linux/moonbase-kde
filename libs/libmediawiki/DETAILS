@@ -1,11 +1,11 @@
           MODULE=libmediawiki
-         VERSION=2016-05-25
+         VERSION=5.37.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$MIRROR_URL
-      SOURCE_VFY=sha256:0c3746c3ac3778eb5ea42320476b132e77da483d71cb8a4bf2b4cdb5eab0c7f2
+      SOURCE_URL=$KDE_URL/stable/$MODULE/
+      SOURCE_VFY=sha256:da167259c49d012359ad65175c365613f0c42699fb99ac7fb9d1f1c8c48292c1
         WEB_SITE=https://quickgit.kde.org/?p=libmediawiki.git
          ENTERED=20160525
-         UPDATED=20160525
+         UPDATED=20171218
            SHORT="C++ interface for MediaWik"
 
 cat << EOF
