@@ -7,16 +7,12 @@ depends xcb-util-wm
 depends xcb-util-keysyms
 depends freetype2
 depends libdbusmenu-qt5
-depends kdelibs
+#depends kdelibs
 depends kactivities-frameworks
 
 optional_depends "boost"         "-DWITH_Boost=1"       "-DWITH_Boost=0"       "to build plasma dataengines: akonadi,rss,calendar"
 optional_depends "akonadi"       "-DWITH_Akonadi=1"     "-DWITH_Akonadi=0"     "to build plasma dataengines: akonadi,calendar"
-optional_depends "soprano"       "-DWITH_Soprano=1"     "-DWITH_Soprano=0"     "for soprano support"
-optional_depends "glib-2"        "-DWITH_GLIB2=1"       "-DWITH_GLIB2=0"       "required for keyboard switching"
 optional_depends "libusb-compat" "-DWITH_USB=1"         "-DWITH_USB=0"         "for usb device support"
-optional_depends "qjson"         "-DWITH_QJSON=1"       "-DWITH_QJSON=0"       "for Qt4 JavaScript Object Notation support"
-optional_depends "lm_sensors"    "-DWITH_Sensors=1"     "-DWITH_Sensors=0"     "for system sensors support"
 optional_depends "Linux-PAM"     "-DWITH_PAM=1"         "-DWITH_PAM=0"         "for PAM support"
 
 
