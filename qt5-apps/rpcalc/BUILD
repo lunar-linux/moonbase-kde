@@ -1,4 +1,4 @@
  
   cd rpCalc &&
   prepare_install &&
-  python install.py -p /usr
+  /usr/bin/python3 install.py -p /usr
