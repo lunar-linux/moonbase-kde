@@ -1,12 +1,12 @@
           MODULE=qjson
-         VERSION=0.8.1
-          SOURCE=$MODULE-$VERSION.tar.bz2
-      SOURCE_URL=$SFORGE_URL/qjson/$VERSION/
-      SOURCE_VFY=sha1:197ccfd533f17bcf40428e68a82e6622047ed4ab
+         VERSION=0.9.0
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/flavio/qjson/archive/0.9.0.tar.gz
+      SOURCE_VFY=sha256:e812617477f3c2bb990561767a4cd8b1d3803a52018d4878da302529552610d4
         WEB_SITE=http://qjson.sourceforge.net/
          ENTERED=20100624
-         UPDATED=20111227
-           SHORT="Qt4 JavaScript Object Notation"
+         UPDATED=20171222
+           SHORT="Qt5 JavaScript Object Notation"
 
 cat << EOF
 QJson is a qt-based library that maps JSON data to QVariant objects: JSON arrays
