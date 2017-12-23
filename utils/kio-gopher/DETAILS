@@ -1,0 +1,21 @@
+          MODULE=kio-gopher
+         VERSION=0.1.99
+          SOURCE=$MODULE-$VERSION-$MAJOR.tar.gz
+ SOURCE_URL_FULL=https://github.com/KDE/kio-gopher/archive/0.1.99.tar.gz
+      SOURCE_VFY=sha256:1e276ada02517855f720ae1cfc2b16f770d6224d6d138e02d45386329676414a
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://www.kde.org
+         ENTERED=20080402
+         UPDATED=20171222
+           SHORT="Support for the gopher protocol"
+
+cat << EOF
+This adds support for the gopher protocol to konqueror.
+Currently it supports most (if not all) of the gopher protocol.
+Support for gopher+ protocol is planned.
+
+For a list of known gophers see; 
+
+http://gopher.floodgap.com/gopher/gw?a=gopher%3A%2F%2Fgopher.floodgap.com%2F1%2Fworld
+
+EOF
