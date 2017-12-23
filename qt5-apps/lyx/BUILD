@@ -5,8 +5,6 @@ else
   . /etc/profile.d/qt4.rc
 fi &&
 
-OPTS+=" --without-included-mythes" &&
-
 default_build &&
 
 # Desktop menu entry
