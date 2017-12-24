@@ -1,6 +1,8 @@
 
-  sedit "s:bool positionValid = FALSE:bool positionValid = false:" src/Docks/GeoImageDock.cpp &&
-  sedit "12i #include <QDrag>" src/Docks/GeoImageDock.h &&
+  sedit "s:#include <QtGui>:#include <QtGui>\n#include <QtNetwork>:" src/MainWindow.cpp &&
+  sedit "s:#include <quazip:#include <quazip5:g" src/Tools/ZipEngine.h &&
+  sedit "s:-lquazip:-lquazip5:" src/src.pro &&
+
 
   . /etc/profile.d/qt5.rc &&
 
