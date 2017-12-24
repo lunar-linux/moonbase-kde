@@ -3,6 +3,8 @@
 patch_it $SOURCE2 1 &&
 
 sedit "37i #include <locale.h>" src/framework/mlt_property.h &&
+# It seems glibc-2.26 dropped this header, so a sedit it is
+sedit "s:#include <xlocale.h>:#include <locale.h>:" src/framework/mlt_property.h &&
 
 #CXXFLAGS+=" -std=c++11" &&
 CFLAGAS+=" -I/usr/include/ffmpeg2.8" &&
