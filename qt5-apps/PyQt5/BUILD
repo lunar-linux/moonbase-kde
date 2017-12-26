@@ -8,7 +8,7 @@ OPTS+=" --no-timestamp \
         --confirm-license \
         --qmake=/usr/lib/qt5/bin/qmake" &&
 
-if module_installed qscintilla-qt5; then
+if module_installed qscintilla2; then
   OPTS+=" --qsci-api"
 fi &&
 
