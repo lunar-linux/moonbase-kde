@@ -6,12 +6,6 @@ if module_installed wayland; then
   sedit "2i CONFIG += generated_privates" qtwayland/src/compositor/extensions/extensions.pri
 fi &&
 
-# Try and use our flags everywhere
-sedit "s/-O2/\$\$CFLAGS/" qtbase/mkspecs/common/gcc-base.conf &&
-sedit "s:QMAKE_LFLAGS +=:QMAKE_LFLAGS += \$\$LDFLAGS:" qtbase/mkspecs/common/gcc-base.conf &&
-sedit "s:QMAKE_LFLAGS_RELEASE +=:QMAKE_LFLAGS_RELEASE += \$\$LDFLAGS:" qtbase/mkspecs/common/gcc-base.conf &&
-sedit "s:QMAKE_LFLAGS_RELEASE += -Wl,-O1:QMAKE_LFLAGS_RELEASE += \$\$LDFLAGS:" qtbase/mkspecs/common/g++-unix.conf &&
-
 # Fix missing private includes
 sedit '/CMAKE_NO_PRIVATE_INCLUDES\ \=\ true/d' qtbase/mkspecs/features/create_cmake.prf
 
@@ -23,9 +17,6 @@ sedit "s:/bin/echo:/usr/bin/echo:g" qtwebengine/src/3rdparty/chromium/build/comm
 if ! in_depends $MODULE pulseaudio; then
   sedit '/use_pango/ a use_pulseaudio=0 \\' qtwebengine/src/core/config/desktop_linux.pri
 fi &&
-
-# support libressl
-sedit 's:^\(#define q_SSL_get_server_tmp_key(ssl, key)\).*:\1 true:' qtbase/src/network/ssl/qsslsocket_openssl_symbols_p.h &&
 
 # fix build with previous version of the module installed
 # see https://bugreports.qt.io/browse/QTBUG-33948 and related
