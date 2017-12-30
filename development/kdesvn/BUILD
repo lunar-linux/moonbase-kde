@@ -1,5 +1,4 @@
-  . /etc/profile.d/qt4.rc  &&
-  . /etc/profile.d/kde4.rc &&
+  . /etc/profile.d/qt5.rc  &&
 
   OPTS+=" -DCMAKE_CXX_FLAGS=-DQT_THREAD_SUPPORT" &&
 
