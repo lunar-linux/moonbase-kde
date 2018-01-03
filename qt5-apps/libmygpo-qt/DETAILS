@@ -1,12 +1,12 @@
           MODULE=libmygpo-qt
-         VERSION=1.0.8
+         VERSION=1.0.9
           SOURCE=$MODULE.$VERSION.tar.gz
       SOURCE_URL=http://stefan.derkits.at/files/libmygpo-qt/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE.$VERSION
-      SOURCE_VFY=sha1:3301d24bd2fe8ed61d12a144176f479495c8378a
+      SOURCE_VFY=sha256:a44ae170ade90bb20c51328a0061929aa0bb2ef341327bf7cca2342bb7804ff3
         WEB_SITE=http://wiki.gpodder.org/wiki/Libmygpo-qt
          ENTERED=20111221
-         UPDATED=20140929
+         UPDATED=20180103
            SHORT="Qt Library that wraps the gpodder.net Web API"
 
 cat << EOF
