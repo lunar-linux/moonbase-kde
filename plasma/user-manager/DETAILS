@@ -1,12 +1,12 @@
           MODULE=user-manager
-         VERSION=5.11.4
+         VERSION=5.11.5
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:a5b031027edc248871a9e7fa6920167c605e4ffdf8d0272e5fa768cbb19ae657
+      SOURCE_VFY=sha256:449f648eee7124687432ad71d510cd2eefe59ee7b2d4653ef9cc64f1422098e4
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
          ENTERED=20151123
-         UPDATED=20171201
+         UPDATED=20180103
            SHORT="simple system settings module to manage the users of your system"
 
 cat << EOF

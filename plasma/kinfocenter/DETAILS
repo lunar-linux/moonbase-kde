@@ -1,12 +1,12 @@
           MODULE=kinfocenter
-         VERSION=5.11.4
+         VERSION=5.11.5
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:c4e1cc4fda2b7f7799c00cea1d4e5e03ad70e711776721167d0705e940dac339
+      SOURCE_VFY=sha256:2e36ac5817ca8fbba264ae2ba0061b97ae740690525160296ba823328989a77a
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
          ENTERED=20151123
-         UPDATED=20171201
+         UPDATED=20180103
            SHORT="A utility that provides information about a computer system"
 
 cat << EOF
