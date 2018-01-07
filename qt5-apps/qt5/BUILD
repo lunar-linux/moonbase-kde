@@ -25,6 +25,9 @@ OPTS+=" -gui \
         -no-gtk \
         -release \
         -no-rpath \
+        -system-zlib \
+        -system-libpng \
+        -system-libjpeg \
         -accessibility \
         -nomake examples \
         -optimized-qmake \
