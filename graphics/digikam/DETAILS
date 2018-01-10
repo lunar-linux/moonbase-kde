@@ -2,12 +2,18 @@
           MODULE=digikam
          VERSION=5.7.0
           SOURCE=$MODULE-$VERSION.tar.xz
+         SOURCE2=digikam-5.7.0-kcalcore-2.patch
+         SOURCE3=digikam-5.7.0-kcalcore-1.patch
       SOURCE_URL=http://download.kde.org/stable/$MODULE/
+     SOURCE2_URL=https://data.gpo.zugaina.org/gentoo/media-gfx/digikam/files/
+     SOURCE3_URL=https://data.gpo.zugaina.org/gentoo/media-gfx/digikam/files/
       SOURCE_VFY=sha256:3605ffb5b6e8fbd6b725e5075f74f505d7edee7531789c2882d11df2d20150f5
+     SOURCE2_VFY=sha256:ce26258dad79c788b2056f8e2391a9dcaf7fb05fb232878e7c64225bf49703a0
+     SOURCE3_VFY=sha256:8c7d4b26cec44e9f21f40e550e1493c985c19a977a223422198cb106c2623d7a
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.digikam.org/
          ENTERED=20090318
-         UPDATED=20170906
+         UPDATED=20180110
            SHORT="KDE version of digikam"
 
 cat << EOF

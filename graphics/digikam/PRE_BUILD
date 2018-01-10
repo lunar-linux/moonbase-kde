@@ -1,0 +1,8 @@
+default_pre_build &&
+
+sedit "s:kreadconfig:kreadconfig5:" core/data/scripts/cleanup_digikamdb/cleanup_digikamdb &&
+
+pushd core &&
+patch_it $SOURCE3 1
+patch_it $SOURCE2 1
+popd
