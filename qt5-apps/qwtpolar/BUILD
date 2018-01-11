@@ -9,6 +9,6 @@
   sed -i -e 's/$${QWT_POLAR_INSTALL_PREFIX}\/features/\/usr\/share\/qwt\/features\//' qwtpolarconfig.pri &&
   sed -i -e 's/^.*QwtPolarDesigner//' qwtpolarconfig.pri &&
 
-  qmake qwtpolar.pro &&
+  /usr/lib/qt5/bin/qmake qwtpolar.pro &&
 
   default_make
