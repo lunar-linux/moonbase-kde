@@ -11,5 +11,5 @@
   sedit "s:\$\${QWT_INSTALL_PREFIX}/features:/usr/share/$MODULE/mkspecs/features:" qwtconfig.pri &&
   sedit "s:plugins/designer:plugins/designer/$MODULE:" designer/designer.pro &&
 
-  qmake &&
+  /usr/lib/qt5/bin/qmake &&
   default_make
