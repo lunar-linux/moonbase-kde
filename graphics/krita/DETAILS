@@ -1,12 +1,12 @@
           MODULE=krita
-         VERSION=3.3.2.1
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$MODULE/${VERSION%.*}/
-      SOURCE_VFY=sha256:e555e1ba0cf2aef0800a49a98c5517a3f30ba6f5c47572aa410486e8d8117444
+         VERSION=3.3.3
+          SOURCE=$MODULE-$VERSION.tar.gz
+      SOURCE_URL=$KDE_URL/stable/$MODULE/${VERSION}/
+      SOURCE_VFY=sha256:bec04e3392e9b311477c5c6a50e2201b43a3afda91d9b24a0fc8e3399585865d
         WEB_SITE=https://krita.org/en/
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
          ENTERED=20171216
-         UPDATED=20171216
+         UPDATED=20180112
            SHORT="raster graphics editor designed primarily for digital painting and animation"
 
 cat << EOF
