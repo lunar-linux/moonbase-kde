@@ -1,12 +1,12 @@
           MODULE=spectacle
-         VERSION=17.12.0
+         VERSION=17.12.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:a53dd743200eabcfef31c2df1a905ce800bec84f12f3240611195e23a8451201
+      SOURCE_VFY=sha256:6dc3cf3f1e68e08258cc7685fa496d6af692c7d97c8cdb8bcf66d16253e6827e
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://www.kde.org/applications/graphics/
          ENTERED=20171205
-         UPDATED=20171217
+         UPDATED=20180113
            SHORT="KDE screenshot capture utility"
 
 cat << EOF

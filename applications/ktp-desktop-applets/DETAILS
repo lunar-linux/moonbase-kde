@@ -1,12 +1,12 @@
           MODULE=ktp-desktop-applets
-         VERSION=17.12.0
+         VERSION=17.12.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:6ce30d34d8201041d699c6893467a4cd2befa7a7acc41739619857f8851b40db
+      SOURCE_VFY=sha256:ee7aecc36286d62ee2ddc148c704decc042bdc7c0258654123ff16e82f2765e1
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/system/$MODULE
          ENTERED=20151201
-         UPDATED=20171217
+         UPDATED=20180113
            SHORT="plasma desktop applets"
 
 cat << EOF

@@ -1,12 +1,12 @@
           MODULE=libksieve
-         VERSION=17.12.0
+         VERSION=17.12.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:d6536c3976e37d1ed4a16fe95e17a042e4e99746989ab02cc3b37c7a58327afb
+      SOURCE_VFY=sha256:ab23afa78742288c77f248cb3270d62b6e108d066e8082122e9edbf022c46cf0
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20160505
-         UPDATED=20171217
+         UPDATED=20180113
            SHORT="KDE PIM library for managing sieves"
 
 cat << EOF

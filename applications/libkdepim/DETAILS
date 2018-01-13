@@ -1,12 +1,12 @@
           MODULE=libkdepim
-         VERSION=17.12.0
+         VERSION=17.12.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:1594232787c66364365f1367c139796bd8a928bcf44de75d6da078d711d1abb6
+      SOURCE_VFY=sha256:7ea70d509240a79e7da404f78fe3715c59d11f7f84934ab0683f4d4d8365cfc0
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20160505
-         UPDATED=20171217
+         UPDATED=20180113
            SHORT="Libraries for KDE PIM applications"
 
 cat << EOF
