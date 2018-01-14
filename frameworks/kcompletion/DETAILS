@@ -1,12 +1,12 @@
           MODULE=kcompletion
-         VERSION=5.41.0
+         VERSION=5.42.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:63fba36b9edd1691a26b7ea211e0f44cdf8616622168ba4df408174d6881cb2c
+      SOURCE_VFY=sha256:0e448a1a05436988a836ec0f533c8cb71e955251ec0d4b7e0dbbcc06b6880c7b
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kcompletion
          ENTERED=20150205
-         UPDATED=20171217
+         UPDATED=20180114
            SHORT="text completion helper and widgets"
 
 cat << EOF

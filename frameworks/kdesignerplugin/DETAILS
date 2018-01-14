@@ -1,12 +1,12 @@
           MODULE=kdesignerplugin
-         VERSION=5.41.0
+         VERSION=5.42.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:2939f1d27669cab056425756db4308111059083b577abdb9f52eda749fb437b0
+      SOURCE_VFY=sha256:66c5119cb2687df988e21999b1600282005e1bfa899e5e4c2325c9e982ea8a00
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kdesignerplugin
          ENTERED=20150205
-         UPDATED=20171217
+         UPDATED=20180114
            SHORT="Integrating KDE frameworks widgets with Qt Designer"
 
 cat << EOF
