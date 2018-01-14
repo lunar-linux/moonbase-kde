@@ -3,7 +3,7 @@ depends kde-base
 depends kde-dev-scripts
 depends polkit-kde-agent-1
 
-optional_depends "baloo-frameworks"            ""  ""  "For desktop search support and needed by kdepim. ${PROBLEM_COLOR}Will eventually replace nepomuk, recommended.${DEFAULT_COLOR}"
+optional_depends "baloo"            ""  ""  "For desktop search support and needed by kdepim. ${PROBLEM_COLOR}Will eventually replace nepomuk, recommended.${DEFAULT_COLOR}"
 optional_depends "baloo-widgets"               ""  ""  "Contains widgets for the baloo search framework"
 optional_depends "kactivities-frameworks"      ""  ""  "The kde activity manager"
 optional_depends "bluedevil"                   ""  ""  "For bluetooth support in KDE"
