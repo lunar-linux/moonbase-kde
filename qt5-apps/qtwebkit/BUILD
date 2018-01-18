@@ -1,4 +1,8 @@
 . /etc/profile.d/qt5.rc &&
-/usr/lib/qt5/bin/qmake $OPTS &&
+
+mkdir -p build &&
+cd       build &&
+
+/usr/lib/qt5/bin/qmake ../WebKit.pro $OPTS &&
 
 default_make
