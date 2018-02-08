@@ -139,7 +139,5 @@ EOF
 
 install -m644 $SOURCE_DIRECTORY/$MODULE.rc /etc/profile.d/ &&
 
-if [[ "$PKGCONFIG" == "y" ]]; then
-  mv -f /usr/lib/qt5/pkgconfig/* /usr/lib/pkgconfig/ &&
-  rmdir /usr/lib/qt5/pkgconfig
-fi
+mv -f /usr/lib/qt5/pkgconfig/* /usr/lib/pkgconfig/ &&
+ln -sf /usr/lib/pkgconfig/Qt*.pc /usr/lib/qt5/pkgconfig/
