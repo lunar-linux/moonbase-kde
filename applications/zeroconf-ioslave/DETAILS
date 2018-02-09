@@ -1,12 +1,12 @@
           MODULE=zeroconf-ioslave
-         VERSION=17.12.1
+         VERSION=17.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:1dff400f06d9a97ac5cf93cd817bbf03828b9ac10ce582126821f925b2ffc082
+      SOURCE_VFY=sha256:fddfcc8e8bc3a65d42cc8da2c79f71a6c2e57e17ca8f74f4f612459d6b2be526
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/internet/kget/
          ENTERED=20140713
-         UPDATED=20180113
+         UPDATED=20180209
            SHORT="Network Monitor for DNS-SD services"
 
 cat << EOF

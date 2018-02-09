@@ -1,12 +1,12 @@
           MODULE=kbreakout
-         VERSION=17.12.1
+         VERSION=17.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:3990b498a1f2c9b5553fb1be0bb5febe6f3a247781e0628035f79c0efe98cc98
+      SOURCE_VFY=sha256:5023c3a72cced9bee6a296968e43053d3a2e495b0f8f2ebe24cd41d9de772fc9
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/games/kbreakout/
          ENTERED=20140720
-         UPDATED=20180113
+         UPDATED=20180209
            SHORT="a Breakout-like game"
 
 cat << EOF

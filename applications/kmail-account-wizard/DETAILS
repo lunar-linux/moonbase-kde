@@ -1,12 +1,12 @@
           MODULE=kmail-account-wizard
-         VERSION=17.12.1
+         VERSION=17.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:dbf979f792364b57e031f75e78ed2fc508df99ef9843d2ae9cd8119fdda5916b
+      SOURCE_VFY=sha256:1a687bd3a1a97a1514b34c215e79b0290c8afde35edd8dd94812e70e57fdfad0
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20171205
-         UPDATED=20180113
+         UPDATED=20180209
            SHORT="kmail account wizard"
 
 cat << EOF
