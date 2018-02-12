@@ -1,12 +1,12 @@
           MODULE=kwidgetsaddons
-         VERSION=5.42.0
+         VERSION=5.43.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:8f9f7a4f06edd558b5786cc2852ba362e72d04d5a7c42b2bb63f47c09866d0a5
+      SOURCE_VFY=sha256:59a7329e8a4a3b22677dc09648de9c0a042b9ae284af2556c5db48394a9aa797
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kwidgetsaddons
          ENTERED=20150205
-         UPDATED=20180114
+         UPDATED=20180212
            SHORT="Large set of desktop widgets"
 
 cat << EOF

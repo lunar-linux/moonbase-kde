@@ -1,12 +1,12 @@
           MODULE=kidletime
-         VERSION=5.42.0
+         VERSION=5.43.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:b0b355c0948f5e2ab2366b089bd894051cf547a154773e8365995d2472203905
+      SOURCE_VFY=sha256:72edf2d3907eea4367aa5f84ebaee843a9bf69f9defd1bb603dc3af757cba2ca
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kidletime
          ENTERED=20150205
-         UPDATED=20180114
+         UPDATED=20180212
            SHORT="Reporting of idle time of user and system"
 
 cat << EOF

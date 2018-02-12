@@ -1,12 +1,12 @@
           MODULE=attica
-         VERSION=5.42.0
+         VERSION=5.43.0
           SOURCE=attica-$VERSION.tar.xz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/attica-$VERSION
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:adfba910d6d3bbd814b8b8e7322e8181696f180f6088b53cb726e6a5cbd49245
+      SOURCE_VFY=sha256:2ac4197eb97fd09bafbfe91bb90b9cf0cc8e65f2cdc20cd54ba63adb402b6eef
         WEB_SITE=https://projects.kde.org/projects/kdesupport/attica
          ENTERED=20150205
-         UPDATED=20180114
+         UPDATED=20180212
            SHORT="implements the Open Collaboration Services"
 
 cat << EOF
