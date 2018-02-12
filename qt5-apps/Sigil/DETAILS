@@ -1,10 +1,10 @@
           MODULE=Sigil
-         VERSION=0.9.8
-          SOURCE=$MODULE-$VERSION-Code.zip
-      SOURCE_URL=https://github.com/user-none/Sigil/releases/download/${VERSION}
+         VERSION=0.9.9
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/Sigil-Ebook/Sigil/archive/${VERSION}.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
    MODULE_PREFIX=${QT5_PREFIX:-/usr}
-      SOURCE_VFY=sha256:78f9f200c86da326984543bd86cbb8eab91308a5a4d7f8cfcc88eb9b0779749a
+      SOURCE_VFY=sha256:12c1ace50598aef0a5e1397da3fdcd9c5ed9eba753c476d0ee5ab00a5d2d3764
         WEB_SITE=https://github.com/user-none/Sigil
          ENTERED=20091107
          UPDATED=20171222
