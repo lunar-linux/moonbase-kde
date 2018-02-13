@@ -139,5 +139,10 @@ EOF
 
 install -m644 $SOURCE_DIRECTORY/$MODULE.rc /etc/profile.d/ &&
 
-mv -f /usr/lib/qt5/pkgconfig/* /usr/lib/pkgconfig/ &&
+# Avoid the Qt5WebKit files
+for f in /usr/lib/qt5/pkgconfig/*; do
+  if [[ $f != *"Qt5WebKit"* ]]; then
+     mv -f $f /usr/lib/pkgconfig/ 
+  fi
+done
 ln -sf /usr/lib/pkgconfig/Qt*.pc /usr/lib/qt5/pkgconfig/
