@@ -1,6 +1,6 @@
 . /etc/profile.d/qt5.rc  &&
 
-patch_it $SOURCE2 1 &&
+#patch_it $SOURCE2 1 &&
 
 sedit "37i #include <locale.h>" src/framework/mlt_property.h &&
 # It seems glibc-2.26 dropped this header, so a sedit it is
