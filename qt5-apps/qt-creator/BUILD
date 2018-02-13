@@ -5,7 +5,8 @@ QT_CREATOR_BLD="$SOURCE_DIRECTORY/creator-build" &&
 mkdir $QT_CREATOR_BLD &&
 cd $QT_CREATOR_BLD &&
 
-LLVM_INSTALL_DIR=/usr /usr/lib/qt5/bin/qmake CONFIG+=journald -r $SOURCE_DIRECTORY/qtcreator.pro &&
+/usr/lib/qt5/bin/qmake \
+LLVM_INSTALL_DIR=/usr QMAKE_CFLAGS_ISYSTEM=-I CONFIG+=journald -r $SOURCE_DIRECTORY/qtcreator.pro &&
 
 make &&
 if [[ $MAKE_DOCS == "y" ]] ; then
@@ -13,7 +14,7 @@ if [[ $MAKE_DOCS == "y" ]] ; then
 fi &&
 prepare_install &&
 
-make install INSTALL_ROOT=$MODULE_PREFIX/ &&
+make INSTALL_ROOT=$MODULE_PREFIX/ install &&
 
 # Desktop menu entry
 cat > $MODULE.desktop << EOF  &&
