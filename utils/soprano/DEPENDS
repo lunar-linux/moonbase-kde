@@ -2,7 +2,6 @@ depends cmake
 depends raptor2
 depends rasqal
 depends libiodbc
-depends qt4
 depends qt5
 
 optional_depends "dbus"      "-DSOPRANO_DISABLE_DBUS=OFF"             "-DSOPRANO_DISABLE_DBUS=ON"             "for dbus integration"
