@@ -1,12 +1,12 @@
           MODULE=libksysguard
-         VERSION=5.12.1
+         VERSION=5.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:d4558ffd6b3b2317a9195401f8ddfbc630f7f5900e9c23c252a6d1661d80cb75
+      SOURCE_VFY=sha256:29bc383652e0d195f181cc7c166c177a338381fd5dd9b9c0430ea1cee921c8d9
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
          ENTERED=20151123
-         UPDATED=20180216
+         UPDATED=20180227
            SHORT="libksysguard"
 
 cat << EOF
