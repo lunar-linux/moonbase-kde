@@ -1,12 +1,12 @@
           MODULE=kaccounts-integration
-         VERSION=17.12.2
+         VERSION=17.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:8589f33c1fa344b97ad5095adf8dd6a00869a332cc6f7ea347e8dd6b2cbdb192
+      SOURCE_VFY=sha256:6935e349695f569fe7a187d941c818c1610572681a56376281b3e393b9e87230
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/system/$MODULE
          ENTERED=20151129
-         UPDATED=20180209
+         UPDATED=20180310
            SHORT="administer web accounts and services"
 
 cat << EOF

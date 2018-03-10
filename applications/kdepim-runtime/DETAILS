@@ -1,12 +1,12 @@
           MODULE=kdepim-runtime
-         VERSION=17.12.2
+         VERSION=17.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:92242c2aacec9abd7fede56b17dea1022a849809673aab97b7005942015321fc
+      SOURCE_VFY=sha256:963f78bf47b5ebfd72bd22ad30aca70ed43d7842c86cfb0782100860c9e560e4
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20091006
-         UPDATED=20180209
+         UPDATED=20180310
            SHORT="akonadi support for kdepim"
 
 cat << EOF

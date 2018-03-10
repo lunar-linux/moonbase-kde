@@ -1,12 +1,12 @@
           MODULE=messagelib
-         VERSION=17.12.2
+         VERSION=17.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:5fd12cee6b74f9aeaf8ad4df012cfaed20511b74441c970107f7d44199f2ca9d
+      SOURCE_VFY=sha256:8d2ab084b55342585e85358a4837c9c4613b40cef4ec4f5de6494d899affadde
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20160505
-         UPDATED=20180209
+         UPDATED=20180310
            SHORT="messaging library"
 
 cat << EOF
