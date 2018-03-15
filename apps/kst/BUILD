@@ -12,6 +12,7 @@
 
   OPTS+=" -Dkst_release=1 \
           -Dkst_pch=OFF \
+          -Dkst_3rdparty=OFF \
           -Dkst_qt5=ON    \
           -Dkst_rpath=OFF \
           -Dkst_svnversion=OFF \
