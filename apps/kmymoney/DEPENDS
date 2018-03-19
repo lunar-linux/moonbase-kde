@@ -1,4 +1,5 @@
 depends libalkimia
 
 optional_depends libofx "--enable-ofxplugin --enable-ofxbanking" "" "for OFX plugin support" y
+optional_depends aqbanking  "" "" "For additional banking support" y
 optional_depends gwenhywfar "" "" "For additional support" y
