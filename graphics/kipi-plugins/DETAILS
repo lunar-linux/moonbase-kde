@@ -1,13 +1,13 @@
           MODULE=kipi-plugins
-         VERSION=5.7.0
+         VERSION=5.9.0
           SOURCE=digikam-$VERSION.tar.xz
       SOURCE_URL=http://download.kde.org/stable/digikam/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/digikam-$VERSION
-      SOURCE_VFY=sha256:3605ffb5b6e8fbd6b725e5075f74f505d7edee7531789c2882d11df2d20150f5
+      SOURCE_VFY=sha256:660d32eedcfd6fe1a75170a651fab068ae62f7f092ae710771a2f32a1c550d1b
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://projects.kde.org/projects/extragear/graphics/kipi-plugins
          ENTERED=20090318
-         UPDATED=20170906
+         UPDATED=20180324
            SHORT="KDE Image Plugin Interface"
 
 cat << EOF
