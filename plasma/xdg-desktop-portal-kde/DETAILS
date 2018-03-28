@@ -1,12 +1,12 @@
           MODULE=xdg-desktop-portal-kde
-         VERSION=5.12.3
+         VERSION=5.12.4
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:69bed62e1c3b18e8ff2b1cce6bbfccb803b6abb17466e9635642efcfd8449e6b
+      SOURCE_VFY=sha256:8c10609b7d15418242c4ca5389777c49a13df72ff1bdcc9f176e63e7573d69a1
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://www.kde.org/workspaces/plasmadesktop/
          ENTERED=20171201
-         UPDATED=20180307
+         UPDATED=20180328
            SHORT="backend implementation for xdg-desktop-portal"
 
 cat << EOF
