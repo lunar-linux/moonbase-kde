@@ -1,6 +1,9 @@
 # Temporary. Make failes if no jit. Will revisit on next bump. Found by keios.
 OPTS+=" -scripttools -no-declarative-debug -release -optimized-qmake" &&
 
+# icu4c 61.1 requires c++11 and thus breaks qt4 and the packaged webkit
+OPTS+=" -no-icu -no-webkit" &&
+
 # Build with gcc 6.2+
 CXXFLAGS+=" -std=gnu++98 -Wno-deprecated" &&
 
