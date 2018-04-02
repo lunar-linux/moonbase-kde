@@ -3,7 +3,7 @@ depends cyrus-sasl
 depends libgcrypt
 depends gnupg
 depends nss
-depends p11-kit
+depends pkcs11-helper
 depends qt5
 
 optional_depends ca-certificates "--certstore-path=/usr/share/ca-certificate" \
