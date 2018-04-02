@@ -2,7 +2,7 @@ source /etc/profile.d/qt5.rc &&
 
 export CXXFLAGS+=" -I../Qt4Qt5" &&
 export LDFLAGS+=" -L../Qt4Qt5" &&
-export QMAKEFEATURES=Qt4Qt5/features/ &&
+export QMAKEFEATURES+=" Qt4Qt5/features/" &&
 
 pushd Qt4Qt5 > /dev/null &&
   /usr/lib/qt5/bin/qmake qscintilla.pro &&
@@ -17,7 +17,8 @@ popd > /dev/null &&
 # install the Python3 bindings
 pushd Python > /dev/null &&
   python3 configure.py --pyqt=PyQt5 -n ../Qt4Qt5/ -o ../Qt4Qt5/ -c --qmake /usr/lib/qt5/bin/qmake &&
-  default_make
+  default_make &&
+  install sip/*.sip /usr/share/sip/PyQt5/Qsci
 popd > /dev/null &&
 
 # install the Python2 bindings
