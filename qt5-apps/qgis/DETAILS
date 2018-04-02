@@ -1,0 +1,16 @@
+          MODULE=qgis
+         VERSION=3.0.1
+          SOURCE=qgis-$VERSION.tar.bz2
+      SOURCE_URL=https://qgis.org/downloads/
+      SOURCE_VFY=sha256:9e2954597cfbdc82b852281c19d8652265f4785b3cf4d7c05e9a1174a89c44d4
+        WEB_SITE=http://qgis.org/
+         ENTERED=20090212
+         UPDATED=20180324
+           SHORT="Qt based Geographic Information System"
+
+cat << EOF
+QGIS supports vector, raster, and database formats. QGIS is licensed under the
+GNU General Public License. QGIS lets you browse and create map data on your
+computer. It supports many common spatial data formats (e.g. ESRI ShapeFile,
+geotiff). QGIS supports plugins to do things like display tracks from your GPS.
+EOF

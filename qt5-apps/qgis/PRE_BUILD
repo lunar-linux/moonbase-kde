@@ -1,0 +1,6 @@
+default_pre_build &&
+
+#sedit 's:/usr/local:/usr:g' cmake/FindQScintilla.cmake cmake/FindQwt.cmake cmake/FindQCA.cmake &&
+sedit 's:qwt6):qwt6 qwt-6):' cmake/FindQwt.cmake &&
+sedit 's:qca2-qt5):libqca-qt5 qca2-qt5):' cmake/FindQCA.cmake &&
+sedit 's:QGIS_OUTPUT_DIRECTORY}/lib:QGIS_OUTPUT_DIRECTORY}/lib${LIB_SUFFIX}:' cmake/PyQtMacros.cmake
