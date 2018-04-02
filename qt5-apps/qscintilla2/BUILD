@@ -28,4 +28,7 @@ if module_installed Python; then
     python configure.py --pyqt=PyQt5 -n ../Qt4Qt5/ -o ../Qt4Qt5/ -c --qmake /usr/lib/qt5/bin/qmake &&
     default_make
   popd > /dev/null
-fi
+fi &&
+
+# Some programs may look for this
+ln -sfv /usr/lib/qt5/libqscintilla2_qt5.so /usr/lib/qt5/libqt5scintilla2.so
