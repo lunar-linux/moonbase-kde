@@ -1,0 +1,32 @@
+          MODULE=qgit
+         VERSION=2.7
+          SOURCE=qgit-$VERSION.tar.gz
+      SOURCE_URL=https://github.com/tibirna/qgit/archive/
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/qgit-qgit-$VERSION
+      SOURCE_VFY=sha256:183d116b2fb38c6a76c99577f6cc86f0241f8b6bdc74042be4cb8631567f5e9e
+        WEB_SITE=https://github.com/tibirna/qgit
+         ENTERED=20080719
+         UPDATED=20180403
+           SHORT="A Qt client for git"
+
+cat << EOF
+With qgit you will be able to browse revisions history, view patch content
+and changed files, graphically following different development branches.
+Main features:
+
+ - View revisions, diffs, files history, files annotation, archive tree.
+
+ - Commit changes visually cherry picking modified files.
+
+ - Apply or format patch series from selected commits, drag and
+   drop commits between two instances of qgit.
+
+ - Associate commands sequences, scripts and anything else executable
+   to a custom action. Actions can be run from menu and corresponding
+   output is grabbed by a terminal window.
+
+ - qgit implements a GUI for the most common StGIT commands like push/pop
+   and apply/format patches. You can also create new patches or refresh
+   current top one using the same semantics of git commit, i.e. cherry
+   picking single modified files.
+EOF
