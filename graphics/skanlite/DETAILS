@@ -1,12 +1,11 @@
           MODULE=skanlite
-         VERSION=2.0
+         VERSION=2.1.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/skanlite/$VERSION/
-      SOURCE_VFY=sha256:ac001be079521de38e0fb72e42cb3750b41451d1df8f85e6af73affa5418aec8
-   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+      SOURCE_URL=$KDE_URL/stable/skanlite/${VERSION%.*}/
+      SOURCE_VFY=sha256:e625db6eed8e2ca9713936ae8175fb96d30d88c0986528ee8845d198624e41bd
         WEB_SITE=http://www.kde.org
          ENTERED=20080715
-         UPDATED=20160717
+         UPDATED=20180403
            SHORT="Simple image scanning application"
 
 cat << EOF
