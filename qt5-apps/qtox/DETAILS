@@ -1,0 +1,28 @@
+          MODULE=qtox
+         VERSION=1.14.1
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=http://github.com/tux3/qTox/archive/v$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/qTox-$VERSION
+      SOURCE_VFY=sha256:baa7b86cf54371e1d0fae4e56d12f15c75b6f43d113057e740ba98772def149d
+        WEB_SITE=http://github.com/tux3/qTox/
+         ENTERED=20160525
+         UPDATED=20180403
+           SHORT="Powerful Qt 5.x based Tox client"
+
+cat << EOF
+qTox is a powerful Tox client that follows the Tox design guidelines while
+running on all major platforms.
+Features:
+  One to one chat with friends
+  Group chats
+  File transfers, with previewing of images
+  Audio calls, including group calls
+  Video calls
+  Tox DNS and Tox URI support
+  Translations in various languages
+  Avatars
+  Faux offline messages
+  History
+  Screenshots
+  Emoticons.
+EOF
