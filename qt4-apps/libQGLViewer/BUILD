@@ -9,7 +9,7 @@ devoke_installwatch &&
   
 cd $SOURCE_DIRECTORY/designerPlugin &&
 /usr/lib/qt5/bin/qmake &&
-default_make
+default_make &&
 
 if in_depends $MODULE qt4 ; then
 devoke_installwatch &&
