@@ -3,4 +3,10 @@
 
   . /etc/profile.d/qt5.rc &&
 
-  default_cmake_build
+  OPTS+=" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr" &&
+
+  cd $MODULE &&
+
+  cmake $OPTS . &&
+
+  default_make
