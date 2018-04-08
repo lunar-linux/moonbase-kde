@@ -8,3 +8,5 @@ depends qt5
 
 optional_depends ca-certificates "--certstore-path=/usr/share/ca-certificate" \
                                "--certstore-internal" "Use system certificates" y
+
+optional_depends Botan  "-DWITH_botan_PLUGIN=yes" "-DWITH_botan_PLUGIN=no" "For botan crypto cupport"
