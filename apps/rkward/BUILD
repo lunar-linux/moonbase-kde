@@ -1,7 +1,4 @@
 
-  . /etc/profile.d/qt4.rc &&
-  . /etc/profile.d/kde4.rc &&
+  . /etc/profile.d/qt5.rc &&
 
-  default_cmake_build &&
-  
-  export $(dbus-launch)
+  default_cmake_build
