@@ -1,12 +1,12 @@
           MODULE=akonadi-notes
-         VERSION=17.12.3
+         VERSION=18.04.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:6f70d0b550b7a3e205bf525cacb32823c1dff21d1e4355651c4c172502f59653
+      SOURCE_VFY=sha256:3b807cbc616db85f2d79e85c897c04351f83985152ed531c46067a290b0a192a
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20171201
-         UPDATED=20180310
+         UPDATED=20180420
            SHORT="manage notes in akonadi"
 
 cat << EOF

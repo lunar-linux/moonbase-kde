@@ -1,12 +1,12 @@
           MODULE=dolphin-plugins
-         VERSION=17.12.3
+         VERSION=18.04.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:8e31695ea1ddfd58b35059d5389e5b9b401fd10294d50765a834ae81a8e6bb2d
+      SOURCE_VFY=sha256:9875ef48ed0f7734408bf9bddca18d53f96cf4478cc8d4ad5e568688a0706d82
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://dolphin.kde.org/
          ENTERED=20130814
-         UPDATED=20180310
+         UPDATED=20180420
            SHORT="file management of svn, git, hg, bazaar and dropbox"
 
 cat << EOF

@@ -1,12 +1,12 @@
           MODULE=ktp-approver
-         VERSION=17.12.3
+         VERSION=18.04.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:777214c33eeeac99f0b8616b4d54e935a8c67982144c5f1c5557c5552ef3a11b
+      SOURCE_VFY=sha256:a4552206aa60572d5b1c6bdb66ee3935a319082e75e455f489f514d41168cf29
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/system/$MODULE
          ENTERED=20151201
-         UPDATED=20180310
+         UPDATED=20180420
            SHORT="channel approver for telepathy"
 
 cat << EOF
