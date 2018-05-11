@@ -1,21 +1,17 @@
           MODULE=mlt
-         VERSION=6.6.0
+         VERSION=6.8.0
           SOURCE=$MODULE-$VERSION.tar.gz
-         SOURCE2=mlt-6.4.1-opencv-3.3.patch
  SOURCE_URL_FULL=http://github.com/mltframework/mlt/archive/v$VERSION.tar.gz
-     SOURCE2_URL=https://gitweb.gentoo.org/repo/gentoo.git/plain/media-libs/mlt/files/
-      SOURCE_VFY=sha256:11515546516b3c54719b6b402cacf46e8d5172450d6e9fe2655b237582490315
-     SOURCE2_VFY=sha256:61d168b826741cda400f67380c5ae9fa6245f3d0527338e1494da4f8ab76a8f1
+      SOURCE_VFY=sha256:b348e7a14d289087a99b077480a28dace519f665af9654676b7f5e713d56f0fe
         WEB_SITE=http://www.mltframework.org
          ENTERED=20071106
-         UPDATED=20180213
+         UPDATED=20180511
            SHORT="An open source multimedia framework"
 
 cat << EOF
 MLT is an open source multimedia framework, designed and developed for
-television broadcasting. It provides a toolkit for broadcasters, video
-editors, media players, transcoders, web streamers and many more types
-of applications. The functionality of the system is provided via an
-assortment of ready to use tools, xml authoring components, and an
-extendible plug-in based API.
+television broadcasting. It provides a toolkit for broadcasters, video editors,
+media players, transcoders, web streamers and many more types of applications.
+The functionality of the system is provided via an assortment of ready to use
+tools, xml authoring components, and an extendible plug-in based API.
 EOF
