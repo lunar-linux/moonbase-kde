@@ -33,7 +33,7 @@ OPTS+=" -gui \
         -optimized-qmake \
         -no-use-gold-linker \
         -reduce-relocations \
-        $SSE2" &&
+        $SSE2"
 
 if [[ "$USE_JOURNALD" == "y" && $(module_installed systemd) ]]; then
   OPTS+=" -journald"
@@ -55,7 +55,9 @@ fi &&
             -translationdir "${MODULE_PREFIX}/share/$MODULE"/translations \
             $OPTS &&
 
-default_make &&
+make $$
+prepare_install &&
+make install &&
 
 install -v -Dm644 qttools/src/assistant/assistant/images/assistant-128.png /usr/share/pixmaps/assistant-qt5.png &&
 install -v -Dm644 qttools/src/designer/src/designer/images/designer.png /usr/share/pixmaps/designer-qt5.png &&
@@ -64,8 +66,8 @@ install -v -Dm644 qttools/src/qdbus/qdbusviewer/images/qdbusviewer-128.png /usr/
 
 # It wants to point moc_location and uic_location to ${prefix}/src/qt-everywhere-opensource-src-5.3.1/bin
 # and after much fiddling cannot get it to point them to /usr/bin. So lets just sedit these rascals.
-for i in `ls /usr/lib/$MODULE/pkgconfig/Qt5*.pc`; do sed -i "s:/usr/src/$SOURCE_DIRECTORY:/usr:" $i ; done &&
-for i in `ls /usr/lib/$MODULE/pkgconfig/Qt5*.pc`; do sed -i "s:-L$SOURCE_DIRECTORY:/usr:" $i ; done &&
+for i in `ls /usr/lib/$MODULE/pkgconfig/Qt5*.pc`; do sed -i "s:/usr/src/$SOURCE_DIRECTORY:/usr:" $i; done &&
+for i in `ls /usr/lib/$MODULE/pkgconfig/Qt5*.pc`; do sed -i "s:-L$SOURCE_DIRECTORY:/usr:" $i; done &&
 
 # Like for moc and uic, the same needs doing for the *.prl files.
 find /usr/lib/$MODULE -type f -name '*Qt5*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
