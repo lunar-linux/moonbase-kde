@@ -2,7 +2,8 @@
          VERSION=5.11.0
           SOURCE=qt-everywhere-src-$VERSION.tar.xz
          SOURCE2=qt-5.10.0-libressl.patch
-      SOURCE_URL=https://download.qt-project.org/official_releases/qt/${VERSION%.*}/$VERSION/single
+   SOURCE_URL[0]=https://mirrors.dotsrc.org/qtproject/official_releases/qt/${VERSION%.*}/$VERSION/single
+   SOURCE_URL[1]=https://download.qt-project.org/official_releases/qt/${VERSION%.*}/$VERSION/single
      SOURCE2_URL=$PATCH_URL
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qt-everywhere-src-$VERSION
       SOURCE_VFY=sha256:67ddb8bf33bbfd19ebc641467ccce2e57fd0b80c6082457f1f5a76e8df83c865
