@@ -30,7 +30,6 @@ OPTS+=" -gui \
         -system-libjpeg \
         -accessibility \
         -nomake examples \
-        -optimized-qmake \
         -no-use-gold-linker \
         -reduce-relocations \
         $SSE2"
@@ -55,14 +54,14 @@ fi &&
             -translationdir "${MODULE_PREFIX}/share/$MODULE"/translations \
             $OPTS &&
 
-make $$
+make &&
 prepare_install &&
 make install &&
 
-install -v -Dm644 qttools/src/assistant/assistant/images/assistant-128.png /usr/share/pixmaps/assistant-qt5.png &&
-install -v -Dm644 qttools/src/designer/src/designer/images/designer.png /usr/share/pixmaps/designer-qt5.png &&
-install -v -Dm644 qttools/src/linguist/linguist/images/icons/linguist-128-32.png /usr/share/pixmaps/linguist-qt5.png &&
-install -v -Dm644 qttools/src/qdbus/qdbusviewer/images/qdbusviewer-128.png /usr/share/pixmaps/qdbusviewer-qt5.png &&
+install -v -Dm644 qttools/src/assistant/assistant/images/assistant-128.png /usr/share/pixmaps/assistant-qt5.png
+install -v -Dm644 qttools/src/designer/src/designer/images/designer.png /usr/share/pixmaps/designer-qt5.png
+install -v -Dm644 qttools/src/linguist/linguist/images/icons/linguist-128-32.png /usr/share/pixmaps/linguist-qt5.png
+install -v -Dm644 qttools/src/qdbus/qdbusviewer/images/qdbusviewer-128.png /usr/share/pixmaps/qdbusviewer-qt5.png
 
 # It wants to point moc_location and uic_location to ${prefix}/src/qt-everywhere-opensource-src-5.3.1/bin
 # and after much fiddling cannot get it to point them to /usr/bin. So lets just sedit these rascals.
@@ -74,7 +73,7 @@ find /usr/lib/$MODULE -type f -name '*Qt5*.prl' -exec sed -i -e '/^QMAKE_PRL_BUI
 find /usr/lib/$MODULE -type f -name '*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
 
 # Remove references to the build directory from installed files 
-sedit "s:$PWD/qtbase:/usr/lib/qt5:g" /usr/lib/qt5/mkspecs/modules/qt_lib_bootstrap_private.pri &&
+sedit "s:$PWD/qtbase:/usr/lib/qt5:g" /usr/lib/qt5/mkspecs/modules/qt_lib_bootstrap_private.pri
 
 cat > ${MODULE}-designer.desktop << EOF &&
 [Desktop Entry]
@@ -139,7 +138,7 @@ export PATH="\${Qt5_DIR}/lib/${MODULE}/bin:\${PATH}"
 export CMAKE_PREFIX_PATH="\${Qt5_DIR}/lib/${MODULE}/cmake:\${CMAKE_PREFIX_PATH}"
 EOF
 
-install -m644 $SOURCE_DIRECTORY/$MODULE.rc /etc/profile.d/ &&
+install -m644 ${MODULE}.rc /etc/profile.d/${MODULE}.rc &&
 
 # Avoid the Qt5WebKit files
 for f in /usr/lib/qt5/pkgconfig/*; do
