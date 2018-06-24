@@ -1,12 +1,12 @@
           MODULE=kompare
-         VERSION=18.04.0
+         VERSION=18.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:f11bda9a17ae1e088e26bc413952625f0a3aa00530f7efe0f19dd19620293f05
+      SOURCE_VFY=sha256:89ade212c8e08a7859615dd01d8de7a74cbe2c9af9dcdaf55507e1b6b2da202d
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/development/kompare/
          ENTERED=20130814
-         UPDATED=20180420
+         UPDATED=20180623
            SHORT="diff patch frontend"
 
 cat << EOF

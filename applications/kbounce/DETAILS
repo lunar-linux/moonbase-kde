@@ -1,12 +1,12 @@
           MODULE=kbounce
-         VERSION=18.04.0
+         VERSION=18.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:41fc02bfb345a16519e89ecac4be7296814a3c02edbc2de8334dfb574e352295
+      SOURCE_VFY=sha256:f4c153f50abd1afdef55f5ff952e794706d70d19a721887d3f29196fc3bb7181
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/games/kbounce/
          ENTERED=20140720
-         UPDATED=20180420
+         UPDATED=20180623
            SHORT="single player arcade game with the elements of puzzle"
 
 cat << EOF
