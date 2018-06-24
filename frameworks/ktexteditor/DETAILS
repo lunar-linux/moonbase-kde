@@ -1,12 +1,12 @@
           MODULE=ktexteditor
-         VERSION=5.45.0
+         VERSION=5.47.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:d7dacac8ec76ced570c0e54cdb2c9b3c9882883abb7293241108b8007672e5be
+      SOURCE_VFY=sha256:6b4ae2ea3c00dd2d7dc4c53f7760c750f8fee8aece4bcbc938064cadd34c08cc
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/ktexteditor
          ENTERED=20150205
-         UPDATED=20180415
+         UPDATED=20180624
            SHORT="Full text editor component"
 
 cat << EOF
