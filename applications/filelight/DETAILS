@@ -1,12 +1,12 @@
           MODULE=filelight
-         VERSION=18.04.0
+         VERSION=18.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:83a8bb10bef207a0672631ac8ff6843494d02b6c30df27dd3ed203d2933264d6
+      SOURCE_VFY=sha256:c2bf1b4f529d38d4a8885217377771052b5a46502ad411dabf1b3f42b9fb1cc4
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://methylblue.com/filelight/
          ENTERED=20120125
-         UPDATED=20180420
+         UPDATED=20180623
            SHORT="interactive map of disk usage on your computer"
 
 cat << EOF

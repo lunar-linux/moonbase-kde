@@ -1,12 +1,12 @@
           MODULE=dolphin
-         VERSION=18.04.0
+         VERSION=18.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:b5068a26b34e2edac25f3528799ce48c7d211ee70113751275b01a5c87ba6d53
+      SOURCE_VFY=sha256:b27ecfc4864638d88f2efd59f183d469f801ba0d85c37ca872e85ed70ba8683e
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/system/dolphin
          ENTERED=20151122
-         UPDATED=20180420
+         UPDATED=20180623
            SHORT="file manager"
 
 cat << EOF

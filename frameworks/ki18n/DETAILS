@@ -1,12 +1,12 @@
           MODULE=ki18n
-         VERSION=5.45.0
+         VERSION=5.47.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:b70e62cd355b02c6160b69b210fd7f4bd44fb341e013db8dc81c744332e55cf6
+      SOURCE_VFY=sha256:2627faa0186e9b463d978e842bf6df1e7d27e7e9d487793f6709e82a1c0729a8
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/ki18n
          ENTERED=20150205
-         UPDATED=20180415
+         UPDATED=20180624
            SHORT="gettext based UI text internationalization"
 
 cat << EOF
