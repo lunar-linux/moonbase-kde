@@ -1,12 +1,12 @@
           MODULE=konqueror
-         VERSION=18.04.0
+         VERSION=18.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:c276bd48cc75c36edd52e8b563a29ff1347c8063d309c446a85ce87e0847eb7c
+      SOURCE_VFY=sha256:90b421a9af49a5ac9b5dfb7150ded2153aadaf38ae07de06d6549e0b847bc2f3
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://konqueror.org/
          ENTERED=20171205
-         UPDATED=20180420
+         UPDATED=20180623
            SHORT="filemanager and web browser"
 
 cat << EOF
