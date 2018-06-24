@@ -1,12 +1,12 @@
           MODULE=kscreen
-         VERSION=5.12.4
+         VERSION=5.13.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:250cace7cd2cca780db0a63c448d6df5dd6037f68749cc36bce5c5b7dd433dde
+      SOURCE_VFY=sha256:4e7ed3b30fab5047975a08d1283bf0a3190aa9cf76cca2228d45e78360f2295b
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
          ENTERED=20151123
-         UPDATED=20180328
+         UPDATED=20180624
            SHORT="KDE's screen management software"
 
 cat << EOF
