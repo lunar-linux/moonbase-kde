@@ -1,18 +1,18 @@
           MODULE=krusader
-         VERSION=2.6.0
+         VERSION=2.7.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://download.kde.org/stable/$MODULE/$VERSION/
-      SOURCE_VFY=sha256:7061a43cada6bd7df991ed2e3e5193b1d99144fa426c8331a2b54170b79b3a39
+      SOURCE_VFY=sha256:8b41522b3b1297d5f293f4fe9becaf255bc06b16d5b19b220653da5e951e9a27
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://krusader.sourceforge.net
          ENTERED=20090412
-         UPDATED=20171230
+         UPDATED=20180714
            SHORT="KDE Twin-Panel filemanager ala commander style"
 
 cat << EOF
-Krusader is an "old-school" file manager. Its twin-panel look follows in
-the footsteps of the great file managers of old such as GNU's Midnight
-Commander(c) and the Norton Commander(c) for DOS. Krusader features an
-intuitive GUI, complete drag n' drop capability, transparent handling of
-archives, mimetype support, and more.
+Krusader is an "old-school" file manager. Its twin-panel look follows in the
+footsteps of the great file managers of old such as GNU's Midnight Commander(c)
+and the Norton Commander(c) for DOS. Krusader features an intuitive GUI,
+complete drag n' drop capability, transparent handling of archives, mimetype
+support, and more.
 EOF
