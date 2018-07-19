@@ -1,0 +1,23 @@
+depends libxslt
+depends libxml2
+depends desktop-file-utils
+depends solid
+depends kconfig
+depends kdbusaddons
+depends kcoreaddons
+depends kitemviews
+depends kservice
+depends kwidgetsaddons
+depends karchive
+depends ki18n
+depends kwindowsystem
+depends kjobwidgets
+depends kcompletion
+depends kconfigwidgets
+depends kiconthemes
+depends ktextwidgets
+depends kxmlgui
+depends kbookmarks
+
+optional_depends "heimdal" "" "" "For use of certain HTTP authentication services"
+optional_depends "acl"     "" "" "For manipulating access control lists"
