@@ -5,7 +5,6 @@ depends xrdb
 depends xsetroot
 depends extra-cmake-modules
 depends breeze
-depends kde-cli-tools
 depends kded
 depends kjsembed
 depends knewstuff
@@ -26,3 +25,4 @@ depends kwayland-frameworks
 optional_depends gpsd "" "" "for geolocation support"
 optional_depends plasma-workspace-wallpapers "" "" "for addional wallpapers"
 optional_depends networkmanager-qt "" "" "for newwork manager support"
+optional_depends kde-cli-tools "" "" "For better interaction with the system"

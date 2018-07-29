@@ -1,12 +1,12 @@
           MODULE=plasma-sdk
-         VERSION=5.13.1
+         VERSION=5.13.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:6786bc81d95832903edad822cb3468849e2807e263c06b294eba52b6f251a211
+      SOURCE_VFY=sha256:713f6c693ec982b1c20422b9a927b0d9a32c643e646c4cce3d6e69454b369c2e
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
          ENTERED=20151123
-         UPDATED=20180624
+         UPDATED=20180729
            SHORT="Applications useful for Plasma development"
 
 cat << EOF
