@@ -1,12 +1,12 @@
           MODULE=sweeper
-         VERSION=18.04.2
+         VERSION=18.04.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:c3fe45ff54260bb27e5589ba70f131168ef8806d141d0b0b20dffa360f50e1b7
+      SOURCE_VFY=sha256:0c8d71bdafbd09deefcbf2934e898f0514bce3e946febdb8f8f1e79968bc066d
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/utilities/sweeper/
          ENTERED=20120125
-         UPDATED=20180623
+         UPDATED=20180728
            SHORT="system cleaner"
 
 cat << EOF

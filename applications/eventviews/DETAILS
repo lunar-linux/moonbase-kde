@@ -1,12 +1,12 @@
           MODULE=eventviews
-         VERSION=18.04.2
+         VERSION=18.04.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:f4a15b6d9b6d52a72ceccc0427542fec5ec23f45d7106ca4bc5e22a23b3dcdb9
+      SOURCE_VFY=sha256:cd55301ea34df88df06c30bed5647a189625b0761d4a2a63f129e2136d3c650b
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20160505
-         UPDATED=20180623
+         UPDATED=20180728
            SHORT="Library for creating events"
 
 cat << EOF

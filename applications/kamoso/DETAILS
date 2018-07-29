@@ -1,0 +1,17 @@
+          MODULE=kamoso
+         VERSION=18.04.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
+      SOURCE_VFY=sha256:e196d2d924161747750fc404211572b9c11b79bf47517fea7f699383fa6c506e
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://userbase.kde.org/Kamoso
+         ENTERED=20180420
+         UPDATED=20180728
+           SHORT="webcam recorder"
+
+cat << EOF
+Take a shot
+Kamoso gives you an opportunity to make photos from your webcam and upload them to Facebook
+Record video
+Kamoso allows to record videos from your webcam and upload them to YouTube
+EOF

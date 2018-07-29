@@ -1,8 +1,8 @@
-depends kcontacts
 depends kcalcore
 depends akonadi
 depends kpimtextedit
 depends kidentitymanagement
+depends kcontacts
 depends kcalutils
 depends kontactinterface
 depends kmime
@@ -65,7 +65,7 @@ depends kcalc
 depends kcharselect
 depends kcolorchooser
 depends kcron
-depends kde-dev-utils
+#depends kde-dev-utils
 depends kde-dev-scripts
 depends kdebugsettings
 depends kdeedu-data
@@ -109,7 +109,7 @@ depends ksystemlog
 depends ktp-accounts-kcm
 depends ktp-approver
 depends ktp-auth-handler
-depends ktp-call-ui
+#depends ktp-call-ui
 depends ktp-common-internals
 depends ktp-contact-list
 depends ktp-contact-runner
@@ -142,9 +142,7 @@ depends print-manager
 depends rocs
 depends signon-kwallet-extension
 depends spectacle
-depends step
+#depends step
 depends umbrello
 depends kdenetwork-filesharing
 depends zeroconf-ioslave
-
-
