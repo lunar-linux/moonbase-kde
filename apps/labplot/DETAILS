@@ -1,12 +1,12 @@
           MODULE=labplot
-         VERSION=2.4.0-kf5
+         VERSION=2.5.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$MODULE/${VERSION%-*}
-      SOURCE_VFY=sha256:86198247ff0d274c85607cdb07a0c4ef19149e4f4bf6c9d2e6e8249134e26bb2
+      SOURCE_URL=$KDE_URL/stable/$MODULE/${VERSION}
+      SOURCE_VFY=sha256:f1ef2d95a4d4f18902e38cd1f2f79d041d4eeed1eb7f6284ec9a6a6954792225
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://edu.kde.org/applications/science/labplot/
          ENTERED=20160520
-         UPDATED=20171202
+         UPDATED=20180730
            SHORT="Scientific Data Plotter"
 
 cat << EOF
