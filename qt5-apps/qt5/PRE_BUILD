@@ -25,6 +25,11 @@ sedit "s@\(QMAKE_LFLAGS_RPATH *=\) \(.*\)@\1 -Wl,-enable-new-dtags \2@" qtbase/m
 # Don't use the statx syscall
 sedit "s|!QT_CONFIG(statx) && defined(SYS_statx) && QT_HAS_INCLUDE(<linux/stat.h>)|0|" qtbase/src/corelib/io/qfilesystemengine_unix.cpp &&
 
+# Try and use our flags everywhere
+sedit "s;^\(QMAKE_CFLAGS_RELEASE.*\);\1 ${CFLAGS};" qtbase/mkspecs/common/gcc-base.conf &&
+sedit "s;^\(QMAKE_LFLAGS_RELEASE.*\);\1 ${LDFLAGS};" qtbase/mkspecs/common/gcc-base.conf &&
+sedit "s:QMAKE_LFLAGS_RELEASE += -Wl,-O1:QMAKE_LFLAGS_RELEASE += \$\$LDFLAGS:" qtbase/mkspecs/common/g++-unix.conf &&
+
 # qt5's build breaks with an (incompatible) old version of qt5 installed
 # even with the patch in PRE_BUILD due to old headers being pulled in.
 # this is troublesome, but until someone fixes the includes, we'll have to

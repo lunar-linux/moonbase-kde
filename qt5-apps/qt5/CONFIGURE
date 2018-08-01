@@ -1,5 +1,5 @@
-mquery BUILD_EXAMPLES   "Build examples?${PROBLEM_COLOR} Needed by phonon for qt5 support${DEFAULT_COLOR}" y "-make examples" "-nomake examples"
-mquery BUILD_TOOLS      "Build tools? ${PROBLEM_COLOR}Needed by phonon for qt5 support and provides the designer stuff needed by some frameworks/apps${DEFAULT_COLOR}" y "-make tools" "-nomake tools"
+mquery BUILD_EXAMPLES   "Build examples?${PROBLEM_COLOR} Needed by phonon for qt5 support and qtdeclarative${DEFAULT_COLOR}" y "-make examples" "-nomake examples"
+mquery BUILD_TOOLS      "Build tools? ${PROBLEM_COLOR}Needed by phonon for qt5 support and provides the designer stuff needed by some frameworks/apps and qtdeclarative${DEFAULT_COLOR}" y "-make tools" "-nomake tools"
 mquery LICENSE_TYPE     "Build Qt using open-source license? (n=commercial)" y
 mquery SYS_PROXY        "Use system network proxies by default?" n "-system-proxies" "-no-system-proxies"
 mquery QML_DEBUG        "Build the QML debugging support?${PROBLEM_COLOR} Needed by kdeclarative${DEFAULT_COLOR}" y "-qml-debug" "-no-qml-debug"

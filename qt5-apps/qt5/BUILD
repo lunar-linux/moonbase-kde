@@ -1,13 +1,9 @@
 # This needs to happen here since CFLAGS/CXXFLAGS/LDFLAGS is only loaded during BUILD
-# Try and use our flags everywhere
 if in_depends $MODULE libressl; then
   patch_it $SOURCE2 1 &&
   CFLAGS+=" -DOPENSSL_NO_PSK -DOPENSSL_NO_NEXTPROTONEG -DOPENSSL_NO_SSL3_METHOD" &&
   CXXFLAGS+=" -DOPENSSL_NO_PSK -DOPENSSL_NO_NEXTPROTONEG -DOPENSSL_NO_SSL3_METHOD -Wno-deprecated-declarations -fno-delete-null-pointer-checks"
 fi &&
-sedit "s;^\(QMAKE_CFLAGS_RELEASE.*\);\1 ${CFLAGS};" qtbase/mkspecs/common/gcc-base.conf &&
-sedit "s;^\(QMAKE_LFLAGS_RELEASE.*\);\1 ${LDFLAGS};" qtbase/mkspecs/common/gcc-base.conf &&
-sedit "s:QMAKE_LFLAGS_RELEASE += -Wl,-O1:QMAKE_LFLAGS_RELEASE += \$\$LDFLAGS:" qtbase/mkspecs/common/g++-unix.conf &&
 
 if [[ $LICENSE_TYPE == "y" ]]; then
   LICENSE_TYPE="-opensource"
@@ -22,14 +18,14 @@ fi &&
 # create a source incompatible version which is unsupported. Why bother making it a switch if that is the case.
 # no-gtkstyle, grabs qt-5 headers via cairo when built with qt5.
 OPTS+=" -gui \
-        -no-gtk \
+        -gtk \
+        -strip \
         -release \
         -no-rpath \
         -system-zlib \
         -system-libpng \
         -system-libjpeg \
         -accessibility \
-        -nomake examples \
         -no-use-gold-linker \
         -reduce-relocations \
         $SSE2"
@@ -40,7 +36,9 @@ if [[ "$USE_JOURNALD" == "y" && $(module_installed systemd) ]]; then
   OPTS+=" -no-journald"
 fi &&
 
-./configure -sysconfdir "/etc/xdg" \
+mkdir build-qt &&
+cd build-qt &&
+../configure -sysconfdir "/etc/xdg" \
             -prefix "${MODULE_PREFIX}" \
             -confirm-license "${LICENSE_TYPE}" \
             -libdir "${MODULE_PREFIX}/lib/$MODULE" \
@@ -58,10 +56,10 @@ make &&
 prepare_install &&
 make install &&
 
-install -v -Dm644 qttools/src/assistant/assistant/images/assistant-128.png /usr/share/pixmaps/assistant-qt5.png
-install -v -Dm644 qttools/src/designer/src/designer/images/designer.png /usr/share/pixmaps/designer-qt5.png
-install -v -Dm644 qttools/src/linguist/linguist/images/icons/linguist-128-32.png /usr/share/pixmaps/linguist-qt5.png
-install -v -Dm644 qttools/src/qdbus/qdbusviewer/images/qdbusviewer-128.png /usr/share/pixmaps/qdbusviewer-qt5.png
+install -v -Dm644 ../qttools/src/assistant/assistant/images/assistant-128.png /usr/share/pixmaps/assistant-qt5.png &&
+install -v -Dm644 ../qttools/src/designer/src/designer/images/designer.png /usr/share/pixmaps/designer-qt5.png &&
+install -v -Dm644 ../qttools/src/linguist/linguist/images/icons/linguist-128-32.png /usr/share/pixmaps/linguist-qt5.png &&
+install -v -Dm644 ../qttools/src/qdbus/qdbusviewer/images/qdbusviewer-128.png /usr/share/pixmaps/qdbusviewer-qt5.png &&
 
 # It wants to point moc_location and uic_location to ${prefix}/src/qt-everywhere-opensource-src-5.3.1/bin
 # and after much fiddling cannot get it to point them to /usr/bin. So lets just sedit these rascals.
@@ -146,4 +144,9 @@ for f in /usr/lib/qt5/pkgconfig/*; do
      mv -f $f /usr/lib/pkgconfig/ 
   fi
 done
-ln -sf /usr/lib/pkgconfig/Qt*.pc /usr/lib/qt5/pkgconfig/
+
+ln -sf /usr/lib/pkgconfig/Qt*.pc /usr/lib/qt5/pkgconfig/ &&
+
+for file in moc uic rcc qmake lconvert lrelease lupdate; do
+  ln -sfrvn /usr/lib/qt5/bin/$file /usr/bin/$file-qt5
+done

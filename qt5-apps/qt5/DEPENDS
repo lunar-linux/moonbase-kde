@@ -1,4 +1,5 @@
 depends zlib
+depends pcre2
 depends %X
 depends xinput
 depends xcb-proto
@@ -19,7 +20,7 @@ depends double-conversion
 
 optional_depends %BLUEZ     ""                   ""               "for bluetooth support"
 optional_depends libmng     ""                   ""               "for mng graphics support"
-optional_depends mtdev      "-mtdev"             "-no-mtdev"      "for Multitouch Protocol support"
+optional_depends mtdev      "-mtdev"             "-no-mtdev"      "for Multitouch Protocol support" n
 optional_depends freetype2  "-system-freetype"   "-qt-freetype"   "use system provided freetype, else use qt provided freetype"
 optional_depends harfbuzz   "-system-harfbuzz"   "-qt-harfbuzz"   "use system provided harfbuzz for text shaping, else use qt provided harfbuzz"
 optional_depends dbus       "-dbus-linked"       "-no-dbus"       "for QtDBus module support"
@@ -39,5 +40,5 @@ optional_depends sqlite \
                  "-no-sql-sqlite" \
                  "for sqlite database support"
 
-optional_depends gst-plugins-base-1.0 "" "" "for QtWebKit HTML5 Video Support"
+optional_depends gst-plugins-base-1.0 "-gstreamer " "-no-gstreamer" "for QtWebKit HTML5 Video Support"
 optional_depends ca-certificates      "" "" "for security certificate support"
