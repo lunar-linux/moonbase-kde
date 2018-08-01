@@ -17,7 +17,7 @@ find -name 'Makefile' | xargs sed -i 's|-Wl,-rpath,/usr/lib||g;s|-Wl,-rpath,.* |
 default_make &&
 
 # Now the Python2 stuff
-if in_depends $MODULE Python; then
+if in_depends $MODULE python2; then
   python configure.py -w $OPTS -j${MAKES} &&
   find -name 'Makefile' | xargs sed -i 's|-Wl,-rpath,/usr/lib||g;s|-Wl,-rpath,.* ||g' &&
   default_make

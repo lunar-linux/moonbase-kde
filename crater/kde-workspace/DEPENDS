@@ -16,7 +16,7 @@ optional_depends "libusb-compat" "-DWITH_USB=1"         "-DWITH_USB=0"         "
 optional_depends "Linux-PAM"     "-DWITH_PAM=1"         "-DWITH_PAM=0"         "for PAM support"
 
 
-optional_depends "Python"         "-DWITH_PythonLibrary=1 -DINSTALL_PYTHON_FILES_IN_PYTHON_PREFIX=1" \
+optional_depends "python2"        "-DWITH_PythonLibrary=1 -DINSTALL_PYTHON_FILES_IN_PYTHON_PREFIX=1" \
                                   "-DWITH_PythonLibrary=0" \
                                   "Needed to build plasma scriptengine for python"
 

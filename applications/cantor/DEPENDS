@@ -6,5 +6,5 @@ depends ktexteditor
 depends libqalculate
 depends libspectre
 
-optional_depends "Python"       "-DWITH_PythonLibs=1"    "-DWITH_PythonLibs=0"    "for Python 2 library support"
+optional_depends "python2"       "-DWITH_PythonLibs=1"    "-DWITH_PythonLibs=0"    "for Python 2 library support"
 optional_depends "R"            "-DWITH_R=1 -DBUILD_R=1" "-DWITH_R=0 -DBUILD_R=0" "use R as backend"
