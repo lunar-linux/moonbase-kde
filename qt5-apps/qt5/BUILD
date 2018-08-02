@@ -52,9 +52,7 @@ cd build-qt &&
             -translationdir "${MODULE_PREFIX}/share/$MODULE"/translations \
             $OPTS &&
 
-make &&
-prepare_install &&
-make install &&
+default_make &&
 
 install -v -Dm644 ../qttools/src/assistant/assistant/images/assistant-128.png /usr/share/pixmaps/assistant-qt5.png &&
 install -v -Dm644 ../qttools/src/designer/src/designer/images/designer.png /usr/share/pixmaps/designer-qt5.png &&
@@ -133,7 +131,7 @@ export QT5_PLUGIN_PATH="\${Qt5_DIR}/lib/${MODULE}/plugins"
 export XDG_DATA_DIRS="\${XDG_DATA_DIRS:-/usr/share}:/usr/share/$MODULE"
 export PKG_CONFIG_PATH="\${Qt5_DIR}/lib/${MODULE}/pkgconfig:\${PKG_CONFIG_PATH}"
 export PATH="\${Qt5_DIR}/lib/${MODULE}/bin:\${PATH}"
-export CMAKE_PREFIX_PATH="\${Qt5_DIR}/lib/${MODULE}/cmake:\${CMAKE_PREFIX_PATH}"
+export CMAKE_PREFIX_PATH="\${Qt5_DIR}:\${CMAKE_PREFIX_PATH}"
 EOF
 
 install -m644 ${MODULE}.rc /etc/profile.d/${MODULE}.rc &&

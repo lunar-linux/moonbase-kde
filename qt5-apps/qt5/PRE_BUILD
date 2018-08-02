@@ -1,11 +1,5 @@
 default_pre_build &&
 
-# https://bugreports.qt.io/browse/QTBUG-53945, In *some* instances that can happen
-# so adding this just to give it some cover.
-if module_installed wayland; then
-  sedit "2i CONFIG += generated_privates" qtwayland/src/compositor/extensions/extensions.pri
-fi &&
-
 # Fix missing private includes
 sedit '/CMAKE_NO_PRIVATE_INCLUDES\ \=\ true/d' qtbase/mkspecs/features/create_cmake.prf
 
