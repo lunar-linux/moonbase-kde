@@ -1,17 +1,17 @@
           MODULE=qt5
-         VERSION=5.11.0
+         VERSION=5.11.1
           SOURCE=qt-everywhere-src-$VERSION.tar.xz
          SOURCE2=qt-5.10.0-libressl.patch
    SOURCE_URL[0]=https://mirrors.dotsrc.org/qtproject/official_releases/qt/${VERSION%.*}/$VERSION/single
    SOURCE_URL[1]=https://download.qt-project.org/official_releases/qt/${VERSION%.*}/$VERSION/single
      SOURCE2_URL=$PATCH_URL
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qt-everywhere-src-$VERSION
-      SOURCE_VFY=sha256:67ddb8bf33bbfd19ebc641467ccce2e57fd0b80c6082457f1f5a76e8df83c865
+      SOURCE_VFY=sha256:39602cb08f9c96867910c375d783eed00fc4a244bffaa93b801225d17950fb2b
      SOURCE2_VFY=sha256:c48c6763fc8a68fb5c184fb3bac59957cda79294c3e8aefd7022addd9b916096
    MODULE_PREFIX=${QT5_PREFIX:-/usr}
         WEB_SITE=http://qt-project.org
          ENTERED=20140822
-         UPDATED=20180528
+         UPDATED=20180619
            SHORT="A C++ toolkit for application development"
 
 cat << EOF
