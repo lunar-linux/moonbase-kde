@@ -8,17 +8,11 @@ OPTS+=" --no-timestamp \
         --no-dist-info \
         --assume-shared \
         --confirm-license \
-        --qmake=/usr/lib/qt5/bin/qmake" &&
+        --qmake=/usr/lib/qt5/bin/qmake"
 
 if module_installed qscintilla-qt5; then
   OPTS+=" --qsci-api"
 fi &&
 
-python3 configure.py -w $OPTS &&
-default_make &&
-
-# Now the Python2 stuff
-if in_depends $MODULE python2; then
-  python configure.py -w $OPTS &&
-  default_make
-fi
+python configure.py -w $OPTS &&
+default_make
