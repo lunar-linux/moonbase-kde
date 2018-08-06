@@ -1,6 +1,8 @@
 depends cmake
-depends pytz
-depends OWSLib
+depends python-pytz
+depends python-sip
+depends python-psycopg2
+depends python-owslib
 depends libspatialite
 depends spatialindex
 depends gdal
@@ -10,5 +12,4 @@ depends qt5
 depends qtkeychain
 depends qscintilla2
 depends qwtpolar
-depends psycopg2
 depends qextserialport
