@@ -1,12 +1,12 @@
           MODULE=plasma-pa
-         VERSION=5.13.3
+         VERSION=5.13.4
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:6261543139b7ea3c752ebcab307b5d5b5939112351e212ab9e727df227d53c14
+      SOURCE_VFY=sha256:f3a4de3e184762c111423c86f16983570df025c892246daffaeebdd952b815f7
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
          ENTERED=20151123
-         UPDATED=20180729
+         UPDATED=20180808
            SHORT="Plasma applet for audio volume management using PulseAudio"
 
 cat << EOF
