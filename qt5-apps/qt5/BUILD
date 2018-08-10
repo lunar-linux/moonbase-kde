@@ -53,7 +53,9 @@ cd build-qt &&
             -translationdir "${MODULE_PREFIX}/share/$MODULE"/translations \
             $OPTS &&
 
-default_make &&
+make &&
+prepare_install &&
+make install &&
 
 install -v -Dm644 ../qttools/src/assistant/assistant/images/assistant-128.png /usr/share/pixmaps/assistant-qt5.png &&
 install -v -Dm644 ../qttools/src/designer/src/designer/images/designer.png /usr/share/pixmaps/designer-qt5.png &&
@@ -132,7 +134,7 @@ export QT5_PLUGIN_PATH="\${Qt5_DIR}/lib/${MODULE}/plugins"
 export XDG_DATA_DIRS="\${XDG_DATA_DIRS:-/usr/share}:/usr/share/$MODULE"
 export PKG_CONFIG_PATH="\${Qt5_DIR}/lib/${MODULE}/pkgconfig:\${PKG_CONFIG_PATH}"
 export PATH="\${Qt5_DIR}/lib/${MODULE}/bin:\${PATH}"
-export CMAKE_PREFIX_PATH="\${Qt5_DIR}:\${CMAKE_PREFIX_PATH}"
+export CMAKE_PREFIX_PATH="\${Qt5_DIR}/lib/qt5/cmake:\${CMAKE_PREFIX_PATH}"
 EOF
 
 install -m644 ${MODULE}.rc /etc/profile.d/${MODULE}.rc &&
@@ -149,3 +151,4 @@ ln -sf /usr/lib/pkgconfig/Qt*.pc /usr/lib/qt5/pkgconfig/ &&
 for file in moc uic rcc qmake lconvert lrelease lupdate; do
   ln -sfrvn /usr/lib/qt5/bin/$file /usr/bin/$file-qt5
 done
+

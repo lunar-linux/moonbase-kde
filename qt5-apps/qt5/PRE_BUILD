@@ -1,23 +1,8 @@
 default_pre_build &&
 
-# Fix missing private includes
-sedit '/CMAKE_NO_PRIVATE_INCLUDES\ \=\ true/d' qtbase/mkspecs/features/create_cmake.prf
-
-# Cannot find our /usr/bin/ls or /usr/bin/echo
-sedit "s:/bin/ls:/usr/bin/ls:g" qtbase/src/corelib/global/global.pri &&
-sedit "s:/bin/echo:/usr/bin/echo:g" qtwebengine/src/3rdparty/chromium/build/common.gypi &&
-
-# _disable_ pulseaudio if it's disabled
-if ! in_depends $MODULE pulseaudio; then
-  sedit '/use_pango/ a use_pulseaudio=0 \\' qtwebengine/src/core/config/desktop_linux.pri
-fi &&
-
 # fix build with previous version of the module installed
 # see https://bugreports.qt.io/browse/QTBUG-33948 and related
 sedit "s@\(QMAKE_LFLAGS_RPATH *=\) \(.*\)@\1 -Wl,-enable-new-dtags \2@" qtbase/mkspecs/common/gcc-base-unix.conf &&
-
-# Don't use the statx syscall
-sedit "s|!QT_CONFIG(statx) && defined(SYS_statx) && QT_HAS_INCLUDE(<linux/stat.h>)|0|" qtbase/src/corelib/io/qfilesystemengine_unix.cpp &&
 
 # Try and use our flags everywhere
 sedit "s;^\(QMAKE_CFLAGS_RELEASE.*\);\1 ${CFLAGS};" qtbase/mkspecs/common/gcc-base.conf &&
