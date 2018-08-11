@@ -1,12 +1,7 @@
-
-  CXXFLAGS+=" -std=c++11 -fPIC" &&
-
   . /etc/profile.d/qt5.rc &&
 
-  OPTS+=" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr" &&
+  sed -e 's|${CMAKE_ROOT}/Modules|${CMAKE_INSTALL_PREFIX}/lib/cmake/QuaZip|' -i CMakeLists.txt &&
 
-  cd $MODULE &&
+  OPTS+=" -DBUILD_WITH_QT4=0 -DCMAKE_CXX_FLAGS=$CFLAGS -fPIC" &&
 
-  cmake $OPTS . &&
-
-  default_make
+  default_cmake_build
