@@ -1,12 +1,12 @@
           MODULE=kirigami2
-         VERSION=5.48.0
+         VERSION=5.49.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:a2d8bfbf79f33c03793631e9f3575b7c3043e09d282b0e56ad878bfdbfcd0138
+      SOURCE_VFY=sha256:5fd1c7fb34faa9d739967d24a261be85a9d8a908a54927ddf7fbcb3d0f4c56f1
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/Frameworks
          ENTERED=20171130
-         UPDATED=20180719
+         UPDATED=20180812
            SHORT="build user interfaces based on the KDE UX guidelines"
 
 cat << EOF
