@@ -4,8 +4,3 @@ sedit "s:kreadconfig:kreadconfig5:" core/data/scripts/cleanup_digikamdb/cleanup_
 
 #Glibc from v2.27 onwards now provides powf64(). Renaming the internal version.
 sed -i "s#powf64#dc_&#g" core/libs/rawengine/libraw/internal/dcraw_common.cpp
-
-#pushd core &&
-#patch_it $SOURCE3 1
-#patch_it $SOURCE2 1
-#popd
