@@ -1,5 +1,5 @@
 source /etc/profile.d/qt5.rc &&
 
-OPTS+="-DWITH_QT4=OFF"
+OPTS+="-DWITH_QT4=OFF" &&
 
-default_cmake_build &&
+default_cmake_build
