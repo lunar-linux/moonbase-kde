@@ -1,12 +1,12 @@
           MODULE=ktp-auth-handler
-         VERSION=18.04.3
+         VERSION=18.08.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:275afb4bae35219ffb365a621f2ed25471ba20370e5e38518cb802f7c56c571d
+      SOURCE_VFY=sha256:3f3a70bbdc5ba762bfb6be19694c54f4a5bc7d8f5f895fe56836829f6c5e752a
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/system/$MODULE
          ENTERED=20151201
-         UPDATED=20180728
+         UPDATED=20180817
            SHORT="kwallet intergration for passwords and ssl errors"
 
 cat << EOF

@@ -1,12 +1,12 @@
           MODULE=bovo
-         VERSION=18.04.3
+         VERSION=18.08.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:9f2345d6d37224cfb6505acf3749a4e5becb329543bf571ca1fefc01cd24ee10
+      SOURCE_VFY=sha256:6a1f4b97dc623ff8d25561dd75ab688d9d1aac56ab45f0d1dc2c078018a8732d
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/games/bomber/
          ENTERED=20130814
-         UPDATED=20180728
+         UPDATED=20180817
            SHORT="a Gomoku like game for two players"
 
 cat << EOF

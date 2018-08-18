@@ -1,12 +1,12 @@
           MODULE=kfourinline
-         VERSION=18.04.3
+         VERSION=18.08.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:0030fe574556ee73fb756cdc574094208bbfa73727ca7841c6ffee6f8f21afc6
+      SOURCE_VFY=sha256:d9fd8db389347c4944b9f00dcdab8da50448c6630838864aacf947e239fdf5a9
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/games/kfourinline/
          ENTERED=20140720
-         UPDATED=20180728
+         UPDATED=20180817
            SHORT="based on the Connect-Four game"
 
 cat << EOF
