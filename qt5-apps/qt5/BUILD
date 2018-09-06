@@ -152,5 +152,7 @@ ln -sf /usr/lib/pkgconfig/Qt*.pc /usr/lib/qt5/pkgconfig/ &&
 
 for file in moc uic rcc qmake lconvert lrelease lupdate; do
   ln -sfrvn /usr/lib/qt5/bin/$file /usr/bin/$file-qt5
-done
+done &&
 
+# for some reason data files are installed without read permissions
+chmod +rX /usr/share/qt5 -R
