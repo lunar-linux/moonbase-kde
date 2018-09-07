@@ -12,7 +12,9 @@ else
 fi &&
 
 # No SSE2 for i686
-[[ 'arch' == "i686" ]] && SSE2="-no-sse2"
+if [[ 'arch' == "i686" ]]; then
+  SSE2="-no-sse2"
+fi &&
 
 # Making accessibility a hard option, disabling this will break QStyle and may break other internal parts of Qt and
 # create a source incompatible version which is unsupported. Why bother making it a switch if that is the case.
@@ -29,7 +31,7 @@ OPTS+=" -gui \
         -no-use-gold-linker \
         -reduce-relocations \
         -confirm-license $LICENSE_TYPE -v \
-        $SSE2"
+        $SSE2" &&
 
 if [[ "$USE_JOURNALD" == "y" && $(module_installed systemd) ]]; then
   OPTS+=" -journald"
@@ -72,7 +74,7 @@ find /usr/lib/$MODULE -type f -name '*Qt5*.prl' -exec sed -i -e '/^QMAKE_PRL_BUI
 find /usr/lib/$MODULE -type f -name '*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
 
 # Remove references to the build directory from installed files 
-sedit "s:$PWD/qtbase:/usr/lib/qt5:g" /usr/lib/qt5/mkspecs/modules/qt_lib_bootstrap_private.pri
+sedit "s:$PWD/qtbase:/usr/lib/qt5:g" /usr/lib/qt5/mkspecs/modules/qt_lib_bootstrap_private.pri &&
 
 cat > ${MODULE}-designer.desktop << EOF &&
 [Desktop Entry]
@@ -142,13 +144,15 @@ install -m644 ${MODULE}.rc /etc/profile.d/${MODULE}.rc &&
 # Avoid the Qt5WebKit files
 for f in /usr/lib/qt5/pkgconfig/*; do
   if [[ $f != *"Qt5WebKit"* ]]; then
-     mv -f $f /usr/lib/pkgconfig/ 
+     mv -f $f /usr/lib/pkgconfig/
   fi
-done
+done &&
 
 ln -sf /usr/lib/pkgconfig/Qt*.pc /usr/lib/qt5/pkgconfig/ &&
 
 for file in moc uic rcc qmake lconvert lrelease lupdate; do
   ln -sfrvn /usr/lib/qt5/bin/$file /usr/bin/$file-qt5
-done
+done &&
 
+# for some reason data files are installed without read permissions
+chmod +rX /usr/share/qt5 -R
