@@ -1,12 +1,12 @@
           MODULE=konsole
-         VERSION=18.08.0
+         VERSION=18.08.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:e778feebc01850e3965f5b2e173011c1b0205ea6d3d98e0045b17f74fc4c21dc
+      SOURCE_VFY=sha256:ed087d8c3f55947f22fbfa95fc806e49ed99ead1a5ce896934fe3e4ff8ac2916
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20110813
-         UPDATED=20180817
+         UPDATED=20180908
            SHORT="terminal program for KDE"
 
 cat << EOF

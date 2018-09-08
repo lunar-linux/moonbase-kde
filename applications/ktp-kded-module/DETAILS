@@ -1,12 +1,12 @@
           MODULE=ktp-kded-module
-         VERSION=18.08.0
+         VERSION=18.08.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:0ee3472ae422009ad008433d3950e91e148a13c4e590454012768a6a85b3368b
+      SOURCE_VFY=sha256:752da0aff83c0afe0c177b9c04733df2fff5a6374ef3fb68f6881f78b71a1539
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/system/$MODULE
          ENTERED=20151201
-         UPDATED=20180817
+         UPDATED=20180908
            SHORT="handles various bits of system integration"
 
 cat << EOF

@@ -1,12 +1,12 @@
           MODULE=kdepim-runtime
-         VERSION=18.08.0
+         VERSION=18.08.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:59cdebec7121f094688cca97835b910901252d8150e62f1fd262e8d9f55c322c
+      SOURCE_VFY=sha256:92cf5dad62236af2b7a7eddd19e11c9b7d41de45574c59c2fbefb9f00d6a6304
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20091006
-         UPDATED=20180817
+         UPDATED=20180908
            SHORT="akonadi support for kdepim"
 
 cat << EOF
