@@ -2,7 +2,7 @@
          VERSION=4.8.7
           SOURCE=qt-everywhere-opensource-src-$VERSION.tar.gz
          SOURCE2=qt4-improve-cups-support.patch
-      SOURCE_URL=http://download.qt-project.org/official_releases/qt/${VERSION%.*}/$VERSION
+      SOURCE_URL=http://download.qt.io/archive/qt/${VERSION%.*}/$VERSION
      SOURCE2_URL=$PATCH_URL
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qt-everywhere-opensource-src-$VERSION
       SOURCE_VFY=sha256:e2882295097e47fe089f8ac741a95fef47e0a73a3f3cdf21b56990638f626ea0
