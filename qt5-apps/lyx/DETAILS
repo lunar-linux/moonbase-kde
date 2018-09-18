@@ -3,6 +3,7 @@
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=ftp://ftp.lyx.org/pub/lyx/stable/2.3.x/
    SOURCE_URL[1]=ftp://ftp.ntua.gr/pub/X11/LyX/stable/2.3.x/
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-${VERSION%-*}
       SOURCE_VFY=sha256:f5c9450ba196ed9d49fbc573f65b10d1726d16a62453466957aba2a9f6d66f84
         WEB_SITE=http://www.lyx.org
          ENTERED=20020904
