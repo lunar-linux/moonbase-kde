@@ -1,7 +1,6 @@
-diff -u -r webkitgtk-2.16.5/Source/WTF/wtf/text/StringImpl.h webkitgtk-2.16.5-gcc7/Source/WTF/wtf/text/StringImpl.h
---- webkitgtk-2.16.5/Source/WTF/wtf/text/StringImpl.h	2017-02-20 17:20:15.000000000 +0100
-+++ webkitgtk-2.16.5-gcc7/Source/WTF/wtf/text/StringImpl.h	2017-06-27 13:13:57.801527350 +0200
-@@ -581,29 +581,7 @@
+--- ./Source/WTF/wtf/text/StringImpl.h	2017-02-20 17:20:15.000000000 +0100
++++ ./Source/WTF/wtf/text/StringImpl.h	2017-06-27 13:13:57.801527350 +0200
+@@ -615,29 +615,7 @@
      // FIXME: Does this really belong in StringImpl?
      template <typename T> static void copyChars(T* destination, const T* source, unsigned numCharacters)
      {
