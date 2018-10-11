@@ -1,12 +1,12 @@
           MODULE=ksmtp
-         VERSION=18.08.1
+         VERSION=18.08.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:8927a740e2993b014f8ad6906d5ce62a9d193c770ff38e197073ec8543aff64f
+      SOURCE_VFY=sha256:7451ddf2c64f29b5d957ee5fe403a02ea6041236f0be0769791f0b6fd2d636a5
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20171217
-         UPDATED=20180908
+         UPDATED=20181011
            SHORT="Job-based library to send email through an SMTP server"
 
 cat << EOF

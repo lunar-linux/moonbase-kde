@@ -1,12 +1,12 @@
           MODULE=syndication
-         VERSION=18.08.1
+         VERSION=18.08.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:a06155e69b94271850fbba2a1e642fe297c72a47699b38a99a4586f5515e3952
+      SOURCE_VFY=sha256:db02ff56f4188bdab93ca61a4daeb310cb1e91016d30ef39541da4b7976d0bb0
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/syndication
          ENTERED=20151122
-         UPDATED=20180908
+         UPDATED=20181011
            SHORT="RSS and Atom parser library"
 
 cat << EOF

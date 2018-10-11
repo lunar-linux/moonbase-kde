@@ -1,12 +1,12 @@
           MODULE=kdenlive
-         VERSION=18.08.1
+         VERSION=18.08.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:ee521740bd3b10d966fd102116cdadbf3f383025575912eba0080fdba9dcb7aa
+      SOURCE_VFY=sha256:ec8ecc49a4ac83f6d4234416dedda4e47463f64fecb2485c52b7d2899ba173e1
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kdenlive.sourceforge.net
          ENTERED=20081201
-         UPDATED=20180908
+         UPDATED=20181011
            SHORT="A non-linear video editing application for KDE4"
 
 cat << EOF

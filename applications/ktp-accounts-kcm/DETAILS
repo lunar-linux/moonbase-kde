@@ -1,12 +1,12 @@
           MODULE=ktp-accounts-kcm
-         VERSION=18.08.1
+         VERSION=18.08.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:29f0cd703306dbd3504103b607462adef7accc88538be2baa543ff2d7730d8de
+      SOURCE_VFY=sha256:31adbad526a9b7d7b08eb642f1f7b57913b60cfd376f76a65f8123557a7f7c18
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/system/$MODULE
          ENTERED=20151201
-         UPDATED=20180908
+         UPDATED=20181011
            SHORT="configure telepathy instant messaging accounts"
 
 cat << EOF
