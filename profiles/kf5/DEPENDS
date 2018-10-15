@@ -1,9 +1,10 @@
 # The only DEPENDS that belong in here are those framework moduloes from pub/software/kde/stable/frameworks/
 depends extra-cmake-modules
+depends kconfig
+depends ki18n
 depends kimageformats
 depends kdnssd
 depends kcoreaddons
-depends ki18n
 depends prison
 depends kidletime
 depends kitemmodels
@@ -12,7 +13,6 @@ depends threadweaver
 depends oxygen-icons5
 depends breeze-icons
 depends attica
-depends kconfig
 depends kplotting
 depends kcodecs
 depends kdbusaddons
