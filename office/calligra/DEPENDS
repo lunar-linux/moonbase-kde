@@ -21,7 +21,7 @@ optional_depends lcms2      "-DWITH_LCMS2=1"      "-DWITH_LCMS2=0"      "for lcm
 optional_depends okular     "-DWITH_Okular5=1"    "-DWITH_Okular5=0"    "for PDF support"
 optional_depends openexr    "-DWITH_OpenEXR=1"    "-DWITH_OpenEXR=0"    "for high dynamic-range (HDR) image support"
 optional_depends openjpeg   "-DWITH_OpenJPEG=1"   "-DWITH_OpenJPEG=0"   "for PDF to SVG filter support"
-optional_depends pstoedit   "-DWITH_PstoeditSvgOutput=1"   "-DWITH_WITH_PstoeditSvgOutput=0"   "Translates PostScript and PDF graphics to SVG${PROBLEM_COLOR}, provided pstoedit was compile with ImageMagick${DEFAULT_COLOR}"
+optional_depends pstoedit   "-DWITH_PstoeditSvgOutput=1"   "-DWITH_PstoeditSvgOutput=0"   "Translates PostScript and PDF graphics to SVG${PROBLEM_COLOR}, provided pstoedit was compile with ImageMagick${DEFAULT_COLOR}"
 optional_depends qca2       "-DWITH_Qca-qt5=1"    "-DWITH_Qca-qt5=0"    "for qca support"
 optional_depends Vc         "-DWITH_Vc=1"         "-DWITH_Vc=0"         "for SIMD support"
 optional_depends libgit2    "-DWITH_Libgit2=1"    "-DWITH_Libgit2=0"    "for git support"
