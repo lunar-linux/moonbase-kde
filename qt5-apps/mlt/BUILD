@@ -24,7 +24,7 @@ if in_depends $MODULE pyxdg; then
   ./configure --prefix=/usr --swig-languages="python" $OPTS &&
   make &&
   prepare_install &&
-  PYTHON_VER=`lvu installed Python | cut -c 1-3` &&
+  PYTHON_VER=`lvu installed python | cut -c 1-3` &&
   install -m755 src/swig/python/mlt.py /usr/lib/python${PYTHON_VER}/site-packages/ &&
   install -m755 src/swig/python/_mlt.so /usr/lib/python${PYTHON_VER}/site-packages/ &&
   install -m755 src/swig/python/mlt_wrap.o /usr/lib/python${PYTHON_VER}/site-packages/
