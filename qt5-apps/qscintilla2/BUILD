@@ -22,10 +22,10 @@ pushd Python > /dev/null &&
 popd > /dev/null &&
 
 # install the Python2 bindings
-if module_installed Python; then
+if module_installed python2; then
   pushd Python > /dev/null &&
     rm -rf ../qscsi &&
-    python configure.py --pyqt=PyQt5 -n ../Qt4Qt5/ -o ../Qt4Qt5/ -c --qmake /usr/lib/qt5/bin/qmake &&
+    python2 configure.py --pyqt=PyQt5 -n ../Qt4Qt5/ -o ../Qt4Qt5/ -c --qmake /usr/lib/qt5/bin/qmake &&
     default_make
   popd > /dev/null
 fi &&
