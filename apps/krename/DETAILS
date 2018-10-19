@@ -1,12 +1,11 @@
           MODULE=krename
-         VERSION=4.0.9
-          SOURCE=$MODULE-$VERSION.tar.bz2
-      SOURCE_URL=$SFORGE_URL/krename/KDE4%20krename-stable/$VERSION
-      SOURCE_VFY=sha1:03886a385a16de4c9bc285d25b9816ea97768c9e
-   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+         VERSION=5.0.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$MODULE/$VERSION/src/
+      SOURCE_VFY=sha256:0a61761853787fd46b35f3a733cf87cde00de5df631728332a64c38c670bd28c
         WEB_SITE=http://www.krename.net
          ENTERED=20090923
-         UPDATED=20120102
+         UPDATED=20181018
       MAINTAINER=florin@lunar-linux.org
            SHORT="batch renamer for KDE"
 

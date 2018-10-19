@@ -1,4 +1,7 @@
-depends  kdelibs
-
-optional_depends "exiv2"  "" "" "for image files metadata support"
-optional_depends "taglib" "" "" "for sound files metadata support"
+depends exiv2
+depends podofo
+depends taglib
+depends hicolor-icon-theme
+depends extra-cmake-modules
+depends kio
+depends kjs
