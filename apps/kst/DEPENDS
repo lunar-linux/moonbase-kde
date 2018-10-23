@@ -1,10 +1,11 @@
 depends python2
 depends python2-scipy
 depends cmake
+depends gsl
+depends netcdf-cxx
+depends matio
 depends qt5
 
-optional_depends cfitsio "" "" "for C and Fortran support"
-optional_depends netcdf-cxx "" "" "for netcdf c++ library support"
-optional_depends matio   "" "" "for Matlab file support"
-optional_depends gsl     "" "" "for Numerical library for C and C++ support"
-optional_depends getdata "" "" "reference implementation of the Dirfile Standards"
+optional_depends cfitsio    "" "" "for C and Fortran support"
+optional_depends getdata    "" "" "reference implementation of the Dirfile Standards"
+optional_depends muparser   "" "" "for fast math parsing"
