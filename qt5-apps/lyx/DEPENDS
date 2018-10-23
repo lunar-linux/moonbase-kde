@@ -2,8 +2,7 @@ depends python2
 depends ImageMagick
 depends texlive
 depends bc
-
-optional_depends qt5 "--enable-qt5" "" "to build it with Qt 5.x" y
+depends qt5
 
 optional_depends latex-xft-fonts \
                  "" "" "to enable math preview"
