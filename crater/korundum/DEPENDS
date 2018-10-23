@@ -1,9 +1,0 @@
-depends kde-baseapps
-depends qtruby
-depends smokegen
-depends smokekde
-
-optional_depends akonadi         "-DWITH_Akonadi=1"    "-DWITH_Akonadi=0"    "For akonadi support"
-optional_depends kdepimlibs      "-DWITH_KdepimLibs=1" "-DWITH_KdepimLibs=0" "For kdepimlib support"
-optional_depends okular          "-DWITH_Okular=1"     "-DWITH_Okular=0"     "For pdf support"
-optional_depends soprano         "-DWITH_Soprano=1"    "-DWITH_Soprano=0"    "For soparno support"

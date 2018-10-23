@@ -1,8 +1,0 @@
-depends kde-baseapps
-depends perlqt
-depends smokekde
-
-optional_depends soprano    "-DWITH_Soprano=ON"    "-DWITH_Soprano=OFF"    "for soprano support"
-optional_depends kdepimlibs "-DWITH_KdepimLibs=ON" "-DWITH_KdepimLibs=OFF" "pim library support"
-optional_depends akonadi    "-DWITH_Akonadi=ON"    "-DWITH_Akonadi=OFF"    "for akonadi support"
-optional_depends okular     "-DWITH_Okular==ON"    "-DWITH_Okular=OFF"     " for pdf support"
