@@ -1,0 +1,15 @@
+          MODULE=python2-PyQt5
+         VERSION=5.11.3
+          SOURCE=PyQt5_gpl-$VERSION.tar.gz
+      SOURCE_URL=$SFORGE_URL/pyqt/PyQt5/PyQt-$VERSION/
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/PyQt5_gpl-$VERSION
+   MODULE_PREFIX=${QT5_PREFIX:-/usr}
+      SOURCE_VFY=sha256:c9b57d15601d436faf35dacf8e0acefa220194829a653e771e80b189b3261073
+        WEB_SITE=http://www.riverbankcomputing.com/software/pyqt/
+         ENTERED=20181027
+         UPDATED=20181027
+           SHORT="Python bindings for Qt 5.x"
+
+cat << EOF
+These are the Python bindings for Qt 5.x.
+EOF
