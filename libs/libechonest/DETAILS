@@ -1,0 +1,13 @@
+          MODULE=libechonest
+         VERSION=2.3.1
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/lfranchi/libechonest/archive/$VERSION.tar.gz
+      SOURCE_VFY=sha256:ab961ab952df30c5234b548031594d7e281e7c9f2a9d1ce91fe5421ddde85e7c
+        WEB_SITE=https://github.com/lfranchi/libechonest
+         ENTERED=20160417
+         UPDATED=20181103
+           SHORT="A library for interfacing with Echo Nest"
+
+cat << EOF
+Qt library for communicating with The Echo Nest.
+EOF
