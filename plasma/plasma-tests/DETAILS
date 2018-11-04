@@ -1,12 +1,12 @@
           MODULE=plasma-tests
-         VERSION=5.14.0
+         VERSION=5.14.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:2dc1d7a703a803dbca4de408d04ad468735951c3106e28ad543e38422e019106
+      SOURCE_VFY=sha256:6ac050bb7297047dbbeebf49d37bf131232910328aa3208747849a9ed9371ce6
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://github.com/KDE/plasma-tests
          ENTERED=20171201
-         UPDATED=20181010
+         UPDATED=20181104
            SHORT="integration-tests for the Plasma workspace"
 
 cat << EOF
