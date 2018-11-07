@@ -1,12 +1,12 @@
           MODULE=plasma-workspace
-         VERSION=5.14.2
+         VERSION=5.14.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:b065ce1e9a2c5c3c6806f8680d4d6a837a3c4a788adc562e98bd01272cfd2cf6
+      SOURCE_VFY=sha256:ee1c9614ae943662345c94e4dd1c2fa1544c50bb95a62cadb0c6c6c99ea63057
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
          ENTERED=20151123
-         UPDATED=20181104
+         UPDATED=20181107
            SHORT="KDE Plasma Workspace"
 
 cat << EOF
