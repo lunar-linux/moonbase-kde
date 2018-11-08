@@ -1,12 +1,12 @@
           MODULE=akonadi
-         VERSION=18.08.2
+         VERSION=18.08.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:ada4dc79d4df129d7f6a205da7c90c8e1fe51e8e78c31274917dcc5d63330a08
+      SOURCE_VFY=sha256:d5761fa496f64658625f4bdbb2e27a160d6d306d5376b077311b5db2f514bc56
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://techbase.kde.org/Getting_Started/Build/KDE4/Troubleshooting
          ENTERED=20080622
-         UPDATED=20181011
+         UPDATED=20181108
            SHORT="A PIM layer for KDE"
 
 cat << EOF

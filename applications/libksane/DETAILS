@@ -1,12 +1,12 @@
           MODULE=libksane
-         VERSION=18.08.2
+         VERSION=18.08.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:0a1f2e5872cb3b36d75dfe4501d78133b82aab098179284f3b0cff2a7e63edbf
+      SOURCE_VFY=sha256:24f4a3603dec32be7d973486af2eb528f0e1141819f3a6de014c3eaf5b6ec2c5
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20110813
-         UPDATED=20181011
+         UPDATED=20181108
            SHORT="SANE Library interface for KDE"
 
 cat << EOF
