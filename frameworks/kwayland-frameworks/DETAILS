@@ -1,13 +1,13 @@
           MODULE=kwayland-frameworks
-         VERSION=5.51.0
+         VERSION=5.52.0
           SOURCE=${MODULE%-*}-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/kwayland-$VERSION
-      SOURCE_VFY=sha256:e2f6d354e90582720c4631432034db2bc86e3b4db2dae4e2622758d33d5fb6b4
+      SOURCE_VFY=sha256:4006e9b10b65fbd3e821025a5ee2345b8c0352fb3b9be4d46b8546cb42e6d437
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://quickgit.kde.org/?p=kwayland.git
          ENTERED=20151120
-         UPDATED=20181015
+         UPDATED=20181110
            SHORT="Qt-style Client and Server library wrapper for the Wayland libraries"
 
 cat << EOF

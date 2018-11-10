@@ -1,12 +1,12 @@
           MODULE=kpeople
-         VERSION=5.51.0
+         VERSION=5.52.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:7973822b622997c4cb259f0d6fc7fcf8c10c14ebe03fc350b9b905f356536918
+      SOURCE_VFY=sha256:98b96d57ba66c8966bf53da065416763dd54761dd1f82628a5a5a719bffbb6c4
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kpeople
          ENTERED=20150410
-         UPDATED=20181015
+         UPDATED=20181110
            SHORT="access to all contacts"
 
 cat << EOF

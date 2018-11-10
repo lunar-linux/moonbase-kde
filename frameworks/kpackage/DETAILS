@@ -1,12 +1,12 @@
           MODULE=kpackage
-         VERSION=5.51.0
+         VERSION=5.52.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:681958b30d52c23008068c445acaf8a55a1ef5612922986ceee0106ca2e0977e
+      SOURCE_VFY=sha256:3997add0d4b4fc7a6f9fa86a2dbec2e4f419c8b2e1e2c02fce6d2f6839466814
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kpackage
          ENTERED=20150205
-         UPDATED=20181015
+         UPDATED=20181110
            SHORT="install and load packages of non binary content"
 
 cat << EOF
