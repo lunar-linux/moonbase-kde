@@ -137,6 +137,9 @@ export XDG_DATA_DIRS="\${XDG_DATA_DIRS:-/usr/share}:/usr/share/$MODULE"
 export PKG_CONFIG_PATH="\${Qt5_DIR}/lib/${MODULE}/pkgconfig:\${PKG_CONFIG_PATH}"
 export PATH="\${Qt5_DIR}/lib/${MODULE}/bin:\${PATH}"
 export CMAKE_PREFIX_PATH="\${Qt5_DIR}/lib/qt5/cmake:\${CMAKE_PREFIX_PATH}"
+export RCC=${PATH}/rcc
+export MOC=${PATH}/moc
+export UIC=${PATH}/uic
 EOF
 
 install -m644 ${MODULE}.rc /etc/profile.d/${MODULE}.rc &&
