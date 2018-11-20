@@ -1,0 +1,14 @@
+default_pre_build &&
+
+. /etc/profile.d/qt5.rc &&
+
+if in_depends $MODULE sun-jdk; then
+   . /etc/profile.d/sun-jdk.rc
+  else
+ if in_depends $MODULE sun-jre; then
+   . /etc/profile.d/sun-jre.rc
+ fi
+fi  &&
+
+OPTS+=" -DQT5_BUILD=1 -DRAPTOR_INCLUDE_DIR=/usr/include/raptor2"
+

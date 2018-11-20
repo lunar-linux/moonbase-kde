@@ -1,22 +1,17 @@
           MODULE=soprano
          VERSION=20151202
           SOURCE=$MODULE-$VERSION.tar.xz
-         SOURCE2=soprano-2.9.4-dbus-1.patch
-         SOURCE3=0001-Properly-export-plugins-when-using-Qt5.patch
       SOURCE_URL=$MIRROR_URL
-     SOURCE2_URL=http://ftp.lfs-matrix.net/pub/blfs/conglomeration/soprano
-     SOURCE3_URL=http://sourceforge.net/p/soprano/patches/10/attachment
       SOURCE_VFY=sha256:5fc8546c5e3912487f816537fc0b1fe8e5dd74f392c3da477d43800a46c446b1
-     SOURCE2_VFY=sha256:7da7252b56126126a0f7d526b49acd575e5897409d10035b88c8b33522d7f076
-     SOURCE3_VFY=sha256:ac443b612852b9fcccaf99b6e5aaac7354586403115dcd2c2036c73b38244a43
         WEB_SITE=http://soprano.sourceforge.net
+            TYPE=cmake
          ENTERED=20080123
          UPDATED=20151202
-           SHORT="highly usable C++/QT4 library for RDF data"
+           SHORT="highly usable C++/QT5 library for RDF data"
 
 cat << EOF
 Soprano (formerly known as QRDF) is a library which provides a highly
-usable object-oriented C++/QT4 framework for RDF data. It uses different
+usable object-oriented C++/QT5 framework for RDF data. It uses different
 RDF storage solutions as backends through a simple plugin system. Soprano
 is targetted at desktop applications that need a RDF data storage solution.
 It has been optimized for easy usage and simplicity.
