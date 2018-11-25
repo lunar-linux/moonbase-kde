@@ -1,16 +1,15 @@
+depends libxml2
+depends libpng
 depends cmake
+depends cairo
 depends tiff
 depends %JPEG
 depends freetype2
 depends python2
-depends qt4
+depends qt5
 
-optional_depends libxml2     "" "" "for xml support"
+optional_depends podofo      "-DWITH_PODOFO=1" "-DWITH_PODOFO=0" "for enchanced Illustrator AI/EPS import support"
+optional_depends hunspell    "-DWANT_HUNSPELL=1" "-DWANT_HUNSPELL=0" "To enable support for spell checking with hunspell, if no uses internal"
 optional_depends boost       "" "" "for scripting support"
 optional_depends lcms2       "" "" "for color management support"
-optional_depends libpng      "" "" "for PNG graphics support"
-optional_depends cairo       "" "" "for vector graphics support"
-optional_depends podofo      "-DWITH_PODOFO=1N" "-DWITH_PODOFO=0" "for enchanced Illustrator AI/EPS import support"
-optional_depends python2-pillow "" "" "for font sampler preview support"
-optional_depends hunspell    "-DWANT_HUNSPELL=1" "-DWANT_HUNSPELL=0" "To enable support for spell checking with hunspell, if no uses internal"
 optional_depends ghostscript "" "" "for additional PDF support"
