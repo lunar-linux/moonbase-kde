@@ -1,8 +1,10 @@
 . /etc/profile.d/qt5.rc  &&
 
-
-# disabling avformat is temp till they fix it
-OPTS+=" --disable-avformat --enable-gpl --enable-gpl3 --disable-gtk2 --avformat-swscale" &&
+OPTS+=" --enable-gpl   \
+        --enable-gpl3  \
+        --disable-gtk2 \
+        --avformat-shared=/usr/lib/libavformat.so \
+        --avformat-swscale" &&
 
 default_build &&
 
@@ -14,6 +16,9 @@ else
 fi &&
 
 if in_depends $MODULE pyxdg; then
+  sed -i 's_path=`which python_path=`which python2_' src/swig/python/build &&
+  sed -i 's_`python -c_`python2 -c_' src/swig/python/build &&
+  sed -i 's#python-config#python2-config#' src/swig/python/build &&
   ./configure --prefix=/usr --swig-languages="python" $OPTS &&
   make &&
   prepare_install &&
