@@ -1,15 +1,8 @@
 . /etc/profile.d/qt5.rc  &&
 
-sedit "37i #include <locale.h>" src/framework/mlt_property.h &&
-# It seems glibc-2.26 dropped this header, so a sedit it is
-sedit "s:#include <xlocale.h>:#include <locale.h>:" src/framework/mlt_property.h &&
-
-#CXXFLAGS+=" -std=c++11" &&
-CFLAGAS+=" -I/usr/include/ffmpeg2.8" &&
 
 # disabling avformat is temp till they fix it
-OPTS+=" --qt-libdir=/usr/lib/qt5 --qt-includedir=/usr/include/qt5 \
-        --enable-gpl --enable-gpl3 --disable-gtk2 --disable-avformat" &&
+OPTS+=" --disable-avformat --enable-gpl --enable-gpl3 --disable-gtk2 --avformat-swscale" &&
 
 default_build &&
 
