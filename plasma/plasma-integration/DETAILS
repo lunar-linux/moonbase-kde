@@ -1,12 +1,12 @@
           MODULE=plasma-integration
-         VERSION=5.14.3
+         VERSION=5.14.4
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:a99b13e251771c4c59bec3479fd2ab13973bb899b92e3d5321fa242dc69e8e47
+      SOURCE_VFY=sha256:68a43e222ed8c6d6f8dca780a6ad59a5d46fc040fff7542ca3ef87d21f584e4a
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/plasma-integration
          ENTERED=20160506
-         UPDATED=20181107
+         UPDATED=20181129
            SHORT="Qt Platform Theme integration plugins for the Plasma workspaces"
 
 cat << EOF
