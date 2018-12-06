@@ -1,15 +1,10 @@
           MODULE=sqliteman
          VERSION=1.2.2
           SOURCE=$MODULE-$VERSION.tar.bz2
-         SOURCE2=sqliteman-1.2.2-lpthread.patch
-         SOURCE3=sqliteman-1.2.2-qt5.patch
       SOURCE_URL=$SFORGE_URL/$MODULE/$VERSION/
-     SOURCE2_URL=https://data.gpo.zugaina.org/gentoo/dev-db/sqliteman/files/
-     SOURCE3_URL=https://data.gpo.zugaina.org/gentoo/dev-db/sqliteman/files/
       SOURCE_VFY=sha256:2f3281f67af464c114acd0a65f05b51672e9f5b39dd52bd2570157e8f274b10f
-     SOURCE2_VFY=sha256:af99d278b6d0cda9f84487985afdb427f77edd6eff9a1a62edac906dcfd5487b
-     SOURCE3_VFY=sha256:5cd44c0b5e4387758b3c485365ed97f2f766b69fff893d89767a19eda800f0ff
         WEB_SITE=http://sqliteman.com/
+            TYPE=cmake
          ENTERED=20100915
          UPDATED=20171230
            SHORT="GUI frontend to sqlite"
