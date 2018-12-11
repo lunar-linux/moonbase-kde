@@ -1,12 +1,12 @@
           MODULE=knotifications
-         VERSION=5.52.0
+         VERSION=5.53.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:27e24b0fa30bf529953125087bc0cbf2f7fba9e524ce48596fc26062c8af7656
+      SOURCE_VFY=sha256:df9ef2b24f768bfced82a94af0756edc215b93dbe580411f4ab99ac910797239
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/knotifications
          ENTERED=20150205
-         UPDATED=20181110
+         UPDATED=20181210
            SHORT="desktop notifications"
 
 cat << EOF

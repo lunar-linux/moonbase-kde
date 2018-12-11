@@ -1,12 +1,12 @@
           MODULE=kdeclarative
-         VERSION=5.52.0
+         VERSION=5.53.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:53eae45d1525a1e08596a698b47fb80ec8218a1f27fa64fe8eabf89ec2fa536b
+      SOURCE_VFY=sha256:fc2c251212828f756e3fc9c27d62e873a55deccef0e625b3722fb131ceeffa30
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kdeclarative
          ENTERED=20150205
-         UPDATED=20181110
+         UPDATED=20181210
            SHORT="integration of QML and KDE work spaces"
 
 cat << EOF

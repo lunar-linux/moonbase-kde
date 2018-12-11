@@ -1,12 +1,12 @@
           MODULE=kimageformats
-         VERSION=5.52.0
+         VERSION=5.53.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:cfd0a93ebd846fe246788ad91973c233e3e16f5cf9b9e0e094c76490f021abb2
+      SOURCE_VFY=sha256:d2a9af7ba7b3af7fe824eeb98ffd6547cc84d677bd2798f6fcbda2d28bd2a92c
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kimageformats
          ENTERED=20150205
-         UPDATED=20181110
+         UPDATED=20181210
            SHORT="allow QImage to support extra file formats"
 
 cat << EOF
