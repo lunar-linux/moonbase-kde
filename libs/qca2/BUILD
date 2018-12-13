@@ -1,4 +1,3 @@
-
   . /etc/profile.d/qt5.rc &&
 
   sed -i 's@ca-bundle.pem@ca-bundle.crt@g' CMakeLists.txt &&
