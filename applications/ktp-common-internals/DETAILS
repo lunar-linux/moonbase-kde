@@ -1,12 +1,12 @@
           MODULE=ktp-common-internals
-         VERSION=18.08.3
+         VERSION=18.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:f8de80a8f7d09801baf6bea7eeee2b61c49fbbe413172ad2ae762a1fc7b07cff
+      SOURCE_VFY=sha256:a6004bcaed7d334de05cdfe808342e81b6f17bf7312df095db1ba24a30c15503
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/system/$MODULE
          ENTERED=20151128
-         UPDATED=20181108
+         UPDATED=20181214
            SHORT="common kde components for kde telepahy"
 
 cat << EOF

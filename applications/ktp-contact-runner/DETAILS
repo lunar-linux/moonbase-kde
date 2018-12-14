@@ -1,12 +1,12 @@
           MODULE=ktp-contact-runner
-         VERSION=18.08.3
+         VERSION=18.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:93bd50aa55da7741b217bbe3a98cd140ea4581cf04a5012f6f5872c71ee5e79a
+      SOURCE_VFY=sha256:521a2a5e28a140e32afbecc1fb1d461786e30a5c332d79a27a9a57ebc6bbeac2
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/system/$MODULE
          ENTERED=20151201
-         UPDATED=20181108
+         UPDATED=20181214
            SHORT="krunner plugin for telepathy"
 
 cat << EOF
