@@ -1,1 +1,5 @@
-ld_add /usr/lib/qt5
+ld_add /usr/lib/qt5 &&
+
+if module_installed qtwebkit ; then
+  lin -c qtwebkit
+fi
