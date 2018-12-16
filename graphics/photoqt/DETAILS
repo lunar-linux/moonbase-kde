@@ -1,0 +1,35 @@
+          MODULE=photoqt
+         VERSION=1.7.1
+          SOURCE=$MODULE-$VERSION.tar.gz
+      SOURCE_URL=http://photoqt.org/pkgs/
+      SOURCE_VFY=sha256:038485b108f90b7d17b6d397fd3d06c688043eba58a8063ae69ec9c5066c7de3
+        WEB_SITE=http://photoqt.org/
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+         ENTERED=20181216
+         UPDATED=20181216
+           SHORT="Fast and highly configurable Qt image viewer"
+
+cat << EOF
+PhotoQt is a simple, yet powerful and good looking image viewer, written in
+C++/Qt. Features:
+  Based on Qt5/QML
+  Support of many image formats (can make use of GraphicsMagick, Libraw,
+    FreeImage, DevIL, Poppler)
+  Touchscreen support
+  Rotating, flipping, zooming images - no permanent changes
+  Scaling images - permanent change
+  Basic File Management (Renaming, Deleting, Moving, Copying)
+  Keyboard and Mouse Shortcuts
+  Upload images directly to imgur.com
+  Set-as-Wallpaper function
+  Slideshow feature
+  Exif information (including tagging of faces)
+  Highly Adjustable to your custom preference
+  Interface that doesn't get into your way
+  Very fast and flexible
+  Thumbnail Cache
+  System Tray Usage
+  Command Line Options
+  Several translations available (not all complete (yet)...
+  and much more...
+EOF
