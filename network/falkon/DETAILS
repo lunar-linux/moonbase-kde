@@ -1,0 +1,14 @@
+          MODULE=falkon
+         VERSION=3.0.1
+          SOURCE=${MODULE}-${VERSION}.tar.xz
+      SOURCE_URL=https://download.kde.org/stable/falkon/${VERSION}/
+      SOURCE_VFY=sha1:1c3b75b8c156b4f28ebb3c30e60e72c57233d47c
+        WEB_SITE="https://www.falkon.org/"
+         ENTERED=20181207
+         UPDATED=20181207
+           SHORT="Cross-platform Qt Web Browser"
+cat <<EOF
+Falkon (formerly QupZilla) is a free and open-source web browser. It
+is built on the Qt WebEngine which is a wrapper for the Chromium
+browser core.
+EOF
