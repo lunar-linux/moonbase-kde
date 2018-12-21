@@ -1,6 +1,7 @@
 depends xdg-user-dirs
 depends shared-mime-info
 depends libxslt
+depends kdesignerplugin
 
 optional_depends %MYSQL \
                  "-DDATABASE_BACKEND=MYSQL" "" \
