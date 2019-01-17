@@ -38,6 +38,6 @@ optional_depends sqlite \
                  "-no-sql-sqlite" \
                  "for sqlite database support"
 
-optional_depends gst-plugins-base-1.0 "-gstreamer " "-no-gstreamer" "for QtWebKit HTML5 Video Support"
-optional_depends ca-certificates      "" "" "for security certificate support"
-optional_depends %BLUEZ     ""                   ""               "for bluetooth support"
+optional_depends gst-plugins-base "-gstreamer " "-no-gstreamer" "for QtWebKit HTML5 Video Support"
+optional_depends ca-certificates "" "" "for security certificate support"
+optional_depends %BLUEZ "" "" "for bluetooth support"
