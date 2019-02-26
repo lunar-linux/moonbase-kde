@@ -1,12 +1,12 @@
           MODULE=kconfigwidgets
-         VERSION=5.53.0
+         VERSION=5.55.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:7b0a87f74462adf9738a41599c63f8fb044a5f955420c74a71274ee582a4fe2e
+      SOURCE_VFY=sha256:b3acbce98798eb5fe897fae671b898697b5ffdd2e357aa8d4750305abeb9ee5a
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kconfigwidgets
          ENTERED=20150205
-         UPDATED=20181210
+         UPDATED=20190216
            SHORT="widgets for configuration dialogs"
 
 cat << EOF
