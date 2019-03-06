@@ -1,12 +1,12 @@
           MODULE=krita
-         VERSION=4.1.7
+         VERSION=4.1.8
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=$KDE_URL/stable/$MODULE/${VERSION}/
-      SOURCE_VFY=sha256:c16ec0dd23cdf20e9dd4d34ebabcf5bdb06a825bd6fe2c7196d6777279bdabd0
+      SOURCE_VFY=sha256:0476c9e2279f0ae690c2ed02e1aa9c3d491943643f9859355a02657318bd5940
         WEB_SITE=https://krita.org/en/
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
          ENTERED=20171216
-         UPDATED=20181212
+         UPDATED=20190306
            SHORT="A raster graphics editor for digital painting and animation"
 
 cat << EOF
