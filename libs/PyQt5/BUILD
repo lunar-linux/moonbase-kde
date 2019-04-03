@@ -8,7 +8,7 @@ OPTS+=" --no-timestamp \
 
 if module_installed qscintilla-qt5; then
   OPTS+=" --qsci-api"
-fi &&
+fi
 
 python configure.py -w $OPTS &&
 default_make
