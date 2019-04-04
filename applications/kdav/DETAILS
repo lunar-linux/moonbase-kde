@@ -1,12 +1,12 @@
           MODULE=kdav
-         VERSION=18.12.0
+         VERSION=18.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:ae6ec35d294b09c77f356b84e642498fea06b34784e9a7205ccf4f1d7d317c39
+      SOURCE_VFY=sha256:3ce99c65573d6374e91abff50b3a738515da07371f07c1b6e4b1800069a77c23
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20171201
-         UPDATED=20181214
+         UPDATED=20190404
            SHORT="DAV protocol implementation with KJobs"
 
 cat << EOF
