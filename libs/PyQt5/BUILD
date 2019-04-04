@@ -2,6 +2,7 @@
 
 OPTS+=" --no-timestamp \
         --no-dist-info \
+        --sip-incdir=/usr/include/python3.6m \
         --assume-shared \
         --confirm-license \
         --qmake=/usr/lib/qt5/bin/qmake"
