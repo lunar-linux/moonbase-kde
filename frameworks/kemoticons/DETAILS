@@ -1,12 +1,12 @@
           MODULE=kemoticons
-         VERSION=5.55.0
+         VERSION=5.56.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:b06e06f5868a9f776ed73a830773565af0814486d1b8602a06a1c99a9c107d0f
+      SOURCE_VFY=sha256:82eeb425a0b4eebd60c743433e09bb6aadcb512dce27c5dbd7ce73fb12680b02
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kemoticons
          ENTERED=20150205
-         UPDATED=20190216
+         UPDATED=20190404
            SHORT="Convert text emoticons to graphical emoticons"
 
 cat << EOF

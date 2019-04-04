@@ -1,12 +1,12 @@
           MODULE=kross
-         VERSION=5.55.0
+         VERSION=5.56.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)/portingAids
-      SOURCE_VFY=sha256:5a6e3cc5a638cec80df6cc6df8aec411d20a460b810ee6b315a61a359f19785c
+      SOURCE_VFY=sha256:bbfafe4abd2c2166f31eb36daa1849f4dc4a829c06fe85402e1fad0ce875c667
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kross
          ENTERED=20150205
-         UPDATED=20190216
+         UPDATED=20190404
            SHORT="embed scripting functionality into an applications"
 
 cat << EOF
