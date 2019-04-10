@@ -1,12 +1,12 @@
           MODULE=breeze
-         VERSION=5.15.4
+         VERSION=5.15.4.1
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:e5b174d9509f3dcb85b0865b8bc8d40e2e2fb0f9373eda1877e5874a9c456958
+      SOURCE_URL=$KDE_URL/stable/plasma/${VERSION%.*}/
+      SOURCE_VFY=sha256:9a95fb9c5be7c84164d3ce337d15cad57cdd495fe84e1da8487a463d69293497
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/breeze
          ENTERED=20151123
-         UPDATED=20190404
+         UPDATED=20190410
            SHORT="breeze widgets"
 
 cat << EOF
