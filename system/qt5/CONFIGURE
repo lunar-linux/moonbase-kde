@@ -5,3 +5,4 @@ mquery QML_DEBUG        "Build the QML debugging support?${PROBLEM_COLOR} Needed
 mquery SKIP_QTWEBENGINE "Build the qtwebengine?" y "" "-skip qtwebengine -skip qtlocation"
 mquery USE_JOURNALD     "Send logging output to journald?" n
 mquery LICENSE_TYPE     "Build Qt using open-source license? (n=commercial)" y
+mquery CCACHE           "Use ccache for building?" n "-ccache"

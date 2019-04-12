@@ -32,7 +32,7 @@ optional_depends %MYSQL     "-plugin-sql-mysql"  "-no-sql-mysql"  "for mysql dat
 optional_depends postgresql "-plugin-sql-psql"   "-no-sql-psql"   "for postgresql database support"
 optional_depends unixODBC   "-plugin-sql-odbc"   "-no-sql-odbc"   "for unixODBC support"
 optional_depends freetds    "-plugin-sql-tds"    "-no-sql-tds"    "for tabular data stream support"
-
+optional_depends lksctp-tools "-sctp"           ""               "for SCTP protocol support"
 optional_depends sqlite \
                  "-system-sqlite -plugin-sql-sqlite" \
                  "-no-sql-sqlite" \

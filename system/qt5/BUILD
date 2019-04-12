@@ -24,6 +24,7 @@ OPTS+=" -gui \
         -strip \
         -release \
         -no-rpath \
+        -system-pcre \
         -system-zlib \
         -system-libpng \
         -system-libjpeg \
