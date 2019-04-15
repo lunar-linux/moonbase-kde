@@ -1,12 +1,12 @@
           MODULE=kparts
-         VERSION=5.56.0
+         VERSION=5.57.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:1ff0d7ffc327f29c250d9c13c782a772b630d6146de68fe5fd1c38575a5645ee
+      SOURCE_VFY=sha256:5a079986963d186e98a1174e19e490731012732ad5ad31a431a8f7a31c6b6ed2
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kparts
          ENTERED=20150205
-         UPDATED=20190404
+         UPDATED=20190415
            SHORT="plugin framework for user interface components"
 
 cat << EOF

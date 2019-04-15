@@ -1,12 +1,12 @@
           MODULE=kxmlgui
-         VERSION=5.56.0
+         VERSION=5.57.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:34af5e4b23c13a92d7103fd0c6464da886ed816367ede78d1bfa19382d06eac6
+      SOURCE_VFY=sha256:325124518e8fa4847c898dee193d96b76a7ba27d7c79d875f34c632f46fe1f90
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kxmlgui
          ENTERED=20150205
-         UPDATED=20190404
+         UPDATED=20190415
            SHORT="managing menu and toolbar actions"
 
 cat << EOF
