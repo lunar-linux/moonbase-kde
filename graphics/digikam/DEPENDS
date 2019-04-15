@@ -15,11 +15,11 @@ depends libkvkontakte
 depends libmediawiki
 depends kfilemetadata
 
-optional_depends lcms2       "" "" "for color management support"
-optional_depends lensfun     "" "" "for camera lens correction support"
-optional_depends doxygen     "" "" "for documentation"
-optional_depends libgpod     "" "" "for for Ipod support"
-optional_depends QtAV        "" "" "for supporting multimedia playback frameworks"
+optional_depends lcms2   "" "" "for color management support"
+optional_depends lensfun "" "" "for camera lens correction support"
+optional_depends doxygen "" "" "for documentation"
+optional_depends libgpod "" "" "for for Ipod support"
+optional_depends QtAV    "" "" "for supporting multimedia playback frameworks"
 
 optional_depends opencv-3 \
                  "-DENABLE_OPENCV3=1" \

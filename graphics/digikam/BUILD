@@ -1,4 +1,4 @@
-. /etc/profile.d/qt5.rc  &&
+. /etc/profile.d/qt5.rc &&
 
 OPTS+=" -DDIGIKAMSC_COMPILE_LIBKIPI=1 \
         -DDIGIKAMSC_COMPILE_LIBKSANE=1 \
@@ -8,6 +8,7 @@ OPTS+=" -DDIGIKAMSC_COMPILE_LIBKIPI=1 \
         -DENABLE_KFILEMETADATASUPPORT=1 \
         -DENABLE_MEDIAPLAYER=1 \
         -DENABLE_APPSTYLES=1 \
-        -DKDE_INSTALL_USE_QT_SYS_PATHS=1"  &&
+        -DENABLE_QWEBENGINE=1 \
+        -DKDE_INSTALL_USE_QT_SYS_PATHS=1"
 
 default_cmake_build
