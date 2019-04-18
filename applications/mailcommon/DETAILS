@@ -1,12 +1,12 @@
           MODULE=mailcommon
-         VERSION=18.12.3
+         VERSION=19.04.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:789d89fad58af80202dfcc41f7c7435871a60309d1d46f93cabcb37dd6ae97e1
+      SOURCE_VFY=sha256:cd599079d290f540c83919182eab7e2d236a939a3405d1f882385822fc5d3682
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20160505
-         UPDATED=20190404
+         UPDATED=20190418
            SHORT="support for mail applications"
 
 cat << EOF
