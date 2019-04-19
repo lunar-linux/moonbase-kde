@@ -21,7 +21,7 @@ optional_depends doxygen "" "" "for documentation"
 optional_depends libgpod "" "" "for for Ipod support"
 optional_depends QtAV    "" "" "for supporting multimedia playback frameworks"
 
-optional_depends opencv-3 \
+optional_depends opencv \
                  "-DENABLE_OPENCV3=1" \
                  "-DENABLE_OPENCV3=0" \
                  "for computer vision library support"
