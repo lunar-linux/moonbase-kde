@@ -1,22 +1,20 @@
           MODULE=kipi-plugins
-         VERSION=6.1.0
-          SOURCE=digikam-$VERSION.tar.xz
-      SOURCE_URL=http://download.kde.org/stable/digikam/
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/digikam-$VERSION
-      SOURCE_VFY=sha256:c487be4047d73f179cddff26355b6f3b270f407f73009d14b37f2c12039fffe7
-   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+         VERSION=5.9.1
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$MODULE
+      SOURCE_VFY=sha256:04b3d31ac042b901216ad8ba67dafc46b58c8a285b5162b51189833f6d015542
         WEB_SITE=http://projects.kde.org/projects/extragear/graphics/kipi-plugins
          ENTERED=20090318
-         UPDATED=20190415
-           SHORT="KDE Image Plugin Interface"
+         UPDATED=20190419
+           SHORT="KDE Image Plugins"
 
 cat << EOF
-digiKam makes use of KIPI plugins for lots of added functionality. KIPI
-(KDE Image Plugin Interface) is an initiative to create a common plugin
-infrastructure for digiKam, KimDaBa, Showimg, and GwenView. Its aim is
-to allow development of image plugins which can shared among KDE
-graphical applications.
+Note: Since Digikam 6 they have been deprecated by Digikam in favour of their new plugin framework DPlugins called Purpose.
 
-Note: This is the digikam tarball and is setup to only to compile and install
-kipi-plugins. If you have digikam installed this module is not required.
+However Kipi Plugins are still supported by KDE apps KPhotoAlbum, Gwenview, Spectacle so they shouldn't disappear yet.
+
+This will become part of KDE Applications in its next release scheduled for August and will follow the KDE Applications version numbers.
+
+https://jriddell.org/2019/04/19/kipi-plugins-5-9-1-released/
+
 EOF
