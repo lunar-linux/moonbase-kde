@@ -1,0 +1,19 @@
+          MODULE=qcheckers
+         VERSION=0.9.0
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/portnov/qcheckers/archive/$VERSION.tar.gz
+      SOURCE_VFY=sha256:95faed6be55db1c0dfbe683bc59aab8c7ad1cb24f8ecc6ba8e0baff1a7c61c65
+        WEB_SITE=https://github.com/portnov/qcheckers/
+         ENTERED=20190525
+         UPDATED=20190525
+           SHORT="Qt version of the classic boardgame checkers (draughts)"
+
+cat <<EOF
+QCheckers (formely known as KCheckers) is a Qt-based checkers board game.
+It can play english draughts and russian draughts.
+For storing the positions of games QCheckers uses the Portable Draughts
+Notation (PDN) database format. It is used by many other checkers programs,
+and is becoming the standard way to swap games.
+PDN is based on the Portable Game Notation (PGN) standard which is widely used
+for Chess. For details see http://www.chessandcheckers.com/pdn.htm
+EOF
