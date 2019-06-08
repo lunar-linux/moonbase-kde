@@ -1,15 +1,15 @@
           MODULE=kcalcore
-         VERSION=19.04.0
+         VERSION=19.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
          SOURCE2=kcalcore-libical3.patch
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
      SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:0cdcfebabb9af96650b71ba6361a4557df35144f0b1041f004bff7510c6334b2
+      SOURCE_VFY=sha256:10e75bd44eca2094f0f952255e1aad00bbc7a509fadd97c75e8c764152db6354
      SOURCE2_VFY=sha256:0cbe1072bbc3e35bc2fcb6812423f5a9447e251a2163a97dd7ba852a5b863dda
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://techbase.kde.org/Getting_Started/Build/KDE4/Troubleshooting
          ENTERED=20151122
-         UPDATED=20190418
+         UPDATED=20190608
            SHORT="KDE calendar access library"
 
 cat << EOF
