@@ -1,12 +1,12 @@
           MODULE=kphotoalbum
-         VERSION=5.4.2
+         VERSION=5.5
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/$MODULE/$VERSION/
-      SOURCE_VFY=sha256:d0f6d4ad33a5c381d9d7d3a69e5fb137c70c37123bf800272b3e1aef77d6cd10
+      SOURCE_VFY=sha256:b5c343fbf5cb754b56f107a3326bb11eecb4ad13718a43659d0c27d5fab26df6
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kphotoalbum.org
          ENTERED=20080111
-         UPDATED=20190405
+         UPDATED=20190608
            SHORT="photo album manager based on kde4"
 
 cat << EOF
