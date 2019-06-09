@@ -1,11 +1,12 @@
           MODULE=signond
-         VERSION=8.59.4
-          SOURCE=$MODULE-$VERSION.tar.xz
+         VERSION=8.60
+          SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=$MIRROR_URL
-      SOURCE_VFY=sha256:c7665a7c6b2f7754a05ed6667831dc44c7f9fc5d44294d5d053dd3b2284923f8
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-master
+      SOURCE_VFY=sha256:aa4b03a989e31eafb54fa145c02ba6afe26d397a91db1ffc9057c6183d40d108
         WEB_SITE=https://gitlab.com/accounts-sso/signond
          ENTERED=20171203
-         UPDATED=20171211
+         UPDATED=20190609
            SHORT="Accounts and Single Sign-On framework for qt5"
 
 cat << EOF
