@@ -1,4 +1,4 @@
-sedit "s:Icon=cutecom:Icon=/usr/share/cutecom/cutecom.png:" distribution/openSUSE/cutecom.desktop &&
+sedit "s:Icon=cutecom:Icon=/usr/share/icons/cutecom/cutecom.png:" distribution/openSUSE/cutecom.desktop &&
 source /etc/profile.d/qt5.rc &&
 
 default_cmake_build &&

@@ -1,14 +1,12 @@
           MODULE=cutecom
-         VERSION=0.50.0
-          SOURCE=$MODULE-v$VERSION.tar.gz
- SOURCE_URL_FULL=https://github.com/neundorf/CuteCom/archive/v$VERSION.tar.gz
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/CuteCom-$VERSION
-   MODULE_PREFIX=${QT5_PREFIX:-/usr}
-      SOURCE_VFY=sha256:30f2c6243bb49ba40f99d045c9f6abf15e3f0c6b15bd90b9ac31a0b131caafc0
+         VERSION=0.51.0
+          SOURCE=$MODULE-$VERSION.tgz
+      SOURCE_URL=https://gitlab.com/cutecom/cutecom/uploads/4eacba6e96e4e008965b8d5491e329d7/
+      SOURCE_VFY=sha256:027a3a88be4b2721f55324b971278cb1e36aa1f84fe17a6759c0416f712d075c
         WEB_SITE=http://cutecom.sourceforge.net/
          ENTERED=20080419
-         UPDATED=20180908
-           SHORT="A graphical serial terminal, like minicom"
+         UPDATED=20190615
+           SHORT="A graphical serial terminal like minicom"
 
 cat << EOF
 CuteCom is a graphical serial terminal, like minicom
