@@ -28,6 +28,7 @@ OPTS+=" -gui \
         -system-zlib \
         -system-libpng \
         -system-libjpeg \
+        -nomake-examples \
         -accessibility \
         -no-use-gold-linker \
         -reduce-relocations \
