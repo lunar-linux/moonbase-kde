@@ -1,11 +1,13 @@
 . /etc/profile.d/qt5.rc &&
 
+rm -rf resources/$MODULE-portable.* &&
+
 LANG='en_US.UTF-8' python2 setup.py build &&
 LANG='en_US.UTF-8' python2 setup.py gui &&
 
-prepare_install  &&
+prepare_install &&
 
-python2 setup.py install . &&
+XDG_DATA_DIRS=/usr/share LANG='en_US.UTF-8' python2 setup.py install . --prefix=/usr &&
 
-sedit "s:Icon=calibre-gui:Icon=/usr/share/icons/hicolor/256x256/apps/calibre-gui.png:" /usr/share/applications/calibre-gui.desktop &&
-sedit "s:Icon=calibre-ebook-edit:Icon=/usr/share/icons/hicolor/256x256/apps/calibre-ebook-edit.png:" /usr/share/applications/calibre-ebook-edit.desktop
+cp -a man-pages/ /usr/share/man &&
+install -Dm644 resources/calibre-mimetypes.xml /usr/share/mime/packages/

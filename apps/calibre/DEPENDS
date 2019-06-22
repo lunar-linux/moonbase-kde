@@ -3,20 +3,21 @@ depends python2-unrardll
 depends mechanize
 depends ImageMagick
 depends python2-beautifulsoup4
-depends help2man
 depends python2-lxml
 depends python2-dateutil
+depends python2-cssselect
+depends python2-css-parser
 depends chmlib
 depends podofo
 depends apsw
-depends python2-cssselect
 depends python2-netifaces
 depends libmtp
 depends python2-msgpack
 depends python2-html5-parser
 depends python2-regex
 depends python2-PyQt5
-depends python2-css-parser
 
 # for running external viewers
 depends xdg-utils
+
+optional_depends help2man "" "" "for manpages build and install" n
