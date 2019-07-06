@@ -4,10 +4,10 @@ _py_ver=`module_version python`
 
 OPTS+=" --no-timestamp \
         --no-dist-info \
-        --sip-incdir=/usr/include/python${_py_ver%.*}m \
         --assume-shared \
         --confirm-license \
-        --qmake=/usr/lib/qt5/bin/qmake"
+        --qmake=/usr/lib/qt5/bin/qmake \
+        --sip-incdir=/usr/include/python${_py_ver%.*}m"
 
 if module_installed qscintilla-qt5; then
   OPTS+=" --qsci-api"
