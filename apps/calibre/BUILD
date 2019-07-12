@@ -7,7 +7,9 @@ LANG='en_US.UTF-8' python2 setup.py gui &&
 
 prepare_install &&
 
-XDG_DATA_DIRS=/usr/share LANG='en_US.UTF-8' python2 setup.py install . --prefix=/usr &&
+XDG_DATA_DIRS=/usr/share \
+      LANG='en_US.UTF-8' \
+      python2 setup.py install . --prefix=/usr &&
 
 cp -a man-pages/ /usr/share/man &&
 install -Dm644 resources/calibre-mimetypes.xml /usr/share/mime/packages/

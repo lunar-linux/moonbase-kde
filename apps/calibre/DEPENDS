@@ -20,4 +20,5 @@ depends python2-PyQt5
 # for running external viewers
 depends xdg-utils
 
+optional_depends poppler  "" "" "for convertinf pdf files to html" y
 optional_depends help2man "" "" "for manpages build and install" n
