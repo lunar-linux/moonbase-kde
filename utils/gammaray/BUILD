@@ -1,6 +1,9 @@
-source /etc/profile.d/qt5.rc &&
+. /etc/profile.d/qt5.rc &&
 
-OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=1 \
-        -DECM_MKSPECS_INSTALL_DIR=/usr/lib/qt/mkspecs/modules" &&
+sedit 's|plugins/gammaray|lib/qt5/plugins/gammaray|' CMakeLists.txt &&
+
+OPTS+=" -DGAMMARAY_INSTALL_QT_LAYOUT=ON \
+        -DECM_MKSPECS_INSTALL_DIR=/usr/lib/qt5/mkspecs/modules \
+        -DPLUGIN_INSTALL_DIR=/usr/lib/qt5/plugins/gammaray" &&
 
 default_cmake_build
