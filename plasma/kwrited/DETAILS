@@ -1,12 +1,12 @@
           MODULE=kwrited
-         VERSION=5.16.0
+         VERSION=5.16.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:26561775a280f326b7323170d6466d39447d98d0d5f593e7aaea5a62ef001559
+      SOURCE_VFY=sha256:9c86575d080219a00ad9fa99b7d12acc06b2cd807bd256fc9f4d96cc8d7ab37e
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
          ENTERED=20151123
-         UPDATED=20190615
+         UPDATED=20190709
            SHORT="KDE daemon listening for wall and write messages"
 
 cat << EOF

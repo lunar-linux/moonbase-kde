@@ -1,12 +1,12 @@
           MODULE=plasma-nm
-         VERSION=5.16.0
+         VERSION=5.16.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:5c18031ff2ed73963350f05c5f4293cd91f98ab6cf2e261910b09dc7fcb5ccc0
+      SOURCE_VFY=sha256:241ba7ee6a902f30748aaa520c556d8624381a36a04c881fc520fd4ff8db2bdb
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
          ENTERED=20151123
-         UPDATED=20190615
+         UPDATED=20190709
            SHORT="network manager plasmoid"
 
 cat << EOF
