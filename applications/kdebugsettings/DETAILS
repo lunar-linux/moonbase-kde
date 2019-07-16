@@ -1,12 +1,12 @@
           MODULE=kdebugsettings
-         VERSION=19.04.2
+         VERSION=19.04.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:1754f171269e03da675cc0c0be4321ead3cd11058ade42d531cb87e55e62a044
+      SOURCE_VFY=sha256:0f3f2afafad0cfb312b51b15de6615359ba5ccd7bee6b35ce48a40e3a58368c5
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/kdebugsettings
          ENTERED=20151122
-         UPDATED=20190608
+         UPDATED=20190712
            SHORT="application to enable and disable qCDebug"
 
 cat << EOF

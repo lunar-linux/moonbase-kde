@@ -1,12 +1,12 @@
           MODULE=akonadi-contacts
-         VERSION=19.04.2
+         VERSION=19.04.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:512c7eb7f67f99ae8863524572d4bb12d2a5bcdb553823988cccff982ac44960
+      SOURCE_VFY=sha256:9ecae008ccc77ff5982de5152dfc2be62eb1137f24a58aeb74a62291fc2fd93c
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20171201
-         UPDATED=20190608
+         UPDATED=20190712
            SHORT="Libraries and daemons to implement Contact Management in Akonadi"
 
 cat << EOF
