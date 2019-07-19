@@ -1,5 +1,7 @@
 default_pre_build &&
 
+sedit '22i #include <QList>' src/analysis/interpolation/qgsinterpolator.h &&
+
 #sedit 's:/usr/local:/usr:g' cmake/FindQScintilla.cmake cmake/FindQwt.cmake cmake/FindQCA.cmake &&
 sedit 's:qwt6):qwt6 qwt-6):' cmake/FindQwt.cmake &&
 sedit 's:qca2-qt5):libqca-qt5 qca2-qt5):' cmake/FindQCA.cmake &&
