@@ -1,12 +1,12 @@
           MODULE=phonon-backend-gstreamer
-         VERSION=4.9.0
+         VERSION=4.9.1
           SOURCE=$MODULE-$VERSION.tar.xz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/phonon-gstreamer-$VERSION
       SOURCE_URL=http://download.kde.org/stable/phonon/$MODULE/$VERSION/
-      SOURCE_VFY=sha256:cec3e5ece1261d344b68363ef0606ebf49772628ba94bb55b0c0d18773b885f1
+      SOURCE_VFY=sha256:3fcca9cb284ff12de70a65ffc1f85ddf8f278cd4ba06021e11666ac8bffb6ea2
         WEB_SITE=http://www.kde.org
          ENTERED=20110127
-         UPDATED=20170223
+         UPDATED=20170722
            SHORT="Gstreamer output for phonon"
 
 cat << EOF
