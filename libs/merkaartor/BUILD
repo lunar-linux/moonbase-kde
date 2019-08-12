@@ -1,17 +1,12 @@
-
-  sedit "s:#include <QtGui>:#include <QtGui>\n#include <QtNetwork>:" src/MainWindow.cpp &&
-  sedit "s:#include <quazip:#include <quazip5:g" src/Tools/ZipEngine.h &&
-  sedit "s:-lquazip:-lquazip5:" src/src.pro &&
-
-
   . /etc/profile.d/qt5.rc &&
 
-  /usr/lib/qt5/bin/qmake PREFIX=/usr     \
-                         NODEBUG=1       \
-                         RELEASE=1       \
-                         SYSTEM_QUAZIP=1 \
-                         ZBAR=0          \
-                         Merkaartor.pro  \
-                         $OPTS           &&
+sed -i 's/GDAL_VERSION_MAJOR == 2/GDAL_VERSION_MAJOR == 3/' src/ImportExport/ImportExportGdal.h &&
 
-  default_make
+# Spatialite is not working.
+lrelease src/src.pro &&
+/usr/lib/qt5/bin/qmake PREFIX=/usr     \
+                       NODEBUG=1       \
+                       QMAKE_CXXFLAGS="$CXXFLAGS -DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1" \
+                       Merkaartor.pro $OPTS &&
+
+default_make
