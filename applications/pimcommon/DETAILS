@@ -1,12 +1,12 @@
           MODULE=pimcommon
-         VERSION=19.04.3
+         VERSION=19.08.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:b979ba19d0c5c7d4f218992bfe434fdc9b49bd8cfdee0d25e4c44bbddc793fee
+      SOURCE_VFY=sha256:23be57010127831c3ad9b9475e467e8078ff92410c80609660498c5dc6fbaf9a
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20160505
-         UPDATED=20190712
+         UPDATED=20190815
            SHORT="Common libraries for KDE PIM"
 
 cat << EOF
