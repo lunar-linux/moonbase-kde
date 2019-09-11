@@ -3,6 +3,8 @@ depends kded
 depends knewstuff
 depends knotifyconfig
 depends kplotting
+depends kdeclarative
+depends knotifications
 depends mlt
 depends SDL_image
 depends extra-cmake-modules
@@ -17,3 +19,5 @@ optional_depends libdv           "" "" "for webcam capture (if FFmpeg is not ins
 optional_depends plasma-desktop  "" "" "theme configuration"
 optional_depends recordmydesktop "" "" "for screen capture"
 optional_depends rttr            "" "" "for runtime type reflection support"
+
+optional_depends breeze-icons    "" "" "UI icons (RECOMMENDED)"
