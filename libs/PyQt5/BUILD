@@ -7,7 +7,7 @@ OPTS+=" --no-timestamp \
         --assume-shared \
         --confirm-license \
         --qmake=/usr/lib/qt5/bin/qmake \
-        --sip-incdir=/usr/include/python${_py_ver%.*}m"
+        --sip-incdir=/usr/include/python${_py_ver%.*}"
 
 if module_installed qscintilla-qt5; then
   OPTS+=" --qsci-api"
