@@ -1,14 +1,14 @@
           MODULE=qt5
-         VERSION=5.13.1
+         VERSION=5.13.2
           SOURCE=qt-everywhere-src-$VERSION.tar.xz
    SOURCE_URL[0]=https://mirrors.dotsrc.org/qtproject/official_releases/qt/${VERSION%.*}/$VERSION/single
    SOURCE_URL[1]=https://download.qt-project.org/official_releases/qt/${VERSION%.*}/$VERSION/single
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qt-everywhere-src-$VERSION
-      SOURCE_VFY=sha256:adf00266dc38352a166a9739f1a24a1e36f1be9c04bf72e16e142a256436974e
+      SOURCE_VFY=sha256:55e8273536be41f4f63064a79e552a22133848bb419400b6fa8e9fc0dc05de08
    MODULE_PREFIX=${QT5_PREFIX:-/usr}
         WEB_SITE=http://qt-project.org
          ENTERED=20140822
-         UPDATED=20190926
+         UPDATED=20191102
            SHORT="A C++ toolkit for application development"
 
 cat << EOF
