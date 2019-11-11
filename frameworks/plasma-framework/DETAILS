@@ -1,12 +1,12 @@
           MODULE=plasma-framework
-         VERSION=5.61.0
+         VERSION=5.64.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:873d604aadbe21ba38cdb12b778d3baf121a54e6155596f0ebee1840138060fe
+      SOURCE_VFY=sha256:3f1311a48826ab0a76f47d05b02f9a9486f821cc1ad757b895b570e371acfd09
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/plasma-framework
          ENTERED=20150205
-         UPDATED=20190811
+         UPDATED=20191110
            SHORT="foundations that can be used to build a primary user interface"
 
 cat << EOF

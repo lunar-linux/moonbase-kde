@@ -1,7 +1,10 @@
-# The only DEPENDS that belong in here are those framework moduloes from pub/software/kde/stable/frameworks/
+# The only DEPENDS that belong in here are those framework modules from pub/software/kde/stable/frameworks/
 depends extra-cmake-modules 
+depends kcalendarcore
+depends kirigami2
 depends attica 
 depends kconfig 
+depends kdesignerplugin
 depends ki18n 
 depends karchive
 depends kimageformats 
@@ -56,14 +59,12 @@ depends kxmlrpcclient
 depends syndication 
 depends baloo 
 depends knotifyconfig 
-depends kirigami2 
 depends knewstuff 
 depends kparts 
 depends kmediaplayer 
 depends kdewebkit 
 depends syntax-highlighting 
 depends ktexteditor 
-depends kdesignerplugin 
 depends kinit 
 depends kded 
 depends kdelibs4support 

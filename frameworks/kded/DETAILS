@@ -1,12 +1,12 @@
           MODULE=kded
-         VERSION=5.61.0
+         VERSION=5.64.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:ca970111cb2d0073305a226cc005e2085952c2a02703168a775f954d27d723bc
+      SOURCE_VFY=sha256:2e8bda93918ac174254c8f70a71c9d6966a4721e14a631760e1b912d108001be
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kded
          ENTERED=20150205
-         UPDATED=20190811
+         UPDATED=20191110
            SHORT="central daemon of KDE work spaces"
 
 cat << EOF
