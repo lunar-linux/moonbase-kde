@@ -1,4 +1,3 @@
-export CFLAGS="$CFLAGS -fPIC" &&
 
 source /etc/profile.d/qt5.rc &&
 
