@@ -1,6 +1,4 @@
 depends makeobj
 
-optional_depends qt5 "" "" "for Qt 5.x support"
-
-optional_depends glib-2        "-DWITH_GLIB2=ON"       "-DWITH_GLIB2=OFF"      "for glib-2 support"
-optional_depends pulseaudio    "-DWITH_PulseAudio=ON"  "-DWITH_PulseAudio=OFF" "for pulseaudio audio support"
+optional_depends qt5           "" "" "for Qt 5.x support"
+optional_depends pulseaudio    "" "" "for pulseaudio audio support"
