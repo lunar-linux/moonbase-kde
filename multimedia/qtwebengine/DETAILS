@@ -1,0 +1,14 @@
+          MODULE=qtwebengine
+         VERSION=(`lvu version qt5`)
+          SOURCE=qtwebengine-everywhere-src-${VERSION}.tar.xz
+      SOURCE_URL=https://download.qt.io/archive/qt/${VERSION%.*}/$VERSION/submodules/
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-everywhere-src-${VERSION}
+      SOURCE_VFY=sha256:adcf56b5de6f34744bba2307b696fc75611884f4270e87dfa760d6e99dd711bb
+        WEB_SITE=http://amarok.kde.org
+         ENTERED=20191113
+         UPDATED=20191113
+           SHORT="integrate chromium web capabilities into Qt"
+
+cat << EOF
+QtWebEngine integrates chromium's web capabilities into Qt.
+EOF

@@ -1,0 +1,16 @@
+depends libxslt
+depends opus
+depends icu4c
+depends python2-jinja
+depends nss
+depends alsa-lib
+depends libwebp
+depends ffmpeg
+depends pulseaudio
+depends qt5
+
+optional_depends libevent  "" "" "for event notification support"
+optional_depends poppler   "" "" "for pdf rendering support"
+optional_depends jsoncpp   "" "" "for manupulating json support"
+optional_depends libsrtp   "" "" "for Secure Real-time Transport support"
+optional_depends snappy    "" "" "for compression decompression support"
