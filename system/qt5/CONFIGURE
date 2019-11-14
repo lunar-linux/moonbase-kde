@@ -1,7 +1,6 @@
 mquery BUILD_TOOLS      "Build tools? ${PROBLEM_COLOR}Needed by phonon for qt5 support and provides the designer stuff needed by some frameworks/apps and qtdeclarative${DEFAULT_COLOR}" y "-make tools" "-nomake tools"
 mquery SYS_PROXY        "Use system network proxies by default?" n "-system-proxies" "-no-system-proxies"
 mquery QML_DEBUG        "Build the QML debugging support?${PROBLEM_COLOR} Needed by kdeclarative${DEFAULT_COLOR}" y "-qml-debug" "-no-qml-debug"
-mquery SKIP_QTWEBENGINE "Build the qtwebengine?" y "" "-skip qtwebengine -skip qtlocation"
 mquery USE_JOURNALD     "Send logging output to journald?" n
 mquery LICENSE_TYPE     "Build Qt using open-source license? (n=commercial)" y
 mquery CCACHE           "Use ccache for building?" n "-ccache"

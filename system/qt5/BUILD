@@ -28,6 +28,7 @@ OPTS+=" -gui \
         -system-zlib \
         -system-libpng \
         -system-libjpeg \
+        -skip qtwebengine \
         -nomake examples \
         -accessibility \
         -no-use-gold-linker \
