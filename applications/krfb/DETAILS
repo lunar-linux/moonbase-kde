@@ -1,12 +1,12 @@
           MODULE=krfb
-         VERSION=19.08.0
+         VERSION=19.08.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:1142e493a37ce867b069ac278215377b56061b2412ee2dd46b0db456fb1419d4
+      SOURCE_VFY=sha256:c708e10b909151dee362205af9db72946b9bbb86f3d87aaf2d2a9956a9242e1d
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/system/krfb/
          ENTERED=20130814
-         UPDATED=20190815
+         UPDATED=20191111
            SHORT="desktop sharing server application"
 
 cat << EOF

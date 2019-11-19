@@ -1,12 +1,12 @@
           MODULE=kwalletmanager
-         VERSION=19.08.0
+         VERSION=19.08.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:aaf6c646cc8e7387dc034636fb94029fc0fda3c7fc89b6b633dc42349fd0a471
+      SOURCE_VFY=sha256:00c1362d1454f4593e1f99847b97b3da99931c74ceafc3c3350337af0038b985
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/system/kwalletmanager/
          ENTERED=20140713
-         UPDATED=20190815
+         UPDATED=20191111
            SHORT="manage the passwords on your system"
 
 cat << EOF

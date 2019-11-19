@@ -1,12 +1,12 @@
           MODULE=libgravatar
-         VERSION=19.08.0
+         VERSION=19.08.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:f8dd753abdc868623b878433c0b2ed53d4d4ab2cb62c69cb94c433e51cb713a9
+      SOURCE_VFY=sha256:7f3421d1074065221e7ff892ba5f32614aef08b9ee407b5d8301e20f414bf8fb
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20160505
-         UPDATED=20190815
+         UPDATED=20191111
            SHORT="providing Gravatar support"
 
 cat << EOF
