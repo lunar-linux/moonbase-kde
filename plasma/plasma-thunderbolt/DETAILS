@@ -1,0 +1,16 @@
+          MODULE=plasma-thunderbolt
+         VERSION=5.17.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
+      SOURCE_VFY=sha256:ed6149e314048226668f1332252a00eb44a85bdd889b08a5c43073097d785774
+        WEB_SITE=https://github.com/KDE/plasma-thunderbolt
+         ENTERED=20191115
+         UPDATED=20191115
+           SHORT="Plasma integration for controlling Thunderbolt devices"
+
+cat << EOF
+A Plasma Sytem Settings module and a KDED module to handle authorization of Thunderbolt devices
+connected to the computer. There's also a shared library (libkbolt) that implements common
+interface between the modules and the system-wide bolt daemon, which does the actual hard work
+of talking to the kernel.
+EOF

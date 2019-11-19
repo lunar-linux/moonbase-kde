@@ -1,4 +1,4 @@
-#depends ibus
+depends ibus
 depends extra-cmake-modules
 depends kconfig
 depends kconfigwidgets
@@ -12,6 +12,6 @@ depends kservice
 depends kunitconversion
 depends knewstuff
 depends plasma-workspace
-depends kross
+#depends kross
 
 optional_depends scim "" "" "for multibyte input Plasmoid support"
