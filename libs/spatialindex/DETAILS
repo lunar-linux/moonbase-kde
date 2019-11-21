@@ -1,11 +1,12 @@
           MODULE=spatialindex
-         VERSION=src-1.8.5
+         VERSION=src-1.9.3
           SOURCE=$MODULE-$VERSION.tar.bz2
-      SOURCE_URL=http://download.osgeo.org/libspatialindex/
-      SOURCE_VFY=sha1:733c859b9d16dfa7466f1d8a33770f47eb68add1
+      SOURCE_URL=https://github.com/libspatialindex/libspatialindex/releases/download/$VERSION/
+      SOURCE_VFY=sha256:4a529431cfa80443ab4dcd45a4b25aebbabe1c0ce2fa1665039c80e999dcc50a
         WEB_SITE=http://libspatialindex.github.com/
          ENTERED=20121203
-         UPDATED=20141115
+         UPDATED=20191121
+            TYPE=cmake
            SHORT="support robust spatial indexing method"
 
 cat << EOF
