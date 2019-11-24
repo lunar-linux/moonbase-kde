@@ -9,6 +9,5 @@ qmake .. -- -system-ffmpeg -webengine-icu &&
 
 default_make &&
 
-find $QT5DIR/ -name \*.prl \
-   -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d' {} \;
+find $QT5DIR/ -name \libQt5WebEngine*.prl -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d' {} \;
 
