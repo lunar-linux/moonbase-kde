@@ -1,7 +1,7 @@
 ld_add /usr/lib/qt5
 
 # Some kde modules will tank on string sub-command REGEX, mode REPLACE needs at least 6 arguments total
-sedit 's:${_static_depends}:"${_static_depends}":' /usr/lib/qt5/cmake/Qt5UiTools/Qt5UiToolsConfig.cmake &&
+#sedit 's:${_static_depends}:"${_static_depends}":' /usr/lib/qt5/cmake/Qt5UiTools/Qt5UiToolsConfig.cmake &&
 
 if module_installed qtwebkit ; then
   lin -c qtwebkit

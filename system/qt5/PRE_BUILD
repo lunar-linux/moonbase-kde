@@ -1,9 +1,5 @@
 default_pre_build &&
 
-# fix build with previous version of the module installed
-# see https://bugreports.qt.io/browse/QTBUG-33948 and related
-sedit "s@\(QMAKE_LFLAGS_RPATH *=\) \(.*\)@\1 -Wl,-enable-new-dtags \2@" qtbase/mkspecs/common/gcc-base-unix.conf &&
-
 # Try and use our flags everywhere
 sedit "s;^\(QMAKE_CFLAGS_RELEASE.*\);\1 ${CFLAGS};" qtbase/mkspecs/common/gcc-base.conf &&
 sedit "s;^\(QMAKE_LFLAGS_RELEASE.*\);\1 ${LDFLAGS};" qtbase/mkspecs/common/gcc-base.conf &&

@@ -18,6 +18,8 @@ fi &&
 # Making accessibility a hard option, disabling this will break QStyle and may break other internal parts of Qt and
 # create a source incompatible version which is unsupported. Why bother making it a switch if that is the case.
 # no-gtkstyle, grabs qt-5 headers via cairo when built with qt5.
+# Just a note about rpath vs linux as used here by qt5; don't use -rpath, lets stay with -no-rpath.
+# See https://bugreports.qt.io/browse/QTBUG-33948.
 OPTS+=" -gui \
         -gtk \
         -strip \
