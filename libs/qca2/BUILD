@@ -5,6 +5,7 @@
   fi &&
 
   OPTS+=" -DBUILD_TESTS=0 \
+          -DDQCA_INSTALL_IN_QT_PREFIX=1 \
           -DQCA_FEATURE_INSTALL_DIR=/usr/lib/qt5/mkspec/features \
           -DQCA_PLUGINS_INSTALL_DIR=/usr/lib/qt5/plugins" &&
 
