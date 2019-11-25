@@ -1,12 +1,14 @@
           MODULE=amarok
-         VERSION=v2.9.0
-          SOURCE=$MODULE-${VERSION}.tar.xz
- SOURCE_URL_FULL=git://git.kde.org/amarok.git
-#      SOURCE_VFY=sha256:5718e1a1c3b1d57c247883cd09bed281ffa35f780ec69b6b7c376956bad1b33d
+         VERSION=2.9.0
+          commit=5ed62f9a089d239c3182514b6b67450866be3ed5
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/KDE/amarok/archive/$commit.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$commit
+      SOURCE_VFY=sha256:9381b2cf4811c9354acbf2049f4b8d6d7d90175f40a9f22efe93135318fb55a7
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://amarok.kde.org
          ENTERED=20080414
-         UPDATED=20181011
+         UPDATED=20191125
            SHORT="KDE-based audio player"
 
 cat << EOF
