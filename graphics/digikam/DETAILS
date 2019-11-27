@@ -1,13 +1,14 @@
 # don't forget to update kipi-plugins too
           MODULE=digikam
-         VERSION=6.4.0
-          SOURCE=$MODULE-$VERSION.tar.xz
+         VERSION=6.4.0-02
+          SOURCE=$MODULE-${VERSION%-*}.tar.xz
       SOURCE_URL=http://download.kde.org/stable/$MODULE/$VERSION
-      SOURCE_VFY=sha256:075f054cd785b2b3c55046128fab6b277d65642879d01e3bbdfb00912dd59559
+      SOURCE_VFY=sha256:775012ff515bdd25a0b894c95bf5d33e7122b523da9c0f3af260ec3eff498d6f
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-${VERSION%-*}
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.digikam.org/
          ENTERED=20090318
-         UPDATED=20191102
+         UPDATED=20191127
            SHORT="KDE version of digikam"
 
 cat << EOF
