@@ -1,3 +1,10 @@
 depends extra-cmake-modules
 depends ki18n
+depends kcoreaddons
+depends kio
 depends knotifications
+depends kwayland
+depends kwidgetsaddons
+depends kwindowsystem
+
+optional_depends pipewire "" "" "for screencast portal and screen sharing support"

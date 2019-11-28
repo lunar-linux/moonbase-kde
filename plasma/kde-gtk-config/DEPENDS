@@ -1,13 +1,23 @@
 depends python2
+depends gtk+-2
+depends gtk+-3
 depends gsettings-desktop-schemas
 depends extra-cmake-modules
+depends kcompletion
+depends kitemviews
+depends kjobwidgets
+depends solid
+depends kxmlgui
+depends kauth
+depends kcodecs
+depends kwidgetsaddons
+depends kcoreaddons
+depends kservice
+depends kiconthemes
+depends kconfigwidgets
 depends ki18n
 depends kio
-depends kconfigwidgets
 depends knewstuff
 depends karchive
 depends kcmutils
 depends kiconthemes
-
-optional_depends "gtk+-2" "" "" "For gtk2 configuration support"
-optional_depends "gtk+-3" "" "" "For gtk3 configuration support"
