@@ -3,18 +3,20 @@ depends extra-cmake-modules
 depends kcalendarcore
 depends kirigami2
 depends kguiaddons
+depends syntax-highlighting
+depends kjs
 depends attica
+depends kcoreaddons
 depends kconfig
 depends kcodecs
 depends kdnssd
 depends kidletime
 depends karchive
 depends kimageformats
-depends syntax-highlighting
 depends ki18n
+depends kpty
 depends kunitconversion
 depends kdesignerplugin
-depends kcoreaddons
 depends prison
 depends kitemmodels
 depends kapidox
@@ -35,6 +37,8 @@ depends kcrash
 depends kdoctools 
 depends kpackage
 depends kservice
+depends kjsembed 
+depends kemoticons
 depends kcompletion
 depends kconfigwidgets
 depends kiconthemes 
@@ -46,16 +50,13 @@ depends knotifications
 depends kwallet
 depends kio
 depends kdeclarative
-depends kpty
 depends kcmutils
 depends kfilemetadata
 depends kactivities
 depends kactivities-stats 
 depends purpose 
 depends kpeople 
-depends kemoticons 
 depends kdesu 
-depends kjs 
 depends kxmlrpcclient 
 depends syndication 
 depends baloo 
@@ -73,11 +74,9 @@ depends frameworkintegration
 depends kwayland 
 depends plasma-framework 
 depends khtml 
-depends kjsembed 
 depends kross 
 depends krunner 
 depends qqc2-desktop-style 
-depends kdenetwork-filesharing 
 depends kholidays
 
 optional_depends networkmanager-qt "" "" "for NetworkManager support"
