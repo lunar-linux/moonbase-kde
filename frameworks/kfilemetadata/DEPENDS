@@ -6,7 +6,7 @@ depends taglib
 depends poppler
 depends ffmpeg
 depends extra-cmake-modules
-depends karchive
+depends kcoreaddons
 depends ki18n
-
-optional_depends catdoc "" "" "for extraction of text from office 98 files"
+depends karchive
+depends kconfig
