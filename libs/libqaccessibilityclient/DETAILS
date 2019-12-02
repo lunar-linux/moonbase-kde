@@ -1,0 +1,13 @@
+          MODULE=libqaccessibilityclient
+         VERSION=0.4.1
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$MODULE
+      SOURCE_VFY=sha256:1c768b4f4314fcae2a07cb7de7cb2ae0522b5f02b4173af3eed8bfb2a4d83429
+        WEB_SITE=https://github.com/KDE/libqaccessibilityclient
+         ENTERED=20191202
+         UPDATED=20191202
+           SHORT="library to make writing accessibility tools easier"
+
+cat << EOF
+Library for writing accessibility clients such as screen readers.
+EOF
