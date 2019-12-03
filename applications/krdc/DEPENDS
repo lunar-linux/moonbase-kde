@@ -1,6 +1,17 @@
+depends extra-cmake-modules
+depends kconfig
 depends kcmutils
 depends kdnssd
 depends knotifyconfig
+depends knotifications
+depends kbookmarks
+depends kiconthemes
+depends kxmlgui
+depends kcompletion
+depends kwallet
+depends kwidgetsaddons
+depends kwindowsystem
+depends ki18n
 
 optional_depends libvncserver ""  "" "for vncserver support"
 optional_depends freerdp      ""  "" "for freerdp support"

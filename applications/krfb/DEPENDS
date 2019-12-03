@@ -1,2 +1,17 @@
 depends libvncserver
+depends extra-cmake-modules
+depends ki18n
+depends kcompletion
 depends kconfig
+depends kcoreaddons
+depends kcrash
+depends kdbusaddons
+depends kdnssd
+depends kdoctools
+depends knotifications
+depends kwallet
+depends kwidgetsaddons
+depends kwindowsystem
+depends kxmlgui
+
+optional_depends pipewire "" "" "for screencast plugin support"

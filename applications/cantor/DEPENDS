@@ -1,10 +1,22 @@
-depends analitza
-depends kdelibs4support
+depends extra-cmake-modules
+depends kconfig
+depends kcrash
+depends kcompletion
+depends kdoctools
 depends knewstuff
-depends kpty
+depends kiconthemes
 depends ktexteditor
-depends libqalculate
-depends libspectre
+depends karchive
+depends kparts
+depends syntax-highlighting
+depends ktextwidgets
+depends kcompletion
+depends kio
+depends kconfig
+depends kxmlgui
+depends ki18n
+depends kcoreaddons
+depends kpty
 
 optional_depends "python2"    ""    ""    "for Python 2 library support"
 optional_depends "R"          ""    ""     "use R as backend"

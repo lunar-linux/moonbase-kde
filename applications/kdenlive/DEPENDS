@@ -1,14 +1,19 @@
-depends hicolor-icon-theme
-depends kded
-depends knewstuff
-depends knotifyconfig
-depends kplotting
-depends kdeclarative
-depends knotifications
-depends mlt
-depends SDL_image
 depends extra-cmake-modules
-depends kdoctools
+depends karchive
+depends kdbusaddons
+depends knotifyconfig
+depends knewstuff
+depends knotifications
+depends kguiaddons
+depends ktextwidgets
+depends kiconthemes
+depends kdeclarative
+depends solid
+depends kcoreaddons
+depends kwidgetsaddons
+depends kconfigwidgets
+depends kxmlgui
+depends mlt
 depends v4l-utils
 
 optional_depends %CDR            "" "" "for creation of DVD ISO images"

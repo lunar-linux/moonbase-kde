@@ -1,7 +1,9 @@
-depends libaccounts-glib
-depends kcmutils
-depends signon-kwallet-extension
-depends signon-plugin-oauth2
-depends signon-ui
+depends accounts-qt
+depends signond
+
 depends extra-cmake-modules
-depends kdoctools
+depends kcmutils
+depends ki18n
+depends kdbusaddons
+depends kcoreaddons
+depends kdeclarative

@@ -1,13 +1,17 @@
 depends %JPEG
 depends libpng
+depends lcms2
+depends exiv2
+depends phonon
+depends extra-cmake-modules
+depends kitemmodels
+depends kdoctools
+depends ki18n
+depends kparts
+depends kwindowsystem
+depends kiconthemes
+depends knotifications
 depends libkexiv2
 depends libkdcraw
-depends kdelibs4support
-depends kactivities
-depends lcms2
-depends baloo
-depends kded
-depends kfilemetadata
-depends kdoctools
 
 optional_depends "libkipi" "" "" "various image manipulation and export features"
