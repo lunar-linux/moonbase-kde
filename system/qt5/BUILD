@@ -61,6 +61,10 @@ cd build-qt &&
 
 make &&
 prepare_install &&
+
+# If this directory exists the install fails
+rm -fR /usr/lib/pkgconfig/qtwebkit &&
+
 make install &&
 
 install -v -Dm644 ../qttools/src/assistant/assistant/images/assistant-128.png /usr/share/pixmaps/assistant-qt5.png &&
@@ -77,7 +81,7 @@ for i in `ls /usr/lib/$MODULE/pkgconfig/Qt5*.pc`; do sed -i "s:-L$SOURCE_DIRECTO
 find /usr/lib/$MODULE -type f -name '*Qt5*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
 find /usr/lib/$MODULE -type f -name '*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
 
-# Remove references to the build directory from installed files 
+# Remove references to the build directory from installed files
 sedit "s:$PWD/qtbase:/usr/lib/qt5:g" /usr/lib/qt5/mkspecs/modules/qt_lib_bootstrap_private.pri &&
 
 cat > ${MODULE}-designer.desktop << EOF &&
