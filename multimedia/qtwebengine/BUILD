@@ -1,11 +1,10 @@
 . /etc/profile.d/qt5.rc &&
 
-NINJAJOBS=${MAKES:+-j$MAKES} &&
 
 mkdir build &&
 cd    build &&
 
-qmake .. -- -system-ffmpeg -webengine-icu -webengine-webrtc &&
+qmake .. -- -system-ffmpeg -webengine-kerberos -proprietary-codecs -webengine-icu -webengine-webrtc -webp -spellchecker &&
 
 default_make &&
 
