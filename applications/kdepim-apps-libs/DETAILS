@@ -1,12 +1,12 @@
           MODULE=kdepim-apps-libs
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:3c478455a0f4704aa4f8a42e92f0657e01b749c568dc6e89bfae5496eefeab83
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:ad881d0df4d06293f5f3c1c6e7c62ccb960571eea0af87d18b73a4e367d6becb
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20160505
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="KDE PIM mail related libraries"
 
 cat << EOF

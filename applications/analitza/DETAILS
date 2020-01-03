@@ -1,12 +1,12 @@
           MODULE=analitza
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:9247172f3ffbc0fd3308b4b40f5d76eaa2a5012dc49525c3087caf5cdfc1513e
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:b227607549e331d2c291ae078e0568fbc7ae4750ec5450a3b50160aa116f7cb2
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://edu.kde.org/kig
          ENTERED=20120125
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="add mathematical features to your program"
 
 cat << EOF

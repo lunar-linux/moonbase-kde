@@ -1,12 +1,12 @@
           MODULE=kopete
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:d4e407516754cdf66f447e4439f41080586af2ec30c07bd1c88712b089f21221
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:b5093b75cc6da0df874246fe36a1c220088bf353c924bbc9bb02ab97acc8daa5
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://www.kde.org/applications/internet/kopete/
          ENTERED=20180420
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="instant messenger"
 
 cat << EOF

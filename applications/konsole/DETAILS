@@ -1,12 +1,12 @@
           MODULE=konsole
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:2cc610109ff8ddc6efa6ea83f0153f4b1d72e4be65d8dbde9cfd526c257e7025
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:e1b2cafb25dea65df97fb7b0c766bb6db311c329fa33dc8d3703afbe2322e9fc
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20110813
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="terminal program for KDE"
 
 cat << EOF

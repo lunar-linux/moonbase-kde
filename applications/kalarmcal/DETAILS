@@ -1,12 +1,12 @@
           MODULE=kalarmcal
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:f6e9d0c99d228fc922e52ae3ddb33f2b691290e58a48edc816de72fc44d73871
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:7d3d8820968b2ff42d07ae4731242dac78590e44cbe0e951facb245997766910
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/system/kalarmcal
          ENTERED=20151122
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="kalarm client library"
 
 cat << EOF

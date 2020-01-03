@@ -1,12 +1,12 @@
           MODULE=cantor
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:5b0f0b0b3990c83a927d2545baa9596119025dbf25242a9d46b1c76a26fcbfe5
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:58af0ddc0b8b731970998cdd67c926f37c5b7609019c5923f8d7724c3ac6e5c5
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20110813
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="Mathematics and Scientific Computing"
 
 cat << EOF

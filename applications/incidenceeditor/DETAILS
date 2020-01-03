@@ -1,12 +1,12 @@
           MODULE=incidenceeditor
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:e6753efc2841a5b0b63a2b02f07c5b77274214576e5e9fc66b962b18c516266d
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:8b46ee070cb54426fbd7f4ecbfa10cd42018a68a5aae01c0d1f13c628144e715
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20160505
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="KDE PIM incidence editor"
 
 cat << EOF

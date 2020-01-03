@@ -1,12 +1,12 @@
           MODULE=ktp-contact-list
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:508085b52fff2e542ea28acb853f1cb3fcdf99d1f72ed99bc42991784fb2efd6
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:41fc7f6a1c850de557c31c07bf25d4dd81904f10bbf9faa03ec76d326574c09f
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/system/$MODULE
          ENTERED=20151201
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="contact list application"
 
 cat << EOF

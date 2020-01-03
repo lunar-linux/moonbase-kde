@@ -1,12 +1,12 @@
           MODULE=artikulate
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:99831d51bf8cb4032ba9af7c4ae0712f7b3668b7c51bce8f942808c1e5e42f85
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:2de2ae8635a15d1442ccd3f657db0dfd705a436e45f3383283e66904badfd1c1
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://edu.kde.org/applications/language/artikulate
          ENTERED=20140713
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="pronunciation trainer"
 
 cat << EOF

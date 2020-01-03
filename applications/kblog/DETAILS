@@ -1,12 +1,12 @@
           MODULE=kblog
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:7b030a13c79a6add2b6f46b840e347609b39099c937d5bc5fb9310e2da987164
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:21f43f0a67206a94de61fe73a1b31be6a59d70d1f3584270d3cdc414fe58669b
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/kblog
          ENTERED=20151122
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="kde blogging library"
 
 cat << EOF

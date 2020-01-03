@@ -1,12 +1,12 @@
           MODULE=konqueror
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:d0ff5b409bbbef5394aeb0bafeb6fea6265feff929fbf4b6a451adc030542d9b
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:cbd261016fd5f43e849a1c210870c5f64b0b311e6aae4513d1f92908fcae6b72
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://konqueror.org/
          ENTERED=20171205
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="filemanager and web browser"
 
 cat << EOF

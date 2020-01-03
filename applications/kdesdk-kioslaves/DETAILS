@@ -1,12 +1,12 @@
           MODULE=kdesdk-kioslaves
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:cd957c67712616b9c7f00c8d733f723d98779c5805561770970bb3e2173478e0
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:bc710dafd1df39324c535cfa285db39fca8ea7bf50d3caa51a0ccdb22ed88cb4
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/kdesdk/kdesdk-kioslaves
          ENTERED=20130814
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="KIO-Slaves"
 
 cat << EOF

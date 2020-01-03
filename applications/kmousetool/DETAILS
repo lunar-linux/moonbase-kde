@@ -1,12 +1,12 @@
           MODULE=kmousetool
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:0434d4883d5478168c696ec1a43164ff09a15999416ff198b749d45981983399
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:3f4cba2a20b6002b0e88c235ad4660532facf6cfc881829ab9897385c50b8126
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20120125
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="kmousetool"
 
 cat << EOF

@@ -1,12 +1,12 @@
           MODULE=grantleetheme
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:ab1b0f55399c520191cf1241d85881e3f5b441ee82b387e7fbef55e77dc0e748
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:47709809795211d69c1878617d00b3cbdb151473003b43b370920194c4702197
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20160505
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="Library for Grantlee theming support"
 
 cat << EOF

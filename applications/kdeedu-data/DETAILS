@@ -1,12 +1,12 @@
           MODULE=kdeedu-data
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:dfdbe10415247bdd1b6926f6fcea943d13c6e0a1ab1a562aac6e0b7109420286
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:ca1911b02f4a90a9e4911a5287733024e0d23d35cfe610f4b6b8bc387ecc2de3
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://edu.kde.org/
          ENTERED=20150214
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="various icons"
 
 cat << EOF

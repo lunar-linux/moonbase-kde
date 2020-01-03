@@ -1,12 +1,12 @@
           MODULE=kontact
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:2bc81b4c051856894d5405532e9663a59abf25bfed1cf0394ee24e219b4752d5
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:6a48ec8e058c9bfa983804b94e3cf4e0e83d8fe38890d3ad248ba1cb7c37c269
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20171205
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="personal information manager"
 
 cat << EOF

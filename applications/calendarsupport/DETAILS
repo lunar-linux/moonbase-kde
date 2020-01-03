@@ -1,12 +1,12 @@
           MODULE=calendarsupport
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:2406dd3387383cc58eb0e6f10bf50cc1b206c75096c6c6af27c1102c6d818ec3
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:d8871623d05f039dd14903a9902d158afd6682e0e1100a8d107600e9c3d18d68
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://userbase.kde.org/calendarsupport
          ENTERED=20151122
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="Calendar support library"
 
 cat << EOF

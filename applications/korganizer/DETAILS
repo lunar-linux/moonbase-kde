@@ -1,12 +1,12 @@
           MODULE=korganizer
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:b675b6c7a2a28a51bd377872c69795157825fd04fbef6dd4c97c33f659adadc7
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:96e712b92860a826c9487337ef73a3118847b41f875e5a324c5242b97470c539
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20171205
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="calendar and scheduling program"
 
 cat << EOF

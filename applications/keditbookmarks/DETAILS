@@ -1,12 +1,12 @@
           MODULE=keditbookmarks
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:ce2e90f24cac8dabe3e3804232715b47e247d51c86699162e2f7f63d1f290b05
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:adb7d291f5daa0e85f6421abf71265c3bb1b2a887efe5f831d9adb6552e4f133
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://utils.kde.org/projects/kgpg/
          ENTERED=20171201
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="bookmark editor and organizer"
 
 cat << EOF

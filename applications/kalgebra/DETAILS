@@ -1,12 +1,12 @@
           MODULE=kalgebra
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:7832584a161c2f611ce980ad98932533c998d37e6e4e2b7afbd0b4e98ce88a65
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:91a0f2a012010f1ca22eb5fdafa9b84e2a62a37399c040df59fdc0c8b466eaf9
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://edu.kde.org/kalgebra/
          ENTERED=20110813
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="kalgebra"
 
 cat << EOF

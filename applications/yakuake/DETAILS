@@ -1,11 +1,11 @@
           MODULE=yakuake
-         VERSION=3.0
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$MODULE/$VERSION/src/
-      SOURCE_VFY=sha256:ab036d9190fb00ef9de8eac52d39bf488f20b4302ab97feda09b9abd7e7c1c61
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:9310d7d9571711bd1bc97374208bf8da3e3c76bab7ebda1f9f74a57bc04599a1
         WEB_SITE=http://extragear.kde.org/apps/yakuake
          ENTERED=20100216
-         UPDATED=20191203
+         UPDATED=20200103
            SHORT="A terminal emulator for KDE"
 
 cat << EOF

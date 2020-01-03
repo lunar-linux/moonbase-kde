@@ -1,11 +1,11 @@
           MODULE=libkgeomap
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:858a6327fe45b67bd31e1f592412a30e0c0f64eb353279480f62b19e51df9576
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:28567e98d72ab20f8d07c8e46acd954566f318f9287d1f6740fc01adfe324286
         WEB_SITE=https://projects.kde.org/projects/kde/kdegraphics/libs/libkgeomap
          ENTERED=20150513
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="wrapper around different world-map components"
 
 cat << EOF

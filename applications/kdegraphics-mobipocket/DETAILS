@@ -1,12 +1,12 @@
           MODULE=kdegraphics-mobipocket
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:d9ea38255c967dcf0de820e6ad663e721188f5541c18c459e611f6d72ddc8e8f
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:c0f59133d66084b3341e02cfe91341cfb5722166b24a43e6e7b4f8a11badbf82
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20120125
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="plugins to handle mobipocket files"
 
 cat << EOF

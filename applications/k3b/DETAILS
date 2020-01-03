@@ -1,12 +1,12 @@
           MODULE=k3b
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:197ea67fa9ef66f8ee084608fd1907e2b3db108eec643d5bd6a0980f838f2b23
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:766395c5b9a77e061dbd5a882d768e3bdf926dfbdd83d476fcfdb1060473f11e
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://k3b.plainblack.com
          ENTERED=20091127
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="A port of k3b to kde4"
 cat << EOF
 K3b is a GUI frontend to the cd recording programs cdrdao and cdrecord.

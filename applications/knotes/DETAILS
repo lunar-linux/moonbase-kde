@@ -1,12 +1,12 @@
           MODULE=knotes
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:07ad3c7c8f5e7429c1f112aca10c164468dbbd5c356b504aa1fc172bb1bb1889
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:2c81b91b18d39c2654319e005c68ffb78599c0bca85b99de45de64fdbdacf5e3
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20171205
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="popup notes"
 
 cat << EOF

@@ -1,12 +1,12 @@
           MODULE=dolphin-plugins
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:82860ef615954e94f3f382ad60fb144fcfcf7777b8a890f281c0cce55da13a55
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:502421ebd7b41c9fed32266da3b5c22df37ab721ee5aee5b0018fe3498f01fa8
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://dolphin.kde.org/
          ENTERED=20130814
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="file management of svn, git, hg, bazaar and dropbox"
 
 cat << EOF

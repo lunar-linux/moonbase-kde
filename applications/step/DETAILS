@@ -1,12 +1,12 @@
           MODULE=step
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:1197b38d9ef14305cf341eba4cd2df08695a9b3f53e2bebff8abb7cbd7a9e2aa
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:7d7fe7d4a47f212576b6db415c74ff0eb26d0c21302376ad42a0bd624efdd24d
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://stepcore.sf.net
          ENTERED=20110813
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="Interactive Physical Simulator"
 
 cat << EOF

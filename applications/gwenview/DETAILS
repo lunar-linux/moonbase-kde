@@ -1,12 +1,12 @@
           MODULE=gwenview
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:7e7ad69eaa7a6b2d0549e94d1dab0d012107c822d66483d54aa8268900820255
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:5510c8068ea91c4e0d1f0028e36533a65f26d7967bbd774fcd81de43d7a3047a
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/graphics/gwenview/
          ENTERED=20110813
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="image viewer for KDE"
 
 cat << EOF

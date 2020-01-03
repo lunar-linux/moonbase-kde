@@ -1,12 +1,12 @@
           MODULE=kdf
-         VERSION=19.08.3
+         VERSION=19.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/applications/$VERSION/src
-      SOURCE_VFY=sha256:eef733c2089ce8fc40405653fa5e3aaafe67a1cc5d074f744e49b185291c0617
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:e960f92d5ecd3e7fe6f5648b409ad5ad0e67659028a7e12f7643b368c040795f
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://utils.kde.org/projects/kdf/
          ENTERED=20120125
-         UPDATED=20191111
+         UPDATED=20200103
            SHORT="KDiskFree"
 
 cat << EOF
