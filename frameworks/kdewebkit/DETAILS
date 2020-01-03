@@ -1,12 +1,12 @@
           MODULE=kdewebkit
-         VERSION=5.64.0
+         VERSION=5.65.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)/portingAids/
-      SOURCE_VFY=sha256:882801a1fd944b08918cb7d9341985e4330e7adac00ae4e6dddcea5343393ac1
+      SOURCE_VFY=sha256:82525a8fda1e9e2e7cde348b6e7227b0747f93d75a7648f4863e0e6889640586
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kdewebkit
          ENTERED=20150205
-         UPDATED=20191110
+         UPDATED=20200102
            SHORT="integration of the HTML rendering engine WebKit"
 
 cat << EOF
