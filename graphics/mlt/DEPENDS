@@ -26,6 +26,11 @@ optional_depends %JPEG \
                  "--linsys-with-jpeg" "" \
                  "enable export of JPEG"
 
+optional_depends opencv  \
+                 "--enable-opencv" \
+                 "--disable-opencv" \
+                 "for cv support"
+
 optional_depends %JAVA_SDK  "" "" "to build Java bindings"
 optional_depends pyxdg      "" "" "to build python bindings"
 optional_depends perl       "" "" "to build perl bindings"
