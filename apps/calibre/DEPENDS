@@ -1,21 +1,30 @@
+depends chmlib
+depends podofo
+depends apswA
+depends hunspell
+depends libmtp
+depends ImageMagick
 depends python-pillow
 depends python-unrardll
 depends python-mechanize
-depends ImageMagick
 depends python-beautifulsoup4
 depends python-lxml
 depends python-dateutil
 depends python-cssselect
 depends python-css-parser
-depends chmlib
-depends podofo
-depends apsw
 depends python-netifaces
-depends libmtp
 depends python-msgpack
 depends python-html5-parser
 depends python-regex
 depends PyQt5
+
+
+#depends python-dbus
+#depends python-dnspython
+#depends feedparser
+#depends html2txt
+#depends python-psutil
+#depends pyrhon-pygments
 
 # for running external viewers
 depends xdg-utils
