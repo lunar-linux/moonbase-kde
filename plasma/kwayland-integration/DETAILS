@@ -1,12 +1,12 @@
           MODULE=kwayland-integration
-         VERSION=5.17.4
+         VERSION=5.17.5
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:3c6b14bcf7f6f3a927d485afba9ed3051cbe513441ed17f5d484419388da825c
+      SOURCE_VFY=sha256:818b4e14611e26f297ef60427d399edc458a44e113bc092390fa65ecababcedb
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
          ENTERED=20151123
-         UPDATED=20191204
+         UPDATED=20200112
            SHORT="kwayland-integration"
 
 cat << EOF

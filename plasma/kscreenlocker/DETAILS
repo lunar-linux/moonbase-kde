@@ -1,12 +1,12 @@
           MODULE=kscreenlocker
-         VERSION=5.17.4
+         VERSION=5.17.5
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:9c7d0d5efad6a8d28889b75b08f17b074000959f03ed2c78b7f69e0af6c1466c
+      SOURCE_VFY=sha256:078cfaa9f117a985f5c71152bdf4a9f5cb65ef23c0090cfaaccc9539770f138f
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/kscreenlocker
          ENTERED=20151210
-         UPDATED=20191204
+         UPDATED=20200112
            SHORT="library and components for secure lock screen architecture"
 
 cat << EOF
