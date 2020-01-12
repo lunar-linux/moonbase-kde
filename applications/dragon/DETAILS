@@ -1,12 +1,12 @@
           MODULE=dragon
-         VERSION=19.12.0
+         VERSION=19.12.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:1b1339778be914c05d6c231633cfb3d01fb8c4bab1a90a7327250e41b4e1016b
+      SOURCE_VFY=sha256:a804ae2089c0e96700e91d90ba2100d9a42a81a128a3fdbb037ed94c31f380cd
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/multimedia/dragonplayer/
          ENTERED=20120801
-         UPDATED=20200103
+         UPDATED=20200112
            SHORT="kde based multimedia player"
 
 cat << EOF

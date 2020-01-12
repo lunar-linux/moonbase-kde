@@ -1,12 +1,12 @@
           MODULE=kimap
-         VERSION=19.12.0
+         VERSION=19.12.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:179f2de7a3eaed26d40911216c9061c148bd89910526ef049851c792c8156ac1
+      SOURCE_VFY=sha256:898e1f3b233b3631ffc74859d54bf402d36f0c5bae7f792e97d3fa5116d8bd0e
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/kimap
          ENTERED=20151122
-         UPDATED=20200103
+         UPDATED=20200112
            SHORT="job based API for interacting with IMAP servers"
 
 cat << EOF

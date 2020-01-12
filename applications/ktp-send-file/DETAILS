@@ -1,12 +1,12 @@
           MODULE=ktp-send-file
-         VERSION=19.12.0
+         VERSION=19.12.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:6059a5c7acb744f5309d2e9d3bf2e4cb78e7df59b2baeaa7c4970584de6654df
+      SOURCE_VFY=sha256:5652e40e02ac191ad6e8df276a5faf8805000760261d495f3f4424416da3b977
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/system/$MODULE
          ENTERED=2015124
-         UPDATED=20200103
+         UPDATED=20200112
            SHORT="cile manager plugin to launch a file transfer job with a specified contact"
 
 cat << EOF

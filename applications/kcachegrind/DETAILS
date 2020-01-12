@@ -1,12 +1,12 @@
           MODULE=kcachegrind
-         VERSION=19.12.0
+         VERSION=19.12.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:aa5b621084abc738203ccdbba16b996e35795940f5332a425a0f2bf85ff36ccf
+      SOURCE_VFY=sha256:210e04441519c47d103871e52d98351abc41a04b9385c577a7839eec31a2f400
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/development/kcachegrind/
          ENTERED=20130814
-         UPDATED=20200103
+         UPDATED=20200112
            SHORT="profile data visualization tool"
 
 cat << EOF

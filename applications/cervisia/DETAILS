@@ -1,12 +1,12 @@
           MODULE=cervisia
-         VERSION=19.12.0
+         VERSION=19.12.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:8b49e4b23e46e2c97b6a653177d53129c2a1897fde3079cf1335ea6450e29ebf
+      SOURCE_VFY=sha256:2a7d32ac0c1460c135397cedec177db8eb99117b53ec2c9652763b0e90184188
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/development/cervisia/
          ENTERED=20130814
-         UPDATED=20200103
+         UPDATED=20200112
            SHORT="cvs frontend"
 
 cat << EOF
