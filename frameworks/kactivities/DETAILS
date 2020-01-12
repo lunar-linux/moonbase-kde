@@ -1,13 +1,13 @@
           MODULE=kactivities
-         VERSION=5.65.0
+         VERSION=5.66.0
           SOURCE=kactivities-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:00a64654861cdff809be5f78931bfd671fe81841380b9c3926f75957c18f139b
+      SOURCE_VFY=sha256:7c37c8f189cb3c9f0cacbcef606562d8bc596e685d2a47bc9994deae6e69f41f
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kactivities
         REPLACES=kactivities-frameworks
          ENTERED=20120125
-         UPDATED=20200102
+         UPDATED=20200112
            SHORT="interactive map of concentric, segmented rings that help visualise disk usage on your computer"
 
 cat << EOF

@@ -1,12 +1,12 @@
           MODULE=kcoreaddons
-         VERSION=5.65.0
+         VERSION=5.66.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:0f334b123b307829d11a39f639845f2f74d290490b264d9b188f1a785e16bf41
+      SOURCE_VFY=sha256:8a8edf566cb08ad83cb17f942eeb8746993249cd0f7679f7eb810201b85e464b
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kcoreaddons
          ENTERED=20150205
-         UPDATED=20200102
+         UPDATED=20200112
            SHORT="Addons to QtCore"
 
 cat << EOF
