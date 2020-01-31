@@ -1,13 +1,13 @@
           MODULE=qscintilla2
-         VERSION=gpl-2.10.8
-          SOURCE=QScintilla\_$VERSION.tar.gz
-      SOURCE_URL=http://sourceforge.net/projects/pyqt/files/QScintilla2/QScintilla-${VERSION##*-}/
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/QScintilla_gpl-${VERSION##*-}
-      SOURCE_VFY=sha256:46cd5b4e609ca5e13130ba8cc7028d44fd1dc5b037f97c492899006ed0c992eb
+         VERSION=2.11.4
+          SOURCE=QScintilla-$VERSION.tar.gz
+      SOURCE_URL=https://www.riverbankcomputing.com/static/Downloads/QScintilla/$VERSION/
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/QScintilla-$VERSION
+      SOURCE_VFY=sha256:723f8f1d1686d9fc8f204cd855347e984322dd5cd727891d324d0d7d187bee20
    MODULE_PREFIX=${QTDIR:-/usr}
         WEB_SITE=http://www.riverbankcomputing.co.uk/software/qscintilla/intro
          ENTERED=20070528
-         UPDATED=20181003
+         UPDATED=20200131
            SHORT="Port to Qt of Scintilla C++ editor class"
 
 cat << EOF
