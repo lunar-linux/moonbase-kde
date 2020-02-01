@@ -1,4 +1,5 @@
 default_pre_build &&
 
 OPTS+=" -DPORT=Qt \
-        -DENABLE_API_TESTS=OFF"
+        -DENABLE_API_TESTS=OFF \
+        -DSHARED_CORE=ON"
