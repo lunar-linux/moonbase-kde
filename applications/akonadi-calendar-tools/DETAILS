@@ -1,12 +1,12 @@
           MODULE=akonadi-calendar-tools
-         VERSION=19.12.1
+         VERSION=19.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:0650e12b2155b08cf70cc4620f9ea3868bad66affc4668775cd050539eacbec9
+      SOURCE_VFY=sha256:486371fa2402768c6c07f48f5f37584a01d4a25466e04c0430b32960a1ec49e8
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://github.com/KDE/akonadi-calendar-tools
          ENTERED=20171201
-         UPDATED=20200112
+         UPDATED=20200206
            SHORT="Console applications and utilities for managing calendars in Akonadi"
 
 cat << EOF

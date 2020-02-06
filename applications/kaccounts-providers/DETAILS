@@ -1,12 +1,12 @@
           MODULE=kaccounts-providers
-         VERSION=19.12.1
+         VERSION=19.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:abcd1fa9f63248f3ce7f9c98d940b124ff5c70c1a3381a6cfad6ce7012b23c69
+      SOURCE_VFY=sha256:b369923a1c2785791bf0ab718539afac43956d611f68326abf4c34ac4ace8376
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/system/$MODULE
          ENTERED=20151201
-         UPDATED=20200112
+         UPDATED=20200206
            SHORT="administer web accounts"
 
 cat << EOF
