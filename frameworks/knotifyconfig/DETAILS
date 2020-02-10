@@ -1,12 +1,12 @@
           MODULE=knotifyconfig
-         VERSION=5.66.0
+         VERSION=5.67.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:fd9e09b099f49896b5afa6f5663ef82266531ec413d4edeb03ebc768314a37d8
+      SOURCE_VFY=sha256:b3551184b2c3ff64f5e6edeeff74cd96c80c872a2a178d6fa3ff069c0a5e7113
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/knotifyconfig
          ENTERED=20150205
-         UPDATED=20200112
+         UPDATED=20200209
            SHORT="Configuration dialog for desktop notifications"
 
 cat << EOF
