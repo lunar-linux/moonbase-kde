@@ -1,12 +1,12 @@
           MODULE=kwallet-pam
-         VERSION=5.17.5
+         VERSION=5.18.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:c829c7a44408e58beb87c71f5c70bccd349d285c3fcefb16df98bf2f29357fe9
+      SOURCE_VFY=sha256:044d260f5b95a3feaa1ece6c97d6aa3d4c1f1d3a4e11e2113153652312853dab
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
          ENTERED=20151123
-         UPDATED=20200112
+         UPDATED=20200211
            SHORT="Wallet PAM integration"
 
 cat << EOF

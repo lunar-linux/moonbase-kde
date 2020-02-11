@@ -1,12 +1,12 @@
           MODULE=plasma-desktop
-         VERSION=5.17.5
+         VERSION=5.18.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:7f741ab026989bdcc68701955fc290d5ead38bf4bc310f18a2f32c64b411ab04
+      SOURCE_VFY=sha256:6c6dacd0e69b06df2b31bb40df7fcf6313de494b8aa06c13ac09616e1447a5b1
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
          ENTERED=20151124
-         UPDATED=20200112
+         UPDATED=20200211
            SHORT="KDE Plasma Desktop"
 
 cat << EOF
