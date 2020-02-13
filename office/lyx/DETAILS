@@ -1,13 +1,13 @@
           MODULE=lyx
-         VERSION=2.3.4
+         VERSION=2.3.4.2
           SOURCE=$MODULE-$VERSION.tar.xz
    SOURCE_URL[0]=ftp://ftp.lyx.org/pub/lyx/stable/2.3.x/
    SOURCE_URL[1]=ftp://ftp.ntua.gr/pub/X11/LyX/stable/2.3.x/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-${VERSION%-*}
-      SOURCE_VFY=sha256:f045e4ccab8b25f22002670b4e1be33677c57764487ae786b7c659ea5260fb61
+      SOURCE_VFY=sha256:bf364971fb2460afec5a759d04b5e10611c1035a8ac122f223b531f28d23e3c5
         WEB_SITE=http://www.lyx.org
          ENTERED=20020904
-         UPDATED=20200128
+         UPDATED=20200213
            SHORT="GUI LaTeX editor"
 
 cat << EOF
