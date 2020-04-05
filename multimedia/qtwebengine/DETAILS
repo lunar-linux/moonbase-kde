@@ -3,10 +3,10 @@
           SOURCE=qtwebengine-everywhere-src-${VERSION}.tar.xz
       SOURCE_URL=https://download.qt.io/archive/qt/${VERSION%.*}/$VERSION/submodules/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-everywhere-src-${VERSION}
-      SOURCE_VFY=sha256:4ec77040a876a83aa2a833ebfe7b3e88dcc167ceb317095eb226a0b8d455e887
+      SOURCE_VFY=sha256:e169d6a75d8c397e04f843bc1b9585950fb9a001255cd18d6293f66fa8a6c947
         WEB_SITE=http://amarok.kde.org
          ENTERED=20191113
-         UPDATED=20200129
+         UPDATED=20200405
            SHORT="integrate chromium web capabilities into Qt"
 PSAFE=no
 cat << EOF
