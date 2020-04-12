@@ -1,12 +1,12 @@
           MODULE=kmailtransport
-         VERSION=19.12.2
+         VERSION=19.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:83fe706da597122b055eb9eb0f7e427eaa9755da564b3f855f277eddb229bc30
+      SOURCE_VFY=sha256:077b3dba7c02dde9693c003ab7039f3b2a530e3b1aecfcf187313db5226e8953
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://techbase.kde.org/Getting_Started/Build/KDE4/Troubleshooting
          ENTERED=20151122
-         UPDATED=20200206
+         UPDATED=20200412
            SHORT="mail transport service"
 
 cat << EOF

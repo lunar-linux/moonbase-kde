@@ -1,12 +1,12 @@
           MODULE=libkdcraw
-         VERSION=19.12.2
+         VERSION=19.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:6509df3457c370a0512063f6fdecd1e03e0e5689cacf1369632993e71904fe2e
+      SOURCE_VFY=sha256:9454aed707ee311dbfb921f8d45fba11710ffc01f48d65f64585d12c2580116f
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/kdegraphics/libs/libkdcraw
          ENTERED=20110813
-         UPDATED=20200206
+         UPDATED=20200412
            SHORT="LibRaw C++ interface for KDE"
 
 cat << EOF

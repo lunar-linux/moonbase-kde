@@ -1,12 +1,12 @@
           MODULE=akonadi-calendar
-         VERSION=19.12.2
+         VERSION=19.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:e514be63c53a499958260a346cfa6af67446cda9ee442b8a38dab6053f3dcbf1
+      SOURCE_VFY=sha256:c58d18153ef711a79962ba907e44338a0ddd62968e0a6c50486bba09a6e2a446
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://techbase.kde.org/Getting_Started/Build/KDE4/Troubleshooting
          ENTERED=20151122
-         UPDATED=20200206
+         UPDATED=20200412
            SHORT="A PIM layer for KDE 4.x"
 
 cat << EOF
