@@ -1,12 +1,12 @@
           MODULE=powerdevil
-         VERSION=5.18.0
+         VERSION=5.18.4.1
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:32bd9a3ae0d3836550c2101fc9cb6dadd699ab8e8935d072ccd91c3d12b58489
+      SOURCE_URL=$KDE_URL/stable/plasma/${VERSION%.*}
+      SOURCE_VFY=sha256:ccda33366be7bac6e8a0d551d9501a7c394ddda281c806720582630c075fd1ca
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/sddm-kcm
          ENTERED=20151124
-         UPDATED=20200211
+         UPDATED=20200412
            SHORT="manages power settings"
 
 cat << EOF

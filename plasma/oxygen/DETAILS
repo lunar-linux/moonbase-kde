@@ -1,12 +1,12 @@
           MODULE=oxygen
-         VERSION=5.18.0
+         VERSION=5.18.4.1
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:b55f9c22bfb025f0a52882493966abed1f1c910ac9a667760d28e357b2363360
+      SOURCE_URL=$KDE_URL/stable/plasma/${VERSION%.*}
+      SOURCE_VFY=sha256:530e7f8594a96500fe8d501ea0f742e77925646389c4f6eb4cfea477ea751621
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/oxygen
          ENTERED=20150504
-         UPDATED=20200211
+         UPDATED=20200412
            SHORT="oxygen theme"
 
 cat << EOF

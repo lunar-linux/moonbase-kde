@@ -1,11 +1,11 @@
           MODULE=bluedevil
-         VERSION=5.18.0
+         VERSION=5.18.4.1
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:d2f58aeeaa113b60132f26b26ea5416ae19b78bd0465940000f994c4dc3daec4
+      SOURCE_URL=$KDE_URL/stable/plasma/${VERSION%.*}
+      SOURCE_VFY=sha256:bbb589b25e7da47cdbb13e4f9ccd8b6d66a01024a6ef5a01561c01266f3b1829
         WEB_SITE=https://userbase.kde.org/Bluedevil
          ENTERED=20100728
-         UPDATED=20200211
+         UPDATED=20200412
            SHORT="kde bluetooth stack"
 
 cat << EOF

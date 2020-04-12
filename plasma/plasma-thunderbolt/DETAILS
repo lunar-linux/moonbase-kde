@@ -1,11 +1,11 @@
           MODULE=plasma-thunderbolt
-         VERSION=5.18.0
+         VERSION=5.18.4.1
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:61c6637708e3f590382ce83207941f02c7e74bae329d43cd37732a5fed90d1d7
+      SOURCE_URL=$KDE_URL/stable/plasma/${VERSION%.*}
+      SOURCE_VFY=sha256:ce586c98889ed51f30d1a9fc6e8e2847589d7aaf2d400fe00b3b4126d17c565a
         WEB_SITE=https://github.com/KDE/plasma-thunderbolt
          ENTERED=20191115
-         UPDATED=20200211
+         UPDATED=20200412
            SHORT="Plasma integration for controlling Thunderbolt devices"
 
 cat << EOF

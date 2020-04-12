@@ -1,12 +1,12 @@
           MODULE=kgamma5
-         VERSION=5.18.0
+         VERSION=5.18.4.1
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:fb3e8abba39ba6039538390232b64f6c1aaa6ae60f88057415d79ba5bc9e4274
+      SOURCE_URL=$KDE_URL/stable/plasma/${VERSION%.*}
+      SOURCE_VFY=sha256:08b5c447edc0210eaab7244cec640863f9097556d97bf010a525d8184705d2fd
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20151123
-         UPDATED=20200211
+         UPDATED=20200412
            SHORT="kde gamma"
 
 cat << EOF
