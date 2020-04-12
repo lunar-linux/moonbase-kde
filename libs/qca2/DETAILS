@@ -1,12 +1,12 @@
           MODULE=qca2
-         VERSION=2.2.1
-          SOURCE=qca-v$VERSION.tar.bz2
-      SOURCE_URL=https://invent.kde.org/kde/qca/-/archive/v$VERSION/
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/qca-v$VERSION
-      SOURCE_VFY=sha256:c06b5337a21e526a011a1138ed7c35e052c6ccf5aeb3b8b8d01810d13e8b569b
-        WEB_SITE=https://invent.kde.org/kde/qca
+         VERSION=2.3.0
+          SOURCE=qca-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/qca/$VERSION
+      SOURCE_VFY=sha256:1d68ef41a1b61dc9786beb923a68902a6276a77cced5e5ea7ff985ef113932d7
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/qca-$VERSION
+        WEB_SITE=https://userbase.kde.org/QCA
          ENTERED=20071106
-         UPDATED=20190724
+         UPDATED=20200411
            SHORT="cross-platform crypto API"
 cat << EOF
 QCA aims to provide a straightforward and cross-platform crypto API
