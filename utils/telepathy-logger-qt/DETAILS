@@ -1,12 +1,12 @@
           MODULE=telepathy-logger-qt
-         VERSION=17.08.0
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$MODULE/${VERSION%.*}/src
-      SOURCE_VFY=sha256:d098a77de2a58381d9ebcd64c8ae54c773b5206ed7888576653d3b505fe5032a
-        WEB_SITE=https://projects.kde.org/projects/extragear/network/telepathy/telepathy-logger-qt
+         VERSION=17.09.0
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/KDE/telepathy-logger-qt/archive/v$VERSION.tar.gz
+      SOURCE_VFY=sha256:7ee208823e11d2af526b2ec596495041ea4707693fbb07f66a221117f83d63eb
+        WEB_SITE=https://github.com/KDE/telepathy-logger-qt
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
          ENTERED=20151201
-         UPDATED=20171204
+         UPDATED=20200412
            SHORT="qt5 bindings for telepathy logger"
 
 cat << EOF
