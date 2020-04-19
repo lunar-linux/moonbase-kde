@@ -1,0 +1,14 @@
+          MODULE=signon-plugin-oauth2
+         VERSION=0.24
+          SOURCE=$MODULE-VERSION_$VERSION.tar.bz2
+      SOURCE_URL=https://gitlab.com/accounts-sso/$MODULE/-/archive/VERSION_$VERSION/
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-master
+      SOURCE_VFY=sha256:
+        WEB_SITE=https://gitlab.com/accounts-sso/signon-plugin-oauth2
+         ENTERED=20200412
+         UPDATED=20200412
+           SHORT="Signond OAuth 1.0 and 2.0 plugin"
+cat << EOF
+This plugin for the Accounts-SSO SignOn daemon handles the OAuth
+1.0 and 2.0 authentication protocols.
+EOF
