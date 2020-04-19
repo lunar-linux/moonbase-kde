@@ -1,0 +1,14 @@
+          MODULE=accounts-qml-module
+         VERSION=0.7
+          SOURCE=$MODULE-VERSION\_$VERSION.tar.bz2
+      SOURCE_URL=https://gitlab.com/accounts-sso/accounts-qml-module/-/archive/VERSION_$VERSION/
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-VERSION\_$VERSION
+      SOURCE_VFY=sha256:2f0bebe583a155769dd09ec9871aa9a84255fb358d3c7a891cc5ef230dfdf91f
+        WEB_SITE=https://gitlab.com/accounts-sso/accounts-qml-module
+         ENTERED=20200130
+         UPDATED=20200130
+           SHORT="Expose the Online Accounts API to QML applications"
+
+cat << EOF
+Expose the Online Accounts API to QML applications.
+EOF
