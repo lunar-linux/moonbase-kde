@@ -1,13 +1,13 @@
           MODULE=kdiff
-         VERSION=1.8.1
+         VERSION=1.8.2
           SOURCE=${MODULE}3-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/${MODULE}3
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE}3-$VERSION
-      SOURCE_VFY=sha256:7877c0f38d24f35edc6c61353fe6e12790aaa285663fe403133e4fc00bcf436e
+      SOURCE_VFY=sha256:fb7154778491dc11b9bd38465164ce1a7c2d1810f70a57cd4268ffad42d5bb68
         WEB_SITE=http://kdiff3.sourceforge.net/
          ENTERED=20090902
          UPDATED=20190616
-           SHORT="KDE4 version of diff"
+           SHORT="KDE version of diff"
 
 cat << EOF
 KDiff3 is a program that
