@@ -6,7 +6,11 @@ mkdir $QT_CREATOR_BLD &&
 cd $QT_CREATOR_BLD &&
 
 /usr/lib/qt5/bin/qmake \
-LLVM_INSTALL_DIR=/usr QMAKE_CFLAGS_ISYSTEM=-I CONFIG+=journald -r $SOURCE_DIRECTORY/qtcreator.pro &&
+        LLVM_INSTALL_DIR=/usr \
+        QMAKE_CFLAGS_ISYSTEM=-I \
+        CONFIG+=journald -r \
+        DEFINES+=QBS_ENABLE_PROJECT_FILE_UPDATES \
+        $SOURCE_DIRECTORY/qtcreator.pro &&
 
 make &&
 if [[ $MAKE_DOCS == "y" ]] ; then
@@ -17,7 +21,7 @@ prepare_install &&
 make INSTALL_ROOT=$MODULE_PREFIX/ install &&
 
 # Desktop menu entry
-cat > $MODULE.desktop << EOF  &&
+cat > $MODULE.desktop << EOF &&
 [Desktop Entry]
 Type=Application
 Name=Qt Creator
@@ -30,7 +34,7 @@ EOF
 install -D -m644 $MODULE.desktop /usr/share/applications/$MODULE.desktop &&
 
 # workaround for a runtime bug
-mv /usr/bin/qtcreator /usr/bin/qtcreator-bin
+mv /usr/bin/qtcreator /usr/bin/qtcreator-bin &&
 echo "#!/bin/sh" > /usr/bin/qtcreator
 echo "QT_LOGGING_TO_CONSOLE=1 qtcreator-bin \$@" >> /usr/bin/qtcreator
 chmod +x /usr/bin/qtcreator
