@@ -1,12 +1,12 @@
           MODULE=kmime
-         VERSION=19.12.3
+         VERSION=20.04.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:5ed20ad77000c60ba5723aaa22149fca3a3956f930d63e70984f0a17b9339300
+      SOURCE_VFY=sha256:4230ca0147d31fa688cf84ac8e7bb46e64deb9536b7a25544be73171615c8fac
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/kmime
          ENTERED=20151122
-         UPDATED=20200412
+         UPDATED=20200425
            SHORT="Library for handling mail messages and newsgroup articles"
 
 cat << EOF

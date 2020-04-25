@@ -1,12 +1,11 @@
           MODULE=kmplot
-         VERSION=19.12.3
+         VERSION=20.04.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:2743e3a472ccf40281f5afd9c6110dde6fb9bc437e8e291beba484d405d8152e
-   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+      SOURCE_VFY=sha256:a17aa7b01bc65a281a2b8e422dfe05a7560ccc86007a0ae754e653dff255da66
         WEB_SITE=http://www.kde.org/applications/education/kmplot/
          ENTERED=20110813
-         UPDATED=20200412
+         UPDATED=20200425
            SHORT="Mathematical Function Plotter"
 
 cat << EOF

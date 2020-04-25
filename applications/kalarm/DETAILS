@@ -1,12 +1,12 @@
           MODULE=kalarm
-         VERSION=19.12.3
+         VERSION=20.04.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:526ab8884752c15622233db8b72e88d0c22a7a1bd265763d850b6e18e32de417
+      SOURCE_VFY=sha256:18140c96e5451648ff7732df50235fbe7e4a7fd644dffc312e318249eb1e3d3d
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20171205
-         UPDATED=20200412
+         UPDATED=20200425
            SHORT="personal alram scheduler"
 
 cat << EOF
