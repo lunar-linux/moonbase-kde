@@ -1,7 +1,8 @@
           MODULE=spatialindex
-         VERSION=src-1.9.3
-          SOURCE=$MODULE-$VERSION.tar.bz2
+         VERSION=1.9.3
+          SOURCE=$MODULE-src-$VERSION.tar.bz2
       SOURCE_URL=https://github.com/libspatialindex/libspatialindex/releases/download/$VERSION/
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-src-$VERSION
       SOURCE_VFY=sha256:4a529431cfa80443ab4dcd45a4b25aebbabe1c0ce2fa1665039c80e999dcc50a
         WEB_SITE=http://libspatialindex.github.com/
          ENTERED=20121203
