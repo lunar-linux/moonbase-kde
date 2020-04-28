@@ -1,4 +1,6 @@
 depends libalkimia
+depends kdiagram
+depends kdewebkit
 
 optional_depends libofx "--enable-ofxplugin --enable-ofxbanking" "" "for OFX plugin support" y
 optional_depends aqbanking  "" "" "For additional banking support" y
