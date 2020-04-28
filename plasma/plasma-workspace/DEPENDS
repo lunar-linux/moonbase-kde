@@ -44,7 +44,9 @@ depends kitemviews
 depends solid
 depends sonnet
 depends baloo
+depends ksysguard
+depends kwin
 
 optional_depends gpsd "" "" "for geolocation support"
 optional_depends networkmanager-qt "" "" "for newwork manager support"
-optional_depends kde-cli-tools "" "" "For better interaction with the system{PROBLEM_COLOR}, say no on first install of plasma-workspace.${DEFAULT_COLOR}"
+optional_depends kde-cli-tools "" "" "For better interaction with the system, ${PROBLEM_COLOR} say no on first install of plasma-workspace.${DEFAULT_COLOR}"
