@@ -1,7 +1,9 @@
 # This needs to happen here since CFLAGS/CXXFLAGS/LDFLAGS is only loaded during BUILD
+
 if in_depends $MODULE libressl; then
-  CFLAGS+=" -DOPENSSL_NO_PSK -DOPENSSL_NO_NEXTPROTONEG -DOPENSSL_NO_SSL3_METHOD" &&
-  CXXFLAGS+=" -DOPENSSL_NO_PSK -DOPENSSL_NO_NEXTPROTONEG -DOPENSSL_NO_SSL3_METHOD -Wno-deprecated-declarations -fno-delete-null-pointer-checks"
+  patch_it $SCRIPT_DIRECTORY/libressl-compat.patch 1 &&
+  CFLAGS+=" -DOPENSSL_NO_PSK -DOPENSSL_NO_NEXTPROTONEG" &&
+  CXXFLAGS+=" -DOPENSSL_NO_PSK -DOPENSSL_NO_NEXTPROTONEG -Wno-deprecated-declarations -Wno-class-memaccess -Wno-packed-not-aligned -Wno-deprecated-declarations -fno-delete-null-pointer-checks"
 fi &&
 
 if [[ $LICENSE_TYPE == "y" ]]; then

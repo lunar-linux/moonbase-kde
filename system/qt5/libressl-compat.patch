@@ -1,0 +1,85 @@
+diff -Naur qt-everywhere-src-5.14.2/qtbase/src/network/configure.json qt-everywhere-src-5.14.2-lunar/qtbase/src/network/configure.json
+--- qt-everywhere-src-5.14.2/qtbase/src/network/configure.json	2020-03-27 09:49:31.000000000 +0000
++++ qt-everywhere-src-5.14.2-lunar/qtbase/src/network/configure.json	2020-05-01 13:20:23.983367542 +0100
+@@ -195,7 +195,7 @@
+             "test": {
+                 "include": "openssl/opensslv.h",
+                 "tail": [
+-                    "#if !defined(OPENSSL_VERSION_NUMBER) || OPENSSL_VERSION_NUMBER-0 < 0x10100000L",
++                    "#if !defined(OPENSSL_VERSION_NUMBER) || OPENSSL_VERSION_NUMBER-0 < 0x10100000L || defined(LIBRESSL_VERSION_NUMBER)",
+                     "#  error OpenSSL >= 1.1 is required",
+                     "#endif"
+                 ]
+diff -Naur qt-everywhere-src-5.14.2/qtbase/src/network/ssl/qsslcontext_openssl.cpp qt-everywhere-src-5.14.2-lunar/qtbase/src/network/ssl/qsslcontext_openssl.cpp
+--- qt-everywhere-src-5.14.2/qtbase/src/network/ssl/qsslcontext_openssl.cpp	2020-03-27 09:49:31.000000000 +0000
++++ qt-everywhere-src-5.14.2-lunar/qtbase/src/network/ssl/qsslcontext_openssl.cpp	2020-05-01 13:15:53.420045941 +0100
+@@ -269,7 +269,7 @@
+     }
+ #endif // ocsp
+ 
+-#if OPENSSL_VERSION_NUMBER >= 0x10002000L
++#if OPENSSL_VERSION_NUMBER >= 0x10002000L && !defined(LIBRESSL_VERSION_NUMBER)
+     if (QSslSocket::sslLibraryVersionNumber() >= 0x10002000L) {
+         QSharedPointer<SSL_CONF_CTX> cctx(q_SSL_CONF_CTX_new(), &q_SSL_CONF_CTX_free);
+         if (cctx) {
+diff -Naur qt-everywhere-src-5.14.2/qtbase/src/network/ssl/qsslsocket_openssl.cpp qt-everywhere-src-5.14.2-lunar/qtbase/src/network/ssl/qsslsocket_openssl.cpp
+--- qt-everywhere-src-5.14.2/qtbase/src/network/ssl/qsslsocket_openssl.cpp	2020-03-27 09:49:31.000000000 +0000
++++ qt-everywhere-src-5.14.2-lunar/qtbase/src/network/ssl/qsslsocket_openssl.cpp	2020-05-01 13:22:15.580029349 +0100
+@@ -600,7 +600,7 @@
+             q_SSL_set_psk_server_callback(ssl, &q_ssl_psk_server_callback);
+     }
+ #endif
+-#if OPENSSL_VERSION_NUMBER >= 0x10101006L
++#if OPENSSL_VERSION_NUMBER >= 0x10101006L && !defined(LIBRESSL_VERSION_NUMBER)
+     // Set the client callback for TLSv1.3 PSK
+     if (mode == QSslSocket::SslClientMode
+         && QSslSocket::sslLibraryBuildVersionNumber() >= 0x10101006L) {
+diff -Naur qt-everywhere-src-5.14.2/qtbase/src/network/ssl/qsslsocket_opensslpre11_symbols_p.h qt-everywhere-src-5.14.2-lunar/qtbase/src/network/ssl/qsslsocket_opensslpre11_symbols_p.h
+--- qt-everywhere-src-5.14.2/qtbase/src/network/ssl/qsslsocket_opensslpre11_symbols_p.h	2020-03-27 09:49:31.000000000 +0000
++++ qt-everywhere-src-5.14.2-lunar/qtbase/src/network/ssl/qsslsocket_opensslpre11_symbols_p.h	2020-05-01 13:26:39.346684577 +0100
+@@ -78,8 +78,8 @@
+ unsigned char * q_ASN1_STRING_data(ASN1_STRING *a);
+ BIO *q_BIO_new_file(const char *filename, const char *mode);
+ void q_ERR_clear_error();
+-Q_AUTOTEST_EXPORT BIO *q_BIO_new(BIO_METHOD *a);
+-Q_AUTOTEST_EXPORT BIO_METHOD *q_BIO_s_mem();
++Q_AUTOTEST_EXPORT BIO *q_BIO_new(const BIO_METHOD *a);
++Q_AUTOTEST_EXPORT const BIO_METHOD *q_BIO_s_mem();
+ int q_CRYPTO_num_locks();
+ void q_CRYPTO_set_locking_callback(void (*a)(int, int, const char *, int));
+ void q_CRYPTO_set_id_callback(unsigned long (*a)());
+diff -Naur qt-everywhere-src-5.14.2/qtbase/src/network/ssl/qsslsocket_openssl_symbols.cpp qt-everywhere-src-5.14.2-lunar/qtbase/src/network/ssl/qsslsocket_openssl_symbols.cpp
+--- qt-everywhere-src-5.14.2/qtbase/src/network/ssl/qsslsocket_openssl_symbols.cpp	2020-03-27 09:49:31.000000000 +0000
++++ qt-everywhere-src-5.14.2-lunar/qtbase/src/network/ssl/qsslsocket_openssl_symbols.cpp	2020-05-01 13:25:19.353354702 +0100
+@@ -248,8 +248,8 @@
+ #endif
+ DEFINEFUNC2(BIO *, BIO_new_file, const char *filename, filename, const char *mode, mode, return nullptr, return)
+ DEFINEFUNC(void, ERR_clear_error, DUMMYARG, DUMMYARG, return, DUMMYARG)
+-DEFINEFUNC(BIO *, BIO_new, BIO_METHOD *a, a, return nullptr, return)
+-DEFINEFUNC(BIO_METHOD *, BIO_s_mem, void, DUMMYARG, return nullptr, return)
++DEFINEFUNC(BIO *, BIO_new, const BIO_METHOD *a, a, return nullptr, return)
++DEFINEFUNC(const BIO_METHOD *, BIO_s_mem, void, DUMMYARG, return nullptr, return)
+ DEFINEFUNC(int, CRYPTO_num_locks, DUMMYARG, DUMMYARG, return 0, return)
+ DEFINEFUNC(void, CRYPTO_set_locking_callback, void (*a)(int, int, const char *, int), a, return, DUMMYARG)
+ DEFINEFUNC(void, CRYPTO_set_id_callback, unsigned long (*a)(), a, return, DUMMYARG)
+@@ -448,7 +448,7 @@
+ DEFINEFUNC2(int, SSL_CTX_use_RSAPrivateKey, SSL_CTX *a, a, RSA *b, b, return -1, return)
+ DEFINEFUNC3(int, SSL_CTX_use_PrivateKey_file, SSL_CTX *a, a, const char *b, b, int c, c, return -1, return)
+ DEFINEFUNC(X509_STORE *, SSL_CTX_get_cert_store, const SSL_CTX *a, a, return nullptr, return)
+-#if OPENSSL_VERSION_NUMBER >= 0x10002000L
++#if OPENSSL_VERSION_NUMBER >= 0x10002000L && !defined(LIBRESSL_VERSION_NUMBER)
+ DEFINEFUNC(SSL_CONF_CTX *, SSL_CONF_CTX_new, DUMMYARG, DUMMYARG, return nullptr, return);
+ DEFINEFUNC(void, SSL_CONF_CTX_free, SSL_CONF_CTX *a, a, return ,return);
+ DEFINEFUNC2(void, SSL_CONF_CTX_set_ssl_ctx, SSL_CONF_CTX *a, a, SSL_CTX *b, b, return, return);
+diff -Naur qt-everywhere-src-5.14.2/qtbase/src/network/ssl/qsslsocket_openssl_symbols_p.h qt-everywhere-src-5.14.2-lunar/qtbase/src/network/ssl/qsslsocket_openssl_symbols_p.h
+--- qt-everywhere-src-5.14.2/qtbase/src/network/ssl/qsslsocket_openssl_symbols_p.h	2020-03-27 09:49:31.000000000 +0000
++++ qt-everywhere-src-5.14.2-lunar/qtbase/src/network/ssl/qsslsocket_openssl_symbols_p.h	2020-05-01 13:19:23.423370161 +0100
+@@ -378,7 +378,7 @@
+ int q_SSL_CTX_use_RSAPrivateKey(SSL_CTX *a, RSA *b);
+ int q_SSL_CTX_use_PrivateKey_file(SSL_CTX *a, const char *b, int c);
+ X509_STORE *q_SSL_CTX_get_cert_store(const SSL_CTX *a);
+-#if OPENSSL_VERSION_NUMBER >= 0x10002000L
++#if OPENSSL_VERSION_NUMBER >= 0x10002000L && !defined(LIBRESSL_VERSION_NUMBER)
+ SSL_CONF_CTX *q_SSL_CONF_CTX_new();
+ void q_SSL_CONF_CTX_free(SSL_CONF_CTX *a);
+ void q_SSL_CONF_CTX_set_ssl_ctx(SSL_CONF_CTX *a, SSL_CTX *b);

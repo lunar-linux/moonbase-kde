@@ -24,7 +24,7 @@ optional_depends assimp     "-system-assimp"     ""               "use system pr
 optional_depends freetype2  "-system-freetype"   "-qt-freetype"   "use system provided freetype, else use qt provided freetype" y
 optional_depends harfbuzz   "-system-harfbuzz"   "-qt-harfbuzz"   "use system provided harfbuzz for text shaping, else use qt provided harfbuzz" y
 optional_depends dbus       "-dbus-linked"       "-no-dbus"       "for QtDBus module support" y
-optional_depends %OSSL      "-ssl"               "-no-openssl"    "for Secure Sockets support" y
+optional_depends %OSSL      "-openssl-linked"    "-no-openssl"    "for Secure Sockets support" y
 optional_depends pulseaudio "-pulseaudio"        "-no-pulseaudio" "for pulseaudio support" y
 optional_depends cups       "-cups"              "-no-cups"       "for printing support, needed by kdelibs"
 optional_depends icu4c      "-icu"               "-no-icu"        "for International Components for Unicode supoort,${PROBLEM_COLOR} required for QtWebKit ${DEFAULT_COLOR}"
