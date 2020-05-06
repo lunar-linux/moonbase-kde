@@ -1,11 +1,11 @@
           MODULE=libkscreen
-         VERSION=5.18.4.1
+         VERSION=5.18.5
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/plasma/${VERSION%.*}
-      SOURCE_VFY=sha256:c42077f927a087744a4619384f2784d117c4d8329e0335d718bb2afa3af68436
+      SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
+      SOURCE_VFY=sha256:a962319000324200ec1abe3c58b1b8ab71ed4cc7c88a3c7e03a1c8eca86c287c
         WEB_SITE=https://projects.kde.org/projects/extragear/libs/libkscreen
          ENTERED=20140731
-         UPDATED=20200412
+         UPDATED=20200506
            SHORT="screen management software"
 
 cat << EOF

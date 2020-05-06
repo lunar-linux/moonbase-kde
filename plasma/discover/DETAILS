@@ -1,11 +1,11 @@
           MODULE=discover
-         VERSION=5.18.4.1
+         VERSION=5.18.5
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/plasma/${VERSION%.*}
-      SOURCE_VFY=sha256:b89c19df39286c2ec0b1128369372a7628fa5403ea5d9af244ddd7c1042c2802
+      SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
+      SOURCE_VFY=sha256:d5ce4f4668c50ba9be37e04227db4bbe469e00470c87907f1e217fdcad6e76b6
         WEB_SITE=https://userbase.kde.org/Discover
          ENTERED=20181112
-         UPDATED=20200412
+         UPDATED=20200506
            SHORT="KDE and Plasma resources management GUI"
 
 cat << EOF
