@@ -2,8 +2,8 @@
          VERSION=0.24
           SOURCE=$MODULE-VERSION_$VERSION.tar.bz2
       SOURCE_URL=https://gitlab.com/accounts-sso/$MODULE/-/archive/VERSION_$VERSION/
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-master
-      SOURCE_VFY=sha256:
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-VERSION_$VERSION
+      SOURCE_VFY=sha256:d37f6c93b6cd2885b517fd93cdb2407b0164655454ded2ed56e41704f81f05c4
         WEB_SITE=https://gitlab.com/accounts-sso/signon-plugin-oauth2
          ENTERED=20200412
          UPDATED=20200412
