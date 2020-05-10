@@ -1,12 +1,12 @@
           MODULE=kunitconversion
-         VERSION=5.69.0
+         VERSION=5.70.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:f0ae5d328063e0ea5e93ad61c7d925bb17a3b761040dafe76eea4a468be15fff
+      SOURCE_VFY=sha256:d63e7646a8059fb333f95b27548044e897b38ed5c939db416c0c1077bf7be46a
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kunitconversion
          ENTERED=20150205
-         UPDATED=20200411
+         UPDATED=20200510
            SHORT="Converting physical units"
 
 cat << EOF

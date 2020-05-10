@@ -1,12 +1,12 @@
           MODULE=sonnet
-         VERSION=5.69.0
+         VERSION=5.70.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:6353db0d68e5f34cd48e43edc7fc5f05465e55bf6e04d6772997321542b43d5e
+      SOURCE_VFY=sha256:1c0cbb3afe7d0e62c6524652626605d04bb9a49074e00d5ef61fd9c05d81082d
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/sonnet
          ENTERED=20150205
-         UPDATED=20200411
+         UPDATED=20200510
            SHORT="multi-language spell checker"
 
 cat << EOF

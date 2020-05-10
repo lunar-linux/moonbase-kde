@@ -1,12 +1,12 @@
           MODULE=syndication
-         VERSION=5.69.0
+         VERSION=5.70.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE%-*}-$VERSION
-      SOURCE_VFY=sha256:eb38fbc7749efff7a06ee1454c0aaf4e0751bda2eaaf2587560e7d810f02972e
+      SOURCE_VFY=sha256:fbb21a014bb6dcc724a37a9645632613f27d50840764976307a34df283467dd8
         WEB_SITE=http://kde.org/applications/syndication
          ENTERED=20181214
-         UPDATED=20200411
+         UPDATED=20200510
            SHORT="RSS and Atom parser library"
 
 cat << EOF
