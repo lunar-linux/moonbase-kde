@@ -7,4 +7,7 @@ sedit "s:-T::" configure.py &&
 
 # Thanks to the arch folks for finding this, it had trouble finding
 # /usr/lib/dbus-1.0/include/dbus/dbus-arch-deps.h
-sedit '/target_config.dbus_inc_dirs = \[\]/d' configure.py
+sedit '/target_config.dbus_inc_dirs = \[\]/d' configure.py &&
+
+# Fix unexistant SIP min version
+sedit 's|4.19.23|4.19.22|' configure.py
