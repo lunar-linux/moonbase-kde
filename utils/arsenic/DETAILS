@@ -1,0 +1,15 @@
+          MODULE=arsenic
+         VERSION=3.5.1
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/Antidote1911/arsenic/archive/${VERSION}.tar.gz
+      SOURCE_VFY=sha256:
+   MODULE_PREFIX=${KDE_PREFIX:-/usr}
+        WEB_SITE=https://github.com/Antidote1911/arsenic/
+         ENTERED=20200619
+         UPDATED=20200619
+           SHORT="Qt5 app for encrypt files and text with triple encryption"
+
+cat << EOF
+C++ Qt5 Application to encrypt files with strongs algorithms and calculate hash.
+Use Botan and Argon2 for primitives.
+EOF
