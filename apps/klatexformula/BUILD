@@ -1,6 +1,3 @@
+. /etc/profile.d/qt5.rc &&
 
-#  LDFLAGS+=" -lX11" &&
-
-  . /etc/profile.d/qt5.rc &&
-
-  default_cmake_build
+default_cmake_build
