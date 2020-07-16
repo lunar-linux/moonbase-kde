@@ -1,0 +1,16 @@
+          MODULE=kdav
+         VERSION=5.72.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
+      SOURCE_VFY=sha256:0d98e04a9561866f42c033c680d63d4817be917d4381a59fc935522c8fba6461
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://community.kde.org/KDE_PIM
+         ENTERED=20171201
+         UPDATED=20200716
+           SHORT="DAV protocol implementation with KJobs"
+
+cat << EOF
+This is an DAV protocol implemention with KJobs.
+Calendars and todos are supported, using either GroupDAV or CalDAV, and
+contacts are supported using GroupDAV or CardDAV.
+EOF

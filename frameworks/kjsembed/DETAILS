@@ -1,12 +1,12 @@
           MODULE=kjsembed
-         VERSION=5.70.0
+         VERSION=5.72.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)/portingAids
-      SOURCE_VFY=sha256:f5c6352ec1791c0e8757631322cf07df4eb138449add7d79881076f89572e624
+      SOURCE_VFY=sha256:bcd256e5fa8e928b35beb3e89ea163f7ece599789641a2ae694f2753cbdeeacf
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kjsembed
          ENTERED=20150205
-         UPDATED=20200510
+         UPDATED=20200716
            SHORT="binding JavaScript objects to QObjects"
 
 cat << EOF

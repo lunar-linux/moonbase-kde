@@ -1,12 +1,12 @@
           MODULE=karchive
-         VERSION=5.70.0
+         VERSION=5.72.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:f5f361a2ce857d7e7af49276ab70506c6a2ece45a183971ed9abdd5386d50a7d
+      SOURCE_VFY=sha256:d1857451305bbc06c2391f1be2aa59836291910391f4f26f243e8f038a47ef5a
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/karchive
          ENTERED=20150205
-         UPDATED=20200510
+         UPDATED=20200716
            SHORT="Qt 5 addon providing access to numerous types of archives"
 
 cat << EOF

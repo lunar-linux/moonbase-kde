@@ -1,12 +1,12 @@
           MODULE=kwindowsystem
-         VERSION=5.70.0
+         VERSION=5.72.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:9003fded6cb8338521024bdcfccc4d36336f3f9cc9a4e6ba4eaa50bd8064c828
+      SOURCE_VFY=sha256:b4c4a682d467247a8e3397487a2a4c773fa91dd587cc1f4ddc6350891af12a3f
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kwindowsystem
          ENTERED=20150205
-         UPDATED=20200510
+         UPDATED=20200716
            SHORT="access to the windowing system"
 
 cat << EOF

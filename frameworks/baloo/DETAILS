@@ -1,13 +1,13 @@
           MODULE=baloo
-         VERSION=5.70.0
+         VERSION=5.72.0
           SOURCE=baloo-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/baloo-$VERSION
-      SOURCE_VFY=sha256:4e5e90547643eb81d6ebc20f6b3e3e765ca5959ec3c0eff9f5f80e0bd3bdc5b1
+      SOURCE_VFY=sha256:21be79dc4e3fb655f485fb09a63f6dbcf599adfbe8f68c6c30e5afb080bd5bef
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/kdelibs/baloo
          ENTERED=20151025
-         UPDATED=20200510
+         UPDATED=20200716
            SHORT="file search and indexing"
 
 cat << EOF
