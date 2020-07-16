@@ -1,12 +1,12 @@
           MODULE=kblog
-         VERSION=20.04.0
+         VERSION=20.04.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:3f085ee4e12bbeb09744531b84173c8df6146ab8ce432d35d262e3387fc1df8b
+      SOURCE_VFY=sha256:5932a8ba3ec33f13aec201252abb6d0712740f52af03747e9eb0f6c0764cb9b4
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/kblog
          ENTERED=20151122
-         UPDATED=20200425
+         UPDATED=20200716
            SHORT="kde blogging library"
 
 cat << EOF
