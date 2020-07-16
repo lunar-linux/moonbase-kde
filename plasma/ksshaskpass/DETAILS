@@ -1,12 +1,12 @@
           MODULE=ksshaskpass
-         VERSION=5.18.5
+         VERSION=5.19.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
-      SOURCE_VFY=sha256:c483c17d6ce2e3dffd54fc812f97b88c32f5def6e8c5e7a526e23f5e7f208cc5
+      SOURCE_VFY=sha256:399ce76b95bc51566bf34612ca787ce0112681a6299a52c2cee388bf7749f77b
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
          ENTERED=20151123
-         UPDATED=20200506
+         UPDATED=20200716
            SHORT="ssh add that uses kwallet"
 
 cat << EOF
