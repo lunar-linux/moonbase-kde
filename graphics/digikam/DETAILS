@@ -1,13 +1,13 @@
           MODULE=digikam
-         VERSION=6.4.0-03
+         VERSION=7.0.0
           SOURCE=$MODULE-${VERSION%-*}.tar.xz
       SOURCE_URL=$KDE_URL/stable/$MODULE/${VERSION%-*}
-      SOURCE_VFY=sha256:775012ff515bdd25a0b894c95bf5d33e7122b523da9c0f3af260ec3eff498d6f
+      SOURCE_VFY=sha256:dc0718e30031e692d7f05367b44e797fed61f12d27063641b6a5cf4d8b26e911
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-${VERSION%-*}
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.digikam.org/
          ENTERED=20090318
-         UPDATED=20200103
+         UPDATED=20200717
            SHORT="KDE version of digikam"
 
 cat << EOF
