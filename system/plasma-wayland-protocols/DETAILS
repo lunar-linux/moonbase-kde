@@ -1,0 +1,14 @@
+          MODULE=plasma-wayland-protocols
+         VERSION=1.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$MODULE/$VERSION
+      SOURCE_VFY=sha256:69c0fac42ccecaa78388f54725de493cad7ac798d85802225013c3e1fb7ee62b
+        WEB_SITE=https://kde.org/plasma-desktop
+         ENTERED=20200716
+         UPDATED=20200716
+            TYPE=cmake
+           SHORT="Plasma Specific Protocols for Wayland"
+
+cat << EOF
+Plasma Specific Protocols for Wayland.
+EOF

@@ -1,12 +1,12 @@
           MODULE=kross-interpreters
-         VERSION=20.04.0
+         VERSION=20.04.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:1b9b19b5b46777d1dcc9a25fe4d6539edb9300108408cdd16c683a020a5f27a5
+      SOURCE_VFY=sha256:7e5d1f771477831f42dc209c0333977af17a143ec8c7f60acbab9f5390818457
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20110813
-         UPDATED=20200425
+         UPDATED=20200716
            SHORT="Language interpreters to enable in-process scripting with Kross"
 
 cat << EOF

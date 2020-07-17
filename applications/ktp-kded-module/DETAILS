@@ -1,12 +1,12 @@
           MODULE=ktp-kded-module
-         VERSION=20.04.0
+         VERSION=20.04.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:ee0e318c6063803aed0c6567fbd579cc207ff3eb44056b9f80c1cadfb4e4c43e
+      SOURCE_VFY=sha256:972a4a5d7108351a07be670654b4e78dfe9fb7657336c563040e1e831134aad2
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/system/$MODULE
          ENTERED=20151201
-         UPDATED=20200425
+         UPDATED=20200716
            SHORT="Handles various bits of system integration"
 
 cat << EOF

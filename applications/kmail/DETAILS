@@ -1,12 +1,12 @@
           MODULE=kmail
-         VERSION=20.04.0
+         VERSION=20.04.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:c0247a265ee4a76b2afd5ce4bc17b3687a53a203070d6a112d24518e362e492d
+      SOURCE_VFY=sha256:5b653c680097a7be4ff53bc902bc3fcda9edac99f699a63a1375a1df81240d03
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20171205
-         UPDATED=20200425
+         UPDATED=20200716
            SHORT="KDE mail client"
 
 cat << EOF

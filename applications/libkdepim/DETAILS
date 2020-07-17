@@ -1,12 +1,12 @@
           MODULE=libkdepim
-         VERSION=20.04.0
+         VERSION=20.04.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:2afe70f627108b82ac343013503f35c646b17dd78ba3e9d971734ee604462a42
+      SOURCE_VFY=sha256:f4ecc6d33aace0a0025afe390a113f79bb052b816c567ea31996aaf08fe873ea
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20160505
-         UPDATED=20200425
+         UPDATED=20200716
            SHORT="Libraries for KDE PIM applications"
 
 cat << EOF
