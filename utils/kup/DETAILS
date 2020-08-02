@@ -1,0 +1,16 @@
+          MODULE=kup
+         VERSION=0.8.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$MODULE
+      SOURCE_VFY=sha256:79154cd12bcbef87b3b22851adcd505f5da7723483361c7a16ae4c3eea61f0bd
+        WEB_SITE=https://www.linux-apps.com/p/1127689/
+            TYPE=cmake
+         ENTERED=20200802
+         UPDATED=20200802
+           SHORT="keep up-to-date backups of personal files"
+
+cat << EOF
+Kup is created for helping people to keep up-to-date backups of their personal files.
+Connecting a USB hard drive is the primary supported way to store files, but saving
+files to a server over a network connection is also possible for advanced users.
+EOF
