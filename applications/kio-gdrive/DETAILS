@@ -1,9 +1,10 @@
           MODULE=kio-gdrive
          VERSION=20.08.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$MODULE/$VERSION/src/
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
       SOURCE_VFY=sha256:c08f809d575a24887aacd1a046b01cf2c3df7b77813fecf89cb6cdbec13ab299
         WEB_SITE=https://community.kde.org/KIO_GDrive
+            TYPE=cmake
          ENTERED=20171203
          UPDATED=20200813
            SHORT="gdrive kio for dolphin"
