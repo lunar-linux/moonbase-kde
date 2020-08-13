@@ -1,12 +1,11 @@
           MODULE=grantlee-editor
-         VERSION=20.04.3
+         VERSION=20.08.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:1a3e4ece1a37e11735291bbec99314bc0ede0714377db916ed1266ec19325ef5
-   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+      SOURCE_VFY=sha256:08aeac1c6bacabdeb4e4273efc5c5f4995454c45bd51069b3ef6105237b84afa
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20171201
-         UPDATED=20200716
+         UPDATED=20200813
            SHORT="Edit grantlee themes"
 
 cat << EOF

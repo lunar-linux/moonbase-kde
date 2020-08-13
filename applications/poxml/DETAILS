@@ -1,12 +1,12 @@
           MODULE=poxml
-         VERSION=20.04.3
+         VERSION=20.08.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:a070eb5c12e14df691648a9a3e482c021c484f59dfaac413eeacc002cdc1833a
+      SOURCE_VFY=sha256:07f5e8f0b215d864d48523c9a1b689f7434dfc0a561d5cf253ad69698770e096
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/kdesdk/poxml
          ENTERED=20130814
-         UPDATED=20200716
+         UPDATED=20200813
            SHORT="Translates DocBook XML files using gettext po files"
 
 cat << EOF

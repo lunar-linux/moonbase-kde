@@ -1,12 +1,11 @@
           MODULE=akonadi
-         VERSION=20.04.3
+         VERSION=20.08.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:c91cc53afd2f81fbeed55700cd86010ee865de2594948769410167e6992bdb32
-   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+      SOURCE_VFY=sha256:a18ce2d8c9e9fc7f195a7546ee5b7c2541e37ceb7afa0aa25e9ade4f54de2813
         WEB_SITE=https://community.kde.org/KDE_PIM/Akonadi
          ENTERED=20080622
-         UPDATED=20200716
+         UPDATED=20200813
            SHORT="A PIM layer for KDE"
 
 cat << EOF

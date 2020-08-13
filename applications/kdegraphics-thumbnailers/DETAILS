@@ -1,12 +1,11 @@
           MODULE=kdegraphics-thumbnailers
-         VERSION=20.04.3
+         VERSION=20.08.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:b72bdd67738391a10672cd20667555168382285a764bd9e712e1485e7860441f
-   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+      SOURCE_VFY=sha256:d466c08b4a5e4ccc36907dd38e82019f9060c2ea1931f336f9fbb2f79036566e
         WEB_SITE=http://www.kde.org
          ENTERED=20110813
-         UPDATED=20200716
+         UPDATED=20200813
            SHORT="Thumbnailers for various graphics file formats"
 
 cat << EOF

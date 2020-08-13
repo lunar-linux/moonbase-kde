@@ -1,12 +1,11 @@
           MODULE=kalarm
-         VERSION=20.04.3
+         VERSION=20.08.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:71f94af998495c759b9c2e7bf2092887748301c993f76dbf36f6ac9e4bb2a1f5
-   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+      SOURCE_VFY=sha256:02c1a62f603cc6917d0f95eff4aaa23cf808395bed9b1dad21817f6c32256748
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20171205
-         UPDATED=20200716
+         UPDATED=20200813
            SHORT="A personal alarm scheduler"
 
 cat << EOF
