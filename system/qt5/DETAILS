@@ -1,24 +1,23 @@
           MODULE=qt5
-         VERSION=5.14.2
+         VERSION=5.15.1
           SOURCE=qt-everywhere-src-$VERSION.tar.xz
    SOURCE_URL[0]=https://mirrors.dotsrc.org/qtproject/official_releases/qt/${VERSION%.*}/$VERSION/single
    SOURCE_URL[1]=https://download.qt-project.org/official_releases/qt/${VERSION%.*}/$VERSION/single
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qt-everywhere-src-$VERSION
-      SOURCE_VFY=sha256:c6fcd53c744df89e7d3223c02838a33309bd1c291fcb6f9341505fe99f7f19fa
+      SOURCE_VFY=sha256:44da876057e21e1be42de31facd99be7d5f9f07893e1ea762359bcee0ef64ee9
    MODULE_PREFIX=${QT5_PREFIX:-/usr}
         WEB_SITE=http://qt-project.org
          ENTERED=20140822
-         UPDATED=20200401
+         UPDATED=20200913
            SHORT="A C++ toolkit for application development"
 
 cat << EOF
-Qt is a C++ toolkit for application development. It lets application
-developers target all major operating systems with a single application
-source code.
-Qt provides a platform-independent API to all central platform
-functionality: GUI, database access, networking, file handling, etc. The
-Qt library encapsulates the different APIs of different operating systems,
+Qt is a C++ toolkit for application development. It lets application developers
+target all major operating systems with a single application source code.
+Qt provides a platform-independent API to all central platform functionality:
+GUI, database access, networking, file handling, etc.
+The Qt library encapsulates the different APIs of different operating systems,
 providing the application programmer with a single, common API for all
-operating systems. The native C APIs are encapsulated in a set of
-well-designed, fully object-oriented C++ classes.
+operating systems. The native C APIs are encapsulated in a set of well-designed,
+fully object-oriented C++ classes.
 EOF
