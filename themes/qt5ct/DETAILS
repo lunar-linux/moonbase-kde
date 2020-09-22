@@ -1,0 +1,14 @@
+          MODULE=qt5ct
+         VERSION=1.1
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=https://downloads.sourceforge.net/project/$MODULE/
+      SOURCE_VFY=af77c4dbf7f9ba97fe0218648167395bca7bcb2b9c1886a9c98b1e343127ddd2
+        WEB_SITE=https://qt5ct.sourceforge.io/
+         ENTERED=20200407
+         UPDATED=20200922
+           SHORT="Non-KF5 configuration utility for QT5 Apps"
+
+cat << EOF
+This program allows users to configure Qt5 settings (theme, font, icons, etc.)
+under DE/WM without Qt integration.
+EOF
