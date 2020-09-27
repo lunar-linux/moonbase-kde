@@ -19,26 +19,30 @@ depends nss
 depends xdg-utils
 depends double-conversion
 
-optional_depends mtdev      "-mtdev"             "-no-mtdev"      "for Multitouch Protocol support" n
-optional_depends assimp     "-system-assimp"     ""               "use system provided assimp, else use qt provided" y
-optional_depends freetype2  "-system-freetype"   "-qt-freetype"   "use system provided freetype, else use qt provided freetype" y
-optional_depends harfbuzz   "-system-harfbuzz"   "-qt-harfbuzz"   "use system provided harfbuzz for text shaping, else use qt provided harfbuzz" y
-optional_depends dbus       "-dbus-linked"       "-no-dbus"       "for QtDBus module support" y
-optional_depends %OSSL      "-openssl-linked"    "-no-openssl"    "for Secure Sockets support" y
-optional_depends pulseaudio "-pulseaudio"        "-no-pulseaudio" "for pulseaudio support" y
+optional_depends freetype2  "-system-freetype"   "-qt-freetype"   "use system provided freetype, else use qt provided freetype" "y"
+optional_depends harfbuzz   "-system-harfbuzz"   "-qt-harfbuzz"   "use system provided harfbuzz for text shaping, else use qt provided harfbuzz" "y"
+optional_depends dbus       "-dbus-linked"       "-no-dbus"       "for QtDBus module support" "y"
+optional_depends %OSSL      "-openssl-linked"    "-no-openssl"    "for Secure Sockets support" "y"
+optional_depends alsa-lib   "-alsa"              "-no-alsa"       "for alsa audio support" "y"
+optional_depends pulseaudio "-pulseaudio"        "-no-pulseaudio" "for pulseaudio support" "y"
 optional_depends cups       "-cups"              "-no-cups"       "for printing support, needed by kdelibs"
-optional_depends icu4c      "-icu"               "-no-icu"        "for International Components for Unicode supoort,${PROBLEM_COLOR} required for QtWebKit ${DEFAULT_COLOR}"
-optional_depends alsa-lib   "-alsa"              "-no-alsa"       "for alsa audio support"
+optional_depends mtdev      "-mtdev"             "-no-mtdev"      "for Multitouch Protocol support" "n"
+optional_depends icu4c      "-icu"               "-no-icu"        "for International Components for Unicode support,${PROBLEM_COLOR} required for QtWebKit ${DEFAULT_COLOR}"
+
+optional_depends sqlite \
+                 "-system-sqlite -plugin-sql-sqlite" \
+                 "-no-sql-sqlite" \
+                 "for sqlite database support" \
+                 "y"
+
 optional_depends %MYSQL     "-plugin-sql-mysql"  "-no-sql-mysql"  "for mysql database support"
 optional_depends postgresql "-plugin-sql-psql"   "-no-sql-psql"   "for postgresql database support"
 optional_depends unixODBC   "-plugin-sql-odbc"   "-no-sql-odbc"   "for unixODBC support"
 optional_depends freetds    "-plugin-sql-tds"    "-no-sql-tds"    "for tabular data stream support"
-optional_depends lksctp-tools "-sctp"           ""               "for SCTP protocol support"
-optional_depends sqlite \
-                 "-system-sqlite -plugin-sql-sqlite" \
-                 "-no-sql-sqlite" \
-                 "for sqlite database support"
 
+optional_depends %BLUEZ "" "" "for bluetooth support"
+
+optional_depends assimp "-system-assimp" "" "use system provided assimp, else use qt provided" "n"
 optional_depends gst-plugins-base "-gstreamer " "-no-gstreamer" "for QtWebKit HTML5 Video Support"
 optional_depends ca-certificates "" "" "for security certificate support"
-optional_depends %BLUEZ "" "" "for bluetooth support"
+optional_depends lksctp-tools "-sctp" "" "for SCTP protocol support"
