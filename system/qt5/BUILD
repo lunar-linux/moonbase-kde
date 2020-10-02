@@ -37,13 +37,13 @@ OPTS+=" -gui \
         -no-use-gold-linker \
         -reduce-relocations \
         -confirm-license $LICENSE_TYPE -v \
-        $SSE2" &&
+        $SSE2"
 
 if [[ "$USE_JOURNALD" == "y" && $(module_installed systemd) ]]; then
   OPTS+=" -journald"
  else
   OPTS+=" -no-journald"
-fi &&
+fi
 
 mkdir build-qt &&
 cd build-qt &&
