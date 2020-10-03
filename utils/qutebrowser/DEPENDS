@@ -1,14 +1,14 @@
 depends desktop-file-utils
 depends hicolor-icon-theme
 depends python-jinja
-depends PyQt5
 depends python-pygments
 depends python-yaml
 depends python-attrs
 depends pyPEG2
+depends PyQt5
+depends qtwebkir
 #depends asciidoc
 
-optional_depends pdfjs    "" "" "for displaying PDF in-browser"
-#optional_depends qtwebkit "" "" "for an alternatative backend"
+optional_depends pdfjs "" "" "for displaying PDF in-browser"
 
 optional_depends gst-plugins-ugly "" "" "for more media playback support"
