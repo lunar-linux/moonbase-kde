@@ -1,11 +1,13 @@
-depends hicolor-icon-theme
+depends curl
 depends libgcrypt
 depends argon2
 depends libsodium
+depends hicolor-icon-theme
 depends qt5
-depends curl
 depends qrencode
 
 optional_depends xclip "" "" "for X clipboard support"
+
+optional_depends quazip "-DWITH_XC_KEESHARE=ON" "" "for ZIP archives support"
 
 optional_depends wl-clipboard "" "" "for Wayland clipboard support"
