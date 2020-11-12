@@ -1,12 +1,12 @@
           MODULE=ktp-common-internals
-         VERSION=20.08.0
+         VERSION=20.08.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:9ee962e2afd5db0fc23da69468f008ff239e97ef77d8930f7e5960d732d8a4b2
+      SOURCE_VFY=sha256:807fcd6f9c415a0799057435f997e143e9584a94577f9afaa7fcc6a4197e7cb0
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/system/$MODULE
          ENTERED=20151128
-         UPDATED=20200813
+         UPDATED=20201112
            SHORT="Common KDE components for kde telepahy"
 
 cat << EOF
