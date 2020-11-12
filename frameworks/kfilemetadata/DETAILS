@@ -1,13 +1,13 @@
           MODULE=kfilemetadata
-         VERSION=5.73.0
+         VERSION=5.75.0
           SOURCE=${MODULE}-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/kfilemetadata-$VERSION
-      SOURCE_VFY=sha256:1ae217aab920741e445211e20b1b60dfcf80f4a6d1864aa63321dac7c3802894
+      SOURCE_VFY=sha256:2798207b796cc37638d3a4fe84cb8be1479b074db772c12d402fc6bfbd5cf0ca
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/kdelibs/kfilemetadata5
          ENTERED=20151025
-         UPDATED=20200810
+         UPDATED=20201112
            SHORT="extract text and metadata from a number of different files"
 
 cat << EOF

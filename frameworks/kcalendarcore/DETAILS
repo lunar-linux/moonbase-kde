@@ -1,13 +1,13 @@
           MODULE=kcalendarcore
-         VERSION=5.73.0
+         VERSION=5.75.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:e3486b41b833c0ba72f839d8a61bdffaf9b3ece3da20f478c2981b3296e7b713
+      SOURCE_VFY=sha256:02ff08c6462a5f0552c85a1da98320ca0a1c8d7295a05230f4b27b7a3f0a3dbc
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/Frameworks
         REPLACES=kcalcore
          ENTERED=20191107
-         UPDATED=20200810
+         UPDATED=20201112
            SHORT="calendar access library"
 
 cat << EOF
