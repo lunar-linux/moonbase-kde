@@ -1,12 +1,12 @@
           MODULE=kmenuedit
-         VERSION=5.19.4
+         VERSION=5.20.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
-      SOURCE_VFY=sha256:597d831f6f5c0d1f8d1a63d7ce9859aeeda9f9bfc5c12aa2abe4a610e717479d
+      SOURCE_VFY=sha256:cfb5d051de0c291c4d735d33bbfe754f1a3348340b320629b30c934226e9e7f5
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
          ENTERED=20151123
-         UPDATED=20200731
+         UPDATED=20201113
            SHORT="menu editor"
 
 cat << EOF
