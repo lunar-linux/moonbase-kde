@@ -7,8 +7,9 @@ depends python-attrs
 depends pyPEG2
 depends PyQt5
 depends qtwebkit
-#depends asciidoc
 
 optional_depends pdfjs "" "" "for displaying PDF in-browser"
+
+optional_depends asciidoc "" "" "for install the man page"
 
 optional_depends gst-plugins-ugly "" "" "for more media playback support"
