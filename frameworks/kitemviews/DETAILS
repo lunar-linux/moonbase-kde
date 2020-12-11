@@ -1,12 +1,12 @@
           MODULE=kitemviews
-         VERSION=5.75.0
+         VERSION=5.76.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:071f2886cfb213c01cfeb26a9c98b26b720ff6928c5db04d4ead9ca34f72cac1
+      SOURCE_VFY=sha256:b102cb67513d804fd7eed2ae20bb4ba679d38de4f236de6bc03709ff0c0bc001
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kitemviews
          ENTERED=20150205
-         UPDATED=20201112
+         UPDATED=20201211
            SHORT="set of item views extending the Qt model-view framework"
 
 cat << EOF
