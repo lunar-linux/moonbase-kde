@@ -1,12 +1,11 @@
           MODULE=rkward
-         VERSION=0.7.1b
+         VERSION=0.7.2
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=$KDE_URL/stable/rkward/${VERSION}/src
-   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
-      SOURCE_VFY=sha256:0cca23b106f569549a005110eeecb2557805049e6659c3a2ebd5eb18e392ac76
+      SOURCE_VFY=sha256:452350a4057d9dc87bb7c7e2f5c38b5cb9715b42141186b0e8c4a28e3dd2adf6
         WEB_SITE=http://rkward.sourceforge.net/
          ENTERED=20060708
-         UPDATED=20200718
+         UPDATED=20201211
            SHORT="KDE4 transparent frontend to the R-language"
 
 cat << EOF
