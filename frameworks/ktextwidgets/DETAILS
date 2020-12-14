@@ -1,12 +1,12 @@
           MODULE=ktextwidgets
-         VERSION=5.76.0
+         VERSION=5.77.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:a104e894cf21c245a6c22e6f2c38fdbbdb094cb7fde3d7ebff801bfd73af4c84
+      SOURCE_VFY=sha256:8371accab994192f1505b3bb4805badd751fabd4e8a8ca66cadbc039a253f0f2
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/ktextwidgets
          ENTERED=20150205
-         UPDATED=20201211
+         UPDATED=20201214
            SHORT="text editing widgets"
 
 cat << EOF
