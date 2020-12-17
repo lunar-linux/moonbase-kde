@@ -1,0 +1,10 @@
+default_pre_build &&
+
+# use system qbs
+rm -r src/shared/qbs &&
+
+# Fix linking to clang
+sedit 's|clangFormat|libclang|' src/plugins/clangformat/CMakeLists.txt &&
+
+# Fix libexec path
+sedit 's|libexec/qtcreator|lib/qtcreator|' cmake/QtCreatorAPIInternal.cmake
