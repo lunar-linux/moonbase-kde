@@ -1,5 +1,8 @@
 depends llvm
 depends qt5
+depends cmake
+
+optional_depends zstd "" "" "for zstd compression support"
 
 optional_depends gdb  "" "" "for gdb debugger support"
 optional_depends bzr  "" "" "for bazaar support"
