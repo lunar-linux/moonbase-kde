@@ -1,5 +1,5 @@
 . /etc/profile.d/qt5.rc &&
 
-OPTS+=" --with-qt=$QTDIR"
+OPTS+=" -Wno_dev"
 
-default_build
+default_cmake_build
