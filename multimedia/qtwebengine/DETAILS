@@ -4,9 +4,9 @@
       SOURCE_URL=https://download.qt.io/archive/qt/${VERSION%.*}/$VERSION/submodules/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-everywhere-src-${VERSION}
       SOURCE_VFY=sha256:c8afca0e43d84f7bd595436fbe4d13a5bbdb81ec5104d605085d07545b6f91e0
-        WEB_SITE=http://amarok.kde.org
+        WEB_SITE=https://www.qt.io
          ENTERED=20191113
-         UPDATED=20201120
+         UPDATED=20201222
            SHORT="integrate chromium web capabilities into Qt"
 PSAFE=no
 cat << EOF

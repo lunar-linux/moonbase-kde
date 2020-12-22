@@ -1,5 +1,7 @@
 . /etc/profile.d/qt5.rc &&
 
+sed -i 's|use_jumbo_build=true|use_jumbo_build=false|' -i src/buildtools/config/common.pri &&
+
 # Support ninja 1.10
 sed -e 's|7-9|7-9\|10|' -i configure.pri &&
 
