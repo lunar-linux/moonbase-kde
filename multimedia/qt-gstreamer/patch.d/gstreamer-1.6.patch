@@ -9,6 +9,10 @@ pick up its cflags in FindGstreamer and apply them to the build as definitions
 https://lists.ubuntu.com/archives/kubuntu-devel/2015-August/009819.html
 
 https://bugzilla.gnome.org/show_bug.cgi?id=751382
+---
+ CMakeLists.txt                    | 1 +
+ cmake/modules/FindGStreamer.cmake | 1 +
+ 2 files changed, 2 insertions(+)
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
 index 4d3e7dd..5744015 100644
@@ -35,6 +39,5 @@ index dab91ac..fe6cde1 100644
  
  find_library(GSTREAMER_LIBRARY
 -- 
-cgit v0.10.2
-
+cgit v1.2.1
 
