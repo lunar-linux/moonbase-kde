@@ -1,0 +1,14 @@
+Patch according to suggestion in
+https://bugreports.qt.io/browse/QTBUG-84037
+
+--- qtquick3d/src/plugins/assetimporters/assimp/assimp.pro.old	2021-01-04 19:36:17.632708571 +0100
++++ qtquick3d/src/plugins/assetimporters/assimp/assimp.pro	2021-01-04 19:35:56.272414538 +0100
+@@ -10,7 +10,7 @@
+ include($$OUT_PWD/../qtassetimporters-config.pri)
+ 
+ qtConfig(system-assimp):!if(cross_compile:host_build) {
+-    QMAKE_USE_PRIVATE += assimp
++    QMAKE_USE_PRIVATE += quick3d-assimp
+ } else {
+     include(../../../3rdparty/assimp/assimp.pri)
+ }
