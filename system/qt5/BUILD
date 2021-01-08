@@ -24,6 +24,7 @@ fi &&
 # See https://bugreports.qt.io/browse/QTBUG-33948.
 OPTS+=" -gui \
         -gtk \
+        -xcb \
         -strip \
         -release \
         -no-rpath \
