@@ -1,11 +1,11 @@
           MODULE=kio-fuse
-         VERSION=4.95.0
+         VERSION=5.0.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/unstable/$MODULE/$VERSION/
-      SOURCE_VFY=sha256:d1168898a296c835c010bcbe48fbde0b90ba631baed8da7eb3ef228856fc41ed
+      SOURCE_URL=$KDE_URL/stable/$MODULE/$VERSION/
+      SOURCE_VFY=sha256:308ec02dce2fe9004ada9fdc13f49d243bdab98a24e997f2aae818bb27f08721
         WEB_SITE=https://techbase.kde.org/Projects/KioFuse
          ENTERED=20200131
-         UPDATED=20200719
+         UPDATED=20210201
            SHORT="fuse interface for kio"
 
 cat << EOF
