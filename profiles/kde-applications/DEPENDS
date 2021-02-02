@@ -1,5 +1,6 @@
 # Do not use kcalcore or add it to moonbase. As of this time all apps needing such things are provided
 # by kcalendarcore located in frameworks.
+depends libkleo
 depends kde-dev-scripts
 depends analitza
 depends kdeedu-data
@@ -55,8 +56,7 @@ depends kig
 depends kqtquickcharts
 depends kleopatra
 depends kpimtextedit
-depends libkleo
-depends akondi-contacts
+depends akonadi-contacts
 depends kdenetwork-filesharing
 depends zeroconf-ioslave
 depends dolphin
