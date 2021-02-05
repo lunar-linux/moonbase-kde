@@ -1,5 +1,8 @@
 # The only DEPENDS that belong in here are those framework modules from pub/software/kde/stable/frameworks/
-depends extra-cmake-modules
+depends extra
+depends sonnet-cmake-modules
+depends solid
+depends breeze-icons
 depends kcalendarcore
 depends kquickcharts
 depends kirigami2
@@ -24,16 +27,13 @@ depends kitemmodels
 depends kapidox
 depends threadweaver
 depends oxygen-icons5
-depends breeze-icons
 depends kplotting
 depends kdbusaddons
 depends kitemviews
-depends sonnet
 depends kwidgetsaddons
 depends kjobwidgets
 depends bluez-qt
 depends kauth
-depends solid
 depends kwindowsystem
 depends kcrash
 depends kdoctools 
