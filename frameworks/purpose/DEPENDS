@@ -18,5 +18,5 @@ depends kconfigwidgets
 depends kxmlgui
 depends kio
 
-optional_depends "heimdal" "" "" "For use of certain HTTP authentication services"
+optional_depends "%KERBEROS" "" "" "For use of certain HTTP authentication services"
 optional_depends "acl"     "" "" "For manipulating access control lists"
