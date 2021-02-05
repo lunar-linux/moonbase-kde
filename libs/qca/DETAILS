@@ -1,13 +1,15 @@
-          MODULE=qca2
+          MODULE=qca
          VERSION=2.3.2
           SOURCE=qca-$VERSION.tar.xz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qca-$VERSION
       SOURCE_URL=$KDE_URL/stable/qca/$VERSION
       SOURCE_VFY=sha256:4697600237c4bc3a979e87d2cc80624f27b06280e635f5d90ec7dd4d2a9f606d
         WEB_SITE=https://userbase.kde.org/QCA
+        PROVIDES=qca2
          ENTERED=20071106
          UPDATED=20210205
            SHORT="cross-platform crypto API"
+
 cat << EOF
 QCA aims to provide a straightforward and cross-platform crypto API
 EOF
