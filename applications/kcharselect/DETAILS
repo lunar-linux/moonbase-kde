@@ -1,12 +1,12 @@
           MODULE=kcharselect
-         VERSION=20.12.1
+         VERSION=20.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:abddc0d56b8d5b3e181a15a3f7b74a3711882c5b4732d6e04df3bd0f2eff45eb
+      SOURCE_VFY=sha256:e3523e8076a06967f95b00330ad4a5ed9bdaa986677642824a895094f8320e3b
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://utils.kde.org/projects/kcharselect/
          ENTERED=20120125
-         UPDATED=20210201
+         UPDATED=20210206
            SHORT="Select special characters from all installed fonts into the clipboard"
 
 cat << EOF

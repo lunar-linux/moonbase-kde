@@ -1,12 +1,12 @@
           MODULE=kde-dev-utils
-         VERSION=20.12.1
+         VERSION=20.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-#      SOURCE_VFY=sha256:99701d7a243f03f7edda5ec49be836d8c14355604523a26c7b9cf2825d3439ae
+#      SOURCE_VFY=sha256:f90843bc53c84172cc3ea13f081abbc8e2e0fd0ef8c405f01bd6fa073db9b780
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/kdesdk/kde-dev-utils
          ENTERED=20130418
-         UPDATED=20210201
+         UPDATED=20210206
            SHORT="Small utilities for developers using KDE/Qt libs/frameworks"
 
 cat << EOF
