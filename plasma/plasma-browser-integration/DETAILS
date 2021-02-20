@@ -1,12 +1,12 @@
           MODULE=plasma-browser-integration
-         VERSION=5.20.5
+         VERSION=5.21.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
-      SOURCE_VFY=sha256:c2a665733e09887782ab4235e9e6b3aab2418f3666fd687ab6431546dbafff0f
+      SOURCE_VFY=sha256:f328b87f3b6aafbea9645146f6552f758da44aff837abe910525d40537201d0d
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://github.com/KDE/plasma-browser-integration
          ENTERED=20180905
-         UPDATED=20210205
+         UPDATED=20210220
            SHORT="integrate browsers into the Plasma Desktop"
 
 cat << EOF

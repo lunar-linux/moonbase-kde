@@ -1,12 +1,12 @@
           MODULE=kwin
-         VERSION=5.20.5
+         VERSION=5.21.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
-      SOURCE_VFY=sha256:ec142543935a1c9fe9b8e7e73db1bdf58669990d7c1611424062bbdd9e21384e
+      SOURCE_VFY=sha256:dcf0e4c152707f9134e2165279ae6acdf6e3f7522812f44afb9aa4779899e5a1
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/kwin
          ENTERED=20150504
-         UPDATED=20210205
+         UPDATED=20210220
            SHORT="KDE Window manager"
 
 cat << EOF

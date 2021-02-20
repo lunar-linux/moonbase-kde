@@ -1,12 +1,12 @@
           MODULE=ksysguard
-         VERSION=5.20.5
+         VERSION=5.21.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
-      SOURCE_VFY=sha256:32f5227b2c1f91cd64fcee6b401209582cfffb16e2b015c6d6513e9f4d1dab35
+      SOURCE_VFY=sha256:3ca64a4863fd338a59e1514e68a9508797981240aa56bc92f3482a2a125a26fc
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
          ENTERED=20151123
-         UPDATED=20210205
+         UPDATED=20210220
            SHORT="Track and control the processes running in your system"
 
 cat << EOF
