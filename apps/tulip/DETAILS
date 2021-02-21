@@ -1,12 +1,12 @@
           MODULE=tulip
-         VERSION=5.5.0
+         VERSION=5.5.1
           SOURCE=$MODULE-${VERSION}_src.tar.gz
       SOURCE_URL=$SFORGE_URL/auber/tulip/tulip-${VERSION%_*}/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-${VERSION}
-      SOURCE_VFY=sha256:a6de8f42a4a5012a31b19965af43240f58da688b8d64b5194604d749f7832f69
+      SOURCE_VFY=sha256:afd4b2052a9d33198d8e4a0a717474511b1f06e26b9a3eac2ac8c8f12af0b4c3
         WEB_SITE=http://tulip.labri.fr/TulipDrupal/
          ENTERED=20100507
-         UPDATED=20201211
+         UPDATED=20210221
            SHORT="Graph visualization software"
 
 cat << EOF
