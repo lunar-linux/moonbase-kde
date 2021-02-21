@@ -1,17 +1,10 @@
 . /etc/profile.d/qt5.rc &&
 
-_py_ver=`module_version python`
-
-OPTS+=" --no-timestamp \
-        --no-dist-info \
-        --assume-shared \
-        --confirm-license \
+OPTS+=" --confirm-license \
         --qmake=/usr/lib/qt5/bin/qmake \
-        --sip-incdir=/usr/include/python${_py_ver%.*}"
+        --api-dir /usr/share/sip/PyQt5/Qsci/ " &&
 
-if module_installed qscintilla-qt5; then
-  OPTS+=" --qsci-api"
-fi
+sip-build $OPTS &&
 
-python configure.py -w $OPTS &&
+cd build &&
 default_make
