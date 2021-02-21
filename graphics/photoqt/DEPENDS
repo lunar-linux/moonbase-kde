@@ -1,3 +1,4 @@
+depends pugixml
 depends extra-cmake-modules
 depends qt5
 depends exiv2
@@ -6,3 +7,6 @@ depends LibRaw
 depends hicolor-icon-theme
 depends poppler
 depends libarchive
+
+optional_depends FreeImage      "-DFREEIMAGE=ON"      "-DFREEIMAGE=OFF"      "for additional image support"
+optional_depends GraphicsMagick "-DGRAPHICSMAGICK=ON" "-DGRAPHICSMAGICK=OFF" "for additional graphics support"
