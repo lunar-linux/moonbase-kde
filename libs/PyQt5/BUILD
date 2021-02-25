@@ -1,8 +1,8 @@
 . /etc/profile.d/qt5.rc &&
 
 OPTS+=" --confirm-license \
-        --qmake=/usr/lib/qt5/bin/qmake \
-        --api-dir /usr/share/sip/PyQt5/Qsci/ " &&
+        --no-make \
+        --api-dir /usr/share/qt/qsci/api/python"
 
 sip-build $OPTS &&
 
