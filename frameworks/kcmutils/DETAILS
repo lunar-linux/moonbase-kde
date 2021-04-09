@@ -1,12 +1,12 @@
           MODULE=kcmutils
-         VERSION=5.79.0
+         VERSION=5.80.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:73d286b84ad32e3fa350b667993a6db731ee4c7e878d0a0cf9f5c81933423ef3
+      SOURCE_VFY=sha256:8c93b1a865bcfe0aa85b8ac59b7b0f214aa5fdc5767ee51657657360a8739e59
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kcmutils
          ENTERED=20150205
-         UPDATED=20210220
+         UPDATED=20210409
            SHORT="various classes to work with KCModules"
 
 cat << EOF
