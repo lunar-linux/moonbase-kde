@@ -1,12 +1,12 @@
           MODULE=mailcommon
-         VERSION=20.12.2
+         VERSION=20.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:651b66ca7e0bee98a300068bb3ca62edfa23b4cb535235603e97d1576ac96b61
+      SOURCE_VFY=sha256:9568a0de8ca61d0af950ba7c407d5fede2c89eb245976e2224c596e8cdbe177c
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20160505
-         UPDATED=20210206
+         UPDATED=20210409
            SHORT="Support for mail applications"
 
 cat << EOF

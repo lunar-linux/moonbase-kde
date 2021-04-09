@@ -1,12 +1,12 @@
           MODULE=ktnef
-         VERSION=20.12.2
+         VERSION=20.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:b8bf4d1bb1af6b55dc5ff31d60263bb7e8095e5f9710073253d5e1f7a9eaed90
+      SOURCE_VFY=sha256:78d7f3d512a1ab1d7ef4af81b47a865e933b2338004ddb174d35913f13887873
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/libktnef
          ENTERED=20151122
-         UPDATED=20210206
+         UPDATED=20210409
            SHORT="API for handling TNEF data"
 
 cat << EOF

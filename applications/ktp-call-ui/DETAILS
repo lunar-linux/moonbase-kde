@@ -1,12 +1,12 @@
           MODULE=ktp-call-ui
-         VERSION=20.12.2
+         VERSION=20.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:ca375a1d3cd5a698f787c7f6adb761675944adac569acd748468998c5f3a0e76
+      SOURCE_VFY=sha256:1427425e9ae7b8a0df658f5e3c8c58e349c73232189165d719eb0ffd0fa6321d
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://community.kde.org/Real-Time_Communication_and_Collaboration
          ENTERED=20160513
-         UPDATED=20210206
+         UPDATED=20210409
            SHORT="Voice/Video Call UI for Telepathy"
 
 cat << EOF
