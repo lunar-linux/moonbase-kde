@@ -1,12 +1,12 @@
           MODULE=qqc2-desktop-style
-         VERSION=5.80.0
+         VERSION=5.81.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:efb3ed865996100921b8dd7340d4f7dd1bc477381ce401cf36b8ed548d3dbe91
+      SOURCE_VFY=sha256:a5cb7fcc4fa7bc87a66a2ef3df7d67568faf685e21b01d7db3dc99e80d9384a9
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/qqc2-desktop-style
          ENTERED=20171130
-         UPDATED=20210409
+         UPDATED=20210411
            SHORT="a desktop style"
 
 cat << EOF
