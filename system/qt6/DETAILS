@@ -1,0 +1,22 @@
+          MODULE=qt6
+         VERSION=6.0.3
+          SOURCE=qt-everywhere-src-$VERSION.tar.xz
+      SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/$VERSION/single/
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/qt-everywhere-src-$VERSION
+      SOURCE_VFY=sha256:ca4a97439443dd0b476a47b284ba772c3b1b041a9eef733e26a789490993a0e3
+   MODULE_PREFIX=${QT6_PREFIX:-/usr}
+        WEB_SITE=http://qt-project.org
+         ENTERED=20210412
+         UPDATED=20210412
+           SHORT="A C++ toolkit for application development"
+
+cat << EOF
+Qt is a C++ toolkit for application development. It lets application developers
+target all major operating systems with a single application source code.
+Qt provides a platform-independent API to all central platform functionality:
+GUI, database access, networking, file handling, etc.
+The Qt library encapsulates the different APIs of different operating systems,
+providing the application programmer with a single, common API for all
+operating systems. The native C APIs are encapsulated in a set of well-designed,
+fully object-oriented C++ classes.
+EOF
