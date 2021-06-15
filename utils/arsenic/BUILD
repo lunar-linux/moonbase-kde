@@ -2,4 +2,4 @@
 
 qmake QMAKE_DEFAULT_INCDIRS="" ${MODULE}.pro &&
 
-default_cmake_build
+default_make
