@@ -1,12 +1,12 @@
           MODULE=breeze-grub
-         VERSION=5.22.0
+         VERSION=5.22.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
-      SOURCE_VFY=sha256:0210a278d402e12d3267a8e688dd70fce7aef3358eb6f3937de26aea8785edc3
+      SOURCE_VFY=sha256:8d9dd94e029fa1df8499ca31349faf3e1d78deaa5b42fbe341eab51843533ff4
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/breeze-grub
          ENTERED=20160505
-         UPDATED=20210614
+         UPDATED=20210616
            SHORT="Breeze theme for GRUB"
 
 cat << EOF
