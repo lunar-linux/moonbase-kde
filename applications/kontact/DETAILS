@@ -1,12 +1,11 @@
           MODULE=kontact
-         VERSION=20.12.3
+         VERSION=21.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:b4c56888239f525af814172e221ee6f2cdea17d2ddc20e28fa5443168451da6f
-   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+      SOURCE_VFY=sha256:c3b10078f2ea54b3368f8a55ddcefaef1c5f6785727dd626bff0af101bc52313
         WEB_SITE=https://userbase.kde.org/Kontact
          ENTERED=20171205
-         UPDATED=20210409
+         UPDATED=20210614
            SHORT="Personal information manager"
 
 cat << EOF
