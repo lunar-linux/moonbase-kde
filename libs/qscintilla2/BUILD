@@ -1,34 +1,27 @@
-source /etc/profile.d/qt5.rc &&
+. /etc/profile.d/qt5.rc &&
 
-export CXXFLAGS+=" -I../Qt4Qt5" &&
-export LDFLAGS+=" -L../Qt4Qt5" &&
-export QMAKEFEATURES+=" Qt4Qt5/features/" &&
+export QMAKEFEATURES+=" src/features/" &&
 
-pushd Qt4Qt5 > /dev/null &&
-  /usr/lib/qt5/bin/qmake qscintilla.pro &&
-  default_make
-popd > /dev/null &&
+cd src &&
+  export QMAKEFEATURES &&
+  /usr/lib/qt5/bin/qmake &&
+  make &&
 
-pushd designer-Qt4Qt5 > /dev/null &&
-  /usr/lib/qt5/bin/qmake designer.pro INCLUDEPATH+=../Qt4Qt5 QMAKE_LIBDIR+=../Qt4Qt5 &&
-  default_make
-popd > /dev/null &&
+cd ../designer &&
+  /usr/lib/qt5/bin/qmake INCLUDEPATH+=../src QMAKE_LIBDIR+=../src &&
+  make &&
 
-# install the Python3 bindings
-pushd Python > /dev/null &&
-  python3 configure.py --pyqt=PyQt5 -n ../Qt4Qt5/ -o ../Qt4Qt5/ -c --qmake /usr/lib/qt5/bin/qmake &&
-  default_make &&
-  install sip/*.sip /usr/share/sip/PyQt5/Qsci
-popd > /dev/null &&
+cd ../Python
+  cp pyproject-qt5.toml pyproject.toml &&
+  sip-build \
+    --no-make \
+    --qsci-features-dir ../src/features \
+    --qsci-include-dir ../src \
+    --qsci-library-dir ../src \
+    --api-dir /usr/share/qt/qsci/api/python &&
+  cd build &&
+  make
 
-# install the Python2 bindings
-if module_installed python2; then
-  pushd Python > /dev/null &&
-    rm -rf ../qscsi &&
-    python2 configure.py --pyqt=PyQt5 -n ../Qt4Qt5/ -o ../Qt4Qt5/ -c --qmake /usr/lib/qt5/bin/qmake &&
-    default_make
-  popd > /dev/null
-fi &&
+cd ../src &&
 
-# Some programs may look for this
-ln -sfv /usr/lib/qt5/libqscintilla2_qt5.so /usr/lib/qt5/libqt5scintilla2.so
+default_make

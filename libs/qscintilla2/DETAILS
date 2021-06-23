@@ -1,13 +1,13 @@
           MODULE=qscintilla2
-         VERSION=2.11.6
-          SOURCE=QScintilla-$VERSION.tar.gz
+         VERSION=2.12.1
+          SOURCE=QScintilla_src-$VERSION.tar.gz
       SOURCE_URL=https://www.riverbankcomputing.com/static/Downloads/QScintilla/$VERSION/
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/QScintilla-$VERSION
-      SOURCE_VFY=sha256:e7346057db47d2fb384467fafccfcb13aa0741373c5d593bc72b55b2f0dd20a7
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/QScintilla_src-$VERSION
+      SOURCE_VFY=sha256:a7331c44b5d7320cbf58cb2382c38857e9e9f4fa52c405bd7776c8b6649836c2
    MODULE_PREFIX=${QTDIR:-/usr}
         WEB_SITE=http://www.riverbankcomputing.co.uk/software/qscintilla/intro
          ENTERED=20070528
-         UPDATED=20210310
+         UPDATED=20210614
            SHORT="Port to Qt of Scintilla C++ editor class"
 
 cat << EOF
