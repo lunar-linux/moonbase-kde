@@ -1,7 +1,0 @@
-if ! in_depends mlt frei0r-plugins; then
-  message "${PROBLEM_COLOR}Please rebuild mlt with support for frei0r-plugins.${DEFAULT_COLOR}" &&
-  message "${PROBLEM_COLOR}This is required for most video editing operations.${DEFAULT_COLOR}" &&
-  false
-fi &&
-
-default_pre_build
