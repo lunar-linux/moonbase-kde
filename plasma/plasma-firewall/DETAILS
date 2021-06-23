@@ -1,0 +1,13 @@
+          MODULE=plasma-firewall
+         VERSION=5.22.2
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
+      SOURCE_VFY=sha256:734ea912dc45d370eb9a9acf811ff05abcc993f525cc194546e948a88911bfe9
+        WEB_SITE=https://kde.org/plasma-desktop/
+         ENTERED=20210622
+         UPDATED=20210622
+           SHORT="Control panel for your systems firewall"
+
+cat << EOF
+Control panel for your systems firewall.
+EOF
