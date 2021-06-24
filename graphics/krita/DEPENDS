@@ -4,9 +4,10 @@ depends curl
 depends exiv2
 depends fftw
 depends gsl
-depends OpenColorIO
+depends OpenColorIO1
 depends kio
 depends openexr
+depends imath
 depends poppler
 depends eigen3
 depends Vc
@@ -14,3 +15,4 @@ depends extra-cmake-modules
 depends kitemmodels
 
 optional_depends libheif "" "" "for ISO/IEC 23008-12:2017 HEIF file format decoder and encoder support"
+optional_depends kseexpr "" "" "for expression evaluation support"

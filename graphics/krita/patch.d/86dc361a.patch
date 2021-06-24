@@ -1,0 +1,87 @@
+From 86dc361a287170682fc4913f9a3efe3777cfcfce Mon Sep 17 00:00:00 2001
+From: Antonio Rojas <arojas@archlinux.org>
+Date: Thu, 3 Jun 2021 12:40:09 +0200
+Subject: [PATCH] Fix OpenColorIO include dir detection
+
+This has been broken forever. There was a missing PATHS keyword so the output was a random, meaningless dir.
+Compilation worked anyway because the includes were hardcoded to the default OCIO header install dir.
+But as soon as OCIO is installed to a non-default path, it breaks down.
+---
+ cmake/modules/FindOCIO.cmake              | 1 +
+ libs/ui/canvas/kis_image_pyramid.cpp      | 4 ++--
+ plugins/dockers/lut/lutdocker.cpp         | 2 +-
+ plugins/dockers/lut/lutdocker_dock.h      | 2 +-
+ plugins/dockers/lut/ocio_display_filter.h | 4 ++--
+ 5 files changed, 7 insertions(+), 6 deletions(-)
+
+diff --git a/cmake/modules/FindOCIO.cmake b/cmake/modules/FindOCIO.cmake
+index 0ea7e1cefc..89b404088c 100644
+--- a/cmake/modules/FindOCIO.cmake
++++ b/cmake/modules/FindOCIO.cmake
+@@ -27,6 +27,7 @@ if(OCIO_LIBRARY_PATH)
+ endif()
+ 
+ find_path(OCIO_INCLUDE_DIR OpenColorIO.h
++        PATHS
+         ${OCIO_INCLUDE_PATH}
+         ${OCIO_PATH}/include/
+         /usr/include
+diff --git a/libs/ui/canvas/kis_image_pyramid.cpp b/libs/ui/canvas/kis_image_pyramid.cpp
+index 9947c0d546..29556b0315 100644
+--- a/libs/ui/canvas/kis_image_pyramid.cpp
++++ b/libs/ui/canvas/kis_image_pyramid.cpp
+@@ -25,8 +25,8 @@
+ 
+ #include <config-ocio.h>
+ #ifdef HAVE_OCIO
+-#include <OpenColorIO/OpenColorIO.h>
+-#include <OpenColorIO/OpenColorTransforms.h>
++#include <OpenColorIO.h>
++#include <OpenColorTransforms.h>
+ #endif
+ 
+ #define ORIGINAL_INDEX           0
+diff --git a/plugins/dockers/lut/lutdocker.cpp b/plugins/dockers/lut/lutdocker.cpp
+index 2845daebef..89e58127cd 100644
+--- a/plugins/dockers/lut/lutdocker.cpp
++++ b/plugins/dockers/lut/lutdocker.cpp
+@@ -25,7 +25,7 @@
+ #include "lutdocker_dock.h"
+ #include <KoDockRegistry.h>
+ 
+-#include <OpenColorIO/OpenColorIO.h>
++#include <OpenColorIO.h>
+ namespace OCIO = OCIO_NAMESPACE;
+ 
+ 
+diff --git a/plugins/dockers/lut/lutdocker_dock.h b/plugins/dockers/lut/lutdocker_dock.h
+index 63c89dce92..937729d5d6 100644
+--- a/plugins/dockers/lut/lutdocker_dock.h
++++ b/plugins/dockers/lut/lutdocker_dock.h
+@@ -20,7 +20,7 @@
+ 
+ #include "ui_wdglut.h"
+ 
+-#include <OpenColorIO/OpenColorIO.h>
++#include <OpenColorIO.h>
+ #include "kis_signal_compressor_with_param.h"
+ 
+ 
+diff --git a/plugins/dockers/lut/ocio_display_filter.h b/plugins/dockers/lut/ocio_display_filter.h
+index 85f7f078c5..49dae280ab 100644
+--- a/plugins/dockers/lut/ocio_display_filter.h
++++ b/plugins/dockers/lut/ocio_display_filter.h
+@@ -7,8 +7,8 @@
+ #define OCIO_DISPLAY_FILTER_H
+ 
+ #include <kis_display_filter.h>
+-#include <OpenColorIO/OpenColorIO.h>
+-#include <OpenColorIO/OpenColorTransforms.h>
++#include <OpenColorIO.h>
++#include <OpenColorTransforms.h>
+ #include <QVector>
+ #include "kis_exposure_gamma_correction_interface.h"
+ 
+-- 
+GitLab
+
