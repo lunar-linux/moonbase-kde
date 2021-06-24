@@ -1,0 +1,13 @@
+          MODULE=kseexpr
+         VERSION=4.0.2.0
+          SOURCE=$MODULE-$VERSION.tar.gz
+      SOURCE_URL=$KDE_URL/stable/kseexpr/${VERSION%.*}/
+      SOURCE_VFY=sha256:6a9857522883691a4184e7567645e7103a662d27f0452b7602b78c6f8b8bc1c2
+        WEB_SITE=https://krita.org
+         ENTERED=20210624
+         UPDATED=20210624
+           SHORT="embeddable expression evaluation engine"
+
+cat << EOF
+An embeddable expression evaluation engine (Krita fork).
+EOF
