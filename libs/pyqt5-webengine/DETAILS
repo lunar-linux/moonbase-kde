@@ -1,0 +1,14 @@
+          MODULE=pyqt5-webengine
+         VERSION=5.15.4
+          SOURCE=PyQtWebEngine-$VERSION.tar.gz
+      SOURCE_URL=https://pypi.python.org/packages/source/P/PyQtWebEngine/
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/PyQtWebEngine-$VERSION
+      SOURCE_VFY=sha256:cedc28f54165f4b8067652145aec7f732a17eadf6736835852868cf76119cc19
+        WEB_SITE=https://www.riverbankcomputing.com/software/pyqtwebengine/intro
+         ENTERED=20210627
+         UPDATED=20210627
+           SHORT="Python bindings for the Qt WebEngine libraries"
+
+cat << EOF
+Python bindings for The Qt Company's Qt WebEngine libraries.
+EOF
