@@ -1,12 +1,12 @@
           MODULE=plasma-disks
-         VERSION=5.22.2
+         VERSION=5.22.2.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
-      SOURCE_VFY=sha256:f3b9139186ef3ee66ecd00730f84af2b9095e7d27b43e282354820fd13d048ac
+      SOURCE_VFY=sha256:a0b5be8bd2631e4a28091d57119d6261979e362fabdf97af5385126d6253bc44
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://invent.kde.org/plasma/plasma-disks
          ENTERED=20151123
-         UPDATED=20210622
+         UPDATED=20210628
            SHORT="Monitors S.M.A.R.T. capable devices for imminent failure"
 
 cat << EOF
