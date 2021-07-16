@@ -1,12 +1,12 @@
           MODULE=plasma-workspace-wallpapers
-         VERSION=5.22.2.1
+         VERSION=5.22.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
-      SOURCE_VFY=sha256:9565979e572c802f3ef78554f992c09667fd9e7dc9be270fc853e8b360070496
+      SOURCE_VFY=sha256:e3e2ee7bc6cf46c8976644c15a7fc5bb96354c07840fca8a2da3fc9ddd375e75
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
          ENTERED=20151123
-         UPDATED=20210628
+         UPDATED=20210716
            SHORT="wallpapers for the plasma workspace"
 
 cat << EOF
