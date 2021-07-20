@@ -1,0 +1,17 @@
+          MODULE=neochat
+         VERSION=1.2.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/neochat/$VERSION
+      SOURCE_VFY=sha256:8ee4b5f61db7d43c902115e0be01f2b587100183b382596473922e9a42749de6
+        WEB_SITE=https://apps.kde.org/neochat
+         ENTERED=20210720
+         UPDATED=20210720
+           SHORT="a Matrix client"
+
+cat << EOF
+NeoChat is a Matrix client. It allows you to send text messages, videos and audio files to your
+family, colleagues and friends using the Matrix protocol.
+
+Matrix is a decentralized communication protocol, putting the user back in control. Currently
+NeoChat implements large part of the protocol with the exception of encrypted chats and video chat.
+EOF
