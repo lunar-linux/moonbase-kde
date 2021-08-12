@@ -1,12 +1,12 @@
           MODULE=kfloppy
-         VERSION=21.04.3
+         VERSION=21.08.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:4a7fe1142f7991aaf42dacc964dd6bea0635705f79e4aad7a7b5d5a6c921a34d
+      SOURCE_VFY=sha256:83e3238dcb0e9db862829e0674ce0654296b8ca0e7a1e254fe9faafdecf56f0e
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://utils.kde.org/projects/kfloppy/
          ENTERED=20120125
-         UPDATED=20210716
+         UPDATED=20210812
            SHORT="A graphical means to access floppy devices"
 
 cat << EOF

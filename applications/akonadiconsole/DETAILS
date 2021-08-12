@@ -1,12 +1,12 @@
           MODULE=akonadiconsole
-         VERSION=21.04.3
+         VERSION=21.08.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:be013c419c023823258554559c23de3e287bd1e1dc180223839615c4ccfab010
+      SOURCE_VFY=sha256:0b86860fd8ff97c03b6cdf85a20f6b0504f31d3c479f200ec706c5b4b31c006b
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://techbase.kde.org/KDE_PIM/Akonadi/Development_Tools
          ENTERED=20171201
-         UPDATED=20210716
+         UPDATED=20210812
            SHORT="A tool for developers working with Akonadi"
 
 cat << EOF
