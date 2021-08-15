@@ -1,12 +1,12 @@
           MODULE=kio
-         VERSION=5.84.0
+         VERSION=5.85.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:96be2b732faf97a484edc5238049ad22f0f233b9e404468f4da40c5ec839e0d3
+      SOURCE_VFY=sha256:e4d58a7d2ae6530c4b676fe7f7e4583a86436c68861eb971bf91af9efead19f6
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kio
          ENTERED=20150205
-         UPDATED=20210716
+         UPDATED=20210815
            SHORT="network transparent access to files and data"
 
 cat << EOF
