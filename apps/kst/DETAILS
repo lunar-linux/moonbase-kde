@@ -1,12 +1,11 @@
           MODULE=kst
          VERSION=2.0.8
-          SOURCE=Kst-$VERSION.tar.gz
-         SOURCE2=Kst_gsl2.patch
- SOURCE_URL_FULL=https://github.com/Kst-plot/kst/archive/v${VERSION}.tar.gz
-      SOURCE_VFY=sha256:74bd55ba87d50346acc738ce9bfe8b93a0f5aad7026c23a41d6e4a30ee7ae46b
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=git+https://invent.kde.org/graphics/kst-plot.git
+#      SOURCE_VFY=sha256:
         WEB_SITE=http://kst-plot.kde.org/
          ENTERED=20101223
-         UPDATED=20150627
+         UPDATED=20210826
            SHORT="real-time large-dataset viewing and plotting tool"
 
 cat << EOF

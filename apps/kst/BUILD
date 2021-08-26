@@ -12,9 +12,10 @@
           -Dkst_rpath=0 \
           -Dkst_svnversion=0 \
           -Dkst_python=1 \
-          -DPYTHON_EXECUTABLE=/usr/bin/python2.7 \
-          -Dkst_python_prefix=/usr/lib/python2.7 \
+          -DPYTHON_EXECUTABLE=/usr/bin/python3 \
+          -Dkst_python_prefix=/usr/lib/python3 \
           -Dkst_install_libdir=lib \
-          -Dkst_install_prefix=/usr" &&
+          -Dkst_install_prefix=/usr \
+          -DCMAKE_CXX_FLAGS=-DH5_USE_110_API" &&
 
   default_cmake_build
