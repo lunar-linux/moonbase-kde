@@ -22,6 +22,6 @@ cd ../Python
   cd build &&
   make
 
-cd ../src &&
+cd ../../src &&
 
 default_make
