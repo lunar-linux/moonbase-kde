@@ -41,7 +41,7 @@ optional_depends postgresql "-plugin-sql-psql"   "-no-sql-psql"   "for postgresq
 optional_depends unixODBC   "-plugin-sql-odbc"   "-no-sql-odbc"   "for unixODBC support"
 optional_depends freetds    "-plugin-sql-tds"    "-no-sql-tds"    "for tabular data stream support"
 
-optional_depends %BLUEZ "" "" "for bluetooth support"
+optional_depends bluez-5 "" "" "for bluetooth support"
 
 optional_depends assimp "-system-assimp" "" "use system provided assimp, else use qt provided" "n"
 optional_depends gst-plugins-base "-gstreamer " "-no-gstreamer" "for QtWebKit HTML5 Video Support"
