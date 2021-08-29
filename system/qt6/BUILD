@@ -6,7 +6,7 @@ sedit 's:bin/ls:usr/bin/ls:g' qtbase/src/corelib/CMakeLists.txt qtbase/src/corel
 # No SSE2 for i686
 if [[ 'arch' == "i686" ]]; then
   SSE2="-DFEATURE_sse2=OFF"
-fi &&
+fi
 
 OPTS+=" -DFEATURE_gui=ON \
         -DCMAKE_VERBOSE_MAKEFILE=ON \
@@ -25,7 +25,7 @@ OPTS+=" -DFEATURE_gui=ON \
         -DINSTALL_PLUGINSDIR=${MODULE_PREFIX}/lib/$MODULE/plugins \
         -DINSTALL_MKSPECSDIR=${MODULE_PREFIX}/lib/$MODULE/mkspecs \
         -DINSTALL_EXAMPLESDIR=${MODULE_PREFIX}/share/doc/$MODULE/examples \
-        $SSE2" &&
+        $SSE2"
 
 # Early part of configure barks about using GNUMakefiles, not recommended and to use ninja
 cmake $OPTS -G Ninja -B build &&
