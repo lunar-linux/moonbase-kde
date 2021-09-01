@@ -5,9 +5,6 @@
 
   default_build &&
 
-# Put the executable here
-  mv /usr/share/bin/vym /usr/bin/ &&
-
 cat > ${MODULE}.desktop << EOF &&
 [Desktop Entry]
 Type=Application
