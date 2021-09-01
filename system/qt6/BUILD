@@ -5,7 +5,7 @@ cmake -G Ninja -B . \
         -DINSTALL_BINDIR=lib/qt6/bin \
         -DINSTALL_LIBEXECDIR=/usr/lib/qt6 \
         -DINSTALL_DOCDIR=share/doc/qt6 \
-        -DINSTALL_ARCHDATADIR=lib/qt6 \
+        -DINSTALL_ARCHDATADIR=/usr/lib/qt6 \
         -DINSTALL_DATADIR=share/qt6 \
         -DINSTALL_INCLUDEDIR=include/qt6 \
         -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
