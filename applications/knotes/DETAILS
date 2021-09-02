@@ -1,12 +1,12 @@
           MODULE=knotes
-         VERSION=21.08.0
+         VERSION=21.08.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:8eb65df5c7b4a457c9bd3da36021feef38afad972253a9c08aca9828eade525c
+      SOURCE_VFY=sha256:fbed9c7a7170b53a4f77446adeb235c9cd73d2ce8cfe89ab385f7f01dc1965ab
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20171205
-         UPDATED=20210812
+         UPDATED=20210902
            SHORT="Popup notes"
 
 cat << EOF
