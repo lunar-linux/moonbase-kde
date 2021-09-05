@@ -13,7 +13,6 @@ OPTS+=" -DQSCINTILLA_INCLUDE_DIR=/usr/include/qt5/ \
         -DWITH_QSPATIALITE=ON \
         -DWITH_CUSTOM_WIDGETS=ON \
         -DWITH_APIDOC=OFF \
-        -DWITH_QUICK=ON \
         -DWITH_3D=ON"
 
 
