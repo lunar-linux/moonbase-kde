@@ -1,6 +1,7 @@
 . /etc/profile.d/qt5.rc &&
 
 if in_depends $MODULE qwtpolar; then
+  LDFLAGS+=" -Wl,-rpath,/usr/lib/qwt-6/" &&
   OPTS+=" -DQWT_INCLUDE_DIR=/usr/include/qwt \
           -DQWT_LIBRARY=/usr/lib/qwt-6/libqwt.so"
 fi &&
