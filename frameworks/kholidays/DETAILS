@@ -1,13 +1,13 @@
           MODULE=kholidays
-         VERSION=5.85.0
+         VERSION=5.86.0
           SOURCE=${MODULE%-*}-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/${VERSION%.*}/
-      SOURCE_VFY=sha256:227a81d439b1d794b4c02f87e4401b43b5da6169039ca3f67834dc2f35b23d5b
+      SOURCE_VFY=sha256:673d53f079c0338193f0467816650653c2394563548e96cc10d39afc15bd0bdb
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/system/kholidays
         REPLACES=kholidays-frameworks
          ENTERED=20180212
-         UPDATED=20210815
+         UPDATED=20210911
            SHORT="library for regional holiday information"
 
 cat << EOF
