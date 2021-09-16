@@ -17,6 +17,6 @@ install -D -m644 $MODULE.desktop /usr/share/applications/$MODULE.desktop &&
 
 # workaround for a runtime bug
 mv /usr/bin/qtcreator /usr/bin/qtcreator-bin &&
-echo "#!/bin/sh" > /usr/bin/qtcreator
-echo "QT_LOGGING_TO_CONSOLE=1 qtcreator-bin \$@" >> /usr/bin/qtcreator
+echo "#!/bin/sh" > /usr/bin/qtcreator &&
+echo "QT_LOGGING_TO_CONSOLE=1 qtcreator-bin \$@" >> /usr/bin/qtcreator &&
 chmod +x /usr/bin/qtcreator
