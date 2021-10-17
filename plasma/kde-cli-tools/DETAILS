@@ -1,12 +1,12 @@
           MODULE=kde-cli-tools
-         VERSION=5.22.5
+         VERSION=5.23.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
-      SOURCE_VFY=sha256:90cb373ea112b844541d9c52000635b02ccdf2fe2da0fc7901b1a5a8b8df45ca
+      SOURCE_VFY=sha256:ae72d6e44769c1ac48d1dc3b4f0345c16fdcd053f7a1a4820b08b1d367df8568
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
          ENTERED=20150527
-         UPDATED=20210831
+         UPDATED=20211017
            SHORT="Tools based on KDE Frameworks 5 to better interact with the system"
 
 cat << EOF
