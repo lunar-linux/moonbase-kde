@@ -1,12 +1,12 @@
           MODULE=kinit
-         VERSION=5.86.0
+         VERSION=5.87.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:270a391b20b7ca4b747115ee99f1a5508ecd02dfbc1efefe81e79cd03be2d568
+      SOURCE_VFY=sha256:ba07d4bd871d0ed0e758fb8d74f68e08e1a68aae71312c105e4fe908b7d76510
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kinit
          ENTERED=20150205
-         UPDATED=20210911
+         UPDATED=20211016
            SHORT="speed up start of applications on KDE workspaces"
 
 cat << EOF

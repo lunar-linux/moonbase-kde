@@ -1,12 +1,12 @@
           MODULE=kactivities-stats
-         VERSION=5.86.0
+         VERSION=5.87.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:3047fa192dd9af3cca372bb176e4ba00719ee2c373b3accb41bb5ab9fd91949b
+      SOURCE_VFY=sha256:0604179842ab3a44018335769bf6b8981c1d1d40a176ad6db694f1c7ddfaf2d8
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kactivities
          ENTERED=20160504
-         UPDATED=20210911
+         UPDATED=20211016
            SHORT="statictial package for kactivities"
 
 cat << EOF
