@@ -1,11 +1,11 @@
           MODULE=libktorrent
-         VERSION=21.08.1
-          SOURCE=$MODULE-$VERSION.tar.gz
- SOURCE_URL_FULL=https://github.com/KDE/libktorrent/archive/v$VERSION.tar.gz
-      SOURCE_VFY=sha256:4b4d9562ffc57ad13af54ecc61a9536ba942a8656001d292f4b886411aa68bdd
+         VERSION=21.08.2
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:7492cfa722a9e4f786dbcc1d7cc115e69711f5c10778be306003f87794053d9b
         WEB_SITE=https://www.kde.org/applications/internet/ktorrent/
          ENTERED=20100526
-         UPDATED=20210902
+         UPDATED=20211016
            SHORT="BitTorrent library"
 
 cat << EOF

@@ -1,12 +1,12 @@
           MODULE=kpimtextedit
-         VERSION=21.08.1
+         VERSION=21.08.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:253b9d0aaf0ad606ad37af3d7880a4285c9ab10332a2ef84982baafb80db4afd
+      SOURCE_VFY=sha256:f0b0c84c0154259f7eb099e69b645c3c53d8531314e44e8540b02a94d24b876c
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://techbase.kde.org/Getting_Started/Build/KDE4/Troubleshooting
          ENTERED=20151122
-         UPDATED=20210902
+         UPDATED=20211016
            SHORT="A textedit with PIM-specific features"
 
 cat << EOF
