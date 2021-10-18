@@ -1,12 +1,12 @@
           MODULE=kdsoap
-         VERSION=1.9.1
+         VERSION=2.0.0
           SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=https://github.com/KDAB/KDSoap/archive/
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/KDSoap-$MODULE-$VERSION
-      SOURCE_VFY=sha256:235b66369415bfaff8a8f1904f7a4d569c9d8e4dc2646d09dd06fad369174d8f
+      SOURCE_URL=https://github.com/KDAB/KDSoap/releases/download/$MODULE-$VERSION/
+#SOURCE_DIRECTORY=$BUILD_DIRECTORY/KDSoap-$MODULE-$VERSION
+      SOURCE_VFY=sha256:d18963104fa6f7d02b044631cddbe78f18f70e06c607af680c7ace04d6cf04ee
         WEB_SITE=https://github.com/KDAB/KDSoap
          ENTERED=20200425
-         UPDATED=20201212
+         UPDATED=20211018
            SHORT="Qt-based client-side and server-side SOAP component"
 
 cat << EOF
