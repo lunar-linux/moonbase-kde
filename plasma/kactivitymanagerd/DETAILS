@@ -1,12 +1,12 @@
           MODULE=kactivitymanagerd
-         VERSION=5.23.0
+         VERSION=5.23.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
-      SOURCE_VFY=sha256:912cd9eded892e44c782fb615491f41df886107b7b33583034d75ff997154aa2
+      SOURCE_VFY=sha256:b0897976f800398d1d30a741c05aae5b126b59b201528d674e33fda938af8bf8
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/kactivitymanagerd
          ENTERED=20160506
-         UPDATED=20211017
+         UPDATED=20211028
            SHORT="System service to manage user's activities and track the usage patterns"
 
 cat << EOF
