@@ -1,0 +1,13 @@
+          MODULE=qt6-location
+         VERSION=6.2.1
+          SOURCE=qtlocation-everywhere-src-$VERSION.tar.xz
+      SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtlocation-everywhere-src-$VERSION
+      SOURCE_VFY=sha256:a99e92c762d45b17e14685cd8a3c1564a3da0ce1cfd1a68ffd5b3fd7c409dcad
+        WEB_SITE=http://qt-project.org
+         ENTERED=20211101
+         UPDATED=20211101
+           SHORT="Provides access to position, satellite and area monitoring classes"
+cat << EOF
+Provides access to position, satellite and area monitoring classes.
+EOF
