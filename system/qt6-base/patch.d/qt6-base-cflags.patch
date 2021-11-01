@@ -1,7 +1,7 @@
-diff --git a/qtbase/mkspecs/common/g++-unix.conf b/qtbase/mkspecs/common/g++-unix.conf
+diff --git a/mkspecs/common/g++-unix.conf b/mkspecs/common/g++-unix.conf
 index a493cd5984..41342f5020 100644
---- a/qtbase/mkspecs/common/g++-unix.conf
-+++ b/qtbase/mkspecs/common/g++-unix.conf
+--- a/mkspecs/common/g++-unix.conf
++++ b/mkspecs/common/g++-unix.conf
 @@ -10,5 +10,6 @@
  
  include(g++-base.conf)
@@ -12,8 +12,8 @@ index a493cd5984..41342f5020 100644
  QMAKE_LFLAGS_NOUNDEF   += -Wl,--no-undefined
 diff --git a/mkspecs/common/gcc-base.conf b/mkspecs/common/gcc-base.conf
 index 1f919d270a..7ef6046326 100644
---- a/qtbase/mkspecs/common/gcc-base.conf
-+++ b/qtbase/mkspecs/common/gcc-base.conf
+--- a/mkspecs/common/gcc-base.conf
++++ b/mkspecs/common/gcc-base.conf
 @@ -40,9 +40,11 @@ QMAKE_CFLAGS_OPTIMIZE_SIZE = -Os
  QMAKE_CFLAGS_DEPS          += -M
  QMAKE_CFLAGS_WARN_ON       += -Wall -Wextra
