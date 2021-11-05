@@ -1,12 +1,12 @@
           MODULE=khelpcenter
-         VERSION=21.08.2
+         VERSION=21.08.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:56774ad5a77a9acae39b375e488d2853b0c4797c0fa1a5536dc67bc3ce0f7547
+      SOURCE_VFY=sha256:d7695b36f0403ff3880055f5cc79de3de9ffc65005b8693d1486e3ee8540c5de
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
          ENTERED=20151123
-         UPDATED=20211016
+         UPDATED=20211105
            SHORT="Application to show KDE documentation"
 
 cat << EOF
