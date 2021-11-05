@@ -30,9 +30,9 @@ cat > qt6.rc << EOF &&
   export PKG_CONFIG_PATH="\${Qt6_DIR}/lib/qt6/pkgconfig:\${PKG_CONFIG_PATH}"
   export PATH="\${Qt6_DIR}/lib/qt6/bin:\${PATH}"
   export CMAKE_PREFIX_PATH="\${Qt6_DIR}/lib/qt6/cmake:\${CMAKE_PREFIX_PATH}"
-  export RCC=${Qt6_DIR}/lib/qt6/bin/rcc
-  export MOC=${Qt6_DIR}/lib/qt6/bin/moc
-  export UIC=${Qt6_DIR}/lib/qt6/bin/uic
+  export RCC=${Qt6_DIR}/lib/qt6/rcc
+  export MOC=${Qt6_DIR}/lib/qt6/moc
+  export UIC=${Qt6_DIR}/lib/qt6/uic
 EOF
 
 install -m644 qt6.rc /etc/profile.d/qt6.rc
