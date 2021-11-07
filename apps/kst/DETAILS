@@ -1,8 +1,9 @@
           MODULE=kst
          VERSION=2.0.8
-          SOURCE=$MODULE-$VERSION.tar.gz
- SOURCE_URL_FULL=git+https://invent.kde.org/graphics/kst-plot.git
-#      SOURCE_VFY=sha256:
+          SOURCE=$MODULE-plot-v$VERSION.tar.bz2
+      SOURCE_URL=https://invent.kde.org/graphics/kst-plot/-/archive/v2.0.8/
+      SOURCE_VFY=sha256:78fc932ab9fb266e0bac71d7f0e18d8891c292d3b1bc6984a0eac5b6a2966a06
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/kst-plot-v$VERSION
         WEB_SITE=http://kst-plot.kde.org/
          ENTERED=20101223
          UPDATED=20210826
