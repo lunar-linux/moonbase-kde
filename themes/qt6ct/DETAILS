@@ -1,0 +1,14 @@
+          MODULE=qt6ct
+         VERSION=0.5
+          SOURCE=$MODULE-$VERSION.tar.gz
+      SOURCE_URL_FULL=https://github.com/trialuser02/qt6ct/archive/refs/tags/$VERSION.tar.gz
+      SOURCE_VFY=sha256:0fea8e5295e4ebebfae36f4862aaa67859238312d7a055b252cc53b281d69e0d
+        WEB_SITE=https://github.com/trialuser02/qt6ct
+         ENTERED=20211108
+         UPDATED=20211108
+           SHORT="Non-KF5 configuration utility for QT6 Apps"
+
+cat << EOF
+This program allows users to configure Qt6 settings (theme, font, icons, etc.)
+under DE/WM without Qt integration.
+EOF
