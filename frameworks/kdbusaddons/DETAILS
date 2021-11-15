@@ -1,12 +1,12 @@
           MODULE=kdbusaddons
-         VERSION=5.87.0
+         VERSION=5.88.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:d75ca847fef7f324f97e7b3cdb45f7fa3cc2c36bd44ca35062589534d5ceb593
+      SOURCE_VFY=sha256:5ada2a78a778f9356e259876b649d9799936a096d2d0056fccccb406a3e532de
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kdbusaddons
          ENTERED=20150205
-         UPDATED=20211016
+         UPDATED=20211115
            SHORT="convenience classes for DBus"
 
 cat << EOF
