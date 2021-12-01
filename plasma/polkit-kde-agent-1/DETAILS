@@ -1,12 +1,12 @@
           MODULE=polkit-kde-agent-1
-         VERSION=5.23.3
+         VERSION=5.23.4
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
-      SOURCE_VFY=sha256:79b8cc2f684ada6667085f604e642038191e9c01d2691e87c53de5227fc7bae4
+      SOURCE_VFY=sha256:10112e862879d5e9ea36931cc12ecf0daa4c5220c25d09e67d1b40c10efa121b
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/polkit-kde-agent-1
          ENTERED=20150504
-         UPDATED=20211110
+         UPDATED=20211130
            SHORT="KDE policy kit agent"
 
 cat << EOF
