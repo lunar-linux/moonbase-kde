@@ -1,0 +1,20 @@
+          MODULE=qt6-base
+         VERSION=6.2.1
+          SOURCE=qtbase-everywhere-src-$VERSION.tar.xz
+      SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtbase-everywhere-src-$VERSION
+      SOURCE_VFY=sha256:2c5f07b5c3ea27d3fc1a46686ea3fb6724f94dddf1fb007de3eb0bdb87429079
+        WEB_SITE=http://qt-project.org
+         ENTERED=20211101
+         UPDATED=20211101
+           SHORT="A C++ toolkit for application development"
+cat << EOF
+Qt is a C++ toolkit for application development. It lets application developers
+target all major operating systems with a single application source code.
+Qt provides a platform-independent API to all central platform functionality:
+GUI, database access, networking, file handling, etc.
+The Qt library encapsulates the different APIs of different operating systems,
+providing the application programmer with a single, common API for all
+operating systems. The native C APIs are encapsulated in a set of well-designed,
+fully object-oriented C++ classes.
+EOF
