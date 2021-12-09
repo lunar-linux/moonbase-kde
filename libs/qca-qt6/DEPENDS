@@ -1,0 +1,17 @@
+depends %SSL
+depends cyrus-sasl
+depends libgcrypt
+depends gnupg
+depends nss
+depends pkcs11-helper
+depends qt6-base
+
+optional_depends ca-certificates \
+   "" \
+   "" \
+   "Use system certificates" y
+
+optional_depends Botan  \
+   "" \
+   "" \
+   "For botan crypto cupport"
