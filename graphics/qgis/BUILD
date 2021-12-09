@@ -10,9 +10,11 @@ OPTS+=" -DQSCINTILLA_INCLUDE_DIR=/usr/include/qt5/ \
         -DQSCINTILLA_LIBRARY=/usr/lib/qt5/libqscintilla2_qt5.so \
         -DQCA_INCLUDE_DIR=/usr/include/qt5/Qca-qt5/QtCrypto \
         -DQCA_LIBRARY=/usr/lib/qt5/libqca-qt5.so \
+        -DWITH_GUI=OFF \
+        -DWITH_DESKTOP=OFF \
         -DENABLE_TESTS=OFF \
         -DWITH_QSPATIALITE=ON \
-        -DWITH_CUSTOM_WIDGETS=ON \
+        -DWITH_CUSTOM_WIDGETS=OFF \
         -DWITH_APIDOC=OFF \
         -DWITH_3D=ON"
 
