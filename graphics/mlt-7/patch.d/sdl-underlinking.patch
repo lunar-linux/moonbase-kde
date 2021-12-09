@@ -1,0 +1,26 @@
+From 17e34fd31b09da278965d058a60ead1b2aca9702 Mon Sep 17 00:00:00 2001
+From: Dan Dennedy <dan@dennedy.org>
+Date: Tue, 9 Nov 2021 11:53:48 -0800
+Subject: [PATCH] fix #748 sdl module under-linking
+
+---
+ src/modules/sdl/CMakeLists.txt | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/src/modules/sdl/CMakeLists.txt b/src/modules/sdl/CMakeLists.txt
+index cf8cee39b..613a0f107 100644
+--- a/src/modules/sdl/CMakeLists.txt
++++ b/src/modules/sdl/CMakeLists.txt
+@@ -10,6 +10,12 @@ target_compile_options(mltsdl PRIVATE ${MLT_COMPILE_OPTIONS})
+ 
+ target_link_libraries(mltsdl PRIVATE mlt m Threads::Threads PkgConfig::sdl)
+ 
++if(APPLE)
++  target_link_libraries(mltsdl PRIVATE objc "-framework Foundation")
++elseif(UNIX)
++  target_link_libraries(mltsdl PRIVATE X11)
++endif()
++
+ set_target_properties(mltsdl PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${MLT_MODULE_OUTPUT_DIRECTORY}")
+ 
+ install(TARGETS mltsdl LIBRARY DESTINATION ${MLT_INSTALL_MODULE_DIR})
