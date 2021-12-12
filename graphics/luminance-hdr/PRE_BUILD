@@ -1,4 +1,6 @@
 validate_source_dir $SOURCE_DIRECTORY &&
 mk_source_dir $SOURCE_DIRECTORY &&
 cd $SOURCE_DIRECTORY &&
-tar jxvf $SOURCE_CACHE/$SOURCE -C $SOURCE_DIRECTORY --strip-components=1
+tar jxvf $SOURCE_CACHE/$SOURCE -C $SOURCE_DIRECTORY --strip-components=1 &&
+
+sedit '24i #include <mutex>' src/Common/init_fftw.h
