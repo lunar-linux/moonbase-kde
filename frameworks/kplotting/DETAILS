@@ -1,12 +1,12 @@
           MODULE=kplotting
-         VERSION=5.88.0
+         VERSION=5.89.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:b7b5438bfcf113e13977861644e29871552ec337a100b99d9eba9e5cf6a42a41
+      SOURCE_VFY=sha256:da729d759f472753dcdc144696913f7c0b97a26697f25d684dcb0a2acbfe58ab
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kplotting
          ENTERED=20150205
-         UPDATED=20211115
+         UPDATED=20211213
            SHORT="data plotting"
 
 cat << EOF

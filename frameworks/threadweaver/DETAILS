@@ -1,12 +1,12 @@
           MODULE=threadweaver
-         VERSION=5.88.0
+         VERSION=5.89.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:b2f3079158a52c8e49ea0989e18a509dc9693f6a26f0739b133bee0f4b02df1f
+      SOURCE_VFY=sha256:dd809354b728415b26adf05a4ea6755a0aff7d86aebfeab2e663b91ed3a5d90f
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/threadweaver
          ENTERED=20150205
-         UPDATED=20211115
+         UPDATED=20211213
            SHORT="Helper for multithreaded programming"
 
 cat << EOF
