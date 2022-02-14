@@ -1,12 +1,12 @@
           MODULE=libkdegames
-         VERSION=21.12.0
+         VERSION=21.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:821b5e4fe68e8a3a5ab72caec240dd603baf100aae0e48658bba0aa6b5db9426
+      SOURCE_VFY=sha256:32a8b9fd7e1370fcd60d0963ca4fd20f46016f50688d9893d44ba0e552f938d4
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20130805
-         UPDATED=20211209
+         UPDATED=20220214
            SHORT="A collection of functions used by some games"
 
 cat << EOF

@@ -1,12 +1,12 @@
           MODULE=ktp-send-file
-         VERSION=21.12.0
+         VERSION=21.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:0d495612f17403d2597ae7c6492ba2d51686c1078a60a967a778c7cfde6263a8
+      SOURCE_VFY=sha256:84e42776c1ae7be09267d9d66a403a23b264a99cbfb55fbf0ef4c94155f90301
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/system/$MODULE
          ENTERED=2015124
-         UPDATED=20211209
+         UPDATED=20220214
            SHORT="File manager plugin to launch a file transfer job with a specified contact"
 
 cat << EOF
