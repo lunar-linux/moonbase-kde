@@ -1,12 +1,12 @@
           MODULE=extra-cmake-modules
-         VERSION=5.89.0
+         VERSION=5.91.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://download.kde.org/stable/frameworks/${VERSION%.*}
-      SOURCE_VFY=sha256:3dd7229a225923b8570a333ee6e4a07b0f5f700ea9538fdeb22cc3cbba69f02f
+      SOURCE_VFY=sha256:9717885e30aadf184fa71511930409cabbf08eb6627ea8b051de8804fbcec54c
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kdesupport/extra-cmake-modules
          ENTERED=20150205
-         UPDATED=20211213
+         UPDATED=20220213
            SHORT="adds to modules provided by CMake"
 
 cat << EOF
