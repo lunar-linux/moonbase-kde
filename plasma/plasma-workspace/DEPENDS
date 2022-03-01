@@ -47,7 +47,11 @@ depends baloo
 depends kwin
 depends prison
 depends ktexteditor
+depends kscreen
+depends networkmanager-qt
+depends libksysguard
+depends kuserfeedback
+depends libqalculate
 
 optional_depends gpsd "" "" "for geolocation support"
-#optional_depends networkmanager-qt "" "" "for newwork manager support"
 optional_depends kde-cli-tools "" "" "For better interaction with the system, ${PROBLEM_COLOR} say no on first install of plasma-workspace.${DEFAULT_COLOR}"
