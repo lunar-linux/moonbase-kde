@@ -1,5 +1,5 @@
 . /etc/profile.d/qt5.rc &&
 
-OPTS+=" -DFREEIMAGE=OFF -DDEVIL=OFF"
+OPTS+=" -DCHROMECAST=OFF -DDEVIL=OFF -DFREEIMAGE=OFF"
 
 default_cmake_build
