@@ -1,12 +1,12 @@
           MODULE=plasma-systemmonitor
-         VERSION=5.24.2
+         VERSION=5.24.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
-      SOURCE_VFY=sha256:16902047b659cbe7e3452e527699aa8891546323a54efc60d0fdcfac8fe0ccd4
+      SOURCE_VFY=sha256:904c0cbf56469b4b021559cc898aef57917cbe36526317c5bc7d34f255c0439d
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://github.com/KDE/plasma-systemmonitor
          ENTERED=20210220
-         UPDATED=20220301
+         UPDATED=20220308
            SHORT="plasma application for monitoring system resources"
 
 cat << EOF
