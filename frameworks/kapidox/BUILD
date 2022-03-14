@@ -1,4 +1,4 @@
 
-  source /etc/profile.d/qt5.rc &&
+. /etc/profile.d/qt5.rc &&
 
-  default_cmake_build
+default_python3_build

@@ -1,12 +1,12 @@
           MODULE=kdelibs4support
-         VERSION=5.91.0
+         VERSION=5.92.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)/portingAids
-      SOURCE_VFY=sha256:4f6448fc6d03801b8f0e440aecd12e299631ae375c5390b343719eb85374e38c
+      SOURCE_VFY=sha256:292e5e84ad8d7de90f0666b51f085a25b7a9faf521c58379d470d2994004ede0
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kdelibs4support
          ENTERED=20150205
-         UPDATED=20220213
+         UPDATED=20220313
            SHORT="code and utilities to ease the transition from kdelibs 4 to KDE Frameworks 5"
 
 cat << EOF

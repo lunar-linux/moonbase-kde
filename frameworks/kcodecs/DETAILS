@@ -1,12 +1,12 @@
           MODULE=kcodecs
-         VERSION=5.91.0
+         VERSION=5.92.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:3ec08377a1b2cbc30401ae9e43e1394c61635ab7537a37dc297cdc4deeda7c62
+      SOURCE_VFY=sha256:d6e5b7a453948d5fa0482715eaf4a0c9abe5b902a0aca15540a04b1a1b60d275
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kcodecs
          ENTERED=20150205
-         UPDATED=20220213
+         UPDATED=20220313
            SHORT="manipulate strings using various encodings"
 
 cat << EOF
