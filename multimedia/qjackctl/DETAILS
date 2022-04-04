@@ -1,14 +1,13 @@
           MODULE=qjackctl
-         VERSION=0.9.6
+         VERSION=0.9.7
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha256:39ca2b9d83acfdd16a4c9b3eccd80e1483e1f9a446626f5d00ac297e6f8a166b
+      SOURCE_VFY=sha256:524843618152070c90a40a18d0e9a16e784424ce54231aff5c0ced12f2769080
         WEB_SITE=https://qjackctl.sourceforge.io/
          ENTERED=20040111
-         UPDATED=20220117
+         UPDATED=20220404
            SHORT="A Qt application to control the JACK daemon"
 
-PSAFE=no
 cat << EOF
 Provides a simple GUI dialog for setting several JACK daemon parameters, which
 are properly saved between sessions, and a way control of the status of the
