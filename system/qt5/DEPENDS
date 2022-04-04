@@ -26,9 +26,9 @@ optional_depends dbus       "-dbus-linked"       "-no-dbus"       "for QtDBus mo
 optional_depends %OSSL      "-openssl-linked"    "-no-openssl"    "for Secure Sockets support" "y"
 optional_depends alsa-lib   "-alsa"              "-no-alsa"       "for alsa audio support" "y"
 optional_depends pulseaudio "-pulseaudio"        "-no-pulseaudio" "for pulseaudio support" "y"
-optional_depends cups       "-cups"              "-no-cups"       "for printing support, needed by kdelibs"
+optional_depends cups       "-cups"              "-no-cups"       "for printing support, needed by kdelibs" "y"
 optional_depends mtdev      "-mtdev"             "-no-mtdev"      "for Multitouch Protocol support" "n"
-optional_depends icu4c      "-icu"               "-no-icu"        "for International Components for Unicode support,${PROBLEM_COLOR} required for QtWebKit ${DEFAULT_COLOR}"
+optional_depends icu4c      "-icu"               "-no-icu"        "for International Components for Unicode support,${PROBLEM_COLOR} required for QtWebKit ${DEFAULT_COLOR}" "y"
 
 optional_depends sqlite \
                  "-system-sqlite -plugin-sql-sqlite" \
@@ -44,6 +44,6 @@ optional_depends freetds    "-plugin-sql-tds"    "-no-sql-tds"    "for tabular d
 optional_depends bluez-5 "" "" "for bluetooth support"
 
 optional_depends assimp "-system-assimp" "" "use system provided assimp, else use qt provided" "n"
-optional_depends gst-plugins-base "-gstreamer " "-no-gstreamer" "for QtWebKit HTML5 Video Support"
-optional_depends ca-certificates "" "" "for security certificate support"
-optional_depends lksctp-tools "-sctp" "" "for SCTP protocol support"
+optional_depends gst-plugins-base "-gstreamer " "-no-gstreamer" "for QtWebKit HTML5 Video Support" "y"
+optional_depends ca-certificates "" "" "for security certificate support" "y"
+optional_depends lksctp-tools "-sctp" "" "for SCTP protocol support" "y"
