@@ -1,0 +1,9 @@
+default_pre_build &&
+
+sed -i -e 's|use_jumbo_build=true|use_jumbo_build=false|' src/buildtools/config/common.pri &&
+
+sed -e '/link_pulseaudio/s/false/true/' -i src/3rdparty/chromium/media/media_options.gni &&
+
+sed -i 's/NINJAJOBS/NINJA_JOBS/' src/core/gn_run.pro &&
+
+find -type f -name "*.pr[io]" | xargs sed -i -e 's|INCLUDEPATH += |&$$QTWEBENGINE_ROOT/include |'

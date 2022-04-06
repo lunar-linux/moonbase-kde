@@ -1,5 +1,5 @@
           MODULE=qtwebengine
-         VERSION=(`lvu version qt5`)
+         VERSION=5.15.2
           SOURCE=qtwebengine-everywhere-src-${VERSION}.tar.xz
       SOURCE_URL=https://download.qt.io/archive/qt/${VERSION%.*}/$VERSION/submodules/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-everywhere-src-${VERSION}
