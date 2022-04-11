@@ -1,8 +1,9 @@
           MODULE=colord-kde
          VERSION=0.5.0
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$MODULE/$VERSION/src/
-      SOURCE_VFY=sha256:6c545009af737ad67900e4d8549086bc65b979c799b2402871bba44addb52d2f
+          SOURCE=COLORD_KDE_0_5_0.tar.gz
+      SOURCE_URL=https://github.com/KDE/colord-kde/archive/refs/tags/
+      SOURCE_VFY=sha256:621c261e7acbd5fe2b99be764c172b9fec98076ba83c18f95fc9f0be09d7a750
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-COLORD_KDE_0_5_0
         WEB_SITE=https://projects.kde.org/projects/playground/graphics/colord-kde
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
          ENTERED=20121016
