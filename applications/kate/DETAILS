@@ -1,12 +1,12 @@
           MODULE=kate
-         VERSION=21.12.3
+         VERSION=22.04.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:afa5141fb2746fc18ea2d97bd80ec37c096589822fe0b0e7ec00c63d0198e0de
+      SOURCE_VFY=sha256:ca90ad237113a846715ee6b6bfb6aff0d2f9031eed15df412632411ce93fc8cb
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/utilities/kate/
          ENTERED=20110813
-         UPDATED=20220303
+         UPDATED=20220421
            SHORT="KDE multi document multi view text editor"
 
 cat << EOF
