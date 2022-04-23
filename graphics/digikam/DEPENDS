@@ -22,6 +22,6 @@ optional_depends QtAV    "" "" "for supporting multimedia playback frameworks"
 optional_depends opencv  "" "" "for computer vision library support"
 
 optional_depends %MYSQL \
-                "-DENABLE_MYSQLSUPPORT=1 -DENABLE_INTERNALMYSQL=1" \
-                "-DENABLE_MYSQLSUPPORT=0 -DENABLE_INTERNALMYSQL=1" \
+                "-DENABLE_MYSQLSUPPORT=ON -DENABLE_INTERNALMYSQL=ON" \
+                "-DENABLE_MYSQLSUPPORT=OFF -DENABLE_INTERNALMYSQL=ON" \
                 "for %MYSQL database support, ${PROBLEM_COLOR}say NO to use digikam provided server${DEFAULT_COLOR}" n
