@@ -1,14 +1,15 @@
           MODULE=qsynth
-         VERSION=0.5.6
+         VERSION=0.9.7
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=$SFORGE_URL/$MODULE
-      SOURCE_VFY=sha256:a6eb404778fad87bb37fa1fb4caf1d80f24a324f9c3a22b669df2f8c94849040
-        WEB_SITE=http://qsynth.sourceforge.net/
+      SOURCE_VFY=sha256:0e0d78c26cdd924c774359f306692a9a59f107ebab8b41aa6803b15479207030
+        WEB_SITE=https://qsynth.sourceforge.net/
+            TYPE=cmake
          ENTERED=20060317
-         UPDATED=20190420
+         UPDATED=20220424
            SHORT="fluidsynth GUI front-end"
 
 cat << EOF
 QSynth is a fluidsynth GUI front-end application written in C++
-around the Qt3 toolkit using Qt Designer.
+around the Qt toolkit using Qt Designer.
 EOF
