@@ -1,12 +1,12 @@
           MODULE=milou
-         VERSION=5.24.4
+         VERSION=5.24.5
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
-      SOURCE_VFY=sha256:3109ad6c97415d74fccdfd26681360ff0925e58af7a1c72905437eb99faff37c
+      SOURCE_VFY=sha256:c1594e8b575d7de7b7cafe8a6f37dbe7c75d338075c6fa0fd8ec08d283ff05e6
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
          ENTERED=20151123
-         UPDATED=20220329
+         UPDATED=20220503
            SHORT="search application built on top of baloo"
 
 cat << EOF

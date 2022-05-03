@@ -1,12 +1,12 @@
           MODULE=systemsettings
-         VERSION=5.24.4
+         VERSION=5.24.5
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
-      SOURCE_VFY=sha256:69921f98956b3559f8c37821b67d32ac8d6aef254888c15df8f86f99903e1533
+      SOURCE_VFY=sha256:5b72b53f0bd8760b35844732a60f99713d45d0f80cecaca80de965e84effe9e5
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/systemsettings
          ENTERED=20150526
-         UPDATED=20220329
+         UPDATED=20220503
            SHORT="provides the system settings menu"
 
 cat << EOF
