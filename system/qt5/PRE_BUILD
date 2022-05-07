@@ -1,9 +1,19 @@
 default_pre_build &&
 
-# Try and use our flags everywhere
-sedit "s;^\(QMAKE_CFLAGS_RELEASE.*\);\1 ${CFLAGS};" qtbase/mkspecs/common/gcc-base.conf &&
-sedit "s;^\(QMAKE_LFLAGS_RELEASE.*\);\1 ${LDFLAGS};" qtbase/mkspecs/common/gcc-base.conf &&
-sedit "s:QMAKE_LFLAGS_RELEASE += -Wl,-O1:QMAKE_LFLAGS_RELEASE += \$\$LDFLAGS:" qtbase/mkspecs/common/g++-unix.conf &&
+# Try and use our flags everywhere.
+# In the Qt5 tarball, qtbase/src/corelib/Qt5CoreConfigExtras.cmake is this blurb;
+# "On x86 and x86-64 systems with ELF binaries (especially Linux), due to
+# a new optimization in GCC 5.x in combination with a recent version of
+# GNU binutils, compiling Qt applications with -fPIE is no longer
+# enough."
+# Just to be sure, do it.
+sedit 's;QMAKE_CFLAGS_RELEASE       += \$\$QMAKE_CFLAGS_OPTIMIZE;QMAKE_CFLAGS_RELEASE       += \$$CFLAGS -fPIC;' qtbase/mkspecs/common/gcc-base.conf &&
+sedit 's;QMAKE_LFLAGS_RELEASE   +=;QMAKE_LFLAGS_RELEASE   += \$$LDFLAGS;' qtbase/mkspecs/common/gcc-base.conf &&
+sedit 's:QMAKE_LFLAGS_RELEASE   += -Wl,-O1:QMAKE_LFLAGS_RELEASE   += \$$LDFLAGS:' qtbase/mkspecs/common/g++-unix.conf &&
+
+# Also change threads
+sedit 's:-lpthread:-pthread:' qtbase/mkspecs/common/linux.conf &&
+sedit 's:-lpthread:-pthread:g' qtbase/src/corelib/configure.json &&
 
 sedit "s:/bin/ls:/usr/bin/ls:" qtbase/src/corelib/global/global.pri &&
 
