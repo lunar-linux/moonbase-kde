@@ -1,12 +1,12 @@
           MODULE=kdesu
-         VERSION=5.93.0
+         VERSION=5.94.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:7f029d9a8959f0e2ca516ab3fb6b4ebd49ca0f0d19c72369451b6894d8138dbf
+      SOURCE_VFY=sha256:90494323ebab4c8cdd93c068c2c4fe3a8457513cee21d7887fc4473028a9dce1
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kdesu
          ENTERED=20150205
-         UPDATED=20220409
+         UPDATED=20220514
            SHORT="user interface for running shell commands with root privileges"
 
 cat << EOF

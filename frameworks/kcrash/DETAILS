@@ -1,12 +1,12 @@
           MODULE=kcrash
-         VERSION=5.93.0
+         VERSION=5.94.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:2ff8d6c6924b2b752ef4a929390606bb55ce2aa55c582927269bd65556992dd6
+      SOURCE_VFY=sha256:48c7792ca8c2ad6e9b6c8e9a260cdfcee5ed8d8769c4a8a199de7bf671f03cf5
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kcrash
          ENTERED=20150205
-         UPDATED=20220409
+         UPDATED=20220514
            SHORT="intercept and hand application crashes"
 
 cat << EOF

@@ -1,12 +1,12 @@
           MODULE=kitemmodels
-         VERSION=5.93.0
+         VERSION=5.94.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:5bb9918b92ac37f1bc52c5abe04e8dbea54f31fa0101edad6d9e92c3a9f0485b
+      SOURCE_VFY=sha256:705ff2b97502b2ba436f9371b559e47f2a7634bf5b06d26c8243387d6a084f89
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kitemmodels
          ENTERED=20150205
-         UPDATED=20220409
+         UPDATED=20220514
            SHORT="item models extending the Qt model-view framework"
 
 cat << EOF
