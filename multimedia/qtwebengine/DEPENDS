@@ -1,5 +1,8 @@
 depends libxslt
 depends opus
+# nodejs is required to build webenginecore, webengine and webenginewidgets
+depends node
+depends re2
 depends icu4c
 depends python2-jinja
 depends nss
@@ -15,3 +18,4 @@ optional_depends poppler   "" "" "for pdf rendering support"
 optional_depends jsoncpp   "" "" "for manipulating json support"
 optional_depends libsrtp   "" "" "for Secure Real-time Transport support"
 optional_depends snappy    "" "" "for compression decompression support"
+optional_depends minizip   "" "" "for lossless compression support"
