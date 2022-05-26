@@ -1,7 +1,7 @@
           MODULE=qtwebengine
          VERSION=5.15.4
           SOURCE=qtwebengine-everywhere-opensource-src-${VERSION}.tar.xz
-      SOURCE_URL=https://mirrors.dotsrc.org/qtproject/official_releases/qt/5.15/5.15.4/submodules/
+      SOURCE_URL=https://mirrors.dotsrc.org/qtproject/official_releases/qt/${VERSION%.*}/$VERSION/submodules/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-everywhere-src-${VERSION}
       SOURCE_VFY=sha256:8a2a903bcf2c45d8981f90fdfe96a9413d6fcfa0510e45c407a41a9b6bda0fca
         WEB_SITE=https://www.qt.io
