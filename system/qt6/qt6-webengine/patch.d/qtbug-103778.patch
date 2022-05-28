@@ -1,0 +1,2277 @@
+From 90f43fd25ec4de4d18da40c214ddb366da5c798a Mon Sep 17 00:00:00 2001
+From: Shawn Rutledge <shawn.rutledge@qt.io>
+Date: Sun, 24 Apr 2022 10:54:05 +0200
+Subject: Rename QPdfNavigationStack to QPdfPageNavigator; QML type too
+
+This might reduce some confusion about the fact that the back/forward
+"stack" isn't strictly a stack in the data structure sense: it's more
+like QUndoStack. It causes a QML source incompatibility relative to
+Qt 5, but keeps the C++ class name the same as it has been in QtPdf for
+a long time. Amends 3ad445f9f24a9d3f259ed1781460a63346a728e4
+
+[ChangeLog][QtPDF] The PdfNavigationStack QML type has been renamed to
+PdfPageNavigator, matching the C++ type QPdfPageNavigator. These
+remember navigation history within a document, and are helpful to
+implement back/forward buttons similar to those on a web browser
+in both Qt Quick and widget-based viewer applications.
+
+Change-Id: Id8dc17aa416bb7064b1f0f300a47c07c83b7f47e
+Reviewed-by: Richard Moe Gustavsen <richard.gustavsen@qt.io>
+---
+ .../pdfwidgets/pdfviewer/doc/src/pdfviewer.qdoc    |   2 +-
+ examples/pdfwidgets/pdfviewer/mainwindow.cpp       |  22 +-
+ src/pdf/CMakeLists.txt                             |   2 +-
+ src/pdf/doc/src/qtpdf-index.qdoc                   |   4 +-
+ src/pdf/qpdflink.h                                 |   2 +-
+ src/pdf/qpdfnavigationstack.cpp                    | 339 ---------------------
+ src/pdf/qpdfnavigationstack.h                      |  93 ------
+ src/pdf/qpdfpagenavigator.cpp                      | 339 +++++++++++++++++++++
+ src/pdf/qpdfpagenavigator.h                        |  93 ++++++
+ src/pdfquick/CMakeLists.txt                        |   2 +-
+ src/pdfquick/PdfMultiPageView.qml                  |  50 +--
+ src/pdfquick/PdfPageView.qml                       |  46 +--
+ src/pdfquick/PdfScrollablePageView.qml             |  58 ++--
+ src/pdfquick/qquickpdfnavigationstack.cpp          | 166 ----------
+ src/pdfquick/qquickpdfnavigationstack_p.h          |  83 -----
+ src/pdfquick/qquickpdfpagenavigator.cpp            | 166 ++++++++++
+ src/pdfquick/qquickpdfpagenavigator_p.h            |  83 +++++
+ src/pdfwidgets/qpdfview.cpp                        |  22 +-
+ src/pdfwidgets/qpdfview.h                          |   4 +-
+ src/pdfwidgets/qpdfview_p.h                        |   2 +-
+ tests/auto/pdf/CMakeLists.txt                      |   2 +-
+ 21 files changed, 790 insertions(+), 790 deletions(-)
+ delete mode 100644 src/pdf/qpdfnavigationstack.cpp
+ delete mode 100644 src/pdf/qpdfnavigationstack.h
+ create mode 100644 src/pdf/qpdfpagenavigator.cpp
+ create mode 100644 src/pdf/qpdfpagenavigator.h
+ delete mode 100644 src/pdfquick/qquickpdfnavigationstack.cpp
+ delete mode 100644 src/pdfquick/qquickpdfnavigationstack_p.h
+ create mode 100644 src/pdfquick/qquickpdfpagenavigator.cpp
+ create mode 100644 src/pdfquick/qquickpdfpagenavigator_p.h
+
+diff --git a/examples/pdfwidgets/pdfviewer/doc/src/pdfviewer.qdoc b/examples/pdfwidgets/pdfviewer/doc/src/pdfviewer.qdoc
+index a053f734c..f52e327a2 100644
+--- a/examples/pdfwidgets/pdfviewer/doc/src/pdfviewer.qdoc
++++ b/examples/pdfwidgets/pdfviewer/doc/src/pdfviewer.qdoc
+@@ -37,7 +37,7 @@
+     \endomit
+ 
+     \e {PDF Viewer} demonstrates how to use the QPdfView class to render
+-    PDF documents and the QPdfNavigationStack class to navigate them.
++    PDF documents and the QPdfPageNavigator class to navigate them.
+ 
+     Qt Creator and the integrated Qt Designer were used to create the example
+     UI and to connect it to the code. This affects the code, which might be
+diff --git a/examples/pdfwidgets/pdfviewer/mainwindow.cpp b/examples/pdfwidgets/pdfviewer/mainwindow.cpp
+index c6747f980..a6a533d51 100644
+--- a/examples/pdfwidgets/pdfviewer/mainwindow.cpp
++++ b/examples/pdfwidgets/pdfviewer/mainwindow.cpp
+@@ -58,7 +58,7 @@
+ #include <QSpinBox>
+ #include <QPdfBookmarkModel>
+ #include <QPdfDocument>
+-#include <QPdfNavigationStack>
++#include <QPdfPageNavigator>
+ #include <QtMath>
+ 
+ const qreal zoomMultiplier = qSqrt(2.0);
+@@ -79,10 +79,10 @@ MainWindow::MainWindow(QWidget *parent)
+ 
+     ui->mainToolBar->insertWidget(ui->actionForward, m_pageSelector);
+     connect(m_pageSelector, &QSpinBox::valueChanged, this, &MainWindow::pageSelected);
+-    auto nav = ui->pdfView->pageNavigation();
+-    connect(nav, &QPdfNavigationStack::currentPageChanged, m_pageSelector, &QSpinBox::setValue);
+-    connect(nav, &QPdfNavigationStack::backAvailableChanged, ui->actionBack, &QAction::setEnabled);
+-    connect(nav, &QPdfNavigationStack::forwardAvailableChanged, ui->actionForward, &QAction::setEnabled);
++    auto nav = ui->pdfView->pageNavigator();
++    connect(nav, &QPdfPageNavigator::currentPageChanged, m_pageSelector, &QSpinBox::setValue);
++    connect(nav, &QPdfPageNavigator::backAvailableChanged, ui->actionBack, &QAction::setEnabled);
++    connect(nav, &QPdfPageNavigator::forwardAvailableChanged, ui->actionForward, &QAction::setEnabled);
+ 
+     connect(m_zoomSelector, &ZoomSelector::zoomModeChanged, ui->pdfView, &QPdfView::setZoomMode);
+     connect(m_zoomSelector, &ZoomSelector::zoomFactorChanged, ui->pdfView, &QPdfView::setZoomFactor);
+@@ -129,12 +129,12 @@ void MainWindow::bookmarkSelected(const QModelIndex &index)
+ 
+     const int page = index.data(int(QPdfBookmarkModel::Role::Page)).toInt();
+     const qreal zoomLevel = index.data(int(QPdfBookmarkModel::Role::Level)).toReal();
+-    ui->pdfView->pageNavigation()->jump(page, {}, zoomLevel);
++    ui->pdfView->pageNavigator()->jump(page, {}, zoomLevel);
+ }
+ 
+ void MainWindow::pageSelected(int page)
+ {
+-    auto nav = ui->pdfView->pageNavigation();
++    auto nav = ui->pdfView->pageNavigator();
+     nav->jump(page, {}, nav->currentZoom());
+ }
+ 
+@@ -173,13 +173,13 @@ void MainWindow::on_actionZoom_Out_triggered()
+ 
+ void MainWindow::on_actionPrevious_Page_triggered()
+ {
+-    auto nav = ui->pdfView->pageNavigation();
++    auto nav = ui->pdfView->pageNavigator();
+     nav->jump(nav->currentPage() - 1, {}, nav->currentZoom());
+ }
+ 
+ void MainWindow::on_actionNext_Page_triggered()
+ {
+-    auto nav = ui->pdfView->pageNavigation();
++    auto nav = ui->pdfView->pageNavigator();
+     nav->jump(nav->currentPage() + 1, {}, nav->currentZoom());
+ }
+ 
+@@ -192,10 +192,10 @@ void MainWindow::on_actionContinuous_triggered()
+ 
+ void MainWindow::on_actionBack_triggered()
+ {
+-    ui->pdfView->pageNavigation()->back();
++    ui->pdfView->pageNavigator()->back();
+ }
+ 
+ void MainWindow::on_actionForward_triggered()
+ {
+-    ui->pdfView->pageNavigation()->forward();
++    ui->pdfView->pageNavigator()->forward();
+ }
+diff --git a/src/pdf/CMakeLists.txt b/src/pdf/CMakeLists.txt
+index 05b4424a9..ed2da1032 100644
+--- a/src/pdf/CMakeLists.txt
++++ b/src/pdf/CMakeLists.txt
+@@ -20,7 +20,7 @@ qt_internal_add_module(Pdf
+         qpdffile.cpp qpdffile_p.h
+         qpdflink.cpp qpdflink.h qpdflink_p.h
+         qpdflinkmodel.cpp qpdflinkmodel_p.h qpdflinkmodel_p_p.h
+-        qpdfnavigationstack.cpp qpdfnavigationstack.h
++        qpdfpagenavigator.cpp qpdfpagenavigator.h
+         qpdfpagerenderer.cpp qpdfpagerenderer.h
+         qpdfsearchmodel.cpp qpdfsearchmodel.h qpdfsearchmodel_p.h
+         qpdfselection.cpp qpdfselection.h qpdfselection_p.h
+diff --git a/src/pdf/doc/src/qtpdf-index.qdoc b/src/pdf/doc/src/qtpdf-index.qdoc
+index a03146569..986a8011b 100644
+--- a/src/pdf/doc/src/qtpdf-index.qdoc
++++ b/src/pdf/doc/src/qtpdf-index.qdoc
+@@ -36,7 +36,7 @@
+     and renders pages from it according to the options provided by
+     the \l QPdfDocumentRenderOptions class. The \l QPdfPageRenderer
+     class manages a queue that collects all render requests. The
+-    \l QPdfNavigationStack class handles the navigation through a
++    \l QPdfPageNavigator class handles the navigation through a
+     PDF document. The \l QPdfSearchModel class searches for a string
+     and holds the search results.  The \l QPdfView widget is a complete
+     PDF viewer, and the \l {PDF Viewer Example} shows how to use it.
+@@ -51,7 +51,7 @@
+     The full-featured viewer components are composed of lower-level
+     QML components that can be used separately if you need to write a
+     more customized PDF viewing application: \l PdfDocument,
+-    \l PdfPageImage, \l PdfNavigationStack, \l PdfSelection,
++    \l PdfPageImage, \l PdfPageNavigator, \l PdfSelection,
+     \l PdfSearchModel, \l PdfLinkModel, and \l PdfBookmarkModel.
+ 
+     If you only need to render page images, without features such as
+diff --git a/src/pdf/qpdflink.h b/src/pdf/qpdflink.h
+index 81053b42a..69f7f25a9 100644
+--- a/src/pdf/qpdflink.h
++++ b/src/pdf/qpdflink.h
+@@ -88,7 +88,7 @@ private: // methods
+     QPdfLink(QPdfLinkPrivate *d);
+     friend class QPdfDocument;
+     friend class QPdfSearchModelPrivate;
+-    friend class QQuickPdfNavigationStack;
++    friend class QQuickPdfPageNavigator;
+ 
+ private: // storage
+     QExplicitlySharedDataPointer<QPdfLinkPrivate> d;
+diff --git a/src/pdf/qpdfnavigationstack.cpp b/src/pdf/qpdfnavigationstack.cpp
+deleted file mode 100644
+index 5a154ee38..000000000
+--- a/src/pdf/qpdfnavigationstack.cpp
++++ /dev/null
+@@ -1,339 +0,0 @@
+-/****************************************************************************
+-**
+-** Copyright (C) 2022 The Qt Company Ltd.
+-** Contact: https://www.qt.io/licensing/
+-**
+-** This file is part of the QtPDF module of the Qt Toolkit.
+-**
+-** $QT_BEGIN_LICENSE:LGPL$
+-** Commercial License Usage
+-** Licensees holding valid commercial Qt licenses may use this file in
+-** accordance with the commercial license agreement provided with the
+-** Software or, alternatively, in accordance with the terms contained in
+-** a written agreement between you and The Qt Company. For licensing terms
+-** and conditions see https://www.qt.io/terms-conditions. For further
+-** information use the contact form at https://www.qt.io/contact-us.
+-**
+-** GNU Lesser General Public License Usage
+-** Alternatively, this file may be used under the terms of the GNU Lesser
+-** General Public License version 3 as published by the Free Software
+-** Foundation and appearing in the file LICENSE.LGPL3 included in the
+-** packaging of this file. Please review the following information to
+-** ensure the GNU Lesser General Public License version 3 requirements
+-** will be met: https://www.gnu.org/licenses/lgpl-3.0.html.
+-**
+-** GNU General Public License Usage
+-** Alternatively, this file may be used under the terms of the GNU
+-** General Public License version 2.0 or (at your option) the GNU General
+-** Public license version 3 or any later version approved by the KDE Free
+-** Qt Foundation. The licenses are as published by the Free Software
+-** Foundation and appearing in the file LICENSE.GPL2 and LICENSE.GPL3
+-** included in the packaging of this file. Please review the following
+-** information to ensure the GNU General Public License requirements will
+-** be met: https://www.gnu.org/licenses/gpl-2.0.html and
+-** https://www.gnu.org/licenses/gpl-3.0.html.
+-**
+-** $QT_END_LICENSE$
+-**
+-****************************************************************************/
+-
+-#include "qpdfnavigationstack.h"
+-#include "qpdfdocument.h"
+-#include "qpdflink_p.h"
+-
+-#include <QtCore/qloggingcategory.h>
+-#include <QtCore/qpointer.h>
+-
+-QT_BEGIN_NAMESPACE
+-
+-Q_LOGGING_CATEGORY(qLcNav, "qt.pdf.navigationstack")
+-
+-struct QPdfNavigationStackPrivate
+-{
+-    QPdfNavigationStack *q = nullptr;
+-
+-    QList<QExplicitlySharedDataPointer<QPdfLinkPrivate>> pageHistory;
+-    int currentHistoryIndex = 0;
+-    bool changing = false;
+-};
+-
+-/*!
+-    \class QPdfNavigationStack
+-    \since 6.4
+-    \inmodule QtPdf
+-    \brief Navigation history within a PDF document.
+-
+-    The QPdfNavigationStack class remembers which destinations the user
+-    has visited in a PDF document, and provides the ability to traverse
+-    backward and forward. It is used to implement back and forward actions
+-    similar to the back and forward buttons in a web browser.
+-
+-    \sa QPdfDocument
+-*/
+-
+-/*!
+-    Constructs a page navigation stack with parent object \a parent.
+-*/
+-QPdfNavigationStack::QPdfNavigationStack(QObject *parent)
+-    : QObject(parent), d(new QPdfNavigationStackPrivate)
+-{
+-    d->q = this;
+-    clear();
+-}
+-
+-/*!
+-    Destroys the page navigation stack.
+-*/
+-QPdfNavigationStack::~QPdfNavigationStack()
+-{
+-}
+-
+-/*!
+-    Goes back to the page, location and zoom level that was being viewed before
+-    back() was called, and then emits the \l jumped() signal.
+-
+-    If a new destination was pushed since the last time \l back() was called,
+-    the forward() function does nothing, because there is a branch in the
+-    timeline which causes the "future" to be lost.
+-*/
+-void QPdfNavigationStack::forward()
+-{
+-    if (d->currentHistoryIndex >= d->pageHistory.count() - 1)
+-        return;
+-    const bool backAvailableWas = backAvailable();
+-    const bool forwardAvailableWas = forwardAvailable();
+-    QPointF currentLocationWas = currentLocation();
+-    qreal currentZoomWas = currentZoom();
+-    ++d->currentHistoryIndex;
+-    d->changing = true;
+-    emit jumped(currentPage(), currentLocation(), currentZoom());
+-    if (currentZoomWas != currentZoom())
+-        emit currentZoomChanged(currentZoom());
+-    emit currentPageChanged(currentPage());
+-    if (currentLocationWas != currentLocation())
+-        emit currentLocationChanged(currentLocation());
+-    if (!backAvailableWas)
+-        emit backAvailableChanged(backAvailable());
+-    if (forwardAvailableWas != forwardAvailable())
+-        emit forwardAvailableChanged(forwardAvailable());
+-    d->changing = false;
+-    qCDebug(qLcNav) << "forward: index" << d->currentHistoryIndex << "page" << currentPage()
+-                    << "@" << currentLocation() << "zoom" << currentZoom();
+-}
+-
+-/*!
+-    Pops the stack, updates the \l currentPage, \l currentLocation and
+-    \l currentZoom properties to the most-recently-viewed destination, and then
+-    emits the \l jumped() signal.
+-*/
+-void QPdfNavigationStack::back()
+-{
+-    if (d->currentHistoryIndex <= 0)
+-        return;
+-    const bool backAvailableWas = backAvailable();
+-    const bool forwardAvailableWas = forwardAvailable();
+-    QPointF currentLocationWas = currentLocation();
+-    qreal currentZoomWas = currentZoom();
+-    --d->currentHistoryIndex;
+-    d->changing = true;
+-    emit jumped(currentPage(), currentLocation(), currentZoom());
+-    if (currentZoomWas != currentZoom())
+-        emit currentZoomChanged(currentZoom());
+-    emit currentPageChanged(currentPage());
+-    if (currentLocationWas != currentLocation())
+-        emit currentLocationChanged(currentLocation());
+-    if (backAvailableWas != backAvailable())
+-        emit backAvailableChanged(backAvailable());
+-    if (!forwardAvailableWas)
+-        emit forwardAvailableChanged(forwardAvailable());
+-    d->changing = false;
+-    qCDebug(qLcNav) << "back: index" << d->currentHistoryIndex << "page" << currentPage()
+-                    << "@" << currentLocation() << "zoom" << currentZoom();
+-}
+-/*!
+-    \property QPdfNavigationStack::currentPage
+-
+-    This property holds the current page that is being viewed.
+-    The default is \c 0.
+-*/
+-int QPdfNavigationStack::currentPage() const
+-{
+-    if (d->currentHistoryIndex < 0 || d->currentHistoryIndex >= d->pageHistory.count())
+-        return -1; // only until ctor or clear() runs
+-    return d->pageHistory.at(d->currentHistoryIndex)->page;
+-}
+-
+-/*!
+-    \property QPdfNavigationStack::currentLocation
+-
+-    This property holds the current location on the page that is being viewed
+-    (the location that was last given to jump() or update()). The default is
+-    \c {0, 0}.
+-*/
+-QPointF QPdfNavigationStack::currentLocation() const
+-{
+-    if (d->currentHistoryIndex < 0 || d->currentHistoryIndex >= d->pageHistory.count())
+-        return QPointF();
+-    return d->pageHistory.at(d->currentHistoryIndex)->location;
+-}
+-
+-/*!
+-    \property QPdfNavigationStack::currentZoom
+-
+-    This property holds the magnification scale (1 logical pixel = 1 point)
+-    on the page that is being viewed. The default is \c 1.
+-*/
+-qreal QPdfNavigationStack::currentZoom() const
+-{
+-    if (d->currentHistoryIndex < 0 || d->currentHistoryIndex >= d->pageHistory.count())
+-        return 1;
+-    return d->pageHistory.at(d->currentHistoryIndex)->zoom;
+-}
+-
+-/*!
+-    Clear the history and restore \l currentPage, \l currentLocation and
+-    \l currentZoom to their default values.
+-*/
+-void QPdfNavigationStack::clear()
+-{
+-    d->pageHistory.clear();
+-    d->currentHistoryIndex = 0;
+-    // Begin with an implicit jump to page 0, so that
+-    // backAvailable() will become true after jump() is called one more time.
+-    d->pageHistory.append(QExplicitlySharedDataPointer<QPdfLinkPrivate>(new QPdfLinkPrivate(0, {}, 1)));
+-}
+-
+-/*!
+-    Adds the given destination, consisting of \a page, \a location, and \a zoom,
+-    to the history of visited locations.
+-
+-    The \a zoom argument represents magnification (where \c 1 is the default
+-    scale, 1 logical pixel = 1 point). If \a zoom is given as \c 0, currentZoom
+-    keeps its existing value, and currentZoomChanged is not emitted.
+-
+-    The \a location should be the same as QPdfLink::location() if the user is
+-    following a link; and since that is specified as the upper-left corner of
+-    the destination, it is best for consistency to always use the location
+-    visible in the upper-left corner of the viewport, in points.
+-
+-    If forwardAvailable is \c true, calling this function represents a branch
+-    in the timeline which causes the "future" to be lost, and therefore
+-    forwardAvailable will change to \c false.
+-*/
+-void QPdfNavigationStack::jump(int page, const QPointF &location, qreal zoom)
+-{
+-    if (page == currentPage() && location == currentLocation() && zoom == currentZoom())
+-        return;
+-    if (qFuzzyIsNull(zoom))
+-        zoom = currentZoom();
+-    const bool zoomChange = !qFuzzyCompare(zoom, currentZoom());
+-    const bool pageChange = (page != currentPage());
+-    const bool locationChange = (location != currentLocation());
+-    const bool backAvailableWas = backAvailable();
+-    const bool forwardAvailableWas = forwardAvailable();
+-    if (!d->changing) {
+-        if (d->currentHistoryIndex >= 0 && forwardAvailableWas)
+-            d->pageHistory.remove(d->currentHistoryIndex + 1, d->pageHistory.count() - d->currentHistoryIndex - 1);
+-        d->pageHistory.append(QExplicitlySharedDataPointer<QPdfLinkPrivate>(new QPdfLinkPrivate(page, location, zoom)));
+-        d->currentHistoryIndex = d->pageHistory.count() - 1;
+-    }
+-    if (zoomChange)
+-        emit currentZoomChanged(currentZoom());
+-    if (pageChange)
+-        emit currentPageChanged(currentPage());
+-    if (locationChange)
+-        emit currentLocationChanged(currentLocation());
+-    if (d->changing)
+-        return;
+-    if (!backAvailableWas)
+-        emit backAvailableChanged(backAvailable());
+-    if (forwardAvailableWas)
+-        emit forwardAvailableChanged(forwardAvailable());
+-    emit jumped(page, location, zoom);
+-    qCDebug(qLcNav) << "push: index" << d->currentHistoryIndex << "page" << page
+-                    << "@" << location << "zoom" << zoom << "-> history" <<
+-        [this]() {
+-            QStringList ret;
+-            for (auto d : d->pageHistory)
+-                ret << QString::number(d->page);
+-            return ret.join(QLatin1Char(','));
+-        }();
+-}
+-
+-/*!
+-    Modifies the current destination, consisting of \a page, \a location and \a zoom.
+-
+-    This can be called periodically while the user is manually moving around
+-    the document, so that after back() is called, forward() will jump back to
+-    the most-recently-viewed destination rather than the destination that was
+-    last specified by push().
+-
+-    The \c currentZoomChanged, \c currentPageChanged and \c currentLocationChanged
+-    signals will be emitted if the respective properties are actually changed.
+-    The \l jumped signal is not emitted, because this operation represents
+-    smooth movement rather than a navigational jump.
+-*/
+-void QPdfNavigationStack::update(int page, const QPointF &location, qreal zoom)
+-{
+-    if (d->currentHistoryIndex < 0 || d->currentHistoryIndex >= d->pageHistory.count())
+-        return;
+-    int currentPageWas = currentPage();
+-    QPointF currentLocationWas = currentLocation();
+-    qreal currentZoomWas = currentZoom();
+-    if (page == currentPageWas && location == currentLocationWas && zoom == currentZoomWas)
+-        return;
+-    d->pageHistory[d->currentHistoryIndex]->page = page;
+-    d->pageHistory[d->currentHistoryIndex]->location = location;
+-    d->pageHistory[d->currentHistoryIndex]->zoom = zoom;
+-    if (currentZoomWas != zoom)
+-        emit currentZoomChanged(currentZoom());
+-    if (currentPageWas != page)
+-        emit currentPageChanged(currentPage());
+-    if (currentLocationWas != location)
+-        emit currentLocationChanged(currentLocation());
+-    qCDebug(qLcNav) << "update: index" << d->currentHistoryIndex << "page" << page
+-                    << "@" << location << "zoom" << zoom << "-> history" <<
+-        [this]() {
+-            QStringList ret;
+-            for (auto d : d->pageHistory)
+-                ret << QString::number(d->page);
+-            return ret.join(QLatin1Char(','));
+-        }();
+-}
+-
+-/*!
+-    \property QPdfNavigationStack::backAvailable
+-    \readonly
+-
+-    Holds \c true if a \e back destination is available in the history:
+-    that is, if push() or forward() has been called.
+-*/
+-bool QPdfNavigationStack::backAvailable() const
+-{
+-    return d->currentHistoryIndex > 0;
+-}
+-
+-/*!
+-    \property QPdfNavigationStack::forwardAvailable
+-    \readonly
+-
+-    Holds \c true if a \e forward destination is available in the history:
+-    that is, if back() has been previously called.
+-*/
+-bool QPdfNavigationStack::forwardAvailable() const
+-{
+-    return d->currentHistoryIndex < d->pageHistory.count() - 1;
+-}
+-
+-/*!
+-    \fn void QPdfNavigationStack::jumped(int page, const QPointF &location, qreal zoom)
+-
+-    This signal is emitted when an abrupt jump occurs, to the specified \a page
+-    index, \a location on the page, and \a zoom level; but \e not when simply
+-    scrolling through the document one page at a time. That is, jump(),
+-    forward() and back() emit this signal, but update() does not.
+-*/
+-
+-QT_END_NAMESPACE
+-
+-#include "moc_qpdfnavigationstack.cpp"
+diff --git a/src/pdf/qpdfnavigationstack.h b/src/pdf/qpdfnavigationstack.h
+deleted file mode 100644
+index 3d894d326..000000000
+--- a/src/pdf/qpdfnavigationstack.h
++++ /dev/null
+@@ -1,93 +0,0 @@
+-/****************************************************************************
+-**
+-** Copyright (C) 2022 The Qt Company Ltd.
+-** Contact: https://www.qt.io/licensing/
+-**
+-** This file is part of the QtPDF module of the Qt Toolkit.
+-**
+-** $QT_BEGIN_LICENSE:LGPL$
+-** Commercial License Usage
+-** Licensees holding valid commercial Qt licenses may use this file in
+-** accordance with the commercial license agreement provided with the
+-** Software or, alternatively, in accordance with the terms contained in
+-** a written agreement between you and The Qt Company. For licensing terms
+-** and conditions see https://www.qt.io/terms-conditions. For further
+-** information use the contact form at https://www.qt.io/contact-us.
+-**
+-** GNU Lesser General Public License Usage
+-** Alternatively, this file may be used under the terms of the GNU Lesser
+-** General Public License version 3 as published by the Free Software
+-** Foundation and appearing in the file LICENSE.LGPL3 included in the
+-** packaging of this file. Please review the following information to
+-** ensure the GNU Lesser General Public License version 3 requirements
+-** will be met: https://www.gnu.org/licenses/lgpl-3.0.html.
+-**
+-** GNU General Public License Usage
+-** Alternatively, this file may be used under the terms of the GNU
+-** General Public License version 2.0 or (at your option) the GNU General
+-** Public license version 3 or any later version approved by the KDE Free
+-** Qt Foundation. The licenses are as published by the Free Software
+-** Foundation and appearing in the file LICENSE.GPL2 and LICENSE.GPL3
+-** included in the packaging of this file. Please review the following
+-** information to ensure the GNU General Public License requirements will
+-** be met: https://www.gnu.org/licenses/gpl-2.0.html and
+-** https://www.gnu.org/licenses/gpl-3.0.html.
+-**
+-** $QT_END_LICENSE$
+-**
+-****************************************************************************/
+-
+-#ifndef QPDFNAVIGATIONSTACK_H
+-#define QPDFNAVIGATIONSTACK_H
+-
+-#include <QtPdf/qtpdfglobal.h>
+-#include <QtCore/qobject.h>
+-
+-QT_BEGIN_NAMESPACE
+-
+-struct QPdfNavigationStackPrivate;
+-
+-class Q_PDF_EXPORT QPdfNavigationStack : public QObject
+-{
+-    Q_OBJECT
+-
+-    Q_PROPERTY(int currentPage READ currentPage NOTIFY currentPageChanged)
+-    Q_PROPERTY(QPointF currentLocation READ currentLocation NOTIFY currentLocationChanged)
+-    Q_PROPERTY(qreal currentZoom READ currentZoom NOTIFY currentZoomChanged)
+-    Q_PROPERTY(bool backAvailable READ backAvailable NOTIFY backAvailableChanged)
+-    Q_PROPERTY(bool forwardAvailable READ forwardAvailable NOTIFY forwardAvailableChanged)
+-
+-public:
+-    QPdfNavigationStack() : QPdfNavigationStack(nullptr) {}
+-    explicit QPdfNavigationStack(QObject *parent);
+-    ~QPdfNavigationStack() override;
+-
+-    int currentPage() const;
+-    QPointF currentLocation() const;
+-    qreal currentZoom() const;
+-
+-    bool backAvailable() const;
+-    bool forwardAvailable() const;
+-
+-public Q_SLOTS:
+-    void clear();
+-    void jump(int page, const QPointF &location, qreal zoom);
+-    void update(int page, const QPointF &location, qreal zoom);
+-    void forward();
+-    void back();
+-
+-Q_SIGNALS:
+-    void currentPageChanged(int page);
+-    void currentLocationChanged(QPointF location);
+-    void currentZoomChanged(qreal zoom);
+-    void backAvailableChanged(bool available);
+-    void forwardAvailableChanged(bool available);
+-    void jumped(int page, const QPointF &location, qreal zoom);
+-
+-private:
+-    QScopedPointer<QPdfNavigationStackPrivate> d;
+-};
+-
+-QT_END_NAMESPACE
+-
+-#endif // QPDFNAVIGATIONSTACK_H
+diff --git a/src/pdf/qpdfpagenavigator.cpp b/src/pdf/qpdfpagenavigator.cpp
+new file mode 100644
+index 000000000..356f671e0
+--- /dev/null
++++ b/src/pdf/qpdfpagenavigator.cpp
+@@ -0,0 +1,339 @@
++/****************************************************************************
++**
++** Copyright (C) 2022 The Qt Company Ltd.
++** Contact: https://www.qt.io/licensing/
++**
++** This file is part of the QtPDF module of the Qt Toolkit.
++**
++** $QT_BEGIN_LICENSE:LGPL$
++** Commercial License Usage
++** Licensees holding valid commercial Qt licenses may use this file in
++** accordance with the commercial license agreement provided with the
++** Software or, alternatively, in accordance with the terms contained in
++** a written agreement between you and The Qt Company. For licensing terms
++** and conditions see https://www.qt.io/terms-conditions. For further
++** information use the contact form at https://www.qt.io/contact-us.
++**
++** GNU Lesser General Public License Usage
++** Alternatively, this file may be used under the terms of the GNU Lesser
++** General Public License version 3 as published by the Free Software
++** Foundation and appearing in the file LICENSE.LGPL3 included in the
++** packaging of this file. Please review the following information to
++** ensure the GNU Lesser General Public License version 3 requirements
++** will be met: https://www.gnu.org/licenses/lgpl-3.0.html.
++**
++** GNU General Public License Usage
++** Alternatively, this file may be used under the terms of the GNU
++** General Public License version 2.0 or (at your option) the GNU General
++** Public license version 3 or any later version approved by the KDE Free
++** Qt Foundation. The licenses are as published by the Free Software
++** Foundation and appearing in the file LICENSE.GPL2 and LICENSE.GPL3
++** included in the packaging of this file. Please review the following
++** information to ensure the GNU General Public License requirements will
++** be met: https://www.gnu.org/licenses/gpl-2.0.html and
++** https://www.gnu.org/licenses/gpl-3.0.html.
++**
++** $QT_END_LICENSE$
++**
++****************************************************************************/
++
++#include "qpdfpagenavigator.h"
++#include "qpdfdocument.h"
++#include "qpdflink_p.h"
++
++#include <QtCore/qloggingcategory.h>
++#include <QtCore/qpointer.h>
++
++QT_BEGIN_NAMESPACE
++
++Q_LOGGING_CATEGORY(qLcNav, "qt.pdf.pagenavigator")
++
++struct QPdfPageNavigatorPrivate
++{
++    QPdfPageNavigator *q = nullptr;
++
++    QList<QExplicitlySharedDataPointer<QPdfLinkPrivate>> pageHistory;
++    int currentHistoryIndex = 0;
++    bool changing = false;
++};
++
++/*!
++    \class QPdfPageNavigator
++    \since 6.4
++    \inmodule QtPdf
++    \brief Navigation history within a PDF document.
++
++    The QPdfPageNavigator class remembers which destinations the user
++    has visited in a PDF document, and provides the ability to traverse
++    backward and forward. It is used to implement back and forward actions
++    similar to the back and forward buttons in a web browser.
++
++    \sa QPdfDocument
++*/
++
++/*!
++    Constructs a page navigation stack with parent object \a parent.
++*/
++QPdfPageNavigator::QPdfPageNavigator(QObject *parent)
++    : QObject(parent), d(new QPdfPageNavigatorPrivate)
++{
++    d->q = this;
++    clear();
++}
++
++/*!
++    Destroys the page navigation stack.
++*/
++QPdfPageNavigator::~QPdfPageNavigator()
++{
++}
++
++/*!
++    Goes back to the page, location and zoom level that was being viewed before
++    back() was called, and then emits the \l jumped() signal.
++
++    If a new destination was pushed since the last time \l back() was called,
++    the forward() function does nothing, because there is a branch in the
++    timeline which causes the "future" to be lost.
++*/
++void QPdfPageNavigator::forward()
++{
++    if (d->currentHistoryIndex >= d->pageHistory.count() - 1)
++        return;
++    const bool backAvailableWas = backAvailable();
++    const bool forwardAvailableWas = forwardAvailable();
++    QPointF currentLocationWas = currentLocation();
++    qreal currentZoomWas = currentZoom();
++    ++d->currentHistoryIndex;
++    d->changing = true;
++    emit jumped(currentPage(), currentLocation(), currentZoom());
++    if (currentZoomWas != currentZoom())
++        emit currentZoomChanged(currentZoom());
++    emit currentPageChanged(currentPage());
++    if (currentLocationWas != currentLocation())
++        emit currentLocationChanged(currentLocation());
++    if (!backAvailableWas)
++        emit backAvailableChanged(backAvailable());
++    if (forwardAvailableWas != forwardAvailable())
++        emit forwardAvailableChanged(forwardAvailable());
++    d->changing = false;
++    qCDebug(qLcNav) << "forward: index" << d->currentHistoryIndex << "page" << currentPage()
++                    << "@" << currentLocation() << "zoom" << currentZoom();
++}
++
++/*!
++    Pops the stack, updates the \l currentPage, \l currentLocation and
++    \l currentZoom properties to the most-recently-viewed destination, and then
++    emits the \l jumped() signal.
++*/
++void QPdfPageNavigator::back()
++{
++    if (d->currentHistoryIndex <= 0)
++        return;
++    const bool backAvailableWas = backAvailable();
++    const bool forwardAvailableWas = forwardAvailable();
++    QPointF currentLocationWas = currentLocation();
++    qreal currentZoomWas = currentZoom();
++    --d->currentHistoryIndex;
++    d->changing = true;
++    emit jumped(currentPage(), currentLocation(), currentZoom());
++    if (currentZoomWas != currentZoom())
++        emit currentZoomChanged(currentZoom());
++    emit currentPageChanged(currentPage());
++    if (currentLocationWas != currentLocation())
++        emit currentLocationChanged(currentLocation());
++    if (backAvailableWas != backAvailable())
++        emit backAvailableChanged(backAvailable());
++    if (!forwardAvailableWas)
++        emit forwardAvailableChanged(forwardAvailable());
++    d->changing = false;
++    qCDebug(qLcNav) << "back: index" << d->currentHistoryIndex << "page" << currentPage()
++                    << "@" << currentLocation() << "zoom" << currentZoom();
++}
++/*!
++    \property QPdfPageNavigator::currentPage
++
++    This property holds the current page that is being viewed.
++    The default is \c 0.
++*/
++int QPdfPageNavigator::currentPage() const
++{
++    if (d->currentHistoryIndex < 0 || d->currentHistoryIndex >= d->pageHistory.count())
++        return -1; // only until ctor or clear() runs
++    return d->pageHistory.at(d->currentHistoryIndex)->page;
++}
++
++/*!
++    \property QPdfPageNavigator::currentLocation
++
++    This property holds the current location on the page that is being viewed
++    (the location that was last given to jump() or update()). The default is
++    \c {0, 0}.
++*/
++QPointF QPdfPageNavigator::currentLocation() const
++{
++    if (d->currentHistoryIndex < 0 || d->currentHistoryIndex >= d->pageHistory.count())
++        return QPointF();
++    return d->pageHistory.at(d->currentHistoryIndex)->location;
++}
++
++/*!
++    \property QPdfPageNavigator::currentZoom
++
++    This property holds the magnification scale (1 logical pixel = 1 point)
++    on the page that is being viewed. The default is \c 1.
++*/
++qreal QPdfPageNavigator::currentZoom() const
++{
++    if (d->currentHistoryIndex < 0 || d->currentHistoryIndex >= d->pageHistory.count())
++        return 1;
++    return d->pageHistory.at(d->currentHistoryIndex)->zoom;
++}
++
++/*!
++    Clear the history and restore \l currentPage, \l currentLocation and
++    \l currentZoom to their default values.
++*/
++void QPdfPageNavigator::clear()
++{
++    d->pageHistory.clear();
++    d->currentHistoryIndex = 0;
++    // Begin with an implicit jump to page 0, so that
++    // backAvailable() will become true after jump() is called one more time.
++    d->pageHistory.append(QExplicitlySharedDataPointer<QPdfLinkPrivate>(new QPdfLinkPrivate(0, {}, 1)));
++}
++
++/*!
++    Adds the given destination, consisting of \a page, \a location, and \a zoom,
++    to the history of visited locations.
++
++    The \a zoom argument represents magnification (where \c 1 is the default
++    scale, 1 logical pixel = 1 point). If \a zoom is given as \c 0, currentZoom
++    keeps its existing value, and currentZoomChanged is not emitted.
++
++    The \a location should be the same as QPdfLink::location() if the user is
++    following a link; and since that is specified as the upper-left corner of
++    the destination, it is best for consistency to always use the location
++    visible in the upper-left corner of the viewport, in points.
++
++    If forwardAvailable is \c true, calling this function represents a branch
++    in the timeline which causes the "future" to be lost, and therefore
++    forwardAvailable will change to \c false.
++*/
++void QPdfPageNavigator::jump(int page, const QPointF &location, qreal zoom)
++{
++    if (page == currentPage() && location == currentLocation() && zoom == currentZoom())
++        return;
++    if (qFuzzyIsNull(zoom))
++        zoom = currentZoom();
++    const bool zoomChange = !qFuzzyCompare(zoom, currentZoom());
++    const bool pageChange = (page != currentPage());
++    const bool locationChange = (location != currentLocation());
++    const bool backAvailableWas = backAvailable();
++    const bool forwardAvailableWas = forwardAvailable();
++    if (!d->changing) {
++        if (d->currentHistoryIndex >= 0 && forwardAvailableWas)
++            d->pageHistory.remove(d->currentHistoryIndex + 1, d->pageHistory.count() - d->currentHistoryIndex - 1);
++        d->pageHistory.append(QExplicitlySharedDataPointer<QPdfLinkPrivate>(new QPdfLinkPrivate(page, location, zoom)));
++        d->currentHistoryIndex = d->pageHistory.count() - 1;
++    }
++    if (zoomChange)
++        emit currentZoomChanged(currentZoom());
++    if (pageChange)
++        emit currentPageChanged(currentPage());
++    if (locationChange)
++        emit currentLocationChanged(currentLocation());
++    if (d->changing)
++        return;
++    if (!backAvailableWas)
++        emit backAvailableChanged(backAvailable());
++    if (forwardAvailableWas)
++        emit forwardAvailableChanged(forwardAvailable());
++    emit jumped(page, location, zoom);
++    qCDebug(qLcNav) << "push: index" << d->currentHistoryIndex << "page" << page
++                    << "@" << location << "zoom" << zoom << "-> history" <<
++        [this]() {
++            QStringList ret;
++            for (auto d : d->pageHistory)
++                ret << QString::number(d->page);
++            return ret.join(QLatin1Char(','));
++        }();
++}
++
++/*!
++    Modifies the current destination, consisting of \a page, \a location and \a zoom.
++
++    This can be called periodically while the user is manually moving around
++    the document, so that after back() is called, forward() will jump back to
++    the most-recently-viewed destination rather than the destination that was
++    last specified by push().
++
++    The \c currentZoomChanged, \c currentPageChanged and \c currentLocationChanged
++    signals will be emitted if the respective properties are actually changed.
++    The \l jumped signal is not emitted, because this operation represents
++    smooth movement rather than a navigational jump.
++*/
++void QPdfPageNavigator::update(int page, const QPointF &location, qreal zoom)
++{
++    if (d->currentHistoryIndex < 0 || d->currentHistoryIndex >= d->pageHistory.count())
++        return;
++    int currentPageWas = currentPage();
++    QPointF currentLocationWas = currentLocation();
++    qreal currentZoomWas = currentZoom();
++    if (page == currentPageWas && location == currentLocationWas && zoom == currentZoomWas)
++        return;
++    d->pageHistory[d->currentHistoryIndex]->page = page;
++    d->pageHistory[d->currentHistoryIndex]->location = location;
++    d->pageHistory[d->currentHistoryIndex]->zoom = zoom;
++    if (currentZoomWas != zoom)
++        emit currentZoomChanged(currentZoom());
++    if (currentPageWas != page)
++        emit currentPageChanged(currentPage());
++    if (currentLocationWas != location)
++        emit currentLocationChanged(currentLocation());
++    qCDebug(qLcNav) << "update: index" << d->currentHistoryIndex << "page" << page
++                    << "@" << location << "zoom" << zoom << "-> history" <<
++        [this]() {
++            QStringList ret;
++            for (auto d : d->pageHistory)
++                ret << QString::number(d->page);
++            return ret.join(QLatin1Char(','));
++        }();
++}
++
++/*!
++    \property QPdfPageNavigator::backAvailable
++    \readonly
++
++    Holds \c true if a \e back destination is available in the history:
++    that is, if push() or forward() has been called.
++*/
++bool QPdfPageNavigator::backAvailable() const
++{
++    return d->currentHistoryIndex > 0;
++}
++
++/*!
++    \property QPdfPageNavigator::forwardAvailable
++    \readonly
++
++    Holds \c true if a \e forward destination is available in the history:
++    that is, if back() has been previously called.
++*/
++bool QPdfPageNavigator::forwardAvailable() const
++{
++    return d->currentHistoryIndex < d->pageHistory.count() - 1;
++}
++
++/*!
++    \fn void QPdfPageNavigator::jumped(int page, const QPointF &location, qreal zoom)
++
++    This signal is emitted when an abrupt jump occurs, to the specified \a page
++    index, \a location on the page, and \a zoom level; but \e not when simply
++    scrolling through the document one page at a time. That is, jump(),
++    forward() and back() emit this signal, but update() does not.
++*/
++
++QT_END_NAMESPACE
++
++#include "moc_qpdfpagenavigator.cpp"
+diff --git a/src/pdf/qpdfpagenavigator.h b/src/pdf/qpdfpagenavigator.h
+new file mode 100644
+index 000000000..cab6e612c
+--- /dev/null
++++ b/src/pdf/qpdfpagenavigator.h
+@@ -0,0 +1,93 @@
++/****************************************************************************
++**
++** Copyright (C) 2022 The Qt Company Ltd.
++** Contact: https://www.qt.io/licensing/
++**
++** This file is part of the QtPDF module of the Qt Toolkit.
++**
++** $QT_BEGIN_LICENSE:LGPL$
++** Commercial License Usage
++** Licensees holding valid commercial Qt licenses may use this file in
++** accordance with the commercial license agreement provided with the
++** Software or, alternatively, in accordance with the terms contained in
++** a written agreement between you and The Qt Company. For licensing terms
++** and conditions see https://www.qt.io/terms-conditions. For further
++** information use the contact form at https://www.qt.io/contact-us.
++**
++** GNU Lesser General Public License Usage
++** Alternatively, this file may be used under the terms of the GNU Lesser
++** General Public License version 3 as published by the Free Software
++** Foundation and appearing in the file LICENSE.LGPL3 included in the
++** packaging of this file. Please review the following information to
++** ensure the GNU Lesser General Public License version 3 requirements
++** will be met: https://www.gnu.org/licenses/lgpl-3.0.html.
++**
++** GNU General Public License Usage
++** Alternatively, this file may be used under the terms of the GNU
++** General Public License version 2.0 or (at your option) the GNU General
++** Public license version 3 or any later version approved by the KDE Free
++** Qt Foundation. The licenses are as published by the Free Software
++** Foundation and appearing in the file LICENSE.GPL2 and LICENSE.GPL3
++** included in the packaging of this file. Please review the following
++** information to ensure the GNU General Public License requirements will
++** be met: https://www.gnu.org/licenses/gpl-2.0.html and
++** https://www.gnu.org/licenses/gpl-3.0.html.
++**
++** $QT_END_LICENSE$
++**
++****************************************************************************/
++
++#ifndef QPDFPAGENAVIGATOR_H
++#define QPDFPAGENAVIGATOR_H
++
++#include <QtPdf/qtpdfglobal.h>
++#include <QtCore/qobject.h>
++
++QT_BEGIN_NAMESPACE
++
++struct QPdfPageNavigatorPrivate;
++
++class Q_PDF_EXPORT QPdfPageNavigator : public QObject
++{
++    Q_OBJECT
++
++    Q_PROPERTY(int currentPage READ currentPage NOTIFY currentPageChanged)
++    Q_PROPERTY(QPointF currentLocation READ currentLocation NOTIFY currentLocationChanged)
++    Q_PROPERTY(qreal currentZoom READ currentZoom NOTIFY currentZoomChanged)
++    Q_PROPERTY(bool backAvailable READ backAvailable NOTIFY backAvailableChanged)
++    Q_PROPERTY(bool forwardAvailable READ forwardAvailable NOTIFY forwardAvailableChanged)
++
++public:
++    QPdfPageNavigator() : QPdfPageNavigator(nullptr) {}
++    explicit QPdfPageNavigator(QObject *parent);
++    ~QPdfPageNavigator() override;
++
++    int currentPage() const;
++    QPointF currentLocation() const;
++    qreal currentZoom() const;
++
++    bool backAvailable() const;
++    bool forwardAvailable() const;
++
++public Q_SLOTS:
++    void clear();
++    void jump(int page, const QPointF &location, qreal zoom);
++    void update(int page, const QPointF &location, qreal zoom);
++    void forward();
++    void back();
++
++Q_SIGNALS:
++    void currentPageChanged(int page);
++    void currentLocationChanged(QPointF location);
++    void currentZoomChanged(qreal zoom);
++    void backAvailableChanged(bool available);
++    void forwardAvailableChanged(bool available);
++    void jumped(int page, const QPointF &location, qreal zoom);
++
++private:
++    QScopedPointer<QPdfPageNavigatorPrivate> d;
++};
++
++QT_END_NAMESPACE
++
++#endif // QPDFPAGENAVIGATOR_H
+diff --git a/src/pdfquick/CMakeLists.txt b/src/pdfquick/CMakeLists.txt
+index b29f57aeb..bb712be7b 100644
+--- a/src/pdfquick/CMakeLists.txt
++++ b/src/pdfquick/CMakeLists.txt
+@@ -19,7 +19,7 @@ qt_internal_add_qml_module(PdfQuick
+         qquickpdfbookmarkmodel.cpp qquickpdfbookmarkmodel_p.h
+         qquickpdfdocument.cpp qquickpdfdocument_p.h
+         qquickpdflinkmodel.cpp qquickpdflinkmodel_p.h
+-        qquickpdfnavigationstack.cpp qquickpdfnavigationstack_p.h
++        qquickpdfpagenavigator.cpp qquickpdfpagenavigator_p.h
+         qquickpdfpageimage.cpp qquickpdfpageimage_p.h
+         qquickpdfsearchmodel.cpp qquickpdfsearchmodel_p.h
+         qquickpdfselection.cpp qquickpdfselection_p.h
+diff --git a/src/pdfquick/PdfMultiPageView.qml b/src/pdfquick/PdfMultiPageView.qml
+index 2457c5010..d7831f6bd 100644
+--- a/src/pdfquick/PdfMultiPageView.qml
++++ b/src/pdfquick/PdfMultiPageView.qml
+@@ -125,9 +125,9 @@ Item {
+         \c onCurrentPageChanged script) to update the part of the user interface
+         that shows the current page number, such as a \l SpinBox.
+ 
+-        \sa PdfNavigationStack::currentPage
++        \sa PdfPageNavigator::currentPage
+     */
+-    property alias currentPage: navigationStack.currentPage
++    property alias currentPage: pageNavigator.currentPage
+ 
+     /*!
+         \qmlproperty bool PdfMultiPageView::backEnabled
+@@ -136,9 +136,9 @@ Item {
+         This property indicates if it is possible to go back in the navigation
+         history to a previous-viewed page.
+ 
+-        \sa PdfNavigationStack::backAvailable, back()
++        \sa PdfPageNavigator::backAvailable, back()
+     */
+-    property alias backEnabled: navigationStack.backAvailable
++    property alias backEnabled: pageNavigator.backAvailable
+ 
+     /*!
+         \qmlproperty bool PdfMultiPageView::forwardEnabled
+@@ -147,9 +147,9 @@ Item {
+         This property indicates if it is possible to go to next location in the
+         navigation history.
+ 
+-        \sa PdfNavigationStack::forwardAvailable, forward()
++        \sa PdfPageNavigator::forwardAvailable, forward()
+     */
+-    property alias forwardEnabled: navigationStack.forwardAvailable
++    property alias forwardEnabled: pageNavigator.forwardAvailable
+ 
+     /*!
+         \qmlmethod void PdfMultiPageView::back()
+@@ -158,9 +158,9 @@ Item {
+         recently; or does nothing if there is no previous location on the
+         navigation stack.
+ 
+-        \sa PdfNavigationStack::back(), currentPage, backEnabled
++        \sa PdfPageNavigator::back(), currentPage, backEnabled
+     */
+-    function back() { navigationStack.back() }
++    function back() { pageNavigator.back() }
+ 
+     /*!
+         \qmlmethod void PdfMultiPageView::forward()
+@@ -169,19 +169,19 @@ Item {
+         method was called; or does nothing if there is no "next" location on the
+         navigation stack.
+ 
+-        \sa PdfNavigationStack::forward(), currentPage
++        \sa PdfPageNavigator::forward(), currentPage
+     */
+-    function forward() { navigationStack.forward() }
++    function forward() { pageNavigator.forward() }
+ 
+     /*!
+         \qmlmethod void PdfMultiPageView::goToPage(int page)
+ 
+         Scrolls the view to the given \a page number, if possible.
+ 
+-        \sa PdfNavigationStack::jump(), currentPage
++        \sa PdfPageNavigator::jump(), currentPage
+     */
+     function goToPage(page) {
+-        if (page === navigationStack.currentPage)
++        if (page === pageNavigator.currentPage)
+             return
+         goToLocation(page, Qt.point(-1, -1), 0)
+     }
+@@ -192,15 +192,15 @@ Item {
+         Scrolls the view to the \a location on the \a page, if possible,
+         and sets the \a zoom level.
+ 
+-        \sa PdfNavigationStack::jump(), currentPage
++        \sa PdfPageNavigator::jump(), currentPage
+     */
+     function goToLocation(page, location, zoom) {
+         if (zoom > 0) {
+-            navigationStack.jumping = true // don't call navigationStack.update() because we will jump() instead
++            pageNavigator.jumping = true // don't call pageNavigator.update() because we will jump() instead
+             root.renderScale = zoom
+-            navigationStack.jumping = false
++            pageNavigator.jumping = false
+         }
+-        navigationStack.jump(page, location, zoom) // actually jump
++        pageNavigator.jump(page, location, zoom) // actually jump
+     }
+ 
+     /*!
+@@ -391,7 +391,7 @@ Item {
+                         searchHighlights.update()
+                     }
+                     onStatusChanged: {
+-                        if (index === navigationStack.currentPage)
++                        if (index === pageNavigator.currentPage)
+                             root.currentPageRenderingStatus = status
+                     }
+                 }
+@@ -575,7 +575,7 @@ Item {
+                                       ? Qt.point((tableView.contentX - currentItem.x + tableView.jumpLocationMargin.x) / root.renderScale,
+                                                  (tableView.contentY - currentItem.y + tableView.jumpLocationMargin.y) / root.renderScale)
+                                       : Qt.point(0, 0) // maybe the delegate wasn't loaded yet
+-                navigationStack.jump(cell.y, currentLocation, root.renderScale)
++                pageNavigator.jump(cell.y, currentLocation, root.renderScale)
+             }
+             onActiveChanged: if (!active ) {
+                 // When the scrollbar stops moving, tell navstack where we are, so as to update currentPage etc.
+@@ -585,15 +585,15 @@ Item {
+                                       ? Qt.point((tableView.contentX - currentItem.x + tableView.jumpLocationMargin.x) / root.renderScale,
+                                                  (tableView.contentY - currentItem.y + tableView.jumpLocationMargin.y) / root.renderScale)
+                                       : Qt.point(0, 0) // maybe the delegate wasn't loaded yet
+-                navigationStack.update(cell.y, currentLocation, root.renderScale)
++                pageNavigator.update(cell.y, currentLocation, root.renderScale)
+             }
+         }
+         ScrollBar.horizontal: ScrollBar { }
+     }
+     onRenderScaleChanged: {
+-        // if navigationStack.jumped changes the scale, don't turn around and update the stack again;
++        // if pageNavigator.jumped changes the scale, don't turn around and update the stack again;
+         // and don't force layout either, because positionViewAtCell() will do that
+-        if (navigationStack.jumping)
++        if (pageNavigator.jumping)
+             return
+         // make TableView rebuild from scratch, because otherwise it doesn't know the delegates are changing size
+         tableView.rebuild()
+@@ -602,11 +602,11 @@ Item {
+         if (currentItem) {
+             const currentLocation = Qt.point((tableView.contentX - currentItem.x + tableView.jumpLocationMargin.x) / root.renderScale,
+                                              (tableView.contentY - currentItem.y + tableView.jumpLocationMargin.y) / root.renderScale)
+-            navigationStack.update(cell.y, currentLocation, renderScale)
++            pageNavigator.update(cell.y, currentLocation, renderScale)
+         }
+     }
+-    PdfNavigationStack {
+-        id: navigationStack
++    PdfPageNavigator {
++        id: pageNavigator
+         property bool jumping: false
+         property int previousPage: 0
+         onJumped: function(page, location, zoom) {
+@@ -642,7 +642,7 @@ Item {
+ 
+         property url documentSource: root.document.source
+         onDocumentSourceChanged: {
+-            navigationStack.clear()
++            pageNavigator.clear()
+             root.resetScale()
+             tableView.contentX = 0
+             tableView.contentY = 0
+diff --git a/src/pdfquick/PdfPageView.qml b/src/pdfquick/PdfPageView.qml
+index eac4fb520..ff4de9b81 100644
+--- a/src/pdfquick/PdfPageView.qml
++++ b/src/pdfquick/PdfPageView.qml
+@@ -124,9 +124,9 @@ Rectangle {
+         \c onCurrentPageChanged script) to update the part of the user interface
+         that shows the current page number, such as a \l SpinBox.
+ 
+-        \sa PdfNavigationStack::currentPage
++        \sa PdfPageNavigator::currentPage
+     */
+-    property alias currentPage: navigationStack.currentPage
++    property alias currentPage: pageNavigator.currentPage
+ 
+     /*!
+         \qmlproperty bool PdfPageView::backEnabled
+@@ -135,9 +135,9 @@ Rectangle {
+         This property indicates if it is possible to go back in the navigation
+         history to a previous-viewed page.
+ 
+-        \sa PdfNavigationStack::backAvailable, back()
++        \sa PdfPageNavigator::backAvailable, back()
+     */
+-    property alias backEnabled: navigationStack.backAvailable
++    property alias backEnabled: pageNavigator.backAvailable
+ 
+     /*!
+         \qmlproperty bool PdfPageView::forwardEnabled
+@@ -146,9 +146,9 @@ Rectangle {
+         This property indicates if it is possible to go to next location in the
+         navigation history.
+ 
+-        \sa PdfNavigationStack::forwardAvailable, forward()
++        \sa PdfPageNavigator::forwardAvailable, forward()
+     */
+-    property alias forwardEnabled: navigationStack.forwardAvailable
++    property alias forwardEnabled: pageNavigator.forwardAvailable
+ 
+     /*!
+         \qmlmethod void PdfPageView::back()
+@@ -157,9 +157,9 @@ Rectangle {
+         recently; or does nothing if there is no previous location on the
+         navigation stack.
+ 
+-        \sa PdfNavigationStack::back(), currentPage, backEnabled
++        \sa PdfPageNavigator::back(), currentPage, backEnabled
+     */
+-    function back() { navigationStack.back() }
++    function back() { pageNavigator.back() }
+ 
+     /*!
+         \qmlmethod void PdfPageView::forward()
+@@ -168,16 +168,16 @@ Rectangle {
+         method was called; or does nothing if there is no "next" location on the
+         navigation stack.
+ 
+-        \sa PdfNavigationStack::forward(), currentPage
++        \sa PdfPageNavigator::forward(), currentPage
+     */
+-    function forward() { navigationStack.forward() }
++    function forward() { pageNavigator.forward() }
+ 
+     /*!
+         \qmlmethod void PdfPageView::goToPage(int page)
+ 
+         Changes the view to the \a page, if possible.
+ 
+-        \sa PdfNavigationStack::jump(), currentPage
++        \sa PdfPageNavigator::jump(), currentPage
+     */
+     function goToPage(page) { goToLocation(page, Qt.point(0, 0), 0) }
+ 
+@@ -187,12 +187,12 @@ Rectangle {
+         Scrolls the view to the \a location on the \a page, if possible,
+         and sets the \a zoom level.
+ 
+-        \sa PdfNavigationStack::jump(), currentPage
++        \sa PdfPageNavigator::jump(), currentPage
+     */
+     function goToLocation(page, location, zoom) {
+         if (zoom > 0)
+             root.renderScale = zoom
+-        navigationStack.jump(page, location, zoom)
++        pageNavigator.jump(page, location, zoom)
+     }
+ 
+     // --------------------------------
+@@ -266,7 +266,7 @@ Rectangle {
+     function scaleToPage(width, height) {
+         const windowAspect = width / height
+         const halfRotation = Math.abs(root.rotation % 180)
+-        const pagePointSize = document.pagePointSize(navigationStack.currentPage)
++        const pagePointSize = document.pagePointSize(pageNavigator.currentPage)
+         const pageAspect = pagePointSize.height / pagePointSize.width
+         if (halfRotation > 45 && halfRotation < 135) {
+             // rotated 90 or 270º
+@@ -339,7 +339,7 @@ Rectangle {
+     PdfSelection {
+         id: selection
+         document: root.document
+-        page: navigationStack.currentPage
++        page: pageNavigator.currentPage
+         fromPoint: Qt.point(textSelectionDrag.centroid.pressPosition.x / image.pageScale, textSelectionDrag.centroid.pressPosition.y / image.pageScale)
+         toPoint: Qt.point(textSelectionDrag.centroid.position.x / image.pageScale, textSelectionDrag.centroid.position.y / image.pageScale)
+         hold: !textSelectionDrag.active && !tapHandler.pressed
+@@ -351,14 +351,14 @@ Rectangle {
+         onCurrentPageChanged: root.goToPage(currentPage)
+     }
+ 
+-    PdfNavigationStack {
+-        id: navigationStack
++    PdfPageNavigator {
++        id: pageNavigator
+         onCurrentPageChanged: searchModel.currentPage = currentPage
+         onCurrentZoomChanged: root.renderScale = currentZoom
+ 
+         property url documentSource: root.document.source
+         onDocumentSourceChanged: {
+-            navigationStack.clear()
++            pageNavigator.clear()
+             root.goToPage(0)
+         }
+     }
+@@ -366,13 +366,13 @@ Rectangle {
+     PdfPageImage {
+         id: image
+         document: root.document
+-        currentPage: navigationStack.currentPage
++        currentPage: pageNavigator.currentPage
+         asynchronous: true
+         fillMode: Image.PreserveAspectFit
+         property bool centerOnLoad: false
+         property bool vCenterOnLoad: false
+         property size centerInSize
+-        property real pageScale: image.paintedWidth / document.pagePointSize(navigationStack.currentPage).width
++        property real pageScale: image.paintedWidth / document.pagePointSize(pageNavigator.currentPage).width
+         function reRenderIfNecessary() {
+             const newSourceWidth = image.sourceSize.width * root.scale * Screen.devicePixelRatio
+             const ratio = newSourceWidth / image.sourceSize.width
+@@ -391,7 +391,7 @@ Rectangle {
+             }
+     }
+     onRenderScaleChanged: {
+-        image.sourceSize.width = document.pagePointSize(navigationStack.currentPage).width * renderScale
++        image.sourceSize.width = document.pagePointSize(pageNavigator.currentPage).width * renderScale
+         image.sourceSize.height = 0
+         root.scale = 1
+     }
+@@ -431,7 +431,7 @@ Rectangle {
+         model: PdfLinkModel {
+             id: linkModel
+             document: root.document
+-            page: navigationStack.currentPage
++            page: pageNavigator.currentPage
+         }
+         delegate: Item {
+             x: rect.x * image.pageScale
+@@ -442,7 +442,7 @@ Rectangle {
+             TapHandler {
+                 onTapped: {
+                     if (page >= 0)
+-                        navigationStack.jump(page, Qt.point(0, 0), root.renderScale)
++                        pageNavigator.jump(page, Qt.point(0, 0), root.renderScale)
+                     else
+                         Qt.openUrlExternally(url)
+                 }
+diff --git a/src/pdfquick/PdfScrollablePageView.qml b/src/pdfquick/PdfScrollablePageView.qml
+index 6b03c1c1c..6ee42d3ad 100644
+--- a/src/pdfquick/PdfScrollablePageView.qml
++++ b/src/pdfquick/PdfScrollablePageView.qml
+@@ -126,9 +126,9 @@ Flickable {
+         \c onCurrentPageChanged script) to update the part of the user interface
+         that shows the current page number, such as a \l SpinBox.
+ 
+-        \sa PdfNavigationStack::currentPage
++        \sa PdfPageNavigator::currentPage
+     */
+-    property alias currentPage: navigationStack.currentPage
++    property alias currentPage: pageNavigator.currentPage
+ 
+     /*!
+         \qmlproperty bool PdfScrollablePageView::backEnabled
+@@ -137,9 +137,9 @@ Flickable {
+         This property indicates if it is possible to go back in the navigation
+         history to a previous-viewed page.
+ 
+-        \sa PdfNavigationStack::backAvailable, back()
++        \sa PdfPageNavigator::backAvailable, back()
+     */
+-    property alias backEnabled: navigationStack.backAvailable
++    property alias backEnabled: pageNavigator.backAvailable
+ 
+     /*!
+         \qmlproperty bool PdfScrollablePageView::forwardEnabled
+@@ -148,9 +148,9 @@ Flickable {
+         This property indicates if it is possible to go to next location in the
+         navigation history.
+ 
+-        \sa PdfNavigationStack::forwardAvailable, forward()
++        \sa PdfPageNavigator::forwardAvailable, forward()
+     */
+-    property alias forwardEnabled: navigationStack.forwardAvailable
++    property alias forwardEnabled: pageNavigator.forwardAvailable
+ 
+     /*!
+         \qmlmethod void PdfScrollablePageView::back()
+@@ -159,9 +159,9 @@ Flickable {
+         recently; or does nothing if there is no previous location on the
+         navigation stack.
+ 
+-        \sa PdfNavigationStack::back(), currentPage, backEnabled
++        \sa PdfPageNavigator::back(), currentPage, backEnabled
+     */
+-    function back() { navigationStack.back() }
++    function back() { pageNavigator.back() }
+ 
+     /*!
+         \qmlmethod void PdfScrollablePageView::forward()
+@@ -170,19 +170,19 @@ Flickable {
+         method was called; or does nothing if there is no "next" location on the
+         navigation stack.
+ 
+-        \sa PdfNavigationStack::forward(), currentPage
++        \sa PdfPageNavigator::forward(), currentPage
+     */
+-    function forward() { navigationStack.forward() }
++    function forward() { pageNavigator.forward() }
+ 
+     /*!
+         \qmlmethod void PdfScrollablePageView::goToPage(int page)
+ 
+         Changes the view to the \a page, if possible.
+ 
+-        \sa PdfNavigationStack::jump(), currentPage
++        \sa PdfPageNavigator::jump(), currentPage
+     */
+     function goToPage(page) {
+-        if (page === navigationStack.currentPage)
++        if (page === pageNavigator.currentPage)
+             return
+         goToLocation(page, Qt.point(0, 0), 0)
+     }
+@@ -193,12 +193,12 @@ Flickable {
+         Scrolls the view to the \a location on the \a page, if possible,
+         and sets the \a zoom level.
+ 
+-        \sa PdfNavigationStack::jump(), currentPage
++        \sa PdfPageNavigator::jump(), currentPage
+     */
+     function goToLocation(page, location, zoom) {
+         if (zoom > 0)
+             root.renderScale = zoom
+-        navigationStack.jump(page, location, zoom)
++        pageNavigator.jump(page, location, zoom)
+     }
+ 
+     // --------------------------------
+@@ -254,7 +254,7 @@ Flickable {
+         degrees, it will be scaled so that its width fits \a height.
+     */
+     function scaleToWidth(width, height) {
+-        const pagePointSize = document.pagePointSize(navigationStack.currentPage)
++        const pagePointSize = document.pagePointSize(pageNavigator.currentPage)
+         root.renderScale = root.width / (paper.rot90 ? pagePointSize.height : pagePointSize.width)
+         console.log(lcSPV, "scaling", pagePointSize, "to fit", root.width, "rotated?", paper.rot90, "scale", root.renderScale)
+         root.contentX = 0
+@@ -270,7 +270,7 @@ Flickable {
+         it is first rotated to have a matching aspect ratio.
+     */
+     function scaleToPage(width, height) {
+-        const pagePointSize = document.pagePointSize(navigationStack.currentPage)
++        const pagePointSize = document.pagePointSize(pageNavigator.currentPage)
+         root.renderScale = Math.min(
+                     root.width / (paper.rot90 ? pagePointSize.height : pagePointSize.width),
+                     root.height / (paper.rot90 ? pagePointSize.width : pagePointSize.height) )
+@@ -331,7 +331,7 @@ Flickable {
+             if (!active ) {
+                 const currentLocation = Qt.point((root.contentX + root.width / 2) / root.renderScale,
+                                                  (root.contentY + root.height / 2) / root.renderScale)
+-                navigationStack.update(navigationStack.currentPage, currentLocation, root.renderScale)
++                pageNavigator.update(pageNavigator.currentPage, currentLocation, root.renderScale)
+             }
+     }
+     ScrollBar.horizontal: ScrollBar {
+@@ -339,18 +339,18 @@ Flickable {
+             if (!active ) {
+                 const currentLocation = Qt.point((root.contentX + root.width / 2) / root.renderScale,
+                                                  (root.contentY + root.height / 2) / root.renderScale)
+-                navigationStack.update(navigationStack.currentPage, currentLocation, root.renderScale)
++                pageNavigator.update(pageNavigator.currentPage, currentLocation, root.renderScale)
+             }
+     }
+ 
+     onRenderScaleChanged: {
+-        image.sourceSize.width = document.pagePointSize(navigationStack.currentPage).width *
++        image.sourceSize.width = document.pagePointSize(pageNavigator.currentPage).width *
+                 renderScale * Screen.devicePixelRatio
+         image.sourceSize.height = 0
+         paper.scale = 1
+         const currentLocation = Qt.point((root.contentX + root.width / 2) / root.renderScale,
+                                          (root.contentY + root.height / 2) / root.renderScale)
+-        navigationStack.update(navigationStack.currentPage, currentLocation, root.renderScale)
++        pageNavigator.update(pageNavigator.currentPage, currentLocation, root.renderScale)
+     }
+ 
+     PdfSearchModel {
+@@ -361,8 +361,8 @@ Flickable {
+             Qt.point(currentResultBoundingRect.x, currentResultBoundingRect.y), 0)
+     }
+ 
+-    PdfNavigationStack {
+-        id: navigationStack
++    PdfPageNavigator {
++        id: pageNavigator
+         onJumped: function(page, location, zoom) {
+             root.renderScale = zoom
+             const dx = Math.max(0, location.x * root.renderScale - root.width / 2) - root.contentX
+@@ -379,7 +379,7 @@ Flickable {
+ 
+         property url documentSource: root.document.source
+         onDocumentSourceChanged: {
+-            navigationStack.clear()
++            pageNavigator.clear()
+             root.resetScale()
+             root.contentX = 0
+             root.contentY = 0
+@@ -401,12 +401,12 @@ Flickable {
+         PdfPageImage {
+             id: image
+             document: root.document
+-            currentPage: navigationStack.currentPage
++            currentPage: pageNavigator.currentPage
+             asynchronous: true
+             fillMode: Image.PreserveAspectFit
+             rotation: root.pageRotation
+             anchors.centerIn: parent
+-            property real pageScale: image.paintedWidth / document.pagePointSize(navigationStack.currentPage).width
++            property real pageScale: image.paintedWidth / document.pagePointSize(pageNavigator.currentPage).width
+ 
+             Shape {
+                 anchors.fill: parent
+@@ -441,7 +441,7 @@ Flickable {
+                 model: PdfLinkModel {
+                     id: linkModel
+                     document: root.document
+-                    page: navigationStack.currentPage
++                    page: pageNavigator.currentPage
+                 }
+                 delegate: Shape {
+                     required property rect rect
+@@ -469,7 +469,7 @@ Flickable {
+                     TapHandler {
+                         onTapped: {
+                             if (page >= 0)
+-                                navigationStack.jump(page, Qt.point(0, 0), root.renderScale)
++                                pageNavigator.jump(page, Qt.point(0, 0), root.renderScale)
+                             else
+                                 Qt.openUrlExternally(url)
+                         }
+@@ -507,7 +507,7 @@ Flickable {
+             id: selection
+             anchors.fill: parent
+             document: root.document
+-            page: navigationStack.currentPage
++            page: pageNavigator.currentPage
+             renderScale: image.pageScale == 0 ? 1.0 : image.pageScale
+             fromPoint: textSelectionDrag.centroid.pressPosition
+             toPoint: textSelectionDrag.centroid.position
+@@ -539,7 +539,7 @@ Flickable {
+                         paper.y = 0
+                         root.contentX = centroidOnPage.x - centroidInFlickable.x
+                         root.contentY = centroidOnPage.y - centroidInFlickable.y
+-                        root.renderScale *= ratio // onRenderScaleChanged calls navigationStack.update() so we don't need to here
++                        root.renderScale *= ratio // onRenderScaleChanged calls pageNavigator.update() so we don't need to here
+                         console.log(lcSPV, "contentX/Y adjusted to", root.contentX.toFixed(2), root.contentY.toFixed(2))
+                     } else {
+                         paper.x = 0
+diff --git a/src/pdfquick/qquickpdfnavigationstack.cpp b/src/pdfquick/qquickpdfnavigationstack.cpp
+deleted file mode 100644
+index c36e993d4..000000000
+--- a/src/pdfquick/qquickpdfnavigationstack.cpp
++++ /dev/null
+@@ -1,166 +0,0 @@
+-/****************************************************************************
+-**
+-** Copyright (C) 2022 The Qt Company Ltd.
+-** Contact: https://www.qt.io/licensing/
+-**
+-** This file is part of the QtPDF module of the Qt Toolkit.
+-**
+-** $QT_BEGIN_LICENSE:LGPL$
+-** Commercial License Usage
+-** Licensees holding valid commercial Qt licenses may use this file in
+-** accordance with the commercial license agreement provided with the
+-** Software or, alternatively, in accordance with the terms contained in
+-** a written agreement between you and The Qt Company. For licensing terms
+-** and conditions see https://www.qt.io/terms-conditions. For further
+-** information use the contact form at https://www.qt.io/contact-us.
+-**
+-** GNU Lesser General Public License Usage
+-** Alternatively, this file may be used under the terms of the GNU Lesser
+-** General Public License version 3 as published by the Free Software
+-** Foundation and appearing in the file LICENSE.LGPL3 included in the
+-** packaging of this file. Please review the following information to
+-** ensure the GNU Lesser General Public License version 3 requirements
+-** will be met: https://www.gnu.org/licenses/lgpl-3.0.html.
+-**
+-** GNU General Public License Usage
+-** Alternatively, this file may be used under the terms of the GNU
+-** General Public License version 2.0 or (at your option) the GNU General
+-** Public license version 3 or any later version approved by the KDE Free
+-** Qt Foundation. The licenses are as published by the Free Software
+-** Foundation and appearing in the file LICENSE.GPL2 and LICENSE.GPL3
+-** included in the packaging of this file. Please review the following
+-** information to ensure the GNU General Public License requirements will
+-** be met: https://www.gnu.org/licenses/gpl-2.0.html and
+-** https://www.gnu.org/licenses/gpl-3.0.html.
+-**
+-** $QT_END_LICENSE$
+-**
+-****************************************************************************/
+-
+-#include "qquickpdfnavigationstack_p.h"
+-#include <QLoggingCategory>
+-
+-QT_BEGIN_NAMESPACE
+-
+-Q_LOGGING_CATEGORY(qLcNav, "qt.pdf.navigationstack")
+-
+-/*!
+-    \qmltype PdfNavigationStack
+-//!    \instantiates QQuickPdfNavigationStack
+-    \inqmlmodule QtQuick.Pdf
+-    \ingroup pdf
+-    \brief History of the destinations visited within a PDF Document.
+-    \since 5.15
+-
+-    PdfNavigationStack remembers which destinations the user has visited in a PDF
+-    document, and provides the ability to traverse backward and forward.
+-*/
+-
+-QQuickPdfNavigationStack::QQuickPdfNavigationStack(QObject *parent)
+-    : QObject(parent)
+-{
+-}
+-
+-/*!
+-    \internal
+-*/
+-QQuickPdfNavigationStack::~QQuickPdfNavigationStack() = default;
+-
+-/*!
+-    \internal
+-*/
+-QPdfNavigationStack *QQuickPdfNavigationStack::navStack()
+-{
+-    return static_cast<QPdfNavigationStack *>(qmlExtendedObject(this));
+-}
+-
+-/*!
+-    \qmlmethod void PdfNavigationStack::forward()
+-
+-    Goes back to the page, location and zoom level that was being viewed before
+-    back() was called, and then emits the \l jumped() signal.
+-
+-    If a new destination was pushed since the last time \l back() was called,
+-    the forward() function does nothing, because there is a branch in the
+-    timeline which causes the "future" to be lost.
+-*/
+-
+-/*!
+-    \qmlmethod void PdfNavigationStack::back()
+-
+-    Pops the stack, updates the \l currentPage, \l currentLocation and
+-    \l currentZoom properties to the most-recently-viewed destination, and then
+-    emits the \l jumped() signal.
+-*/
+-
+-/*!
+-    \qmlproperty int PdfNavigationStack::currentPage
+-
+-    This property holds the current page that is being viewed.
+-    If there is no current page, it holds \c -1.
+-*/
+-
+-/*!
+-    \qmlproperty point PdfNavigationStack::currentLocation
+-
+-    This property holds the current location on the page that is being viewed.
+-*/
+-
+-/*!
+-    \qmlproperty real PdfNavigationStack::currentZoom
+-
+-    This property holds the magnification scale on the page that is being viewed.
+-*/
+-
+-/*!
+-    \qmlmethod void PdfNavigationStack::jump(int page, point location, qreal zoom, bool emitJumped)
+-
+-    Adds the given destination, consisting of \a page, \a location, and \a zoom,
+-    to the history of visited locations.  If \a emitJumped is \c false, the
+-    \l jumped() signal will not be emitted.
+-
+-    If forwardAvailable is \c true, calling this function represents a branch
+-    in the timeline which causes the "future" to be lost, and therefore
+-    forwardAvailable will change to \c false.
+-*/
+-
+-/*!
+-    \qmlmethod void PdfNavigationStack::update(int page, point location, qreal zoom)
+-
+-    Modifies the current destination, consisting of \a page, \a location and \a zoom.
+-
+-    This can be called periodically while the user is manually moving around
+-    the document, so that after back() is called, forward() will jump back to
+-    the most-recently-viewed destination rather than the destination that was
+-    last specified by jump().
+-
+-    The \c currentZoomChanged, \c currentPageChanged and \c currentLocationChanged
+-    signals will be emitted if the respective properties are actually changed.
+-    The \l jumped signal is not emitted, because this operation
+-    represents smooth movement rather than a navigational jump.
+-*/
+-
+-/*!
+-    \qmlproperty bool PdfNavigationStack::backAvailable
+-    \readonly
+-
+-    Holds \c true if a \e back destination is available in the history.
+-*/
+-
+-/*!
+-    \qmlproperty bool PdfNavigationStack::forwardAvailable
+-    \readonly
+-
+-    Holds \c true if a \e forward destination is available in the history.
+-*/
+-
+-/*!
+-    \qmlsignal PdfNavigationStack::jumped(int page, point location, qreal zoom)
+-
+-    This signal is emitted when an abrupt jump occurs, to the specified \a page
+-    index, \a location on the page, and \a zoom level; but \e not when simply
+-    scrolling through the document one page at a time. That is, forward(),
+-    back() and jump() always emit this signal; update() does not.
+-*/
+-
+-QT_END_NAMESPACE
+diff --git a/src/pdfquick/qquickpdfnavigationstack_p.h b/src/pdfquick/qquickpdfnavigationstack_p.h
+deleted file mode 100644
+index 8d5958259..000000000
+--- a/src/pdfquick/qquickpdfnavigationstack_p.h
++++ /dev/null
+@@ -1,83 +0,0 @@
+-/****************************************************************************
+-**
+-** Copyright (C) 2022 The Qt Company Ltd.
+-** Contact: https://www.qt.io/licensing/
+-**
+-** This file is part of the QtPDF module of the Qt Toolkit.
+-**
+-** $QT_BEGIN_LICENSE:LGPL$
+-** Commercial License Usage
+-** Licensees holding valid commercial Qt licenses may use this file in
+-** accordance with the commercial license agreement provided with the
+-** Software or, alternatively, in accordance with the terms contained in
+-** a written agreement between you and The Qt Company. For licensing terms
+-** and conditions see https://www.qt.io/terms-conditions. For further
+-** information use the contact form at https://www.qt.io/contact-us.
+-**
+-** GNU Lesser General Public License Usage
+-** Alternatively, this file may be used under the terms of the GNU Lesser
+-** General Public License version 3 as published by the Free Software
+-** Foundation and appearing in the file LICENSE.LGPL3 included in the
+-** packaging of this file. Please review the following information to
+-** ensure the GNU Lesser General Public License version 3 requirements
+-** will be met: https://www.gnu.org/licenses/lgpl-3.0.html.
+-**
+-** GNU General Public License Usage
+-** Alternatively, this file may be used under the terms of the GNU
+-** General Public License version 2.0 or (at your option) the GNU General
+-** Public license version 3 or any later version approved by the KDE Free
+-** Qt Foundation. The licenses are as published by the Free Software
+-** Foundation and appearing in the file LICENSE.GPL2 and LICENSE.GPL3
+-** included in the packaging of this file. Please review the following
+-** information to ensure the GNU General Public License requirements will
+-** be met: https://www.gnu.org/licenses/gpl-2.0.html and
+-** https://www.gnu.org/licenses/gpl-3.0.html.
+-**
+-** $QT_END_LICENSE$
+-**
+-****************************************************************************/
+-
+-#ifndef QQUICKPDFNAVIGATIONSTACK_P_H
+-#define QQUICKPDFNAVIGATIONSTACK_P_H
+-
+-//
+-//  W A R N I N G
+-//  -------------
+-//
+-// This file is not part of the Qt API.  It exists purely as an
+-// implementation detail.  This header file may change from version to
+-// version without notice, or even be removed.
+-//
+-// We mean it.
+-//
+-
+-#include <QtPdfQuick/private/qtpdfquickglobal_p.h>
+-#include <QtPdf/qpdfnavigationstack.h>
+-#include <QtPdf/private/qpdflink_p.h>
+-
+-#include <QQmlEngine>
+-
+-QT_BEGIN_NAMESPACE
+-
+-class Q_PDFQUICK_EXPORT QQuickPdfNavigationStack : public QObject
+-{
+-    Q_OBJECT
+-    QML_EXTENDED(QPdfNavigationStack)
+-    QML_NAMED_ELEMENT(PdfNavigationStack)
+-    QML_ADDED_IN_VERSION(5, 15)
+-
+-public:
+-    explicit QQuickPdfNavigationStack(QObject *parent = nullptr);
+-    ~QQuickPdfNavigationStack() override;
+-
+-private:
+-    QPdfNavigationStack *navStack();
+-
+-    Q_DISABLE_COPY(QQuickPdfNavigationStack)
+-};
+-
+-QT_END_NAMESPACE
+-
+-QML_DECLARE_TYPE(QQuickPdfNavigationStack)
+-
+-#endif // QQUICKPDFNAVIGATIONSTACK_P_H
+diff --git a/src/pdfquick/qquickpdfpagenavigator.cpp b/src/pdfquick/qquickpdfpagenavigator.cpp
+new file mode 100644
+index 000000000..346b49b71
+--- /dev/null
++++ b/src/pdfquick/qquickpdfpagenavigator.cpp
+@@ -0,0 +1,166 @@
++/****************************************************************************
++**
++** Copyright (C) 2022 The Qt Company Ltd.
++** Contact: https://www.qt.io/licensing/
++**
++** This file is part of the QtPDF module of the Qt Toolkit.
++**
++** $QT_BEGIN_LICENSE:LGPL$
++** Commercial License Usage
++** Licensees holding valid commercial Qt licenses may use this file in
++** accordance with the commercial license agreement provided with the
++** Software or, alternatively, in accordance with the terms contained in
++** a written agreement between you and The Qt Company. For licensing terms
++** and conditions see https://www.qt.io/terms-conditions. For further
++** information use the contact form at https://www.qt.io/contact-us.
++**
++** GNU Lesser General Public License Usage
++** Alternatively, this file may be used under the terms of the GNU Lesser
++** General Public License version 3 as published by the Free Software
++** Foundation and appearing in the file LICENSE.LGPL3 included in the
++** packaging of this file. Please review the following information to
++** ensure the GNU Lesser General Public License version 3 requirements
++** will be met: https://www.gnu.org/licenses/lgpl-3.0.html.
++**
++** GNU General Public License Usage
++** Alternatively, this file may be used under the terms of the GNU
++** General Public License version 2.0 or (at your option) the GNU General
++** Public license version 3 or any later version approved by the KDE Free
++** Qt Foundation. The licenses are as published by the Free Software
++** Foundation and appearing in the file LICENSE.GPL2 and LICENSE.GPL3
++** included in the packaging of this file. Please review the following
++** information to ensure the GNU General Public License requirements will
++** be met: https://www.gnu.org/licenses/gpl-2.0.html and
++** https://www.gnu.org/licenses/gpl-3.0.html.
++**
++** $QT_END_LICENSE$
++**
++****************************************************************************/
++
++#include "qquickpdfpagenavigator_p.h"
++#include <QLoggingCategory>
++
++QT_BEGIN_NAMESPACE
++
++Q_LOGGING_CATEGORY(qLcNav, "qt.pdf.pagenavigator")
++
++/*!
++    \qmltype PdfPageNavigator
++//!    \instantiates QQuickPdfPageNavigator
++    \inqmlmodule QtQuick.Pdf
++    \ingroup pdf
++    \brief History of the destinations visited within a PDF Document.
++    \since 5.15
++
++    PdfPageNavigator remembers which destinations the user has visited in a PDF
++    document, and provides the ability to traverse backward and forward.
++*/
++
++QQuickPdfPageNavigator::QQuickPdfPageNavigator(QObject *parent)
++    : QObject(parent)
++{
++}
++
++/*!
++    \internal
++*/
++QQuickPdfPageNavigator::~QQuickPdfPageNavigator() = default;
++
++/*!
++    \internal
++*/
++QPdfPageNavigator *QQuickPdfPageNavigator::navStack()
++{
++    return static_cast<QPdfPageNavigator *>(qmlExtendedObject(this));
++}
++
++/*!
++    \qmlmethod void PdfPageNavigator::forward()
++
++    Goes back to the page, location and zoom level that was being viewed before
++    back() was called, and then emits the \l jumped() signal.
++
++    If a new destination was pushed since the last time \l back() was called,
++    the forward() function does nothing, because there is a branch in the
++    timeline which causes the "future" to be lost.
++*/
++
++/*!
++    \qmlmethod void PdfPageNavigator::back()
++
++    Pops the stack, updates the \l currentPage, \l currentLocation and
++    \l currentZoom properties to the most-recently-viewed destination, and then
++    emits the \l jumped() signal.
++*/
++
++/*!
++    \qmlproperty int PdfPageNavigator::currentPage
++
++    This property holds the current page that is being viewed.
++    If there is no current page, it holds \c -1.
++*/
++
++/*!
++    \qmlproperty point PdfPageNavigator::currentLocation
++
++    This property holds the current location on the page that is being viewed.
++*/
++
++/*!
++    \qmlproperty real PdfPageNavigator::currentZoom
++
++    This property holds the magnification scale on the page that is being viewed.
++*/
++
++/*!
++    \qmlmethod void PdfPageNavigator::jump(int page, point location, qreal zoom, bool emitJumped)
++
++    Adds the given destination, consisting of \a page, \a location, and \a zoom,
++    to the history of visited locations.  If \a emitJumped is \c false, the
++    \l jumped() signal will not be emitted.
++
++    If forwardAvailable is \c true, calling this function represents a branch
++    in the timeline which causes the "future" to be lost, and therefore
++    forwardAvailable will change to \c false.
++*/
++
++/*!
++    \qmlmethod void PdfPageNavigator::update(int page, point location, qreal zoom)
++
++    Modifies the current destination, consisting of \a page, \a location and \a zoom.
++
++    This can be called periodically while the user is manually moving around
++    the document, so that after back() is called, forward() will jump back to
++    the most-recently-viewed destination rather than the destination that was
++    last specified by jump().
++
++    The \c currentZoomChanged, \c currentPageChanged and \c currentLocationChanged
++    signals will be emitted if the respective properties are actually changed.
++    The \l jumped signal is not emitted, because this operation
++    represents smooth movement rather than a navigational jump.
++*/
++
++/*!
++    \qmlproperty bool PdfPageNavigator::backAvailable
++    \readonly
++
++    Holds \c true if a \e back destination is available in the history.
++*/
++
++/*!
++    \qmlproperty bool PdfPageNavigator::forwardAvailable
++    \readonly
++
++    Holds \c true if a \e forward destination is available in the history.
++*/
++
++/*!
++    \qmlsignal PdfPageNavigator::jumped(int page, point location, qreal zoom)
++
++    This signal is emitted when an abrupt jump occurs, to the specified \a page
++    index, \a location on the page, and \a zoom level; but \e not when simply
++    scrolling through the document one page at a time. That is, forward(),
++    back() and jump() always emit this signal; update() does not.
++*/
++
++QT_END_NAMESPACE
+diff --git a/src/pdfquick/qquickpdfpagenavigator_p.h b/src/pdfquick/qquickpdfpagenavigator_p.h
+new file mode 100644
+index 000000000..b3c1c7ceb
+--- /dev/null
++++ b/src/pdfquick/qquickpdfpagenavigator_p.h
+@@ -0,0 +1,83 @@
++/****************************************************************************
++**
++** Copyright (C) 2022 The Qt Company Ltd.
++** Contact: https://www.qt.io/licensing/
++**
++** This file is part of the QtPDF module of the Qt Toolkit.
++**
++** $QT_BEGIN_LICENSE:LGPL$
++** Commercial License Usage
++** Licensees holding valid commercial Qt licenses may use this file in
++** accordance with the commercial license agreement provided with the
++** Software or, alternatively, in accordance with the terms contained in
++** a written agreement between you and The Qt Company. For licensing terms
++** and conditions see https://www.qt.io/terms-conditions. For further
++** information use the contact form at https://www.qt.io/contact-us.
++**
++** GNU Lesser General Public License Usage
++** Alternatively, this file may be used under the terms of the GNU Lesser
++** General Public License version 3 as published by the Free Software
++** Foundation and appearing in the file LICENSE.LGPL3 included in the
++** packaging of this file. Please review the following information to
++** ensure the GNU Lesser General Public License version 3 requirements
++** will be met: https://www.gnu.org/licenses/lgpl-3.0.html.
++**
++** GNU General Public License Usage
++** Alternatively, this file may be used under the terms of the GNU
++** General Public License version 2.0 or (at your option) the GNU General
++** Public license version 3 or any later version approved by the KDE Free
++** Qt Foundation. The licenses are as published by the Free Software
++** Foundation and appearing in the file LICENSE.GPL2 and LICENSE.GPL3
++** included in the packaging of this file. Please review the following
++** information to ensure the GNU General Public License requirements will
++** be met: https://www.gnu.org/licenses/gpl-2.0.html and
++** https://www.gnu.org/licenses/gpl-3.0.html.
++**
++** $QT_END_LICENSE$
++**
++****************************************************************************/
++
++#ifndef QQUICKPDFPAGENAVIGATOR_P_H
++#define QQUICKPDFPAGENAVIGATOR_P_H
++
++//
++//  W A R N I N G
++//  -------------
++//
++// This file is not part of the Qt API.  It exists purely as an
++// implementation detail.  This header file may change from version to
++// version without notice, or even be removed.
++//
++// We mean it.
++//
++
++#include <QtPdfQuick/private/qtpdfquickglobal_p.h>
++#include <QtPdf/qpdfpagenavigator.h>
++#include <QtPdf/private/qpdflink_p.h>
++
++#include <QQmlEngine>
++
++QT_BEGIN_NAMESPACE
++
++class Q_PDFQUICK_EXPORT QQuickPdfPageNavigator : public QObject
++{
++    Q_OBJECT
++    QML_EXTENDED(QPdfPageNavigator)
++    QML_NAMED_ELEMENT(PdfPageNavigator)
++    QML_ADDED_IN_VERSION(5, 15)
++
++public:
++    explicit QQuickPdfPageNavigator(QObject *parent = nullptr);
++    ~QQuickPdfPageNavigator() override;
++
++private:
++    QPdfPageNavigator *navStack();
++
++    Q_DISABLE_COPY(QQuickPdfPageNavigator)
++};
++
++QT_END_NAMESPACE
++
++QML_DECLARE_TYPE(QQuickPdfPageNavigator)
++
++#endif // QQUICKPDFPAGENAVIGATOR_P_H
+diff --git a/src/pdfwidgets/qpdfview.cpp b/src/pdfwidgets/qpdfview.cpp
+index bab70c773..ce4c42469 100644
+--- a/src/pdfwidgets/qpdfview.cpp
++++ b/src/pdfwidgets/qpdfview.cpp
+@@ -47,7 +47,7 @@
+ #include <QPainter>
+ #include <QPaintEvent>
+ #include <QPdfDocument>
+-#include <QPdfNavigationStack>
++#include <QPdfPageNavigator>
+ #include <QScreen>
+ #include <QScrollBar>
+ #include <QScroller>
+@@ -57,7 +57,7 @@ QT_BEGIN_NAMESPACE
+ QPdfViewPrivate::QPdfViewPrivate(QPdfView *q)
+     : q_ptr(q)
+     , m_document(nullptr)
+-    , m_pageNavigation(nullptr)
++    , m_pageNavigator(nullptr)
+     , m_pageRenderer(nullptr)
+     , m_pageMode(QPdfView::PageMode::SinglePage)
+     , m_zoomMode(QPdfView::ZoomMode::Custom)
+@@ -74,7 +74,7 @@ void QPdfViewPrivate::init()
+ {
+     Q_Q(QPdfView);
+ 
+-    m_pageNavigation = new QPdfNavigationStack(q);
++    m_pageNavigator = new QPdfPageNavigator(q);
+     m_pageRenderer = new QPdfPageRenderer(q);
+     m_pageRenderer->setRenderMode(QPdfPageRenderer::RenderMode::MultiThreaded);
+ }
+@@ -130,7 +130,7 @@ void QPdfViewPrivate::setViewport(QRect viewport)
+     if (m_pageMode == QPdfView::PageMode::MultiPage) {
+         // An imaginary, 2px height line at the upper half of the viewport, which is used to
+         // determine which page is currently located there -> we propagate that as 'current' page
+-        // to the QPdfNavigationStack object
++        // to the QPdfPageNavigator object
+         const QRect currentPageLine(m_viewport.x(), m_viewport.y() + m_viewport.height() * 0.4, m_viewport.width(), 2);
+ 
+         int currentPage = 0;
+@@ -142,10 +142,10 @@ void QPdfViewPrivate::setViewport(QRect viewport)
+             }
+         }
+ 
+-        if (currentPage != m_pageNavigation->currentPage()) {
++        if (currentPage != m_pageNavigator->currentPage()) {
+             m_blockPageScrolling = true;
+             // ΤODO give location on the page
+-            m_pageNavigation->jump(currentPage, {}, m_zoomFactor);
++            m_pageNavigator->jump(currentPage, {}, m_zoomFactor);
+             m_blockPageScrolling = false;
+         }
+     }
+@@ -216,8 +216,8 @@ QPdfViewPrivate::DocumentLayout QPdfViewPrivate::calculateDocumentLayout() const
+ 
+     int totalWidth = 0;
+ 
+-    const int startPage = (m_pageMode == QPdfView::PageMode::SinglePage ? m_pageNavigation->currentPage() : 0);
+-    const int endPage = (m_pageMode == QPdfView::PageMode::SinglePage ? m_pageNavigation->currentPage() + 1 : pageCount);
++    const int startPage = (m_pageMode == QPdfView::PageMode::SinglePage ? m_pageNavigator->currentPage() : 0);
++    const int endPage = (m_pageMode == QPdfView::PageMode::SinglePage ? m_pageNavigator->currentPage() + 1 : pageCount);
+ 
+     // calculate page sizes
+     for (int page = startPage; page < endPage; ++page) {
+@@ -307,7 +307,7 @@ QPdfView::QPdfView(QWidget *parent)
+ 
+     d->init();
+ 
+-    connect(d->m_pageNavigation, &QPdfNavigationStack::currentPageChanged, this,
++    connect(d->m_pageNavigator, &QPdfPageNavigator::currentPageChanged, this,
+             [d](int page){ d->currentPageChanged(page); });
+ 
+     connect(d->m_pageRenderer, &QPdfPageRenderer::pageRendered, this,
+@@ -367,11 +367,11 @@ QPdfDocument *QPdfView::document() const
+ /*!
+     This accessor returns the navigation stack that will handle back/forward navigation.
+ */
+-QPdfNavigationStack *QPdfView::pageNavigation() const
++QPdfPageNavigator *QPdfView::pageNavigator() const
+ {
+     Q_D(const QPdfView);
+ 
+-    return d->m_pageNavigation;
++    return d->m_pageNavigator;
+ }
+ 
+ /*!
+diff --git a/src/pdfwidgets/qpdfview.h b/src/pdfwidgets/qpdfview.h
+index 7571aec9a..899113294 100644
+--- a/src/pdfwidgets/qpdfview.h
++++ b/src/pdfwidgets/qpdfview.h
+@@ -46,7 +46,7 @@
+ QT_BEGIN_NAMESPACE
+ 
+ class QPdfDocument;
+-class QPdfNavigationStack;
++class QPdfPageNavigator;
+ class QPdfViewPrivate;
+ 
+ class Q_PDF_WIDGETS_EXPORT QPdfView : public QAbstractScrollArea
+@@ -85,7 +85,7 @@ public:
+     void setDocument(QPdfDocument *document);
+     QPdfDocument *document() const;
+ 
+-    QPdfNavigationStack *pageNavigation() const;
++    QPdfPageNavigator *pageNavigator() const;
+ 
+     PageMode pageMode() const;
+     ZoomMode zoomMode() const;
+diff --git a/src/pdfwidgets/qpdfview_p.h b/src/pdfwidgets/qpdfview_p.h
+index 4e6a68581..91198e2d3 100644
+--- a/src/pdfwidgets/qpdfview_p.h
++++ b/src/pdfwidgets/qpdfview_p.h
+@@ -91,7 +91,7 @@ public:
+ 
+     QPdfView *q_ptr;
+     QPointer<QPdfDocument> m_document;
+-    QPdfNavigationStack* m_pageNavigation;
++    QPdfPageNavigator* m_pageNavigator;
+     QPdfPageRenderer *m_pageRenderer;
+ 
+     QPdfView::PageMode m_pageMode;
+diff --git a/tests/auto/pdf/CMakeLists.txt b/tests/auto/pdf/CMakeLists.txt
+index c35d8055b..e2ba73c6e 100644
+--- a/tests/auto/pdf/CMakeLists.txt
++++ b/tests/auto/pdf/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ add_subdirectory(qpdfbookmarkmodel)
+-#add_subdirectory(qpdfpagenavigation)
++#add_subdirectory(qpdfpagenavigator)
+ add_subdirectory(qpdfpagerenderer)
+ if(TARGET Qt::PrintSupport)
+     add_subdirectory(qpdfdocument)
+-- 
+cgit v1.2.1
+
