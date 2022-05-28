@@ -1,12 +1,12 @@
           MODULE=qt6-datavis3d
-         VERSION=6.2.2
+         VERSION=6.3.0
           SOURCE=qtdatavis3d-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtdatavis3d-everywhere-src-$VERSION
-      SOURCE_VFY=sha256:3394df51e86c11edc3c2727856f5ad79a720d72a1abc24b88f11e755d872f123
+      SOURCE_VFY=sha256:09512ef3b2b28ff8defaea96498736418ada008f3778220a9185c09dd59e0d8d
         WEB_SITE=http://qt-project.org
          ENTERED=20211102
-         UPDATED=20211207
+         UPDATED=20220528
            SHORT="Qt6 Data Visualization module"
 cat << EOF
 Qt6 Data Visualization module.
