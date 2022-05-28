@@ -36,4 +36,5 @@ optional_depends sqlite       "-DFEATURE_system_sqlite=ON"     "-DFEATURE_system
 optional_depends %MYSQL       "-DFEATURE_sql_mysql=ON"         "-DFEATURE_sql_mysql=OFF"         "for mysql database support"
 optional_depends postgresql   "-DFEATURE_sql_psql=ON"          "-DFEATURE_sql_psql=OFF"          "for postgresql database support"
 optional_depends unixODBC     "-DFEATURE_sql_odbc=ON"          "-DFEATURE_sql_odbc=OFF"          "for unixODBC support"
-optional_depends assimp       "-DFEATURE_system_assimp=ON"     "-DFEATURE_system_assimp=OFF"     "use system provided assimp, else use qt provided" "y"
+
+optional_depends md4c "" "" "for markdown support"

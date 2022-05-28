@@ -1,3 +1,5 @@
+sedit 's:/bin/ls:/usr/bin/ls:g' src/corelib/CMakeLists.txt util/cmake/tests/data/quoted.pro &&
+
 OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DFEATURE_optimize_full=ON  \
         -DCMAKE_INSTALL_PREFIX=/usr \
