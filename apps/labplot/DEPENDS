@@ -1,3 +1,8 @@
 depends qt5
 depends hdf5
 depends gsl
+
+optional_depends cantor   "" "" "for additional math/computing support"
+optional_depends libcerf  "" "" "for complex error function support"
+optional_depends matio    "" "" "for Matlab file support"
+optional_depends discount "" "" "for markdown support"
