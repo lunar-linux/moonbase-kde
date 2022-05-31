@@ -1,6 +1,6 @@
 # Getting around error "adding symbols: malformed archive" at the very 
 # last step of the build assembling the .a
-ulimit -u 8192 &&
+ulimit -n 4092 &&
 
 . /etc/profile.d/qt5.rc &&
 
