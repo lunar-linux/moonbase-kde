@@ -12,6 +12,7 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DINSTALL_INCLUDEDIR=include/qt6 \
         -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
         -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \
+        -DINSTALL_TRANSLATIONSDIR=translations \
         -DINSTALL_SYSCONFDIR=/etc/xdg \
         -DFEATURE_mtdev=OFF"
 
@@ -23,8 +24,8 @@ cmake --install build &&
 # Remove pointing to the src build directory files.
 find /usr/lib/qt6 -type f -name '*Qt6*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
 find /usr/lib/qt6 -type f -name '*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
-find /usr/lib/ -type f -name '*Qt6*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
-find /usr/lib/ -type f -name '*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
+find /usr/lib/qt6 -type f -name '*Qt6*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
+find /usr/lib/qt6 -type f -name '*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
 
 cat > qt6.rc << EOF &&
   export Qt6_DIR=/usr
