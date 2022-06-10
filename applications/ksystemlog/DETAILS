@@ -1,12 +1,12 @@
           MODULE=ksystemlog
-         VERSION=22.04.1
+         VERSION=22.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:d761a1e42d02479311bbe6a57724a2db5c9011615a8ce83813fe63fa9822eb36
+      SOURCE_VFY=sha256:7f9f21e211511a59c660897a3ed0f5e59591b829e5daefc3f69ced2fe998caab
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20151124
-         UPDATED=20220512
+         UPDATED=20220609
            SHORT="A system log viewer"
 
 cat << EOF

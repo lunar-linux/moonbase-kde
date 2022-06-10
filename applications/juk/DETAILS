@@ -1,12 +1,12 @@
           MODULE=juk
-         VERSION=22.04.1
+         VERSION=22.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:a0aeeafedacc9b9569152e334e83c76dcd1dbb9b201664ad52f56371da8b2cb1
+      SOURCE_VFY=sha256:6e4383c17e8e3210d24164ab7ec38d2309ae480acba57f64e7e90bd91ec28286
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/multimedia/juk/
          ENTERED=20120801
-         UPDATED=20220512
+         UPDATED=20220609
            SHORT="An audio jukebox"
 
 cat << EOF
