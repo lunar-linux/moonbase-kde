@@ -1,12 +1,12 @@
           MODULE=syntax-highlighting
-         VERSION=5.94.0
+         VERSION=5.95.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:cf871332a50355836919fdd833a82c32b3d5fe7fea8fa3e58714c39c8ddde5a6
+      SOURCE_VFY=sha256:3d9ccad9761f2a3def77c670c8d1bd7738a156b97f021b5ee6ac03e55f474802
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/syntax-highlighting
          ENTERED=20171130
-         UPDATED=20220514
+         UPDATED=20220613
            SHORT="highlight syntax"
 
 cat << EOF

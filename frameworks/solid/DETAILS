@@ -1,12 +1,12 @@
           MODULE=solid
-         VERSION=5.94.0
+         VERSION=5.95.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:9d8ed401e36b6a4b9e51438c8e2d359129b9d6149deb8240cb894b1128fa1107
+      SOURCE_VFY=sha256:4c4a09117da0cc181b257f56cd00e2e99423594e107817c8217492358769366e
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/solid
          ENTERED=20150205
-         UPDATED=20220514
+         UPDATED=20220613
            SHORT="desktop hardware abstraction"
 
 cat << EOF
