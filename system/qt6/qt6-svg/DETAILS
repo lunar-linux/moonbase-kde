@@ -1,12 +1,12 @@
           MODULE=qt6-svg
-         VERSION=6.3.0
+         VERSION=6.3.1
           SOURCE=qtsvg-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtsvg-everywhere-src-$VERSION
-      SOURCE_VFY=sha256:3164504d7e3f640439308235739b112605ab5fc9cc517ca0b28f9fb93a8db0e3
+      SOURCE_VFY=sha256:7b19f418e6f7b8e23344082dd04440aacf5da23c5a73980ba22ae4eba4f87df7
         WEB_SITE=http://qt-project.org
          ENTERED=20211102
-         UPDATED=20220528
+         UPDATED=20220616
            SHORT="Classes for displaying the contents of SVG files"
 cat << EOF
 Classes for displaying the contents of SVG files.
