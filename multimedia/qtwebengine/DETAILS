@@ -1,12 +1,12 @@
           MODULE=qtwebengine
-         VERSION=5.15.4
+         VERSION=5.15.5
           SOURCE=qtwebengine-everywhere-opensource-src-${VERSION}.tar.xz
       SOURCE_URL=https://mirrors.dotsrc.org/qtproject/official_releases/qt/${VERSION%.*}/$VERSION/submodules/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-everywhere-src-${VERSION}
-      SOURCE_VFY=sha256:8a2a903bcf2c45d8981f90fdfe96a9413d6fcfa0510e45c407a41a9b6bda0fca
+      SOURCE_VFY=sha256:27d0c7b8b0f17714b12698962493e2477fcda01bf369c805e4bde16c78ca507d
         WEB_SITE=https://www.qt.io
          ENTERED=20191113
-         UPDATED=20220523
+         UPDATED=20220619
            SHORT="integrate chromium web capabilities into Qt"
 cat << EOF
 QtWebEngine integrates chromium's web capabilities into Qt.
