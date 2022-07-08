@@ -1,12 +1,12 @@
           MODULE=kcron
-         VERSION=22.04.2
+         VERSION=22.04.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:904cf5625e7430eccb8ae39bd8cc280aeba3fcc911b7557b5dcb639ddf0301cd
+      SOURCE_VFY=sha256:35f7d9de4f445b2848b4f46fb0bd8bd07313d3200e4ff0dd22a9158a1d0c37fc
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://userbase.kde.org/KCron
          ENTERED=20130814
-         UPDATED=20220609
+         UPDATED=20220707
            SHORT="A tool for running applications in the background"
 
 cat << EOF
