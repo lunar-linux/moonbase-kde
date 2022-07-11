@@ -1,12 +1,12 @@
           MODULE=kcontacts
-         VERSION=5.95.0
+         VERSION=5.96.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:10d73320a5548a127f9015ffda0c739a32f69da9460fc28f5ae0427f60424dc9
+      SOURCE_VFY=sha256:4154c406fec42171a91a5d30fcd8456f6809eac04178fa2cf3f8384cd9e1b51c
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://userbase.kde.org/KCron
          ENTERED=20151122
-         UPDATED=20220613
+         UPDATED=20220711
            SHORT="Address book API for KDE"
 
 cat << EOF

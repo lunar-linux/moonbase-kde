@@ -1,12 +1,12 @@
           MODULE=krunner
-         VERSION=5.95.0
+         VERSION=5.96.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:60d1408a5e32af268e563da31bf0fbdec31ea9f1331a1aae7e6b990814601670
+      SOURCE_VFY=sha256:935efb9ec69d9c99208e6a4b3ff3dcb6f5c773acd332846a4d60d5c461b5a271
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/krunner
          ENTERED=20150205
-         UPDATED=20220613
+         UPDATED=20220711
            SHORT="Framework for Plasma runners"
 
 cat << EOF
