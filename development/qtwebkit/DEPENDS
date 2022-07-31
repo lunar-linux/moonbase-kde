@@ -4,4 +4,4 @@ depends leveldb
 depends ruby
 depends qt5
 
-optional_depends woff2 "" "" "for open font format support"
+optional_depends woff2 "-DUSE_WOFF2=ON" "-DUSE_WOFF2=OFF" "for open font format support"
