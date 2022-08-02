@@ -1,12 +1,12 @@
           MODULE=kde-gtk-config
-         VERSION=5.25.2
+         VERSION=5.25.4
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
-      SOURCE_VFY=sha256:78bf99a0d9896d65b4fdf12362f7bfea81d9941bf6b9417602235690bc14b2ec
+      SOURCE_VFY=sha256:8832dd6cb9305cf8024b077a63416da5d1f0918df5a0dc2283fb98accf2e990d
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/kde-gtk-config
          ENTERED=20150527
-         UPDATED=20220707
+         UPDATED=20220802
            SHORT="GTK2 and GTK3 Configurator for KDE"
 
 cat << EOF
