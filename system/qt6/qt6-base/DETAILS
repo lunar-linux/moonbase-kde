@@ -4,6 +4,7 @@
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtbase-everywhere-src-$VERSION
       SOURCE_VFY=sha256:0a64421d9c2469c2c48490a032ab91d547017c9cc171f3f8070bc31888f24e03
+   MODULE_PREFIX=${QT6_PREFIX:-/usr}
         WEB_SITE=http://qt-project.org
          ENTERED=20211101
          UPDATED=20220616
