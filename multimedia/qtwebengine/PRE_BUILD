@@ -6,4 +6,8 @@ sed -e '/link_pulseaudio/s/false/true/' -i src/3rdparty/chromium/media/media_opt
 
 sed -i 's/NINJAJOBS/NINJA_JOBS/' src/core/gn_run.pro &&
 
-find -type f -name "*.pr[io]" | xargs sed -i -e 's|INCLUDEPATH += |&$$QTWEBENGINE_ROOT/include |'
+find -type f -name "*.pr[io]" | xargs sed -i -e 's|INCLUDEPATH += |&$$QTWEBENGINE_ROOT/include |' &&
+
+# It needed size_t for these two files else the build tanked
+sedit 's|std::max|std::max<size_t>|' src/3rdparty/chromium/third_party/abseil-cpp/absl/debugging/failure_signal_handler.cc \
+                                     src/3rdparty/chromium/third_party/breakpad/breakpad/src/client/linux/handler/exception_handler.cc

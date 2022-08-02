@@ -11,7 +11,7 @@ OPTS+=" -libdir /usr/lib/qt5/$MODULE" &&
 mkdir build &&
 cd    build &&
 
-qmake .. -- -system-ffmpeg -webengine-kerberos -proprietary-codecs -webengine-icu -webp -webengine-webrtc -spellchecker &&
+qmake-qt5 .. -- -system-ffmpeg -webengine-kerberos -proprietary-codecs -webengine-icu -webp -webengine-webrtc -spellchecker &&
 
 default_make &&
 
