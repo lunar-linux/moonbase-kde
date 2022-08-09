@@ -1,12 +1,12 @@
           MODULE=neochat
-         VERSION=22.04
+         VERSION=22.06
           SOURCE=$MODULE-v$VERSION.tar.bz2
-      SOURCE_URL=https://invent.kde.org/network/neochat/-/archive/v22.04/
+      SOURCE_URL=https://invent.kde.org/network/neochat/-/archive/v$VERSION/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-v$VERSION
-      SOURCE_VFY=sha256:0d532cbfa084a932ad70f6ed2b80ac1e7564a8716ce967530c9c77bce1ab9b78
+      SOURCE_VFY=sha256:fddbcce7c50f60b9be49a95db38c0577624e030f23a2deeb33c3bf71c499e53c
         WEB_SITE=https://apps.kde.org/neochat
          ENTERED=20210720
-         UPDATED=20220424
+         UPDATED=20220809
            SHORT="a Matrix client"
 
 cat << EOF
