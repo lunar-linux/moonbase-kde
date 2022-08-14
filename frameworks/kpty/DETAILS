@@ -1,12 +1,12 @@
           MODULE=kpty
-         VERSION=5.96.0
+         VERSION=5.97.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:3732905762c4956e7af08b925c81e55bb4fced92ebf7ed3929866d88cdde5c97
+      SOURCE_VFY=sha256:87c5a63d9d2984fa9ab439d89e5d6f51744185a3e3f5e33b5d84cc18e8280ac4
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kpty
          ENTERED=20150205
-         UPDATED=20220711
+         UPDATED=20220814
            SHORT="interfacing with pseudo terminal devices"
 
 cat << EOF
