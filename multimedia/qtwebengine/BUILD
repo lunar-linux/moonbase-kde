@@ -1,6 +1,6 @@
 # Getting around error "adding symbols: malformed archive" at the very 
 # last step of the build assembling the .a
-ulimit -n 4092 &&
+#ulimit -n 4092 &&
 
 . /etc/profile.d/qt5.rc &&
 
@@ -11,7 +11,7 @@ OPTS+=" -libdir /usr/lib/qt5/$MODULE" &&
 mkdir build &&
 cd    build &&
 
-qmake-qt5 .. -- -system-ffmpeg -webengine-kerberos -proprietary-codecs -webengine-icu -webp -webengine-webrtc -spellchecker &&
+qmake-qt5 .. -- -system-ffmpeg -proprietary-codecs -webengine-icu -webp -spellchecker &&
 
 default_make &&
 
