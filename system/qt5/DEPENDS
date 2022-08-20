@@ -1,5 +1,6 @@
 depends zlib
 depends pcre2
+depends icu4c
 depends %X
 depends xinput
 depends xcb-proto
@@ -28,7 +29,6 @@ optional_depends alsa-lib   "-alsa"              "-no-alsa"       "for alsa audi
 optional_depends pulseaudio "-pulseaudio"        "-no-pulseaudio" "for pulseaudio support" "y"
 optional_depends cups       "-cups"              "-no-cups"       "for printing support, needed by kdelibs" "y"
 optional_depends mtdev      "-mtdev"             "-no-mtdev"      "for Multitouch Protocol support" "n"
-optional_depends icu4c      "-icu"               "-no-icu"        "for International Components for Unicode support,${PROBLEM_COLOR} required for QtWebKit ${DEFAULT_COLOR}" "y"
 
 optional_depends sqlite \
                  "-system-sqlite -plugin-sql-sqlite" \
