@@ -1,4 +1,6 @@
 depends media-player-info
-depends udisks2
 depends upower
 depends extra-cmake-modules
+
+optional_depends udisks2 "BUILD_DEVICE_BACKEND_udisks2=ON" "BUILD_DEVICE_BACKEND_udisks2=OFF" y
+
