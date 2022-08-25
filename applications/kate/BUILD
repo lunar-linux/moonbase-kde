@@ -2,8 +2,6 @@
 
 OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=1"
 
-sedit "47i IconThemes" CMakeLists.txt &&
-
 default_cmake_build &&
 
 # With X-DBUS-StartupType=Multi kinit gets confused so we just set to none.

@@ -1,0 +1,13 @@
+          MODULE=ksanecore
+         VERSION=22.08.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:7f4ae07e7396fc11283e971c5465cb52bf384c4995c615d8f71ba41065f7209f
+        WEB_SITE=https://konsole.kde.org/
+         ENTERED=20220820
+         UPDATED=20220819
+           SHORT="logic to interface scanners"
+
+cat << EOF
+A logic interface to scanners.
+EOF

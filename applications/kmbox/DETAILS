@@ -1,12 +1,12 @@
           MODULE=kmbox
-         VERSION=22.04.3
+         VERSION=22.08.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:2fb6714b8988793f9d79ce4ed45f1768ccfcea1806eb35b164570d3bbf197134
+      SOURCE_VFY=sha256:298d1b625f61f3810529d214f77bc20c77e2fed2d2f017d1c68e86644a203c53
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/kmbox
          ENTERED=20151122
-         UPDATED=20220707
+         UPDATED=20220819
            SHORT="Library for accessing mail storages in MBox format"
 
 cat << EOF
