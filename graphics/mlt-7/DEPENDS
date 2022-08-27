@@ -1,5 +1,6 @@
 depends ffmpeg
 depends swig
+depends python
 depends frei0r-plugins
 depends ladspa_sdk
 depends qt5
@@ -14,7 +15,3 @@ optional_depends %JAVA_SDK  "-DSWIG_JAVA=ON"      "-DSWIG_JAVA=OFF"      "to bui
 optional_depends rtaudio    "-DMOD_RTAUDIO=ON"    "-DMOD_RTAUDIO=OFF"    "for the real time audio support"
 optional_depends vid.stab   "-DMOD_VIDSTAB=ON"    "-DMOD_VIDSTAB=OFF"    "for video stabilization support"
 optional_depends rubberband "-DMOD_RUBBERBAND=ON" "-DMOD_RUBBERBAND=OFF" "for audio manipulation support"
-optional_depends python     "-DSWIG_PYTHON=ON"    "-DSWIG_PYTHON=OFF"    "for python bindings support"
-
-#optional_depends perl       "-DSWIG_PERL=ON"      "-DSWIG_PERL=OFF"      "for perl bindings support"
-#optional_depends ruby       "-DSWIG_RUBY=ON"      "-DSWIG_RUBY=OFF"      "for ruby bindings support"
