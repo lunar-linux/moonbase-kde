@@ -1,12 +1,12 @@
           MODULE=breeze-gtk
-         VERSION=5.25.4
+         VERSION=5.25.5
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
-      SOURCE_VFY=sha256:b1928ba6b835b4ec298468e9523c95934912febf877a22ebdbcb5b251c392af5
+      SOURCE_VFY=sha256:b0aefc853399c23a120a7b59294de3776fcd7f21b53fd53f7b8f8020fcc74872
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/breeze-gtk
          ENTERED=20151210
-         UPDATED=20220802
+         UPDATED=20220906
            SHORT="Breeze widget theme for GTK 2 and 3"
 
 cat << EOF
