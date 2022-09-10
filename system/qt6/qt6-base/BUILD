@@ -13,7 +13,7 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
         -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \
         -DINSTALL_TRANSLATIONSDIR=share/doc/translations \
-        -DINSTALL_SYSCONFDIR=/etc/xdg \
+        -DINSTALL_SYSCONFDIR=/etc/xdg/qt6 \
         -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON \
         -DFEATURE_mtdev=OFF"
 

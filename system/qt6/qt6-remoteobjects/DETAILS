@@ -1,12 +1,12 @@
           MODULE=qt6-remoteobjects
-         VERSION=6.3.1
+         VERSION=6.3.2
           SOURCE=qtremoteobjects-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtremoteobjects-everywhere-src-$VERSION
-      SOURCE_VFY=sha256:ea6d038b11c60981de0bd39a6091a59abf7d031e37bfc592b31be1217bef4ca6
+      SOURCE_VFY=sha256:512b8b017a6340eb2a3a18d13229a6578683ace26ea6c81c89a89008d91e2b25
         WEB_SITE=http://qt-project.org
          ENTERED=20211102
-         UPDATED=20220616
+         UPDATED=20220909
            SHORT="Inter-process communication (IPC) module developed for Qt"
 cat << EOF
 Inter-process communication (IPC) module developed for Qt.

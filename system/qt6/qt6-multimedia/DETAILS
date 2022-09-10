@@ -1,12 +1,12 @@
           MODULE=qt6-multimedia
-         VERSION=6.3.1
+         VERSION=6.3.2
           SOURCE=qtmultimedia-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtmultimedia-everywhere-src-$VERSION
-      SOURCE_VFY=sha256:7e03242aadd634ff2d9fcf08948290f03da3d9a5012369d908da89f82b1d7336
+      SOURCE_VFY=sha256:7f6829aa4509e23a9804260b6d859531b20a806c4dadedfd2c0c7dd314c01c43
         WEB_SITE=http://qt-project.org
          ENTERED=20211101
-         UPDATED=20220616
+         UPDATED=20220909
            SHORT="Classes for audio, video, radio and camera functionality"
 cat << EOF
 Classes for audio, video, radio and camera functionality.
