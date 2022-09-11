@@ -1,12 +1,12 @@
           MODULE=kdoctools
-         VERSION=5.97.0
+         VERSION=5.98.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:61ac72b2d338cddc6da57b9097287303117e0d49ccd1c717f69f38ac01150af6
+      SOURCE_VFY=sha256:1a32f311d63d0cf4a286d1e2cac87085da58656196b78cd858555bdfb492f779
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kcodecs
          ENTERED=20150205
-         UPDATED=20220814
+         UPDATED=20220911
            SHORT="create documentation from docbook"
 
 cat << EOF

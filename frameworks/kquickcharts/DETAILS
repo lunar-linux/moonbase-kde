@@ -1,12 +1,12 @@
           MODULE=kquickcharts
-         VERSION=5.97.0
+         VERSION=5.98.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:c12a245bfe92b92be4a8af4c12234ee55270b3b148720097c58b6f388a9f5fec
+      SOURCE_VFY=sha256:13caf8ad428fd96fb9c57815b8eba32586a72d65b02effbacaf14b869c2f94f6
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kquickcharts
          ENTERED=20200112
-         UPDATED=20220814
+         UPDATED=20220911
            SHORT="QtQuick plugin providing high-performance charts"
 
 cat << EOF
