@@ -5,6 +5,7 @@ depends xrdb
 depends xsetroot
 depends iso-codes
 depends extra-cmake-modules
+depends kscreenlocker
 depends plasma-framework
 depends kdoctools
 depends krunner
@@ -52,6 +53,7 @@ depends networkmanager-qt
 depends libksysguard
 depends libqalculate
 
-optional_depends gpsd "" "" "for geolocation support"
+optional_depends gpsd          "" "" "for geolocation support"
 optional_depends kde-cli-tools "" "" "For better interaction with the system, ${PROBLEM_COLOR} say no on first install of plasma-workspace.${DEFAULT_COLOR}"
-optional_depends kio-fuse "" "" "for fuse interface with kio"
+optional_depends kio-fuse      "" "" "for fuse interface with kio"
+optional_depends kpipewire     "" "" "for plasma components related to pipewire"

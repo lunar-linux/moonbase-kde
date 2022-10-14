@@ -1,12 +1,12 @@
           MODULE=plasma-vault
-         VERSION=5.25.5
+         VERSION=5.26.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
-      SOURCE_VFY=sha256:b25827f24e024002867bc233545e800bc5906f8f11a30a46023e6b437d25ce96
+      SOURCE_VFY=sha256:4daac65bd5f3a593af6405233bd2ca564c573d8dc045a639b7b084f8fb89a74b
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://www.kde.org/
          ENTERED=20171201
-         UPDATED=20220906
+         UPDATED=20221014
            SHORT="applet and services for creating encrypted vaults"
 
 cat << EOF
