@@ -1,12 +1,12 @@
           MODULE=modemmanager-qt
-         VERSION=5.98.0
+         VERSION=5.99.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:73049850238a0d528f3db7d38609e3ca51622335df42a99a50a190908797643e
+      SOURCE_VFY=sha256:ef841ce5f0e7d77cfa305a1bc32af40b08319118823a33199e0577f5a6cd4c72
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/modemmanager-qt
          ENTERED=20150410
-         UPDATED=20220911
+         UPDATED=20221014
            SHORT="Qt wrapper for ModemManager DBus API"
 
 cat << EOF

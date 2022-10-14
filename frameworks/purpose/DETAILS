@@ -1,12 +1,12 @@
           MODULE=purpose
-         VERSION=5.98.0
+         VERSION=5.99.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:d97a2914526b746c84e2e198b7584df4c236d7c9a37272f1f083b664359c3e3d
+      SOURCE_VFY=sha256:1e9f30b4da3a5751423ed4e1e3cd76ec6d103ab485d859362e29273858ce02ae
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/Frameworks
          ENTERED=20180414
-         UPDATED=20220911
+         UPDATED=20221014
            SHORT="Framework for providing abstractions to get the developer's purposes fulfilled"
 
 cat << EOF

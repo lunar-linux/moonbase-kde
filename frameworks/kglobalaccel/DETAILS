@@ -1,12 +1,12 @@
           MODULE=kglobalaccel
-         VERSION=5.98.0
+         VERSION=5.99.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:949d71f6359da0927d1f95d7f57ab14a5d871be3a251606c34aaeb7ee99926ef
+      SOURCE_VFY=sha256:471d7ded850440716659e93e790a237b4aa4e30a4e04a937e764a87ca7899c30
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/frameworks/kglobalaccel
          ENTERED=20150205
-         UPDATED=20220911
+         UPDATED=20221014
            SHORT="desktop keyboard shortcuts"
 
 cat << EOF
