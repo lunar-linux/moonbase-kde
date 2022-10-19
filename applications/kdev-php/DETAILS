@@ -1,7 +1,7 @@
           MODULE=kdev-php
          VERSION=22.08.2
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://download.kde.org/stable/release-service/$VERSION/src/
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src/
      SOURCE_VFY=sha256:9808408811c8df2383466984b32e1d581bd5a48d88497de20e912486013e99d7
    MODULE_PREFIX=${KDE_PREFIX:-/usr}
         WEB_SITE=http://www.kde.org
