@@ -1,7 +1,7 @@
           MODULE=kdevelop
          VERSION=22.08.2
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://download.kde.org/stable/release-service/$VERSION/src/
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src/
      SOURCE_VFY=sha256:5fa5ca37038ad74b7b99fd322fb45967d9b1baa5ece094ee0045a162bf2a739f
    MODULE_PREFIX=${KDE_PREFIX:-/usr}
         WEB_SITE=http://www.kdevelop.org/
