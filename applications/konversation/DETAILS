@@ -1,7 +1,7 @@
           MODULE=konversation
          VERSION=22.08.2
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://download.kde.org/stable/release-service/$VERSION/src/
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src/
       SOURCE_VFY=sha256:045be3e8961a9677d868958e9607815c3873cdefbf72f244954b4e3f6ad30a2c
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://konversation.kde.org
