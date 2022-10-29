@@ -1,4 +1,0 @@
-default_pre_build &&
-
-sedit '/<QMap>/ i #include <QObject>' src/core/StelSkyCultureMgr.hpp &&
-sedit '/<QStringList>/ i #include <QVariant>' src/CLIProcessor.hpp
