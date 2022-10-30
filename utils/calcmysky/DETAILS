@@ -1,0 +1,18 @@
+          MODULE=calcmysky
+         VERSION=0.2.0
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/10110111/CalcMySky/archive/refs/tags/v$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/CalcMySky-$VERSION
+      SOURCE_VFY=sha256:77760b6022992d8d464deb6935a84fdb30294169677ee6c82eb25c8dd52f7ce6
+        WEB_SITE=https://github.com/10110111/CalcMySky
+         ENTERED=20221029
+         UPDATED=20221029
+           SHORT="simulates scattering of light by the atmosphere"
+
+cat << EOF
+CalcMySky is a software package that simulates scattering of light by the atmosphere to render
+daytime and twilight skies (without stars). Its primary purpose is to enable realistic view of
+the sky in applications such as planetaria. Secondary objective is to make it possible to explore
+atmospheric effects such as glories, fogbows etc., as well as simulate unusual environments such
+as on Mars or an exoplanet orbiting a star with a non-solar spectrum of radiation.
+EOF
