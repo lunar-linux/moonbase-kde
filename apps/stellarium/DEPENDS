@@ -11,3 +11,5 @@ depends qt6-positioning
 depends qt6-serialport
 depends qt6-webengine 
 depends qt6-tools
+
+optional_depends calcmysky "-DENABLE_SHOWMYSKY=ON" "-DENABLE_SHOWMYSKY=OFF" "to simulate scattering of light"
