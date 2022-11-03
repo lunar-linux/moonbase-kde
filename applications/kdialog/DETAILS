@@ -1,12 +1,12 @@
           MODULE=kdialog
-         VERSION=22.08.2
+         VERSION=22.08.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:0a0a6fc695ddbb3209e2069c436c0593e1a92591cb0e994f7f985b25b2b1f133
+      SOURCE_VFY=sha256:9d1226e6e646a564ada1b218f70c98278c4ef4f118f55ca1e3e143698d016a8b
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://utils.kde.org/projects/kgpg/
          ENTERED=20171201
-         UPDATED=20221014
+         UPDATED=20221103
            SHORT="Display dialog boxes from shell scripts"
 
 cat << EOF

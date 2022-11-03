@@ -1,12 +1,12 @@
           MODULE=ktp-auth-handler
-         VERSION=22.08.2
+         VERSION=22.08.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:4094bbe517b893f1a0653918dee75739b4c0d6274f6a0bfcafb9d53a7edc1900
+      SOURCE_VFY=sha256:83430cc9202f8716632634e085e07eb46df152a9fe40e3fc0f3e38b441b50a20
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/system/$MODULE
          ENTERED=20151201
-         UPDATED=20221014
+         UPDATED=20221103
            SHORT="Kwallet intergration for passwords and ssl errors"
 
 cat << EOF
