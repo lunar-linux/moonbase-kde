@@ -1,0 +1,38 @@
+From de3801bb52f4d4ee3ad3cbaa7f8704d0013881f3 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Fr=C3=A9d=C3=A9ric=20Bri=C3=A8re?= <fbriere@fbriere.net>
+Date: Fri, 29 Jan 2021 12:35:41 -0500
+Subject: [PATCH] Disconnect destroyed() signal from all tab widgets in
+ ChoqokTabBar dtor
+
+Because the QWidget dtor will delete its children first, it is the
+responsability of any subclass to disconnect any signal that might be
+emitted as a result of a child's destruction.  Otherwise, that signal
+could end up attempting to invoke a method on the now-destroyed parent.
+
+The ChoqokTabBar dtor must therefore disconnect the destroyed() signal
+from all children of its own QStackedWidget.
+
+BUG: 400117
+---
+ libchoqok/ui/choqoktabbar.cpp | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/libchoqok/ui/choqoktabbar.cpp b/libchoqok/ui/choqoktabbar.cpp
+index 66715242..c546f7c0 100644
+--- a/libchoqok/ui/choqoktabbar.cpp
++++ b/libchoqok/ui/choqoktabbar.cpp
+@@ -852,6 +852,11 @@ ChoqokTabBar::~ChoqokTabBar()
+     Choqok::AppearanceSettings::setTabBarIsStyled(p->styled_tabbar);
+     Choqok::AppearanceSettings::self()->save();
+     setLinkedTabBar(false);
++
++    for (int i = 0 ; i < p->st_widget->count() ; i++) {
++        disconnect(p->st_widget->widget(i), &QWidget::destroyed, this, &ChoqokTabBar::widget_destroyed);
++    }
++
+     delete p;
+ }
+ 
+-- 
+GitLab
+
