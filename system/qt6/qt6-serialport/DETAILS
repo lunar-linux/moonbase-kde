@@ -1,12 +1,13 @@
           MODULE=qt6-serialport
-         VERSION=6.3.2
+         VERSION=6.4.0
           SOURCE=qtserialport-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
+      SOURCE_VFY=sha256:f148cc9e87ce2228e82bff7a64d9521339ece66c4c66aa43b91bac614f4a4483
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtserialport-everywhere-src-$VERSION
-      SOURCE_VFY=sha256:c7d207322367c63647edbd06ded9c76ba9071961daac1d1021b622b762c35e6f
+   MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20211101
-         UPDATED=20220909
+         UPDATED=20221114
            SHORT="Provides access to hardware and virtual serial ports"
 cat << EOF
 Provides access to hardware and virtual serial ports.

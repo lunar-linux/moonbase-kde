@@ -1,4 +1,5 @@
-. /etc/profile.d/qt6.rc &&
+source /etc/profile.d/qt6.rc &&
+
 OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DINSTALL_BINDIR=lib/qt6/bin \

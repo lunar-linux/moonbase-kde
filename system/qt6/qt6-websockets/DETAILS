@@ -1,12 +1,13 @@
           MODULE=qt6-websockets
-         VERSION=6.3.2
+         VERSION=6.4.0
           SOURCE=qtwebsockets-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
+      SOURCE_VFY=sha256:ff3c6629cd6537266123c441709acdd67f231ff2a07216fc848448255bec9bca
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtwebsockets-everywhere-src-$VERSION
-      SOURCE_VFY=sha256:18add9efe7f011cec12b222d18c2b395af38d70d3b5da5aadef02eaf5adcabea
+   MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20211101
-         UPDATED=20220909
+         UPDATED=20221114
            SHORT="Provides WebSocket communication compliant with RFC 6455"
 cat << EOF
 Provides WebSocket communication compliant with RFC 6455.

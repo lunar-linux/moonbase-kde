@@ -1,8 +1,10 @@
 ulimit -u 8192 &&
 
-. /etc/profile.d/qt6.rc &&
+source /etc/profile.d/qt6.rc &&
 
 OPTS+=" -DCMAKE_BUILD_TYPE=Release \
+        -DQT_BUILD_EXAMPLES_BY_DEFAULT=OFF \
+        -DQT_BUILD_TESTS_BY_DEFAULT=OFF \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DINSTALL_BINDIR=lib/qt6/bin \
         -DINSTALL_LIBEXECDIR=/usr/lib/qt6 \
@@ -14,7 +16,7 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
         -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \
         -DINSTALL_SYSCONFDIR=/etc/xdg \
-        -DFEATURE_webengine_system_libevent=ON \
+        -DQT_FEATURE_webengine_system_libevent=ON \
         -DQT_FEATURE_webengine_system_ffmpeg=ON \
         -DQT_FEATURE_webengine_system_icu=OFF \
         -DQT_FEATURE_webengine_kerberos=ON \
