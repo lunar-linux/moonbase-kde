@@ -1,4 +1,4 @@
-depends python-pip
+depends libarchive
 depends pugixml
 depends extra-cmake-modules
 depends qt5
@@ -8,6 +8,7 @@ depends LibRaw
 depends hicolor-icon-theme
 depends poppler
 depends libarchive
+depends kimageformats
 
 optional_depends python-pychromecast   "-DCHROMECAST=ON"     "-DCHROMECAST=OFF"     "for chromecast support"
 optional_depends GraphicsMagick "-DGRAPHICSMAGICK=ON" "-DGRAPHICSMAGICK=OFF" "for additional graphics support"

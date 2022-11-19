@@ -1,4 +1,4 @@
-. /etc/profile.d/qt5.rc &&
+source /etc/profile.d/qt5.rc &&
 
 OPTS+=" -DDEVIL=OFF -DFREEIMAGE=OFF"
 
