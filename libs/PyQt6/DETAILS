@@ -1,0 +1,14 @@
+          MODULE=PyQt6
+         VERSION=6.4.0
+          SOURCE=$MODULE-$VERSION.tar.gz
+      SOURCE_URL=https://pypi.python.org/packages/source/P/$MODULE/
+   MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
+      SOURCE_VFY=sha256:91392469be1f491905fa9e78fa4e4059a89ab616ddf2ecfd525bc1d65c26bb93
+        WEB_SITE=http://www.riverbankcomputing.com/software/pyqt/
+         ENTERED=20221109
+         UPDATED=20221109
+           SHORT="Python bindings for Qt 6.x"
+
+cat << EOF
+These are the Python bindings for Qt 6.x.
+EOF
