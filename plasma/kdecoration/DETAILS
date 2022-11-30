@@ -1,12 +1,12 @@
           MODULE=kdecoration
-         VERSION=5.26.3
+         VERSION=5.26.4
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
-      SOURCE_VFY=sha256:918b449136478233fc5219487df7ffaafc2b6ae1bd0cd74eab0d790caec3ec59
+      SOURCE_VFY=sha256:88fc3b01796e06784a9008882195b33bc0c076c42dd7c81c63b1078e8d47285d
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/kdecoration
          ENTERED=20150504
-         UPDATED=20221108
+         UPDATED=20221130
            SHORT="create window decorations"
 
 cat << EOF

@@ -1,12 +1,12 @@
           MODULE=sddm-kcm
-         VERSION=5.26.3
+         VERSION=5.26.4
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
-      SOURCE_VFY=sha256:2a76a5ac4c9f24cf143b10cefce9d68334502ade89ef571b0f53520534e6d3f5
+      SOURCE_VFY=sha256:cba1d6bb9fdf6bb7afc2d4c0ba15946e3f5b2d9cbdd3a7ada96814e760e714eb
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/sddm-kcm
          ENTERED=20151123
-         UPDATED=20221108
+         UPDATED=20221130
            SHORT="kde config module for sddm"
 
 cat << EOF

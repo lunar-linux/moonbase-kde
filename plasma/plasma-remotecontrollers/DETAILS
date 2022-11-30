@@ -1,0 +1,20 @@
+          MODULE=plasma-remotecontrollers
+         VERSION=5.26.4
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
+      SOURCE_VFY=sha256:ba45c2122f317c45a1499449e18428e4087c953a0049da837ad491bc42e76cde
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
+         ENTERED=20221130
+         UPDATED=20221130
+           SHORT="translates input devices to keypresses on a keyboard and pointer events"
+
+cat << EOF
+This project translates events from various input devices to keypresses on a keyboard and pointer events (mouse movement).
+
+TV remotes Fully supported through libcec Not all TV remotes emit the same key events when buttons are being pressed, so
+particular remotes might need to map their buttons in the config file.
+
+Wiimotes partial, only Wiimote and Nunchuk buttons so far Only official Wiimotes and Wii Plus remotes are supported.
+Devices connected through e.g. a DolphinBar are not supported yet KDE's screen management software.
+EOF
