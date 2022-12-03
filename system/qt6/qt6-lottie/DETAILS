@@ -1,13 +1,13 @@
           MODULE=qt6-lottie
-         VERSION=6.4.0
+         VERSION=6.4.1
           SOURCE=qtlottie-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:1cfcbfca9e5c68e1317edf20caa0ead4e9c8f1f4f1de19a95a8c235f4576c6b4
+      SOURCE_VFY=sha256:cab785802fc1aa7129a2834004579b0bd922be5fdfa5431bac82916e4beba92c
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtlottie-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20211102
-         UPDATED=20221114
+         UPDATED=20221203
            SHORT=" json-based file format for describing 2d vector graphics animations"
 cat << EOF
 A family of player software for a certain json-based file format for describing 2d vector graphics animations.

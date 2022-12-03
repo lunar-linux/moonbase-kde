@@ -18,7 +18,7 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DINSTALL_SYSCONFDIR=/etc/xdg \
         -DQT_FEATURE_webengine_system_libevent=ON \
         -DQT_FEATURE_webengine_system_ffmpeg=ON \
-        -DQT_FEATURE_webengine_system_icu=OFF \
+        -DQT_FEATURE_webengine_system_icu=ON \
         -DQT_FEATURE_webengine_kerberos=ON \
         -DQT_FEATURE_webengine_proprietary_codecs=ON \
         -DQT_FEATURE_webengine_webrtc_pipewire=ON"

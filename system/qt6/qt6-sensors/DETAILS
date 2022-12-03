@@ -1,13 +1,13 @@
           MODULE=qt6-sensors
-         VERSION=6.4.0
+         VERSION=6.4.1
           SOURCE=qtsensors-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:f38c072f5b9f62631985f385de70cdc54c13f0b888d9496943342e3be1ca50da
+      SOURCE_VFY=sha256:667e3f0675253da4d3999f8e730bfeeceb2c7671337bc75817fe3622c833f9e2
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtsensors-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20220909
-         UPDATED=20221114
+         UPDATED=20221203
            SHORT="access to sensor hardware and motion gesture recognition"
 cat << EOF
 Provides access to sensor hardware and motion gesture recognition.

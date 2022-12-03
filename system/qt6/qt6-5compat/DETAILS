@@ -1,13 +1,13 @@
           MODULE=qt6-5compat
-         VERSION=6.4.0
+         VERSION=6.4.1
           SOURCE=qt5compat-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:73475d0837f78246d509199f211a35c71fc36cccf64b3de258ebc6387194a4c0
+      SOURCE_VFY=sha256:d4a533ee45d6341b9eb402e69bc21909eeeeda2b2d29a6c715b31c3ec12fd031
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qt5compat-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20211102
-         UPDATED=20221114
+         UPDATED=20221203
            SHORT="unsupported Qt 5 APIs"
 cat << EOF
 Module that contains unsupported Qt 5 APIs.
