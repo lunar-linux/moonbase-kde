@@ -1,0 +1,16 @@
+          MODULE=PyQt6-QScintilla
+         VERSION=2.13.3
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://files.pythonhosted.org/packages/f1/23/90210efbae74caf0a8eb5199baab33b686e08f3c4660851cecf16e7cc230/PyQt6_QScintilla-2.13.3.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/PyQt6_QScintilla-$VERSION
+      SOURCE_VFY=sha256:60c9f23b11a792ff8684ea6ea6fd298e5e0325b841c1c0eac7a4458efbf557c9
+        WEB_SITE=https://pypi.org/project/PyQt6-QScintilla/
+         ENTERED=20221204
+         UPDATED=20221204
+           SHORT="Port to Qt6 of Scintilla C++ editor class"
+
+cat << EOF
+QScintilla includes features especially useful when editing and debugging
+source code. These include support for syntax styling, error indicators, code
+completion and call tips.
+EOF
