@@ -1,13 +1,12 @@
           MODULE=colord-kde
-         VERSION=0.5.0
+         VERSION=22.12.0
           SOURCE=COLORD_KDE_0_5_0.tar.gz
-      SOURCE_URL=https://github.com/KDE/colord-kde/archive/refs/tags/
-      SOURCE_VFY=sha256:621c261e7acbd5fe2b99be764c172b9fec98076ba83c18f95fc9f0be09d7a750
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-COLORD_KDE_0_5_0
+ SOURCE_URL_FULL=https://github.com/KDE/colord-kde/archive/refs/tags/v$VERSION.tar.gz
+      SOURCE_VFY=sha256:7edd4d1486e4ffdd23c1fc5efb2c47a545aa438ae743d42e505dfc3f4619f0be
         WEB_SITE=https://projects.kde.org/projects/playground/graphics/colord-kde
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
          ENTERED=20121016
-         UPDATED=20171203
+         UPDATED=20221208
            SHORT="KDE color management module"
 
 cat << EOF
