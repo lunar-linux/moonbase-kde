@@ -1,15 +1,21 @@
 default_pre_build &&
 
-#sed -i -e 's|use_jumbo_build=true|use_jumbo_build=false|' src/buildtools/config/common.pri &&
+sed -i -e 's|use_jumbo_build=true|use_jumbo_build=false|' src/buildtools/config/common.pri &&
 
 sed -e '/link_pulseaudio/s/false/true/' -i src/3rdparty/chromium/media/media_options.gni &&
+
+sed -e '/^MODULE_VERSION/s/5.*/5.15.7/' -i .qmake.conf &&
 
 sed -i 's/NINJAJOBS/NINJA_JOBS/' src/core/gn_run.pro &&
 
 find -type f -name "*.pr[io]" | xargs sed -i -e 's|INCLUDEPATH += |&$$QTWEBENGINE_ROOT/include |' &&
 
-# It needed size_t for these two files else the build tanked
-sedit 's|std::max|std::max<size_t>|' src/3rdparty/chromium/third_party/abseil-cpp/absl/debugging/failure_signal_handler.cc \
-                                     src/3rdparty/chromium/third_party/breakpad/breakpad/src/client/linux/handler/exception_handler.cc &&
+sed -e 's/\^(?i)/(?i)^/' -i src/3rdparty/chromium/tools/metrics/ukm/ukm_model.py &&
+sed -e "s/'rU'/'r'/" -i src/3rdparty/chromium/tools/grit/grit/util.py &&
 
-sedit '39i gn_args += $$(EXTRA_GN)' src/core/gn_run.pro
+#Quoting the LFS folks here;
+#Although the patches used in this module ensures git is not invoked during the build, the build system has
+#labyrinthine rules of byzantine complexity, and in particular trying to build without two .git directories
+#will lead to it eventually falling into unexpected and unbuildable code which references a private header
+#that has not been created. Avoid this by creating the required directories
+mkdir -pv .git src/3rdparty/chromium/.git
