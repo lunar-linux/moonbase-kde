@@ -1,9 +1,8 @@
           MODULE=neochat
-         VERSION=22.06
-          SOURCE=$MODULE-v$VERSION.tar.bz2
-      SOURCE_URL=https://invent.kde.org/network/neochat/-/archive/v$VERSION/
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-v$VERSION
-      SOURCE_VFY=sha256:fddbcce7c50f60b9be49a95db38c0577624e030f23a2deeb33c3bf71c499e53c
+         VERSION=22.11
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=https://download.kde.org/stable/plasma-mobile/$VERSION/
+      SOURCE_VFY=sha256:25362be430c930ff6d964a69a19b49d53043c2789a34893c61ab00ce619ad0be
         WEB_SITE=https://apps.kde.org/neochat
          ENTERED=20210720
          UPDATED=20220809
