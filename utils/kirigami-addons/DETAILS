@@ -1,0 +1,14 @@
+          MODULE=kirigami-addons
+         VERSION=0.6.1
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable//kirigami-addons/
+      SOURCE_VFY=sha256:2a399afa29ea5ad2c74f5b20e52055aebc43867405596e16b9b1ebe0d000d7d2
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://invent.kde.org/libraries/kirigami-addons
+         ENTERED=20221220
+         UPDATED=20221220
+           SHORT="addons for the kirigami framework"
+
+cat << EOF
+Addon-ons for the kirigami framework.
+EOF
