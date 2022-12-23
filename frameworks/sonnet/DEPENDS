@@ -1,3 +1,5 @@
-depends enchant
-depends aspell
+depends qt5
 depends extra-cmake-modules
+
+optional_depends hunspell "" "" "spell checking via hunspell"
+optional_depends aspell   "" "" "spell checking via aspell"
