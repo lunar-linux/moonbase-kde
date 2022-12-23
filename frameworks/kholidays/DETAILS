@@ -3,7 +3,6 @@
           SOURCE=${MODULE%-*}-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/${VERSION%.*}/
       SOURCE_VFY=sha256:44722c8053370663e4690602cdb58fed1fa9648a6dd766ecaf0800043c263473
-   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/system/kholidays
         REPLACES=kholidays-frameworks
          ENTERED=20180212

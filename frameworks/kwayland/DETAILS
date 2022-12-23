@@ -3,7 +3,6 @@
           SOURCE=${MODULE%-*}-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
       SOURCE_VFY=sha256:39c1866ed2a15235bf9df02881ed2e8cd805d50d696bcdc9fe157e54b52def63
-   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://quickgit.kde.org/?p=kwayland.git
         REPLACES=kwayland-frameworks
          ENTERED=20151120
