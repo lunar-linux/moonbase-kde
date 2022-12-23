@@ -4,9 +4,11 @@ depends ebook-tools
 depends exiv2
 depends taglib
 depends poppler
-depends ffmpeg
 depends extra-cmake-modules
+depends karchive
 depends kcoreaddons
 depends ki18n
-depends karchive
 depends kconfig
+
+optional_depends ffmpeg "" "" "for video metadata support"
+optional_depends kdegraphics-mobipocket "" "" "for mobi metadata support"
