@@ -1,6 +1,4 @@
-depends python
 depends libgcrypt
-depends gpgme
 depends qca
 depends extra-cmake-modules
 depends kconfig
@@ -14,4 +12,6 @@ depends kcoreaddons
 depends ki18n
 depends knotifications
 depends kwidgetsaddons
-depends kdoctools
+
+optional_depends kdoctools "" "" "for documentations support"
+optional_depends gpgme     "" "" "for gnupg support"
