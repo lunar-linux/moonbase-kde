@@ -1,6 +1,6 @@
 depends media-player-info
-depends upower
 depends extra-cmake-modules
 
-optional_depends udisks2 "BUILD_DEVICE_BACKEND_udisks2=ON" "BUILD_DEVICE_BACKEND_udisks2=OFF" y
-
+optional_depends udisks2 "-DBUILD_DEVICE_BACKEND_udisks2=ON" "-DBUILD_DEVICE_BACKEND_udisks2=OFF" "for udisk support"
+optional_depends libimobiledevice "-DBUILD_DEVICE_BACKEND_imobile=ON" "-DBUILD_DEVICE_BACKEND_imobile=OFF" "for mobile devices support"
+optional_depends upower "-DBUILD_DEVICE_BACKEND_upower=ON" "-DBUILD_DEVICE_BACKEND_upower=OFF" "for emumerated power devices support"
