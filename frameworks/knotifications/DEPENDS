@@ -1,8 +1,10 @@
-depends python2
-depends libdbusmenu-qt5
-depends phonon
 depends extra-cmake-modules
+depends kwindowsystem
 depends kconfig
 depends kcodecs
 depends kcoreaddons
-depends kwindowsystem
+
+optional_depends libdbusmenu-qt5 "" "" "for notifications via dbus"
+optional_depends libcanberra     "" "" "for sound event support"
+
+
