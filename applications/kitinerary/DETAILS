@@ -1,12 +1,12 @@
           MODULE=kitinerary
-         VERSION=22.12.0
+         VERSION=22.12.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:8d2392f436a25c5573de6de44658e4c5f3eb51c240c45198a5696449b388b1ac
+      SOURCE_VFY=sha256:f0c5cacf38b9892a49c4aa6151c96e19163019390414991353f01457aa5b3545
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20180817
-         UPDATED=20221208
+         UPDATED=20230105
            SHORT="A data model and extraction system for travel reservation information"
 
 cat << EOF
