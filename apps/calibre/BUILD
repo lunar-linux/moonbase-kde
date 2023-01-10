@@ -1,3 +1,5 @@
+export PYTHONDONTWRITEBYTECODE=1 &&
+
 . /etc/profile.d/qt6.rc &&
 
 # Remove unneeded files
