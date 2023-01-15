@@ -5,16 +5,18 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DINSTALL_BINDIR=lib/qt6/bin \
         -DINSTALL_LIBDIR=lib/qt6 \
-        -DINSTALL_LIBEXECDIR=/usr/lib/qt6 \
+        -DINSTALL_LIBEXECDIR=lib/qt6 \
         -DINSTALL_DOCDIR=share/doc/qt6 \
-        -DINSTALL_ARCHDATADIR=/usr/lib/qt6 \
+        -DINSTALL_ARCHDATADIR=lib/qt6 \
         -DINSTALL_DATADIR=share/qt6 \
         -DINSTALL_INCLUDEDIR=include/qt6 \
         -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
         -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \
         -DINSTALL_TRANSLATIONSDIR=share/doc/translations \
         -DINSTALL_SYSCONFDIR=/etc/xdg/qt6 \
+        -DQT_FEATURE_system_xcb_xinput=ON \
         -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON \
+        -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
         -DFEATURE_mtdev=OFF"
 
 cmake -B build -S . -G Ninja $OPTS -Wno-dev &&

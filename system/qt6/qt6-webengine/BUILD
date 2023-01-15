@@ -7,7 +7,7 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DQT_BUILD_TESTS_BY_DEFAULT=OFF \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DINSTALL_BINDIR=lib/qt6/bin \
-        -DINSTALL_LIBEXECDIR=/usr/lib/qt6 \
+        -DINSTALL_LIBEXECDIR=lib/qt6 \
         -DINSTALL_LIBDIR=lib/qt6 \
         -DINSTALL_DOCDIR=share/doc/qt6 \
         -DINSTALL_ARCHDATADIR=/usr/lib/qt6 \
