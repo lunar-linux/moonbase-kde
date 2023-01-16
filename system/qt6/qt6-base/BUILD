@@ -2,15 +2,15 @@ sedit 's:/bin/ls:/usr/bin/ls:g' src/corelib/CMakeLists.txt util/cmake/tests/data
 
 OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DFEATURE_optimize_full=ON  \
-        -DCMAKE_INSTALL_PREFIX=/usr \
-        -DINSTALL_BINDIR=lib/qt6/bin \
-        -DINSTALL_LIBDIR=lib/qt6 \
-        -DINSTALL_LIBEXECDIR=lib/qt6 \
+        -DCMAKE_INSTALL_PREFIX=$MODULE_PREFIX \
+        -DINSTALL_BINDIR=qt6/bin \
+        -DINSTALL_LIBDIR=qt6 \
+        -DINSTALL_LIBEXECDIR=qt6 \
         -DINSTALL_DOCDIR=share/doc/qt6 \
-        -DINSTALL_ARCHDATADIR=lib/qt6 \
+        -DINSTALL_ARCHDATADIR=qt6 \
         -DINSTALL_DATADIR=share/qt6 \
         -DINSTALL_INCLUDEDIR=include/qt6 \
-        -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
+        -DINSTALL_MKSPECSDIR=qt6/mkspecs \
         -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \
         -DINSTALL_TRANSLATIONSDIR=share/doc/translations \
         -DINSTALL_SYSCONFDIR=/etc/xdg/qt6 \
@@ -22,13 +22,12 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
 cmake -B build -S . -G Ninja $OPTS -Wno-dev &&
 cmake --build build &&
 prepare_install &&
-cmake --install build &&
 
-# Remove pointing to the src build directory files.
-find /usr/lib/qt6 -type f -name '*Qt6*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
-find /usr/lib/qt6 -type f -name '*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
-find /usr/lib/qt6 -type f -name '*Qt6*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
-find /usr/lib/qt6 -type f -name '*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
+#These installed by qt6-base get overwritten by those from othet qt6-x modules
+#So delete these and let the others have their way
+rm -f build/qt6/*.prl &&
+
+cmake --install build 
 
 cat > qt6.rc << EOF &&
   export QT6_DIR="${MODULE_PREFIX}"

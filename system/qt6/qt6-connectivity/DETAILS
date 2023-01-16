@@ -1,13 +1,13 @@
           MODULE=qt6-connectivity
-         VERSION=6.4.1
+         VERSION=6.4.2
           SOURCE=qtconnectivity-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:9b0f5dbefd4fe4fe7048bf353f0dbc2db2a3fb4d0307c80c3c6bf292768fbbe3
+      SOURCE_VFY=sha256:8c9b44b239e42b4c4d6fca5f427904e688890b2a1bfb6bcbe5e6e2afcdc5d7af
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtconnectivity-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20211102
-         UPDATED=20221203
+         UPDATED=20230115
            SHORT="access to Bluetooth hardware"
 cat << EOF
 Provides access to Bluetooth hardware.
