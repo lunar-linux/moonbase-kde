@@ -1,12 +1,18 @@
-depends llvm
-depends qt5
+depends gdb
+depends python
 depends cmake
+depends lld
+depends qt6-5compat
+depends qt6-quick3d
+depends qt6-serialport
+depends qt6-shadertools
+depends qt6-svg
+depends qt6-tools
+depends qt6-webengine
+depends yaml-cpp
 
-optional_depends zstd "" "" "for zstd compression support"
-
-optional_depends gdb  "" "" "for gdb debugger support"
-optional_depends bzr  "" "" "for bazaar support"
-
-optional_depends mercurial "" "" "for mercurial support"
-
-optional_depends ksshaskpass "" "" "for SSH support"
+optional_depends git        "-DBUILD_PLUGIN_GIT=ON" "-DBUILD_PLUGIN_GIT=OFF" "for git revision support"
+optional_depends cvs        "-DBUILD_PLUGIN_CVS=ON" "-DBUILD_PLUGIN_CVS=OFF" "for cvs revision support"
+optional_depends bzr        "-DBUILD_PLUGIN_BAZAAR=ON" "-DBUILD_PLUGIN_BAZAAR=OFF" "for bzr revision support"
+optional_depends mercurial  "-DBUILD_PLUGIN_MERCURIAL=ON" "-DBUILD_PLUGIN_MERCURIAL=OFF" "for mercurial revision support"
+optional_depends subversion "-DBUILD_PLUGIN_SUBVERSION=ON" "-DBUILD_PLUGIN_SUBVERSION=OFF" "for subversion revision support"
