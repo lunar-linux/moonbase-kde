@@ -4,18 +4,7 @@ source /etc/profile.d/qt6.rc &&
 
 OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=$MODULE_PREFIX \
-        -DQT_BUILD_EXAMPLES_BY_DEFAULT=OFF \
-        -DQT_BUILD_TESTS_BY_DEFAULT=OFF \
-        -DCMAKE_INSTALL_PREFIX=/usr \
-        -DINSTALL_LIBEXECDIR=qt6 \
-        -DINSTALL_LIBDIR=qt6 \
-        -DINSTALL_DOCDIR=share/doc/qt6 \
-        -DINSTALL_ARCHDATADIR=qt6 \
-        -DINSTALL_DATADIR=share/qt6 \
-        -DINSTALL_INCLUDEDIR=include/qt6 \
-        -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
-        -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \
-        -DINSTALL_SYSCONFDIR=/etc/xdg \
+        -DINSTALL_LIBDIR=lib/qt6 \
         -DQT_FEATURE_webengine_system_libevent=ON \
         -DQT_FEATURE_webengine_system_ffmpeg=ON \
         -DQT_FEATURE_webengine_system_icu=ON \
