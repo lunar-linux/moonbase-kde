@@ -1,12 +1,12 @@
           MODULE=kdesdk-thumbnailers
-         VERSION=22.12.1
+         VERSION=22.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:a2be8329cd82eb395fdd43febe35c4b081979d053c6bf0c936130013f3cd09f0
+      SOURCE_VFY=sha256:5d5a81a77a258e9aecf6cd547a423ec79e0bc595d7ece5a4d3c09cc87beee9b4
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/development/cervisia/
          ENTERED=20130814
-         UPDATED=20230105
+         UPDATED=20230202
            SHORT="Thumbnailer used by crevisia"
 
 cat << EOF

@@ -1,12 +1,12 @@
           MODULE=libkexiv2
-         VERSION=22.12.1
+         VERSION=22.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:230834bbbf57f0b4126ea50a53fabad1a87831a000d20b18fdb2753e2ae0b9e7
+      SOURCE_VFY=sha256:14b15d0610720cf09d83096eb3a118990dbef55a1dbe6d7e9db439f634a36400
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/kdegraphics/libs/libkexiv2
          ENTERED=20110813
-         UPDATED=20230105
+         UPDATED=20230202
            SHORT="A wrapper around Exiv2 library"
 
 cat << EOF
