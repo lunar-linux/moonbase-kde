@@ -23,4 +23,7 @@ sedit "s:/bin/ls:/usr/bin/ls:" qtbase/src/corelib/global/global.pri &&
 # remove to old version before building the new one...
 if module_installed $MODULE; then
   lrm --upgrade $MODULE
-fi
+fi &&
+
+#Needed to accomodate the kf5 patch
+mkdir -pv qtbase/.git
