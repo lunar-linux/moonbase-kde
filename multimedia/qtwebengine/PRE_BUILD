@@ -4,7 +4,7 @@ sed -i -e 's|use_jumbo_build=true|use_jumbo_build=false|' src/buildtools/config/
 
 sed -e '/link_pulseaudio/s/false/true/' -i src/3rdparty/chromium/media/media_options.gni &&
 
-sed -e '/^MODULE_VERSION/s/5.*/5.15.7/' -i .qmake.conf &&
+sed -e '/^MODULE_VERSION/s/5.*/5.15.8/' -i .qmake.conf &&
 
 sed -i 's/NINJAJOBS/NINJA_JOBS/' src/core/gn_run.pro &&
 
@@ -12,6 +12,11 @@ find -type f -name "*.pr[io]" | xargs sed -i -e 's|INCLUDEPATH += |&$$QTWEBENGIN
 
 sed -e 's/\^(?i)/(?i)^/' -i src/3rdparty/chromium/tools/metrics/ukm/ukm_model.py &&
 sed -e "s/'rU'/'r'/" -i src/3rdparty/chromium/tools/grit/grit/util.py &&
+
+# So it doesn't link to the old version.
+if [ -e /usr/lib/qt5/libQt5WebEngineCore.so ]; then
+  mv -v /usr/lib/qt5/libQt5WebEngineCore.so{,.old}
+fi &&
 
 #Quoting the LFS folks here;
 #Although the patches used in this module ensures git is not invoked during the build, the build system has

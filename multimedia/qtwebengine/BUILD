@@ -1,13 +1,13 @@
-. /etc/profile.d/qt5.rc &&
+source /etc/profile.d/qt5.rc &&
 
-# So its prl files do not conflict with those provided by qt5
-mkdir -p /usr/lib/qt5/$MODULE &&
-OPTS+=" -libdir /usr/lib/qt5/$MODULE" &&
+if module_installed krb5;then
+  OPTS+=" -webengine-kerberos"
+fi &&
 
 mkdir build &&
 cd    build &&
 
-qmake-qt5 .. -- -system-ffmpeg -webengine-icu &&
+qmake-qt5 .. -- -system-ffmpeg -webp -proprietary-codecs -webengine-icu $OPTS &&
 
 default_make &&
 

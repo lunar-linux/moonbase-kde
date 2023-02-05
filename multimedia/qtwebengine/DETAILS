@@ -4,6 +4,7 @@
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://anduin.linuxfromscratch.org/BLFS/qtwebengine/
       SOURCE_VFY=sha256:418033b7e4be26e0031749541d471abed5a2c175851224e1ffccabd87d91f590
+   MODULE_PREFIX=${QT5_PREFIX:-/usr}
         WEB_SITE=https://www.qt.io
          ENTERED=20191113
          UPDATED=20230107
