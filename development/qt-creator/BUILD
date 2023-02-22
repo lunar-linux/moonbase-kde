@@ -1,7 +1,18 @@
 source /etc/profile.d/qt6.rc &&
 
-OPTS+=" -DBUILD_CPLUSPLUS_TOOLS=ON -DBUILD_QBS=OFF"
-default_cmake_build &&
+OPTS+=" -DCMAKE_INSTALL_PREFIX=/usr  \
+        -DCMAKE_BUILD_TYPE=RELEASE   \
+        -DBUILD_CPLUSPLUS_TOOLS=ON   \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DWITH_DOCS=ON \
+        -Wno-dev \
+        -DBUILD_DEVELOPER_DOCS=ON"
+
+cmake -B $MODULE -G Ninja $OPTS &&
+cmake --build $MODULE &&
+
+prepare_install &&
+cmake --install $MODULE &&
 
 # Desktop menu entry
 cat > $MODULE.desktop << EOF &&
@@ -15,9 +26,3 @@ Categories=Development;
 EOF
 
 install -D -m644 $MODULE.desktop /usr/share/applications/$MODULE.desktop
-
-# workaround for a runtime bug
-#mv /usr/bin/qtcreator /usr/bin/qtcreator-bin &&
-#echo "#!/bin/sh" > /usr/bin/qtcreator &&
-#echo "QT_LOGGING_TO_CONSOLE=1 qtcreator-bin \$@" >> /usr/bin/qtcreator &&
-#chmod +x /usr/bin/qtcreator
