@@ -1,12 +1,12 @@
           MODULE=kdev-python
-         VERSION=22.12.2
+         VERSION=22.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://download.kde.org/stable/release-service/$VERSION/src/
-      SOURCE_VFY=sha256:2521f2f2a7174dfb2bf1d962c460d40addc3bb486e9823c2b2707ced33456430
+      SOURCE_VFY=sha256:fa6640519f23c275a75b7969bf4cc3f3ff41e7cf2f400137846972b7da936e79
    MODULE_PREFIX=${KDE_PREFIX:-/usr}
         WEB_SITE=http://www.kdevelop.org/
          ENTERED=20130524
-         UPDATED=20230202
+         UPDATED=20230302
            SHORT="Python bindings for kdevelop"
 
 cat << EOF

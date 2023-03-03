@@ -1,12 +1,12 @@
           MODULE=ktp-filetransfer-handler
-         VERSION=22.12.2
+         VERSION=22.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:a52ef4cc67469a34060c05b5560fcba6222bc3187115247ba7f898467f161737
+      SOURCE_VFY=sha256:6083935f05a88a0ae8439a4592599d6ed4f14a19b66fcf7eccdf0a51e1129de2
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/system/$MODULE
          ENTERED=20151201
-         UPDATED=20230202
+         UPDATED=20230302
            SHORT="A file transfer handler"
 
 cat << EOF
