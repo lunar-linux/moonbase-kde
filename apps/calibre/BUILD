@@ -1,17 +1,24 @@
+cp $SCRIPT_DIRECTORY/user-agent-data.json resources/ &&
+
 export PYTHONDONTWRITEBYTECODE=1 &&
 
 . /etc/profile.d/qt6.rc &&
 
-# Remove unneeded files
-rm resources/mozilla-ca-certs.pem &&
-# use system mathjax
-rm -rf resources/mathjax &&
+rm resources/calibre-portable.* &&
 
-LANG='en_US.UTF-8' python setup.py build &&
-LANG='en_US.UTF-8' python setup.py gui &&
-python setup.py liberation_fonts --path-to-liberation_fonts /usr/share/fonts/liberation-fonts-ttf --system-liberation_fonts
-LANG='en_US.UTF-8' python setup.py mathjax --path-to-mathjax /usr/share/mathjax --system-mathjax &&
-LANG='en_US.UTF-8' python setup.py rapydscript  &&
+export LANG='en_US.UTF-8'
+mkdir -p manual/locale &&
+mkdir -p resources/localization/locales &&
+mkdir -p translations/manual &&
+
+python setup.py build &&
+python setup.py iso639 &&
+python setup.py iso3166 &&
+python setup.py translations &&
+python setup.py liberation_fonts --system-liberation_fonts --path-to-liberation_fonts /usr/share/fonts/liberation-fonts-ttf &&
+python setup.py mathjax --system-mathjax --path-to-mathjax /usr/share/mathjax &&
+python setup.py gui &&
+python setup.py resources &&
 
 prepare_install &&
 mkdir -p /usr/share/calibre/system-plugins &&
@@ -22,5 +29,4 @@ if module_installed zsh; then
    install -d /usr/share/zsh/site-functions
 fi &&
 
-cp -a man-pages/ /usr/share/man &&
 install -Dm644 resources/calibre-mimetypes.xml /usr/share/mime/packages/
