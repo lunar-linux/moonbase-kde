@@ -1,11 +1,11 @@
           MODULE=kbibtex
-         VERSION=0.9.3.2
+         VERSION=0.10.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/KBibTeX/${VERSION%.*}/
-      SOURCE_VFY=sha256:0733c24ca322327cf3d92fa36e4e196c4b9dc895f911a4c3558e7db5efc0c457
+      SOURCE_URL=$KDE_URL/stable/KBibTeX/$VERSION/
+      SOURCE_VFY=sha256:b127b240a7cd77c538619dc882a399b3c6ccd77a04428a497af906f14d09b8c4
         WEB_SITE=https://userbase.kde.org/KBibTeX
          ENTERED=20190722
-         UPDATED=20230305
+         UPDATED=20230318
            SHORT="KDE bibliography editor"
 
 cat << EOF
