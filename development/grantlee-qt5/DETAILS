@@ -1,12 +1,12 @@
           MODULE=grantlee-qt5
-         VERSION=5.2.0
+         VERSION=5.3.1
           SOURCE=${MODULE%-*}-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/steveire/grantlee/archive/v${VERSION}.tar.gz
+      SOURCE_VFY=sha256:ba288ae9ed37ec0c3622ceb40ae1f7e1e6b2ea89216ad8587f0863d64be24f06
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/grantlee-$VERSION
-      SOURCE_VFY=sha256:139acee5746b957bdf1327ec0d97c604d4c0b9be42aec5d584297cb5ed6a990a
         WEB_SITE=https://github.com/steveire/grantlee
          ENTERED=20150416
-         UPDATED=20200127
+         UPDATED=20230325
            SHORT="plugin based String Template system"
 
 cat << EOF
