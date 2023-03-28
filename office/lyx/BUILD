@@ -1,3 +1,5 @@
+export PYTHONDONTWRITEBYTECODE=1 &&
+
 . /etc/profile.d/qt5.rc &&
 
 OPTS+=" --enable-qt5" &&
