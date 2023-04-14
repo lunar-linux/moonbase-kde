@@ -2,6 +2,6 @@
 
 OPTS+=" -DPORT=Qt \
         -DENABLE_TOOLS=OFF \
-        -DUSE_GSTREAMER=OFF"
+        -DCMAKE_CXX_FLAGS=-DNDEBUG"
 
 default_cmake_build
