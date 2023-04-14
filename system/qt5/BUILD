@@ -36,7 +36,6 @@ OPTS+=" -gui \
         -skip qtwebengine \
         -nomake examples \
         -accessibility \
-        -no-use-gold-linker \
         -reduce-relocations \
         -confirm-license $LICENSE_TYPE -v \
         $SSE2" &&
