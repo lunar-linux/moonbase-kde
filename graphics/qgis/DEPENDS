@@ -6,7 +6,7 @@ depends python-owslib
 depends python-urllib3
 depends python-certifi
 depends python-yaml
-depends python-sip4
+depends python-sip
 depends libspatialite
 depends spatialindex
 depends gdal
@@ -14,7 +14,5 @@ depends postgis
 depends fcgi
 depends qt5
 depends qtkeychain
-depends qextserialport
 
-optional_depends qtwebkit "-DWITH_QTWEBKIT=ON" "-DWITH_QTWEBKIT=OFF" "for webkit support"
-optional_depends qwtpolar "-DWITH_QWTPOLAR=ON" "-DWITH_QWTPOLAR=OFF" "if yes, use system qwtpolar" 
+optional_depends qwt-6 "-DWITH_QWTPOLAR=ON" "-DWITH_QWTPOLAR=OFF" "if yes, use system qwt" 
