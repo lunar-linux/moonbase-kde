@@ -1,12 +1,12 @@
           MODULE=kdev-php
-         VERSION=22.12.3
+         VERSION=23.04.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://download.kde.org/stable/release-service/$VERSION/src/
-     SOURCE_VFY=sha256:a8e6efda3af1a4d689b5c977c5327ebd5987ddb0cc6f7b364fe61745e44771c6
+     SOURCE_VFY=sha256:be52ddf3f39baa0d7b6f214d510d43c906824995261f1959053f39c4c6d84b7e
    MODULE_PREFIX=${KDE_PREFIX:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20100501
-         UPDATED=20230302
+         UPDATED=20230420
            SHORT="S PHP plugin for kdevelop"
 
 cat << EOF

@@ -1,12 +1,12 @@
           MODULE=kget
-         VERSION=22.12.3
+         VERSION=23.04.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:61d66086b41d66880ca2212c039ecab4bb6bc2c0ac2e3fba76689e82bc3d1111
+      SOURCE_VFY=sha256:2b14b2f2d896188a64c257ba536ff8e082214727c05a6a319b0553383b0045f2
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/internet/kget/
          ENTERED=20130814
-         UPDATED=20230302
+         UPDATED=20230420
            SHORT="A download manager"
 
 cat << EOF

@@ -1,0 +1,15 @@
+          MODULE=kio-admin
+         VERSION=23.04.0
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/KDE/kio-admin/archive/refs/tags/v$VERSION.tar.gz
+      SOURCE_VFY=sha256:08e552d5c848ddc4ad255bcb926d1e8a50720a3324a2f96f114e14ef7958c348
+        WEB_SITE=https://github.com/KDE/kio-admin
+         ENTERED=20221121
+         UPDATED=20230420
+           SHORT="provides a KIO for admin use"
+
+cat << EOF
+kio-admin implements a new protocol admin:/// which gives administrative access to the entire system.
+This is achieved by talking, over dbus, with a root-level helper binary that in turn uses existing
+KIO infrastructure to run file:// operations in root-scope. 
+EOF
