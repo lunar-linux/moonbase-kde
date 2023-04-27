@@ -2,7 +2,7 @@
          VERSION=6.5.0
           SOURCE=qtserialport-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:
+      SOURCE_VFY=sha256:9209a9f5978a4adf3a150582270432fe3b635d05513ad1a57bff5ca4954a4dff
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtserialport-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
