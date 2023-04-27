@@ -1,5 +1,10 @@
 sedit 's:/bin/ls:/usr/bin/ls:g' src/corelib/CMakeLists.txt util/cmake/tests/data/quoted.pro &&
 
+#Generating .rcc/qmlcache/qtgraphicaleffectsplugin_ColorOverlay_qml.cpp
+#Detected locale "en_US" with character encoding "ISO-8859-1", which is not UTF-8.
+#Qt depends on a UTF-8 locale, and has switched to "en_US.UTF-8" instead.
+export LANG='en_US.UTF-8'
+
 OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DFEATURE_optimize_full=ON  \
         -DCMAKE_INSTALL_PREFIX=$MODULE_PREFIX \
