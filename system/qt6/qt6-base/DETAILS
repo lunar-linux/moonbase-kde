@@ -1,13 +1,13 @@
           MODULE=qt6-base
-         VERSION=6.4.2
+         VERSION=6.5.0
           SOURCE=qtbase-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtbase-everywhere-src-$VERSION
-      SOURCE_VFY=sha256:a88bc6cedbb34878a49a622baa79cace78cfbad4f95fdbd3656ddb21c705525d
+      SOURCE_VFY=sha256:fde1aa7b4fbe64ec1b4fc576a57f4688ad1453d2fab59cbadd948a10a6eaf5ef
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20211101
-         UPDATED=20230115
+         UPDATED=20230426
            SHORT="A C++ toolkit for application development"
 cat << EOF
 Qt is a C++ toolkit for application development. It lets application developers
