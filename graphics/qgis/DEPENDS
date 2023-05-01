@@ -14,5 +14,4 @@ depends postgis
 depends fcgi
 depends qt5
 depends qtkeychain
-
-optional_depends qwt-6 "-DWITH_QWTPOLAR=ON" "-DWITH_QWTPOLAR=OFF" "if yes, use system qwt" 
+depends qwt-6
