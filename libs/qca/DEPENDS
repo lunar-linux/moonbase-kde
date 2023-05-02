@@ -6,12 +6,6 @@ depends nss
 depends pkcs11-helper
 depends qt5
 
-optional_depends ca-certificates \
-   "" \
-   "" \
-   "Use system certificates" y
-
-optional_depends Botan  \
-   "" \
-   "" \
-   "For botan crypto cupport"
+optional_depends ca-certificates "" "" "Use system certificates"
+optional_depends Botan           "" "" "For botan crypto cupport"
+optional_depends qt6-5compat     "" "" "For qt6 qca support"
