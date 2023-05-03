@@ -1,12 +1,12 @@
           MODULE=kdiff
-         VERSION=1.10.1
+         VERSION=1.10.2
           SOURCE=${MODULE}3-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/${MODULE}3
-      SOURCE_VFY=sha256:205434930f67536c20519162af7ddf435846e2a1a125d7a0986f4ce27f9b33c8
+      SOURCE_VFY=sha256:bddc7c1ef4e70960b3f4d9894f137041345b75ed09ca86bde001649ba3ef44b3
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE}3-$VERSION
         WEB_SITE=http://kdiff3.sourceforge.net/
          ENTERED=20090902
-         UPDATED=20230330
+         UPDATED=20230503
            SHORT="KDE version of diff"
 
 cat << EOF
