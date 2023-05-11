@@ -1,12 +1,12 @@
           MODULE=ktp-text-ui
-         VERSION=23.04.0
+         VERSION=23.04.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:cb31f12669b25749882220a0943e696d5b59b298b33245b17fe9293087702487
+      SOURCE_VFY=sha256:504818bda9eba36ab63c66a1ec7afd2d26680117921c6c8fe184b43d0f1b72db
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/system/$MODULE
          ENTERED=20151130
-         UPDATED=20230420
+         UPDATED=20230511
            SHORT="A handler for text chats"
 
 cat << EOF

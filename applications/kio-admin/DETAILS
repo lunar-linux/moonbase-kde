@@ -1,11 +1,11 @@
           MODULE=kio-admin
-         VERSION=23.04.0
-          SOURCE=$MODULE-$VERSION.tar.gz
- SOURCE_URL_FULL=https://github.com/KDE/kio-admin/archive/refs/tags/v$VERSION.tar.gz
-      SOURCE_VFY=sha256:08e552d5c848ddc4ad255bcb926d1e8a50720a3324a2f96f114e14ef7958c348
+         VERSION=23.04.1
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src/
+      SOURCE_VFY=sha256:dd6c3872fb5dbda5f9cae3a78e5af005883b3eb92df022e1d28234d6a2a06c95
         WEB_SITE=https://github.com/KDE/kio-admin
          ENTERED=20221121
-         UPDATED=20230420
+         UPDATED=20230511
            SHORT="provides a KIO for admin use"
 
 cat << EOF
