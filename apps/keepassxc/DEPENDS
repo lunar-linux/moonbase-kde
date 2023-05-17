@@ -7,7 +7,8 @@ depends qt5
 depends qrencode
 
 optional_depends xclip "" "" "for X clipboard support"
+optional_depends Botan "" "" "for Botan encryption support"
+optional_depends wl-clipboard "" "" "for Wayland clipboard support"
 
 optional_depends quazip "-DWITH_XC_KEESHARE=ON" "" "for ZIP archives support"
 
-optional_depends wl-clipboard "" "" "for Wayland clipboard support"
