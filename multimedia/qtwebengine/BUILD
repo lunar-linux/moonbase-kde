@@ -1,6 +1,6 @@
 source /etc/profile.d/qt5.rc &&
 
-if module_installed krb5;then
+if module_installed %KERBEROS ;then
   OPTS+=" -webengine-kerberos"
 fi &&
 
