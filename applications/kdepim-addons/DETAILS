@@ -1,12 +1,12 @@
           MODULE=kdepim-addons
-         VERSION=23.04.1
+         VERSION=23.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:2d8d38e79cb24038461112bb479a761612db1c5544de6b8c67900ca192d4104c
+      SOURCE_VFY=sha256:5d9be6616427441b9ff5759176ab02d145694230e5b44b2f11d213bde1bbf798
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20160505
-         UPDATED=20230511
+         UPDATED=20230608
            SHORT="Addons for KDE PIM applications"
 
 cat << EOF

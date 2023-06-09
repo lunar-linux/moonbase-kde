@@ -1,12 +1,12 @@
           MODULE=akregator
-         VERSION=23.04.1
+         VERSION=23.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:d4a5f52440ce37b333df8dac386fa5ef6c23f73acca0f5f1dfde39c9cbd406d5
+      SOURCE_VFY=sha256:c14306fc8990707307ce4ada4f043975a75875351007100a49eab1cc7bf52f1d
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20171201
-         UPDATED=20230511
+         UPDATED=20230608
            SHORT="a feed reader"
 
 cat << EOF

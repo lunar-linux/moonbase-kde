@@ -1,12 +1,12 @@
           MODULE=svgpart
-         VERSION=23.04.1
+         VERSION=23.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:8107ea771da256bfa0bcb31818c653df12c493c98cfa6a9d5e593a0740d361b4
+      SOURCE_VFY=sha256:c93c80c702442d821967bd13ff456afbc054b9e67fc7574fe076104c25f77649
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20110813
-         UPDATED=20230511
+         UPDATED=20230608
            SHORT="KPart component to display SVG images"
 
 cat << EOF

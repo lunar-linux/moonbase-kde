@@ -1,12 +1,12 @@
           MODULE=marble
-         VERSION=23.04.1
+         VERSION=23.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:d41e1793e72ac1fd46d39127a70accbcf738c00fe3adbd1159cb32e47f4294d2
+      SOURCE_VFY=sha256:3b1d8c53db6c71ec727f7e8153cf667be6d1aa2b2f5befa4ef499bc6b79da09b
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://marble.kde.org/
          ENTERED=20110813
-         UPDATED=20230511
+         UPDATED=20230608
            SHORT="Virtual globe and world atlas"
 
 cat << EOF

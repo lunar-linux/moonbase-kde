@@ -1,12 +1,15 @@
 # Do not use kcalcore or add it to moonbase. As of this time all apps needing such things are provided
 # by kcalendarcore located in frameworks.
+depends akonadi
+depends libkdepim
+depends kmime
+depends akonadi-mime
 depends kdesdk-kio
 depends markdownpart
 depends libkleo
 depends kde-dev-scripts
 depends analitza
 depends kdeedu-data
-depends kmime
 depends kldap
 depends kmbox
 depends libkipi
@@ -14,8 +17,6 @@ depends libkdcraw
 depends libkgapi
 depends kcolorchooser
 depends ksmtp
-depends akonadi
-depends akonadi-mime
 depends libkcddb
 depends ffmpegthumbs
 depends poxml
@@ -69,7 +70,6 @@ depends kdebugsettings
 depends kmailtransport
 depends keditbookmarks
 depends akonadi-search
-depends libkdepim
 depends kidentitymanagement
 depends pimcommon
 depends mailimporter

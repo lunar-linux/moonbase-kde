@@ -1,12 +1,12 @@
           MODULE=kleopatra
-         VERSION=23.04.1
+         VERSION=23.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:ec09a9a575607a3087d53589d71717b6885c23ca88badea1309630ea2fb2f829
+      SOURCE_VFY=sha256:dc322480b6d61163d23ee7b656cd659d8cd040697996617c275a497ed5a6a7e3
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20160505
-         UPDATED=20230511
+         UPDATED=20230608
            SHORT="Certificate Manager and Unified Crypto GUI"
 
 cat << EOF
