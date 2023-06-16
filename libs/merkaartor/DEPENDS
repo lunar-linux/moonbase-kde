@@ -2,6 +2,5 @@ depends proj
 depends gdal
 depends qt5
 
-optional_depends libproxy   "LIBPROXY=1"    "LIBPROXY=0"    "automatical proxy detection" y
-optional_depends gpsd       "GPSDLIB=1"     "GPSDLIB=0"     "enable GPS readings" n
-optional_depends exiv2      "GEOIMAGE=1"    "GEOIMAGE=0"    "enable geotagged images" y
+
+optional_depends qtwebengine "-DWEBENGINE=ON" "-DWEBENGINE=OFF" "for webengine support"
