@@ -1,6 +1,6 @@
 source /etc/profile.d/qt5.rc &&
 
-export CFLGAS="-I/usr/include/pipewire-0.3"
+export CFLAGS="-I/usr/include/pipewire-0.3"
 
 if module_installed %KERBEROS ;then
   OPTS+=" -webengine-kerberos"
