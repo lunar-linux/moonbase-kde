@@ -1,0 +1,15 @@
+          MODULE=audiotube
+         VERSION=23.04.2
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:fb8f0b2f6feb096c88208fa4d238b644bce2260e914e67e0674a3262b45f8ddc
+   MODULE_PREFIX=${KDE_PREFIX:-/usr}
+        WEB_SITE=https://apps.kde.org/audiotube/
+         ENTERED=20230615
+         UPDATED=20230615
+           SHORT="youtube client"
+
+cat << EOF
+AudioTube can search YouTube Music, list albums and artists, play automatically generated
+playlists, albums and allows to put your own playlist together.
+EOF
