@@ -1,12 +1,12 @@
           MODULE=kwin
-         VERSION=5.27.5
+         VERSION=5.27.6
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
-      SOURCE_VFY=sha256:bb1226b15919681ea5f1de58b24ea4b568ea3f2b5452411f76daa80eb30c20ea
+      SOURCE_VFY=sha256:62d5bd5e91e951c9ad8c2fc49c29485feca78db985731f0779cdaaf5052499ec
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/kwin
         REPLACES=kwayland-server
          ENTERED=20150504
-         UPDATED=20230509
+         UPDATED=20230620
            SHORT="KDE Window manager"
 
 cat << EOF
