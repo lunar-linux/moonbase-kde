@@ -1,0 +1,28 @@
+From 80a9ab41b91ab849794bb7830f0a98d862c08269 Mon Sep 17 00:00:00 2001
+From: Antonio Rojas <arojas@archlinux.org>
+Date: Tue, 6 Jun 2023 19:40:13 +0200
+Subject: [PATCH] Fix build with OCaml 5
+
+'copy_string' and 'callback' were deprecated in OCaml 4 (11 years ago) and removed in OCaml 5
+
+BUG: 470709
+---
+ src/solver/modwrap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/solver/modwrap.c b/src/solver/modwrap.c
+index a180dba64..124d4bc4b 100644
+--- a/src/solver/modwrap.c
++++ b/src/solver/modwrap.c
+@@ -18,6 +18,6 @@ char *solve_equation(const char *eq)
+         solve_equation_closure = caml_named_value("solve_equation");
+     }
+ 
+-    value v = copy_string(eq);
+-    return strdup(String_val(callback(*solve_equation_closure, v)));
++    value v = caml_copy_string(eq);
++    return strdup(String_val(caml_callback(*solve_equation_closure, v)));
+ }
+-- 
+GitLab
+
