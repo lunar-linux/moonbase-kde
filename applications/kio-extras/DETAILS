@@ -1,12 +1,12 @@
           MODULE=kio-extras
-         VERSION=23.04.2
+         VERSION=23.04.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:88ed0887d4376dec4ecf8aa16739e672bf6b6a0525f8e89e194a2dd0487a18c1
+      SOURCE_VFY=sha256:0d23f5cb5027f6dac110ade375f3b40eb8577c2122b0485b70efb6280c76fdf9
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/kio-extras
          ENTERED=20150426
-         UPDATED=20230608
+         UPDATED=20230706
            SHORT="Adds additional functions to the kio slaves"
 
 cat << EOF
