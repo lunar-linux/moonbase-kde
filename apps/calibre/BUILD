@@ -1,4 +1,4 @@
-cp $SCRIPT_DIRECTORY/user-agent-data.json resources/ &&
+#cp $SCRIPT_DIRECTORY/user-agent-data.json resources/ &&
 
 export PYTHONDONTWRITEBYTECODE=1 &&
 
