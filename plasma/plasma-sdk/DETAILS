@@ -1,11 +1,11 @@
           MODULE=plasma-sdk
-         VERSION=5.27.6
+         VERSION=5.27.7.1
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
-      SOURCE_VFY=sha256:e352ecfecf47dd3d6f2daf2cb0729d0480145cbbf668b88d41cab425af8f76bf
+      SOURCE_URL=$KDE_URL/stable/plasma/${VERSION%.*}
+      SOURCE_VFY=sha256:d310a81eed68334886a7e7767bce9066c6ccb07087aa77d04b73acf41a5426a4
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
          ENTERED=20151123
-         UPDATED=20230620
+         UPDATED=20230801
            SHORT="Applications useful for Plasma development"
 
 cat << EOF
