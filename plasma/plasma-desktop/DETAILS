@@ -1,11 +1,11 @@
           MODULE=plasma-desktop
-         VERSION=5.27.7
+         VERSION=5.27.7.1
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:229aa838869a05e351db5f2d81608c9dce216cfeb85f1fb7e7d575e8869353da
-        WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
+      SOURCE_URL=$KDE_URL/stable/plasma/${VERSION%.*}
+      SOURCE_VFY=sha256:51626674ce4324ac424fded716862da967e6b33a898108b49fa27a7896d1bec2
+        WEB_SITE=https://projects.kde.org/projects/kde/workspace/plasma-desktop
          ENTERED=20151124
-         UPDATED=20230801
+         UPDATED=20230804
            SHORT="KDE Plasma Desktop"
 
 cat << EOF
