@@ -1,3 +1,5 @@
+sedit '28i #include <cstdint>' &&
+export LDFLAGS=" -lzstd -liberty -lz -ldl -lsframe"
 source /etc/profile.d/qt5.rc &&
 
 #If not specify Release it thinks it is using debug and make will fail
