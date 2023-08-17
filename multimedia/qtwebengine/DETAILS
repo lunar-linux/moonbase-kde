@@ -1,13 +1,13 @@
           MODULE=qtwebengine
-         VERSION=5.15.14
+         VERSION=5.15.15
 #For now we will use this one, will change later
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://anduin.linuxfromscratch.org/BLFS/qtwebengine/
-      SOURCE_VFY=sha256:1475c004860585b22af13a2b719ef10992fad58f1c145bf5cb43fbc86a3a67d2
+      SOURCE_VFY=sha256:
    MODULE_PREFIX=${QT5_PREFIX:-/usr}
         WEB_SITE=https://www.qt.io
          ENTERED=20191113
-         UPDATED=20230413
+         UPDATED=20230815
            SHORT="integrate chromium web capabilities into Qt"
 cat << EOF
 QtWebEngine integrates chromium's web capabilities into Qt.
