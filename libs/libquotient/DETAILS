@@ -1,13 +1,13 @@
           MODULE=libquotient
-         VERSION=0.7.1
+         VERSION=0.8.1.1
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/quotient-im/libQuotient/archive/refs/tags/$VERSION.tar.gz
-      SOURCE_VFY=sha256:48b15c666528405219ff0be8f0f336405c64deb1719115af75ef099cb3f86555
+      SOURCE_VFY=sha256:d1ab944a4b42f68d2d2ebfb2782a3e92eac2b7e056c7f72af2ba3b3ddf2fd735
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/libQuotient-$VERSION
         WEB_SITE=https://matrix.org/docs/projects/sdk/quotient
             TYPE=cmake
          ENTERED=20210720
-         UPDATED=20230317
+         UPDATED=20230824
            SHORT="a library that enables client applications"
 
 cat << EOF
