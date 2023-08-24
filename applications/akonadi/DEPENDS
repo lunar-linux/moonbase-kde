@@ -34,6 +34,6 @@ optional_depends postgresql \
                  "for Postgresql database support,${PROBLEM_COLOR}If you said yes here you should have said NO to %MYSQL"${QUERY_COLOR} n
 
 optional_depends sqlite \
-                 "-DAKONADI_BUILD_QSQLITE=1 -DDATABASE_BACKEND=SQLITE"  \
-                 "-DAKONADI_BUILD_QSQLITE=0" \
+                 "-DDATABASE_BACKEND=SQLITE"  \
+                 "" \
                  "for SQLite database support (Yes to install in Qt5 Plugin Dir)${PROBLEM_COLOR} Not recommended and if you said yes here you should have said no to %MYSQL and Postgresql${QUERY_COLOR}" n

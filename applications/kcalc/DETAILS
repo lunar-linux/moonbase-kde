@@ -1,12 +1,12 @@
           MODULE=kcalc
-         VERSION=23.04.3
+         VERSION=23.08.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:c11bec7523c56058be470b61d53fd7b3e5309fe680fe009f4c091a8b398bb812
+      SOURCE_VFY=sha256:ded207841f1dbb8a8373d94c7a014de17b893c06553fe9de9a871154c53eece0
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://utils.kde.org/projects/kcalc/
          ENTERED=20120125
-         UPDATED=20230706
+         UPDATED=20230824
            SHORT="KDE based calculator"
 
 cat << EOF

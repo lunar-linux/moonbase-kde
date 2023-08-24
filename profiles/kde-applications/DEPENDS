@@ -1,11 +1,24 @@
 # Do not use kcalcore or add it to moonbase. As of this time all apps needing such things are provided
 # by kcalendarcore located in frameworks.
+depends audiotube
+depends libktorrent
+depends konversation
+depends colord-kde
+depends neochat
+depends ktorrent
+depends kdenlive
+depends cantor
+depends kdevelop
+depends kjournald
+depends kipi-plugins
+depends kgpg
 depends akonadi
 depends libkdepim
 depends kmime
 depends akonadi-mime
 depends kdesdk-kio
 depends markdownpart
+depends kpimtextedit
 depends libkleo
 depends kde-dev-scripts
 depends analitza
@@ -42,7 +55,9 @@ depends akonadi-notes
 depends kamera
 depends kcalc
 depends kdf
+depends ksanecore
 depends libksane
+depends skanlite
 depends kmplot
 depends k3b
 depends libkdegames
@@ -58,7 +73,7 @@ depends kdesdk-thumbnailers
 depends kig
 depends kqtquickcharts
 depends kleopatra
-depends kpimtextedit
+depends grantleetheme
 depends akonadi-contacts
 depends kdenetwork-filesharing
 depends dolphin
@@ -73,10 +88,11 @@ depends akonadi-search
 depends kidentitymanagement
 depends pimcommon
 depends mailimporter
-depends grantleetheme
 depends kcalutils
-depends calendarsupport
 depends libgravatar
+depends messagelib
+depends akonadi-calendar
+depends calendarsupport
 depends libksieve
 depends ktnef
 depends kfind
@@ -84,7 +100,6 @@ depends kget
 depends kgpg
 depends dragon
 depends knotes
-depends akonadi-calendar
 depends akonadi-calendar-tools
 depends eventviews
 depends ksystemlog
@@ -108,6 +123,7 @@ depends kmousetool
 depends grantlee-editor
 depends kmouth
 depends libkeduvocdocument
+depends mailcommon
 depends pim-data-exporter
 depends kimagemapeditor
 depends juk
@@ -115,8 +131,6 @@ depends khelpcenter
 depends incidenceeditor
 depends kaccounts-integration
 depends kaccounts-providers
-depends messagelib
-depends mailcommon
 depends akonadi-import-wizard
 depends akonadiconsole
 depends kaddressbook
