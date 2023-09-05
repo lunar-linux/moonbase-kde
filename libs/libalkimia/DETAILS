@@ -1,12 +1,12 @@
           MODULE=libalkimia
-         VERSION=8.1.1
+         VERSION=8.1.2
           SOURCE=alkimia-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/alkimia/$VERSION/
+      SOURCE_URL=$KDE_URL/stable/alkimia/
+      SOURCE_VFY=sha256:cf846ee87b9cc630f58e0bdd23334296810ba3bcc1751fe2f4722161897ee33a
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/alkimia-$VERSION
-      SOURCE_VFY=sha256:957adc63c0be54dd433e3268a37323be5456e5ab84ece27f73a1616a92db86d5
         WEB_SITE=http://kde-apps.org/content/show.php/libalkimia?content=137323
          ENTERED=20141005
-         UPDATED=20220504
+         UPDATED=20230905
            SHORT="provides common classes for finance applications"
 
 cat << EOF
