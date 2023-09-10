@@ -1,12 +1,12 @@
           MODULE=kwayland
-         VERSION=5.109.0
+         VERSION=5.110.0
           SOURCE=${MODULE%-*}-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:d88b266938ed080496cd7f4c07a4f5d9c5e4d952aa13ef823bfec6af610925de
+      SOURCE_VFY=sha256:0565041ef0ab6aec2d2afbe513c79d5c56c07d03c98233ca82103abcb9dffd3d
         WEB_SITE=https://quickgit.kde.org/?p=kwayland.git
         REPLACES=kwayland-frameworks
          ENTERED=20151120
-         UPDATED=20230819
+         UPDATED=20230910
            SHORT="Qt-style Client and Server library wrapper for the Wayland libraries"
 
 cat << EOF
