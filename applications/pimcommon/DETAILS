@@ -1,12 +1,12 @@
           MODULE=pimcommon
-         VERSION=23.08.0
+         VERSION=23.08.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:bb81856d1bc1bb3e2fd00198f2429e6d0ace04b294b1167a61b386a294f424e0
+      SOURCE_VFY=sha256:67993cf689bd477a9887e09b4bd8dc7742f5156695c20ff59e1835aa01a059dc
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20160505
-         UPDATED=20230824
+         UPDATED=20230914
            SHORT="Common libraries for KDE PIM"
 
 cat << EOF

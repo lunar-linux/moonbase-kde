@@ -1,11 +1,11 @@
           MODULE=neochat
-         VERSION=23.08.0
+         VERSION=23.08.1
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=https://download.kde.org/stable/plasma-mobile/$VERSION/
-      SOURCE_VFY=sha256:4ead1a9fa308e53173229a744075c59580ed3364bd206a08c07d9db163758bfb
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:c73646a5e0405bb82f36926af8371f724b7156cef147b4ac9ae1f1db642ea31c
         WEB_SITE=https://apps.kde.org/neochat
          ENTERED=20210720
-         UPDATED=20230824
+         UPDATED=20230914
            SHORT="a Matrix client"
 
 cat << EOF
