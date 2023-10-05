@@ -1,3 +1,6 @@
 ld_add /usr/lib/qt5
 
-lunar fix qca
+if module_installed qca; then
+  lunar fix qca
+fi
+
