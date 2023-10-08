@@ -1,13 +1,13 @@
           MODULE=qt6-declarative
-         VERSION=6.5.0
+         VERSION=6.5.3
           SOURCE=qtdeclarative-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:f7d631cd8ebc1491dad0f30f1b5326ae812bee4ad706e61157816a82bf588c97
+      SOURCE_VFY=sha256:404dd6d2d206bb882ecd6622f0c708c9d6bd724a4d83776e13c49761c159d215
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtdeclarative-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20211101
-         UPDATED=20230426
+         UPDATED=20231008
            SHORT="Classes for QML and JavaScript languages"
 cat << EOF
 Classes for QML and JavaScript languages.
