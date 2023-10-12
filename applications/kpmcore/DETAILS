@@ -1,12 +1,12 @@
           MODULE=kpmcore
-         VERSION=23.08.1
+         VERSION=23.08.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src/
-      SOURCE_VFY=sha256:9d398da4b6b9b6be94cbdabd0255daa3697019ebba8d45eabadab44c076d75db
+      SOURCE_VFY=sha256:3ac0e40b6ed12f3097211942e6894a97f3b8ee55055a8ea6649dd0a337aaf654
         WEB_SITE=https://github.com/KDE/kpmcore
             TYPE=cmake
          ENTERED=20200802
-         UPDATED=20230914
+         UPDATED=20231012
            SHORT="library for examining and manipulating all facets of storage devices"
 
 cat << EOF

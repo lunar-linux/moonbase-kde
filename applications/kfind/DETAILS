@@ -1,12 +1,12 @@
           MODULE=kfind
-         VERSION=23.08.1
+         VERSION=23.08.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:55d00c5897a78fadcf34e53149380987e1e631e62bd116af766dd8ece656926c
+      SOURCE_VFY=sha256:2f13e0cff198888a0fcd85cd049096c4d0530b447389d479eed4e70062e89227
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://utils.kde.org/projects/kgpg/
          ENTERED=20171201
-         UPDATED=20230914
+         UPDATED=20231012
            SHORT="Find files and folders"
 
 cat << EOF
