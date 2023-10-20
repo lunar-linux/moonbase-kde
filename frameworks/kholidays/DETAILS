@@ -1,12 +1,12 @@
           MODULE=kholidays
-         VERSION=5.110.0
+         VERSION=5.111.0
           SOURCE=${MODULE%-*}-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/${VERSION%.*}/
-      SOURCE_VFY=sha256:4c56346b5047c722e43a5449e1fef7dad2a68371b71894fcc37c2416ab54337e
+      SOURCE_VFY=sha256:570cb98429334fa37b876cf9c1f325bd604aa90b1c8d505a39d5cca7af191277
         WEB_SITE=http://kde.org/applications/system/kholidays
         REPLACES=kholidays-frameworks
          ENTERED=20180212
-         UPDATED=20230910
+         UPDATED=20231019
            SHORT="library for regional holiday information"
 
 cat << EOF
