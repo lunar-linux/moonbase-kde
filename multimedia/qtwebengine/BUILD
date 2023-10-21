@@ -11,6 +11,6 @@ cd    build &&
 
 qmake-qt5 .. -- -system-ffmpeg -webp -proprietary-codecs -webengine-icu -spellchecker $OPTS &&
 
-default_make &&
+default_make
 
-find /usr/lib/qt5/$MODULE -type f -name 'libQt5WebEngine*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \;
+find /usr/lib/qt5/ -type f -name 'libQt5WebEngine*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \;

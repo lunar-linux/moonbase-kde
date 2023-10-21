@@ -1,5 +1,7 @@
 default_pre_build &&
 
+lin -w 2023-02-01 re2 &&
+
 sed -i -e 's|use_jumbo_build=true|use_jumbo_build=false|' src/buildtools/config/common.pri &&
 
 sed -e '/link_pulseaudio/s/false/true/' -i src/3rdparty/chromium/media/media_options.gni &&
