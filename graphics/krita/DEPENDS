@@ -1,9 +1,14 @@
 depends hicolor-icon-theme
+depends xsimd
+depends libunibreak
 depends boost
 depends curl
 depends exiv2
 depends fftw
 depends gsl
+depends immer
+depends zug
+depends lager
 depends OpenColorIO
 depends kio
 depends openexr
@@ -17,4 +22,3 @@ depends quazip
 
 optional_depends libheif "" "" "for ISO/IEC 23008-12:2017 HEIF file format decoder and encoder support"
 optional_depends kseexpr "" "" "for expression evaluation support"
-optional_depends xsimd   "" "" "for multi-dimensional array support"
