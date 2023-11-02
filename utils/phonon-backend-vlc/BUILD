@@ -1,3 +1,5 @@
-  . /etc/profile.d/qt5.rc &&
+. /etc/profile.d/qt5.rc &&
 
-  default_cmake_build
+OPTS+=" -DPHONON_BUILD_QT6=OFF"
+
+default_cmake_build
