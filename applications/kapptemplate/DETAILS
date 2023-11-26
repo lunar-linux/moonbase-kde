@@ -1,12 +1,12 @@
           MODULE=kapptemplate
-         VERSION=23.08.2
+         VERSION=23.08.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:acd25602f20bf17dcf67c765d5f64c7ff552b17302028516a36383868bca56a5
+      SOURCE_VFY=sha256:ed15e0b90cc3459b823a4897edd8c9f2cb6915c937c8b1a3f28726c8a683eb43
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/development/kapptemplate/
          ENTERED=20130814
-         UPDATED=20231012
+         UPDATED=20231125
            SHORT="Templates providing written code and a proper structure"
 
 cat << EOF

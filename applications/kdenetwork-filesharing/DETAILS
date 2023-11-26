@@ -1,12 +1,12 @@
           MODULE=kdenetwork-filesharing
-         VERSION=23.08.2
+         VERSION=23.08.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:00ced240fc79b5a925be108ab726dfe722765e7ea147c9983769c6b4badd4624
+      SOURCE_VFY=sha256:a2a62ff532f0e6b5aa5f6cd3472d5f0c130d266e6ec42602a04806385e7a65ec
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/
          ENTERED=20130814
-         UPDATED=20231012
+         UPDATED=20231125
            SHORT="Konqueror plugin to share a directory with the local network"
 
 cat << EOF
