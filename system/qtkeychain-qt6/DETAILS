@@ -1,12 +1,12 @@
           MODULE=qtkeychain-qt6
-         VERSION=0.14.0
+         VERSION=0.14.1
           SOURCE=$MODULE-$VERSION.tar.gz
- SOURCE_URL_FULL=http://github.com/frankosterfeld/qtkeychain/archive/v$VERSION.tar.gz
-      SOURCE_VFY=sha256:ad78f2d9e0a5ee80f40cbaace4f55d11c2557bc6e930cf4a9479e39a7d78bb60
+ SOURCE_URL_FULL=http://github.com/frankosterfeld/qtkeychain/archive/$VERSION.tar.gz
+      SOURCE_VFY=sha256:afb2d120722141aca85f8144c4ef017bd74977ed45b80e5d9e9614015dadd60c
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE%-*}-$VERSION
         WEB_SITE=http://github.com/frankosterfeld/qtkeychain
          ENTERED=20211108
-         UPDATED=20230512
+         UPDATED=20231128
            SHORT="Platform-independent Qt6 API for storing passwords securely"
 
 cat << EOF
