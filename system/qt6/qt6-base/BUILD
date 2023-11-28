@@ -24,15 +24,15 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
         -DFEATURE_mtdev=OFF"
 
-cmake -B build -S . -G Ninja $OPTS -Wno-dev &&
-cmake --build build &&
+cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS -Wno-dev &&
+cmake --build $MODULE-$VERSION &&
 prepare_install &&
 
 #These installed by qt6-base get overwritten by those from othet qt6-x modules
 #So delete these and let the others have their way
 rm -f build/qt6/*.prl &&
 
-cmake --install build 
+cmake --install $MODULE-$VERSION &&
 
 cat > qt6.rc << EOF &&
   export QT6_DIR="${MODULE_PREFIX}"

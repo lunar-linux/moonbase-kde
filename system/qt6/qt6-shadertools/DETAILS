@@ -1,13 +1,13 @@
           MODULE=qt6-shadertools
-         VERSION=6.5.3
+         VERSION=6.6.1
           SOURCE=qtshadertools-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:201b7b3a409f048e78c5defb90a70af423166313ad4386f8e6b83990ae0f3573
+      SOURCE_VFY=sha256:08338fe4f54954928e41a8a5450627e61bca115039706c28161bf967785e73bb
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtshadertools-everywhere-src-$VERSION
         WEB_SITE=http://qt-project.org
          ENTERED=20211101
-         UPDATED=20231008
+         UPDATED=20231128
            SHORT="Provides functionality for the shader pipeline"
 cat << EOF
 Provides functionality for the shader pipeline that allows Qt Quick to operate on Vulkan, Metal, and Direct3D, in addition to OpenGL.

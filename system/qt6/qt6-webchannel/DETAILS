@@ -1,13 +1,13 @@
           MODULE=qt6-webchannel 
-         VERSION=6.5.3
+         VERSION=6.6.1
           SOURCE=qtwebchannel-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:129f89a6aba792c47f110582967f4f586457e7b63de3465e5f1dd210ce6bf04a
+      SOURCE_VFY=sha256:f16087cd573ada98b3c90f10a18bb660dc8a65a6404e4d8e24a712799f91e543
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtwebchannel-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20211101
-         UPDATED=20231008
+         UPDATED=20231128
            SHORT="Provides access to QObject or QML objects from HTML clients"
 cat << EOF
 Provides access to QObject or QML objects from HTML clients for seamless

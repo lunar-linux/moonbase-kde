@@ -1,13 +1,13 @@
           MODULE=qt6-speech
-         VERSION=6.5.3
+         VERSION=6.6.1
           SOURCE=qtspeech-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:79c2f42c4d921a7e73825ead5681b5b32eac52f5e180e1899bb86e68206b0b9c
+      SOURCE_VFY=sha256:a28c2052c95144cf25f2f234e5334df364818da2b0fc091e369418869c925899
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtspeech-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20230115
-         UPDATED=20231008
+         UPDATED=20231128
            SHORT="Qt speech support"
 cat << EOF
 Qt speech support.

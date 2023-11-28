@@ -17,10 +17,10 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \
         -DINSTALL_SYSCONFDIR=/etc/xdg"
 
-cmake -B build -S . -G Ninja $OPTS -Wno-dev &&
-cmake --build build &&
+cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS -Wno-dev &&
+cmake --build $MODULE-$VERSION &&
 prepare_install &&
 
-find build/qt6 -type f -name '*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
+find $MODULE-$VERSION/qt6 -type f -name '*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
 
-cmake --install build
+cmake --install $MODULE-$VERSION

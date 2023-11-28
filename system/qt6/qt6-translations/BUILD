@@ -17,7 +17,8 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \
         -DINSTALL_SYSCONFDIR=/etc/xdg"
 
-cmake -B build -S . -G Ninja $OPTS -Wno-dev &&
-cmake --build build &&
+cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS -Wno-dev &&
+cmake --build $MODULE-$VERSION &&
+
 prepare_install &&
-cmake --install build
+cmake --install $MODULE-$VERSION
