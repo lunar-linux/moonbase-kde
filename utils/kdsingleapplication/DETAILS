@@ -1,0 +1,13 @@
+          MODULE=kdsingleapplication
+         VERSION=1.0.0
+          SOURCE=$MODULE-$VERSION.tar.gz
+      SOURCE_URL=https://github.com/KDAB/KDSingleApplication/releases/download/v$VERSION/
+      SOURCE_VFY=sha256:c92355dc10f3ebd39363458458fb5bdd9662e080cf77d91f0437763c4d936520
+        WEB_SITE=https://github.com/KDAB/KDSingleApplication
+         ENTERED=20231128
+         UPDATED=20231128
+           SHORT="helper class for single instance policy applications"
+
+cat << EOF
+Kdsingleapplication is a helper class for single instance policy applications.
+EOF
