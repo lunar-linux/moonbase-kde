@@ -1,4 +1,5 @@
 depends gdb
+depends yaml-cpp
 depends python
 depends cmake
 depends lld
@@ -9,7 +10,6 @@ depends qt6-shadertools
 depends qt6-svg
 depends qt6-tools
 depends qt6-webengine
-depends yaml-cpp
 
 optional_depends git        "-DBUILD_PLUGIN_GIT=ON" "-DBUILD_PLUGIN_GIT=OFF" "for git revision support"
 optional_depends cvs        "-DBUILD_PLUGIN_CVS=ON" "-DBUILD_PLUGIN_CVS=OFF" "for cvs revision support"
