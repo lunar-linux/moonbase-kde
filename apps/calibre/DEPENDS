@@ -1,3 +1,4 @@
+depends liberation-fonts
 depends ninja
 depends chmlib
 depends jxrlib
@@ -38,6 +39,7 @@ depends python-sip
 depends python-soupsieve
 depends python-pyzstd
 depends python-py7zr
+depends python-xxhash
 depends PyQt-builder
 depends uchardet
 depends udisks2
@@ -53,7 +55,7 @@ depends qt6-base
 depends qt6-svg
 depends qt6-webengine
 depends python-pyqt6-webengine
-
+depends python-pyqt6-sip
 depends xdg-utils
 
 optional_depends poppler  "" "" "for convertinf pdf files to html"

@@ -1,6 +1,7 @@
-#cp $SCRIPT_DIRECTORY/user-agent-data.json resources/ &&
-
 export PYTHONDONTWRITEBYTECODE=1 &&
+
+#Qt depends on a UTF-8 locale, and has switched to "en_US.UTF-8" instead.
+export LANG='en_US.UTF-8'
 
 . /etc/profile.d/qt6.rc &&
 
