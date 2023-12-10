@@ -25,5 +25,14 @@ if module_installed $MODULE; then
   lrm --upgrade $MODULE
 fi &&
 
+# libxkbcommon-1.6.0 package removes some definitions that are not used.
+sed -i '276,279d' qtbase/src/platformsupport/input/xkbcommon/qxkbcommon.cpp &&
+
+# gcc-13.x issue
+sed -e "/pragma once/a#include <cstdint>"                                      \
+    -i qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/geometry.hpp \
+       qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/string.hpp   \
+       qtlocation/src/3rdparty/mapbox-gl-native/src/mbgl/gl/stencil_mode.hpp &&
+
 #Needed to accomodate the kf5 patch
 mkdir -pv qtbase/.git
