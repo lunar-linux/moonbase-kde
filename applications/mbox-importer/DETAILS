@@ -1,12 +1,12 @@
           MODULE=mbox-importer
-         VERSION=23.08.3
+         VERSION=23.08.4
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:05166958527b484e3d49a408b00fce0717e8517e3730172ee99e2d7fd47d060c
+      SOURCE_VFY=sha256:bfaee974d2d907d2e95a3b948a754702f950b7745881a206bb535d7e69b6d1de
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/kldap
          ENTERED=20151122
-         UPDATED=20231125
+         UPDATED=20231212
            SHORT="Import mbox files to kmail"
 
 cat << EOF
