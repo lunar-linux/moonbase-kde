@@ -1,11 +1,12 @@
-          MODULE=oxygen-icons5
-         VERSION=5.112.0
+          MODULE=oxygen-icons
+         VERSION=5.113.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:8a14b0e9980decadc94806823695fd346e281907d9656350e217dde27bac827b
+      SOURCE_VFY=sha256:bd03eac086c7360114ad6842db0eaa8fc7d1c3b18ad65a2cb98ea6f21fb02d3f
         WEB_SITE=http://www.oxygen-icons.org
          ENTERED=20151120
-         UPDATED=20231125
+         UPDATED=20231214
+        REPLACES=oxygen-icons5
            SHORT="oxygen icon theme"
 
 cat << EOF
