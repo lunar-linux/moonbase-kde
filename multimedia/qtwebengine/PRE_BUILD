@@ -1,5 +1,8 @@
 default_pre_build &&
 
+# Current re2 version causes build failure, use internal
+sedit 's:use_system_re2=true:use_system_re2=false:' src/core/config/linux.pri &&
+
 sed -i -e 's|use_jumbo_build=true|use_jumbo_build=false|' src/buildtools/config/common.pri &&
 
 sed -e '/link_pulseaudio/s/false/true/' -i src/3rdparty/chromium/media/media_options.gni &&
