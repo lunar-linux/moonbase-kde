@@ -39,6 +39,8 @@ sed -e 's/xmlError/const xmlError/' \
 -i src/3rdparty/chromium/third_party/blink/renderer/core/xml/xslt_processor.h \
 -i src/3rdparty/chromium/third_party/blink/renderer/core/xml/xslt_processor_libxslt.cc &&
 
+patch -p1 -d src/3rdparty/chromium -i $SCRIPT_DIRECTORY/qt5-webengine-icu-74.patch &&
+
 #Quoting the LFS folks here;
 #Although the patches used in this module ensures git is not invoked during the build, the build system has
 #labyrinthine rules of byzantine complexity, and in particular trying to build without two .git directories
