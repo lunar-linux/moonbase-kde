@@ -10,6 +10,10 @@ export LANG='en_US.UTF-8'
 OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=$MODULE_PREFIX \
         -DINSTALL_LIBDIR=lib/qt6 \
+        -DQT_BUILD_EXAMPLES_BY_DEFAULT=OFF \
+        -DQT_BUILD_TESTS_BY_DEFAULT=OFF \
+        -DQT_FEATURE_webengine_system_re2=OFF \
+        -DQT_INSTALL_EXAMPLES_SOURCES_BY_DEFAULT=OFF \
         -DQT_FEATURE_webengine_system_libevent=ON \
         -DQT_FEATURE_webengine_system_ffmpeg=ON \
         -DQT_FEATURE_webengine_system_icu=ON \
