@@ -1,11 +1,11 @@
           MODULE=kxmlrpcclient
-         VERSION=5.114.0
+         VERSION=5.115.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)/portingAids/
-      SOURCE_VFY=sha256:597d7cf245e9b5a5831c7ba8ba6db10db6ec69a4eb3468fd31d30fb94754f2b9
+      SOURCE_VFY=sha256:8074fd5c167119500d2a83981aeccfb533752c830d718c6160547c619a283208
         WEB_SITE=https://invent.kde.org/frameworks/kxmlrpcclient
          ENTERED=20150410
-         UPDATED=20240114
+         UPDATED=20240210
            SHORT="simple XML-RPC Client support"
 
 cat << EOF
