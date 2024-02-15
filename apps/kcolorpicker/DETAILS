@@ -1,0 +1,15 @@
+          MODULE=kcolorpicker
+         VERSION=0.3.0
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/ksnip/kColorPicker/archive/refs/tags/v$VERSION.tar.gz
+      SOURCE_VFY=sha256:cab1efae1ca345a831dc6975b81c344da5c9425d934d73584dd7d0d512af3946
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/kColorPicker-$VERSION
+        WEB_SITE=https://github.com/DamirPorobic/kColorPicker
+            TYPE=cmake
+         ENTERED=20240215
+         UPDATED=20240215
+           SHORT="qt based color picker"
+
+cat << EOF
+Qt base color picker with a popup menu.
+EOF
