@@ -1,5 +1,6 @@
 . /etc/profile.d/qt5.rc &&
 
-OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=1 -DGWENVIEW_SEMANTICINFO_BACKEND=Baloo"
+OPTS+=" -DGWENVIEW_SEMANTICINFO_BACKEND=Baloo \
+        -DkImageAnnotator_DIR=/usr/lib/cmake/kImageAnnotator-Qt5"
 
 default_cmake_build
