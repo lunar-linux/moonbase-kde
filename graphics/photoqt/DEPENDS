@@ -1,14 +1,22 @@
 depends libarchive
 depends pugixml
-depends extra-cmake-modules
-depends qt5
 depends exiv2
 depends libmng
+depends libarchive
+depends poppler
+depends extra-cmake-modules
+depends mpv
+depends qt5
 depends LibRaw
 depends hicolor-icon-theme
-depends poppler
-depends libarchive
 depends kimageformats
 
-optional_depends python-pychromecast   "-DCHROMECAST=ON"     "-DCHROMECAST=OFF"     "for chromecast support"
-optional_depends GraphicsMagick "-DGRAPHICSMAGICK=ON" "-DGRAPHICSMAGICK=OFF" "for additional graphics support"
+optional_depends python-pychromecast   \
+                 "-DCHROMECAST=ON"     \
+                 "-DCHROMECAST=OFF"    \
+                 "for chromecast support"
+
+optional_depends ImageMagick \
+                 "-DGRAPHICSMAGICK=OFF -DIMAGEMAGICK=ON" \
+                 "-DIMAGEMAGICK=OFF" \
+                 "for additional graphics support"

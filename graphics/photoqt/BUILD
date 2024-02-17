@@ -1,5 +1,7 @@
-source /etc/profile.d/qt5.rc &&
+export LANG='en_US.UTF-8'
 
-OPTS+=" -DDEVIL=OFF -DFREEIMAGE=OFF"
+source /etc/profile.d/qt6.rc &&
+
+OPTS+=" -DFREEIMAGE=OFF"
 
 default_cmake_build
