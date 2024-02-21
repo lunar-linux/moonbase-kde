@@ -1,12 +1,11 @@
           MODULE=polkit-qt-1
-         VERSION=0.114.0
+         VERSION=0.200.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/$MODULE/
-      SOURCE_VFY=sha256:2eb0f22445888295ffa2bfbc0c3693847a0f973bb6b0c3e4cce0218be7e3907e
+      SOURCE_VFY=sha256:5d3b611c062d2b76a93750bb10c907bfd21d1ff08d0a15dc2cf63e278e1677fb
         WEB_SITE=http://www.kde.org
-            TYPE=cmake
          ENTERED=20091226
-         UPDATED=20191102
+         UPDATED=20240221
            SHORT="Qt wrapper around polkit-1"
 
 cat << EOF
