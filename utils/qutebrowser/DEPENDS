@@ -1,15 +1,10 @@
-depends desktop-file-utils
-depends hicolor-icon-theme
-depends python-jinja2
-depends python-pygments
+depends qt6-base
 depends python-yaml
-depends python-attrs
-depends pyPEG2
-depends PyQt5
-depends qtwebkit
+depends python-jinja2
+depends python-setuptools
+depends pyqt6
+depends python-pyqt6-webengine
 
 optional_depends pdfjs "" "" "for displaying PDF in-browser"
+optional_depends python-pygments "" "" "for syntax highlighting support"
 
-optional_depends asciidoc "" "" "for install the man page"
-
-optional_depends gst-plugins-ugly "" "" "for more media playback support"
