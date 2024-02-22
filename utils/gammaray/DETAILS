@@ -1,12 +1,12 @@
           MODULE=gammaray
-         VERSION=2.11.3
+         VERSION=3.0.0
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/KDAB/GammaRay/archive/v$VERSION.tar.gz
-      SOURCE_VFY=sha256:0aef9b4f596e7a59ef8eaafac8efe921b0ff50c4e008f46584d748eb3fccff10
+      SOURCE_VFY=sha256:27fb2412e9edae75de23df94cd8330ad1dd579837d47b491709c13d625e3ac68
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/GammaRay-$VERSION
         WEB_SITE=https://www.kdab.com/development-resources/qt-tools/gammaray/
          ENTERED=20160815
-         UPDATED=20211018
+         UPDATED=20240222
            SHORT="A tool for examining the internals of a Qt application"
 
 cat << EOF
