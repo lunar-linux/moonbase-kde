@@ -1,4 +1,5 @@
 . /etc/profile.d/qt6.rc &&
+export LANG='en_US.UTF-8'
 
 OPTS=" -D CMAKE_INSTALL_PREFIX=/usr \
        -D CMAKE_INSTALL_LIBDIR=lib  \
