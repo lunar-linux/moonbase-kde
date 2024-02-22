@@ -1,12 +1,12 @@
           MODULE=arsenic
-         VERSION=3.5.5
+         VERSION=5.2
           SOURCE=$MODULE-$VERSION.tar.gz
- SOURCE_URL_FULL=https://github.com/Antidote1911/arsenic/archive/refs/tags/$VERSION.tar.gz
-      SOURCE_VFY=sha256:7d6cc6def3c8cdab12c2ad42217da0c9db13353ad802ca1cf2cc48accf6f3380
+ SOURCE_URL_FULL=https://github.com/Antidote1911/arsenic/archive/refs/tags/v$VERSION.tar.gz
+      SOURCE_VFY=sha256:f87bac15064d5686a12828323389ca75e3331d8d3fcfaf531a0a444e71fefb0a
    MODULE_PREFIX=${KDE_PREFIX:-/usr}
         WEB_SITE=https://github.com/Antidote1911/arsenic/
          ENTERED=20200619
-         UPDATED=20221125
+         UPDATED=20240222
            SHORT="Qt5 app for encrypt files and text with triple encryption"
 
 cat << EOF
