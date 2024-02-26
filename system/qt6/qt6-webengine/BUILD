@@ -1,6 +1,9 @@
 source /etc/profile.d/qt6.rc &&
 
-ulimit -u 8192 &&
+#ulimit -u 8192 &&
+# uses malloc_usable_size, which is incompatible with fortification level 3
+export CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+export CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
 
 #Generating .rcc/qmlcache/qtgraphicaleffectsplugin_ColorOverlay_qml.cpp
 #Detected locale "en_US" with character encoding "ISO-8859-1", which is not UTF-8.
@@ -10,10 +13,8 @@ export LANG='en_US.UTF-8'
 OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=$MODULE_PREFIX \
         -DINSTALL_LIBDIR=lib/qt6 \
-        -DQT_BUILD_EXAMPLES_BY_DEFAULT=OFF \
-        -DQT_BUILD_TESTS_BY_DEFAULT=OFF \
-        -DQT_FEATURE_webengine_system_re2=OFF \
-        -DQT_INSTALL_EXAMPLES_SOURCES_BY_DEFAULT=OFF \
+        -DCMAKE_TOOLCHAIN_FILE=/usr/lib/qt6/cmake/Qt6/qt.toolchain.cmake \
+        -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
         -DQT_FEATURE_webengine_system_libevent=ON \
         -DQT_FEATURE_webengine_system_ffmpeg=ON \
         -DQT_FEATURE_webengine_system_icu=ON \

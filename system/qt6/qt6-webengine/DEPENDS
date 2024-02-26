@@ -2,7 +2,6 @@ depends gperf
 depends python-html5lib
 depends python-six
 depends python-webencodings
-depends re2
 depends pciutils
 depends libevent
 depends libvpx
@@ -16,6 +15,9 @@ depends snappy
 depends jsoncpp
 depends ffmpeg
 depends pipewire
+depends qt6-declarative
 depends qt6-tools
 depends qt6-positioning
 depends qt6-webchannel
+
+optional_depends re2 "-DQT_FEATURE_webengine_system_re2=ON" "-DQT_FEATURE_webengine_system_re2=OFF" "for alternative to backtracking regular expression support"
