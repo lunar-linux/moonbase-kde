@@ -1,23 +1,15 @@
 source /etc/profile.d/qt5.rc   &&
 
-cmake -B build5 \
-       -DCMAKE_BUILD_TYPE=Release \
-       -DQT_MAJOR_VERSION=5 \
-       -DBUILD_TESTING=OFF \
-       -DCMAKE_SKIP_RPATH=ON &&
-cmake --build build5
+OPTS+=" -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -Wno-dev -DCMAKE_INSTALL_PREFIX=$MODULE_PREFIX -DCMAKE_SKIP_RPATH=ON"
 
-prepare_install &&
-cmake --install build5 &&
+cmake -B $MODULE-qt5 -DQT_MAJOR_VERSION=5 $OPTS &&
+cmake --build $MODULE-qt5 &&
 
-if module_installed qt6-base; then
+
 source /etc/profile.d/qt6.rc &&
-cmake -B build6 \
-    -DCMAKE_BUILD_TYPE=Release \
-    -DQT_MAJOR_VERSION=6 \
-    -DBUILD_TESTING=OFF \
-    -DCMAKE_SKIP_RPATH=ON &&
-cmake --build build6 &&
+cmake -B $MODULE-qt6 -DQT_MAJOR_VERSION=6 $OPTS &&
+cmake --build $MODULE-qt6 &&
+
 prepare_install &&
-cmake --install build6
-fi
+cmake --install $MODULE-qt5 &&
+cmake --install $MODULE-qt6
