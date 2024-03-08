@@ -1,0 +1,7 @@
+source /etc/profile.d/qt6.rc &&
+
+sed -i 's|SUBDIRS  += Accounts tests|SUBDIRS += Accounts|' accounts-qt.pro &&
+
+/usr/lib/qt6/bin/qmake PREFIX=/usr LIBDIR=/usr/lib $OPTS &&
+
+default_make

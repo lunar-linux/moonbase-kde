@@ -1,0 +1,15 @@
+          MODULE=libaccounts-qt6
+         VERSION=1.16
+         _commit=18557f7def9af8f4a9e0e93e9f575ae11e5066aa
+          SOURCE=${MODULE%-*}-VERSION_${VERSION}.tar.bz2
+      SOURCE_URL=git+https://gitlab.com/nicolasfella/libaccounts-qt:$_commit
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/libaccounts-VERSION_$VERSION
+#      SOURCE_VFY=sha256:8d51a70af51b30125441c26be88c46d57b5f0e09545448e5db4064ba38d68fad
+        WEB_SITE=https://gitlab.com/accounts-sso/libaccounts-qt
+         ENTERED=20240308
+         UPDATED=20240308
+           SHORT="qt6 based Accounts and SSO framework"
+
+cat << EOF
+Qt6 based Accounts and SSO framework.
+EOF
