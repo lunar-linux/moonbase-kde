@@ -37,6 +37,7 @@ OPTS+=" -gui \
         -nomake examples \
         -accessibility \
         -reduce-relocations \
+        -dbus-linked \
         -confirm-license $LICENSE_TYPE -v \
         $SSE2" &&
 
