@@ -1,13 +1,13 @@
 #NOTE; If you bump this, libqalculate needs the same.
           MODULE=qalculate-qt5
-         VERSION=4.9.0
+         VERSION=5.0.0
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/Qalculate/qalculate-qt/archive/refs/tags/v$VERSION.tar.gz
-     SOURCE_VFY=sha256:e6975659afc32c5efd62dbf28b232bdbedd5ecfa885a7419863e31daabe63353
+     SOURCE_VFY=sha256:0628f8dc95895638925fd78676027fd3598613ddac404a5048283dee6bd49e58
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qalculate-qt-$VERSION
         WEB_SITE=https://github.com/Qalculate/qalculate-qt
          ENTERED=20160728
-         UPDATED=20231127
+         UPDATED=20240408
            SHORT="Qalculate Qt5 UI"
 
 cat << EOF
