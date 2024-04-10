@@ -1,13 +1,13 @@
           MODULE=qt6-serialbus
-         VERSION=6.6.2
+         VERSION=6.7.0
           SOURCE=qtserialbus-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:9cffaa49e1b742e315990c2cf9179f9419ad23c1f0591b6f14b9ac4c03eafa3c
+      SOURCE_VFY=sha256:498193a9860664f8a55f676656c45af179ac13d48184af43fc58ddf795bb76dd
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtserialbus-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20211104
-         UPDATED=20240214
+         UPDATED=20240409
            SHORT="Qt module for general purpose serial bus access"
 cat << EOF
 Qt module for general purpose serial bus access.
