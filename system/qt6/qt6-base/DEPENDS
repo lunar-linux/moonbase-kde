@@ -11,8 +11,12 @@ depends xcb-util-image
 depends xcb-util-keysyms
 depends xcb-util-renderutil
 depends xcb-util-wm
+depends xcb-util-cursor
 depends xkbutils
 depends xf86-input-evdev
+depends xprintidle
+depends Vulkan-Headers
+depends libinput
 depends libxkbcommon
 depends fontconfig
 depends libmng
@@ -22,6 +26,7 @@ depends giflib
 depends nss
 depends xdg-utils
 depends double-conversion
+depends libproxy
 
 optional_depends gtk+-3       "-DFEATURE_gtk3=ON"              "-DFEATURE_gtk3=OFF"              "use gtk3"
 optional_depends libb2        "-DFEATURE_system_libb2=ON"      "-DFEATURE_system_libb2=OFF"      "use system provided libb2" y
@@ -38,3 +43,4 @@ optional_depends postgresql   "-DFEATURE_sql_psql=ON"          "-DFEATURE_sql_ps
 optional_depends unixODBC     "-DFEATURE_sql_odbc=ON"          "-DFEATURE_sql_odbc=OFF"          "for unixODBC support"
 
 optional_depends md4c "" "" "for markdown support"
+
