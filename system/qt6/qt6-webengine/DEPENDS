@@ -16,7 +16,7 @@ depends minizip
 depends nss
 depends snappy
 depends jsoncpp
-depends ffmpeg
+#depends ffmpeg # BUILD is set to use internal
 depends pipewire
 depends node
 depends qt6-declarative
@@ -24,4 +24,4 @@ depends qt6-tools
 depends qt6-positioning
 depends qt6-webchannel
 
-optional_depends re2 "-DQT_FEATURE_webengine_system_re2=ON" "-DQT_FEATURE_webengine_system_re2=OFF" "for alternative to backtracking regular expression support"
+optional_depends re2 "-DQT_FEATURE_webengine_system_re2=ON" "-DQT_FEATURE_webengine_system_re2=OFF" "for alternative to backtracking regular expression support,${PROBLEM_COLOR}Say NO for now${DEFAULT_COLOR}" n
