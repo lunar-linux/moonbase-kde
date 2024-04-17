@@ -1,5 +1,7 @@
 sedit 's:/bin/ls:/usr/bin/ls:g' src/corelib/CMakeLists.txt util/cmake/tests/data/quoted.pro &&
 
+# The officially supported CMake generator for building Qt is Ninja / Ninja Multi-Config.
+
 #Generating .rcc/qmlcache/qtgraphicaleffectsplugin_ColorOverlay_qml.cpp
 #Detected locale "en_US" with character encoding "ISO-8859-1", which is not UTF-8.
 #Qt depends on a UTF-8 locale, and has switched to "en_US.UTF-8" instead.
@@ -22,9 +24,10 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DQT_FEATURE_system_xcb_xinput=ON \
         -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON \
         -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
+        -Wno-dev \
         -DFEATURE_mtdev=OFF"
 
-cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS -Wno-dev &&
+cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
 cmake --build $MODULE-$VERSION &&
 prepare_install &&
 
