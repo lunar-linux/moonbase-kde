@@ -1,4 +1,6 @@
-depends qt5
+depends qt6-base
+depends qt6-tools
+depends qt6-networkauth
 
-optional_depends qt6-networkauth "" "" "for qt6 soap support"
+optional_depends qt5 "" "" "for qt5 soap support"
 
