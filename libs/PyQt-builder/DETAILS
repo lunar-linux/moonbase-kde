@@ -1,11 +1,12 @@
           MODULE=PyQt-builder
-         VERSION=1.16.0
-          SOURCE=$MODULE-$VERSION.tar.gz
+         VERSION=1.16.2
+          SOURCE=pyqt\_builder-$VERSION.tar.gz
       SOURCE_URL=https://pypi.io/packages/source/P/PyQt-builder/
-      SOURCE_VFY=sha256:47bbd2cfa5430020108f9f40301e166cbea98b6ef3e53953350bdd4c6b31ab18
+      SOURCE_VFY=sha256:bf723cdb7cd23d2512e2acda7bc6b81f00fb05ccc5e9a8846bd34d47514cddb9
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/pyqt_builder-$VERSION
         WEB_SITE=https://pypi.org/project/PyQt-builder/
          ENTERED=20201213
-         UPDATED=20240413
+         UPDATED=20240510
            SHORT="PEP 517 compliant PyQt build system"
 
 cat << EOF
