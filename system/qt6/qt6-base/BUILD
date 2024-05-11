@@ -1,6 +1,9 @@
 sedit 's:/bin/ls:/usr/bin/ls:g' src/corelib/CMakeLists.txt util/cmake/tests/data/quoted.pro &&
 
-# The officially supported CMake generator for building Qt is Ninja / Ninja Multi-Config.
+# CVE-2024-33861
+sedit 's:action, &state, nullptr, nullptr:action, state, nullptr, nullptr:g' src/corelib/text/qstringconverter.cpp &&
+
+# The officially supported CMake generator for building Qt is Ninja/Ninja Multi-Config.
 
 #Generating .rcc/qmlcache/qtgraphicaleffectsplugin_ColorOverlay_qml.cpp
 #Detected locale "en_US" with character encoding "ISO-8859-1", which is not UTF-8.
@@ -23,6 +26,7 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DINSTALL_SYSCONFDIR=/etc/xdg/qt6 \
         -DQT_FEATURE_system_xcb_xinput=ON \
         -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON \
+        -DFEATURE_libproxy=ON \
         -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
         -Wno-dev \
         -DFEATURE_mtdev=OFF"
