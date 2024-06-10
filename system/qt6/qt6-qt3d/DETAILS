@@ -1,8 +1,8 @@
           MODULE=qt6-qt3d
-         VERSION=6.7.0
+         VERSION=6.7.1
           SOURCE=qt3d-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:803b82a8be8632b79f4fc717b236edba716100ab274a54349add439056896424
+      SOURCE_VFY=sha256:f59ec0ac81bd6a1b88359bae7362017dc1ca3371726f5c5399a34d2f80d5357b
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qt3d-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org

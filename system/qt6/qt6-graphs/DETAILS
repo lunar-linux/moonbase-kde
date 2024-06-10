@@ -1,13 +1,13 @@
           MODULE=qt6-graphs
-         VERSION=6.7.0
+         VERSION=6.7.1
           SOURCE=qtgraphs-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:4b35d1967e62af0f9d224c173921f22256e29fbbf62ed9de828466c5878b9495
+      SOURCE_VFY=sha256:71584a991c89a2fef4a9ad36040eba67700908f314a5fe734098096ef4ffbc38
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtgraphs-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20240214
-         UPDATED=20240409
+         UPDATED=20240601
            SHORT="Qt6 graphs for Data Visualization"
 cat << EOF
 Qt6 graphs for data visualization.

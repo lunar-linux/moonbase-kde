@@ -1,13 +1,13 @@
           MODULE=qt6-quick3dphysics
-         VERSION=6.7.0
+         VERSION=6.7.1
           SOURCE=qtquick3dphysics-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:
+      SOURCE_VFY=sha256:2f0f51429883b08e5f5a6bd571185725af3fd47741665eadd47a121748cfbd75
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtquick3dphysics-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20221204
-         UPDATED=20240409
+         UPDATED=20240601
            SHORT="physics engine for qt quick 3d"
 cat << EOF
 The purpose of this module is to demonstrate the usage of PhysX Physics engine with Qt Quick 3D.

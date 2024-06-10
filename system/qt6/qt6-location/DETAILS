@@ -1,4 +1,4 @@
-          MODULE=qt6-charts
+          MODULE=qt6-location
          VERSION=6.7.1
           SOURCE=qtcharts-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
@@ -6,7 +6,7 @@
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtcharts-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
-         ENTERED=20211104
+         ENTERED=20240601
          UPDATED=20240601
            SHORT="Provides a set of easy to use chart components"
 cat << EOF
