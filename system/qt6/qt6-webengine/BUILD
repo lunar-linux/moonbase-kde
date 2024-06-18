@@ -1,6 +1,6 @@
 #See; https://bugs.gentoo.org/930107
-sedit '199i "//components/spellcheck:buildflags",' src/3rdparty/chromium/content/browser/BUILD.gn &&
-sedit '238i "//components/web_cache/public/mojom",' src/3rdparty/chromium/content/browser/BUILD.gn &&
+#sedit '199i "//components/spellcheck:buildflags",' src/3rdparty/chromium/content/browser/BUILD.gn &&
+#sedit '238i "//components/web_cache/public/mojom",' src/3rdparty/chromium/content/browser/BUILD.gn &&
 
 source /etc/profile.d/qt6.rc &&
 
@@ -18,10 +18,11 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
         -DQT_BUILD_EXAMPLES_BY_DEFAULT=OFF \
         -DQT_FEATURE_webengine_system_libevent=ON \
-        -DQT_FEATURE_webengine_system_ffmpeg=OFF \
+        -DQT_FEATURE_webengine_system_ffmpeg=ON \
         -DQT_FEATURE_webengine_system_icu=ON \
-        -DQT_FEATURE_webengine_kerberos=ON \
+        -DQT_FEATURE_webengine_webrtc_pipewire=ON    \
         -DQT_FEATURE_webengine_proprietary_codecs=ON \
+        -DCMAKE_TOOLCHAIN_FILE=/usr/lib/qt6/cmake/Qt6/qt.toolchain.cmake \ 
         -DINSTALL_GN=OFF \
         -Wno-dev"
 
