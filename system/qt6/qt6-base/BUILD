@@ -41,6 +41,9 @@ rm -f build/qt6/*.prl &&
 
 cmake --install $MODULE-$VERSION &&
 
+# Private hearders
+install -d -m755 /usr/include/qt6xcb-private/{gl_integrations,nativepainting} &&
+
 cat > qt6.rc << EOF &&
   export QT6_DIR="${MODULE_PREFIX}"
   export QT6_PLUGIN_PATH="\${QT6_DIR}/qt6/plugins"
