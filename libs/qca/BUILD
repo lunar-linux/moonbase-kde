@@ -1,19 +1,18 @@
-source /etc/profile.d/qt5.rc &&
 export LANG='en_US.UTF-8'
 
 OPTS+=" -DBUILD_TESTS=OFF \
         -Wno-dev \
-        -DCMAKE_INSTALL_PREFIX=$MODULE_PREFIX \
-        -DCMAKE_BUILD_TYPE=Release \
-        -DQCA_INSTALL_IN_QT_PREFIX=ON"
+        -DQCA_INSTALL_IN_QT_PREFIX=ON \
+        -DCMAKE_BUILD_TYPE=Release"
 
-cmake -B $MODULE-qt5 -S . -G Ninja $OPTS -DBUILD_WITH_QT6=OFF &&
-cmake --build $MODULE-qt5 &&
-
-source /etc/profile.d/qt6.rc &&
-cmake -B $MODULE-qt6 -S . -G Ninja $OPTS -DBUILD_WITH_QT6=ON &&
-cmake --build $MODULE-qt6 &&
+if in_depends $MODULE qt5; then
+  source /etc/profile.d/qt5.rc &&
+  cmake -B $MODULE-qt5 -S . -G Ninja $OPTS -DBUILD_WITH_QT6=OFF &&
+  cmake --build $MODULE-qt5
+fi &&
 
 prepare_install &&
-cmake --install $MODULE-qt5 &&
-cmake --install $MODULE-qt6
+
+if in_depends $MODULE qt5; then
+  cmake --install $MODULE-qt5
+fi
