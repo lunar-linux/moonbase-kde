@@ -1,0 +1,13 @@
+          MODULE=libplasma
+         VERSION=6.1.1
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
+      SOURCE_VFY=sha256:2f24f10cd232a29fa1dc5618ee300608e9b5dc7798a3e2fffb0a8e439cc422d0
+        WEB_SITE=http://www.kde.org
+         ENTERED=20240312
+         UPDATED=20240625
+           SHORT="Plasma library and runtime components"
+
+cat << EOF
+Plasma library and runtime components.
+EOF

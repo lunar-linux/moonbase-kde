@@ -1,17 +1,10 @@
+depends Linux-PAM
+depends qt6-base
+depends qt6-declarative
 depends libXcursor
+depends xcb-util-keysyms
 depends xinput
 depends libseccomp
+
 depends extra-cmake-modules
-depends kcrash
-depends kdeclarative
-depends kglobalaccel
-depends ki18n
-depends kcmutils
-depends knotifications
-depends solid
-depends ktextwidgets
-depends kwindowsystem
-depends kxmlgui
-depends kidletime
-depends kwayland
-depends layer-shell-qt
+depends kf5

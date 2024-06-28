@@ -1,0 +1,13 @@
+          MODULE=kglobalacceld
+         VERSION=6.1.1
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
+      SOURCE_VFY=sha256:3ac759642432d4415a6a17856f33aa09eb6fda99d886b31a73907fd300f38b00
+        WEB_SITE=http://www.kde.org
+         ENTERED=20240312
+         UPDATED=20240625
+           SHORT="Global Keyboard Shortcut Accelerator"
+
+cat << EOF
+A daemon providing Global Keyboard Shortcut Accelerator functionality.
+EOF

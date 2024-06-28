@@ -1,10 +1,16 @@
 depends kdecoration
 depends libkscreen
 depends libksysguard
+depends libplasma
+depends plasma5support
+depends kwayland
 depends breeze
 depends breeze-gtk
+depends plasma-activities-stats
+depends plasma-activities
 depends layer-shell-qt
 depends kscreenlocker
+depends kglobalacceld
 depends oxygen
 depends kinfocenter
 depends kwin
@@ -12,11 +18,10 @@ depends plasma-workspace
 depends plasma-disks
 depends bluedevil
 depends kde-gtk-config
-depends khotkeys
 depends kmenuedit
 depends kscreen
 depends kwallet-pam
-depends kwayland-integration
+#depends kwayland-integration
 depends kwrited
 depends milou
 depends plasma-pa
@@ -24,7 +29,7 @@ depends plasma-workspace-wallpapers
 depends polkit-kde-agent-1
 depends powerdevil
 depends plasma-desktop
-depends kgamma5
+depends kgamma
 depends ksshaskpass
 depends plasma-sdk
 depends sddm-kcm
@@ -41,8 +46,7 @@ depends qqc2-breeze-style
 depends ksystemstats
 depends kdeplasma-addons
 depends kpipewire
-depends plasma-tests
-depends plasma-remotecontrollers
+depends plasma-thunderbolt
 
 optional_depends plasma-nm "" "" "plasma app to access network manager"
 optional_depends plasma-firewall "" "" "plasma app to access system firewall"

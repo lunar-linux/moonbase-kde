@@ -1,22 +1,9 @@
-depends qca
+depends qt6-base
+depends qt6-declarative
+depends qca-qt6
 depends networkmanager-qt
 depends extra-cmake-modules
-depends prison
-depends kdeclarative
-depends kdbusaddons
-depends kcompletion
-depends kconfigwidgets
-depends kio
-depends ki18n
-depends kiconthemes
-depends knotifications
-depends plasma-framework
-depends kcoreaddons
-depends kservice
-depends solid
-depends kwallet
-depends kwidgetsaddons
-depends kwindowsystem
+depends kf5
 
 optional_depends openconnect "" "" "for anyconnect vpn support"
 

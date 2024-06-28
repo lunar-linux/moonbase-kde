@@ -1,9 +1,6 @@
-source /etc/profile.d/qt5.rc &&
+source /etc/profile.d/qt6.rc &&
+export LANG='en_US.UTF-8'
 
-# cmake configure notes this file should be removed to use the one
-# provided by extra-cmake-modules.
-rm -rf .clang-format &&
-
-OPTS+=" -DCMAKE_INSTALL_LIBEXECDIR=lib" &&
+OPTS+=" -DBUILD_WITH_QT6=ON -DKDE_INSTALL_USE_QT_SYS_PATHS=ON"
 
 default_cmake_build

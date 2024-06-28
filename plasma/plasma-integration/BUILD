@@ -1,8 +1,6 @@
+source /etc/profile.d/qt6.rc &&
+export LANG='en_US.UTF-8'
 
-  . /etc/profile.d/qt5.rc &&
+OPTS+=" -DBUILD_WITH_QT6=ON -DBUILD_QT5=OFF -DKDE_INSTALL_USE_QT_SYS_PATHS=ON"
 
-  OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=1   \
-          -DCMAKE_DISABLE_FIND_PACKAGE_FontNotoSans=true \
-          -DCMAKE_DISABLE_FIND_PACKAGE_FontHack=true" &&
-
-  default_cmake_build
+default_cmake_build

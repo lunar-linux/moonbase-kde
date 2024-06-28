@@ -1,10 +1,6 @@
+depends qt6-base
 depends extra-cmake-modules
-depends ki18n
-depends kcoreaddons
-depends kio
-depends knotifications
-depends kwayland
-depends kwidgetsaddons
-depends kwindowsystem
+depends kf5
+depends kio-fuse # Runtime
 
 optional_depends pipewire "" "" "for screencast portal and screen sharing support"
