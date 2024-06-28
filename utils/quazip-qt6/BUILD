@@ -1,6 +1,13 @@
 source /etc/profile.d/qt6.rc &&
+export LANG='en_US.UTF-8'
 
-cmake -B build-qt6 -S . -DCMAKE_INSTALL_PREFIX=/usr -DQUAZIP_QT_MAJOR_VERSION=6 &&
+OPTS+=" -DCMAKE_INSTALL_PREFIX=/usr \
+        -DQUAZIP_QT_MAJOR_VERSION=6 \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
+        -Wno-dev"
+
+cmake -B build-qt6 -S . $OPTS &&
 cmake --build build-qt6 &&
 
 prepare_install &&
