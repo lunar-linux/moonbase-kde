@@ -1,5 +1,5 @@
+source /etc/profile.d/qt6.rc &&
 
-  source /etc/profile.d/qt5.rc   &&
+OPTS+=" -DBUILD_WITH_QT6=ON"
 
-
-  default_cmake_build
+default_cmake_build
