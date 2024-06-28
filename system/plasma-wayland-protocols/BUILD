@@ -1,5 +1,3 @@
-. /etc/profile.d/qt5.rc &&
-
-OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=OFF"
+source /etc/profile.d/qt6.rc &&
 
 default_cmake_build
