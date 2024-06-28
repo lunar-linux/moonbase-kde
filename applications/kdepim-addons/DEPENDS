@@ -1,6 +1,6 @@
 depends gpgme
 depends boost
-depends qtwebengine
+depends qt6-webengine
 depends extra-cmake-modules
 depends kdbusaddons
 depends akonadi-notes
@@ -53,5 +53,6 @@ depends kconfigwidgets
 depends kxmlgui
 depends kparts
 depends kontactinterface
+depends kaddressbook
 
 optional_depends discount "" "" "text to html markdown support"

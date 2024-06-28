@@ -1,3 +1,9 @@
+depends qt6-base
+depends qt6-declarative
+depends qt6-multimedia
+depends qt6-networkauth
+depends qt6-svg 
+depends qt6-tools
 depends extra-cmake-modules
 depends karchive
 depends kdbusaddons
@@ -21,7 +27,6 @@ optional_depends dvgrab          "" "" "for firewire capture"
 optional_depends ffmpeg          "" "" "for FFmpeg plugin"
 optional_depends libdv           "" "" "for webcam capture (if FFmpeg is not installed)"
 optional_depends plasma-desktop  "" "" "theme configuration"
-optional_depends recordmydesktop "" "" "for screen capture"
 optional_depends rttr            "" "" "for runtime type reflection support"
 
 optional_depends breeze-icons    "" "" "UI icons (RECOMMENDED)"
