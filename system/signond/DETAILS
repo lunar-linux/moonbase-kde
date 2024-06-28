@@ -1,9 +1,9 @@
           MODULE=signond
          VERSION=8.61
+         _commit=c8ad98249af541514ff7a81634d3295e712f1a39
           SOURCE=$MODULE-$VERSION.tar.bz2
- SOURCE_URL_FULL=https://gitlab.com/accounts-sso/signond/-/archive/VERSION_8.61/signond-VERSION_8.61.tar.bz2
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-VERSION_8.61
-      SOURCE_VFY=sha256:5d9f29fbf5892d01e38ce931b9a69c4bb08e6788f6cbdc80c277f4723b44249d
+ SOURCE_URL_FULL=git+https://gitlab.com/nicolasfella/signond:$_commit
+  #    SOURCE_VFY=sha256:5d9f29fbf5892d01e38ce931b9a69c4bb08e6788f6cbdc80c277f4723b44249d
         WEB_SITE=https://gitlab.com/accounts-sso/signond
          ENTERED=20171203
          UPDATED=20220312
