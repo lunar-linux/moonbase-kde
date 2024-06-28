@@ -1,11 +1,20 @@
-source /etc/profile.d/qt5.rc &&
+source /etc/profile.d/qt6.rc &&
+export LANG='en_US.UTF-8'
 
-OPTS+=" -DBUILD_SHARED_LIBS=ON"
+OPTS+=" -DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release -Wno-dev"
 
-default_cmake_build &&
+cmake -B $MODULE-$VERSION-qt6 -S . -DBUILD_WITH_QT6=ON $OPTS &&
+cmake --build $MODULE-$VERSION-qt6 &&
 
-mkdir -p "$pkgdir"/usr/lib/cmake/kColorPicker &&
+if in_depends $MODULE qt5; then
+  source /etc/profile.d/qt5.rc &&
+  cmake -B $MODULE-$VERSION-qt5 -S . $OPTS &&
+  cmake --build $MODULE-$VERSION-qt5
+fi &&
 
-ln -sr /usr/lib/cmake/kColorPicker-Qt5/kColorPicker-Qt5Config.cmake /usr/lib/cmake/kColorPicker/kColorPickerConfig.cmake &&
-ln -sr /usr/lib/cmake/kColorPicker-Qt5/kColorPicker-Qt5Config-version.cmake /usr/lib/cmake/kColorPicker/kColorPickerConfig-version.cmake &&
-ln -sr /usr/lib/cmake/kColorPicker-Qt5/kColorPicker-Qt5-targets* /usr/lib/cmake/kColorPicker/
+prepare_install &&
+cmake --install $MODULE-$VERSION-qt6 &&
+
+if in_depends $MODULE qt5; then
+cmake --install $MODULE-$VERSION-qt5
+fi

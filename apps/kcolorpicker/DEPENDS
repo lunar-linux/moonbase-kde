@@ -1,2 +1,5 @@
 depends cmake
-depends qt5
+depends qt6-base
+
+optional_depends qt5 "" "" "for qt5 support"
+
