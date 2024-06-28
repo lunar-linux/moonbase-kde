@@ -1,8 +1,8 @@
+source /etc/profile.d/qt6.rc &&
+export LANG='en_US.UTF-8'
 
-  . /etc/profile.d/qt5.rc &&
+sed -i 's|SUBDIRS  += Accounts tests|SUBDIRS += Accounts|' accounts-qt.pro &&
 
-  sed -i 's|SUBDIRS  += Accounts tests|SUBDIRS += Accounts|' accounts-qt.pro &&
+/usr/lib/qt6/bin/qmake $OPTS &&
 
-  /usr/lib/qt5/bin/qmake $OPTS &&
-
-  default_make
+default_make
