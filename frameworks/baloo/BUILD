@@ -1,9 +1,11 @@
+source /etc/profile.d/qt6.rc &&
+export LANG='en_US.UTF-8'
 
-. /etc/profile.d/qt5.rc &&
+OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=ON"
 
 default_cmake_build &&
 
-#Baloo liks a large max-user-watches greater than 8192
+#Baloo likes a large max-user-watches greater than 8192
 #Instead of fiddling with the 99-sysctl.conf, we will
 #just make a new file just for that.
 

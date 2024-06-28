@@ -1,0 +1,15 @@
+          MODULE=kirigami
+         VERSION=6.3.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
+      SOURCE_VFY=sha256:dbcbfaa05b37c03501fe8f4dfaf92f6f7bf9b871b8d28897363a5678dcb2395b
+        WEB_SITE=https://community.kde.org/KDE_PIM
+         ENTERED=20240308
+         UPDATED=20240610
+           SHORT="QtQuick plugins to build user interfaces following the KDE Human Interface Guidelines"
+
+cat << EOF
+Kirigami is a set of QtQuick components for building adaptable user interfaces based
+on QtQuick Controls 2. Kirigami makes it easy to create applications that look and
+feel great on Plasma Mobile, Desktop Linux, Android, MacOS, and Windows. 
+EOF

@@ -1,27 +1,25 @@
+depends acl
+depends util-linux
 depends libxslt
 depends libxml2
-depends desktop-file-utils
-depends kcrash
-depends kdbusaddons
-depends kservice
-depends solid
+depends qt6-base
+depends qt6-tools
+depends qt6-doc
+depends qt6-5compat
+
+depends kitemviews
+depends karchive
+depends kauth
+depends kcompletion
+depends kconfig
+depends kcolorscheme
 depends kcompletion
 depends kiconthemes
-depends kitemviews
 depends kjobwidgets
-depends kwindowsystem
-depends karchive
 depends kbookmarks
-depends kcoreaddons
-depends kauth
-depends kcodecs
-depends kconfig
-depends kwidgetsaddons
 depends kconfigwidgets
-depends kxmlgui
-depends sonnet
-depends ki18n
-depends ktextwidgets
+depends kwallet
+depends kded
 
-optional_depends "%KERBEROS" "" "" "For use of certain HTTP authentication services"
-optional_depends "acl"     "" "" "For manipulating access control lists"
+optional_depends kio-fuse   "" "" "for virtual filesystem support"
+optional_depends kio-extras "" "" "for additional functions to kio,${PROBLEM_COLOR}Say no on first install of KIO${DEFAULT_COLOR}"

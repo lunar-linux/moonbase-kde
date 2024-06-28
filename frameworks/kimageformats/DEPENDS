@@ -1,5 +1,6 @@
+depends qt6-base
 depends openexr
-depends jasper
+depends LibRaw
 depends extra-cmake-modules
 depends karchive
 
@@ -7,4 +8,3 @@ optional_depends libheif "-DKIMAGEFORMATS_HEIF=ON" "-DKIMAGEFORMATS_HEIF=OFF" "f
 optional_depends libjxl  "-DKIMAGEFORMATS_JXL=ON"  "-DKIMAGEFORMATS_JXL=OFF"  "for JPEG XL encoder and decoder support"
 
 optional_depends libavif "" "" "for avif image support"
-optional_depends LibRaw  "" "" "for raw file support"

@@ -1,5 +1,5 @@
+source /etc/profile.d/qt6.rc &&
 
-  source /etc/profile.d/qt5.rc &&
+export LANG='en_US.UTF-8'
 
-
-  default_cmake_build
+default_cmake_build

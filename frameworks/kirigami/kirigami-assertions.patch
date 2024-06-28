@@ -1,0 +1,33 @@
+From 9eaf9709cbbb1c179981b6060ad1c9837c96b9f1 Mon Sep 17 00:00:00 2001
+From: Devin Lin <espidev@gmail.com>
+Date: Fri, 1 Mar 2024 11:20:03 -0500
+Subject: [PATCH] ColumnView: Add check args to clamp
+
+CCBUG: 481531
+
+Otherwise the program crashes if assertions are enabled due to bounds checking.
+
+It seems it is possible for m_view->width() = 0 while child->width() > 0.
+
+See https://bugs.kde.org/show_bug.cgi?id=481531
+---
+ src/columnview.cpp | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/src/columnview.cpp b/src/columnview.cpp
+index f9875cc06..86d4a30bf 100644
+--- a/src/columnview.cpp
++++ b/src/columnview.cpp
+@@ -526,7 +526,8 @@ void ContentItem::layoutItems()
+                     sepWidth = (sep ? sep->width() : 0);
+                 }
+                 const qreal width = childWidth(child);
+-                const qreal pageX = std::clamp(partialWidth, -x(), -x() + m_view->width() - child->width());
++                const qreal widthDiff = std::max(0.0, m_view->width() - child->width()); // it's possible for the view width to be smaller than the child width
++                const qreal pageX = std::clamp(partialWidth, -x(), -x() + widthDiff);
+                 qreal headerHeight = .0;
+                 qreal footerHeight = .0;
+                 if (QQuickItem *header = attached->globalHeader()) {
+-- 
+GitLab
+

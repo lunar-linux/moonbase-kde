@@ -1,10 +1,8 @@
+depends libcanberra
+depends qt6-base
+depends qt6-tools
 depends extra-cmake-modules
 depends kwindowsystem
 depends kconfig
 depends kcodecs
 depends kcoreaddons
-
-optional_depends libdbusmenu-qt5 "" "" "for notifications via dbus"
-optional_depends libcanberra     "" "" "for sound event support"
-
-

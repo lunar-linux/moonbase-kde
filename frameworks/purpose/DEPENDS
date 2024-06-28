@@ -1,24 +1,13 @@
-depends libxslt
-depends libxml2
-depends XML-Parser
-depends desktop-file-utils
+depends intltool
+depends qt6-base
+depends qt6-tools
 depends extra-cmake-modules
-depends kconfig
-depends ki18n
-depends kirigami2
-depends kservice
-depends kcompletion
-depends kitemviews
-depends kjobwidgets
-depends solid
-depends kcoreaddons
-depends kauth
-depends kcodecs
-depends kwidgetsaddons
-depends kconfigwidgets
-depends kxmlgui
-depends kio
+depends libaccounts-qt6
 depends accounts-qml-module
-
-optional_depends "%KERBEROS" "" "" "For use of certain HTTP authentication services"
-optional_depends "acl"     "" "" "For manipulating access control lists"
+depends kaccounts-integration
+depends kcmutils
+depends kconfig
+depends kcoreaddons
+depends ki18n
+depends kio
+depends kservice

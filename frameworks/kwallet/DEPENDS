@@ -1,17 +1,17 @@
 depends libgcrypt
-depends qca
+depends qt6-base
+depends qt6-tools
+depends qca-qt6
+depends gpgme
 depends extra-cmake-modules
+depends kcolorscheme
 depends kconfig
-depends kauth
-depends kcodecs
-depends kconfigwidgets
-depends kdbusaddons
-depends kservice
-depends kwindowsystem
 depends kcoreaddons
-depends ki18n
+depends kdbusaddons
 depends knotifications
 depends kwidgetsaddons
+depends kservice
+depends kwindowsystem
+depends ki18n
 
 optional_depends kdoctools "" "" "for documentations support"
-optional_depends gpgme     "" "" "for gnupg support"
