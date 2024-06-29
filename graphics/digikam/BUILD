@@ -1,11 +1,10 @@
-. /etc/profile.d/qt5.rc &&
-
-sedit 's:Akonadi/Contact/:AkonadiContact/Akonadi/:' core/utilities/extrasupport/addressbook/akonadiiface.cpp &&
+source /etc/profile.d/qt6.rc &&
 
 OPTS+=" -DENABLE_AKONADICONTACTSUPPORT=ON \
         -DENABLE_KFILEMETADATASUPPORT=ON \
         -DENABLE_MEDIAPLAYER=ON \
         -DENABLE_APPSTYLES=ON \
+        -DBUILD_WITH_QT6=ON   \
         -DENABLE_QWEBENGINE=ON" &&
 
 if module_installed ccache ; then

@@ -8,18 +8,16 @@ depends expat
 depends exiv2
 depends eigen3
 depends gphoto2
-depends libkipi
 depends libksane
-depends libkvkontakte
-depends libmediawiki
 depends kfilemetadata
 depends Image-ExifTool
+
+optional_depends qt6-webengine "-DENABLE_QWEBENGINE=ON" "-DENABLE_QWEBENGINE=OFF" "for webengine support"
 
 optional_depends lcms2   "" "" "for color management support"
 optional_depends lensfun "" "" "for camera lens correction support"
 optional_depends doxygen "" "" "for documentation"
 optional_depends libgpod "" "" "for for Ipod support"
-optional_depends QtAV    "" "" "for supporting multimedia playback frameworks"
 optional_depends opencv  "" "" "for computer vision library support"
 
 optional_depends %MYSQL \
