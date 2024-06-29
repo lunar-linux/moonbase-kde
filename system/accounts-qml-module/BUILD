@@ -1,10 +1,7 @@
+source /etc/profile.d/qt6.rc &&
+export LANG='en_US.UTF-8'
 
-  . /etc/profile.d/qt5.rc &&
-
-  sed -e 's/-Werror//' -i common-project-config.pri &&
-
-  #qmake-qt5 ../$pkgname-*/$pkgname.pro PREFIX=/usr  
-
-  qmake-qt5  PREFIX=/usr &&
-
-  default_make
+mkdir -p $MODULE-$VERSION &&
+cd $MODULE-$VERSION &&
+qmake6 ../$MODULE.pro PREFIX=/usr &&
+default_make

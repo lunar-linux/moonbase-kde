@@ -1,9 +1,10 @@
           MODULE=accounts-qml-module
          VERSION=0.7
+         _commit=05e79ebbbf3784a87f72b7be571070125c10dfe3
           SOURCE=$MODULE-VERSION\_$VERSION.tar.bz2
-      SOURCE_URL=https://gitlab.com/accounts-sso/accounts-qml-module/-/archive/VERSION_$VERSION/
+      SOURCE_URL=git+https://gitlab.com/accounts-sso/accounts-qml-module:$_commit
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-VERSION\_$VERSION
-      SOURCE_VFY=sha256:2f0bebe583a155769dd09ec9871aa9a84255fb358d3c7a891cc5ef230dfdf91f
+#      SOURCE_VFY=sha256:2f0bebe583a155769dd09ec9871aa9a84255fb358d3c7a891cc5ef230dfdf91f
         WEB_SITE=https://gitlab.com/accounts-sso/accounts-qml-module
          ENTERED=20200130
          UPDATED=20200130
