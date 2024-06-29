@@ -10,7 +10,7 @@ fi &&
 
 if in_depends $MODULE qt6-websockets; then
  source /etc/profile.d/qt6.rc &&
- cmake -B $MODULE-qt6 -S . $OPTS -DUSE_QT_VERSION=6 -DCMAKE_INSTALL_PREFIX=/usr/lib &&
+ cmake -B $MODULE-qt6 -S . $OPTS -DUSE_QT_VERSION=6 -DCMAKE_INSTALL_PREFIX=/usr &&
  cmake --build $MODULE-qt6 &&
  prepare_install &&
  cmake --install $MODULE-qt6
