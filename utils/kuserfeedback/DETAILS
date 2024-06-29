@@ -1,13 +1,11 @@
           MODULE=kuserfeedback
-         VERSION=1.3.0
+         VERSION=6.3.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$MODULE/
-      SOURCE_VFY=sha256:252308b822dd4690ea85ab1688c9b0da5512978ac6b435f77a5979fc1d2ffd13
-   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+      SOURCE_URL=$KDE_URL/stable/frameworks/${VERSION%.*}
+      SOURCE_VFY=sha256:3fe2ce37b92a70d604f38fa369b5fe2ea64e268c48aa450e9971fc8404e87006
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/kuserfeedback
-            TYPE=cmake
          ENTERED=20220224
-         UPDATED=20231214
+         UPDATED=20240624
            SHORT="KDE Framework for collecting user feedback for apps via telemetry and surveys "
 
 cat << EOF
