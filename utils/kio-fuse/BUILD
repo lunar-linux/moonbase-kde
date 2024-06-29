@@ -1,6 +1,5 @@
+source /etc/profile.d/qt6.rc &&
 
-  . /etc/profile.d/qt5.rc &&
+OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=ON -DQT_MAJOR_VERSION=6" &&
 
-  OPTS+=" -DCMAKE_INSTALL_LIBEXECDIR=lib" &&
-
-  default_cmake_build
+default_cmake_build
