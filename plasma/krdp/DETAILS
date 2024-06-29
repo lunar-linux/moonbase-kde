@@ -1,0 +1,13 @@
+          MODULE=krdp
+         VERSION=6.1.1
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/plasma/$VERSION/
+      SOURCE_VFY=sha256:a6705c9e4b226349aba76cf6ca596217a0c17731030d84617a82178bdafb7a7d
+        WEB_SITE=https://kde.org/plasma-desktop/
+         ENTERED=20240625
+         UPDATED=20240625
+           SHORT="library to create an RDP server"
+
+cat << EOF
+Library and examples for creating an RDP server.
+EOF
