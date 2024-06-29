@@ -1,11 +1,11 @@
           MODULE=haruna
-         VERSION=0.12.3
+         VERSION=1.1.2
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$MODULE/
-      SOURCE_VFY=sha256:d0202e0060ae86e10c461e7529f6de6b67f8281bf7b82c845479f46772b9fa6f
+      SOURCE_URL=$KDE_URL/stable/$MODULE/$VERSION/
+      SOURCE_VFY=sha256:cb01323f1195a3d8994121e66492c29d27c021fb2a5784b78ce5c06c0bb88683
         WEB_SITE=https://github.com/KDE/haruna
          ENTERED=20210823
-         UPDATED=20231125
+         UPDATED=20240625
            SHORT="video player built with Qt/QML on top of libmpv"
 
 cat << EOF
