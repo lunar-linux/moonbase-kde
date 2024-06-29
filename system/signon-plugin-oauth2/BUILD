@@ -1,5 +1,4 @@
-
-. /etc/profile.d/qt5.rc &&
+source /etc/profile.d/qt6.rc &&
 
 # Disalbe warnings as errors
 sed -i '/-Werror/d' common-project-config.pri &&
@@ -8,6 +7,6 @@ sed -i '/-Werror/d' common-project-config.pri &&
 echo 'INSTALLS =' >>tests/tests.pro     &&
 echo 'INSTALLS =' >>example/example.pro &&
 
-/usr/lib/qt5/bin/qmake PREFIX=/usr LIBDIR=/usr/lib $OPTS &&
+/usr/lib/qt6/bin/qmake PREFIX=/usr LIBDIR=/usr/lib $OPTS &&
 
 default_make
