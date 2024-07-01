@@ -11,6 +11,7 @@ OPTS+=" -DCMAKE_CXX_STANDARD=17 \
         -DPREFER_SYSTEM_INDILIB=OFF \
         -DCMAKE_CXX_EXTENSIONS=ON \
         -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
         -Wno-dev"
 
 cmake -S . -B $MODULE-build -G Ninja $OPTS &&
