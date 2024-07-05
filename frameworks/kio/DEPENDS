@@ -21,5 +21,5 @@ depends kconfigwidgets
 depends kwallet
 depends kded
 
-optional_depends kio-fuse   "" "" "for virtual filesystem support"
 optional_depends kio-extras "" "" "for additional functions to kio,${PROBLEM_COLOR}Say no on first install of KIO${DEFAULT_COLOR}"
+optional_depends kio-fuse   "" "" "for virtual filesystem support, ${PROBLEM_COLOR}Say no on first install of KIO${DEFAULT_COLOR}"
