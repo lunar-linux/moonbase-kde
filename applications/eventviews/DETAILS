@@ -1,12 +1,12 @@
           MODULE=eventviews
-         VERSION=24.05.1
+         VERSION=24.05.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:b2e67224eff2463cedc4d00d9bb0ea6fa23630023b979901f57499ae71863717
+      SOURCE_VFY=sha256:bf68d5c11de56c15af143084e3f0a95a34658d11284bf56caff422881b6a134f
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20160505
-         UPDATED=20240617
+         UPDATED=20240704
            SHORT="Library for creating events"
 
 cat << EOF
