@@ -1,7 +1,3 @@
-#See; https://bugs.gentoo.org/930107
-#sedit '199i "//components/spellcheck:buildflags",' src/3rdparty/chromium/content/browser/BUILD.gn &&
-#sedit '238i "//components/web_cache/public/mojom",' src/3rdparty/chromium/content/browser/BUILD.gn &&
-
 source /etc/profile.d/qt6.rc &&
 
 # uses malloc_usable_size, which is incompatible with fortification level 3
