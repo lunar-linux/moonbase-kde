@@ -1,11 +1,11 @@
           MODULE=labplot
-         VERSION=2.10.1
+         VERSION=2.11.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/$MODULE/
-      SOURCE_VFY=sha256:2b6e181517cfb6e0dfff7b895f3eb20c7ce359e6732d38545e0757c9aea2daef
+      SOURCE_VFY=sha256:9b84c69fe33551fbc12642fe897f250e2b00836244ca05926b2d9141280f3e6f
         WEB_SITE=https://kde.org/applications/en/education/org.kde.labplot2
          ENTERED=20160520
-         UPDATED=20230710
+         UPDATED=20240710
            SHORT="Scientific Data Plotter"
 
 cat << EOF
@@ -14,25 +14,16 @@ LabPlot is an application for interactive graphing and analysis of scientific da
 Features
 
 Project-based management of data
-
 Project-explorer for management and organization of created objects in different folders and sub-folders
-
 Spreadsheet with basic functionality for manual data entry or for generation of uniform and non-uniform random numbers
-
 Import of external ASCII-data into the project for further editing and visualization
-
 Export of spreadsheet to an ASCII-file
-
 Worksheet as the main parent object for plots, labels etc., supports different layouts and zooming functions
-
 Export of worksheet to different formats (pdf, eps, png and svg)
-
 Great variety of editing capabilities for properties of worksheet and its objects
 Cartesian plots, created either from imported or manually created data sets or via mathematical equation
-
 Definition of mathematical formulas is supported by syntax-highlighting and completion and by the list of thematically grouped 
 mathematical and physical constants and functions.
-
 Analysis of plotted data is supported by many zooming and navigation features.
 Linear and non-linear fits to data, several fit-models are predefined and custom models with arbitrary number of parameters can be provided
 EOF

@@ -1,6 +1,6 @@
-. /etc/profile.d/qt5.rc &&
+source /etc/profile.d/qt6.rc &&
 
-OPTS+="  -DKDE_INSTALL_USE_QT_SYS_PATHS=1 -DLOCAL_VECTOR_BLF=OFF" &&
+OPTS+=" -DBUILD_WITH_QT6=ON -DLOCAL_VECTOR_BLF=OFF" &&
 
 default_cmake_build
   
