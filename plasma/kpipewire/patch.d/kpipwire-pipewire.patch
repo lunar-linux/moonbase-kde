@@ -1,0 +1,85 @@
+From 1977da38ed25aa15347eb9027cb1fde3d66b075f Mon Sep 17 00:00:00 2001
+From: Arjen Hiemstra <ahiemstra@heimr.nl>
+Date: Tue, 9 Jul 2024 10:01:26 +0000
+Subject: [PATCH] produce: Destroy PipeWireSourceStream on the right thread
+
+m_stream is created during initialize() which is run on the produce
+thread, so we need to ensure we also destroy it on that thread as
+otherwise with PipeWire 1.2+ we can end up in a deadlock.
+
+BUG: 489434
+
+
+(cherry picked from commit b787a4953130a14704183dd794e2dbb741001a8b)
+
+Co-authored-by: Arjen Hiemstra <ahiemstra@heimr.nl>
+---
+ src/pipewireproduce.cpp | 27 ++++++++++++++++++++++-----
+ src/pipewireproduce_p.h |  2 ++
+ 2 files changed, 24 insertions(+), 5 deletions(-)
+
+diff --git a/src/pipewireproduce.cpp b/src/pipewireproduce.cpp
+index 65d9813..066db84 100644
+--- a/src/pipewireproduce.cpp
++++ b/src/pipewireproduce.cpp
+@@ -151,12 +151,28 @@ void PipeWireProduce::deactivate()
+ {
+     m_deactivated = true;
+     m_stream->setActive(false);
++
++    // If we have not been initialized properly before, ensure we still run any
++    // cleanup code and exit the thread, otherwise we risk applications not closing
++    // properly.
+     if (!m_encoder) {
+-        cleanup();
+-        QThread::currentThread()->quit();
++        QMetaObject::invokeMethod(this, &PipeWireProduce::destroy, Qt::QueuedConnection);
+     }
+ }
+ 
++void PipeWireProduce::destroy()
++{
++    // Ensure we cleanup the PipeWireSourceStream while in the same thread we
++    // created it in.
++    Q_ASSERT_X(QThread::currentThread() == thread(), "PipeWireProduce", "destroy() called from a different thread than PipeWireProduce's thread");
++
++    m_stream.reset();
++
++    qCDebug(PIPEWIRERECORD_LOGGING) << "finished";
++    cleanup();
++    QThread::currentThread()->quit();
++}
++
+ void PipeWireProduce::setQuality(const std::optional<quint8> &quality)
+ {
+     m_quality = quality;
+@@ -239,9 +255,10 @@ void PipeWireProduce::stateChanged(pw_stream_state state)
+         m_outputThread.join();
+     }
+ 
+-    qCDebug(PIPEWIRERECORD_LOGGING) << "finished";
+-    cleanup();
+-    QThread::currentThread()->quit();
++    // We want to clean up the source stream while in the input thread, but we
++    // need to do so while not handling any PipeWire callback as that risks
++    // crashing because we're stil executing PipeWire handling code.
++    QMetaObject::invokeMethod(this, &PipeWireProduce::destroy, Qt::QueuedConnection);
+ }
+ 
+ std::unique_ptr<Encoder> PipeWireProduce::makeEncoder()
+diff --git a/src/pipewireproduce_p.h b/src/pipewireproduce_p.h
+index 7cba745..ed73920 100644
+--- a/src/pipewireproduce_p.h
++++ b/src/pipewireproduce_p.h
+@@ -91,6 +91,8 @@ public:
+ 
+     void deactivate();
+ 
++    void destroy();
++
+     void setQuality(const std::optional<quint8> &quality);
+ 
+     void setEncodingPreference(const PipeWireBaseEncodedStream::EncodingPreference &encodingPreference);
+-- 
+GitLab
+
