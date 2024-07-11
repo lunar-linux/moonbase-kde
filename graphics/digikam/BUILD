@@ -5,6 +5,7 @@ OPTS+=" -DENABLE_AKONADICONTACTSUPPORT=ON \
         -DENABLE_MEDIAPLAYER=ON \
         -DENABLE_APPSTYLES=ON \
         -DBUILD_WITH_QT6=ON   \
+        -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
         -DENABLE_QWEBENGINE=ON" &&
 
 if module_installed ccache ; then
