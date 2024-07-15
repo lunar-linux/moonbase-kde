@@ -29,6 +29,9 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DFEATURE_libproxy=ON \
         -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
         -Wno-dev \
+        -DQT_UNITY_BUILD=ON \
+        -DQT_FEATURE_testlib=ON \
+        -DBUILD_WITH_PCH=OFF \
         -DFEATURE_mtdev=OFF"
 
 cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
