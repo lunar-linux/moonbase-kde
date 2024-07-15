@@ -7,3 +7,7 @@ depends ki18n
 depends kio
 depends kwidgetsaddons
 depends kiconthemes
+
+# Not much use without any encryption systems
+#depends encfs # Don't use for now, see https://defuse.ca/audits/encfs.htm
+depends cryfs
