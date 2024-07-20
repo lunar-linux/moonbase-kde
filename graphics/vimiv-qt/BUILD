@@ -1,5 +1,6 @@
-. /etc/profile.d/qt5.rc &&
+source /etc/profile.d/qt5.rc &&
+
+python -m build --wheel &&
 
 prepare_install &&
-
-make -f misc/Makefile install
+python -m installer --destdir=/ dist/*.whl
