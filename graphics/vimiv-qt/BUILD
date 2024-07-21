@@ -1,4 +1,5 @@
 source /etc/profile.d/qt5.rc &&
+export PYTHONDONTWRITEBYTECODE=1 &&
 
 python -m build --wheel &&
 
