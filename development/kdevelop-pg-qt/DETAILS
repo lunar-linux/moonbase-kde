@@ -1,12 +1,11 @@
           MODULE=kdevelop-pg-qt
-         VERSION=2.2.2
+         VERSION=2.3.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://download.kde.org/stable/$MODULE/$VERSION/src/
-      SOURCE_VFY=sha256:3d56604c479f8f04ae32a523ee91f3078c717117d0deb39e973e22494cbb65f1
-        WEB_SITE=http://techbase.kde.org/Development/KDevelop-PG-Qt_Introduction
-            TYPE=cmake
+      SOURCE_URL=https://download.kde.org/stable/kdevelop-pg-qt/$VERSION/src/
+      SOURCE_VFY=sha256:3d3ef3cb395e9670e60c399ea6d865cc796e00e52c355eed943fbeca7da7120d
+        WEB_SITE=https://techbase.kde.org/Development/KDevelop-PG-Qt_Introduction
          ENTERED=20100419
-         UPDATED=20230112
+         UPDATED=20240725
            SHORT="parser-generator from KDevplatform"
 
 cat << EOF
