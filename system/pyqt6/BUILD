@@ -3,7 +3,6 @@ export LANG='en_US.UTF-8'
 
 sip-build \
     --confirm-license \
-    --no-make \
     --qmake=/usr/lib/qt6/bin/qmake \
     --api-dir /usr/share/qt6/qsci/api/python \
     --pep484-pyi &&
