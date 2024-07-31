@@ -12,7 +12,7 @@ python setup.py build &&
 python setup.py iso639 &&
 python setup.py iso3166 &&
 python setup.py translations &&
-#python setup.py liberation_fonts --system-liberation_fonts --path-to-liberation_fonts /usr/share/fonts/liberation-fonts-ttf &&
+python setup.py liberation_fonts --system-liberation_fonts --path-to-liberation_fonts /usr/share/fonts/liberation-fonts-ttf &&
 python setup.py mathjax --system-mathjax --path-to-mathjax /usr/share/mathjax &&
 python setup.py gui &&
 python setup.py resources &&

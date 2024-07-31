@@ -1,0 +1,11 @@
+default_pre_build
+
+sed -e "/import config_dir/,/os.rmdir(config_dir)/d" \
+    -e "s/'ctc-posml'/'text' not in mt and 'pdf' not in mt and 'xhtml'/" \
+    -e "s/^Name=calibre/Name=Calibre/g" \
+    -i  src/calibre/linux.py &&
+
+# Remove unneeded files
+rm -f resources/$pkgname-portable.*
+sed -e 's|"14"|"17"|' -e 's|"11"|"17"|' -i setup/extensions.json # Fix build with ICU 75
+
