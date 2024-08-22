@@ -1,5 +1,15 @@
 # Do not use kcalcore or add it to moonbase. As of this time all apps needing such things are provided
 # by kcalendarcore located in frameworks.
+depends analitza
+depends kdeedu-data
+depends kde-dev-scripts
+depends kirigami-gallery
+depends poxml
+depends libkexiv2
+depends libkdcraw
+depends libkomparediff2
+#depends artikulate
+depends ksanecore
 depends akonadi
 depends audiotube
 depends libktorrent
@@ -9,8 +19,8 @@ depends neochat
 depends ktorrent
 depends kdenlive
 #depends cantor
-#depends kdev-python
-#depends kdevelop
+depends kdev-python
+depends kdevelop
 depends kjournald
 depends kgpg
 depends kmime
@@ -20,25 +30,18 @@ depends markdownpart
 depends kpimtextedit
 depends libkleo
 depends kqtquickcharts
-#depends kde-dev-scripts
-depends analitza
-#depends kdeedu-data
 depends kldap
 depends kmbox
-depends libkdcraw
 depends libkgapi
 depends kcolorchooser
 depends ksmtp
 depends libkcddb
 depends ffmpegthumbs
-#depends poxml
 depends ark
 depends kcron
 depends kpkpass
 depends kitinerary
 depends libkcompactdisc
-#depends libkomparediff2
-depends libkexiv2
 depends kio-extras
 depends baloo-widgets
 #depends kamoso
@@ -46,7 +49,6 @@ depends kontactinterface
 depends kde-dev-utils
 depends kdegraphics-mobipocket
 depends kdegraphics-thumbnailers
-#depends artikulate
 depends filelight
 #depends cervisia
 depends gwenview
@@ -54,7 +56,6 @@ depends akonadi-notes
 depends kamera
 depends kcalc
 depends kdf
-depends ksanecore
 depends libksane
 depends skanlite
 depends kmplot
@@ -101,7 +102,7 @@ depends eventviews
 depends ksystemlog
 depends konsole
 depends kontact
-#depends lokalize
+depends lokalize
 depends kcharselect
 depends marble
 depends krfb
