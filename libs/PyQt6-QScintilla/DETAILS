@@ -1,13 +1,13 @@
           MODULE=PyQt6-QScintilla
-         VERSION=2.13.3
+         VERSION=2.14.1
           SOURCE=QScintilla_src-$VERSION.tar.gz
-      SOURCE_URL=https://www.riverbankcomputing.com/static/Downloads/QScintilla/2.13.3/
-      SOURCE_VFY=sha256:711d28e37c8fccaa8229e8e39a5b3b2d97f3fffc63da10b71c71b84fa3649398
+      SOURCE_URL=https://www.riverbankcomputing.com/static/Downloads/QScintilla/$VERSION/
+      SOURCE_VFY=sha256:dfe13c6acc9d85dfcba76ccc8061e71a223957a6c02f3c343b30a9d43a4cdd4d
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/QScintilla_src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=https://pypi.org/project/PyQt6-QScintilla/
          ENTERED=20221204
-         UPDATED=20230116
+         UPDATED=20240707
            SHORT="Port to Qt6 of Scintilla C++ editor class"
 
 cat << EOF

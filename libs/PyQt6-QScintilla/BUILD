@@ -12,7 +12,7 @@ cd ../designer &&
   make &&
 
 cd ../Python &&
-  mv pyproject-qt6.toml pyproject.toml &&
+  cp pyproject-qt6.toml pyproject.toml &&
   sip-build \
     --no-make \
     --qsci-features-dir ../src/features \
