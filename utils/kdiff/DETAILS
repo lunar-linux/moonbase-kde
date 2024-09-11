@@ -1,12 +1,12 @@
           MODULE=kdiff
-         VERSION=1.11.3
+         VERSION=1.11.4
           SOURCE=${MODULE}3-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/${MODULE}3
-      SOURCE_VFY=sha256:f8120c567588881ea863fe39175ca5f918eb2c7d5e79b761058d4a6db0fab685
+      SOURCE_VFY=sha256:aede7bdc9aa9675aee90fd2a3527052ed31b30918d42e6907a592cba7ce6a7c3
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE}3-$VERSION
         WEB_SITE=http://kdiff3.sourceforge.net/
          ENTERED=20090902
-         UPDATED=20240908
+         UPDATED=20240911
            SHORT="KDE version of diff"
 
 cat << EOF
@@ -22,7 +22,8 @@ KDiff3 is a program that
     Manual alignment of lines,
     Automatic merging of version control history ($Log$),
     and has an intuitive graphical user interface.
-    Windows-Explorer integration Diff-Ext-for-KDiff3 - shell extension included in installer (originally by Sergey Zorin: see also Diff Ext)
+    Windows-Explorer integration Diff-Ext-for-KDiff3 - shell extension included in installer
+     (originally by Sergey Zorin: see also Diff Ext)
     KDE-Konqueror service menu plugin
     Simplified integration with IBM-Rational-Clearcase for Windows (Details).
 EOF
