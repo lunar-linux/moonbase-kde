@@ -1,12 +1,12 @@
           MODULE=mailimporter
-         VERSION=24.08.0
+         VERSION=24.08.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:65fc7189d1698284a037635fc7fb6c645737c4bc61a8b236d67a687eb6bb62d3
+      SOURCE_VFY=sha256:5ed1dea40a646fa6c2aa21cd7058eb5c8bc53d8ac526a725cef4c1e0967ae483
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20160505
-         UPDATED=20240822
+         UPDATED=20240912
            SHORT="Mail importer library"
 
 cat << EOF

@@ -1,12 +1,12 @@
           MODULE=konversation
-         VERSION=24.08.0
+         VERSION=24.08.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://download.kde.org/stable/release-service/$VERSION/src/
-      SOURCE_VFY=sha256:d16587f50cc6519be8f0876ffccd3f6b3c9142652046637a393cd822758907a0
+      SOURCE_VFY=sha256:635cdbba451fa2ff26c33173ffe44674180b4c90f3d774e86418fd845e5b0c6d
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://konversation.kde.org
          ENTERED=20090329
-         UPDATED=20240822
+         UPDATED=20240912
            SHORT="A kde4 irc chat program"
 
 cat << EOF

@@ -1,12 +1,12 @@
           MODULE=kwave
-         VERSION=24.08.0
+         VERSION=24.08.1
           SOURCE=kwave-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:c3aae51974a9143bb37c509cc123c00424cc51735dc12b015430f0839bf844da
+      SOURCE_VFY=sha256:55c5cd5d21fc035f61bae66f3916a8d7fd08c218c2793dbcf13fdc3333b1bbe5
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://kwave.sourceforge.net
          ENTERED=20090426
-         UPDATED=20240822
+         UPDATED=20240912
            SHORT="Sound editor designed for the KDE"
 
 cat << EOF
