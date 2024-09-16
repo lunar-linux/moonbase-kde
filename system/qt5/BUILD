@@ -66,6 +66,9 @@ cd build-qt &&
             -translationdir "${MODULE_PREFIX}/share/$MODULE"/translations \
             $OPTS &&
 
+# system rapidjson compiles fine, the same version provided by qt5 does not, so delete the offending line
+sedit '319d' ../qtlocation/src/3rdparty/mapbox-gl-native/deps/rapidjson/1.1.0/include/rapidjson/document.h &&
+
 make &&
 prepare_install &&
 

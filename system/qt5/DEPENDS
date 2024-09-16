@@ -43,7 +43,7 @@ optional_depends freetds    "-plugin-sql-tds"    "-no-sql-tds"    "for tabular d
 
 optional_depends bluez-5 "" "" "for bluetooth support"
 
-optional_depends assimp "-system-assimp" "" "use system provided assimp, else use qt provided" "n"
+optional_depends assimp "-system-assimp" "" "use system provided assimp, else use qt provided,${PROBLEM_COLOR} Say no for now${DEFAULT_COLOR}" "n"
 optional_depends gst-plugins-base "-gstreamer " "-no-gstreamer" "for QtWebKit HTML5 Video Support" "y"
 optional_depends ca-certificates "" "" "for security certificate support" "y"
 optional_depends lksctp-tools "-sctp" "" "for SCTP protocol support" "y"
