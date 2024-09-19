@@ -13,13 +13,18 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=$MODULE_PREFIX \
         -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
         -DQT_BUILD_EXAMPLES_BY_DEFAULT=OFF \
+        -DQT_UNITY_BUILD=ON \
         -DQT_FEATURE_webengine_system_libevent=ON \
         -DQT_FEATURE_webengine_system_ffmpeg=OFF \
         -DQT_FEATURE_webengine_system_re2=OFF \
         -DQT_FEATURE_webengine_system_icu=ON \
+        -DQT_FEATURE_webengine_spellchecker=ON \
         -DQT_FEATURE_webengine_webrtc_pipewire=ON    \
         -DQT_FEATURE_webengine_proprietary_codecs=ON \
+        -DQT_FEATURE_webengine_jumbo_build=OFF \
         -DCMAKE_TOOLCHAIN_FILE=/usr/lib/qt6/cmake/Qt6/qt.toolchain.cmake \ 
+        -DQT_FEATURE_webengine_ozone_x11=ON \
+        -DQT_INSTALL_EXAMPLES_SOURCES_BY_DEFAULT=OFF \
         -DINSTALL_GN=OFF \
         -Wno-dev"
 
