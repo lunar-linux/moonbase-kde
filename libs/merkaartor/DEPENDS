@@ -1,6 +1,11 @@
 depends proj
 depends gdal
-depends qt5
+depends qt6-base
+depends qt6-tools
+depends qt6-svg
+depends qt6-5compat
+depends qt6-networkauth
 
-
-optional_depends qtwebengine "-DWEBENGINE=ON" "-DWEBENGINE=OFF" "for webengine support"
+optional_depends libproxy      "-DLIBPROXY=ON"  "-DLIBPROXY=OFF"  "for proxy support"
+optional_depends protobuf      "-DPROTOBUF=ON"  "-DPROTOBUF=OFF"  "for osm.pbf format support"
+optional_depends qt6-webengine "-DWEBENGINE=ON" "-DWEBENGINE=OFF" "for webengine support"
