@@ -1,12 +1,12 @@
           MODULE=qwt-6
-         VERSION=2.0
-          SOURCE=$MODULE.$VERSION.tar.bz2
+         VERSION=6.3.0
+          SOURCE=${MODULE%-*}-$VERSION.tar.bz2
       SOURCE_URL=$SFORGE_URL/qwt/
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE.$VERSION
-      SOURCE_VFY=sha256:9194f6513955d0fd7300f67158175064460197abab1a92fa127a67a4b0b71530
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/qwt-$VERSION
+      SOURCE_VFY=sha256:dcb085896c28aaec5518cbc08c0ee2b4e60ada7ac929d82639f6189851a6129a
         WEB_SITE=http://qwt.sourceforge.net
          ENTERED=20120107
-         UPDATED=20211106
+         UPDATED=20240927
            SHORT="Qt Widgets for Technical Applications"
 
 cat << EOF
