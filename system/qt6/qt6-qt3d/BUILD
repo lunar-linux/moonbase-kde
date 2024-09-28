@@ -17,6 +17,7 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \
         -DINSTALL_SYSCONFDIR=/etc/xdg \
         -DQT_FEATURE_qt3d_system_assimp=ON \
+        -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
         -DQT_UNITY_BUILD=OFF"
 
 cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS -Wno-dev &&

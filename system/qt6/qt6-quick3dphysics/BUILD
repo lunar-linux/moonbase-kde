@@ -13,6 +13,7 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
         -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \
         -DINSTALL_SYSCONFDIR=/etc/xdg \
+        -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
         -Wno-dev"
 
 cmake -B build -S . -G Ninja $OPTS &&

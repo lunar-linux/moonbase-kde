@@ -1,13 +1,13 @@
           MODULE=qt6-imageformats
-         VERSION=6.7.2
+         VERSION=6.7.3
           SOURCE=qtimageformats-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:e1a1d8785fae67d16ad0a443b01d5f32663a6b68d275f1806ebab257485ce5d6
+      SOURCE_VFY=sha256:9fd58144081654c3373768dd96ead294023830927b14fe3d3c1ef641fb324753
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtimageformats-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20211102
-         UPDATED=20240618
+         UPDATED=20240927
            SHORT="Plugins for additional image formats: TIFF, MNG, TGA, WBMP"
 cat << EOF
 Plugins for additional image formats: TIFF, MNG, TGA, WBMP.

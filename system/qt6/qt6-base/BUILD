@@ -24,6 +24,7 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
         -Wno-dev \
         -DQT_UNITY_BUILD=ON \
+        -DFEATURE_no_direct_extern_access=ON \
         -DQT_FEATURE_testlib=ON \
         -DBUILD_WITH_PCH=OFF \
         -DFEATURE_mtdev=OFF"
@@ -48,9 +49,9 @@ cat > qt6.rc << EOF &&
   export PKG_CONFIG_PATH="\${QT6_DIR}/qt6/pkgconfig:\${PKG_CONFIG_PATH}"
   export PATH="\${QT6_DIR}/qt6/bin:\${PATH}"
   export CMAKE_PREFIX_PATH="\${QT6_DIR}/qt6/cmake:\${CMAKE_PREFIX_PATH}"
-  export RCC_QT6="\${QT6_DIR}/qt6/rcc"
-  export MOC_QT6="\${QT6_DIR}/qt6/moc"
-  export UIC_QT6="\${QT6_DIR}/qt6/uic"
+  export RCC_QT6="\${QT6_DIR}/qt6/bin/rcc"
+  export MOC_QT6="\${QT6_DIR}/qt6/bin/moc"
+  export UIC_QT6="\${QT6_DIR}/qt6/bin/uic"
   export LANG='en_US.UTF-8'
 EOF
 

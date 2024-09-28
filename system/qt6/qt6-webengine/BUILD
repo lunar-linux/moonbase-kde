@@ -25,6 +25,7 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_TOOLCHAIN_FILE=/usr/lib/qt6/cmake/Qt6/qt.toolchain.cmake \ 
         -DQT_FEATURE_webengine_ozone_x11=ON \
         -DQT_INSTALL_EXAMPLES_SOURCES_BY_DEFAULT=OFF \
+        -DQT_BUILD_EXAMPLES_BY_DEFAULT=OFF \
         -DINSTALL_GN=OFF \
         -Wno-dev"
 
