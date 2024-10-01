@@ -1,13 +1,13 @@
           MODULE=qt-creator
-         VERSION=14.0.1
+         VERSION=14.0.2
           SOURCE=$MODULE-opensource-src-$VERSION.tar.xz
       SOURCE_URL=http://download.qt-project.org/official_releases/qtcreator/${VERSION%.*}/$VERSION/
-      SOURCE_VFY=sha256:9595d2e6c65bb918e78376314341dc2bef491c3200a5c6d5ce6f305509b0b28b
+      SOURCE_VFY=sha256:b2d2f878bb6928a8e6e30d87600bdd93cf404c2619a151c64bdcdc8cd0783892
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qt-creator-opensource-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org/
          ENTERED=20230115
-         UPDATED=20240830
+         UPDATED=20241001
            SHORT="cross-platform integrated development environment"
 
 cat << EOF
