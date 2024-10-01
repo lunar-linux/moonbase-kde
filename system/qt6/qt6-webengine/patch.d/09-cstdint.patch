@@ -1,0 +1,40 @@
+Patch status: limbo, needs upstreaming
+
+Only manifests as an issue with gcc-13+musl which does not transitively
+include cstdint / stdint.h for the int32/64_t usage, e.g. [1].
+
+See also [2] which fixed this for the 87 branch back in Qt5 but was
+not kept. Optimally needs to be upstreamed to chromium itself.
+
+[1] https://bugs.gentoo.org/928466
+[2] https://codereview.qt-project.org/c/qt/qtwebengine-chromium/+/489133
+--- a/src/3rdparty/chromium/gpu/config/gpu_driver_bug_workarounds.h
++++ b/src/3rdparty/chromium/gpu/config/gpu_driver_bug_workarounds.h
+@@ -7,2 +7,3 @@
+ 
++#include <cstdint>
+ #include <vector>
+--- a/src/3rdparty/chromium/media/base/video_transformation.h
++++ b/src/3rdparty/chromium/media/base/video_transformation.h
+@@ -7,2 +7,3 @@
+ 
++#include <cstdint>
+ #include <string>
+--- a/src/3rdparty/chromium/third_party/blink/public/common/page_state/page_state.h
++++ b/src/3rdparty/chromium/third_party/blink/public/common/page_state/page_state.h
+@@ -7,2 +7,3 @@
+ 
++#include <cstdint>
+ #include <string>
+--- a/src/3rdparty/chromium/third_party/webrtc/rtc_base/system/file_wrapper.h
++++ b/src/3rdparty/chromium/third_party/webrtc/rtc_base/system/file_wrapper.h
+@@ -16,2 +16,3 @@
+ 
++#include <cstdint>
+ #include <string>
+--- a/src/3rdparty/chromium/ui/accessibility/ax_text_attributes.h
++++ b/src/3rdparty/chromium/ui/accessibility/ax_text_attributes.h
+@@ -7,2 +7,3 @@
+ 
++#include <cstdint>
+ #include <string>

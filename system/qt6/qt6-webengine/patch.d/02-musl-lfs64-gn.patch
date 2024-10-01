@@ -1,0 +1,45 @@
+Patch status: may need for a while, not upstreamable as-is
+
+Lazy fix for >=musl-1.2.4[1] when building gn (gen.py already
+passes -D_FILE_OFFSET_BITS=64).
+
+While not fixed in gn itself upstream (yet), base/files did get
+updated elsewhere[2] and hopefully change will propagate.
+
+Should be noted that chromium itself uses -D_LARGEFILE64_SOURCE
+by default (unlike gn), and there is still ways to go not to
+break with the upcoming musl-1.2.5.
+
+[1] https://bugs.gentoo.org/903611
+[2] https://crrev.com/ce0c35e60e14eb2e8aeb2d8374e054559ab664fe
+--- a/src/3rdparty/gn/src/base/files/file.h
++++ b/src/3rdparty/gn/src/base/files/file.h
+@@ -27,5 +27,5 @@
+ typedef struct stat stat_wrapper_t;
+ #elif defined(OS_POSIX) || defined(OS_FUCHSIA)
+-typedef struct stat64 stat_wrapper_t;
++typedef struct stat stat_wrapper_t;
+ #endif
+ 
+--- a/src/3rdparty/gn/src/base/files/file_posix.cc
++++ b/src/3rdparty/gn/src/base/files/file_posix.cc
+@@ -33,5 +33,5 @@
+ #else
+ int CallFstat(int fd, stat_wrapper_t* sb) {
+-  return fstat64(fd, sb);
++  return fstat(fd, sb);
+ }
+ #endif
+--- a/src/3rdparty/gn/src/base/files/file_util_posix.cc
++++ b/src/3rdparty/gn/src/base/files/file_util_posix.cc
+@@ -71,8 +71,8 @@
+ #else
+ int CallStat(const char* path, stat_wrapper_t* sb) {
+-  return stat64(path, sb);
++  return stat(path, sb);
+ }
+ int CallLstat(const char* path, stat_wrapper_t* sb) {
+-  return lstat64(path, sb);
++  return lstat(path, sb);
+ }
+ #endif

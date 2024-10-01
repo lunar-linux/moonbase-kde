@@ -1,0 +1,49 @@
+Patch status: limbo, needs improvement to be upstreamed
+
+No execinfo with musl, and execinfo.h usage was guarded in [1].
+But then stack_trace.cc does not check this and still tries to
+OutputToStreamWithPrefix() and so which is missing on this path.
+
+[1] https://crrev.com/599f4045d195c1bc1fa5bff34124d2d3d95c317a
+--- a/src/3rdparty/chromium/base/debug/stack_trace.cc
++++ b/src/3rdparty/chromium/base/debug/stack_trace.cc
+@@ -235,5 +235,5 @@
+   // symbol_level=0.
+   return false;
+-#elif defined(__UCLIBC__) || defined(_AIX)
++#elif !defined(__GLIBC__) || defined(_AIX)
+   // StackTrace::OutputToStream() is not implemented under uclibc, nor AIX.
+   // See https://crbug.com/706728
+@@ -273,7 +273,9 @@
+ }
+ 
++#if defined(__GLIBC__) && !defined(_AIX)
+ void StackTrace::OutputToStream(std::ostream* os) const {
+   OutputToStreamWithPrefix(os, nullptr);
+ }
++#endif
+ 
+ std::string StackTrace::ToString() const {
+@@ -282,5 +284,5 @@
+ std::string StackTrace::ToStringWithPrefix(const char* prefix_string) const {
+   std::stringstream stream;
+-#if !defined(__UCLIBC__) && !defined(_AIX)
++#if defined(__GLIBC__) && !defined(_AIX)
+   OutputToStreamWithPrefix(&stream, prefix_string);
+ #endif
+@@ -289,5 +291,5 @@
+ 
+ std::ostream& operator<<(std::ostream& os, const StackTrace& s) {
+-#if !defined(__UCLIBC__) && !defined(_AIX)
++#if defined(__GLIBC__) && !defined(_AIX)
+   s.OutputToStream(&os);
+ #else
+--- a/src/3rdparty/chromium/base/debug/stack_trace.h
++++ b/src/3rdparty/chromium/base/debug/stack_trace.h
+@@ -114,5 +114,5 @@
+   void PrintWithPrefix(const char* prefix_string) const;
+ 
+-#if !defined(__UCLIBC__) && !defined(_AIX)
++#if defined(__GLIBC__) && !defined(_AIX)
+   // Resolves backtrace to symbols and write to stream.
+   void OutputToStream(std::ostream* os) const;
