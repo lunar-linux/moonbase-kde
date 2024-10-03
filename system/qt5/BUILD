@@ -24,8 +24,10 @@ fi &&
 # See https://bugreports.qt.io/browse/QTBUG-33948.
 OPTS+=" -gui \
         -gtk \
+        -pch \
         -icu \
         -xcb \
+        -Winvalid-pch \
         -strip \
         -release \
         -no-rpath \
