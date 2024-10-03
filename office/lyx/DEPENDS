@@ -1,14 +1,11 @@
+depends latex-xft-fonts
 depends python
 depends ImageMagick
-depends texlive
-depends qt5
-
-optional_depends latex-xft-fonts \
-                 "" "" "to enable math preview"
+depends qt6-svg
 
 optional_depends boost \
-                 "--without-included-boost" "" \
-                 "use with system or included boost"
+                 "--without-included-boost" "--with-included-boost" \
+                 "use with system or included boost,${PROBLEM_COLOR}Say Yes for system${DEFAULT_COLOR}"
 
 optional_depends aspell \
                  "--with-aspell" \
@@ -24,3 +21,5 @@ optional_depends enchant \
                  "--with-enchant" \
                  "--without-enchant" \
                  "for generic spellcheck support"
+
+optional_depends texlive "" "" "Not needed to build, but useful"             

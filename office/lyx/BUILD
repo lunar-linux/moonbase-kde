@@ -1,10 +1,6 @@
 export PYTHONDONTWRITEBYTECODE=1 &&
+source /etc/profile.d/qt6.rc &&
 
-. /etc/profile.d/qt5.rc &&
-
-OPTS+=" --enable-qt5" &&
-QTDIR+=" QTDIR=/usr/lib/qt5" &&
-QT_UIC+=" /usr/lib/qt5/bin/uic" &&
-QT_MOC+=" /usr/lib/qt5/bin/moc"
+OPTS+=" --enable-qt6 --without-included-mythes"
 
 default_build
