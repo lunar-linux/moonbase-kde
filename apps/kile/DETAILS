@@ -1,12 +1,13 @@
           MODULE=kile
-         VERSION=2.9.94
+         VERSION=2.9.94-1
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=$SFORGE_URL/$MODULE
    MODULE_PREFIX=${KDE_PREFIX:-/usr}
-      SOURCE_VFY=sha256:53c6742bd83fb095cbdc898b03fdf8e15ab680a81693ccaf9c5076b93ad1a3ca
+      SOURCE_VFY=sha256:64fa2e45c97dbb6f613d10f7f9bb005bf86fbbaaff238185538ac5b896be632f
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-${VERSION%-*}
         WEB_SITE=https://kile.sourceforge.io/
          ENTERED=20091208
-         UPDATED=20240324
+         UPDATED=20241003
            SHORT="KDE - LaTeX source editor for KDE4"
 
 cat << EOF
