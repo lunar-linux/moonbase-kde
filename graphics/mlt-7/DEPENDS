@@ -17,3 +17,8 @@ optional_depends %JAVA_SDK  "-DSWIG_JAVA=ON"      "-DSWIG_JAVA=OFF"      "to bui
 optional_depends rtaudio    "-DMOD_RTAUDIO=ON"    "-DMOD_RTAUDIO=OFF"    "for the real time audio support"
 optional_depends vid.stab   "-DMOD_VIDSTAB=ON"    "-DMOD_VIDSTAB=OFF"    "for video stabilization support"
 optional_depends rubberband "-DMOD_RUBBERBAND=ON" "-DMOD_RUBBERBAND=OFF" "for audio manipulation support"
+optional_depends node       "-DSWIG_NODEJS=ON"    "-DSWIG_NODEJS=OFF"    "for java script support, ${PROBLEM_COLOR}Say no for now${DEFAULT_COLOR}" n
+optional_depends perl       "-DSWIG_PERL=ON"      "-DSWIG_PERL=OFF"      "for perl binding support, ${PROBLEM_COLOR}Say no for now${DEFAULT_COLOR}" n
+optional_depends php        "-DSWIG_PHP=ON"       "-DSWIG_PHP=OFF"       "for php binding support"
+optional_depends python     "-DSWIG_PYTHON=ON"    "-DSWIG_PYTHON=OFF"    "for python binding support"
+optional_depends ruby       "-DSWIG_RUBY=ON"      "-DSWIG_RUBY=OFF"      "for ruby binding support"
