@@ -1,0 +1,30 @@
+          MODULE=liquidshell
+         VERSION=1.10.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/$MODULE/
+      SOURCE_VFY=sha256:27adb52c1ee292f853921414b46ac8968f39126c5c7e8afb169abb2736c3f604
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=https://apps.kde.org/liquidshell/
+         ENTERED=20241007
+         UPDATED=20241007
+           SHORT="an alternative to plasmashell"
+
+cat << EOF
+liquidshell is an alternative to plasmashell
+
+It does not use QtQuick but instead relies on QtWidgets, therefore no hardware graphics acceleration is needed.
+
+Main Features:
+
+Wallpaper per virtual desktop
+No animations, no CPU hogging, low Memory footprint
+Instant startup
+No use of activities
+QtWidgets based, therefore follows widget style from systemsettings
+Icons are used from your globally defined icon theme from systemsettings
+Colors are used from your globally defined color theme from systemsettings
+Can additionally be styled with css by passing the commandline option -stylesheet filename.css (see included example stylesheet.css)
+uses existing KDE dialogs for most configurations, e.g. StartMenu, Virtual Desktops, Bluetooth, Network
+One bottom DesktopPanel
+Desktop Applets
+EOF
