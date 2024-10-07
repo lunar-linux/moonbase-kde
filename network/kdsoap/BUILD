@@ -9,7 +9,7 @@ cmake --build $MODULE-qt5
 fi &&
 
 source /etc/profile.d/qt6.rc &&
-cmake -B $MODULE-qt6 -S . $OPTS -DKDSoap_QT6=ON -DCMAKE_INSTALL_PREFIX=/usr &&
+cmake -B $MODULE-qt6 -S . $OPTS -DKDSoap_QT6=ON -DCMAKE_INSTALL_PREFIX=/usr -DECM_MKSPECS_INSTALL_DIR=/usr/lib/qt5/mkspecs/modules &&
 cmake --build $MODULE-qt6
 
 prepare_install &&
