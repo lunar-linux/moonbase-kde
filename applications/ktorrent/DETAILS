@@ -1,13 +1,13 @@
 # Every time you update ktorrent remember to also update libktorrent
           MODULE=ktorrent
-         VERSION=24.08.1
+         VERSION=24.08.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/${VERSION}/src/
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
-      SOURCE_VFY=sha256:694f7c241175faf9125517ceb369273cdab8c91e81c4feab7a3ec3e1a7e4be61
+      SOURCE_VFY=sha256:0c2c71ccf60943a01017f6ba00361e60d9608c7adf1d44f1e967ac165916d6e2
         WEB_SITE=http://ktorrent.pwsp.net/
          ENTERED=20080111
-         UPDATED=20240912
+         UPDATED=20241010
            SHORT="BitTorrent client for KDE"
 
 cat << EOF

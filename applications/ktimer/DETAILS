@@ -1,12 +1,12 @@
           MODULE=ktimer
-         VERSION=24.08.1
+         VERSION=24.08.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:6d42bfbe990de3ee45670ade1164c187115aaede950ae355d53c6fe09e047747
+      SOURCE_VFY=sha256:cb663b2bce8da7ba5fdad783a760caa3946d16d619d40775e996bb0fed142876
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://netdragon.sourceforge.net/ssuperkaramba.html
          ENTERED=20120125
-         UPDATED=20240912
+         UPDATED=20241010
            SHORT="Create a timer"
 
 cat << EOF
