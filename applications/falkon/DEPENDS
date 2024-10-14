@@ -1,7 +1,13 @@
+depends libxcb
+depends %SSL
 depends cmake
 depends extra-cmake-modules
-depends qt5
+depends qt6-base
+depends qt6-declarative
+depends qt6-5compat
+depends qt6-webengine
+depends qt6-webchannel
 depends kconfig
-depends ki18n
-
-optional_depends gnome-keyring "" "" "for keyring support"
+depends karchive
+depends libgnome-keyring
+depends purpose
