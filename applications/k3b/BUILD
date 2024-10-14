@@ -1,3 +1,5 @@
+patch -p1 < $SCRIPT_DIRECTORY/k3b-remove-libmusicbrainz.patch &&
+
 source /etc/profile.d/qt6.rc &&
 export LANG='en_US.UTF-8'
 

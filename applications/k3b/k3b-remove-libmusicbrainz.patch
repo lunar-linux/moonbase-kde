@@ -1,0 +1,1307 @@
+From 4b538020210fff0f4611164ddb89c095e86f3025 Mon Sep 17 00:00:00 2001
+From: Albert Astals Cid <aacid@kde.org>
+Date: Mon, 14 Oct 2024 01:40:09 +0200
+Subject: [PATCH] Remove musicbrainz code
+
+As the cmake find file says, this needs musicbrainz2 and the current
+version is musicbrainz5. Having a quick look at the code we would need
+to rewrite the code quite a bit, and it hasn't happened in almost a
+decade, so clean the code for now
+
+BUGS: 494670
+---
+ CMakeLists.txt                                |  11 --
+ cmake/modules/FindMusicBrainz.cmake           |  30 ----
+ config-k3b.h.cmake                            |   2 -
+ src/CMakeLists.txt                            |  15 --
+ src/icons/actions/16-actions-musicbrainz.png  | Bin 870 -> 0 bytes
+ src/icons/actions/64-actions-musicbrainz.png  | Bin 3803 -> 0 bytes
+ src/icons/actions/CMakeLists.txt              |   2 -
+ src/k3bmusicbrainz.cpp                        |  89 -----------
+ src/k3bmusicbrainz.h                          |  44 ------
+ src/k3btrm.cpp                                |  83 ----------
+ src/k3btrm.h                                  |  51 ------
+ src/projects/k3baudiotracktrmlookupdialog.cpp | 120 --------------
+ src/projects/k3baudiotracktrmlookupdialog.h   |  58 -------
+ src/projects/k3baudioview.cpp                 |   4 -
+ src/projects/k3baudioviewimpl.cpp             |  65 --------
+ src/projects/k3baudioviewimpl.h               |   4 -
+ src/projects/k3bmusicbrainzjob.cpp            | 147 ------------------
+ src/projects/k3bmusicbrainzjob.h              |  63 --------
+ src/projects/k3bmusicbrainztrackloopupjob.cpp | 117 --------------
+ src/projects/k3bmusicbrainztrackloopupjob.h   |  38 -----
+ 20 files changed, 943 deletions(-)
+ delete mode 100644 cmake/modules/FindMusicBrainz.cmake
+ delete mode 100644 src/icons/actions/16-actions-musicbrainz.png
+ delete mode 100644 src/icons/actions/64-actions-musicbrainz.png
+ delete mode 100644 src/k3bmusicbrainz.cpp
+ delete mode 100644 src/k3bmusicbrainz.h
+ delete mode 100644 src/k3btrm.cpp
+ delete mode 100644 src/k3btrm.h
+ delete mode 100644 src/projects/k3baudiotracktrmlookupdialog.cpp
+ delete mode 100644 src/projects/k3baudiotracktrmlookupdialog.h
+ delete mode 100644 src/projects/k3bmusicbrainzjob.cpp
+ delete mode 100644 src/projects/k3bmusicbrainzjob.h
+ delete mode 100644 src/projects/k3bmusicbrainztrackloopupjob.cpp
+ delete mode 100644 src/projects/k3bmusicbrainztrackloopupjob.h
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index e39f71eb7..f637004ef 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -32,7 +32,6 @@ option(K3B_DEBUG "K3b additional debugging support" OFF)
+ if(K3B_DEBUG)
+     add_definitions(-g)
+ endif()
+-option(K3B_ENABLE_MUSICBRAINZ "Support for querying metadata about audio tracks from Musicbrainz." ON)
+ option(K3B_ENABLE_DVD_RIPPING "Support for ripping Video DVDs with optional decryption." ON)
+ option(K3B_ENABLE_TAGLIB "Support for reading audio file metadata using Taglib." ON)
+ option(K3B_BUILD_API_DOCS "Build the API documentation for the K3b libs." OFF)
+@@ -119,16 +118,6 @@ if(K3B_ENABLE_TAGLIB)
+     set(ENABLE_TAGLIB "${TAGLIB_FOUND}")
+ endif()
+ 
+-if(K3B_ENABLE_MUSICBRAINZ)
+-    find_package(MusicBrainz)
+-    set_package_properties(MusicBrainz PROPERTIES
+-        DESCRIPTION "Provide information about the CD, about the artist or about related information"
+-        URL "https://musicbrainz.org/"
+-        TYPE OPTIONAL)
+-
+-    set(ENABLE_MUSICBRAINZ "${MUSICBRAINZ_FOUND}")
+-endif()
+-
+ if(K3B_BUILD_FFMPEG_DECODER_PLUGIN)
+     find_package(FFmpeg 4.4.0)
+     set_package_properties(FFmpeg PROPERTIES
+diff --git a/cmake/modules/FindMusicBrainz.cmake b/cmake/modules/FindMusicBrainz.cmake
+deleted file mode 100644
+index c999c0442..000000000
+--- a/cmake/modules/FindMusicBrainz.cmake
++++ /dev/null
+@@ -1,30 +0,0 @@
+-# Module to find the musicbrainz library
+-#
+-# It defines
+-#  MUSICBRAINZ_INCLUDE_DIR - the include dir 
+-#  MUSICBRAINZ_LIBRARIES - the required libraries
+-#  MUSICBRAINZ_FOUND - true if both of the above have been found
+-
+-# SPDX-FileCopyrightText: 2006, 2007 Laurent Montel <montel@kde.org>
+-# SPDX-License-Identifier: BSD-3-Clause
+-
+-if(MUSICBRAINZ_INCLUDE_DIR AND MUSICBRAINZ_LIBRARIES)
+-   set(MUSICBRAINZ_FIND_QUIETLY TRUE)
+-endif(MUSICBRAINZ_INCLUDE_DIR AND MUSICBRAINZ_LIBRARIES)
+-
+-FIND_PATH(MUSICBRAINZ_INCLUDE_DIR musicbrainz/musicbrainz.h)
+-
+-FIND_LIBRARY( MUSICBRAINZ_LIBRARIES NAMES musicbrainz)
+-
+-# We need version 2, version 3 is source-incompatible
+-FIND_PATH(MUSICBRAINZ3_INCLUDE_DIR musicbrainz3/musicbrainz.h)
+-if(MUSICBRAINZ3_INCLUDE_DIR AND NOT MUSICBRAINZ_INCLUDE_DIR)
+-   message(STATUS "\nIncompatible version 3.x of the musicbrainz includes detected. Version 2.x is needed.\n")
+-endif(MUSICBRAINZ3_INCLUDE_DIR AND NOT MUSICBRAINZ_INCLUDE_DIR)
+-
+-include(FindPackageHandleStandardArgs)
+-find_package_handle_standard_args( MusicBrainz DEFAULT_MSG
+-                                   MUSICBRAINZ_INCLUDE_DIR MUSICBRAINZ_LIBRARIES)
+-
+-MARK_AS_ADVANCED(MUSICBRAINZ_INCLUDE_DIR MUSICBRAINZ_LIBRARIES)
+-
+diff --git a/config-k3b.h.cmake b/config-k3b.h.cmake
+index 1ef4180c1..a9855836f 100644
+--- a/config-k3b.h.cmake
++++ b/config-k3b.h.cmake
+@@ -4,8 +4,6 @@
+ 
+ #cmakedefine ENABLE_DVD_RIPPING
+ 
+-#cmakedefine ENABLE_MUSICBRAINZ
+-
+ #cmakedefine ENABLE_TAGLIB
+ 
+ #cmakedefine HAVE_SYS_VFS_H
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index d05d8ea07..177201e19 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -43,16 +43,6 @@ if(ENABLE_DVD_RIPPING)
+     ki18n_wrap_ui(ui_sources rip/videodvd/base_k3bvideodvdrippingwidget.ui)
+ endif()
+ 
+-if(ENABLE_MUSICBRAINZ)
+-    set(musicbrainz_sources
+-        k3btrm.cpp
+-        k3bmusicbrainz.cpp
+-        projects/k3bmusicbrainzjob.cpp
+-        projects/k3bmusicbrainztrackloopupjob.cpp
+-        projects/k3baudiotracktrmlookupdialog.cpp
+-    )
+-endif()
+-
+ qt_generate_dbus_interface( ${CMAKE_CURRENT_SOURCE_DIR}/k3binterface.h org.k3b.MainWindow.xml )
+ qt_add_dbus_adaptor( dbus_sources ${CMAKE_CURRENT_BINARY_DIR}/org.k3b.MainWindow.xml k3binterface.h K3b::Interface k3binterfaceadaptor K3bInterfaceAdaptor )
+ qt_generate_dbus_interface( ${CMAKE_CURRENT_SOURCE_DIR}/k3bjobinterface.h org.k3b.Job.xml )
+@@ -216,7 +206,6 @@ add_executable(k3b
+     ${log_sources}
+     ${ui_sources}
+     ${audioplayer_sources}
+-    ${musicbrainz_sources}
+     ${videodvd_sources}
+     ${dbus_sources}
+ 
+@@ -263,10 +252,6 @@ if(ENABLE_AUDIO_PLAYER)
+     target_link_libraries(k3b Qt5::Multimedia)
+ endif()
+ 
+-if(ENABLE_MUSICBRAINZ)
+-    target_link_libraries(k3b ${MUSICBRAINZ_LIBRARIES})
+-endif()
+-
+ install(TARGETS k3b ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+ 
+ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/option/k3btheme.knsrc.cmake
+diff --git a/src/icons/actions/16-actions-musicbrainz.png b/src/icons/actions/16-actions-musicbrainz.png
+deleted file mode 100644
+index f2bb4eaf5b3b91e227c6ba5f0cf7b049e1b22ef9..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 870
+zcmeAS@N?(olHy`uVBq!ia0vp^0wB!63?wyl`GbKJOS+@4BLl<6e(pbstU$g(vPY0F
+z14ES>14Ba#1H&(%P{RubhEf9thF1v;3|2E37{m+a><YADU|<Xg@Ck7RD!>JpnOT$+
+zjg=Km1bNv)Y-Q!exRF)z@(3H~y8C&SxH_f<IT+3>HeXX`9d0itCCrJejEj@s*uclv
+zvnV0D-`BIaKE;1SgYAuZ-iymEV_g(P`Pt!$nV6VuEF;5%n_?roLj&q27snjzbw1MX
+zvZKx6>TJ(+Zxy&opqW6G!G6`Df%S2bJ?lD)&QEtgImvZhz0L87u0_G>aFsv?8ylya
+zQ-+sYZghA@L~wJUZ$(Rb(E56tL%q%yXL!shGMkcP3{=L*$mH!&5ad_o<5}e8mhbAA
+zerQHzZ@S@%YOAFcmPaSJ^k*0{F*4a%$A$+rh6OhGd6jJGEnHGzd18|5!5*iJGd;?}
+zG=b*a-SRvNNadFV`2{nuO7dvPJ1ClR$SH{^S#mR53FuDQy?@>Q9c?ngF3MsGEA~Uc
+zEPfViY36PyZ-0T73ZK*_7;m1j1fz-Z1{in$EGE9?a85sSFN|Gyf8v3SAfF_8ySp%S
+zu*!M>Ih+L^k;M!Q+`=Ht$S`Y;1W<6Ar;B5V#O36K1;z;}O&e!K9uU!%_Gy^gJh^*z
+z`}F?#jgAfiDhet(N?K}qikhlt6_igasGnc3V8xO(i&iaLw{YdsvnLiTUcEd&At56r
+zCn+l}FER6I!r7eU?DY2u&tE)w^XS#HcLyK5eERnB>*w+U5+X7}Qex*02&|J9loXW}
+zmKL8sVa61mZKkTBmb$je#@g2E=KYO~42R4lKL50taR=x^)e_f;l9a@fRIB8oR3OD*
+zWMF8bYiOWrU=m_zYGq(xWon^qU<70wTaow}MMG|WN@iLmZVlVN-i!xoVDNPHb6Mw<
+G&;$V0aS_!3
+
+diff --git a/src/icons/actions/64-actions-musicbrainz.png b/src/icons/actions/64-actions-musicbrainz.png
+deleted file mode 100644
+index cdf40dd4858147068142ab42421cbf81fbf3e697..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 3803
+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
+R){p=I002ovPDHLkV1f+8?m++m
+
+diff --git a/src/icons/actions/CMakeLists.txt b/src/icons/actions/CMakeLists.txt
+index 3f743857d..f42a504f9 100644
+--- a/src/icons/actions/CMakeLists.txt
++++ b/src/icons/actions/CMakeLists.txt
+@@ -3,7 +3,6 @@ ecm_install_icons(
+         128-actions-tools-rip-audio-cd.png
+         128-actions-tools-rip-video-cd.png
+         128-actions-tools-rip-video-dvd.png
+-        16-actions-musicbrainz.png
+         16-actions-tools-rip-audio-cd.png
+         16-actions-tools-rip-video-cd.png
+         16-actions-tools-rip-video-dvd.png
+@@ -16,7 +15,6 @@ ecm_install_icons(
+         48-actions-tools-rip-audio-cd.png
+         48-actions-tools-rip-video-cd.png
+         48-actions-tools-rip-video-dvd.png
+-        64-actions-musicbrainz.png
+         64-actions-tools-rip-audio-cd.png
+         64-actions-tools-rip-video-cd.png
+         64-actions-tools-rip-video-dvd.png
+diff --git a/src/k3bmusicbrainz.cpp b/src/k3bmusicbrainz.cpp
+deleted file mode 100644
+index 4bb119172..000000000
+--- a/src/k3bmusicbrainz.cpp
++++ /dev/null
+@@ -1,89 +0,0 @@
+-/*
+-    SPDX-FileCopyrightText: 1998-2008 Sebastian Trueg <trueg@k3b.org>
+-    SPDX-License-Identifier: GPL-2.0-or-later
+-*/
+-
+-#include <config-k3b.h>
+-
+-#include "k3bmusicbrainz.h"
+-
+-#include <musicbrainz/mb_c.h>
+-
+-#include <KProtocolManager>
+-#include <QDebug>
+-#include <QUrl>
+-
+-
+-class K3b::MusicBrainz::Private
+-{
+-public:
+-    musicbrainz_t mb;
+-
+-    QStringList titles;
+-    QStringList artists;
+-};
+-
+-
+-K3b::MusicBrainz::MusicBrainz()
+-{
+-    d = new Private;
+-    d->mb = mb_New();
+-    mb_UseUTF8( d->mb, 1 );
+-}
+-
+-
+-K3b::MusicBrainz::~MusicBrainz()
+-{
+-    mb_Delete( d->mb );
+-    delete d;
+-}
+-
+-
+-int K3b::MusicBrainz::query( const QByteArray& trm )
+-{
+-    d->titles.clear();
+-    d->artists.clear();
+-
+-    if( KProtocolManager::useProxy() ) {
+-        QUrl proxy( KProtocolManager::proxyFor("http") );
+-        mb_SetProxy( d->mb, const_cast<char*>(proxy.host().toLatin1().constData()), short(proxy.port()) );
+-    }
+-
+-    const char* args[2];
+-    args[0] = trm.data();
+-    args[1] = 0;
+-
+-    if( mb_QueryWithArgs( d->mb, (char*)MBQ_TrackInfoFromTRMId, (char**)args ) ) {
+-
+-        unsigned int i = 1;
+-        while( mb_Select(d->mb, (char*)MBS_Rewind) && mb_Select1( d->mb, (char*)MBS_SelectTrack, i ) ) {
+-            QByteArray data( 256, 0 );
+-            mb_GetResultData( d->mb, (char*)MBE_TrackGetArtistName, data.data(), 256 );
+-            d->artists.append( QString::fromUtf8( data ).trimmed() );
+-            mb_GetResultData( d->mb, (char*)MBE_TrackGetTrackName, data.data(), 256 );
+-            d->titles.append( QString::fromUtf8( data ).trimmed() );
+-
+-            ++i;
+-        }
+-
+-        return i-1;
+-    }
+-    else {
+-        char buffer[256];
+-        mb_GetQueryError( d->mb, buffer, 256 );
+-        qDebug() << "(K3b::MusicBrainz) query error: " << buffer;
+-        return 0;
+-    }
+-}
+-
+-
+-QString K3b::MusicBrainz::title( unsigned int i ) const
+-{
+-    return d->titles[i];
+-}
+-
+-
+-QString K3b::MusicBrainz::artist( unsigned int i ) const
+-{
+-    return d->artists[i];
+-}
+diff --git a/src/k3bmusicbrainz.h b/src/k3bmusicbrainz.h
+deleted file mode 100644
+index 3884e5979..000000000
+--- a/src/k3bmusicbrainz.h
++++ /dev/null
+@@ -1,44 +0,0 @@
+-/* 
+-
+-    SPDX-FileCopyrightText: 2005-2008 Sebastian Trueg <trueg@k3b.org>
+-    SPDX-FileCopyrightText: 1998-2008 Sebastian Trueg <trueg@k3b.org>
+-    SPDX-License-Identifier: GPL-2.0-or-later
+-*/
+-
+-#ifndef _K3B_MUSICBRAINZ_H_
+-#define _K3B_MUSICBRAINZ_H_
+-
+-#include <config-k3b.h>
+-
+-#include <QByteArray>
+-#include <QString>
+-
+-
+-/**
+- * A wrapper class around libmusicbrainz. Use in combination with TRM.
+- *
+- * Tries to determine the artist and title related to a trm.
+- */
+-namespace K3b {
+-class MusicBrainz
+-{
+-public:
+-    MusicBrainz();
+-    ~MusicBrainz();
+-
+-    /**
+-     * \return number of found results.
+-     */
+-    int query( const QByteArray& trm );
+-
+-    QString title( unsigned int i = 0 ) const;
+-    QString artist( unsigned int i = 0 ) const;
+-
+-private:
+-    class Private;
+-    Private* d;
+-};
+-}
+-
+-
+-#endif
+diff --git a/src/k3btrm.cpp b/src/k3btrm.cpp
+deleted file mode 100644
+index 4de626e7a..000000000
+--- a/src/k3btrm.cpp
++++ /dev/null
+@@ -1,83 +0,0 @@
+-/*
+-    SPDX-FileCopyrightText: 1998-2008 Sebastian Trueg <trueg@k3b.org>
+-    SPDX-License-Identifier: GPL-2.0-or-later
+-*/
+-
+-#include <config-k3b.h>
+-
+-#ifdef ENABLE_MUSICBRAINZ
+-
+-#include "k3btrm.h"
+-#include "musicbrainz/mb_c.h"
+-
+-#include <KProtocolManager>
+-#include <QDebug>
+-#include <QUrl>
+-
+-
+-class K3b::TRM::Private
+-{
+-public:
+-    trm_t trm;
+-    QByteArray sig;
+-    QByteArray rawSig;
+-};
+-
+-
+-K3b::TRM::TRM()
+-{
+-    d = new Private;
+-    d->trm = trm_New();
+-    d->rawSig.resize( 17 );
+-    d->sig.resize( 37 );
+-}
+-
+-
+-K3b::TRM::~TRM()
+-{
+-    trm_Delete( d->trm );
+-    delete d;
+-}
+-
+-
+-void K3b::TRM::start( const K3b::Msf& length )
+-{
+-    if( KProtocolManager::useProxy() ) {
+-        QUrl proxy( KProtocolManager::proxyFor("http") );
+-        trm_SetProxy( d->trm, const_cast<char*>(proxy.host().toLatin1().constData()), short(proxy.port()) );
+-    }
+-
+-    trm_SetPCMDataInfo( d->trm, 44100, 2, 16 );
+-    trm_SetSongLength( d->trm, length.totalFrames()/75 );
+-}
+-
+-
+-bool K3b::TRM::generate( char* data, int len )
+-{
+-    return ( trm_GenerateSignature( d->trm, data, len ) == 1 );
+-}
+-
+-
+-bool K3b::TRM::finalize()
+-{
+-    if( trm_FinalizeSignature( d->trm, d->rawSig.data(), 0 ) == 0 ) {
+-        trm_ConvertSigToASCII( d->trm, d->rawSig.data(), d->sig.data() );
+-        return true;
+-    }
+-    else
+-        return false;
+-}
+-
+-
+-QByteArray K3b::TRM::rawSignature() const
+-{
+-    return d->rawSig;
+-}
+-
+-
+-QByteArray K3b::TRM::signature() const
+-{
+-    return d->sig;
+-}
+-
+-#endif
+diff --git a/src/k3btrm.h b/src/k3btrm.h
+deleted file mode 100644
+index 953278d96..000000000
+--- a/src/k3btrm.h
++++ /dev/null
+@@ -1,51 +0,0 @@
+-/*
+-    SPDX-FileCopyrightText: 1998-2008 Sebastian Trueg <trueg@k3b.org>
+-    SPDX-License-Identifier: GPL-2.0-or-later
+-*/
+-
+-#ifndef _K3B_TRM_H_
+-#define _K3B_TRM_H_
+-
+-#include <config-k3b.h>
+-
+-#ifdef ENABLE_MUSICBRAINZ
+-
+-#include "k3bmsf.h"
+-#include <QByteArray>
+-
+-/**
+- * This class is a wrapper around the trm part of libmusicbrainz.
+- * It handles proxy settings automatically through KDE.
+- *
+- * TRM always treats audio data as 44100, 2 channel, 16 bit data.
+- */
+-namespace K3b {
+-class TRM
+-{
+-public:
+-    TRM();
+-    ~TRM();
+-
+-    void start( const K3b::Msf& length );
+-
+-    /**
+-     * \return true if no more data is needed
+-     */
+-    bool generate( char* data, int len );
+-
+-    /**
+-     * \return true on success, false on error.
+-     */
+-    bool finalize();
+-
+-    QByteArray rawSignature() const;
+-    QByteArray signature() const;
+-
+-private:
+-    class Private;
+-    Private* d;
+-};
+-}
+-
+-#endif
+-#endif
+diff --git a/src/projects/k3baudiotracktrmlookupdialog.cpp b/src/projects/k3baudiotracktrmlookupdialog.cpp
+deleted file mode 100644
+index 29429a0ba..000000000
+--- a/src/projects/k3baudiotracktrmlookupdialog.cpp
++++ /dev/null
+@@ -1,120 +0,0 @@
+-/*
+-    SPDX-FileCopyrightText: 2011 Michal Malek <michalm@jabster.pl>
+-    SPDX-FileCopyrightText: 1998-2008 Sebastian Trueg <trueg@k3b.org>
+-
+-    SPDX-License-Identifier: GPL-2.0-or-later
+-*/
+-
+-#include "k3baudiotracktrmlookupdialog.h"
+-#include "k3bmusicbrainzjob.h"
+-
+-#include <config-k3b.h>
+-
+-#include "k3bbusywidget.h"
+-#include "k3baudiotrack.h"
+-#include "k3baudiofile.h"
+-
+-#include <KNotification>
+-#include <KLocalizedString>
+-#include <KIconLoader>
+-#include <KMessageBox>
+-
+-#include <QDebug>
+-#include <QEventLoop>
+-#include <QTimer>
+-#include <QApplication>
+-#include <QDialogButtonBox>
+-#include <QGridLayout>
+-#include <QLabel>
+-#include <QLayout>
+-#include <QPushButton>
+-
+-
+-K3b::AudioTrackTRMLookupDialog::AudioTrackTRMLookupDialog( QWidget* parent )
+-    : QDialog( parent ),
+-      m_loop( 0 )
+-{
+-    setWindowTitle(i18n("MusicBrainz Query"));
+-    setModal(true);
+-    QGridLayout* grid = new QGridLayout( this );
+-
+-    m_infoLabel = new QLabel( this );
+-    QLabel* pixLabel = new QLabel( this );
+-    pixLabel->setPixmap( KIconLoader::global()->loadIcon( "musicbrainz", KIconLoader::NoGroup, 64 ) );
+-    pixLabel->setScaledContents( false );
+-
+-    m_busyWidget = new K3b::BusyWidget( this );
+-
+-    QDialogButtonBox* buttonBox = new QDialogButtonBox( this );
+-    m_cancelButton = buttonBox->addButton( QDialogButtonBox::Cancel );
+-    connect( buttonBox, SIGNAL(rejected()), SLOT(reject()) );
+-
+-    grid->addWidget( pixLabel, 0, 0, 2, 1 );
+-    grid->addWidget( m_infoLabel, 0, 1 );
+-    grid->addWidget( m_busyWidget, 1, 1 );
+-    grid->addWidget( buttonBox, 2, 0, 1, 2 );
+-
+-    m_mbJob = new K3b::MusicBrainzJob( this );
+-    connect( m_mbJob, SIGNAL(infoMessage(QString,int)),
+-             this, SLOT(slotMbJobInfoMessage(QString,int)) );
+-    connect( m_mbJob, SIGNAL(finished(bool)), this, SLOT(slotMbJobFinished(bool)) );
+-    connect( m_mbJob, SIGNAL(trackFinished(K3b::AudioTrack*,bool)),
+-             this, SLOT(slotTrackFinished(K3b::AudioTrack*,bool)) );
+-}
+-
+-
+-K3b::AudioTrackTRMLookupDialog::~AudioTrackTRMLookupDialog()
+-{
+-}
+-
+-
+-int K3b::AudioTrackTRMLookupDialog::lookup( const QList<K3b::AudioTrack*>& tracks )
+-{
+-    m_mbJob->setTracks( tracks );
+-    m_mbJob->start();
+-
+-    m_busyWidget->showBusy(true);
+-    setModal( true );
+-    show();
+-
+-    QEventLoop loop;
+-    m_loop = &loop;
+-    loop.exec();
+-    m_loop = 0;
+-
+-    return 0;
+-}
+-
+-
+-void K3b::AudioTrackTRMLookupDialog::slotMbJobInfoMessage( const QString& message, int )
+-{
+-    m_infoLabel->setText( message );
+-}
+-
+-
+-void K3b::AudioTrackTRMLookupDialog::slotMbJobFinished( bool )
+-{
+-    m_busyWidget->showBusy(false);
+-    hide();
+-    if( m_loop )
+-        m_loop->exit();
+-}
+-
+-
+-void K3b::AudioTrackTRMLookupDialog::reject()
+-{
+-    m_cancelButton->setEnabled( false );
+-    m_mbJob->cancel();
+-}
+-
+-
+-void K3b::AudioTrackTRMLookupDialog::slotTrackFinished( K3b::AudioTrack* track, bool success )
+-{
+-    if( !success )
+-        KNotification::event( "TrackDataNotFound",
+-                              i18n("Audio Project"),
+-                              i18n("Track %1 was not found in the MusicBrainz database.",
+-                                   track->trackNumber()) );
+-}
+-
+-#include "moc_k3baudiotracktrmlookupdialog.cpp"
+diff --git a/src/projects/k3baudiotracktrmlookupdialog.h b/src/projects/k3baudiotracktrmlookupdialog.h
+deleted file mode 100644
+index 2627e8572..000000000
+--- a/src/projects/k3baudiotracktrmlookupdialog.h
++++ /dev/null
+@@ -1,58 +0,0 @@
+-/*
+-    SPDX-FileCopyrightText: 1998-2008 Sebastian Trueg <trueg@k3b.org>
+-    SPDX-License-Identifier: GPL-2.0-or-later
+-*/
+-
+-#ifndef _K3B_AUDIOTRACK_TRM_LOOKUP_DIALOG_H_
+-#define _K3B_AUDIOTRACK_TRM_LOOKUP_DIALOG_H_
+-
+-#include <QList>
+-#include <QLabel>
+-#include <QDialog>
+-
+-class QLabel;
+-namespace K3b {
+-    class AudioTrack;
+-}
+-namespace K3b {
+-    class MusicBrainzJob;
+-}
+-namespace K3b {
+-    class BusyWidget;
+-}
+-class QEventLoop;
+-class QPushButton;
+-
+-
+-namespace K3b {
+-    class AudioTrackTRMLookupDialog : public QDialog
+-    {
+-        Q_OBJECT
+-
+-    public:
+-        explicit AudioTrackTRMLookupDialog( QWidget* parent = 0 );
+-        ~AudioTrackTRMLookupDialog() override;
+-
+-        /**
+-         * This will show the dialog and start the lookup
+-         */
+-        int lookup( const QList<AudioTrack*>& tracks );
+-
+-    public Q_SLOTS:
+-        void reject() override;
+-
+-    private Q_SLOTS:
+-        void slotMbJobFinished( bool );
+-        void slotMbJobInfoMessage( const QString&, int );
+-        void slotTrackFinished( K3b::AudioTrack* track, bool success );
+-
+-    private:
+-        QLabel* m_infoLabel;
+-        BusyWidget* m_busyWidget;
+-        QPushButton* m_cancelButton;
+-        MusicBrainzJob* m_mbJob;
+-        QEventLoop* m_loop;
+-    };
+-}
+-
+-#endif
+diff --git a/src/projects/k3baudioview.cpp b/src/projects/k3baudioview.cpp
+index 08ba8d8b1..82d8706d8 100644
+--- a/src/projects/k3baudioview.cpp
++++ b/src/projects/k3baudioview.cpp
+@@ -48,7 +48,6 @@ K3b::AudioView::AudioView( K3b::AudioDoc* doc, QWidget* parent )
+     fillStatusDisplay()->showTime();
+ 
+     toolBox()->addAction( actionCollection()->action( "project_audio_convert" ) );
+-    toolBox()->addAction( actionCollection()->action( "project_audio_musicbrainz" ) );
+     toolBox()->addSeparator();
+ 
+     toolBox()->addActions( createPluginsActions( m_doc->type() ) );
+@@ -75,9 +74,6 @@ K3b::AudioView::AudioView( K3b::AudioDoc* doc, QWidget* parent )
+             "<MenuBar>"
+             " <Menu name=\"project\"><text>&amp;Project</text>"
+             "  <Action name=\"project_audio_convert\"/>"
+-#ifdef ENABLE_MUSICBRAINZ
+-            "  <Action name=\"project_audio_musicbrainz\"/>"
+-#endif
+             " </Menu>"
+             "</MenuBar>"
+             "</gui>", true );
+diff --git a/src/projects/k3baudioviewimpl.cpp b/src/projects/k3baudioviewimpl.cpp
+index b44308a50..6354ba205 100644
+--- a/src/projects/k3baudioviewimpl.cpp
++++ b/src/projects/k3baudioviewimpl.cpp
+@@ -21,7 +21,6 @@
+ #include "k3baudiotrackaddingdialog.h"
+ #include "k3baudiotrackdialog.h"
+ #include "k3baudiotracksplitdialog.h"
+-#include "k3baudiotracktrmlookupdialog.h"
+ #include "k3baudiozerodata.h"
+ #include "k3bmsfedit.h"
+ #include "k3bview.h"
+@@ -86,12 +85,6 @@ K3b::AudioViewImpl::AudioViewImpl( View* view, AudioDoc* doc, KActionCollection*
+                                        actionCollection, "edit_source" );
+     m_actionPlayTrack = createAction( m_view, i18n("Play Track"), "media-playback-start", 0, this, SLOT(slotPlayTrack()),
+                                       actionCollection, "track_play" );
+-    m_actionQueryMusicBrainz = createAction( m_view, i18n("Musicbrainz Lookup"), "musicbrainz", 0, this, SLOT(slotQueryMusicBrainz()),
+-                                        actionCollection, "project_audio_musicbrainz");
+-    m_actionQueryMusicBrainz->setToolTip( i18n("Try to determine meta information over the Internet") );
+-    m_actionQueryMusicBrainzTrack = createAction( m_view, i18n("Musicbrainz Lookup"), "musicbrainz", 0, this, SLOT(slotQueryMusicBrainzTrack()),
+-                                        actionCollection, "project_audio_musicbrainz_track");
+-    m_actionQueryMusicBrainzTrack->setToolTip( i18n("Try to determine meta information over the Internet") );
+     m_actionProperties = createAction( m_view, i18n("Properties"), "document-properties", 0, this, SLOT(slotTrackProperties()),
+                                        actionCollection, "track_properties" );
+     m_actionRemove = createAction( m_trackView, i18n("Remove"), "edit-delete", Qt::Key_Delete, this, SLOT(slotRemove()),
+@@ -126,16 +119,7 @@ K3b::AudioViewImpl::AudioViewImpl( View* view, AudioDoc* doc, KActionCollection*
+     m_trackView->addAction( m_actionMergeTracks );
+     m_trackView->addAction( m_actionProperties );
+     m_trackView->addAction( separator );
+-    m_trackView->addAction( m_actionQueryMusicBrainzTrack );
+-    m_trackView->addAction( separator );
+     m_trackView->addAction( actionCollection->action("project_burn") );
+-
+-#ifndef ENABLE_MUSICBRAINZ
+-    m_actionQueryMusicBrainz->setEnabled( false );
+-    m_actionQueryMusicBrainz->setVisible( false );
+-    m_actionQueryMusicBrainzTrack->setEnabled( false );
+-    m_actionQueryMusicBrainzTrack->setVisible( false );
+-#endif
+ }
+ 
+ 
+@@ -342,55 +326,6 @@ void K3b::AudioViewImpl::slotPlayTrack()
+ }
+ 
+ 
+-void K3b::AudioViewImpl::slotQueryMusicBrainz()
+-{
+-#ifdef ENABLE_MUSICBRAINZ
+-    QList<AudioTrack*> tracks;
+-    for( int i = 1; i <= m_doc->numOfTracks(); ++i ) {
+-        tracks.push_back( m_doc->getTrack( i ) );
+-    }
+-
+-    if( tracks.isEmpty() ) {
+-        KMessageBox::error( m_view, i18n("Please add an audio track.") );
+-        return;
+-    }
+-
+-    // only one may use the tracks at the same time
+-//     if( m_currentlyPlayingTrack &&
+-//         tracks.containsRef( m_currentlyPlayingTrack ) )
+-//         m_player->stop();
+-
+-    // now do the lookup on the files.
+-    AudioTrackTRMLookupDialog dlg( m_view );
+-    dlg.lookup( tracks );
+-#endif
+-}
+-
+-
+-void K3b::AudioViewImpl::slotQueryMusicBrainzTrack()
+-{
+-#ifdef ENABLE_MUSICBRAINZ
+-    const QModelIndexList indexes = m_trackView->selectionModel()->selectedRows();
+-    QList<AudioTrack*> tracks;
+-    tracksForIndexes( tracks, indexes );
+-
+-    if( tracks.isEmpty() ) {
+-        KMessageBox::error( m_view, i18n("Please select an audio track.") );
+-        return;
+-    }
+-
+-    // only one may use the tracks at the same time
+-//     if( m_currentlyPlayingTrack &&
+-//         tracks.containsRef( m_currentlyPlayingTrack ) )
+-//         m_player->stop();
+-
+-    // now do the lookup on the files.
+-    AudioTrackTRMLookupDialog dlg( m_view );
+-    dlg.lookup( tracks );
+-#endif
+-}
+-
+-
+ void K3b::AudioViewImpl::slotSelectionChanged()
+ {
+     if( m_trackView->hasFocus() ) {
+diff --git a/src/projects/k3baudioviewimpl.h b/src/projects/k3baudioviewimpl.h
+index 8dd662254..bc079734c 100644
+--- a/src/projects/k3baudioviewimpl.h
++++ b/src/projects/k3baudioviewimpl.h
+@@ -53,8 +53,6 @@ namespace K3b {
+         void slotEditSource();
+         void slotTrackProperties();
+         void slotPlayTrack();
+-        void slotQueryMusicBrainz();
+-        void slotQueryMusicBrainzTrack();
+         void slotSelectionChanged();
+         void slotAudioConversion();
+         void slotAdjustColumns();
+@@ -83,8 +81,6 @@ namespace K3b {
+         QAction* m_actionSplitTrack;
+         QAction* m_actionEditSource;
+         QAction* m_actionPlayTrack;
+-        QAction* m_actionQueryMusicBrainz;
+-        QAction* m_actionQueryMusicBrainzTrack;
+         QAction* m_actionProperties;
+         QAction* m_actionRemove;
+         QAction* m_conversionAction;
+diff --git a/src/projects/k3bmusicbrainzjob.cpp b/src/projects/k3bmusicbrainzjob.cpp
+deleted file mode 100644
+index 2f92bc61b..000000000
+--- a/src/projects/k3bmusicbrainzjob.cpp
++++ /dev/null
+@@ -1,147 +0,0 @@
+-/*
+-    SPDX-FileCopyrightText: 1998-2008 Sebastian Trueg <trueg@k3b.org>
+-    SPDX-License-Identifier: GPL-2.0-or-later
+-*/
+-
+-#include "k3bmusicbrainzjob.h"
+-#include "k3bmusicbrainztrackloopupjob.h"
+-
+-#include "k3baudiotrack.h"
+-#include "k3baudiodatasource.h"
+-#include "k3bsimplejobhandler.h"
+-
+-#include <KLocalizedString>
+-#include <KMessageBox>
+-
+-#include <QInputDialog>
+-
+-
+-class K3b::MusicBrainzJob::Private
+-{
+-public:
+-    QList<K3b::AudioTrack*> tracks;
+-    int currentTrackIndex;
+-    bool canceled;
+-    K3b::MusicBrainzTrackLookupJob* mbTrackLookupJob;
+-};
+-
+-
+-// cannot use this as parent for the K3b::SimpleJobHandler since this has not been constructed yet
+-K3b::MusicBrainzJob::MusicBrainzJob( QWidget* parent )
+-    : K3b::Job( new K3b::SimpleJobHandler( 0 ), parent ),
+-      d( new Private() )
+-{
+-    d->canceled = false;
+-    d->mbTrackLookupJob = new K3b::MusicBrainzTrackLookupJob( this, this );
+-
+-    connect( d->mbTrackLookupJob, SIGNAL(percent(int)), this, SIGNAL(subPercent(int)), Qt::QueuedConnection );
+-    connect( d->mbTrackLookupJob, SIGNAL(percent(int)), this, SLOT(slotTrmPercent(int)), Qt::QueuedConnection );
+-    connect( d->mbTrackLookupJob, SIGNAL(finished(bool)), this, SLOT(slotMbJobFinished(bool)), Qt::QueuedConnection );
+-    connect( d->mbTrackLookupJob, SIGNAL(infoMessage(QString,int)), this, SIGNAL(infoMessage(QString,int)), Qt::QueuedConnection );
+-}
+-
+-
+-K3b::MusicBrainzJob::~MusicBrainzJob()
+-{
+-    delete jobHandler();
+-    delete d;
+-}
+-
+-
+-bool K3b::MusicBrainzJob::hasBeenCanceled() const
+-{
+-    return d->canceled;
+-}
+-
+-
+-void K3b::MusicBrainzJob::setTracks( const QList<K3b::AudioTrack*>& tracks )
+-{
+-    d->tracks = tracks;
+-}
+-
+-
+-void K3b::MusicBrainzJob::start()
+-{
+-    jobStarted();
+-
+-    d->canceled = false;
+-    d->currentTrackIndex = 0;
+-
+-    d->mbTrackLookupJob->setAudioTrack( d->tracks.first() );
+-    d->mbTrackLookupJob->start();
+-}
+-
+-
+-void K3b::MusicBrainzJob::cancel()
+-{
+-    d->canceled = true;
+-    d->mbTrackLookupJob->cancel();
+-}
+-
+-
+-void K3b::MusicBrainzJob::slotTrmPercent( int p )
+-{
+-    // the easy way (inaccurate)
+-    emit percent( (100*d->currentTrackIndex + p) / d->tracks.count() );
+-}
+-
+-
+-void K3b::MusicBrainzJob::slotMbJobFinished( bool success )
+-{
+-    if( hasBeenCanceled() ) {
+-        emit canceled();
+-        jobFinished(false);
+-    }
+-    else {
+-        K3b::AudioTrack* currentTrack = d->tracks.at( d->currentTrackIndex );
+-
+-        if( success ) {
+-            // found entries
+-            QStringList resultStrings, resultStringsUnique;
+-            for( int i = 0; i < d->mbTrackLookupJob->results(); ++i )
+-                resultStrings.append( d->mbTrackLookupJob->artist(i) + " - " + d->mbTrackLookupJob->title(i) );
+-
+-            // since we are only using the title and the artist a lot of entries are alike to us
+-            // so to not let the user have to choose between two equal entries we trim the list down
+-            for( QStringList::const_iterator it = resultStrings.constBegin();
+-                 it != resultStrings.constEnd(); ++it )
+-                if( !resultStringsUnique.contains( *it ) )
+-                    resultStringsUnique.append( *it );
+-
+-            QString s;
+-            bool ok = true;
+-            if( resultStringsUnique.count() > 1 )
+-                s = QInputDialog::getItem( dynamic_cast<QWidget*>(parent()),
+-                                           i18n("MusicBrainz Query"),
+-                                           i18n("Found multiple matches for track %1 (%2). Please select one.",
+-                                                currentTrack->trackNumber(),
+-                                                currentTrack->firstSource()->sourceComment()),
+-                                           resultStringsUnique,
+-                                           0,
+-                                           false,
+-                                           &ok );
+-            else
+-                s = resultStringsUnique.first();
+-
+-            if( ok ) {
+-                int i = resultStrings.lastIndexOf( s );
+-                currentTrack->setTitle( d->mbTrackLookupJob->title(i) );
+-                currentTrack->setArtist( d->mbTrackLookupJob->artist(i) );
+-            }
+-        }
+-
+-        emit trackFinished( currentTrack, success );
+-
+-        // query next track
+-        ++d->currentTrackIndex;
+-        if( d->currentTrackIndex < d->tracks.count() ) {
+-            d->mbTrackLookupJob->setAudioTrack( d->tracks.at( d->currentTrackIndex ) );
+-            d->mbTrackLookupJob->start();
+-        }
+-        else {
+-            jobFinished( true );
+-        }
+-    }
+-}
+-
+-#include "moc_k3bmusicbrainzjob.cpp"
+diff --git a/src/projects/k3bmusicbrainzjob.h b/src/projects/k3bmusicbrainzjob.h
+deleted file mode 100644
+index fbf44da0e..000000000
+--- a/src/projects/k3bmusicbrainzjob.h
++++ /dev/null
+@@ -1,63 +0,0 @@
+-/*
+-    SPDX-FileCopyrightText: 1998-2008 Sebastian Trueg <trueg@k3b.org>
+-    SPDX-License-Identifier: GPL-2.0-or-later
+-*/
+-
+-#ifndef _K3B_MUSICBRAINZ_JOB_H_
+-#define _K3B_MUSICBRAINZ_JOB_H_
+-
+-#include "k3bjob.h"
+-
+-
+-namespace K3b {
+-    class AudioTrack;
+-}
+-class QWidget;
+-
+-
+-/**
+- * This job tries to determine AudioTrack's title and artist using
+- * Musicbrainz.
+- */
+-namespace K3b {
+-    class MusicBrainzJob : public Job
+-    {
+-        Q_OBJECT
+-
+-    public:
+-        /**
+-         * \param parent since we do not use this job with a normal progressdialog we need a widget
+-         *        as parent
+-         */
+-        explicit MusicBrainzJob( QWidget* parent = 0 );
+-        ~MusicBrainzJob() override;
+-
+-        bool hasBeenCanceled() const override;
+-
+-    Q_SIGNALS:
+-        /**
+-         * Emitted for each track. This is signal can be used
+-         * to display further information.
+-         *
+-         * \param track The track for which metadata was searched.
+-         * \param success True if metadata was found
+-         */
+-        void trackFinished( K3b::AudioTrack* track, bool success );
+-
+-    public Q_SLOTS:
+-        void start() override;
+-        void cancel() override;
+-
+-        void setTracks( const QList<K3b::AudioTrack*>& tracks );
+-
+-    private Q_SLOTS:
+-        void slotTrmPercent( int p );
+-        void slotMbJobFinished( bool success );
+-
+-    private:
+-        class Private;
+-        Private* const d;
+-    };
+-}
+-
+-#endif
+diff --git a/src/projects/k3bmusicbrainztrackloopupjob.cpp b/src/projects/k3bmusicbrainztrackloopupjob.cpp
+deleted file mode 100644
+index 8b4889635..000000000
+--- a/src/projects/k3bmusicbrainztrackloopupjob.cpp
++++ /dev/null
+@@ -1,117 +0,0 @@
+-/*
+-    SPDX-FileCopyrightText: 2010 Michal Malek <michalm@jabster.pl>
+-    SPDX-FileCopyrightText: 1998-2008 Sebastian Trueg <trueg@k3b.org>
+-    SPDX-License-Identifier: GPL-2.0-or-later
+-*/
+-
+-#include "k3bmusicbrainztrackloopupjob.h"
+-#include "k3btrm.h"
+-#include "k3bmusicbrainz.h"
+-#include "k3baudiotrack.h"
+-#include "k3baudiotrackreader.h"
+-
+-#include <KLocalizedString>
+-
+-
+-class K3b::MusicBrainzTrackLookupJob::Private
+-{
+-public:
+-    K3b::AudioTrack* track;
+-    K3b::TRM trm;
+-    K3b::MusicBrainz mb;
+-    int results;
+-};
+-
+-
+-K3b::MusicBrainzTrackLookupJob::MusicBrainzTrackLookupJob( K3b::JobHandler* hdl, QObject* parent )
+-    : K3b::ThreadJob( hdl, parent ),
+-      d( new Private() )
+-{
+-    d->track = 0;
+-}
+-
+-
+-K3b::MusicBrainzTrackLookupJob::~MusicBrainzTrackLookupJob()
+-{
+-    delete d;
+-}
+-
+-
+-void K3b::MusicBrainzTrackLookupJob::setAudioTrack( K3b::AudioTrack* track )
+-{
+-    d->track = track;
+-}
+-
+-
+-int K3b::MusicBrainzTrackLookupJob::results()
+-{
+-    return d->results;
+-}
+-
+-
+-QString K3b::MusicBrainzTrackLookupJob::title( int i ) const
+-{
+-    return d->mb.title( i );
+-}
+-
+-
+-QString K3b::MusicBrainzTrackLookupJob::artist( int i ) const
+-{
+-    return d->mb.artist( i );
+-}
+-
+-
+-bool K3b::MusicBrainzTrackLookupJob::run()
+-{
+-    if ( !d->track ) {
+-        emit infoMessage( "Internal error: no track set. This is a bug!", MessageError );
+-        return false;
+-    }
+-
+-    emit infoMessage( i18n("Generating fingerprint for track %1.",
+-                           d->track->trackNumber()), MessageInfo );
+-
+-    AudioTrackReader trackReader( *d->track );
+-    d->trm.start( d->track->length() );
+-
+-    char buffer[2352*10];
+-    qint64 len = 0;
+-    qint64 dataRead = 0;
+-    while( !canceled() &&
+-           (len = trackReader.read( buffer, sizeof(buffer) )) > 0 ) {
+-
+-        dataRead += len;
+-
+-        // swap data
+-        char buf;
+-        for( qint64 i = 0; i < len-1; i+=2 ) {
+-            buf = buffer[i];
+-            buffer[i] = buffer[i+1];
+-            buffer[i+1] = buf;
+-        }
+-
+-        if( d->trm.generate( buffer, len ) ) {
+-            len = 0;
+-            break;
+-        }
+-
+-        // FIXME: useless since libmusicbrainz does never need all the data
+-        emit percent( 100LL*dataRead/trackReader.size() );
+-    }
+-
+-    if( canceled() ) {
+-        return false;
+-    }
+-    else if( len != 0 ||
+-             !d->trm.finalize() ) {
+-        return false;
+-    }
+-
+-    emit infoMessage( i18n("Querying MusicBrainz for track %1.",
+-                           d->track->trackNumber()), MessageInfo );
+-
+-    d->results = d->mb.query( d->trm.signature() );
+-    return( d->results > 0 );
+-}
+-
+-#include "moc_k3bmusicbrainztrackloopupjob.cpp"
+diff --git a/src/projects/k3bmusicbrainztrackloopupjob.h b/src/projects/k3bmusicbrainztrackloopupjob.h
+deleted file mode 100644
+index 69de39aec..000000000
+--- a/src/projects/k3bmusicbrainztrackloopupjob.h
++++ /dev/null
+@@ -1,38 +0,0 @@
+-/*
+-    SPDX-FileCopyrightText: 1998-2008 Sebastian Trueg <trueg@k3b.org>
+-    SPDX-License-Identifier: GPL-2.0-or-later
+-*/
+-
+-#ifndef _K3B_MUSICBRAINZ_TRACK_LOOPUP_JOB_H_
+-#define _K3B_MUSICBRAINZ_TRACK_LOOPUP_JOB_H_
+-
+-#include "k3bthreadjob.h"
+-
+-namespace K3b {
+-    class AudioTrack;
+-}
+-
+-namespace K3b {
+-class MusicBrainzTrackLookupJob : public ThreadJob
+-{
+-    Q_OBJECT
+-
+-public:
+-    MusicBrainzTrackLookupJob( JobHandler* hdl, QObject* parent );
+-    ~MusicBrainzTrackLookupJob() override;
+-
+-    void setAudioTrack( AudioTrack* track );
+-
+-    int results();
+-    QString title( int i ) const;
+-    QString artist( int i ) const;
+-
+-private:
+-    bool run() override;
+-
+-    class Private;
+-    Private* const d;
+-};
+-}
+-
+-#endif
+-- 
+GitLab
+
