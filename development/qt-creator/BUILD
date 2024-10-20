@@ -5,6 +5,7 @@ export LANG='en_US.UTF-8'
 
 OPTS+=" -DCMAKE_INSTALL_PREFIX=/usr  \
         -DCMAKE_BUILD_TYPE=RELEASE   \
+        -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
         -DCMAKE_INSTALL_LIBEXECDIR=lib \
         -DWITH_DOCS=ON \
         -Wno-dev \
