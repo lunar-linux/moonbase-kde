@@ -5,6 +5,10 @@
 #Qt depends on a UTF-8 locale, and has switched to "en_US.UTF-8" instead.
 export LANG='en_US.UTF-8'
 
+# This applies here as well; https://github.com/neovim/neovim/issues/2557
+CFLAGS="-U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2"
+CXXFLAGS="-U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2"
+
 OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=$MODULE_PREFIX \
         -DINSTALL_LIBEXECDIR=qt6 \

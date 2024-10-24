@@ -3,6 +3,10 @@ sedit 's:/bin/ls:/usr/bin/ls:g' src/corelib/CMakeLists.txt util/cmake/tests/data
 # CVE-2024-33861
 sedit 's:action, &state, nullptr, nullptr:action, state, nullptr, nullptr:g' src/corelib/text/qstringconverter.cpp &&
 
+# This applies here as well; https://github.com/neovim/neovim/issues/2557
+CFLAGS="-U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2"
+CXXFLAGS="-U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2"
+
 # The officially supported CMake generator for building Qt is Ninja/Ninja Multi-Config.
 OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DFEATURE_optimize_full=ON  \
