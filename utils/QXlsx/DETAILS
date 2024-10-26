@@ -1,0 +1,14 @@
+          MODULE=QXlsx
+         VERSION=1.4.8
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/QtExcel/QXlsx/archive/refs/tags/v$VERSION.tar.gz
+      SOURCE_VFY=sha256:5b2a5aad08f07e6b099d934c4c4f75bcd83a0421538aec1e8582d8c8596b0956
+SOURCE_DIRETROY=$BUILD_DIRECTORY/QXlsx-$VERSION
+        WEB_SITE=https://github.com/QtExcel/QXlsx
+         ENTERED=20241026
+         UPDATED=20241026
+           SHORT="Excel file reader/writer library using Qt"
+
+cat << EOF
+Excel file reader/writer library using Qt.
+EOF
