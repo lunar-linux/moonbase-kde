@@ -1,16 +1,16 @@
           MODULE=libquotient
-         VERSION=0.8.2
+         VERSION=0.9.0
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/quotient-im/libQuotient/archive/refs/tags/$VERSION.tar.gz
-      SOURCE_VFY=sha256:12ff2fa8b80a934b9dd88fa3416a4b88e94bc0e18a8df0dcebfc90614dd2f5c9
+      SOURCE_VFY=sha256:5e607eb978a5daa82e2186cd92f0d964cb820c72cfad95ed2adda4525ed923b5
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/libQuotient-$VERSION
         WEB_SITE=https://github.com/quotient-im/libQuotient
          ENTERED=20210720
-         UPDATED=20240510
+         UPDATED=20241026
            SHORT="a library that enables client applications"
 
 cat << EOF
-The Quotient project aims to produce a Qt5-based SDK to develop applications for Matrix. libQuotient is a library
+The Quotient project aims to produce a Qt SDK to develop applications for Matrix. libQuotient is a library
 that enables client applications. It is the backbone of Quaternion, Spectral and other projects. Versions 0.5.x
 and older use the previous name - libQMatrixClient.
 EOF
