@@ -1,17 +1,17 @@
 source /etc/profile.d/qt6.rc &&
 export LANG='en_US.UTF-8'
 
-# Temporarily use bundled inid. Stellarium needs to catch up with the indi folks.
 OPTS+=" -DCMAKE_CXX_STANDARD=17 \
-        -DCMAKE_C_STANDARD=11   \
+        -DCMAKE_C_STANDARD=17   \
         -DCMAKE_C_COMPILER=gcc \
         -DCMAKE_CXX_COMPILER=g++ \
         -DCMAKE_C_EXTENSIONS=ON \
         -DENABLE_QT6=ON \
-        -DPREFER_SYSTEM_INDILIB=OFF \
+        -DPREFER_SYSTEM_INDILIB=NO \
         -DCMAKE_CXX_EXTENSIONS=ON \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr \
+        -DBUILD_SHARED_LIBS=ON \
         -Wno-dev"
 
 cmake -S . -B $MODULE-build -G Ninja $OPTS &&

@@ -1,5 +1,6 @@
 depends xdg-utils
 depends desktop-file-utils
+depends nlopt
 depends cmake
 depends glu
 depends openssl
@@ -11,5 +12,6 @@ depends qt6-positioning
 depends qt6-serialport
 depends qt6-webengine 
 depends qt6-tools
+depends QXlsx
 
-optional_depends calcmysky "-DENABLE_SHOWMYSKY=ON" "-DENABLE_SHOWMYSKY=OFF" "to simulate scattering of light"
+optional_depends calcmysky "-DENABLE_SHOWMYSKY=ON"      "-DENABLE_SHOWMYSKY=OFF" "to simulate scattering of light"
