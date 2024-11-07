@@ -1,12 +1,12 @@
           MODULE=libkleo
-         VERSION=24.08.2
+         VERSION=24.08.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:43bdad8ecea71a944aecb101e7000db8fb6a0c508afd8e856b045887230bf60e
+      SOURCE_VFY=sha256:be70b2790bb7f8c46e1e28a5d28002fb967f102f416afbee738812dbc4fd7fea
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://community.kde.org/KDE_PIM
          ENTERED=20160505
-         UPDATED=20241010
+         UPDATED=20241107
            SHORT="Library providing gantt support"
 
 cat << EOF
