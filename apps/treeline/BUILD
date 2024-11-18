@@ -1,3 +1,3 @@
- cd TreeLine &&
- prepare_install &&
- python install.py -p /usr
+prepare_install &&
+
+python3 install.py -p /usr
