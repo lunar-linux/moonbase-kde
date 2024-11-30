@@ -1,5 +1,4 @@
 # This needs to happen here since CFLAGS/CXXFLAGS/LDFLAGS is only loaded during BUILD
-
 if in_depends $MODULE libressl; then
   patch_it $SCRIPT_DIRECTORY/libressl-compat.patch 1 &&
   CFLAGS+=" -DOPENSSL_NO_PSK -DOPENSSL_NO_NEXTPROTONEG" &&
