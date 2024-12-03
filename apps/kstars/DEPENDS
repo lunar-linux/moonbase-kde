@@ -1,11 +1,17 @@
+depends xplanet
 depends eigen3
+depends libnova
 depends stellarsolver
-depends kinit
-depends kplotting
-depends ktexteditor
+depends qtkeychain
+depends qt6-svg
+depends qt6-websockets
+depends qt6-datavis3d
+depends attica
+depends kbookmarks
+depends solid
+depends kwidgetsaddons
+depends kio
 
 optional_depends libindi    "" "" "For instrument support"
 optional_depends wcslib     "" "" "For World Coordinate System support,${PROBLEM_COLOR}say yes to cfitsio when asked by wcslib${QUERY_COLOR}"
-optional_depends xplanet    "" "" "Renders an image of all the major planets and most satellites"
 optional_depends astrometry "" "" "for astrometric calibration meta-data support"
-optional_depends qtkeychain "" "" "for key chain support"
