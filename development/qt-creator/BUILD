@@ -5,11 +5,17 @@ export LANG='en_US.UTF-8'
 
 OPTS+=" -DCMAKE_INSTALL_PREFIX=/usr  \
         -DCMAKE_BUILD_TYPE=RELEASE   \
-        -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
         -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DQTC_CLANG_BUILDMODE_MATCH=ON \
+        -DHELPVIEWER_DEFAULT_BACKEND=qtwebengine \
+        -DCLANGTOOLING_LINK_CLANG_DYLIB=ON \
+        -DBUILD_DEVELOPER_DOCS=ON \
         -DWITH_DOCS=ON \
-        -Wno-dev \
-        -DBUILD_DEVELOPER_DOCS=ON"
+        -Wno-dev"
+
+if module_installed ccache; then
+  OPTS+="-DWITH_CCACHE_SUPPORT=ON"
+fi &&
 
 cmake -B $MODULE -G Ninja $OPTS &&
 cmake --build $MODULE &&
