@@ -1,13 +1,13 @@
           MODULE=qt6-webengine
-         VERSION=6.8.0
+         VERSION=6.8.1
           SOURCE=qtwebengine-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:2484459248a8624c16b70780bef3fe4bc7f4eace2178f84233d4e711cb7f7452
+      SOURCE_VFY=sha256:1ba8e03ac8edcf50ce830e49b63db983de22e96757452975c1d3e6d120ae91bc
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtwebengine-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20211101
-         UPDATED=20241008
+         UPDATED=20241202
            SHORT="support for web applications using the Chromium browser project"
 PSAFE=no
 cat << EOF

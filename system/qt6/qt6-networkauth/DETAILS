@@ -1,13 +1,13 @@
           MODULE=qt6-networkauth
-         VERSION=6.8.0
+         VERSION=6.8.1
           SOURCE=qtnetworkauth-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:b95d566544c6b35d895be39473fef51985b04df2f16008de54660966ae80cc48
+      SOURCE_VFY=sha256:118664ba929c5fbbdf822438bd69bd43674cfee82e504e143da600fe47c74024
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtnetworkauth-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20211102
-         UPDATED=20241008
+         UPDATED=20241202
            SHORT="Network authentication module"
 cat << EOF
 Network authentication module.

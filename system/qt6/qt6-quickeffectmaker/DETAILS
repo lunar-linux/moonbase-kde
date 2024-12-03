@@ -1,13 +1,13 @@
           MODULE=qt6-quickeffectmaker
-         VERSION=6.8.0
+         VERSION=6.8.1
           SOURCE=qtquickeffectmaker-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:8aa1d7f3d0b27dd0845284e444dc4a5830a093648749ff3439fba2e6b48c74f4
+      SOURCE_VFY=sha256:2d4fdf13356abd90b272cc1836bccb6d6ec8849b72173ea3daef0a5c42fb51f6
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtquickeffectmaker-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20231009
-         UPDATED=20241008
+         UPDATED=20241202
            SHORT="Qt Quick Effect Maker (QQEM) for creating and editing custom shader effects"
 cat << EOF
 Qt Quick Effect Maker (QQEM) for creating and editing custom shader effects.
