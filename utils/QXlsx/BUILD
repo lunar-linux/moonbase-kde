@@ -1,6 +1,6 @@
-source /etc/profile.d/qt6.rc &&
+sedit '143,144d' QXlsx/CMakeLists.txt &&
 
-cd $MODULE &&
+source /etc/profile.d/qt6.rc &&
 
 OPTS+=" -DCMAKE_INSTALL_PREFIX=$MODULE_PREFIX \
         -DCMAKE_BUILD_TYPE=Release \
@@ -9,7 +9,7 @@ OPTS+=" -DCMAKE_INSTALL_PREFIX=$MODULE_PREFIX \
         -Wno-dev "
 
 
-cmake -B build -S . $OPTS &&
+cmake -B build -S $MODULE $OPTS &&
 cmake --build build &&
 
 prepare_install &&
