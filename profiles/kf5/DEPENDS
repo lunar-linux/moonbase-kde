@@ -1,5 +1,7 @@
 # The only DEPENDS that belong in here are those framework modules from pub/software/kde/stable/frameworks/
 depends extra-cmake-modules
+depends kcoreaddons
+depends kwindowsystem
 depends kirigami
 depends sonnet
 depends kitemviews
@@ -14,11 +16,9 @@ depends kwidgetsaddons
 depends kconfig
 depends ki18n
 depends karchive
-depends kcoreaddons
 depends kcompletion
 depends kservice
 depends knotifications
-depends kwindowsystem
 depends kauth
 depends kstatusnotifieritem
 depends kcrash
@@ -53,7 +53,6 @@ depends kparts
 depends bluez-qt
 depends ktextwidgets
 depends kbookmarks
-depends kwallet
 depends kdav
 depends kdeclarative
 depends kcmutils
@@ -70,6 +69,7 @@ depends frameworkintegration
 depends krunner 
 depends qqc2-desktop-style 
 depends kholidays
+depends kwallet
 
 optional_depends networkmanager-qt "" "" "for NetworkManager support"
 optional_depends kuserfeedback     "" "" "for user reporting of issues to KDE"
