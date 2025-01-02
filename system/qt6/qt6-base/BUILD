@@ -1,3 +1,6 @@
+# This is required
+export LANG='en_US.UTF-8'
+
 sedit 's:/bin/ls:/usr/bin/ls:g' src/corelib/CMakeLists.txt util/cmake/tests/data/quoted.pro &&
 
 # CVE-2024-33861
