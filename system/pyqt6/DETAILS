@@ -1,7 +1,8 @@
           MODULE=pyqt6
          VERSION=6.8.1.dev2412131231.tar.gz
           SOURCE=$MODULE-$VERSION.tar.gz
- SOURCE_URL_FULL=https://riverbankcomputing.com/pypi/packages/PyQt6/pyqt6-6.8.1.dev2412131231.tar.gz
+SOURCE_URL_FULL[0]=https://riverbankcomputing.com/pypi/packages/PyQt6/pyqt6-6.8.1.dev2412131231.tar.gz
+     SOURCE_URL[1]=$MIRRORS_URL
       SOURCE_VFY=sha256:02cbdbf8161586f9bafee49a2f698fef29d2947507a542fec8e144cf8a325d01
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/pyqt6-6.8.1.dev2412131231
         WEB_SITE=https://riverbankcomputing.com/software/pyqt/intro
