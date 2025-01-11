@@ -1,9 +1,9 @@
           MODULE=libQGLViewer
          VERSION=2.9.1
           SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=http://www.libqglviewer.com/src/
-      SOURCE_VFY=sha256:278f832a0b2d3efbe0d6952119dfbc6058790b7a0f1876909837cb673ce43ff3
-        WEB_SITE=http://www.libqglviewer.com/index.html
+ SOURCE_URL_FULL=https://github.com/GillesDebunne/libQGLViewer/archive/refs/tags/v$VERSION.tar.gz
+      SOURCE_VFY=sha256:ea4f9ac627c136a6851ffd3763b154f21c87a58bcec4e5d5b2d07e65a403096b
+        WEB_SITE=https://github.com/GillesDebunne/libQGLViewer
          ENTERED=20110104
          UPDATED=20230325
            SHORT="C++ library based on Qt that eases the creation of OpenGL 3D viewers"
