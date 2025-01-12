@@ -2,17 +2,15 @@ depends gdk-pixbuf
 depends libofa
 depends taglib-extras
 depends qca
-depends kirigami2
+depends kirigami
 depends kparts
-depends libifp
 depends loudmouth
 depends liblastfm
 depends libmygpo-qt
+depends %MYSQL
 
 #They prefer this over openssl for as they say licensing reasons.
 depends libgcrypt
-
-optional_depends %MYSQL  "-DWITH_MYSQL_EMBEDDED=ON" "-DWITH_MYSQL_EMBEDDED=OFF" "to use mysql or without its daemon running"
 
 optional_depends ffmpeg  "" "" "for ffmpeg audio/video support"
 optional_depends libmtp  "" "" "Enable Support for portable media devices that use the media transfer protocol"
