@@ -12,17 +12,11 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DQT_BUILD_EXAMPLES_BY_DEFAULT=OFF \
         -DQT_FEATURE_webengine_system_libevent=ON \
         -DQT_FEATURE_webengine_system_ffmpeg=ON \
-        -DQT_FEATURE_webengine_system_re2=OFF \
         -DQT_FEATURE_webengine_system_icu=ON \
-        -DQT_FEATURE_webengine_spellchecker=ON \
+        -DQT_FEATURE_webengine_kerberos=ON \
         -DQT_FEATURE_webengine_webrtc_pipewire=ON    \
-        -DQT_FEATURE_webengine_webchannel=ON \ 
         -DQT_FEATURE_webengine_proprietary_codecs=ON \
-        -DQT_FEATURE_webengine_ozone_x11=ON   \
-        -DQT_INSTALL_EXAMPLES_SOURCES_BY_DEFAULT=OFF \
-        -DFEATURE_webengine_jumbo_build=OFF \
         -DCMAKE_TOOLCHAIN_FILE=/usr/lib/qt6/cmake/Qt6/qt.toolchain.cmake \
-        -DINSTALL_GN=OFF \
         -Wno-dev"
 
 cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
