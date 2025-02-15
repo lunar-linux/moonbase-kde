@@ -1,11 +1,11 @@
           MODULE=kjournald
-         VERSION=24.12.1
+         VERSION=24.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:d94874c47608fe9d42d90a7e3a4480306d7f98e3e745ea718652d13e3d183ebc
+      SOURCE_VFY=sha256:9d2dc29f2aec3ffccd20f33484932d6437d689efc109fdc56cefde88b69dc4d1
         WEB_SITE=https://invent.kde.org/system/kjournald
          ENTERED=20221119
-         UPDATED=20250109
+         UPDATED=20250214
            SHORT="Framework for interacting with systemd-journald"
 
 cat << EOF

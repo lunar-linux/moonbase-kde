@@ -1,13 +1,13 @@
           MODULE=kio-zeroconf
-         VERSION=24.12.1
+         VERSION=24.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:b42b01c18e6adc327df4c3e87891dcad2653e96e4d4ba8f9e971794b7e0cf6d9
+      SOURCE_VFY=sha256:d0ff7766c5bae08067c92bd3c853e8f37ab049d82d87af433d56efb90542bc0c
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
         REPLACES=zeroconf-ioslave
          ENTERED=20220820
-         UPDATED=20250109
+         UPDATED=20250214
            SHORT="io slave for zeroconf"
 
 cat << EOF
