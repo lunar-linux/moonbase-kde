@@ -1,11 +1,11 @@
           MODULE=layer-shell-qt
-         VERSION=6.3.0
+         VERSION=6.3.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
-      SOURCE_VFY=sha256:a0988a12a23664cfe357b0070d3d8caecea3b08882ee52086a5a4e34b885d443
+      SOURCE_VFY=sha256:8e19ea265cbba4b010e2d4997140e0c9a0bbb5a11b50accc8bd4338e7af7e97f
         WEB_SITE=http://www.kde.org
          ENTERED=20210614
-         UPDATED=20250214
+         UPDATED=20250218
            SHORT="Qt component to allow applications to make use of the Wayland wl-layer-shell protocol"
 
 cat << EOF

@@ -1,11 +1,11 @@
           MODULE=plasma-desktop
-         VERSION=6.3.0
+         VERSION=6.3.1.1
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/plasma/$VERSION
-      SOURCE_VFY=sha256:bbdbfa874b6c04e3bb33683ea0d09e32616de827df96a1b664a20b2f59d69d0e
+      SOURCE_URL=$KDE_URL/stable/plasma/${VERSION%.*}
+      SOURCE_VFY=sha256:ce028747d31e176bde9bf46803b2da54acbc05ebbcff9d9c585cc02e9b26acfd
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/plasma-desktop
          ENTERED=20151124
-         UPDATED=20250214
+         UPDATED=20250218
            SHORT="KDE Plasma Desktop"
 
 cat << EOF
