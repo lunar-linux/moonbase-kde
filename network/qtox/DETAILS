@@ -1,12 +1,12 @@
           MODULE=qtox
-         VERSION=1.17.6
+         VERSION=1.18.3
           SOURCE=$MODULE-$VERSION.tar.gz
- SOURCE_URL_FULL=http://github.com/tux3/qTox/archive/v$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/TokTok/qTox/archive/refs/tags/v${VERSION}.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qTox-$VERSION
-      SOURCE_VFY=sha256:cd0781241b4ea536da90ce8c72ad9f2aa9bbdf9fbae5d38ee645e30d790fa7f2
+      SOURCE_VFY=sha256:56650ce2836a901f5133353a30f75ac461695642211bea8f71f70e99abe8f48f
         WEB_SITE=http://github.com/tux3/qTox/
          ENTERED=20160525
-         UPDATED=20220424
+         UPDATED=20250304
            SHORT="Powerful Qt 5.x based Tox client"
 
 cat << EOF
