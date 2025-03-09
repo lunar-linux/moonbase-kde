@@ -1,14 +1,14 @@
           MODULE=qca
-         VERSION=2.3.9
+         VERSION=2.3.10
           SOURCE=qca-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/qca/$VERSION
-      SOURCE_VFY=sha256:c555d5298cdd7b6bafe2b1f96106f30cfa543a23d459d50c8a91eac33c476e4e
+      SOURCE_VFY=sha256:1c5b722da93d559365719226bb121c726ec3c0dc4c67dea34f1e50e4e0d14a02
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qca-$VERSION
    MODULE_PREFIX=${KDE_PREFIX:-/usr}
         WEB_SITE=https://userbase.kde.org/QCA
         REPLACES=qca2
          ENTERED=20071106
-         UPDATED=20240624
+         UPDATED=20250309
            SHORT="cross-platform crypto API"
 
 cat << EOF
