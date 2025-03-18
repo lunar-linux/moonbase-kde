@@ -3,7 +3,6 @@ export LANG='en_US.UTF-8'
 
 OPTS+=" -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_BUILD_TYPE=Release  \
-        -DQuotient_ENABLE_E2EE=ON \
         -DBUILD_SHARED_LIBS=ON \
         -Wno-dev"
 
