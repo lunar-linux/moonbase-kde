@@ -1,7 +1,7 @@
 source /etc/profile.d/qt6.rc  &&
 
-sedit '8i #define GLM_ENABLE_EXPERIMENTAL' ShowMySky/GLWidget.cpp &&
-sedit '6i #define GLM_ENABLE_EXPERIMENTAL' common/EclipsedDoubleScatteringPrecomputer.cpp &&
+#sedit '8i #define GLM_ENABLE_EXPERIMENTAL' ShowMySky/GLWidget.cpp &&
+#sedit '6i #define GLM_ENABLE_EXPERIMENTAL' common/EclipsedDoubleScatteringPrecomputer.cpp &&
 
 OPTS+=" -DCMAKE_CXX_FLAGS=-fPIC  \
         -DCMAKE_CXX_STANDARD=17 \
