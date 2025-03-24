@@ -1,4 +1,4 @@
-. /etc/profile.d/qt5.rc &&
+source /etc/profile.d/qt5.rc &&
 
 OPTS+=" -DQSCINTILLA_INCLUDE_DIR=/usr/include/qt5/ \
         -DQSCINTILLA_LIBRARY=/usr/lib/qt5/libqscintilla2_qt5.so \
