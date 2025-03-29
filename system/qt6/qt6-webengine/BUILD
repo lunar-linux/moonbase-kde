@@ -2,10 +2,6 @@ source /etc/profile.d/qt6.rc &&
 
 export LANG='en_US.UTF-8'
 
-# This applies here as well; https://github.com/neovim/neovim/issues/2557
-CFLAGS="-U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2"
-CXXFLAGS="-U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2"
-
 OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=$MODULE_PREFIX \
         -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
@@ -16,14 +12,16 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DQT_FEATURE_webengine_kerberos=ON \
         -DQT_FEATURE_webengine_webrtc_pipewire=ON    \
         -DQT_FEATURE_webengine_proprietary_codecs=ON \
+        -DQT_INSTALL_EXAMPLES_SOURCES_BY_DEFAULT=OFF
+        -DFEATURE_webengine_native_spell=ON \
+        -DQT_UNITY_BUILD_BATCH_SIZE=64 \
         -DCMAKE_TOOLCHAIN_FILE=/usr/lib/qt6/cmake/Qt6/qt.toolchain.cmake \
         -Wno-dev"
 
 cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
-
 cmake --build $MODULE-$VERSION &&
-prepare_install &&
 
+prepare_install &&
 # Remove point to the src build direcotry
 find $MODULE-$VERSION/qt6 -type f -name '*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
 
