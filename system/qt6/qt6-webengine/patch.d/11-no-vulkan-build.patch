@@ -1,0 +1,24 @@
+Patch status: fixed in >=chromium-130.0.6670.0
+
+Backport to fix build with USE=-vulkan.
+
+https://bugs.gentoo.org/945766
+https://crrev.com/ce099d7888f53b1210ff7d1fa037cddf39445708
+--- a/src/3rdparty/chromium/media/gpu/chromeos/BUILD.gn
++++ b/src/3rdparty/chromium/media/gpu/chromeos/BUILD.gn
+@@ -108,5 +108,4 @@
+     "//build/config/linux/libdrm",
+     "//gpu/ipc/common:common",
+-    "//gpu/vulkan/init:init",
+     "//media",
+     "//media/gpu:buffer_validation",
+@@ -130,5 +129,8 @@
+       "vulkan_image_processor.h",
+     ]
+-    deps += [ "//gpu/command_buffer/service:gles2" ]
++    deps += [
++      "//gpu/command_buffer/service:gles2",
++      "//gpu/vulkan/init:init",
++    ]
+   }
+ 

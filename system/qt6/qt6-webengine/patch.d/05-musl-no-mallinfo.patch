@@ -1,0 +1,48 @@
+Patch status: limbo, and probably needs adjustments to upstream
+
+No mallinfo or mallinfo2 with musl.
+Patch partly taken from Void.
+
+https://crbug.com/1380656 (musl tracking bug)
+--- a/src/3rdparty/chromium/base/process/process_metrics_posix.cc
++++ b/src/3rdparty/chromium/base/process/process_metrics_posix.cc
+@@ -107,5 +107,6 @@
+ #endif  // !BUILDFLAG(IS_FUCHSIA)
+ 
+-#if BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
++#if (BUILDFLAG(IS_LINUX) && defined(__GLIBC__)) || \
++	BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
+ namespace {
+ 
+@@ -133,7 +134,8 @@
+   malloc_zone_statistics(nullptr, &stats);
+   return stats.size_in_use;
+-#elif BUILDFLAG(IS_LINUX) || BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
++#elif (BUILDFLAG(IS_LINUX) && defined(__GLIBC__)) || \
++	BUILDFLAG(IS_CHROMEOS) || BUILDFLAG(IS_ANDROID)
+   return GetMallocUsageMallinfo();
+-#elif BUILDFLAG(IS_FUCHSIA)
++#elif BUILDFLAG(IS_FUCHSIA) || (BUILDFLAG(IS_LINUX) && !defined(__GLIBC__))
+   // TODO(fuchsia): Not currently exposed. https://crbug.com/735087.
+   return 0;
+--- a/src/3rdparty/chromium/base/trace_event/malloc_dump_provider.cc
++++ b/src/3rdparty/chromium/base/trace_event/malloc_dump_provider.cc
+@@ -194,5 +194,4 @@
+   struct mallinfo2 info = mallinfo2();
+ #endif
+-#endif  // defined(__GLIBC__) && defined(__GLIBC_PREREQ)
+ #if !defined(MALLINFO2_FOUND_IN_LIBC)
+   struct mallinfo info = mallinfo();
+@@ -216,4 +215,5 @@
+                               total_allocated_size);
+   }
++#endif  // defined(__GLIBC__) && defined(__GLIBC_PREREQ)
+ }
+ #endif
+@@ -354,5 +354,5 @@
+ #elif BUILDFLAG(IS_FUCHSIA)
+ // TODO(fuchsia): Port, see https://crbug.com/706592.
+-#else
++#elif defined(__GLIBC__)
+   ReportMallinfoStats(/*pmd=*/nullptr, &total_virtual_size, &resident_size,
+                       &allocated_objects_size, &allocated_objects_count);

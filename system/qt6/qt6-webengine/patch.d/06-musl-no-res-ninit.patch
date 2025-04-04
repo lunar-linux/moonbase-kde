@@ -1,0 +1,23 @@
+Patch status: limbo, and probably should use __RES to upstream
+
+No res_ninit on musl, was mostly fixed in [1] but issues remain.
+
+https://crbug.com/1380656 (musl tracking bug)
+
+[1] https://crrev.com/76d7c81d7c6ac7d57ced3aa8c54c297c91b7f993
+--- a/src/3rdparty/chromium/net/dns/public/scoped_res_state.cc
++++ b/src/3rdparty/chromium/net/dns/public/scoped_res_state.cc
+@@ -14,5 +14,5 @@
+ 
+ ScopedResState::ScopedResState() {
+-#if BUILDFLAG(IS_OPENBSD) || BUILDFLAG(IS_FUCHSIA)
++#if BUILDFLAG(IS_OPENBSD) || BUILDFLAG(IS_FUCHSIA) || (BUILDFLAG(IS_LINUX) && !defined(__GLIBC__))
+   // Note: res_ninit in glibc always returns 0 and sets RES_INIT.
+   // res_init behaves the same way.
+@@ -26,5 +26,5 @@
+ 
+ ScopedResState::~ScopedResState() {
+-#if !BUILDFLAG(IS_OPENBSD) && !BUILDFLAG(IS_FUCHSIA)
++#if !BUILDFLAG(IS_OPENBSD) && !BUILDFLAG(IS_FUCHSIA) && !(BUILDFLAG(IS_LINUX) && !defined(__GLIBC__))
+ 
+   // Prefer res_ndestroy where available.

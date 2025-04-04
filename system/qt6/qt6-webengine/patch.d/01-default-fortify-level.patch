@@ -1,0 +1,29 @@
+Patch status: likely here forever
+
+Gentoo already uses system-wide _FORTIFY_SOURCE=2 (unless -O0), and
+will use =3 with hardened configurations *unless* this gets passed.
+
+As can see in removed bits, note that upstream switched to =3 for
+ChromeOS[1] and it should in theory work fine too.
+
+[1] https://crrev.com/e4ff9823483dab0f972b851768f7b45137f70aa4
+--- a/src/3rdparty/chromium/build/config/compiler/BUILD.gn
++++ b/src/3rdparty/chromium/build/config/compiler/BUILD.gn
+@@ -2205,17 +2204,0 @@
+-    if (!is_debug && !using_sanitizer && current_cpu != "s390x" &&
+-        current_cpu != "s390" && current_cpu != "ppc64" &&
+-        current_cpu != "mips" && current_cpu != "mips64" &&
+-        current_cpu != "riscv64" && current_cpu != "loong64" && !is_mingw) {
+-      # Non-chromium code is not guaranteed to compile cleanly with
+-      # _FORTIFY_SOURCE. Also, fortified build may fail when optimizations are
+-      # disabled, so only do that for Release build.
+-      fortify_level = "2"
+-
+-      # ChromeOS's toolchain supports a high-quality _FORTIFY_SOURCE=3
+-      # implementation with a few custom glibc patches. Use that if it's
+-      # available.
+-      if (is_chromeos_device && !lacros_use_chromium_toolchain) {
+-        fortify_level = "3"
+-      }
+-      cflags += [ "-U_FORTIFY_SOURCE", "-D_FORTIFY_SOURCE=" + fortify_level ]
+-    }
