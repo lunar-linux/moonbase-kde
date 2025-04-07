@@ -1,3 +1,6 @@
+#icu4c-76.1
+#export QMAKE_CXXFLAGS_CXX11="-std=c++14"
+
 # This needs to happen here since CFLAGS/CXXFLAGS/LDFLAGS is only loaded during BUILD
 if in_depends $MODULE libressl; then
   patch_it $SCRIPT_DIRECTORY/libressl-compat.patch 1 &&
@@ -21,9 +24,10 @@ fi &&
 # no-gtkstyle, grabs qt-5 headers via cairo when built with qt5.
 # Just a note about rpath vs linux as used here by qt5; don't use -rpath, lets stay with -no-rpath.
 # See https://bugreports.qt.io/browse/QTBUG-33948.
+
 OPTS+=" -gui \
         -gtk \
-        -icu \
+        -no-icu \
         -xcb \
         -strip \
         -release \
@@ -48,6 +52,7 @@ if [[ "$USE_JOURNALD" == "y" && $(module_installed systemd) ]]; then
  else
   OPTS+=" -no-journald"
 fi
+
 
 mkdir build-qt &&
 cd build-qt &&
