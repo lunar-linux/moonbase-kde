@@ -1,13 +1,13 @@
           MODULE=qt6-webview
-         VERSION=6.8.3
+         VERSION=6.9.0
           SOURCE=qtwebview-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:2c46e472034c8a254bb4dbd15250a3fa8f727135a14718a3ff1175697b487ed2
+      SOURCE_VFY=sha256:5b24070e8ceb12c3c4df5a887f3ffc3544193646386e6ce18e41c20d42d7ed6b
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtwebview-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20211104
-         UPDATED=20250328
+         UPDATED=20250413
            SHORT="Provides a way to display web content in a QML application"
 cat << EOF
 Provides a way to display web content in a QML application.

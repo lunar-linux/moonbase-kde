@@ -11,7 +11,7 @@ happened at least with >=musl-1.2.5.
 [2] https://bugs.gentoo.org/937875
 --- a/src/3rdparty/chromium/sandbox/linux/services/credentials.cc
 +++ b/src/3rdparty/chromium/sandbox/linux/services/credentials.cc
-@@ -91,5 +91,5 @@
+@@ -98,5 +98,5 @@
    void* tls = nullptr;
  #if (defined(ARCH_CPU_X86_64) || defined(ARCH_CPU_ARM_FAMILY)) && \
 -    !defined(MEMORY_SANITIZER)

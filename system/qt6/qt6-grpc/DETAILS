@@ -1,13 +1,13 @@
           MODULE=qt6-grpc
-         VERSION=6.8.3
+         VERSION=6.9.0
           SOURCE=qtgrpc-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:052fa489d1c45b9df27319ee614f1534e49c9103a8b504024ab7e2c9e5b0849b
+      SOURCE_VFY=sha256:3957e076181ac0d9a8f9fca93ec49e1e5e143e39eee1ec3feee10ca13f64b137
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtgrpc-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20240401
-         UPDATED=20250328
+         UPDATED=20250413
            SHORT="Qt6 Data Visualization module"
 cat << EOF
 Qt6 Data Visualization module.

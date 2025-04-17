@@ -1,13 +1,16 @@
-Patch status: limbo, needs upstreaming
+Patch status: probably(?) fixed in >=chromium-133.0.6892.0
 
 Only manifests as an issue with gcc-13+musl which does not transitively
 include cstdint / stdint.h for the int32/64_t usage, e.g. [1].
 
-See also [2] which fixed this for the 87 branch back in Qt5 but was
-not kept. Optimally needs to be upstreamed to chromium itself.
+Since chromium-130, upstream started to care more about missing cstdint
+and many got either fixed or are avoided by new transitive cstdint.
+Albeit the webrtc one[2] is known still missing until 133.0.6892.0 so,
+when Qt uses that version, should try gcc+musl without this patch to
+see what "actually" still need from it.
 
 [1] https://bugs.gentoo.org/928466
-[2] https://codereview.qt-project.org/c/qt/qtwebengine-chromium/+/489133
+[2] https://chromium.googlesource.com/external/webrtc/+/000f04375b67e6139a1dc88d832d2da65c7acb29
 --- a/src/3rdparty/chromium/gpu/config/gpu_driver_bug_workarounds.h
 +++ b/src/3rdparty/chromium/gpu/config/gpu_driver_bug_workarounds.h
 @@ -7,2 +7,3 @@
@@ -31,10 +34,17 @@ not kept. Optimally needs to be upstreamed to chromium itself.
 @@ -17,2 +17,3 @@
  
 +#include <cstdint>
- #include <string>
+ #include <optional>
 --- a/src/3rdparty/chromium/ui/accessibility/ax_text_attributes.h
 +++ b/src/3rdparty/chromium/ui/accessibility/ax_text_attributes.h
 @@ -7,2 +7,3 @@
  
 +#include <cstdint>
  #include <string>
+--- a/src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/neteq/reorder_optimizer.cc
++++ b/src/3rdparty/chromium/third_party/webrtc/modules/audio_coding/neteq/reorder_optimizer.cc
+@@ -12,2 +12,4 @@
+ 
++#include <stdint.h>
++
+ #include <algorithm>

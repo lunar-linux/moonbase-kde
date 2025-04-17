@@ -1,13 +1,13 @@
           MODULE=qt6-httpserver
-         VERSION=6.8.3
+         VERSION=6.9.0
           SOURCE=qthttpserver-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:792be98dd979a3f1cf42477139321a8999a648b7e7ad041ae133965c3cc35f65
+      SOURCE_VFY=sha256:91d2cfef1b4c4c09c6189ab26a3a0afa02f0e9512683aecf4d1b44e56112ae73
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qthttpserver-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20230115
-         UPDATED=20250328
+         UPDATED=20250413
            SHORT="C++ classes that provide HTTP server framework"
 cat << EOF
 C++ classes that provide HTTP server framework.

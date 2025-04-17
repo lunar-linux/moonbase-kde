@@ -1,0 +1,44 @@
+Patch status: needs upstreaming
+
+Add missing dependencies for rare race conditions, these are all
+related to Qt-specific changes as far as I can see while normal
+chromium has the right dependencies.
+
+Upstreaming may require demonstrating why they are missing given
+it is unlikely will be able to reproduce and bug #942142 mostly
+only has partial build logs for each issues.
+
+https://bugs.gentoo.org/942142
+--- a/src/3rdparty/chromium/components/history/core/browser/BUILD.gn
++++ b/src/3rdparty/chromium/components/history/core/browser/BUILD.gn
+@@ -183,4 +183,8 @@
+       "//components/sync",
+     ]
++
++    deps += [
++      "//components/signin/public/base:signin_buildflags",
++    ]
+   }
+ 
+--- a/src/3rdparty/chromium/qtwebengine/browser/extensions/api/BUILD.gn
++++ b/src/3rdparty/chromium/qtwebengine/browser/extensions/api/BUILD.gn
+@@ -29,4 +29,5 @@
+ 
+   deps = [
++    "//build/config/chromebox_for_meetings:buildflags",
+     "//chrome/common:buildflags",
+     "//content/public/browser",
+@@ -46,4 +47,5 @@
+   deps = [
+     "//content/public/browser",
++    "//qtwebengine/common/extensions/api:api",
+   ]
+ }
+--- a/src/core/ozone/BUILD.gn
++++ b/src/core/ozone/BUILD.gn
+@@ -22,4 +22,5 @@
+   deps = [
+     "//base",
++    "//media/gpu:buildflags",
+     "//ui/base:buildflags",
+     "//ui/ozone:ozone_base",

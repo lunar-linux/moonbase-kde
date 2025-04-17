@@ -9,7 +9,7 @@ ChromeOS[1] and it should in theory work fine too.
 [1] https://crrev.com/e4ff9823483dab0f972b851768f7b45137f70aa4
 --- a/src/3rdparty/chromium/build/config/compiler/BUILD.gn
 +++ b/src/3rdparty/chromium/build/config/compiler/BUILD.gn
-@@ -2205,17 +2204,0 @@
+@@ -2323,17 +2322,0 @@
 -    if (!is_debug && !using_sanitizer && current_cpu != "s390x" &&
 -        current_cpu != "s390" && current_cpu != "ppc64" &&
 -        current_cpu != "mips" && current_cpu != "mips64" &&

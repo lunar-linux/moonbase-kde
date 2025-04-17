@@ -19,7 +19,7 @@ Thanks-to: Sam James <sam@gentoo.org>
 [2] https://codereview.qt-project.org/c/qt/qtwebengine-chromium/+/608812
 --- a/src/3rdparty/chromium/base/containers/flat_tree.h
 +++ b/src/3rdparty/chromium/base/containers/flat_tree.h
-@@ -491,8 +491,11 @@
+@@ -504,8 +504,11 @@
  
    // If the compare is not transparent we want to construct key_type once.
 -  template <typename K>

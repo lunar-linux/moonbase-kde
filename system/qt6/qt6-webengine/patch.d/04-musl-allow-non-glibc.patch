@@ -1,0 +1,21 @@
+Patch status: semi-optional
+
+Alternatively could -DTEST_glibc=ON without patching, but prefer
+keeping musl things in the patchset for now.
+
+Considering chromium is broken with alternate libcs (or old glibc)
+on linux without patching, the check itself makes sense to have
+upstream and so this is not really upstreamable unless upstream all
+musl fixes too.
+
+https://bugs.gentoo.org/876520
+--- a/configure.cmake
++++ b/configure.cmake
+@@ -365,7 +364,0 @@
+-qt_webengine_configure_check("glibc"
+-    MODULES QtWebEngine
+-    CONDITION NOT LINUX OR TEST_glibc
+-    MESSAGE "A suitable version >= ${QT_CONFIGURE_CHECK_glibc_version} of glibc is required."
+-    DOCUMENTATION "glibc library at least ${QT_CONFIGURE_CHECK_glibc_version} version or later."
+-    TAGS LINUX_PLATFORM
+-)

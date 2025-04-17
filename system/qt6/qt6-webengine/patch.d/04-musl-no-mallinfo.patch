@@ -27,19 +27,19 @@ https://crbug.com/1380656 (musl tracking bug)
    return 0;
 --- a/src/3rdparty/chromium/base/trace_event/malloc_dump_provider.cc
 +++ b/src/3rdparty/chromium/base/trace_event/malloc_dump_provider.cc
-@@ -194,5 +194,4 @@
+@@ -190,5 +190,4 @@
    struct mallinfo2 info = mallinfo2();
  #endif
 -#endif  // defined(__GLIBC__) && defined(__GLIBC_PREREQ)
  #if !defined(MALLINFO2_FOUND_IN_LIBC)
    struct mallinfo info = mallinfo();
-@@ -216,4 +215,5 @@
+@@ -212,4 +211,5 @@
                                total_allocated_size);
    }
 +#endif  // defined(__GLIBC__) && defined(__GLIBC_PREREQ)
  }
  #endif
-@@ -354,5 +354,5 @@
+@@ -369,5 +369,5 @@
  #elif BUILDFLAG(IS_FUCHSIA)
  // TODO(fuchsia): Port, see https://crbug.com/706592.
 -#else
