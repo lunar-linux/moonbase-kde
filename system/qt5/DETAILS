@@ -1,7 +1,7 @@
           MODULE=qt5
          VERSION=5.15.16
           SOURCE=qt-everywhere-opensource-src-$VERSION.tar.xz
-      SOURCE_URL=https://mirrors.dotsrc.org/qtproject/official_releases/qt/${VERSION%.*}/$VERSION/single/
+      SOURCE_URL=https://download.qt.io/official_releases/qt/5.15/$VERSION/single/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qt-everywhere-src-$VERSION
       SOURCE_VFY=sha256:efa99827027782974356aceff8a52bd3d2a8a93a54dd0db4cca41b5e35f1041c
    MODULE_PREFIX=${QT5_PREFIX:-/usr}
