@@ -20,9 +20,11 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DINSTALL_MKSPECSDIR=qt6/mkspecs \
         -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \
         -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
-        -DINSTALL_SYSCONFDIR=/etc/xdg"
+        -DINSTALL_SYSCONFDIR=/etc/xdg \
+        -DQT_INSTALL_XDG_DESKTOP_ENTRIES=ON \
+        -Wno-dev"
 
-cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS -Wno-dev &&
+cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
 cmake --build $MODULE-$VERSION &&
 prepare_install &&
 
