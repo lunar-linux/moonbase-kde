@@ -1,12 +1,15 @@
 source /etc/profile.d/qt6.rc  &&
 
-#sedit '8i #define GLM_ENABLE_EXPERIMENTAL' ShowMySky/GLWidget.cpp &&
-#sedit '6i #define GLM_ENABLE_EXPERIMENTAL' common/EclipsedDoubleScatteringPrecomputer.cpp &&
-
-OPTS+=" -DCMAKE_CXX_FLAGS=-fPIC  \
-        -DCMAKE_CXX_STANDARD=17 \
+OPTS+=" -DCMAKE_CXX_STANDARD=17 \
         -DCMAKE_CXX_COMPILER=g++ \
+        -W no-dev \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCPM_LOCAL_PACKAGES_ONLY=ON \
+        -DCMAKE_CXX_FLAGS=-fPIC \
         -DQT_VERSION=6"
 
+cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
+cmake --build $MODULE-$VERSION --target all &&
 
-default_cmake_build
+prepare_install &&
+cmake --install $MODULE-$VERSION
