@@ -1,12 +1,12 @@
           MODULE=kpkpass
-         VERSION=24.12.3
+         VERSION=25.04.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:cf22c45a942f2723f309542bf0499896c27d381521caf0b2cc9465246a7d74a9
+      SOURCE_VFY=sha256:39bde1831f700555c89ac06214510b9f1e58f2f5e5836ec11196b07ff1f6216a
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://api.kde.org/kdepim/kpkpass/html/index.html
          ENTERED=20180817
-         UPDATED=20250307
+         UPDATED=20250421
            SHORT="Library to deal with Apple Wallet pass files"
 
 cat << EOF
