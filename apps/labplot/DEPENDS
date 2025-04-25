@@ -9,6 +9,7 @@ depends qt6-serialport
 depends kparts
 depends purpose
 depends syntax-highlighting
+depends qt-advanced-docking-system
 
 optional_depends cfitsio  "-DENABLE_FITS=ON"    "-DENABLE_FITS=OFF"    "for FITS data format support"
 optional_depends cantor   "-DENABLE_CANTOR=ON"  "-DENABLE_CANTOR=OFF"  "for additional math/computing support"
