@@ -22,6 +22,7 @@ depends xdg-utils
 depends double-conversion
 depends md4c
 depends ca-certificates
+depends gtk+-3
 
 optional_depends freetype2  "-system-freetype"   "-qt-freetype"   "use system provided freetype, else use qt provided freetype" "y"
 optional_depends harfbuzz   "-system-harfbuzz"   "-qt-harfbuzz"   "use system provided harfbuzz for text shaping, else use qt provided harfbuzz" "y"
