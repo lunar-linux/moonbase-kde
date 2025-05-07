@@ -1,12 +1,12 @@
           MODULE=print-manager
-         VERSION=6.3.4
+         VERSION=6.3.5
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/plasma/$VERSION/
-      SOURCE_VFY=sha256:5b32d535c020a38c80bad952a1ada764ad1ea20dc5dc2bb5f4a034a9c6c76a61
+      SOURCE_VFY=sha256:77151f395ad91eda6b644eb6c87fe289be198eab41c039e60bdbb3b16d559ac1
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://utils.kde.org/projects/ark/
          ENTERED=20130206
-         UPDATED=20250402
+         UPDATED=20250507
            SHORT="A replacement for the kde printer management"
 
 cat << EOF
