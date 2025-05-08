@@ -1,0 +1,17 @@
+          MODULE=kdf
+         VERSION=25.04.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:5c0c49fe2d5f7ca09f05a70edc676019dd1995adb720b0f2d5166c677a012530
+   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+        WEB_SITE=http://utils.kde.org/projects/kdf/
+         ENTERED=20120125
+         UPDATED=20250421
+           SHORT="KDiskFree"
+
+cat << EOF
+KDiskFree displays the available file devices (hard drive partitions, floppy and
+CD/DVD drives, etc.) along with information on their capacity, free space, type
+and mount point. It also allows you to mount and unmount drives and view them in
+a file manager.
+EOF
