@@ -1,15 +1,15 @@
           MODULE=kstars
-         VERSION=3.7.5
+         VERSION=3.7.6
           SOURCE=$MODULE-$VERSION.tar.xz
          SOURCE2=opsekos.ui
       SOURCE_URL=$KDE_URL/stable/kstars/$VERSION/
      SOURCE2_URL=https://raw.githubusercontent.com/KDE/kstars/master/kstars/ekos/
-      SOURCE_VFY=sha256:2fd87255f76016515f33a3328d1e1b51af3a1473db560ef10563d8f18487517c
-     SOURCE2_VFY=sha256:70df3f47427023cd24279761bddf60e40ee713bbea787cb7942a37f4a4be9f0e
+      SOURCE_VFY=sha256:ea1c163260062899a574bf1e4cb433cc1b2e9a4e6d845a2a1af9b6756934269a
+     SOURCE2_VFY=sha256:b3c972f53aa3d993afe5ad3722f2262e5b45a8919fcdd5f4ad037b41b50954c0
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://apps.kde.org/kstars/
          ENTERED=20110813
-         UPDATED=20250214
+         UPDATED=20250401
            SHORT="Desktop Planetarium for KDE"
 
 cat << EOF
