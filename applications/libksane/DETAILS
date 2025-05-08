@@ -1,12 +1,12 @@
           MODULE=libksane
-         VERSION=25.04.0
+         VERSION=25.04.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:91ab9dd49d4474ebddf9f478aeaac55fc86b6e78cb7542f2a9050429198bf79a
+      SOURCE_VFY=sha256:5c3b83c73ac7fd7680be99332da06e467de6c6d49ceec1b7ae372b1666379023
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
          ENTERED=20110813
-         UPDATED=20250421
+         UPDATED=20250508
            SHORT="SANE Library interface for KDE"
 
 cat << EOF
