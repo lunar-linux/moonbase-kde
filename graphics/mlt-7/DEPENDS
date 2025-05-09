@@ -13,7 +13,7 @@ optional_depends tcl        "-DSWIG_TCL=ON"       "-DSWIG_TCL=OFF"       "for tc
 optional_depends lua        "-DSWIG_LUA=ON"       "-DSWIG_LUA=OFF"       "for lua bindings support"
 optional_depends sox        "-DMOD_SOX=ON"        "-DMOD_SOX=OFF"        "for sox support"
 optional_depends opencv     "-DMOD_OPENCV=ON"     "-DMOD_OPENCV=OFF"     "for cv support"
-optional_depends %JAVA_SDK  "-DSWIG_JAVA=ON"      "-DSWIG_JAVA=OFF"      "to build Java bindings"
+optional_depends %JAVA_SDK  "-DSWIG_JAVA=ON"      "-DSWIG_JAVA=OFF"      "to build Java bindings, ${PROBLEM_COLOR}Say no for now${DEFAULT_COLOR}"
 optional_depends rtaudio    "-DMOD_RTAUDIO=ON"    "-DMOD_RTAUDIO=OFF"    "for the real time audio support"
 optional_depends vid.stab   "-DMOD_VIDSTAB=ON"    "-DMOD_VIDSTAB=OFF"    "for video stabilization support"
 optional_depends rubberband "-DMOD_RUBBERBAND=ON" "-DMOD_RUBBERBAND=OFF" "for audio manipulation support"
