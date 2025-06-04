@@ -1,11 +1,11 @@
           MODULE=ktextaddons
-         VERSION=1.5.4
+         VERSION=1.6.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$MODULE/
-      SOURCE_VFY=sha256:64b80602e84b25e9164620af3f6341fa865b85e826ab8f5e02061ae24a277b20
+      SOURCE_URL=$KDE_URL/stable/$MODULE/$VERSION/
+      SOURCE_VFY=sha256:d9846505a52f97bda64ead193032bc29573ec31481f473be3c586f5b8321ecdc
         WEB_SITE=https://invent.kde.org/libraries/ktextaddons
          ENTERED=20230420
-         UPDATED=20240625
+         UPDATED=20250602
            SHORT="various text handling addons"
 
 cat << EOF
