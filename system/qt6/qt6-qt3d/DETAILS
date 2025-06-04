@@ -1,13 +1,13 @@
           MODULE=qt6-qt3d
-         VERSION=6.9.0
+         VERSION=6.9.1
           SOURCE=qt3d-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:521dd56d40873d37b2dd9ca95181037b833a07c48aed5db44efcba83a4716cc2
+      SOURCE_VFY=sha256:9c46497a60147bb326a58b67b1f543bdf81b8aceed908b44d3dde896d79c4784
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qt3d-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20211207
-         UPDATED=20250413
+         UPDATED=20250603
            SHORT="C++ and QML APIs for easy inclusion of 3D graphics"
 cat << EOF
 C++ and QML APIs for easy inclusion of 3D graphics.

@@ -1,13 +1,13 @@
           MODULE=qt6-positioning
-         VERSION=6.9.0
+         VERSION=6.9.1
           SOURCE=qtpositioning-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:c00b4c01d92bf99c5562910aab59f80146b976cdb1dcb7bd2f27833624605ed1
+      SOURCE_VFY=sha256:7062734b4989248ca3f0e3e4aebb9aa2e7ed2d6bf19e779e520c6ef69706ff26
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtpositioning-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20220528
-         UPDATED=20250413
+         UPDATED=20250603
            SHORT="access to position, satellite and area monitoring classes"
 cat << EOF
 Provides access to position, satellite and area monitoring classes.
