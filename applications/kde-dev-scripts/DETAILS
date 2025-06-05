@@ -1,12 +1,12 @@
           MODULE=kde-dev-scripts
-         VERSION=25.04.1
+         VERSION=25.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:42cd9f3f6bf32d98822cd7c0f69927e2f6ba46d77d3dae5204a89677b7d55005
+      SOURCE_VFY=sha256:9a61e253c17c11f89b8e36affa66a7e2d34947a6571e6a1643522cad55b69457
    MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/kdesdk/kde-dev-scripts
          ENTERED=20130814
-         UPDATED=20250508
+         UPDATED=20250605
            SHORT="Scripts and setting files useful for KDE development"
 
 cat << EOF
