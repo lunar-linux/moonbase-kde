@@ -13,9 +13,9 @@ depends harfbuzz
 depends cups
 
 optional_depends GraphicsMagick "-DWANT_GRAPHICSMAGICK=1" "-DWANT_GRAPHICSMAGICK=0" "for extra import filters" y
-optional_depends podofo         "-DWITH_PODOFO=1"         "-DWITH_PODOFO=0"         "for enchanced Illustrator AI/EPS import support" y
-optional_depends hunspell       "-DWANT_HUNSPELL=1"       "-DWANT_HUNSPELL=0"       "To enable support for spell checking"
-optional_depends boost          "-DWITH_BOOST=1"          "-DWITH_BOOST=0"          "for scripting support"
+optional_depends podofo         "-DWITH_PODOFO=ON"        "-DWITH_PODOFO=OFF"       "for enchanced Illustrator AI/EPS import support,${PROBLEM_COLOR} Say no for now${DEFAULT_COLOR}"
+optional_depends hunspell       "-DWANT_HUNSPELL=ON"      "-DWANT_HUNSPELL=OFF"     "To enable support for spell checking"
+optional_depends boost          "-DWITH_BOOST=ON"         "-DWITH_BOOST=OFF"        "for scripting support"
 
 optional_depends libvisio  "" "" "for visio file support"
 optional_depends libmspub  "" "" "for MS Publisher file support"
