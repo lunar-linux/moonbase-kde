@@ -1,0 +1,13 @@
+          MODULE=aurorae
+         VERSION=6.4.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/plasma/$VERSION/
+      SOURCE_VFY=sha256:563c4285f426848256e92c884a058a572d59df5ab9a4c8b907385226ec4ac0b2
+        WEB_SITE=https://develop.kde.org/docs/plasma/aurorae/
+         ENTERED=20250617
+         UPDATED=20250617
+           SHORT="kwin theme engine"
+
+cat << EOF
+Aurorae is a theme engine for KWin window decorations.
+EOF

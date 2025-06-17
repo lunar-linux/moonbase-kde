@@ -1,0 +1,13 @@
+          MODULE=wacomtablet
+         VERSION=6.4.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/plasma/$VERSION/
+      SOURCE_VFY=sha256:737166c6688e48e21d4da369dc2f37c86fe48f1eabbf89dd8cf27859e1a296d9
+        WEB_SITE=https://userbase.kde.org/Wacomtablet
+         ENTERED=20250617
+         UPDATED=20250617
+           SHORT="GUI for wacom linux drivers"
+
+cat << EOF
+A gui for wacom table linux drivers.
+EOF

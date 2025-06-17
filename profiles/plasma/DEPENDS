@@ -47,5 +47,7 @@ depends kdeplasma-addons
 depends kpipewire
 depends plasma-thunderbolt
 
+optional_depends aurorae "" "" "for kwin theme engine support"
+optional_depends wacomtablet "" "" "for table drawing device support"
 optional_depends plasma-nm "" "" "plasma app to access network manager"
 optional_depends plasma-firewall "" "" "plasma app to access system firewall"
