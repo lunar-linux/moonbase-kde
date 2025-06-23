@@ -3,7 +3,7 @@
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
       SOURCE_VFY=sha256:5ba86b06e155b34da8f7a070b30ed88cd8d8f245c56b85cf992f574ab359ddb8
-   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+   MODULE_PREFIX=${KDE_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/kdesdk/poxml
          ENTERED=20130814
          UPDATED=20250605

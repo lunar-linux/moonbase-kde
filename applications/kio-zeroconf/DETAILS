@@ -3,7 +3,7 @@
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
       SOURCE_VFY=sha256:d075bdaadc458e8bb983cd77b27e8271889ea7db8e1cdf0b3fabac8a9200ba5c
-   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+   MODULE_PREFIX=${KDE_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org
         REPLACES=zeroconf-ioslave
          ENTERED=20220820

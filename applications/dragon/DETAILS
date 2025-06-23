@@ -3,7 +3,7 @@
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
       SOURCE_VFY=sha256:15a14eeb295989bf1fff35e55897a817f7fda7064f0bc31c331e88b6d41ffd82
-   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+   MODULE_PREFIX=${KDE_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/multimedia/dragonplayer/
          ENTERED=20120801
          UPDATED=20250605

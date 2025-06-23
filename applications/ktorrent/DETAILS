@@ -3,7 +3,7 @@
          VERSION=25.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/${VERSION}/src/
-   MODULE_PREFIX=${KDE4_INSTALL_DIR:-/usr}
+   MODULE_PREFIX=${KDE_INSTALL_DIR:-/usr}
       SOURCE_VFY=sha256:da1834795e1a03bf1a02182cf3a95be9654a5dec32a55bd63e5795cc5d35de27
         WEB_SITE=http://ktorrent.pwsp.net/
          ENTERED=20080111
