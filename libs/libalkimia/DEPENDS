@@ -1,3 +1,8 @@
 depends gmp
 depends mpir
 depends extra-cmake-modules
+depends knewstuff
+depends ktextwidgets
+depends kdoctools 
+
+optional_depends qt6-webengine "-DBUILD_WITH_WEBENGINE=ON" "-DBUILD_WITH_WEBENGINE=OFF" "for webengine support, ${PROBLEM_COLOR}Experimental${DEFAULT_COLOR}"

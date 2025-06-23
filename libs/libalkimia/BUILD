@@ -1,8 +1,5 @@
-. /etc/profile.d/qt5.rc &&
+source /etc/profile.d/qt6.rc &&
 
-#OPTS+=" -DSHARE_INSTALL_DIR=/usr/share -DBUILD_DOXYGEN_DOCS=OFF -DBUILD_WITH_WEBENGINE=OFF" &&
-OPTS+=" -DSHARE_INSTALL_DIR=/usr/share" &&
-
-Qt5_DIR=/usr/lib/qt5 &&
+OPTS+=" -DBUILD_WITH_QT6=ON -DENABLE_FINANCEQUOTE=ON"
 
 default_cmake_build
