@@ -35,7 +35,7 @@ optional_depends %OSSL        "-DFEATURE_openssl_linked=ON"    "-DFEATURE_openss
 optional_depends cups         "-DFEATURE_cups=ON"              "-DFEATURE_cups=OFF"              "for printing support, needed by kdelibs"
 optional_depends lksctp-tools "-DFEATURE_sctp=ON"              "-DFEATURE_sctp=OFF"              "for SCTP protocol support" y
 optional_depends icu4c        "-DFEATURE_icu=ON"               "-DFEATURE_icu=OFF"               "for International Components for Unicode support" y
-optional_depends sqlite       "-DFEATURE_system_sqlite=ON"     "-DFEATURE_system_sqlite=OFF"     "use system provided sqlite" y
+optional_depends sqlite       "-DFEATURE_system_sqlite=ON"     "-DFEATURE_system_sqlite=OFF"     "use system provided sqlite, ${PROBLEM_COLOR}Say no for now${DEFAULT_COLOR}"
 optional_depends %MYSQL       "-DFEATURE_sql_mysql=ON"         "-DFEATURE_sql_mysql=OFF"         "for mysql database support"
 optional_depends postgresql   "-DFEATURE_sql_psql=ON"          "-DFEATURE_sql_psql=OFF"          "for postgresql database support"
 optional_depends unixODBC     "-DFEATURE_sql_odbc=ON"          "-DFEATURE_sql_odbc=OFF"          "for unixODBC support"
