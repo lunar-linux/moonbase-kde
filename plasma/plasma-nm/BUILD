@@ -1,4 +1,4 @@
-sedit "s:MM_MODEM_STATE_FAILED_REASON_UNKNOWN_CAPABILITIES:MM_MODEM_STATE_FAILED_REASON_UNKNOWN:" kcms/kcm_cellularnetwork/modemdetails.cpp &&
+sedit "282-283d" kcms/kcm_cellularnetwork/modemdetails.cpp &&
 
 source /etc/profile.d/qt6.rc &&
 export LANG='en_US.UTF-8'
