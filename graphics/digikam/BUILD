@@ -1,5 +1,8 @@
 source /etc/profile.d/qt6.rc &&
 
+export CMAKE_C_FLAGS="$CFLAGS -ffat-lto-objects -I/usr/include/Imath"
+export CMAKE_CXX_FLAGS="$CXXFLAGS -ffat-lto-objects -I/usr/include/Imath"
+
 OPTS+=" -DENABLE_AKONADICONTACTSUPPORT=ON \
         -DENABLE_KFILEMETADATASUPPORT=ON \
         -DENABLE_MEDIAPLAYER=ON \
