@@ -1,24 +1,14 @@
           MODULE=kpmcore
-         VERSION=25.04.2
+         VERSION=25.04.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src/
-      SOURCE_VFY=sha256:31a95cbdca824ddc5df77dd21fdaa42f320f71d786de4674455fb4acca5bb2fd
-        WEB_SITE=https://github.com/KDE/kpmcore
-            TYPE=cmake
-         ENTERED=20200802
-         UPDATED=20250605
-           SHORT="library for examining and manipulating all facets of storage devices"
+      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+      SOURCE_VFY=sha256:6c22e9068fa1e7a4a4a64def7636bb3498b977cf77752d126f1b4e1143f48c95
+   MODULE_PREFIX=${KDE_INSTALL_DIR:-/usr}
+        WEB_SITE=https://apps.kde.org/partitionmanager/
+         ENTERED=20250703
+         UPDATED=20250703
+           SHORT="library for managing partitions"
 
 cat << EOF
-KPMcore is a library for examining and manipulating all facets
-of storage devices on a system:
-* raw disk devices
-* partition tables on a device
-* filesystems within a partition
-
-There are multiple backends so that KPMcore can support different
-operating systems, although the only functional backend is the
-one for Linux systems:
-* sfdisk backend (Linux)
-* null backend
+Library for managing partitions.
 EOF

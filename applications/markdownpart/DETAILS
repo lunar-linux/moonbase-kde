@@ -1,12 +1,12 @@
           MODULE=markdownpart
-         VERSION=25.04.2
+         VERSION=25.04.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:87a451d88c0bd35a7e3cc7c61c75dfc7dad974e7d5d4178801ab319980119fd4
+      SOURCE_VFY=sha256:4d7b99cee45ed340535c244378f7141ac47d70d75b7c289d93a51516b660c3c1
    MODULE_PREFIX=${KDE_INSTALL_DIR:-/usr}
         WEB_SITE=https://github.com/KDE/markdownpart
          ENTERED=20210409
-         UPDATED=20250605
+         UPDATED=20250703
            SHORT="KPart for rendering Markdown content"
 
 cat << EOF
