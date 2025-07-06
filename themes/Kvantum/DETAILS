@@ -1,11 +1,11 @@
           MODULE=Kvantum
-         VERSION=1.1.4
-          SOURCE=$MODULE-$VERSION.tar.gz
- SOURCE_URL_FULL=https://github.com/tsujan/Kvantum/archive/refs/tags/V$VERSION.tar.gz
-      SOURCE_VFY=sha256:0b03110bd7a49e65d06fe2424dda7d2929876fbca1152531675a101d7332330b
+         VERSION=1.1.5
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=https://github.com/tsujan/Kvantum/releases/download/V$VERSION/
+      SOURCE_VFY=sha256:64af08988e8579ac8078b7db38a4986daa24d490ea6d54d70c08140a7737bc53
         WEB_SITE=https://github.com/tsujan/Kvantum
          ENTERED=20180417
-         UPDATED=20250304
+         UPDATED=20250706
            SHORT="SVG-based theme engine for Qt5 and KDE"
 
 cat << EOF

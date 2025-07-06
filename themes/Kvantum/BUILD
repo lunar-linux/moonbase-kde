@@ -1,10 +1,15 @@
+cd $MODULE &&
 source /etc/profile.d/qt6.rc &&
+export LANG='en_US.UTF-8'
 
-OPTS+=" -DCMAKE_BUILD_TYPE=Release -Wno-dev"
+OPTS+=" -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_PREFIX_PATH=/usr \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DENABLE_QT5=OFF
+        -Wno-dev"
 
-cmake -B $MODULE-qt6 -S $MODULE -DENABLE_QT5=OFF $OPTS &&
-cmake --build $MODULE-qt6 &&
+cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
+cmake --build $MODULE-$VERSION &&
 
-prepare_install &&
-cmake --install $MODULE-qt6
-
+prepare_install
+cmake --install $MODULE-$VERSION
