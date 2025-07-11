@@ -1,11 +1,11 @@
           MODULE=kdnssd
-         VERSION=6.15.0
+         VERSION=6.16.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:192164a395ce9f0667184cae78f369a7c0b8acab0e0d073cdedb2a54bc7c4d5a
+      SOURCE_VFY=sha256:b08bdf05c7d98e31366995a2087ac7471a8993c49917d3cd79c0ba1d2f69a8e0
         WEB_SITE=https://projects.kde.org/projects/frameworks/kdnssd
          ENTERED=20150205
-         UPDATED=20250613
+         UPDATED=20250711
            SHORT="Network service discovery using Zeroconf"
 
 cat << EOF
