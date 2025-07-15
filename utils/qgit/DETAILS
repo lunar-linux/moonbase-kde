@@ -1,12 +1,13 @@
           MODULE=qgit
-         VERSION=2.10
+         VERSION=2.12
           SOURCE=qgit-$VERSION.tar.gz
       SOURCE_URL=https://github.com/tibirna/qgit/archive/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qgit-qgit-$VERSION
-      SOURCE_VFY=sha256:1fc74fbd25c8ccbee9f7d4a8817b0a82ffa5a3a281b324febe4e90ea7c721153
+      SOURCE_VFY=sha256:49f4c7aeb326ae7f983928f5c98500b55adba9b75430dea262a9af584186bb99
         WEB_SITE=https://github.com/tibirna/qgit
+            TYPE=cmake
          ENTERED=20080719
-         UPDATED=20220214
+         UPDATED=20250714
            SHORT="A Qt client for git"
 
 cat << EOF
