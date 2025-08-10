@@ -1,11 +1,11 @@
           MODULE=networkmanager-qt
-         VERSION=6.16.0
+         VERSION=6.17.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:b9ed0baa9159cc5aac7651be48a980cc7cb583933c412cef838596128cbd6645
+      SOURCE_VFY=sha256:d83beae867fb7d669886f513893f8eec58b5d7a24b429d89dc5c6c08b7a3f4e0
         WEB_SITE=https://projects.kde.org/projects/frameworks/knetworkmanager
          ENTERED=20150205
-         UPDATED=20250711
+         UPDATED=20250810
            SHORT="Qt wrapper for NetworkManager DBus API"
 
 cat << EOF
