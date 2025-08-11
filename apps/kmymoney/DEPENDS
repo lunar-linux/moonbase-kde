@@ -2,6 +2,6 @@ depends libalkimia
 depends kdiagram
 depends gwenhywfar
 depends aqbanking
+depends libofx
 
-optional_depends libofx    "-DENABLE_OFXIMPORTER=ON" "-DENABLE_OFXIMPORTER=OFF" "for OFX plugin support" y
 optional_depends sqlcipher "-DENABLE_SQLCIPHER=ON"   "-DENABLE_SQLCIPHER=OFF"   "enable encrypting sqlite database used by kmymoney" y
