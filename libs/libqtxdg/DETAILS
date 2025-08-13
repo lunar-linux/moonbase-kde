@@ -1,11 +1,11 @@
           MODULE=libqtxdg
-         VERSION=4.1.0
-          SOURCE=$MODULE-$VERSION.tar.gz
- SOURCE_URL_FULL=https://github.com/lxqt/libqtxdg/archive/refs/tags/$VERSION.tar.gz
-      SOURCE_VFY=sha256:23015b9a834ecec6b67a96fb06297d6c7496cbb58b4b70183e101c7a92db7ed3
+         VERSION=4.2.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=https://github.com/lxqt/libqtxdg/releases/download/$VERSION/
+      SOURCE_VFY=sha256:a5d430218550d66fa806debce7c418db41268286b17bdab46b8ce3a58f0fe82a
         WEB_SITE=https://github.com/lxqt/libqtxdg
          ENTERED=20221031
-         UPDATED=20250304
+         UPDATED=20250813
            SHORT="freedesktop XDG specs implementations for Qt"
 
 cat << EOF
