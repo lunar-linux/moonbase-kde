@@ -1,6 +1,16 @@
 source /etc/profile.d/qt6.rc &&
 export LANG='en_US.UTF-8'
 
-OPTS+=" -DBUILD_WITH_QT6=ON -DKDE_INSTALL_USE_QT_SYS_PATHS=ON"
+OPTS+=" -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DBUILD_WITH_QT6=ON \
+        -DKDE_INSTALL_LIBDIR=lib \
+        -DBUILD_TESTING=OFF \
+        -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
+        -Wno-dev"
 
-default_cmake_build
+cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
+cmake --build $MODULE-$VERSION &&
+
+prepare_install
+cmake --install $MODULE-$VERSION
