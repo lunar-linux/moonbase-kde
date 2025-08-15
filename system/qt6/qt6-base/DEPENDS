@@ -26,7 +26,6 @@ depends xdg-utils
 depends double-conversion
 depends libproxy
 
-optional_depends gtk+-3       "-DFEATURE_gtk3=ON"              "-DFEATURE_gtk3=OFF"              "use gtk3"
 optional_depends libb2        "-DFEATURE_system_libb2=ON"      "-DFEATURE_system_libb2=OFF"      "use system provided libb2" y
 optional_depends freetype2    "-DFEATURE_system_freetype=ON"   "-DFEATURE_system_freetype=OFF"   "use system provided freetype, else use qt provided freetype" "y"
 optional_depends harfbuzz     "-DFEATURE_system_harfbuzz=ON"   "-DFEATURE_system_harfbuzz=OFF"   "use system provided harfbuzz for text shaping, else use qt provided harfbuzz" "y"
