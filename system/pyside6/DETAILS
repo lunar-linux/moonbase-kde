@@ -1,12 +1,12 @@
           MODULE=pyside6
          VERSION=6.9.1
-          SOURCE=$MODULE-setup-$VERSION.tar.gz
- SOURCE_URL_FULL=git+https://code.qt.io/pyside/pyside-setup:tag=v$VERSION
-#      SOURCE_VFY=sha256:
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-setup-$VERSION
+          SOURCE=pyside-setup-everywhere-src-$VERSION.tar.xz
+      SOURCE_URL=https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-$VERSION-src/
+      SOURCE_VFY=sha256:04c712c5b9234add0d9b5aa3c01a0caede64a55b496127751f5d52a230cff748
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/pyside-setup-everywhere-src-$VERSION
         WEB_SITE=https://pypi.org/project/PySide6/
          ENTERED=20250613
-         UPDATED=20250613
+         UPDATED=20250823
            SHORT="Generates bindings for C++ libraries using CPython source code"
 
 cat << EOF
