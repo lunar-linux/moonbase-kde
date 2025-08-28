@@ -1,5 +1,4 @@
 source /etc/profile.d/qt6.rc &&
-
 #Qt depends on a UTF-8 locale, and has switched to "en_US.UTF-8" instead.
 export LANG='en_US.UTF-8'
 
@@ -14,7 +13,7 @@ OPTS+=" -DCMAKE_INSTALL_PREFIX=/usr  \
         -Wno-dev"
 
 if module_installed ccache; then
-  OPTS+="-DWITH_CCACHE_SUPPORT=ON"
+  OPTS+=" -DWITH_CCACHE_SUPPORT=ON"
 fi &&
 
 cmake -B $MODULE -G Ninja $OPTS &&
