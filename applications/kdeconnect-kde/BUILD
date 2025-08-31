@@ -1,11 +1,18 @@
 source /etc/profile.d/qt6.rc &&
 export LANG='en_US.UTF-8'
 
+OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_BUILD_TYPE=Release \
+        -Wno-dev"
+
 #kdeconnects mdns will conflict with that used by avahi
 if module_installed nss-mdns; then
   OPTS+=" -DMDNS_ENABLED=OFF"
 fi &&
 
-OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=ON"
+cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
+cmake --build $MODULE-$VERSION &&
 
-default_cmake_build
+prepare_install
+cmake --install $MODULE-$VERSION
