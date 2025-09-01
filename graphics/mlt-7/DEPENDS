@@ -13,12 +13,11 @@ optional_depends tcl        "-DSWIG_TCL=ON"       "-DSWIG_TCL=OFF"       "for tc
 optional_depends lua        "-DSWIG_LUA=ON"       "-DSWIG_LUA=OFF"       "for lua bindings support"
 optional_depends sox        "-DMOD_SOX=ON"        "-DMOD_SOX=OFF"        "for sox support"
 optional_depends opencv     "-DMOD_OPENCV=ON"     "-DMOD_OPENCV=OFF"     "for cv support"
-optional_depends %JAVA_SDK  "-DSWIG_JAVA=ON"      "-DSWIG_JAVA=OFF"      "to build Java bindings, ${PROBLEM_COLOR}Say no for now${DEFAULT_COLOR}"
+optional_depends %JAVA_SDK  "-DSWIG_JAVA=ON"      "-DSWIG_JAVA=OFF"      "for Java bindings support"
 optional_depends rtaudio    "-DMOD_RTAUDIO=ON"    "-DMOD_RTAUDIO=OFF"    "for the real time audio support"
 optional_depends vid.stab   "-DMOD_VIDSTAB=ON"    "-DMOD_VIDSTAB=OFF"    "for video stabilization support"
 optional_depends rubberband "-DMOD_RUBBERBAND=ON" "-DMOD_RUBBERBAND=OFF" "for audio manipulation support"
 optional_depends node       "-DSWIG_NODEJS=ON"    "-DSWIG_NODEJS=OFF"    "for java script support, ${PROBLEM_COLOR}Say no for now${DEFAULT_COLOR}" n
 optional_depends perl       "-DSWIG_PERL=ON"      "-DSWIG_PERL=OFF"      "for perl binding support, ${PROBLEM_COLOR}Say no for now${DEFAULT_COLOR}" n
 optional_depends php        "-DSWIG_PHP=ON"       "-DSWIG_PHP=OFF"       "for php binding support"
-optional_depends python     "-DSWIG_PYTHON=ON"    "-DSWIG_PYTHON=OFF"    "for python binding support"
 optional_depends ruby       "-DSWIG_RUBY=ON"      "-DSWIG_RUBY=OFF"      "for ruby binding support"
