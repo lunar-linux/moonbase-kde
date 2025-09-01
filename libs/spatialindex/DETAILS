@@ -1,13 +1,13 @@
           MODULE=spatialindex
-         VERSION=2.0.0
+         VERSION=2.1.0
           SOURCE=$MODULE-src-$VERSION.tar.bz2
       SOURCE_URL=https://github.com/libspatialindex/libspatialindex/releases/download/$VERSION/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-src-$VERSION
-      SOURCE_VFY=sha256:949e3fdcad406a63075811ab1b11afcc4afddc035fbc69a3acfc8b655b82e9a5
+      SOURCE_VFY=sha256:c59932395e98896038d59199f2e2453595df6d730ffbe09d69df2a661bcb619b
         WEB_SITE=https://github.com/libspatialindex/libspatialindex/
             TYPE=cmake
          ENTERED=20121203
-         UPDATED=20191121
+         UPDATED=20250901
            SHORT="support robust spatial indexing method"
 
 cat << EOF
