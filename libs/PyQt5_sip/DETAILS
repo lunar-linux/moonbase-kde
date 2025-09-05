@@ -1,12 +1,13 @@
           MODULE=PyQt5_sip
-         VERSION=12.15.0
-          SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=https://pypi.python.org/packages/source/P/PyQt5-sip/
-      SOURCE_VFY=sha256:d23fdfcf363b5cedd9d39f8a9c5710e7d52804f5b08a58e91c638b36eafcb702
+         VERSION=12.17.0
+          SOURCE=pyqt5_sip-$VERSION.tar.gz
+      SOURCE_URL=https://pypi.python.org/packages/source/p/pyqt5_sip/
+      SOURCE_VFY=sha256:682dadcdbd2239af9fdc0c0628e2776b820e128bec88b49b8d692fe682f90b4f
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/pyqt5_sip-$VERSION
         WEB_SITE=https://riverbankcomputing.com/software/pyqt/intro
             TYPE=python3
          ENTERED=20201220
-         UPDATED=20240720
+         UPDATED=20250905
            SHORT="A sip module support for PyQt5"
 
 cat << EOF
