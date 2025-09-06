@@ -1,13 +1,13 @@
           MODULE=qt6-scxml
-         VERSION=6.9.1
+         VERSION=6.9.2
           SOURCE=qtscxml-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:0c33de2023b33a54fa6debd46f422440dca92da532faa7742af051fd88254780
+      SOURCE_VFY=sha256:e06af183012996a64f07745064318303d3765959ebba29489f8af0f50f32ebb6
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtscxml-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20211102
-         UPDATED=20250603
+         UPDATED=20250901
            SHORT="Static and runtime integration of SCXML models into Qt6 code"
 cat << EOF
 Static and runtime integration of SCXML models into Qt6 code.
