@@ -11,4 +11,8 @@ OPTS+=" -DBUILD_WITH_QT6=ON \
         -DKDE_INSTALL_BINDIR=bin \
         -DKDE_INSTALL_LIBDIR=lib"
 
-default_cmake_build
+cmake -B build-$MODULE -S . $OPTS&&
+cmake --build build-$MODULE &&
+
+prepare_install &&
+cmake --install build-$MODULE
