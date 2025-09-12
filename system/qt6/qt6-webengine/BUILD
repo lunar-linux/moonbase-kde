@@ -9,9 +9,8 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DQT_BUILD_TESTS_BY_DEFAULT=OFF \
         -DQT_UNITY_BUILD=OFF \
         -DQT_INSTALL_EXAMPLES_SOURCES_BY_DEFAULT=OFF \
-        -DQT_FEATURE_webengine_system_re2=OFF \
         -DQT_FEATURE_webengine_system_libevent=ON \
-        -DQT_FEATURE_webengine_system_ffmpeg=OFF \
+        -DQT_FEATURE_webengine_system_ffmpeg=ON \
         -DQT_FEATURE_webengine_system_icu=ON \
         -DQT_FEATURE_webengine_webrtc_pipewire=ON    \
         -DQT_FEATURE_webengine_proprietary_codecs=ON \
