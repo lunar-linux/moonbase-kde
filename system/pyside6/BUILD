@@ -15,4 +15,10 @@ cmake --build $MODULE-$VERSION &&
 prepare_install
 cmake --install $MODULE-$VERSION/sources/shiboken6 &&
 cmake --install $MODULE-$VERSION/sources/pyside6 &&
-cmake --install $MODULE-$VERSION/sources/pyside-tools
+cmake --install $MODULE-$VERSION/sources/pyside-tools &&
+
+TYPESYSTEM_SRC="$MODULE-$VERSION/sources/pyside6/PySide6" &&
+
+cp "$TYPESYSTEM_SRC"/typesystem_*.xml /usr/share/PySide6/typesystems/ 2>/dev/null || true &&
+
+chmod 644 /usr/share/PySide6/typesystems/typesystem_*.xml
