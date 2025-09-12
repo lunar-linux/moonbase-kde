@@ -1,7 +1,7 @@
 source /etc/profile.d/qt6.rc &&
 export LANG='en_US.UTF-8'
 
-CLANG_INSTALL_DIR="/usr"
+CLANG_INSTALL_DIR="/usr" \
 OPTS+=" -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_BUILD_TYPE=Release \
         -DSHIBOKEN_PYTHON_LIBRARIES=$(pkgconf python3-embed --libs) \
