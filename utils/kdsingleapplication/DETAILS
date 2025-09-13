@@ -1,11 +1,12 @@
           MODULE=kdsingleapplication
-         VERSION=1.1.0
+         VERSION=1.2.0
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=https://github.com/KDAB/KDSingleApplication/releases/download/v$VERSION/
-      SOURCE_VFY=sha256:31029fffa4873e2769c555668e8edaa6bd5721edbc445bff5e66cc6af3b9ed78
+      SOURCE_VFY=sha256:ff4ae6a4620beed1cdb3e6a9b78a17d7d1dae7139c3d4746d4856b7547d42c38
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/KDSingleApplication-$VERSION
         WEB_SITE=https://github.com/KDAB/KDSingleApplication
          ENTERED=20231128
-         UPDATED=20240203
+         UPDATED=20250912
            SHORT="helper class for single instance policy applications"
 
 cat << EOF
