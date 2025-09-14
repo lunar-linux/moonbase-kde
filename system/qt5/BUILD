@@ -1,6 +1,3 @@
-#icu4c-76.1
-#export QMAKE_CXXFLAGS_CXX11="-std=c++14"
-
 # This needs to happen here since CFLAGS/CXXFLAGS/LDFLAGS is only loaded during BUILD
 if in_depends $MODULE libressl; then
   patch_it $SCRIPT_DIRECTORY/libressl-compat.patch 1 &&
