@@ -1,6 +1,4 @@
-validate_source_dir $SOURCE_DIRECTORY &&
-mk_source_dir $SOURCE_DIRECTORY &&
-cd $SOURCE_DIRECTORY &&
-tar jxvf $SOURCE_CACHE/$SOURCE -C $SOURCE_DIRECTORY --strip-components=1 &&
+default_pre_build
 
-sedit '24i #include <mutex>' src/Common/init_fftw.h
+sedit '24i #include <mutex>' src/Common/init_fftw.h &&
+sedit 's:set(CMAKE_CXX_STANDARD 11)::' build_files/Modules/CompilerSettings.cmake

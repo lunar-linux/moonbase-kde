@@ -1,0 +1,26 @@
+From 33b364f76b0edca4352cf701c1557d0c0e796c4f Mon Sep 17 00:00:00 2001
+From: Paolo Stivanin <paolostivanin@users.noreply.github.com>
+Date: Thu, 13 Jun 2024 08:04:36 +0200
+Subject: [PATCH] Fix building with Boost >= 1.85.0
+
+---
+ src/Libpfs/manip/resize.hxx | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/src/Libpfs/manip/resize.hxx b/src/Libpfs/manip/resize.hxx
+index 154fdef7a..eb5a1c07a 100644
+--- a/src/Libpfs/manip/resize.hxx
++++ b/src/Libpfs/manip/resize.hxx
+@@ -22,6 +22,12 @@
+ #ifndef PFS_RESIZE_HXX
+ #define PFS_RESIZE_HXX
+ 
++#include <boost/version.hpp>
++
++#if BOOST_VERSION >= 108500
++#include <boost/numeric/conversion/bounds.hpp>
++#endif
++
+ #include <boost/math/constants/constants.hpp>
+ #include "copy.h"
+ #include "resize.h"
