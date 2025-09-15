@@ -1,5 +1,9 @@
 default_pre_build &&
 
+# Current python has removed this
+sedit 's:import imp::' src/3rdparty/chromium/mojo/public/tools/mojom/mojom/fileutil.py &&
+sedit 's:import imp::' src/3rdparty/chromium/mojo/public/tools/mojom/mojom/parse/lexer.py &&
+
 # Current re2 version causes build failure, use internal
 sedit 's:use_system_re2=true:use_system_re2=false:' src/core/config/linux.pri &&
 
@@ -7,39 +11,20 @@ sed -i -e 's|use_jumbo_build=true|use_jumbo_build=false|' src/buildtools/config/
 
 sed -e '/link_pulseaudio/s/false/true/' -i src/3rdparty/chromium/media/media_options.gni &&
 
-sed -e '/^MODULE_VERSION/s/5.*/5.15.10/' -i .qmake.conf &&
-
-sed -i 's/NINJAJOBS/NINJA_JOBS/' src/core/gn_run.pro &&
-
 find -type f -name "*.pr[io]" | xargs sed -i -e 's|INCLUDEPATH += |&$$QTWEBENGINE_ROOT/include |' &&
-
-sed -e 's/\^(?i)/(?i)^/' -i src/3rdparty/chromium/tools/metrics/ukm/ukm_model.py &&
-sed -e "s/'rU'/'r'/" -i src/3rdparty/chromium/tools/grit/grit/util.py &&
 
 # So it doesn't link to the old version.
 if [ -e /usr/lib/qt5/libQt5WebEngineCore.so ]; then
   mv -v /usr/lib/qt5/libQt5WebEngineCore.so{,.old}
 fi &&
 
-#fix the build tools so they can be run with Python-3.11+
-sed -e 's/\^(?i)/(?i)^/' -i src/3rdparty/chromium/tools/metrics/ukm/ukm_model.py &&
-sed -e "s/'rU'/'r'/" -i src/3rdparty/chromium/tools/grit/grit/util.py &&
 
-# Remove an obsolete instance of and a reference to the six module
-sed -e /six.move/d \
-    -i src/3rdparty/chromium/third_party/protobuf/python/google/protobuf/internal/python_message.py &&
-rm -r src/3rdparty/chromium/tools/grit/third_party/six &&
-
-# Putting this here for when icu4 goes to version 74
-#sed -e 's/^#define BA_LB_COUNT.*$/#define BA_LB_COUNT 40/' \
-#    -i src/3rdparty/chromium/third_party/blink/renderer/platform/text/text_break_iterator.cc &&
-
-# For libxml2 build with icu4c
-sed -e 's/xmlError/const xmlError/' \
--i src/3rdparty/chromium/third_party/blink/renderer/core/xml/xslt_processor.h \
--i src/3rdparty/chromium/third_party/blink/renderer/core/xml/xslt_processor_libxslt.cc &&
-
-patch -p1 -d src/3rdparty/chromium -i $SCRIPT_DIRECTORY/qt5-webengine-icu-74.patch &&
+patch -p1 -d src/3rdparty -i $SCRIPT_DIRECTORY/qt5-webengine-ffmpeg5.patch &&
+patch -p1 -d src/3rdparty -i $SCRIPT_DIRECTORY/qt5-webengine-pipewire-0.3.patch &&
+patch -p2 -d src/3rdparty/chromium -i $SCRIPT_DIRECTORY/qt5-webengine-icu-75.patch &&
+patch -p1 -d src/3rdparty/chromium -i $SCRIPT_DIRECTORY/python3.12-six.patch &&
+patch -p2 -d src/3rdparty/chromium -i $SCRIPT_DIRECTORY/qt5-webengine-ninja-1.12.patch &&
+patch -p1 -d src/3rdparty/chromium -i $SCRIPT_DIRECTORY/qt5-webengine-ffmpeg7.patch &&
 
 #Quoting the LFS folks here;
 #Although the patches used in this module ensures git is not invoked during the build, the build system has
