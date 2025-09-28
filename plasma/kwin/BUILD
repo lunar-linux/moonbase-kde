@@ -9,10 +9,13 @@ OPTS+=" -DBUILD_WITH_QT6=ON \
         -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
         -DKDE_INSTALL_INCLUDEDIR=include \
         -DKDE_INSTALL_BINDIR=bin \
-        -DKDE_INSTALL_LIBDIR=lib"
+        -DCMAKE_BUILD_TYPE=Release \
+        -DKDE_INSTALL_LIBDIR=lib
+        -DKF_SKIP_PO_PROCESSING=ON \
+        -Wno-dev"
 
-cmake -B build-$MODULE -S . $OPTS&&
-cmake --build build-$MODULE &&
+cmake -B $MODULE-$VERSION -S . $OPTS &&
+cmake --build $MODULE-$VERSION &&
 
 prepare_install &&
-cmake --install build-$MODULE
+cmake --install $MODULE-$VERSION
