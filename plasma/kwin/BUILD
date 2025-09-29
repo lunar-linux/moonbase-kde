@@ -1,3 +1,6 @@
+# A temp thing
+sedit '488,489d' CMakeLists.txt &&
+
 #The .clang-format file already exists.  Please remove it in order to use
 #the file provided by ECM
 rm .clang-format &&
@@ -11,6 +14,7 @@ OPTS+=" -DBUILD_WITH_QT6=ON \
         -DKDE_INSTALL_BINDIR=bin \
         -DCMAKE_BUILD_TYPE=Release \
         -DKDE_INSTALL_LIBDIR=lib
+        -DBUILD_TESTING=OFF \
         -DKF_SKIP_PO_PROCESSING=ON \
         -Wno-dev"
 
