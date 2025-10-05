@@ -13,7 +13,7 @@ depends harfbuzz
 depends cups
 
 optional_depends GraphicsMagick "-DWANT_GRAPHICSMAGICK=1" "-DWANT_GRAPHICSMAGICK=0" "for extra import filters" y
-optional_depends podofo         "-DWITH_PODOFO=ON"        "-DWITH_PODOFO=OFF"       "for enchanced Illustrator AI/EPS import support,${PROBLEM_COLOR} Say no for now${DEFAULT_COLOR}"
+optional_depends podofo         "-DWITH_PODOFO=ON"        "-DWITH_PODOFO=OFF"       "for enchanced Illustrator AI/EPS import support"
 optional_depends hunspell       "-DWANT_HUNSPELL=ON"      "-DWANT_HUNSPELL=OFF"     "To enable support for spell checking"
 optional_depends boost          "-DWITH_BOOST=ON"         "-DWITH_BOOST=OFF"        "for scripting support"
 
