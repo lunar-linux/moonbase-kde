@@ -13,5 +13,5 @@ depends kwidgetsaddons
 depends kwindowsystem
 depends ki18n
 
-optional_depends freerdp "-DWITH_RDP=ON" "-DWITH_RDP=OFF" "for remote desktop support, ${PROBLEM_COLOR}Say no for now${DEFAULT_COLOR}" n
+optional_depends freerdp "-DWITH_RDP=ON" "-DWITH_RDP=OFF" "for remote desktop support"
 optional_depends libvncserver ""  "" "for vncserver support"
