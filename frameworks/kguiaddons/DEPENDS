@@ -3,4 +3,5 @@ depends qt6-tools
 depends qt6-wayland
 depends extra-cmake-modules
 depends plasma-wayland-protocols
-depends pyside6
+
+optional_depends pyside6 "-DBUILD_PYTHON_BINDINGS=ON" "-DBUILD_PYTHON_BINDINGS=OFF" "For python bindings support"
