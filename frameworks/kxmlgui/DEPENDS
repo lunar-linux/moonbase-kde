@@ -1,6 +1,5 @@
 depends qt6-base
 depends qt6-tools
-depends pyside6
 depends extra-cmake-modules
 depends kcolorscheme
 depends kconfig
@@ -11,3 +10,5 @@ depends kiconthemes
 depends ktextwidgets
 depends kwidgetsaddons
 depends kglobalaccel
+
+optional_depends pyside6 "-DBUILD_PYTHON_BINDINGS=ON" "-DBUILD_PYTHON_BINDINGS=OFF" "for python bindings support"
