@@ -1,13 +1,13 @@
           MODULE=qt6-shadertools
-         VERSION=6.9.3
+         VERSION=6.10.0
           SOURCE=qtshadertools-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:629804ee86a35503e4b616f9ab5175caef3da07bd771cf88a24da3b5d4284567
+      SOURCE_VFY=sha256:87ba478c3fd827862fc79f6d78d369dfec162c901b7f66ed988b3e1d6ffdfbf6
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtshadertools-everywhere-src-$VERSION
         WEB_SITE=http://qt-project.org
          ENTERED=20211101
-         UPDATED=20251002
+         UPDATED=20251010
            SHORT="Provides functionality for the shader pipeline"
 cat << EOF
 Provides functionality for the shader pipeline that allows Qt Quick to operate

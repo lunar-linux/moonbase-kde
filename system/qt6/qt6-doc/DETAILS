@@ -1,13 +1,13 @@
           MODULE=qt6-doc
-         VERSION=6.9.3
+         VERSION=6.10.0
           SOURCE=qtdoc-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:2419dd0ea0d3fdea7adb6bc499a1d1853e8545d585d6d4bd421277572d1da12a
+      SOURCE_VFY=sha256:ece525f4e4f7851c9e8e53bfd7a28046cfa8ede0a4914713147a5c3541327d3b
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtdoc-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20231009
-         UPDATED=20251002
+         UPDATED=20251010
            SHORT="Qt6 Data Visualization module"
 cat << EOF
 Qt6 Data Visualization module.
