@@ -1,6 +1,8 @@
+depends check-jsonschema
 depends shared-mime-info
 depends inotify-tools
 depends qt6-base
 depends qt6-tools
 depends extra-cmake-modules
-depends pyside6
+
+optional_depends pyside6 "-DBUILD_PYTHON_BINDINGS=ON" "-DBUILD_PYTHON_BINDINGS=OFF" "For python bindings support"
