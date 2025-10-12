@@ -1,12 +1,12 @@
           MODULE=bluez-qt
-         VERSION=6.18.0
+         VERSION=6.19.0
           SOURCE=bluez-qt-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/bluez-qt-$VERSION
-      SOURCE_VFY=sha256:9340849075a7aa3fe9f21e2d2b838962c0ae84edfa16a4b4cf17f4022305ceb3
+      SOURCE_VFY=sha256:242da053072423fe23a676b3d4d0af0b6f5b0566033c2f4aaa14fde1f6ab0ba4
         WEB_SITE=https://projects.kde.org/projects/kde/workspace/bluez-qt
          ENTERED=20151025
-         UPDATED=20250912
+         UPDATED=20251012
            SHORT="Qt wrapper for Bluez 5 DBus API"
 
 cat << EOF
