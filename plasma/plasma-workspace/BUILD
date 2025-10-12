@@ -1,9 +1,11 @@
+# Fix doc build with libxml2 2.15
+find -name index.docbook | xargs sed -e 's|index.html "|index.html"|g' -i &&
+
 source /etc/profile.d/qt6.rc &&
 export LANG='en_US.UTF-8'
 
 OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
         -DCMAKE_INSTALL_PREFIX=/usr \
-        -DCMAKE_PREFIX_PATH=/usr \
         -DCMAKE_BUILD_TYPE=Release \
         -DBUILD_WITH_QT6=ON \
         -Wno-dev"
