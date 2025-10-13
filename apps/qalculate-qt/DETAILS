@@ -1,14 +1,14 @@
 #NOTE; If you bump this, libqalculate needs the same.
           MODULE=qalculate-qt
-         VERSION=5.7.0
+         VERSION=5.8.0
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/Qalculate/qalculate-qt/archive/refs/tags/v$VERSION.tar.gz
-     SOURCE_VFY=sha256:2b44b6a3cfb90450e3cecf7c986baec6ad4f26bc53ba19f2b3955c23de9bd367
+     SOURCE_VFY=sha256:5595f5d0f1eeef9d9bf96331d51eeacdb9cae99e3b3032f3c8c7090a8031d87e
         WEB_SITE=https://github.com/Qalculate/qalculate-qt
          ENTERED=20240629
-         UPDATED=20250813
+         UPDATED=20251013
         REPLACES=qalculate-qt5
-           SHORT="Qalculate Qt5 UI"
+           SHORT="Qalculate Qt UI"
 
 cat << EOF
 Qalculate! is a multi-purpose desktop calculator for GNU/Linux (and Mac OS).
