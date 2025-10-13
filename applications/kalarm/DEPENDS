@@ -45,3 +45,5 @@ depends sonnet
 depends ki18n
 depends ktextwidgets
 depends kpimtextedit
+
+optional_depends mpv "-DENABLE_LIBMPV=ON" "-DENABLE_LIBMPV=OFF" "for libmpv support"
