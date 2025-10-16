@@ -5,9 +5,9 @@ CLANG_INSTALL_DIR="/usr" \
 OPTS+=" -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_BUILD_TYPE=Release \
         -DSHIBOKEN_PYTHON_LIBRARIES=$(pkgconf python3-embed --libs) \
-        -DBUILD_TESTS=ON \
+        -DBUILD_TESTS=OFF \
         -DFORCE_LIMITED_API=no \
-        -DNO_QT_TOOLS=no"
+        -DNO_QT_TOOLS=yes"
 
 cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
 cmake --build $MODULE-$VERSION &&
