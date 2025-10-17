@@ -2,6 +2,7 @@ depends ninja
 depends zlib
 depends pcre2
 depends brotli
+depends md4c
 depends %X
 depends xinput
 depends xcb-proto
@@ -26,18 +27,15 @@ depends xdg-utils
 depends double-conversion
 depends libproxy
 
-optional_depends libb2        "-DFEATURE_system_libb2=ON"      "-DFEATURE_system_libb2=OFF"      "use system provided libb2" y
-optional_depends freetype2    "-DFEATURE_system_freetype=ON"   "-DFEATURE_system_freetype=OFF"   "use system provided freetype, else use qt provided freetype" "y"
-optional_depends harfbuzz     "-DFEATURE_system_harfbuzz=ON"   "-DFEATURE_system_harfbuzz=OFF"   "use system provided harfbuzz for text shaping, else use qt provided harfbuzz" "y"
-optional_depends dbus         "-DFEATURE_dbus_linked=ON"       "-DFEATURE_dbus=OFF"              "for QtDBus module support" "y"
-optional_depends %OSSL        "-DFEATURE_openssl_linked=ON"    "-DFEATURE_openssl=OFF"           "for Secure Sockets support" "y"
-optional_depends cups         "-DFEATURE_cups=ON"              "-DFEATURE_cups=OFF"              "for printing support, needed by kdelibs"
-optional_depends lksctp-tools "-DFEATURE_sctp=ON"              "-DFEATURE_sctp=OFF"              "for SCTP protocol support" y
-optional_depends icu4c        "-DFEATURE_icu=ON"               "-DFEATURE_icu=OFF"               "for International Components for Unicode support" y
-optional_depends sqlite       "-DFEATURE_system_sqlite=ON"     "-DFEATURE_system_sqlite=OFF"     "use system provided sqlite, ${PROBLEM_COLOR}Say no for now${DEFAULT_COLOR}" y
-optional_depends %MYSQL       "-DFEATURE_sql_mysql=ON"         "-DFEATURE_sql_mysql=OFF"         "for mysql database support" n
-optional_depends postgresql   "-DFEATURE_sql_psql=ON"          "-DFEATURE_sql_psql=OFF"          "for postgresql database support" n
-optional_depends unixODBC     "-DFEATURE_sql_odbc=ON"          "-DFEATURE_sql_odbc=OFF"          "for unixODBC support" n
-
-optional_depends md4c "" "" "for markdown support"
-
+optional_depends libb2        "-DFEATURE_system_libb2=ON"      "-DFEATURE_system_libb2=OFF"      "use system provided libb2"
+optional_depends freetype2    "-DFEATURE_system_freetype=ON"   "-DFEATURE_system_freetype=OFF"   "use system provided freetype, else use qt provided freetype"
+optional_depends harfbuzz     "-DFEATURE_system_harfbuzz=ON"   "-DFEATURE_system_harfbuzz=OFF"   "use system provided harfbuzz for text shaping, else use qt provided harfbuzz"
+optional_depends dbus         "-DFEATURE_dbus_linked=ON"       "-DFEATURE_dbus=OFF"              "for QtDBus module support"
+optional_depends %OSSL        "-DFEATURE_openssl_linked=ON"    "-DFEATURE_openssl=OFF"           "for Secure Sockets support"
+optional_depends cups         "-DFEATURE_cups=ON"              "-DFEATURE_cups=OFF"              "for printing support, needed by plasma/kde apps"
+optional_depends lksctp-tools "-DFEATURE_sctp=ON"              "-DFEATURE_sctp=OFF"              "for SCTP protocol support"
+optional_depends icu4c        "-DFEATURE_icu=ON"               "-DFEATURE_icu=OFF"               "for International Components for Unicode support,${PROBLEM_COLOR}Recommended ${DEFAULT_COLOR}" y
+optional_depends sqlite       "-DFEATURE_system_sqlite=ON"     "-DFEATURE_system_sqlite=OFF"     "use system provided sqlite"
+optional_depends %MYSQL       "-DFEATURE_sql_mysql=ON"         "-DFEATURE_sql_mysql=OFF"         "for mysql database support"
+optional_depends postgresql   "-DFEATURE_sql_psql=ON"          "-DFEATURE_sql_psql=OFF"          "for postgresql database support"
+optional_depends unixODBC     "-DFEATURE_sql_odbc=ON"          "-DFEATURE_sql_odbc=OFF"          "for unixODBC support"
