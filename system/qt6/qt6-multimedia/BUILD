@@ -13,7 +13,6 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=$MODULE_PREFIX \
         -DINSTALL_LIBEXECDIR=qt6 \
         -DINSTALL_LIBDIR=qt6 \
-        -DFEATURE_ffmpeg=OFF \
         -DINSTALL_DOCDIR=share/doc/qt6 \
         -DINSTALL_ARCHDATADIR=qt6 \
         -DINSTALL_DATADIR=share/qt6 \
