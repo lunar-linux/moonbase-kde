@@ -1,3 +1,8 @@
+depends libXcomposite
+depends libxkbfile
+depends libXrandr
+depends libXdamage
+depends pciutils
 depends gn
 depends cups
 depends gperf
@@ -6,12 +11,7 @@ depends webrtc-audio-processing
 depends python-html5lib
 depends python-six
 depends python-webencodings
-depends pciutils
 depends libevent
-depends libXcomposite
-depends libxkbfile
-depends libXrandr
-depends libXdamage
 depends libxslt
 depends minizip
 depends nss
