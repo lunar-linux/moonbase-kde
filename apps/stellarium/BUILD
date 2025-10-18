@@ -13,6 +13,7 @@ OPTS+=" -DCMAKE_CXX_STANDARD=17 \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DBUILD_SHARED_LIBS=ON \
         -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -DENABLE_XLSX=OFF \
         -Wno-dev"
 
 cmake -S . -B $MODULE-build -G Ninja $OPTS &&

@@ -1,15 +1,14 @@
           MODULE=stellarium
-         VERSION=25.2
+         VERSION=25.3
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=https://github.com/Stellarium/stellarium/releases/download/v${VERSION}/
-      SOURCE_VFY=sha256:afb43e95438aef5509afd6ba197daf30b52607cac16888332d9810ba12209486
+      SOURCE_VFY=sha256:5a229d1d0cc12d15d2a9a17fd53f52be819268a929cbaeb9077c1d8840082cda
         WEB_SITE=http://stellarium.free.fr
          ENTERED=20040420
-         UPDATED=20250813
+         UPDATED=20251013
            SHORT="Stellarium astronomy software"
 
 cat << EOF
-Stellarium renders 3D photo-realistic skies in real time. With
-stellarium, you really see what you can see with your eyes,
-binoculars or a small telescope.
+Stellarium renders 3D photo-realistic skies in real time. With stellarium, you
+really see what you can see with your eyes,binoculars or a small telescope.
 EOF
