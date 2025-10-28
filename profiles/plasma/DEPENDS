@@ -1,3 +1,6 @@
+depends aurorae
+depends breeze
+depends breeze-gtk
 depends kdecoration
 depends libkscreen
 depends libksysguard
@@ -5,8 +8,6 @@ depends libplasma
 depends plasma-activities
 depends plasma5support
 depends kwayland
-depends breeze
-depends breeze-gtk
 depends plasma-activities-stats
 depends layer-shell-qt
 depends kscreenlocker
@@ -48,7 +49,6 @@ depends kdeplasma-addons
 depends kpipewire
 depends plasma-thunderbolt
 
-optional_depends aurorae "" "" "for kwin theme engine support"
 optional_depends wacomtablet "" "" "for table drawing device support"
 optional_depends plasma-nm "" "" "plasma app to access network manager"
 optional_depends plasma-firewall "" "" "plasma app to access system firewall"
