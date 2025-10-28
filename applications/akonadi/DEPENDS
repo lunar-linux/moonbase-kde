@@ -35,4 +35,4 @@ optional_depends postgresql \
 optional_depends sqlite \
                  "-DDATABASE_BACKEND=SQLITE"  \
                  "" \
-                 "for SQLite database support (Yes to install in Qt5 Plugin Dir)${PROBLEM_COLOR} Not recommended and if you said yes here you should have said no to %MYSQL and Postgresql${QUERY_COLOR}" n
+                 "for SQLite database support (Yes to install in Qt5 Plugin Dir)${PROBLEM_COLOR} If yes here, you should have said no to %MYSQL and Postgresql${QUERY_COLOR}" n
