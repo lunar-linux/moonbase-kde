@@ -1,9 +1,5 @@
 source /etc/profile.d/qt6.rc &&
 
-#export CPPFLAGS="-Wno-error"
-#export CFLAGS="-Wno-error"
-#export CXXFLAGS="-Wno-error"
-
 OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DENABLE_LIBORIGIN=OFF \
