@@ -1,19 +1,19 @@
           MODULE=mlt-7
-         VERSION=7.32.0
+         VERSION=7.34.1
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/mltframework/mlt/archive/refs/tags/v$VERSION.tar.gz
-      SOURCE_VFY=sha256:ae3ba3b68e1d761633913d9d9d3775b1130a7c2640d17dc4de3bf619e5a0c3d9
+      SOURCE_VFY=sha256:41a5536755d41f39d1d613f13aff75083bb6687f2da359d3fef0ea776e3cde87
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/mlt-$VERSION
         WEB_SITE=http://www.mltframework.org
         REPLACES=mlt
          ENTERED=20210623
-         UPDATED=20250508
+         UPDATED=20251105
            SHORT="An open source multimedia framework"
 
 cat << EOF
-MLT is an open source multimedia framework, designed and developed for
-television broadcasting. It provides a toolkit for broadcasters, video editors,
-media players, transcoders, web streamers and many more types of applications.
-The functionality of the system is provided via an assortment of ready to use
-tools, xml authoring components, and an extendible plug-in based API.
+MLT is an open source multimedia framework, designed and developed for television
+broadcasting. It provides a toolkit for broadcasters, video editors, media players,
+transcoders, web streamers and many more types of applications. The functionality
+of the system is provided via an assortment of ready to use tools, xml authoring
+components, and an extendible plug-in based API.
 EOF
