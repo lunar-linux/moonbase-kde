@@ -11,7 +11,10 @@ depends spatialindex
 depends gdal
 depends postgis
 depends fcgi
-depends qt5
+depends qt6-base
 depends qtkeychain
-depends qscintilla2
+depends qscintilla2-qt6
 depends qwt-6
+depends qca-qt6
+
+optional_depends qt6-webengine "-DWITH_QTWEBENGINE=ON" "-DWITH_QTWEBENGINE=OFF" "for web related support"
