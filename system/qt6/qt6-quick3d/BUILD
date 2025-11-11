@@ -1,5 +1,8 @@
 source /etc/profile.d/qt6.rc &&
 
+# Adjust version for current assimp
+sedit 's:5.1.6:6:g' src/plugins/assetimporters/configure.cmake &&
+
 #Generating .rcc/qmlcache/qtgraphicaleffectsplugin_ColorOverlay_qml.cpp
 #Detected locale "en_US" with character encoding "ISO-8859-1", which is not UTF-8.
 #Qt depends on a UTF-8 locale, and has switched to "en_US.UTF-8" instead.
