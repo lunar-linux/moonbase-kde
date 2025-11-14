@@ -1,7 +1,8 @@
+export PYTHONDONTWRITEBYTECODE=1 &&
+
 source /etc/profile.d/qt6.rc &&
 
-make -f misc/Makefile all &&
+python -m build --wheel --no-isolation &&
 
 prepare_install &&
-
-make -f misc/Makefile PREFIX=/usr install
+python -m installer --destdir=/ dist/*.whl
