@@ -1,3 +1,3 @@
 mquery SYS_PROXY     "Use system network proxies by default?" n "-DFEATURE_system_proxies=ON" "-DFEATURE_system_proxies=OFF"
 mquery USE_JOURNALD  "Send logging output to journald?" y "-DFEATURE_journald=ON" "-DFEATURE_journald=OFF"
-mquery USE_CCACHE    "Use ccache?" y "-DQT_USE_CCACHE=ON" "-DQT_USE_CCACHE=OFF"
+mquery USE_CCACHE    "Use ccache?" n "-DQT_USE_CCACHE=ON" "-DQT_USE_CCACHE=OFF"
