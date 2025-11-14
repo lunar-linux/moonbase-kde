@@ -1,11 +1,11 @@
           MODULE=frameworkintegration
-         VERSION=6.19.0
+         VERSION=6.20.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:fb6bc12b342b66811bd52812448d8a67e1fe6e0d37f1c66c54168852147e59a4
+      SOURCE_VFY=sha256:1ee61c92c1214159877c0e113a92358724f9ac3ee57710a15038c85dc4fdc7d8
         WEB_SITE=https://projects.kde.org/projects/frameworks/frameworkintegration
          ENTERED=20150205
-         UPDATED=20251012
+         UPDATED=20251114
            SHORT="integration of Qt applications when running on a KDE Plasma workspace"
 
 cat << EOF
