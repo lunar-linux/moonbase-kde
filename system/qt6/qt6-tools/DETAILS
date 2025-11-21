@@ -1,13 +1,13 @@
           MODULE=qt6-tools
-         VERSION=6.10.0
+         VERSION=6.10.1
           SOURCE=qttools-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:d86d5098cf3e3e599f37e18df477e65908fc8f036e10ea731b3469ec4fdbd02a
+      SOURCE_VFY=sha256:8148408380ffea03101a26305c812b612ea30dbc07121e58707601522404d49b
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qttools-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20211101
-         UPDATED=20251010
+         UPDATED=20251120
            SHORT="cross-platform application and UI framework"
 cat << EOF
 A cross-platform application and UI framework (Development Tools, QtHelp).
