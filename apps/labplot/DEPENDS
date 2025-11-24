@@ -15,6 +15,6 @@ optional_depends cfitsio  "-DENABLE_FITS=ON"    "-DENABLE_FITS=OFF"    "for FITS
 optional_depends cantor   "-DENABLE_CANTOR=ON"  "-DENABLE_CANTOR=OFF"  "for additional math/computing support"
 optional_depends libcerf  "-DENABLE_LIBCERF=ON" "-DENABLE_LIBCERF=OFF" "for complex error function support"
 optional_depends matio    "-DENABLE_MATIO=ON"   "-DENABLE_MATIO=OFF"   "for Matlab file support"
-optional_depends eigen3   "-DENABLE_EIGEN3=ON"  "-DENABLE_EIGEN3=OFF"  "for fast baseline removal"
+optional_depends eigen    "-DENABLE_EIGEN3=ON"  "-DENABLE_EIGEN3=OFF"  "for fast baseline removal"
 optional_depends liborcus "-DENABLE_ORCUS=ON"   "-DENABLE_ORCUS=OFF"   "for importing ODS files"
 optional_depends netcdf   "-DENABLE_NETCDF=ON"  "-DENABLE_NETCDF=OFF"  "for CDF data format support"

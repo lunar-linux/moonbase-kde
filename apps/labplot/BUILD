@@ -5,9 +5,12 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DENABLE_LIBORIGIN=OFF \
         -DLOCAL_DBC_PARSER=OFF \
         -DLOCAL_VECTOR_BLF=OFF \
-        -DBUILD_STATIC=OFF \
         -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
         -Wno-dev"
 
-default_cmake_build
-  
+
+cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
+cmake --build $MODULE-$VERSION &&
+
+prepare_install
+cmake --install $MODULE-$VERSION
