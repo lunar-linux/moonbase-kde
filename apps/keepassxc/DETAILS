@@ -1,12 +1,12 @@
           MODULE=keepassxc
-         VERSION=2.7.10
+         VERSION=2.7.11
           SOURCE=$MODULE-$VERSION-src.tar.xz
       SOURCE_URL=https://github.com/keepassxreboot/keepassxc/releases/download/$VERSION/
-      SOURCE_VFY=sha256:5ce76d6440986c24842585f019d5f3cadc166fa71fc911a4fe97b8bbc4819dfa
+      SOURCE_VFY=sha256:ce76b02d396369726aaf695bb46b79c0cc41a0c4f9ec806bde1233cb22e6ef62
    MODULE_PREFIX=${KDE_PREFIX:-/usr}
         WEB_SITE=https://keepassxc.org/
          ENTERED=20190324
-         UPDATED=20250304
+         UPDATED=20251124
            SHORT="A port of Keepass password manager"
 
 cat << EOF
