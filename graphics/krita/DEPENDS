@@ -20,12 +20,12 @@ depends kio
 depends openexr
 depends imath
 depends poppler
-depends eigen3
+depends eigen
 depends Vc
-depends PyQt5
+depends pyqt6
 depends extra-cmake-modules
 depends kitemmodels
-depends quazip
+depends quazip-qt6
 
 optional_depends libheif "" "" "for ISO/IEC 23008-12:2017 HEIF file format decoder and encoder support"
-optional_depends kseexpr "" "" "for expression evaluation support"
+#optional_depends kseexpr "" "" "for expression evaluation support"

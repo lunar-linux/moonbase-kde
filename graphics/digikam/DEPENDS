@@ -6,11 +6,13 @@ depends jasper
 depends libusb
 depends expat
 depends exiv2
-depends eigen3
+depends eigen
 depends gphoto2
 depends libksane
 depends kfilemetadata
 depends Image-ExifTool
+
+optional_depends ccache "-DBUILD_WITH_CCACHE=ON" "-DBUILD_WITH_CCACHE=OFF" "Use ccache while building"
 
 optional_depends qt6-webengine "-DENABLE_QWEBENGINE=ON" "-DENABLE_QWEBENGINE=OFF" "for webengine support"
 
