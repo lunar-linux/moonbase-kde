@@ -1,9 +1,13 @@
+sed -e 's|Eigen3 3.2.2|Eigen3|' -i CMakeLists.txt &&
+
 source /etc/profile.d/qt6.rc &&
 export LANG='en_US.UTF-8'
 
 OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_BUILD_TYPE=Release \
+        -DBUILD_TESTING=OFF \
+        -DBUILD_doc=OFF \
         -Wno-dev"
 
 cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&

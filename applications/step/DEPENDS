@@ -1,9 +1,11 @@
-depends gsl
-depends libqalculate
-depends eigen3
+depends cln
+depends eigen
 depends extra-cmake-modules
 depends kcrash
 depends kconfig
 depends kiconthemes
 depends knewstuff
 depends kmplot
+
+optional_depends gsl          "-DSTEPCORE_WITH_GSL=ON"   "-DSTEPCORE_WITH_GSL=OFF"   "for numerical C and C++ support"
+optional_depends qalculate-qt "-DSTEP_WITH_QALCULATE=ON" "-DSTEP_WITH_QALCULATE=OFF" "for unit conversion support"
