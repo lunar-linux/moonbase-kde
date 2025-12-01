@@ -1,3 +1,7 @@
 default_pre_build &&
 
 cp $SOURCE_CACHE/$SOURCE2 $SOURCE_DIRECTORY/kstars/ekos/align
+
+sed -e 's|DATA_INSTALL_DIR|CMAKE_INSTALL_DATADIR|g' -i kstars/data/*/CMakeLists.txt
+
+sedit '21i #include <cassert>' kstars/ekos/guide/internalguide/MPI_IS_gaussian_process/src/gaussian_process.cpp
