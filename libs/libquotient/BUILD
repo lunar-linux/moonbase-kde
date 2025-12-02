@@ -7,8 +7,8 @@ OPTS+=" -DCMAKE_INSTALL_PREFIX=/usr \
         -DBUILD_SHARED_LIBS=ON \
         -Wno-dev"
 
-cmake -B $MODULE-qt6 -S . $OPTS &&
-cmake --build $MODULE-qt6
+cmake -B $MODULE-$VERSION -S . $OPTS &&
+cmake --build $MODULE-$VERSION &&
 
 prepare_install &&
-cmake --install $MODULE-qt6
+cmake --install $MODULE-$VERSION
