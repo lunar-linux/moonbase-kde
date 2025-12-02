@@ -1,0 +1,12 @@
+--- luminance-hdr-2.6.1.1/src/TonemappingOperators/CMakeLists.txt.orig  2025-09-21 10:53:04.872133204 +0200
++++ luminance-hdr-2.6.1.1/src/TonemappingOperators/CMakeLists.txt       2025-09-21 10:53:29.605873807 +0200
+@@ -24,7 +24,7 @@
+ FILE(GLOB FILES_CPP *.cpp)
+ 
+ ADD_LIBRARY(pfstmo STATIC ${TM_LIBPFS_H} ${TM_LIBPFS_CPP} ${FILES_H} ${FILES_CPP})
+-TARGET_LINK_LIBRARIES(pfstmo Qt5::Core Qt5::Gui Qt5::Widgets)
++TARGET_LINK_LIBRARIES(pfstmo Qt5::Core Qt5::Gui Qt5::Widgets Eigen3::Eigen)
+ 
+ SET(LUMINANCE_MODULES_GUI ${LUMINANCE_MODULES_GUI} pfstmo PARENT_SCOPE)
+ SET(LUMINANCE_MODULES_CLI ${LUMINANCE_MODULES_CLI} pfstmo PARENT_SCOPE)
+ 

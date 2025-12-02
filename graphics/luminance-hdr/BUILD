@@ -5,6 +5,7 @@ export CXXFLAGS="-std=gnu++20 $CXXFLAGS"
 OPTS+=" -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_BUILD_TYPE=Release \
+        -DWITH_HELPBROWSER=OFF \
         -Wno-dev"
 
 cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&

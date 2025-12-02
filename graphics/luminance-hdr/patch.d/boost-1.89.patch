@@ -1,0 +1,12 @@
+diff -ru luminance-hdr-2.6.1.1.orig/CMakeLists.txt luminance-hdr-2.6.1.1/CMakeLists.txt
+--- luminance-hdr-2.6.1.1.orig/CMakeLists.txt	2025-10-17 19:52:25.718783255 +0200
++++ luminance-hdr-2.6.1.1/CMakeLists.txt	2025-10-17 19:52:41.853159509 +0200
+@@ -176,7 +176,7 @@
+ IF(WIN32)
+     SET(Boost_USE_STATIC_LIBS ON)
+ ENDIF()
+-FIND_PACKAGE(Boost REQUIRED COMPONENTS program_options thread chrono system date_time)
++FIND_PACKAGE(Boost REQUIRED COMPONENTS program_options thread chrono date_time)
+ INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
+ 
+ FIND_PACKAGE(Exiv2 REQUIRED)
