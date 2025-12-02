@@ -3,6 +3,7 @@ export LANG='en_US.UTF-8'
 
 OPTS+=" -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_LIBDIR=lib \
         -DBUILD_DOC=OFF \
         -Wno-dev"
 
