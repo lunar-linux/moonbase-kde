@@ -15,7 +15,7 @@ OPTS+=" -DCMAKE_INSTALL_PREFIX=/usr\
         -DMOD_SPATIALAUDIO=OFF \
         -DMOD_RESAMPLE=OFF \
         -DSWIG_CSHARP=OFF \
-        -DMOD_SOX=OFF \
+        -DBUILD_TESTS_WITH_QT6=OFF \
         -Wno-dev"
 
 cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
