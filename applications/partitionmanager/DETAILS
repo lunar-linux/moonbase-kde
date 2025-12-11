@@ -1,12 +1,12 @@
           MODULE=partitionmanager
-         VERSION=25.08.3
+         VERSION=25.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:d7d1db089219833a95cedd32a77859c738aecea87ab2673aca6e6809a1f7b171
+      SOURCE_VFY=sha256:3ae60304f7383071348a596e7f2b0029635bf568654f576e13fbca025695a2fa
    MODULE_PREFIX=${KDE_INSTALL_DIR:-/usr}
         WEB_SITE=https://apps.kde.org/partitionmanager/
          ENTERED=20250703
-         UPDATED=20251106
+         UPDATED=20251211
            SHORT="manage the disks, partitions, and file systems"
 
 cat << EOF
