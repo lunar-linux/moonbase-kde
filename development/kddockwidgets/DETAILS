@@ -1,0 +1,16 @@
+          MODULE=kddockwidgets
+         VERSION=2.4.0
+          SOURCE=$MODULE-$VERSION.tar.gz
+      SOURCE_URL=https://github.com/KDAB/KDDockWidgets/releases/download/v$VERSION/
+      SOURCE_VFY=sha256:51dbf24fe72e43dd7cb9a289d3cab47112010f1a2ed69b6fc8ac0dff31991ed2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/KDDockWidgets-$VERSION
+   MODULE_PREFIX=${KDE_INSTALL_DIR:-/usr}
+        WEB_SITE=https://github.com/KDAB/KDDockWidgets
+         ENTERED=20251211
+         UPDATED=20251211
+           SHORT="Qt dock widget library written by KDAB"
+
+cat << EOF
+KDDockWidgets is a Qt dock widget library written by KDAB, suitable for replacing
+QDockWidget and implementing advanced functionalities missing in Qt.
+EOF
