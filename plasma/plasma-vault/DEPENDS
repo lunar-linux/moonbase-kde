@@ -8,6 +8,9 @@ depends kio
 depends kwidgetsaddons
 depends kiconthemes
 
+#Required at runtime to create and unlock Vaults
+depends gocryptfs
+
 # Not much use without any encryption systems
 #depends encfs # Don't use for now, see https://defuse.ca/audits/encfs.htm
 depends cryfs
