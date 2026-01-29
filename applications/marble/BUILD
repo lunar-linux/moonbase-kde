@@ -1,12 +1,14 @@
 source /etc/profile.d/qt6.rc &&
 export LANG='en_US.UTF-8'
 
+sedit 's:mkspecs/modules:qt6/mkspecs/modules:' src/lib/marble/CMakeLists.txt &&
 sedit '52i Exec=/usr/bin/marble' src/plugins/runner/kml/marble_thumbnail_kmz.desktop &&
 
 OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
+        -DMARBLE_PRI_INSTALL_USE_QT_SYS_PATHS=/usr/lib/qt6/ \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_BUILD_TYPE=Release \
-        -DBUILD_MARBLE_TOOLS=ON         \
+        -DBUILD_MARBLE_TOOLS=YES     \
         -DBUILD_MARBLE_EXAMPLES=OFF     \
         -DBUILD_MARBLE_TESTS=OFF        \
         -DBUILD_WITH_QT6=ON \
