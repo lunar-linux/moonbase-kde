@@ -6,6 +6,6 @@ depends karchive
 
 optional_depends libheif "-DKIMAGEFORMATS_HEIF=ON" "-DKIMAGEFORMATS_HEIF=OFF" "for HEIF format support"
 optional_depends libjxl  "-DKIMAGEFORMATS_JXL=ON"  "-DKIMAGEFORMATS_JXL=OFF"  "for JPEG XL encoder and decoder support"
-optional_depends jxrlib  "-DKIMAGEFORMATS_JXR=ON"  "KIMAGEFORMATS_JXR=OFF"    "for jpegxr support"
+optional_depends jxrlib  "-DKIMAGEFORMATS_JXR=ON"  "-DKIMAGEFORMATS_JXR=OFF"    "for jpegxr support"
 
 optional_depends libavif "" "" "for avif image support"
