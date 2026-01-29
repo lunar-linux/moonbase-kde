@@ -29,5 +29,5 @@ _pythonpath=`python -c "from sysconfig import get_path; print(get_path('platlib'
 cp -r PySide6.egg-info $_pythonpath &&
 
 #Fix pathing for tyepsystems
-sedit 's:/typesystems:/share/PySide6/typesystems:' /usr/lib/cmake/PySide6/PySide6Config.cpython-312-x86_64-linux-gnu.cmake
+sedit 's|/typesystems|/share/PySide6/typesystems|' /usr/lib/cmake/PySide6/PySide6Config.cpython-312-x86_64-linux-gnu.cmake
 sedit 's:/glue:/share/PySide6/glue:' /usr/lib/cmake/PySide6/PySide6Config.cpython-312-x86_64-linux-gnu.cmake
