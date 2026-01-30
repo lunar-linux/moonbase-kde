@@ -1,13 +1,13 @@
           MODULE=qt6-languageserver
-         VERSION=6.10.1
+         VERSION=6.10.2
           SOURCE=qtlanguageserver-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:3360526b4f4d556673b31e29a49e15d02da52d5eaa53b0204d56a0ba160a556c
+      SOURCE_VFY=sha256:9a043f2c84b0b470065fc7a954dc4ff0388db3e1b2c457c3d69670baecc40d53
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtlanguageserver-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20220910
-         UPDATED=20251120
+         UPDATED=20260129
            SHORT="implementation of Language Server Protocol"
 cat << EOF
 Qt6 implementation of Language Server Protocol.

@@ -1,13 +1,13 @@
           MODULE=qt6-wayland
-         VERSION=6.10.1
+         VERSION=6.10.2
           SOURCE=qtwayland-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:49bf6db800227a6b2c971f4c5d03dd1e81297e7ffb296ce4a96437304f27cb13
+      SOURCE_VFY=sha256:391998eb432719df26a6a67d8efdc67f8bf2afdd76c1ee3381ebff4fe7527ee2
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtwayland-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20211102
-         UPDATED=20251120
+         UPDATED=20260129
            SHORT="wayland plugin compositor for qt6"
 cat << EOF
 A wayland plugin and compositor for Qt6.
