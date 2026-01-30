@@ -9,11 +9,11 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DQT_BUILD_TESTS_BY_DEFAULT=OFF \
         -DQT_UNITY_BUILD=OFF \
         -DQT_INSTALL_EXAMPLES_SOURCES_BY_DEFAULT=OFF \
-        -DQT_FEATURE_webengine_system_libevent=ON \
         -DQT_FEATURE_webengine_system_icu=ON \
         -DQT_FEATURE_webengine_webrtc_pipewire=ON    \
         -DQT_FEATURE_webengine_proprietary_codecs=ON \
         -DQT_FEATURE_webengine_kerberos=ON \
+        -DFEATURE_webengine_system_minizip=OFF \
         -DCMAKE_TOOLCHAIN_FILE=/usr/lib/qt6/cmake/Qt6/qt.toolchain.cmake \
         -Wno-dev"
 
