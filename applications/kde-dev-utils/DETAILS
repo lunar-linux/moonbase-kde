@@ -1,12 +1,12 @@
           MODULE=kde-dev-utils
-         VERSION=25.12.1
+         VERSION=25.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:d2277dcbfd8b97a069a4a5dd74cdb17fda60d41552722bd38f724b8dffb3ddf9
+      SOURCE_VFY=sha256:4d0a3b6a7747bbab936d48c75155eaa5d6259478bd84e25acbcab69452ecbf63
    MODULE_PREFIX=${KDE_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/projects/kde/kdesdk/kde-dev-utils
          ENTERED=20130418
-         UPDATED=20260108
+         UPDATED=20260205
            SHORT="Small utilities for developers using KDE/Qt libs/frameworks"
 
 cat << EOF

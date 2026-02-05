@@ -1,12 +1,12 @@
           MODULE=kpmcore
-         VERSION=25.12.1
+         VERSION=25.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:18d1d46d1c866ed93128f58ee9850c993bc0ab375cc27ca1cd4ec20d8fcdc62b
+      SOURCE_VFY=sha256:3220fe4b3095b2df6d2381f8adf3dd2f50af085ebf3bdf8dee97f7c3db7b4933
    MODULE_PREFIX=${KDE_INSTALL_DIR:-/usr}
         WEB_SITE=https://apps.kde.org/partitionmanager/
          ENTERED=20250703
-         UPDATED=20260108
+         UPDATED=20260205
            SHORT="library for managing partitions"
 
 cat << EOF
