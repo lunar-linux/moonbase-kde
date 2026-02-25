@@ -1,12 +1,12 @@
           MODULE=kwayland
-         VERSION=6.5.5
+         VERSION=6.6.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://download.kde.org/stable/plasma/$VERSION/
-      SOURCE_VFY=sha256:5db0105edecec7f8b429940be1d26dffe2d9dfbb0d967e9e16bddb0a22cfd397
+      SOURCE_VFY=sha256:cc26e022a3090babacd0ae8ec146d1bd42df91eb8cb76a407b072e9cdd836017
         WEB_SITE=https://kde.org/plasma-desktop/
         REPLACES=kwayland-frameworks
          ENTERED=20151120
-         UPDATED=20260113
+         UPDATED=20260225
            SHORT="Qt-style Client and Server library wrapper for the Wayland libraries"
 
 cat << EOF
