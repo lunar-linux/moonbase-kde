@@ -8,7 +8,7 @@ OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
         -Wno-dev"
 
 cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
-cmake --build $MODULE-$VERSION &&
+cmake --build $MODULE-$VERSION -j$(nproc) &&
 
 prepare_install
 cmake --install $MODULE-$VERSION
