@@ -1,12 +1,12 @@
           MODULE=digikam
-         VERSION=8.8.0
+         VERSION=9.0.0
           SOURCE=digiKam-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/$MODULE/${VERSION%-*}/
-      SOURCE_VFY=sha256:db3a1b6e3c73f903e3dff8003f52455dd2ecd198cb66534fee4abbd0bdeb6b9a
+      SOURCE_VFY=sha256:7680ea024fe00e10c96090e45fe4b7b4a1c3993bc5e87576eddd4e0eefd08ef3
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-${VERSION%-*}
         WEB_SITE=http://www.digikam.org/
          ENTERED=20090318
-         UPDATED=20251018
+         UPDATED=20260304
            SHORT="KDE version of digikam"
 
 cat << EOF
