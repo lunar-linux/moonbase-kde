@@ -1,12 +1,12 @@
           MODULE=ffmpegthumbs
-         VERSION=25.12.2
+         VERSION=25.12.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:18059809baa8d2525b20988f9176d010ae8758703917c6cafd8199be965bc446
+      SOURCE_VFY=sha256:eeb38acc65a955c16532b83a20bca08fce3e484674dbb0ccaecae44277ef8de8
    MODULE_PREFIX=${KDE_INSTALL_DIR:-/usr}
         WEB_SITE=http://www.kde.org/applications/multimedia/dragonplayer/
          ENTERED=20120801
-         UPDATED=20260205
+         UPDATED=20260305
            SHORT="video thumbnailer using ffmpeg"
 
 cat << EOF
