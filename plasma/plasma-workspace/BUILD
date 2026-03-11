@@ -10,6 +10,10 @@ OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
         -DBUILD_WITH_QT6=ON \
         -Wno-dev"
 
+if in_depends $MODULE kio-fuse; then
+  OPTS+=" -DKIOFuse_PATH=/usr/lib/kio-fuse"
+fi &&
+
 cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
 cmake --build $MODULE-$VERSION &&
 
