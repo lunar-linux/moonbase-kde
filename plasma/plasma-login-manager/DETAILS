@@ -1,0 +1,14 @@
+          MODULE=plasma-login-manager
+         VERSION=6.6.2
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/plasma/$VERSION/
+      SOURCE_VFY=sha256:adb6a2740e5ebc3bb138d55a58d43e3bf774b4464088942717af8aa957702f5e
+        WEB_SITE=https://kde.org/plasma-desktop/
+         ENTERED=20260225
+         UPDATED=20260303
+           SHORT="forked from SDDM"
+
+cat << EOF
+Plasma Login provides a display manager for KDE Plasma, forked from SDDM and with an new
+frontend providing a greeter, wallpaper plugin integration and System Settings module (KCM).
+EOF
