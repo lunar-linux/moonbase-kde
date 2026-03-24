@@ -1,14 +1,14 @@
-          MODULE=qt6-connectivity
+          MODULE=qt6-canvaspainter
          VERSION=6.11.0
           SOURCE=qtconnectivity-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:c0f0c124c849ef811a873bf1a0123e3feabac6e9ca3ea7e7ac7a40543ec6193a
+      SOURCE_VFY=sha256:545affe9cd65672a11e735a4b7959067f3c020c73456dd039236f38060fdafbe
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtconnectivity-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
-         ENTERED=20211102
+         ENTERED=20260324
          UPDATED=20260324
-           SHORT="access to Bluetooth hardware"
+           SHORT="Accelerated 2d painting solution"
 cat << EOF
-Provides access to Bluetooth hardware.
+Accelerated 2D painting solution for Qt Quick and QRhi-based render targets.
 EOF

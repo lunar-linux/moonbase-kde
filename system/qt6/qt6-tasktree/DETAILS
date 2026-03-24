@@ -1,0 +1,14 @@
+          MODULE=qt6-tasktree
+         VERSION=6.11.0
+          SOURCE=qttasktree-everywhere-src-$VERSION.tar.xz
+      SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
+      SOURCE_VFY=sha256:597aa25e7c4d6f4f82c9d57e5d855d509b8ffe9ddae8a6442fb1f0bff1a8b34f
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/qttasktree-everywhere-src-$VERSION
+   MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
+        WEB_SITE=http://qt-project.org
+         ENTERED=20260324
+         UPDATED=20260324
+           SHORT="generic framework for automatic management of asynchronous tasks"
+cat << EOF
+A generic framework for automatic management of asynchronous tasks.
+EOF
