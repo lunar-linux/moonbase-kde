@@ -11,5 +11,3 @@ cmake --build $MODULE-$VERSION &&
 
 prepare_install
 cmake --install $MODULE-$VERSION
-
-cp src/icons/org.kde.dolphin.svg /usr/share/icons/hicolor/scalable/apps/
