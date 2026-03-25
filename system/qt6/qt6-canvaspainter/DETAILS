@@ -1,9 +1,9 @@
           MODULE=qt6-canvaspainter
          VERSION=6.11.0
-          SOURCE=qtconnectivity-everywhere-src-$VERSION.tar.xz
+          SOURCE=qtcanvaspainter-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
       SOURCE_VFY=sha256:545affe9cd65672a11e735a4b7959067f3c020c73456dd039236f38060fdafbe
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtconnectivity-everywhere-src-$VERSION
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtcanvaspainter-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20260324
