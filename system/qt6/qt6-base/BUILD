@@ -30,11 +30,12 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON \
         -DFEATURE_libproxy=ON \
         -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
-        -Wno-dev \
         -DFEATURE_no_direct_extern_access=ON \
         -DQT_FEATURE_testlib=ON \
         -DBUILD_WITH_PCH=OFF \
-        -DFEATURE_mtdev=OFF"
+        -DFEATURE_mtdev=OFF \
+        -DFEATURE_mimetype_database=OFF \
+        -Wno-dev"
 
 cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
 cmake --build $MODULE-$VERSION &&
