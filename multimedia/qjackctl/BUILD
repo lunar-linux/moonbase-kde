@@ -1,6 +1,6 @@
 export LANG='en_US.UTF-8'
 
-. /etc/profile.d/qt5.rc &&
+. /etc/profile.d/qt6.rc &&
 
 OPTS+=" -Wno_dev"
 
