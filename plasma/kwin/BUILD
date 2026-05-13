@@ -1,6 +1,3 @@
-# A temp thing
-sedit '488,489d' CMakeLists.txt &&
-
 #The .clang-format file already exists.  Please remove it in order to use
 #the file provided by ECM
 rm .clang-format &&

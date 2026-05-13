@@ -1,6 +1,3 @@
-# Its a temp thing
-sedit '488d' CMakeLists.txt &&
-
 source /etc/profile.d/qt6.rc &&
 export LANG='en_US.UTF-8'
 
