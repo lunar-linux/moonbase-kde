@@ -26,7 +26,4 @@ prepare_install &&
 # Remove point to the src build direcotry
 find $MODULE-$VERSION/qt6 -type f -name '*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
 
-cmake --install $MODULE-$VERSION &&
-
-# https://qt-project.atlassian.net/browse/QTBUG-145382
-rm /usr/lib/qt6/cmake/Qt6/FindRust.cmake
+cmake --install $MODULE-$VERSION
