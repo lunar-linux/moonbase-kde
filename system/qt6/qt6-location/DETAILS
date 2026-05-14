@@ -1,13 +1,13 @@
           MODULE=qt6-location
-         VERSION=6.11.0
+         VERSION=6.11.1
           SOURCE=qtlocation-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:89b8386a8ae9e0b40a43fad398ac344f93a3b0d22f09bec4631f25d79135abef
+      SOURCE_VFY=sha256:3791ce77299e6f600a593d0fbfa5bd32fbcfc2d16104782b84acc489e382e41b
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtlocation-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20240601
-         UPDATED=20260324
+         UPDATED=20260513
            SHORT="Provides a set of easy to use chart components"
 cat << EOF
 Provides a set of easy to use chart components.

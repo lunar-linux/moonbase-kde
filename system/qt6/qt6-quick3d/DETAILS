@@ -1,13 +1,13 @@
           MODULE=qt6-quick3d
-         VERSION=6.11.0
+         VERSION=6.11.1
           SOURCE=qtquick3d-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:b42000bb33e55b6c642657eb7022ee1f74f9e19cf64d52e85d41763f567b8994
+      SOURCE_VFY=sha256:c76b85de3f8aa2a4bee64987acfef560675c1b378b92076c7c6264613e5b456f
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtquick3d-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20211104
-         UPDATED=20260324
+         UPDATED=20260513
            SHORT="Qt module and API for defining 3D content in Qt Quick"
 cat << EOF
 Qt module and API for defining 3D content in Qt Quick.
