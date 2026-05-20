@@ -11,4 +11,7 @@ cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
 cmake --build $MODULE-$VERSION &&
 
 prepare_install
-cmake --install $MODULE-$VERSION
+cmake --install $MODULE-$VERSION &&
+
+cp src/resources/qgit.svg /usr/share/icons/hicolor/scalable/apps/ &&
+cp src/resources/qgit.png /usr/share/icons/hicolor/22x22/apps/
