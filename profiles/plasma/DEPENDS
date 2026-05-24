@@ -33,7 +33,6 @@ depends plasma-desktop
 depends kgamma
 depends ksshaskpass
 depends plasma-sdk
-depends sddm-kcm
 depends breeze-grub
 depends kactivitymanagerd
 depends plasma-integration
@@ -52,4 +51,5 @@ depends plasma-thunderbolt
 optional_depends wacomtablet "" "" "for table drawing device support"
 optional_depends plasma-nm "" "" "plasma app to access network manager"
 optional_depends plasma-firewall "" "" "plasma app to access system firewall"
-optional_depends plasma-login-manager "" "" "a fork of sddm"
+optional_depends plasma-login-manager "" "" "a fork of sddm, will replace sddm"
+
