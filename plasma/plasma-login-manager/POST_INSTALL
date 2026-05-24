@@ -1,0 +1,6 @@
+# A fresh install of lunar does not set a graphical target and sddm
+# while it will "start" if enabled ends up in a dead state. 
+if [ "$ENBL_GRAPHICAL" == "y" ];then
+  systemctl set-default graphical.target
+fi &&
+

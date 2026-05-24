@@ -17,7 +17,6 @@ prepare_install
 cmake --install $MODULE-$VERSION
 
 mkdir -p /etc/plasmalogin.conf.d
-#touch /etc/plasmalogin.conf &&
 
 cp data/pam/arch/plasma* /etc/pam.d/
 sedit 's:auth        include     system-login:auth        include     system-auth:' /etc/pam.d/plasmalogin
