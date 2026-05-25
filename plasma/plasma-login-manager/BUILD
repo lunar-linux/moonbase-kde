@@ -7,6 +7,7 @@ OPTS+=" -DCMAKE_INSTALL_PREFIX=/usr \
         -DDBUS_CONFIG_FILENAME=plasma_org.freedesktop.DisplayManager.conf \
         -DCMAKE_INSTALL_LIBEXECDIR=lib \
         -DINSTALL_PAM_CONFIGURATION=OFF \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
         -Wno-dev"
 
 
