@@ -1,12 +1,12 @@
           MODULE=kidentitymanagement
-         VERSION=26.04.1
+         VERSION=26.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:4e93a35a2bb34e47c9d27f90c70365d38ead10b334249946225abb91cbfe5590
+      SOURCE_VFY=sha256:f5d10bc2e20863892c0a78e707790a5691cfdc2dfe7debaaa749bfce2e4bf7ff
    MODULE_PREFIX=${KDE_INSTALL_DIR:-/usr}
         WEB_SITE=http://techbase.kde.org/Getting_Started/Build/KDE4/Troubleshooting
          ENTERED=20151122
-         UPDATED=20260507
+         UPDATED=20260604
            SHORT="KDE PIM libraries"
 
 cat << EOF

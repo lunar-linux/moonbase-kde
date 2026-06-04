@@ -1,12 +1,12 @@
           MODULE=kunifiedpush
-         VERSION=26.04.1
+         VERSION=26.04.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:4be7f9343bc2336484847ff46f2cdd26ec869a851fd0072a4d0b933d888708cf
+      SOURCE_VFY=sha256:15b6c7c463953b0d3b0ae8dfdde9dea41ae7eac77d036ca95db6f87d1a8a8fe1
    MODULE_PREFIX=${KDE_INSTALL_DIR:-/usr}
         WEB_SITE=https://invent.kde.org/libraries/kunifiedpush
          ENTERED=20250814
-         UPDATED=20260507
+         UPDATED=20260604
            SHORT="UnifiedPush client library and distributor daemon"
 
 cat << EOF
