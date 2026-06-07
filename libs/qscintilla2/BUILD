@@ -7,10 +7,6 @@ cd src &&
   /usr/lib/qt5/bin/qmake &&
   default_make &&
 
-cd ../designer &&
-  /usr/lib/qt5/bin/qmake INCLUDEPATH+=../src QMAKE_LIBDIR+=../src &&
-  default_make &&
-
 cd ../Python
   cp pyproject-qt5.toml pyproject.toml &&
   sip-build \
