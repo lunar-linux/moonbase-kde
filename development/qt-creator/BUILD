@@ -28,7 +28,7 @@ cat > $MODULE.desktop << EOF &&
 Type=Application
 Name=Qt6 Creator
 Comment=Qt6 based Development Tool
-Exec=$QT6_DIR/bin/qtcreator
+Exec=/usr/bin/qtcreator
 Icon=/usr/lib/share/icons/hicolor/256x256/apps/QtProject-qtcreator.png
 Categories=Development;
 EOF
