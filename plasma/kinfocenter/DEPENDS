@@ -6,3 +6,5 @@ depends qt6-base
 depends qt6-declarative
 depends extra-cmake-modules
 depends kf5
+
+optional_depends wayland-utils "" "" "To display wayland compositor information"
