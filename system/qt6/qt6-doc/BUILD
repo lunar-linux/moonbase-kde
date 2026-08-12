@@ -11,22 +11,17 @@ CXXFLAGS="-U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2"
 
 OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=$MODULE_PREFIX \
-        -DINSTALL_LIBEXECDIR=qt6 \
-        -DINSTALL_LIBDIR=qt6 \
         -DINSTALL_DOCDIR=share/doc/qt6 \
-        -DINSTALL_ARCHDATADIR=qt6 \
+        -DINSTALL_ARCHDATADIR=lib/qt6 \
         -DINSTALL_DATADIR=share/qt6 \
         -DINSTALL_INCLUDEDIR=include/qt6 \
-        -DINSTALL_MKSPECSDIR=qt6/mkspecs \
+        -DINSTALL_MKSPECSDIR=lib/qt6/mkspecs \
         -DINSTALL_EXAMPLESDIR=share/doc/qt6/examples \
-        -DINSTALL_SYSCONFDIR=/etc/xdg \
         -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
-        -DQT_NO_PACKAGE_VERSION_CHECK=TRUE \
         -Wno-dev"
 
-cmake -B build -S . -G Ninja $OPTS &&
-cmake --build build --target docs &&
-prepare_install &&
+cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
+cmake --build $MODULE-$VERSION &&
 
 prepare_install &&
-cmake --build build --target install_docs
+cmake --install $MODULE-$VERSION
