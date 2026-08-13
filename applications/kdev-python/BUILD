@@ -1,6 +1,8 @@
 source /etc/profile.d/qt6.rc &&
 export LANG='en_US.UTF-8'
 
+sed -e 's|3.14|3.15|' -i CMakeLists.txt &&
+
 #NOTE: build testing needs on to provide KDev::Tests
 OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
         -DCMAKE_INSTALL_PREFIX=/usr \
