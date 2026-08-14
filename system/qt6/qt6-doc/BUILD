@@ -21,7 +21,7 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -Wno-dev"
 
 cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
-cmake --build $MODULE-$VERSION &&
+cmake --build $MODULE-$VERSION --target docs &&
 
 prepare_install &&
-cmake --install $MODULE-$VERSION
+cmake --build $MODULE-$VERSION --target install_docs
