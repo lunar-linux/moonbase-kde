@@ -1,13 +1,13 @@
           MODULE=qt6-quicktimeline
-         VERSION=6.11.1
+         VERSION=6.11.2
           SOURCE=qtquicktimeline-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:af53f643fd9e4045e1b9ba919998e5c048ca877452c08036c9c8c5ee07ea8c27
+      SOURCE_VFY=sha256:250af10500a0c4045dde74e107448a69a44d58af8b7e9a91704a808d5f881d17
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtquicktimeline-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20211104
-         UPDATED=20260513
+         UPDATED=20260818
            SHORT="Qt module for keyframe-based timeline construction"
 cat << EOF
 Qt module for keyframe-based timeline construction.

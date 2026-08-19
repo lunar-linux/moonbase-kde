@@ -1,13 +1,13 @@
           MODULE=qt6-canvaspainter
-         VERSION=6.11.1
+         VERSION=6.11.2
           SOURCE=qtcanvaspainter-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:9e36c61b10a5eb9b4a4af058996de5816d2c0d9f02415876ca8c0f8cccfd08d0
+      SOURCE_VFY=sha256:8a90a27250ceef5ff659744e035ef4f5d3cd7392e027d5f953765b3f1083e760
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtcanvaspainter-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20260324
-         UPDATED=20260513
+         UPDATED=20260818
            SHORT="Accelerated 2d painting solution"
 cat << EOF
 Accelerated 2D painting solution for Qt Quick and QRhi-based render targets.
