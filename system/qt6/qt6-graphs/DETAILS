@@ -2,7 +2,7 @@
          VERSION=6.11.2
           SOURCE=qtgraphs-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:
+      SOURCE_VFY=sha256:9f2109854afa45dd144116c11461989c411a17065c63da5068441a1200fb8b21
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtgraphs-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
