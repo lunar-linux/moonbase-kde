@@ -32,4 +32,18 @@ prepare_install &&
 # Remove point to the src build direcotry
 find $MODULE-$VERSION/qt6 -type f -name '*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d;s/\(QMAKE_PRL_LIBS =\).*/\1/' {} \; &&
 
-cmake --install $MODULE-$VERSION
+cmake --install $MODULE-$VERSION &&
+
+# Make symlinks so these desktop files show up in the menu
+ln -sf /usr/lib/share/applications/assistant.desktop /usr/share/applications/assistant.desktop &&
+ln -sf /usr/lib/bin/assistant6 /usr/bin/assistant6 &&
+ln -sf /usr/lib/share/icons/hicolor/128x128/apps/assistant.png /usr/share/pixmaps/assistant.png &&
+ln -sf /usr/lib/share/applications/designer.desktop /usr/share/applications/designer.desktop &&
+ln -sf /usr/lib/bin/designer6 /usr/bin/designer6 &&
+ln -sf /usr/lib/share/icons/hicolor/128x128/apps/designer.png /usr/share/pixmaps/designer.png &&
+ln -sf /usr/lib/share/applications/linguist.desktop /usr/share/applications/linguist.desktop &&
+ln -sf /usr/lib/bin/linguist6 /usr/bin/linguist6 &&
+ln -sf /usr/lib/share/icons/hicolor/128x128/apps/linguist.png /usr/share/pixmaps/linguist.png &&
+ln -sf /usr/lib/share/applications/qdbusviewer.desktop /usr/share/applications/qdbusviewer.desktop &&
+ln -sf /usr/lib/bin/qdbusviewer6 /usr/bin/qdbusviewer6 &&
+ln -sf /usr/lib/share/icons/hicolor/128x128/apps/qdbusviewer.png /usr/share/pixmaps/qdbusviewer.png
