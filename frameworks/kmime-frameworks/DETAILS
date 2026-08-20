@@ -1,0 +1,16 @@
+          MODULE=kmime-frameworks
+         VERSION=6.29.0
+          SOURCE=${MODULE%-*}-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/frameworks/${VERSION%.*}/
+      SOURCE_VFY=sha256:86e838ff10c8b5867826bf2aff802bacf8c90dcfab67cad79d9cf2b0dbc215fc
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE%-*}-$VERSION
+        WEB_SITE=https://projects.kde.org/kmime
+         ENTERED=20260820
+         UPDATED=20260820
+           SHORT="Library for handling mail messages and newsgroup articles"
+
+cat << EOF
+This module name is to not conflict and confuse with kmime from the
+applications.
+Library for handling mail messages and newsgroup articles.
+EOF
