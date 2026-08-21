@@ -95,60 +95,6 @@ find /usr/lib/$MODULE -type f -name '*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_D
 # Remove references to the build directory from installed files
 sedit "s:$PWD/qtbase:/usr/lib/qt5:g" /usr/lib/qt5/mkspecs/modules/qt_lib_bootstrap_private.pri &&
 
-cat > ${MODULE}-designer.desktop << EOF &&
-[Desktop Entry]
-Type=Application
-Name=Qt5 Designer
-Comment=Design GUIs for Qt5 applications
-Exec=${MODULE_PREFIX}/lib/$MODULE/bin/designer
-Icon=${MODULE_PREFIX}/share/pixmaps/designer-qt5.png
-Categories=Qt;Development;
-Terminal=false
-EOF
-
-install -D -m644 ${MODULE}-designer.desktop ${MODULE_PREFIX}/share/applications/${MODULE}-designer.desktop &&
-
-cat > ${MODULE}-assistant.desktop << EOF &&
-[Desktop Entry]
-Type=Application
-Name=Qt5 Assistant
-Comment=Shows Qt5 documentation and examples
-Exec=${MODULE_PREFIX}/lib/$MODULE/bin/assistant
-Icon=${MODULE_PREFIX}/share/pixmaps/assistant-qt5.png
-Categories=Qt;Development;Documentation;
-Terminal=false
-EOF
-
-install -D -m644 ${MODULE}-assistant.desktop ${MODULE_PREFIX}/share/applications/${MODULE}-assistant.desktop &&
-
-cat > ${MODULE}-qtconfig.desktop << EOF &&
-[Desktop Entry]
-Name=Qt5 QDbusViewer
-GenericName=D-Bus Debugger
-Comment=Debug D-Bus applications
-Exec=${MODULE_PREFIX}/lib/$MODULE/bin/qdbusviewer
-Icon=${MODULE_PREFIX}/share/pixmaps/qdbusviewer-qt5.png
-Terminal=false
-Encoding=UTF-8
-Type=Application
-Categories=Qt;Development;Debugger;
-EOF
-
-install -D -m644 ${MODULE}-qtconfig.desktop ${MODULE_PREFIX}/share/applications/${MODULE}-qtconfig.desktop &&
-
-cat > ${MODULE}-linguist.desktop << EOF &&
-[Desktop Entry]
-Name=Qt5 Linquist
-Comment=Add translations to Qt5 applications
-Exec=${MODULE_PREFIX}/lib/$MODULE/bin/linguist
-Icon=${MODULE_PREFIX}/share/pixmaps/linguist-qt5.png
-Terminal=false
-Type=Application
-Categories=Qt;Settings;
-EOF
-
-install -D -m644 ${MODULE}-linguist.desktop ${MODULE_PREFIX}/share/applications/${MODULE}-linguist.desktop &&
-
 cat > $MODULE.rc << EOF &&
 export Qt5_DIR="${MODULE_PREFIX}"
 export QT5_PLUGIN_PATH="\${Qt5_DIR}/lib/${MODULE}/plugins"
