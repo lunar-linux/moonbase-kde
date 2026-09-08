@@ -9,7 +9,7 @@ OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
         -DCMAKE_INSTALL_PREFIX=$MODULE_PREFIX \
         -DCMAKE_VERBOSE_MAKEFILE=ON \
         -DBUILD_TESTING=OFF \
-        -Wno-dev"
+        -Wno-author"
 
 cmake -B $MODULE-$VERSION -S . $OPTS &&
 #sedit 's:src/src:src:' $MODULE-$VERSION/src/CMakeFiles/spectacle_autogen.dir/AutogenInfo.json &&

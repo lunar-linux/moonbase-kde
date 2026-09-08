@@ -7,7 +7,7 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DKDE_INSTALL_BINDIR=bin \
         -DKDE_INSTALL_LIBDIR=lib \
         -DKDE_INSTALL_INCLUDEDIR=include \
-        -Wno-dev"
+        -Wno-author"
 
 cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
 cmake --build $MODULE-$VERSION &&

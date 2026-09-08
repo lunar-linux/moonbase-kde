@@ -6,7 +6,7 @@ OPTS+=" -DCMAKE_INSTALL_PREFIX=/usr \
         -DBUILD_WITH_QT6=ON \
         -DDBUS_CONFIG_FILENAME=plasma_org.freedesktop.DisplayManager.conf \
         -DINSTALL_PAM_CONFIGURATION=OFF \
-        -Wno-dev"
+        -Wno-author"
 
 cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
 cmake --build $MODULE-$VERSION &&

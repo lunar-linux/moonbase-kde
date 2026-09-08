@@ -8,7 +8,7 @@ OPTS+=" -DBUILD_WITH_QT6=ON \
         -DKDE_INSTALL_LIBDIR=lib \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr \
-        -Wno-dev"
+        -Wno-author"
 
 
 cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&

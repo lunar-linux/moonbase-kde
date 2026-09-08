@@ -6,7 +6,7 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBEXECDIR=/usr/lib \
         -DKDE_INSTALL_INCLUDEDIR=include \
-        -Wno-dev"
+        -Wno-author"
 
 cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
 cmake --build $MODULE-$VERSION &&

@@ -4,7 +4,7 @@ export LANG='en_US.UTF-8'
 OPTS+=" -DCMAKE_INSTALL_PREFIX=/usr \
         -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
         -DCMAKE_BUILD_TYPE=Release \
-        -Wno-dev"
+        -Wno-author"
 
 cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
 cmake --build $MODULE-$VERSION &&

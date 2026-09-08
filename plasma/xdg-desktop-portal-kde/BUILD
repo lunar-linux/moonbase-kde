@@ -6,7 +6,7 @@ OPTS+=" -DBUILD_WITH_QT6=ON \
         -DCMAKE_INSTALL_LIBEXECDIR=lib \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_BUILD_TYPE=Release \
-        -Wno-dev"
+        -Wno-author"
 
 cmake -B $MODULE-$VERSION -S . $OPTS &&
 cmake --build $MODULE-$VERSION &&

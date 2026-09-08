@@ -8,7 +8,7 @@ OPTS+=" -DBUILD_WITH_QT6=ON \
         -DKDE_INSTALL_INCLUDEDIR=include \
         -DKDE_INSTALL_BINDIR=bin \
         -DKDE_INSTALL_LIBDIR=lib \
-        -Wno-dev"
+        -Wno-author"
 
 cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
 cmake --build $MODULE-$VERSION &&
