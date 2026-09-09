@@ -1,0 +1,15 @@
+          MODULE=union
+         VERSION=6.7.5
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
+      SOURCE_VFY=sha256:deea749acb710357e56fce07198e3de3bad4bdfa95298e185e38eb8938f8d2c8
+        WEB_SITE=http://www.kde.org
+            TYPE=cmake
+         ENTERED=20260909
+         UPDATED=20260909
+           SHORT="a style engine for QtQucik or Kirigami"
+
+cat << EOF
+Union is a style engine designed to provide a unified style
+description to a set of separate output styles.
+EOF
