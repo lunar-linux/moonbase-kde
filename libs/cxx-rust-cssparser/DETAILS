@@ -1,0 +1,14 @@
+          MODULE=cxx-rust-cssparser
+         VERSION=1.0.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/cxx-rust-cssparser/
+      SOURCE_VFY=sha256:df233783cb017d352a7b96d9a0fefca5a1121b8fe384216c28f9544f682e6277
+        WEB_SITE=https://kde.org/plasma-desktop/
+            TYPE=cmake
+         ENTERED=20260909
+         UPDATED=20260909
+           SHORT="C++ library for parsing CSS"
+
+cat << EOF
+A C++ fpr parsing CSS that uses the Rust cssparser crate internally.
+EOF
