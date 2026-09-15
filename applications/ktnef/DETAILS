@@ -1,12 +1,12 @@
           MODULE=ktnef
-         VERSION=26.08.0
+         VERSION=26.08.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:b7f6be661f45695596f88e964b05ef4db5d8f878df1a9c852fb8dd65ecb4e25e
+      SOURCE_VFY=sha256:f044833403ac6d9352287ccaed35af4eea07a95b9d89dfb740b01061e5af48a1
    MODULE_PREFIX=${KDE_INSTALL_DIR:-/usr}
         WEB_SITE=http://kde.org/applications/libktnef
          ENTERED=20151122
-         UPDATED=20260820
+         UPDATED=20260913
            SHORT="API for handling TNEF data"
 
 cat << EOF

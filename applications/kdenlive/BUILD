@@ -1,6 +1,8 @@
 source /etc/profile.d/qt6.rc &&
 export LANG='en_US.UTF-8'
 
+sed -e '/qmllint/d' -i src/CMakeLists.txt &&
+
 OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
         -DCMAKE_INSTALL_OLDINCLUDEDIR=/usr/include/kdenlive \
         -DCMAKE_INSTALL_PREFIX=/usr \
