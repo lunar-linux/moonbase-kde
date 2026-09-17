@@ -1,0 +1,82 @@
+From 35d2189e9502e1c9c55ef92e884e6de24266a2fa Mon Sep 17 00:00:00 2001
+From: Karl Robillard <wickedsmoke@users.sourceforge.net>
+Date: Mon, 12 Jan 2026 22:39:03 -0500
+Subject: [PATCH] FileHighlighter: React to palette changes.
+
+---
+ src/filecontent.cpp | 26 ++++++++++++++++++++++----
+ src/filecontent.h   |  3 ++-
+ 2 files changed, 24 insertions(+), 5 deletions(-)
+
+diff --git a/src/filecontent.cpp b/src/filecontent.cpp
+index d6e1520..bdc3230 100644
+--- a/src/filecontent.cpp
++++ b/src/filecontent.cpp
+@@ -22,13 +22,24 @@
+ 
+ class FileHighlighter : public QSyntaxHighlighter {
+ public:
+-	FileHighlighter(FileContent* fc) : QSyntaxHighlighter(fc), f(fc) {}
++	FileHighlighter(FileContent* fc) : QSyntaxHighlighter(fc) {
++		brushRange.setStyle(Qt::SolidPattern);
++		setupColors(fc->palette());
++	}
++
++	void setupColors(const QPalette& pal) {
++		bool lightBg = pal.color(QPalette::Window).value() >
++					   pal.color(QPalette::WindowText).value();
++		brushRange.setColor(lightBg ? Qt::blue : Qt::cyan);
++	}
++
+ 	virtual void highlightBlock(const QString& p) {
+ 
+ 		// state is used to count lines, starting from 0
+ 		if (currentBlockState() == -1) // only once
+ 			setCurrentBlockState(previousBlockState() + 1);
+ 
++		FileContent* f = static_cast<FileContent*>(parent());
+ 		if (f->isHtmlSource)
+ 			return;
+ 
+@@ -39,13 +50,12 @@ public:
+ 
+ 			QTextCharFormat myFormat;
+ 			myFormat.setFontWeight(QFont::Bold);
+-			myFormat.setForeground(Qt::blue);
++			myFormat.setForeground(brushRange);
+ 			setFormat(0, p.length(), myFormat);
+ 		}
+-		return;
+ 	}
+ private:
+-	FileContent* f;
++	QBrush brushRange;
+ };
+ 
+ FileContent::FileContent(QWidget* parent) : QTextEdit(parent) {
+@@ -634,3 +644,11 @@ void FileContent::resizeEvent(QResizeEvent* e) {
+ 	int width = listWidgetAnn->geometry().width();
+ 	adjustAnnListSize(width); // update list width
+ }
++
++bool FileContent::event(QEvent* ev) {
++    if (ev->type() == QEvent::PaletteChange) {
++        fileHighlighter->setupColors(palette());
++        fileHighlighter->rehighlight();
++    }
++    return QTextEdit::event(ev);
++}
+diff --git a/src/filecontent.h b/src/filecontent.h
+index 29a7340..ca9b916 100644
+--- a/src/filecontent.h
++++ b/src/filecontent.h
+@@ -56,7 +56,8 @@ public slots:
+ 	void typeWriterFontChanged();
+ 
+ protected:
+-	virtual void resizeEvent(QResizeEvent* e);
++	bool event(QEvent* ev) override;
++	void resizeEvent(QResizeEvent* e) override;
+ 
+ private slots:
+ 	void on_list_doubleClicked(QListWidgetItem*);
