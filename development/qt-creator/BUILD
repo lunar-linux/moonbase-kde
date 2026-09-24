@@ -10,7 +10,7 @@ OPTS+=" -DCMAKE_INSTALL_PREFIX=/usr  \
         -DCLANGTOOLING_LINK_CLANG_DYLIB=ON \
         -DBUILD_DEVELOPER_DOCS=ON \
         -DWITH_DOCS=ON \
-        -Wno-dev"
+        -Wno-author"
 
 if module_installed ccache; then
   OPTS+=" -DWITH_CCACHE_SUPPORT=ON"
@@ -20,17 +20,4 @@ cmake -B $MODULE -G Ninja $OPTS &&
 cmake --build $MODULE &&
 
 prepare_install &&
-cmake --install $MODULE &&
-
-# Desktop menu entry
-cat > $MODULE.desktop << EOF &&
-[Desktop Entry]
-Type=Application
-Name=Qt6 Creator
-Comment=Qt6 based Development Tool
-Exec=/usr/bin/qtcreator
-Icon=/usr/lib/share/icons/hicolor/256x256/apps/QtProject-qtcreator.png
-Categories=Development;
-EOF
-
-install -D -m644 $MODULE.desktop /usr/share/applications/$MODULE.desktop
+cmake --install $MODULE
