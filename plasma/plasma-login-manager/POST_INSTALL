@@ -2,5 +2,5 @@
 # while it will "start" if enabled ends up in a dead state. 
 if [ "$ENBL_GRAPHICAL" == "y" ];then
   systemctl set-default graphical.target
-fi &&
+fi
 
