@@ -1,5 +1,5 @@
 source /etc/profile.d/qt6.rc &&
-
+mkdir -p /usr/share/pixmaps &&
 
 #Generating .rcc/qmlcache/qtgraphicaleffectsplugin_ColorOverlay_qml.cpp
 #Detected locale "en_US" with character encoding "ISO-8859-1", which is not UTF-8.
