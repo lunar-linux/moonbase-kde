@@ -23,15 +23,3 @@ depends qt6-declarative
 depends qt6-tools
 depends qt6-positioning
 depends qt6-webchannel
-
-optional_depends libvpx "-DQT_FEATURE_webengine_system_libvpx=ON" \
-                        "-DQT_FEATURE_webengine_system_libvpx=OFF" \
-                        "use system libvpx for VP8 and VP9 supoort, if no use internal"
-
-optional_depends re2 "-DQT_FEATURE_webengine_system_re2=ON" \
-                     "-DQT_FEATURE_webengine_system_re2=OFF" \
-                     "for alternative to backtracking regular expression support"
-
-optional_depends ffmpeg "-DQT_FEATURE_webengine_system_ffmpeg=ON" \
-                        "-DQT_FEATURE_webengine_system_ffmpeg=OFF" \
-                        "use system ffmpeg else use internal"

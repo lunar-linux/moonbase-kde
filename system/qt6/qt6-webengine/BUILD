@@ -14,6 +14,9 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DQT_FEATURE_webengine_webrtc_pipewire=ON    \
         -DQT_FEATURE_webengine_proprietary_codecs=ON \
         -DQT_FEATURE_webengine_kerberos=ON \
+        -DQT_FEATURE_webengine_system_ffmpeg=OFF \
+        -DQT_FEATURE_webengine_system_re2=OFF \
+        -DQT_FEATURE_webengine_system_libvpx=OFF \
         -DCMAKE_TOOLCHAIN_FILE=/usr/lib/qt6/cmake/Qt6/qt.toolchain.cmake \
         -Wno-dev"
 
