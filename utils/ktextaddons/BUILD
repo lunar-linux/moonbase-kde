@@ -1,7 +1,7 @@
 source /etc/profile.d/qt6.rc &&
 export LANG='en_US.UTF-8'
 
-sedit '17i #include <QRegularExpression>' texttranslator/translator/plugins/google/googleengineplugin.cpp &&
+#sedit '17i #include <QRegularExpression>' texttranslator/translator/plugins/google/googleengineplugin.cpp &&
 
 OPTS+=" -DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
         -DCMAKE_INSTALL_PREFIX=/usr \
