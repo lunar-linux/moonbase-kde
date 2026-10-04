@@ -1,9 +1,5 @@
 source /etc/profile.d/qt6.rc  &&
 
-if in_depends $MODULE tcl; then
-  OPTS+=" -DTK_LIBRARY=/usr/lib"
-fi &&
-
 OPTS+=" -DCMAKE_INSTALL_PREFIX=/usr\
         -DCMAKE_BUILD_TYPE=Release \
         -DMOD_GLAXNIMATE_QT6=OFF \
