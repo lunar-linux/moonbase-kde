@@ -17,6 +17,8 @@ OPTS+=" -DCMAKE_BUILD_TYPE=Release \
         -DQT_FEATURE_webengine_system_ffmpeg=OFF \
         -DQT_FEATURE_webengine_system_re2=OFF \
         -DQT_FEATURE_webengine_system_libvpx=OFF \
+        -DFEATURE_webengine_rust_build=OFF \
+        -DQT_UNITY_BUILD_BATCH_SIZE=ON \
         -DCMAKE_TOOLCHAIN_FILE=/usr/lib/qt6/cmake/Qt6/qt.toolchain.cmake \
         -Wno-dev"
 
