@@ -1,13 +1,13 @@
           MODULE=qt6-translations
-         VERSION=6.11.2
+         VERSION=6.12.0
           SOURCE=qttranslations-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:021684c1a7937a9fabc3b056a6698ad5978794caf9ac190fd6cc11399e67c014
+      SOURCE_VFY=sha256:85929c0c30d6f273f23bd879bb69803ea17b010ab73cab2f8abf95357f6f6bbb
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qttranslations-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20211102
-         UPDATED=20260818
+         UPDATED=20261006
            SHORT="A cross-platform application and UI framework (Translations)"
 cat << EOF
 A cross-platform application and UI framework (Translations).

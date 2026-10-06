@@ -1,13 +1,13 @@
           MODULE=qt6-charts
-         VERSION=6.11.2
+         VERSION=6.12.0
           SOURCE=qtcharts-everywhere-src-$VERSION.tar.xz
       SOURCE_URL=https://download.qt.io/official_releases/qt/${VERSION%.*}/${VERSION}/submodules/
-      SOURCE_VFY=sha256:5069e53b81d125509e937c6379cba6d664c562d5a1e5ed28dd383690d4b6fb29
+      SOURCE_VFY=sha256:dc5e0599455c78729248a1bb95824fe6a3420e860b8cabc5ac0c7a93c2062bfb
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/qtcharts-everywhere-src-$VERSION
    MODULE_PREFIX=${QT6_PREFIX:-/usr/lib}
         WEB_SITE=http://qt-project.org
          ENTERED=20211104
-         UPDATED=20260818
+         UPDATED=20261006
            SHORT="Provides a set of easy to use chart components"
 cat << EOF
 Provides a set of easy to use chart components.

@@ -1,11 +1,6 @@
 # This is required
 export LANG='en_US.UTF-8'
 
-sedit 's:/bin/ls:/usr/bin/ls:g' src/corelib/CMakeLists.txt util/cmake/tests/data/quoted.pro &&
-
-# CVE-2024-33861
-sedit 's:action, &state, nullptr, nullptr:action, state, nullptr, nullptr:g' src/corelib/text/qstringconverter.cpp &&
-
 # This applies here as well; https://github.com/neovim/neovim/issues/2557
 CFLAGS="-U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2"
 CXXFLAGS="-U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2"
