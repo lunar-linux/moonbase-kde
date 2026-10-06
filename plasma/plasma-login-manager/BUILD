@@ -1,10 +1,15 @@
 source /etc/profile.d/qt6.rc &&
 export LANG='en_US.UTF-8'
 
+
+add_priv_group plasmalogin &&
+add_priv_user plasmalogin -d /var/lib/plasmalogin -g plasmalogin &&
+mkdir -p /var/lib/plasmalogin &&
+
 OPTS+=" -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_BUILD_TYPE=Release \
         -DBUILD_WITH_QT6=ON \
-        -DDBUS_CONFIG_FILENAME=plasma_org.freedesktop.DisplayManager.conf \
+        -DDBUS_CONFIG_FILENAME=plasmalogin_org.freedesktop.DisplayManager.conf \
         -DINSTALL_PAM_CONFIGURATION=OFF \
         -DPLASMALOGIN_INITIAL_VT=7 \
         -Wno-author"
@@ -17,8 +22,8 @@ cmake --install $MODULE-$VERSION
 
 mkdir -p /etc/plasmalogin.d &&
 
-cp data/pam/kde-linux/* /etc/pam.d/ &&
+cp data/pam/kde-linux/* /etc/pam.d/
 
-sedit 's:system-login:system-auth:g' /etc/pam.d/plasmalogin &&
-sedit 's:system-auth:system-local-login:g' /etc/pam.d/plasmalogin-autologin
-
+#sedit 's:system-login:system-auth:g' /etc/pam.d/plasmalogin &&
+#sedit 's:system-auth:system-local-login:g' /etc/pam.d/plasmalogin-autologin
+#sedit 's:session         optional pam_systemd.so:-session         optional pam_systemd.so:' /etc/pam.d/plasmalogin-greeter
