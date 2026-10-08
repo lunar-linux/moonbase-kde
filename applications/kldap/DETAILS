@@ -1,12 +1,12 @@
           MODULE=kldap
-         VERSION=26.08.1
+         VERSION=26.08.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:e4be78254cfd19976544ad10981bae5aacdd96b778a9eaa4cec28be233722505
+      SOURCE_VFY=sha256:17fb3e289692599b6aa0ad2c3d409e13f52dabcd6273544eb568cf6f025bac59
    MODULE_PREFIX=${KDE_INSTALL_DIR:-/usr}
         WEB_SITE=https://projects.kde.org/kldap
          ENTERED=20151122
-         UPDATED=20260913
+         UPDATED=20261008
            SHORT="LDAP access API for KDE"
 
 cat << EOF

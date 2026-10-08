@@ -1,13 +1,13 @@
           MODULE=kdesdk-kio
-         VERSION=26.08.1
+         VERSION=26.08.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:6affccb34935f854509d92c15c5deb82a2ac5a8d0a3abc404813520b72cb2750
+      SOURCE_VFY=sha256:d6e7fc3e5f7b6b432337074c91faf229aeec14a11597c572ef12e92ae0d148d9
    MODULE_PREFIX=${KDE_INSTALL_DIR:-/usr}
         WEB_SITE=https://www.kde.org/
         REPLACES=kdesdk-kioslaves
          ENTERED=20221014
-         UPDATED=20260913
+         UPDATED=20261008
            SHORT="KDE SDK KIO-Slaves"
 
 cat << EOF
