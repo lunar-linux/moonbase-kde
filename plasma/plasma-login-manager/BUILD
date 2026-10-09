@@ -21,9 +21,6 @@ prepare_install
 cmake --install $MODULE-$VERSION
 
 mkdir -p /etc/plasmalogin.d &&
+cp $SCRIPT_DIRECTORY/plasmalogin.conf /etc/plasmalogin.d/
 
 cp data/pam/kde-linux/* /etc/pam.d/
-
-#sedit 's:system-login:system-auth:g' /etc/pam.d/plasmalogin &&
-#sedit 's:system-auth:system-local-login:g' /etc/pam.d/plasmalogin-autologin
-#sedit 's:session         optional pam_systemd.so:-session         optional pam_systemd.so:' /etc/pam.d/plasmalogin-greeter
