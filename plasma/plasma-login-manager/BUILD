@@ -21,6 +21,6 @@ prepare_install
 cmake --install $MODULE-$VERSION
 
 mkdir -p /etc/plasmalogin.d &&
-cp $SCRIPT_DIRECTORY/plasmalogin.conf /etc/plasmalogin.d/
+cp $SCRIPT_DIRECTORY/plasmalogin.conf /etc/plasmalogin.d/ &&
+cp $SCRIPT_DIRECTORY/plasma* /etc/pam.d/
 
-cp data/pam/kde-linux/* /etc/pam.d/
