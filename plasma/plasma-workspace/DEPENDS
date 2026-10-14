@@ -17,7 +17,7 @@ depends phonon
 depends extra-cmake-modules
 depends libkexiv2
 depends libksysguard
-depends libkscreen
+#depends libkscreen
 depends kf5
 depends plasma5support
 depends kirigami-addons
@@ -25,9 +25,8 @@ depends libqalculate
 depends kwin
 depends plasma-activities
 depends plasma-activities-stats
-depends kscreenlocker
+#depends kscreenlocker
 depends layer-shell-qt
-depends kwin-x11
 
 optional_depends baloo         "" "" "for file search and indexing support"
 optional_depends kpipewire     "" "" "for plasma components related to pipewire"

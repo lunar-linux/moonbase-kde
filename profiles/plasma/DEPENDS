@@ -1,3 +1,4 @@
+depends union
 depends oxygen-sounds
 depends kdecoration
 depends breeze
@@ -14,7 +15,6 @@ depends layer-shell-qt
 depends kscreenlocker
 depends kglobalacceld
 depends knighttime
-depends kwin-x11
 depends kwin
 depends plasma-workspace
 depends oxygen
@@ -32,7 +32,6 @@ depends plasma-workspace-wallpapers
 depends polkit-kde-agent-1
 depends powerdevil
 depends plasma-desktop
-depends kgamma
 depends ksshaskpass
 depends plasma-sdk
 depends breeze-grub
@@ -49,9 +48,8 @@ depends qqc2-breeze-style
 depends kdeplasma-addons
 depends kpipewire
 depends plasma-thunderbolt
+depends plasma-login-manager
 
 optional_depends wacomtablet "" "" "for table drawing device support"
 optional_depends plasma-nm "" "" "plasma app to access network manager"
 optional_depends plasma-firewall "" "" "plasma app to access system firewall"
-optional_depends plasma-login-manager "" "" "a fork of sddm, will replace sddm"
-optional_depends union "" "" "for QtQuick or Kirigami styling support"

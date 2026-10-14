@@ -1,0 +1,15 @@
+          MODULE=kup
+         VERSION=6.8.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$KDE_URL/stable/plasma/$VERSION/
+      SOURCE_VFY=sha256:0879a8edb3becad34613db8d75cb854caf44a6051a53bcfa4d1fb59d0f510d5c
+        WEB_SITE=https://apps.kde.org/kup/
+         ENTERED=20200802
+         UPDATED=20261014
+           SHORT="keep up-to-date backups of personal files"
+
+cat << EOF
+Kup is created for helping people to keep up-to-date backups of their personal files.
+Connecting a USB hard drive is the primary supported way to store files, but saving
+files to a server over a network connection is also possible for advanced users.
+EOF
