@@ -14,6 +14,6 @@ cmake --build $MODULE-$VERSION &&
 prepare_install
 cmake --install $MODULE-$VERSION &&
 
-install -Dm644 $SCRIPT_DIRECTORY/kde.pam /usr/lib/pam.d/kde &&
-install -Dm644 $SCRIPT_DIRECTORY/kde-fingerprint.pam /usr/lib/pam.d/kde-fingerprint &&
-install -Dm644 $SCRIPT_DIRECTORY/kde-smartcard.pam /usr/lib/pam.d/kde-smartcard
+install -Dm644 $SCRIPT_DIRECTORY/kde.pam /etc/pam.d/kde &&
+install -Dm644 $SCRIPT_DIRECTORY/kde-fingerprint.pam /etc/pam.d/kde-fingerprint &&
+install -Dm644 $SCRIPT_DIRECTORY/kde-smartcard.pam /etc/pam.d/kde-smartcard
