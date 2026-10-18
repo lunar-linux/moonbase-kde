@@ -11,8 +11,6 @@ OPTS+=" -DCMAKE_INSTALL_PREFIX=/usr \
         -DBUILD_WITH_QT6=ON \
         -DDBUS_CONFIG_FILENAME=plasmalogin_org.freedesktop.DisplayManager.conf \
         -DINSTALL_PAM_CONFIGURATION=OFF \
-        -DPLASMALOGIN_INITIAL_VT=7 \
-        -DCMAKE_INSTALL_LIBEXECDIR=lib \
         -Wno-author"
 
 cmake -B $MODULE-$VERSION -S . -G Ninja $OPTS &&
