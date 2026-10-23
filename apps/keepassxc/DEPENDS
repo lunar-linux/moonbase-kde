@@ -1,14 +1,15 @@
 depends curl
-depends libgcrypt
 depends argon2
+depends Botan3
 depends libsodium
 depends hicolor-icon-theme
 depends pcsc-lite
-depends qt5
+depends qt6-svg
+depends qt6-tools
 depends qrencode
+depends minizip
 
 optional_depends xclip "" "" "for X clipboard support"
-optional_depends Botan3 "" "" "for Botan encryption support"
 optional_depends wl-clipboard "" "" "for Wayland clipboard support"
 
 optional_depends quazip "-DWITH_XC_KEESHARE=ON" "" "for ZIP archives support"
