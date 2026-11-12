@@ -1,0 +1,84 @@
+commit 61e8d48334e9f840ea49737b58417fe1f273d8da
+Author: Markus Theil <theil.markus@gmail.com>
+Date:   Fri Nov 6 18:26:59 2026 +0100
+
+    Passkeys: use deterministic ECDSA with Botan >= 3.14.0
+    
+    Botan before 3.14.0 used deterministic ECDSA signatures
+    by default (RFC 6979). This particular version changed
+    the default to randomized. Restore the previous behavior
+    after short discussion in https://codeberg.org/ChiPass/ChiPass/issues/260.
+    
+    Signed-off-by: Markus Theil <theil.markus@gmail.com>
+
+diff --git a/src/browser/BrowserPasskeys.cpp b/src/browser/BrowserPasskeys.cpp
+index d6cd5461..19986a07 100644
+--- ./src/browser/BrowserPasskeys.cpp
++++ ./src/browser/BrowserPasskeys.cpp
+@@ -33,6 +33,7 @@
+ #include <botan/pubkey.h>
+ #include <botan/rsa.h>
+ #include <botan/sodium.h>
++#include <botan/version.h>
+ 
+ #include <bitset>
+ 
+@@ -323,8 +324,16 @@ QByteArray BrowserPasskeys::buildSignature(const QByteArray& authenticatorData,
+         if (algName == "ECDSA") {
+             Botan::ECDSA_PrivateKey privateKey(algId, privateKeyBytes);
+ #ifdef WITH_BOTAN3
++    #if BOTAN_VERSION_CODE >= BOTAN_VERSION_CODE_FOR(3,14,0)
++            // starting with Botan 3.14.0 ECDSA signatures are randomized by default
++            // and no longer deterministic as before. Setting to deterministic
++            // as discussed in https://codeberg.org/ChiPass/ChiPass/issues/260
++            Botan::PK_Signer signer(
++                privateKey, *randomGen()->getRng(), "EMSA1(SHA-256),Deterministic", Botan::Signature_Format::DerSequence);
++    #else
+             Botan::PK_Signer signer(
+                 privateKey, *randomGen()->getRng(), "EMSA1(SHA-256)", Botan::Signature_Format::DerSequence);
++    #endif
+ #else
+             Botan::PK_Signer signer(privateKey, *randomGen()->getRng(), "EMSA1(SHA-256)", Botan::DER_SEQUENCE);
+ #endif
+
+commit 387a12b979377cc42a708a3364f349021e06def2
+Author: Markus Theil <theil.markus@gmail.com>
+Date:   Fri Nov 6 18:26:59 2026 +0100
+
+    Passkeys: use deterministic ECDSA with Botan >= 3.14.0
+    
+    Botan before 3.14.0 used deterministic ECDSA signatures
+    by default (RFC 6979). This particular version changed
+    the default to randomized. Restore the previous behavior
+    after short discussion in https://codeberg.org/ChiPass/ChiPass/issues/260.
+    
+    Signed-off-by: Markus Theil <theil.markus@gmail.com>
+
+diff --git a/src/browser/BrowserPasskeys.cpp b/src/browser/BrowserPasskeys.cpp
+index 19986a07..0c57d090 100644
+--- ./src/browser/BrowserPasskeys.cpp
++++ ./src/browser/BrowserPasskeys.cpp
+@@ -355,16 +355,18 @@ QByteArray BrowserPasskeys::buildSignature(const QByteArray& authenticatorData,
+         if (algName == "ECDSA") {
+             Botan::ECDSA_PrivateKey privateKey(algId, privateKeyBytes);
+ #ifdef WITH_BOTAN3
+-    #if BOTAN_VERSION_CODE >= BOTAN_VERSION_CODE_FOR(3,14,0)
++#if BOTAN_VERSION_CODE >= BOTAN_VERSION_CODE_FOR(3, 14, 0)
+             // starting with Botan 3.14.0 ECDSA signatures are randomized by default
+             // and no longer deterministic as before. Setting to deterministic
+             // as discussed in https://codeberg.org/ChiPass/ChiPass/issues/260
+-            Botan::PK_Signer signer(
+-                privateKey, *randomGen()->getRng(), "EMSA1(SHA-256),Deterministic", Botan::Signature_Format::DerSequence);
+-    #else
++            Botan::PK_Signer signer(privateKey,
++                                    *randomGen()->getRng(),
++                                    "EMSA1(SHA-256),Deterministic",
++                                    Botan::Signature_Format::DerSequence);
++#else
+             Botan::PK_Signer signer(
+                 privateKey, *randomGen()->getRng(), "EMSA1(SHA-256)", Botan::Signature_Format::DerSequence);
+-    #endif
++#endif
+ #else
+             Botan::PK_Signer signer(privateKey, *randomGen()->getRng(), "EMSA1(SHA-256)", Botan::DER_SEQUENCE);
+ #endif
