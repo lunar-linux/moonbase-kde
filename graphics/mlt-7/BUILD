@@ -4,6 +4,7 @@ OPTS+=" -DCMAKE_INSTALL_PREFIX=/usr\
         -DCMAKE_BUILD_TYPE=Release \
         -DMOD_GLAXNIMATE_QT6=OFF \
         -DMOD_QT6=ON \
+        -DCLANG_FORMAT=OFF \
         -DSWIG_CSHARP=OFF \
         -DMOD_MOVIT=OFF \
         -DMOD_RNNOISE=OFF \
