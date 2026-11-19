@@ -36,3 +36,5 @@ optional_depends sqlite \
                  "-DDATABASE_BACKEND=SQLITE"  \
                  "" \
                  "for SQLite database support (Yes to install in Qt5 Plugin Dir)${PROBLEM_COLOR} If yes here, you should have said no to %MYSQL and Postgresql${QUERY_COLOR}" n
+
+optional_depends pyside6 "-DBUILD_PYTHON_BINDINGS=ON" "-DBUILD_PYTHON_BINDINGS=OFF" "for python support, ${PROBLEM_COLOR}Say no for now${DEFAULT_COLOR}"

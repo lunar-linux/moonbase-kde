@@ -9,7 +9,7 @@ depends qt6-webengine
 depends qt6-webchannel
 depends kconfig
 depends karchive
-depends libgnome-keyring
+#depends libgnome-keyring
 depends purpose
 
 optional_depends pyside6 "-DBUILD_PYTHON_SUPPORT=ON" "-DBUILD_PYTHON_SUPPORT=OFF" "for python plugin support"

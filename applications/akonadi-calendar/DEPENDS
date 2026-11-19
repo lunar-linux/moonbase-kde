@@ -22,3 +22,6 @@ depends kcodecs
 depends kcontacts
 depends akonadi-contacts
 depends messagelib
+
+optional_depends pyside6 "-DBUILD_PYTHON_BINDINGS=ON" "-DBUILD_PYTHON_BINDINGS=OFF" "for python bindings support"
+
