@@ -4,7 +4,9 @@ depends cmake
 depends gsl
 depends netcdf-cxx
 depends matio
-depends qt5
+depends qt6-base
+depends qt6-svg
+depends qt6-tools
 
 optional_depends cfitsio    "" "" "for C and Fortran support"
 optional_depends getdata    "" "" "reference implementation of the Dirfile Standards"
