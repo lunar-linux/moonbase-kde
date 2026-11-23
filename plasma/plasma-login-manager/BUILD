@@ -1,7 +1,6 @@
 source /etc/profile.d/qt6.rc &&
 export LANG='en_US.UTF-8'
 
-
 mkdir -p /var/lib/plasmalogin &&
 add_priv_group plasmalogin &&
 add_priv_user plasmalogin -d /var/lib/plasmalogin -g plasmalogin &&
@@ -19,7 +18,5 @@ cmake --build $MODULE-$VERSION &&
 prepare_install
 cmake --install $MODULE-$VERSION
 
-mkdir -p /etc/plasmalogin.d &&
-cp $SCRIPT_DIRECTORY/plasmalogin.conf /etc/plasmalogin.d/ &&
-cp $SCRIPT_DIRECTORY/plasma* /etc/pam.d/
-
+cp $SCRIPT_DIRECTORY/plasmalogin.conf /etc/ &&
+cp $SCRIPT_DIRECTORY/plasmalogin $SCRIPT_DIRECTORY/plasmalogin-autologin $SCRIPT_DIRECTORY/plasmalogin-greeter /etc/pam.d/
