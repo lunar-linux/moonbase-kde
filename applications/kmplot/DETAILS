@@ -1,19 +1,18 @@
-          MODULE=kmplot
-         VERSION=26.08.3
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:9d7f16c4fd464e6dd656d328e115f25d5fca77bc54de802df7dea8c9ac1ab5e2
-        WEB_SITE=http://www.kde.org/applications/education/kmplot/
-         ENTERED=20110813
-         UPDATED=20261115
-           SHORT="Mathematical Function Plotter"
+    MODULE=kmplot
+   VERSION=26.08.3
+    SOURCE=$MODULE-$VERSION.tar.xz
+SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+SOURCE_VFY=sha256:9d7f16c4fd464e6dd656d328e115f25d5fca77bc54de802df7dea8c9ac1ab5e2
+  WEB_SITE=http://www.kde.org/applications/education/kmplot/
+   ENTERED=20110813
+   UPDATED=20261115
+     SHORT="Mathematical Function Plotter"
 
 cat << EOF
 KmPlot is a program to draw graphs, their integrals or derivatives. It supports
-different systems of coordinates like the Cartesian or the polar coordinate system.
-The graphs can be colorized and the view is scalable, so that you are able to zoom
-to the level you need.
-Features:
+different systems of coordinates like the Cartesian or the polar coordinate
+system. The graphs can be colorized and the view is scalable, so that you are
+able to zoom to the level you need. Features:
     powerful mathematical parser
     precise metric printing
     different plot types
@@ -22,14 +21,12 @@ Features:
         polar
         implicit
         differential
-    highly configurable visual settings (plot line, axes, grid)
-    export to bitmap format (BMP and PNG) and scalable vector graphics (SVG)
-    save/load complete session in readable xml format
-    trace mode: cross hair following plot, coordinates shown in the status bar
-    support zooming
-    ability to draw the 1st and 2nd derivative and the integral of a plot function
-    support user defined constants and parameter values
-    various tools for plot functions
+    highly configurable visual settings (plot line, axes, grid) export to bitmap
+    format (BMP and PNG) and scalable vector graphics (SVG) save/load complete
+    session in readable xml format trace mode: cross hair following plot,
+    coordinates shown in the status bar support zooming ability to draw the 1st
+    and 2nd derivative and the integral of a plot function support user defined
+    constants and parameter values various tools for plot functions
         find minimum/maximum point
         get y-value and draw the area between the function and the y-axis
 EOF

@@ -1,13 +1,13 @@
-          MODULE=kdev-php
-         VERSION=26.08.3
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://download.kde.org/stable/release-service/$VERSION/src/
-     SOURCE_VFY=sha256:befcfaef6deb232fcc0c8a631706ef5ba937afb5cc5605c1a2f0ddbd3d6df211
-   MODULE_PREFIX=${KDE_PREFIX:-/usr}
-        WEB_SITE=http://www.kde.org
-         ENTERED=20100501
-         UPDATED=20261115
-           SHORT="S PHP plugin for kdevelop"
+       MODULE=kdev-php
+      VERSION=26.08.3
+       SOURCE=$MODULE-$VERSION.tar.xz
+   SOURCE_URL=http://download.kde.org/stable/release-service/$VERSION/src/
+   SOURCE_VFY=sha256:befcfaef6deb232fcc0c8a631706ef5ba937afb5cc5605c1a2f0ddbd3d6df211
+MODULE_PREFIX=${KDE_PREFIX:-/usr}
+     WEB_SITE=http://www.kde.org
+      ENTERED=20100501
+      UPDATED=20261115
+        SHORT="S PHP plugin for kdevelop"
 
 cat << EOF
 PHP plugin for kdevelop.

@@ -1,14 +1,15 @@
-          MODULE=cantor
-         VERSION=26.08.3
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:94fedf523327bbfc9cf58d128cfd0503201f449c43f7945abd6e58305c6800d9
-   MODULE_PREFIX=${KDE_INSTALL_DIR:-/usr}
-        WEB_SITE=http://www.kde.org
-         ENTERED=20110813
-         UPDATED=20261115
-           SHORT="Mathematics and Scientific Computing"
+       MODULE=cantor
+      VERSION=26.08.3
+       SOURCE=$MODULE-$VERSION.tar.xz
+   SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+   SOURCE_VFY=sha256:94fedf523327bbfc9cf58d128cfd0503201f449c43f7945abd6e58305c6800d9
+MODULE_PREFIX=${KDE_INSTALL_DIR:-/usr}
+     WEB_SITE=http://www.kde.org
+      ENTERED=20110813
+      UPDATED=20261115
+        SHORT="Mathematics and Scientific Computing"
 PSAFE=no
+
 cat << EOF
 Cantor is a KDE Application aimed to provide a nice Interface for doing
 Mathematics and Scientific Computing. It doesn't implement its own Computation

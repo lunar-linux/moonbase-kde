@@ -1,15 +1,15 @@
-          MODULE=kalzium
-         VERSION=26.08.3
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:72c24842a840c10127fb231eb817bcaf7eac4718ab77fcd68f83049a7a33918b
-   MODULE_PREFIX=${KDE_INSTALL_DIR:-/usr}
-        WEB_SITE=http://edu.kde.org/kalzium/
-         ENTERED=20110813
-         UPDATED=20261115
-           SHORT="Shows information about the periodic system of the elements"
+       MODULE=kalzium
+      VERSION=26.08.3
+       SOURCE=$MODULE-$VERSION.tar.xz
+   SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+   SOURCE_VFY=sha256:72c24842a840c10127fb231eb817bcaf7eac4718ab77fcd68f83049a7a33918b
+MODULE_PREFIX=${KDE_INSTALL_DIR:-/usr}
+     WEB_SITE=http://edu.kde.org/kalzium/
+      ENTERED=20110813
+      UPDATED=20261115
+        SHORT="Shows information about the periodic system of the elements"
 
 cat << EOF
-Kalzium is an application which will show you some information about the periodic
-system of the elements.
+Kalzium is an application which will show you some information about the
+periodic system of the elements.
 EOF

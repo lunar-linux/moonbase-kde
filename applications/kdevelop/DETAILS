@@ -1,13 +1,13 @@
-          MODULE=kdevelop
-         VERSION=26.08.3
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://download.kde.org/stable/release-service/$VERSION/src/
-     SOURCE_VFY=sha256:30909673241fa5fd7cce31d7c28d8747c2de73874e9041efc518764ffc337267
-   MODULE_PREFIX=${KDE_PREFIX:-/usr}
-        WEB_SITE=http://www.kdevelop.org/
-         ENTERED=20090824
-         UPDATED=20261115
-           SHORT="IDE for KDE"
+       MODULE=kdevelop
+      VERSION=26.08.3
+       SOURCE=$MODULE-$VERSION.tar.xz
+   SOURCE_URL=http://download.kde.org/stable/release-service/$VERSION/src/
+   SOURCE_VFY=sha256:30909673241fa5fd7cce31d7c28d8747c2de73874e9041efc518764ffc337267
+MODULE_PREFIX=${KDE_PREFIX:-/usr}
+     WEB_SITE=http://www.kdevelop.org/
+      ENTERED=20090824
+      UPDATED=20261115
+        SHORT="IDE for KDE"
 
 cat << EOF
 kdevelop is a programming IDE for KDE.

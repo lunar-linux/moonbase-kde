@@ -1,13 +1,13 @@
-          MODULE=libkdegames
-         VERSION=26.08.3
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
-      SOURCE_VFY=sha256:a543fe657621366b4cd9da7cba56a1844f66f8c9cc9fb616f08f0c5513f33d1a
-   MODULE_PREFIX=${KDE_INSTALL_DIR:-/usr}
-        WEB_SITE=http://www.kde.org
-         ENTERED=20130805
-         UPDATED=20261115
-           SHORT="A collection of functions used by some games"
+       MODULE=libkdegames
+      VERSION=26.08.3
+       SOURCE=$MODULE-$VERSION.tar.xz
+   SOURCE_URL=$KDE_URL/stable/release-service/$VERSION/src
+   SOURCE_VFY=sha256:a543fe657621366b4cd9da7cba56a1844f66f8c9cc9fb616f08f0c5513f33d1a
+MODULE_PREFIX=${KDE_INSTALL_DIR:-/usr}
+     WEB_SITE=http://www.kde.org
+      ENTERED=20130805
+      UPDATED=20261115
+        SHORT="A collection of functions used by some games"
 
 cat << EOF
 A collection of functions used by some games or which are useful for other
@@ -19,9 +19,9 @@ Contents:
                   kde games. games often use different entries than other apps
                   (like "game" instead of "file"), so use this if possible
   kgamemisc: some static method i didn't know a good class name for. it
-             currently features "randomName()" which will just give you a random name from
-             a list (translators note: happy translating ;) i copied kde-common/accounts
-             for this so there are nearly 300 entries...)
+             currently features "randomName()" which will just give you a random
+             name from a list (translators note: happy translating ;) i copied
+             kde-common/accounts for this so there are nearly 300 entries...)
   kgame: this is a complete network/game handling library. it constists of a lot
          of classes which are explained in the kgame docu (as soon as it is
          written)
