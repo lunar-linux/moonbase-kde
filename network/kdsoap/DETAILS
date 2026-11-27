@@ -1,18 +1,19 @@
-          MODULE=kdsoap
-         VERSION=2.3.0
-          SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=https://github.com/KDAB/KDSoap/releases/download/$MODULE-$VERSION/
-      SOURCE_VFY=sha256:d2184951145cb768cc30376a10701be13869a164c1272d09f831ba2d195f02de
-        WEB_SITE=https://github.com/KDAB/KDSoap
-         ENTERED=20200425
-         UPDATED=20260315
-           SHORT="Qt-based client-side and server-side SOAP component"
+    MODULE=kdsoap
+   VERSION=2.3.0
+    SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_URL=https://github.com/KDAB/KDSoap/releases/download/$MODULE-$VERSION/
+SOURCE_VFY=sha256:d2184951145cb768cc30376a10701be13869a164c1272d09f831ba2d195f02de
+  WEB_SITE=https://github.com/KDAB/KDSoap
+   ENTERED=20200425
+   UPDATED=20260315
+     SHORT="Qt-based client-side and server-side SOAP component"
 
 cat << EOF
 KD Soap is a Qt-based client-side and server-side SOAP component.
 
-It can be used to create client applications for web services and also provides the means to
-create web services without the need for any further component such as a dedicated web server.
+It can be used to create client applications for web services and also provides
+the means to create web services without the need for any further component such
+as a dedicated web server.
 
 KD Soap targets C++ programmers who use Qt in their applications.
 EOF
