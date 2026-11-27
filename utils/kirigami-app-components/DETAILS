@@ -1,15 +1,15 @@
-          MODULE=kirigami-app-components
-         VERSION=1.1.1
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/$MODULE/
-      SOURCE_VFY=sha256:f68f4d082933213d82b805217f2fa0690f51df7d00214ddb873812a60a6b830b
-        WEB_SITE=https://develop.kde.org/frameworks/kirigami/
-         ENTERED=20261003
-         UPDATED=20261006
-           SHORT="for full featured KDE app intergration"
+    MODULE=kirigami-app-components
+   VERSION=1.1.1
+    SOURCE=$MODULE-$VERSION.tar.xz
+SOURCE_URL=$KDE_URL/stable/$MODULE/
+SOURCE_VFY=sha256:f68f4d082933213d82b805217f2fa0690f51df7d00214ddb873812a60a6b830b
+  WEB_SITE=https://develop.kde.org/frameworks/kirigami/
+   ENTERED=20261003
+   UPDATED=20261006
+     SHORT="for full featured KDE app intergration"
 
 cat << EOF
-Kirigami-app-components contains Kirigami addons and modules necessary to do a full
-featured KDE application, such as integration with configurable keyboard shortcuts
-and standard actions for About application About KDE, Donate etc.
+Kirigami-app-components contains Kirigami addons and modules necessary to do a
+full featured KDE application, such as integration with configurable keyboard
+shortcuts and standard actions for About application About KDE, Donate etc.
 EOF

@@ -1,19 +1,22 @@
-          MODULE=plasma-remotecontrollers
-         VERSION=5.27.11
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
-      SOURCE_VFY=sha256:59f37c7833797876ead26383077a08c7804bbf2c5208bdecd788a476045ce770
-        WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
-         ENTERED=20221130
-         UPDATED=20240324
-           SHORT="translates input devices to keypresses on a keyboard and pointer events"
+    MODULE=plasma-remotecontrollers
+   VERSION=5.27.11
+    SOURCE=$MODULE-$VERSION.tar.xz
+SOURCE_URL=$KDE_URL/stable/plasma/${VERSION}
+SOURCE_VFY=sha256:59f37c7833797876ead26383077a08c7804bbf2c5208bdecd788a476045ce770
+  WEB_SITE=https://projects.kde.org/projects/kde/workspace/$MODULE
+   ENTERED=20221130
+   UPDATED=20240324
+     SHORT="translates input devices to keypresses on a keyboard and pointer events"
 
 cat << EOF
-This project translates events from various input devices to keypresses on a keyboard and pointer events (mouse movement).
+This project translates events from various input devices to keypresses on a
+keyboard and pointer events (mouse movement).
 
-TV remotes Fully supported through libcec Not all TV remotes emit the same key events when buttons are being pressed, so
-particular remotes might need to map their buttons in the config file.
+TV remotes Fully supported through libcec Not all TV remotes emit the same key
+events when buttons are being pressed, so particular remotes might need to map
+their buttons in the config file.
 
-Wiimotes partial, only Wiimote and Nunchuk buttons so far Only official Wiimotes and Wii Plus remotes are supported.
-Devices connected through e.g. a DolphinBar are not supported yet KDE's screen management software.
+Wiimotes partial, only Wiimote and Nunchuk buttons so far Only official Wiimotes
+and Wii Plus remotes are supported. Devices connected through e.g. a DolphinBar
+are not supported yet KDE's screen management software.
 EOF
