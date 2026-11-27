@@ -1,14 +1,15 @@
-          MODULE=kbibtex
-         VERSION=0.10.0
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/KBibTeX/$VERSION/
-      SOURCE_VFY=sha256:b127b240a7cd77c538619dc882a399b3c6ccd77a04428a497af906f14d09b8c4
-        WEB_SITE=https://userbase.kde.org/KBibTeX
-         ENTERED=20190722
-         UPDATED=20230318
-           SHORT="KDE bibliography editor"
+    MODULE=kbibtex
+   VERSION=0.10.0
+    SOURCE=$MODULE-$VERSION.tar.xz
+SOURCE_URL=$KDE_URL/stable/KBibTeX/$VERSION/
+SOURCE_VFY=sha256:b127b240a7cd77c538619dc882a399b3c6ccd77a04428a497af906f14d09b8c4
+  WEB_SITE=https://userbase.kde.org/KBibTeX
+   ENTERED=20190722
+   UPDATED=20230318
+     SHORT="KDE bibliography editor"
 
 cat << EOF
-KBibTeX is a bibliography editor for KDE and is most often used in conjunction with Kile. KBibTeX's primary file
-format is BibTeX as known from LaTeX, but other formats such as RIS, PDF, or RTF can be imported and exported. 
+KBibTeX is a bibliography editor for KDE and is most often used in conjunction
+with Kile. KBibTeX's primary file format is BibTeX as known from LaTeX, but
+other formats such as RIS, PDF, or RTF can be imported and exported.
 EOF
