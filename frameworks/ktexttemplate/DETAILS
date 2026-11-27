@@ -1,15 +1,15 @@
-          MODULE=ktexttemplate
-         VERSION=6.32.0
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:074a1616a41600b358e20c40cab16113906c2394600a4fdc62a22696cc3d4156
-        WEB_SITE=https://community.kde.org/KDE_PIM
-         ENTERED=20240308
-         UPDATED=20261115
-           SHORT="separate the structure of documents from the data they contain"
+    MODULE=ktexttemplate
+   VERSION=6.32.0
+    SOURCE=$MODULE-$VERSION.tar.xz
+SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
+SOURCE_VFY=sha256:074a1616a41600b358e20c40cab16113906c2394600a4fdc62a22696cc3d4156
+  WEB_SITE=https://community.kde.org/KDE_PIM
+   ENTERED=20240308
+   UPDATED=20261115
+     SHORT="separate the structure of documents from the data they contain"
 
 cat << EOF
-The goal of KTextTemplate is to make it easier for application developers to separate
-the structure of documents from the data they contain, opening the door for theming
-and advanced generation of other text such as code.
+The goal of KTextTemplate is to make it easier for application developers to
+separate the structure of documents from the data they contain, opening the door
+for theming and advanced generation of other text such as code.
 EOF

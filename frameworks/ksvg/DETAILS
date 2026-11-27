@@ -1,13 +1,14 @@
-          MODULE=ksvg
-         VERSION=6.32.0
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:8299498d46373a84811d29415f9e5a115f491bd7b5fa11c1648fc36ca9374ad6
-        WEB_SITE=https://community.kde.org/KDE_PIM
-         ENTERED=20240308
-         UPDATED=20261115
-           SHORT="library for rendering SVG themes"
+    MODULE=ksvg
+   VERSION=6.32.0
+    SOURCE=$MODULE-$VERSION.tar.xz
+SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
+SOURCE_VFY=sha256:8299498d46373a84811d29415f9e5a115f491bd7b5fa11c1648fc36ca9374ad6
+  WEB_SITE=https://community.kde.org/KDE_PIM
+   ENTERED=20240308
+   UPDATED=20261115
+     SHORT="library for rendering SVG themes"
 
 cat << EOF
-A library for rendering SVG-based themes with stylesheet re-coloring and on-disk caching.
+A library for rendering SVG-based themes with stylesheet re-coloring and on-disk
+caching.
 EOF

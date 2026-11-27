@@ -1,20 +1,20 @@
-          MODULE=threadweaver
-         VERSION=6.32.0
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
-      SOURCE_VFY=sha256:b3ee9e6cdfdb3dec7c7df8e7f66ace6a94e73a531ba4f1d8f7b74360e7201e05
-        WEB_SITE=https://projects.kde.org/projects/frameworks/threadweaver
-         ENTERED=20150205
-         UPDATED=20261115
-           SHORT="Helper for multithreaded programming"
+    MODULE=threadweaver
+   VERSION=6.32.0
+    SOURCE=$MODULE-$VERSION.tar.xz
+SOURCE_URL=$KDE_URL/stable/frameworks/$(module_version kf5)
+SOURCE_VFY=sha256:b3ee9e6cdfdb3dec7c7df8e7f66ace6a94e73a531ba4f1d8f7b74360e7201e05
+  WEB_SITE=https://projects.kde.org/projects/frameworks/threadweaver
+   ENTERED=20150205
+   UPDATED=20261115
+     SHORT="Helper for multithreaded programming"
 
 cat << EOF
 ThreadWeaver is a helper for multithreaded programming.  It uses a job-based
 interface to queue tasks and execute them in an efficient way.
 
-You simply divide the workload into jobs, state the dependencies between the jobs
-and ThreadWeaver will work out the most efficient way of dividing the work between
-threads within a set of resource limits.
+You simply divide the workload into jobs, state the dependencies between the
+jobs and ThreadWeaver will work out the most efficient way of dividing the work
+between threads within a set of resource limits.
 
 See the information on [use cases](@ref usecases) and
 [why multithreading can help](@ref multithreading), as well as the usage
