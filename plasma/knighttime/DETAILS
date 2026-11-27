@@ -1,14 +1,15 @@
-          MODULE=knighttime
-         VERSION=6.8.3
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=https://download.kde.org/stable/plasma/$VERSION/
-      SOURCE_VFY=sha256:b364a57af1a629d5e09c36a3c859075f8eafa2463201959548fbc362987d7c5f
-        WEB_SITE=https://kde.org/plasma-desktop/
-         ENTERED=20251021
-         UPDATED=20261115
-           SHORT="helpers for scheduling the dark-light cycle"
+    MODULE=knighttime
+   VERSION=6.8.3
+    SOURCE=$MODULE-$VERSION.tar.xz
+SOURCE_URL=https://download.kde.org/stable/plasma/$VERSION/
+SOURCE_VFY=sha256:b364a57af1a629d5e09c36a3c859075f8eafa2463201959548fbc362987d7c5f
+  WEB_SITE=https://kde.org/plasma-desktop/
+   ENTERED=20251021
+   UPDATED=20261115
+     SHORT="helpers for scheduling the dark-light cycle"
 
 cat << EOF
-The KNightTime provides helpers for scheduling the dark-light cycle. It can be used to implement
-features such as adjusting the screen color temperature based on time of day, etc. 
+The KNightTime provides helpers for scheduling the dark-light cycle. It can be
+used to implement features such as adjusting the screen color temperature based
+on time of day, etc.
 EOF

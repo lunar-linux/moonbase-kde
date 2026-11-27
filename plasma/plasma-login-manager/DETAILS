@@ -1,15 +1,16 @@
-          MODULE=plasma-login-manager
-         VERSION=6.8.3
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$KDE_URL/stable/plasma/$VERSION/
-      SOURCE_VFY=sha256:5969f5a6bbf23a911db5dc1a44cc0ba6f341ce3af8edfe3374d75610b39a8d9d
-        WEB_SITE=https://kde.org/plasma-desktop/
-         ENTERED=20260225
-         UPDATED=20261115
-           SHORT="forked from SDDM"
+    MODULE=plasma-login-manager
+   VERSION=6.8.3
+    SOURCE=$MODULE-$VERSION.tar.xz
+SOURCE_URL=$KDE_URL/stable/plasma/$VERSION/
+SOURCE_VFY=sha256:5969f5a6bbf23a911db5dc1a44cc0ba6f341ce3af8edfe3374d75610b39a8d9d
+  WEB_SITE=https://kde.org/plasma-desktop/
+   ENTERED=20260225
+   UPDATED=20261115
+     SHORT="forked from SDDM"
 
 cat << EOF
-NOTE: To use disable sddm and enable plasmalogin.service.
-Plasma Login provides a display manager for KDE Plasma, forked from SDDM and with an new
-frontend providing a greeter, wallpaper plugin integration and System Settings module (KCM).
+NOTE: To use disable sddm and enable plasmalogin.service. Plasma Login provides
+a display manager for KDE Plasma, forked from SDDM and with an new frontend
+providing a greeter, wallpaper plugin integration and System Settings module
+(KCM).
 EOF
