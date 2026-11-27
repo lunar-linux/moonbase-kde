@@ -13,12 +13,10 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-src-$VERSION
 cat << EOF
 Features
 
-Generic main memory and disk based storage managers.
-R*-tree index (also supports linear and quadratic splitting).
-MVR-tree index (a.k.a. PPR-tree).
-TPR-tree index.
-Advanced query capabilities, using Strategy and Visitor patterns.
-Arbitrary shaped range queries, by defining generic geometry interfaces.
-Large parameterization capabilities, including dimensionality, fill factor, node capacity, etc.
-STR packing / bulk loading.
+Generic main memory and disk based storage managers. R*-tree index (also
+supports linear and quadratic splitting). MVR-tree index (a.k.a. PPR-tree).
+TPR-tree index. Advanced query capabilities, using Strategy and Visitor
+patterns. Arbitrary shaped range queries, by defining generic geometry
+interfaces. Large parameterization capabilities, including dimensionality, fill
+factor, node capacity, etc. STR packing / bulk loading.
 EOF
