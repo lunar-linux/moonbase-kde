@@ -1,15 +1,16 @@
           MODULE=qt-advanced-docking-system
-         VERSION=4.5.0
+         VERSION=5.1.1
           SOURCE=$MODULE-$VERSION.tar.gz
- SOURCE_URL_FULL=git+https://github.com/githubuser0xFFFF/Qt-Advanced-Docking-System:$VERSION
-#      SOURCE_VFY=sha256:925717a6ad27cc0d5b74c4aa292479a48f797fcfcb459403cc1ccb63810322ca
+ SOURCE_URL_FULL=https://github.com/githubuser0xFFFF/Qt-Advanced-Docking-System/archive/refs/tags/v$VERSION.tar.gz
+      SOURCE_VFY=sha256:9ce947acbb1984946f9145c976e42e6984f99b98fb414dd7354a290af6d4ff04
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/Qt-Advanced-Docking-System-$VERSION
         WEB_SITE=https://github.com/githubuser0xFFFF/Qt-Advanced-Docking-System
          ENTERED=20250425
-         UPDATED=20260316
+         UPDATED=20261127
            SHORT="create customizable layouts"
 
 cat << EOF
-Qt Advanced Docking System lets you create customizable layouts using a full featured window
-docking system similar to what is found in many popular integrated development environments
-(IDEs) such as Visual Studio.
+Qt Advanced Docking System lets you create customizable layouts using a full
+featured window docking system similar to what is found in many popular
+integrated development environments (IDEs) such as Visual Studio.
 EOF
